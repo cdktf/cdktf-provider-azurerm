@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_scheduled_query_rules_alert
 // generated from terraform resource schema
 
@@ -81,19 +76,19 @@ export interface MonitorScheduledQueryRulesAlertConfig extends cdktf.TerraformMe
   readonly timeWindow: number;
   /**
   * action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_scheduled_query_rules_alert#action MonitorScheduledQueryRulesAlert#action}
   */
   readonly action: MonitorScheduledQueryRulesAlertAction;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_scheduled_query_rules_alert#timeouts MonitorScheduledQueryRulesAlert#timeouts}
   */
   readonly timeouts?: MonitorScheduledQueryRulesAlertTimeouts;
   /**
   * trigger block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_scheduled_query_rules_alert#trigger MonitorScheduledQueryRulesAlert#trigger}
   */
   readonly trigger: MonitorScheduledQueryRulesAlertTrigger;
@@ -518,7 +513,7 @@ export interface MonitorScheduledQueryRulesAlertTrigger {
   readonly threshold: number;
   /**
   * metric_trigger block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_scheduled_query_rules_alert#metric_trigger MonitorScheduledQueryRulesAlert#metric_trigger}
   */
   readonly metricTrigger?: MonitorScheduledQueryRulesAlertTriggerMetricTrigger;

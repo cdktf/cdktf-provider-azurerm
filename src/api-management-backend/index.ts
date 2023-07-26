@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_backend
 // generated from terraform resource schema
 
@@ -53,31 +48,31 @@ export interface ApiManagementBackendConfig extends cdktf.TerraformMetaArguments
   readonly url: string;
   /**
   * credentials block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_backend#credentials ApiManagementBackend#credentials}
   */
   readonly credentials?: ApiManagementBackendCredentials;
   /**
   * proxy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_backend#proxy ApiManagementBackend#proxy}
   */
   readonly proxy?: ApiManagementBackendProxy;
   /**
   * service_fabric_cluster block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_backend#service_fabric_cluster ApiManagementBackend#service_fabric_cluster}
   */
   readonly serviceFabricCluster?: ApiManagementBackendServiceFabricCluster;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_backend#timeouts ApiManagementBackend#timeouts}
   */
   readonly timeouts?: ApiManagementBackendTimeouts;
   /**
   * tls block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_backend#tls ApiManagementBackend#tls}
   */
   readonly tls?: ApiManagementBackendTls;
@@ -189,7 +184,7 @@ export interface ApiManagementBackendCredentials {
   readonly query?: { [key: string]: string };
   /**
   * authorization block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_backend#authorization ApiManagementBackend#authorization}
   */
   readonly authorization?: ApiManagementBackendCredentialsAuthorization;
@@ -576,7 +571,7 @@ export interface ApiManagementBackendServiceFabricCluster {
   readonly serverCertificateThumbprints?: string[];
   /**
   * server_x509_name block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/api_management_backend#server_x509_name ApiManagementBackend#server_x509_name}
   */
   readonly serverX509Name?: ApiManagementBackendServiceFabricClusterServerX509Name[] | cdktf.IResolvable;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app_function
 // generated from terraform resource schema
 
@@ -14,19 +9,19 @@ import * as cdktf from 'cdktf';
 export interface FunctionAppFunctionConfig extends cdktf.TerraformMetaArguments {
   /**
   * The config for this Function in JSON format.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app_function#config_json FunctionAppFunction#config_json}
   */
   readonly configJson: string;
   /**
   * Should this function be enabled. Defaults to `true`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app_function#enabled FunctionAppFunction#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * The ID of the Function App in which this function should reside.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app_function#function_app_id FunctionAppFunction#function_app_id}
   */
   readonly functionAppId: string;
@@ -39,31 +34,31 @@ export interface FunctionAppFunctionConfig extends cdktf.TerraformMetaArguments 
   readonly id?: string;
   /**
   * The language the Function is written in.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app_function#language FunctionAppFunction#language}
   */
   readonly language?: string;
   /**
   * The name of the function.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app_function#name FunctionAppFunction#name}
   */
   readonly name: string;
   /**
   * The test data for the function.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app_function#test_data FunctionAppFunction#test_data}
   */
   readonly testData?: string;
   /**
   * file block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app_function#file FunctionAppFunction#file}
   */
   readonly file?: FunctionAppFunctionFile[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app_function#timeouts FunctionAppFunction#timeouts}
   */
   readonly timeouts?: FunctionAppFunctionTimeouts;
@@ -71,13 +66,13 @@ export interface FunctionAppFunctionConfig extends cdktf.TerraformMetaArguments 
 export interface FunctionAppFunctionFile {
   /**
   * The content of the file.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app_function#content FunctionAppFunction#content}
   */
   readonly content: string;
   /**
   * The filename of the file to be uploaded.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app_function#name FunctionAppFunction#name}
   */
   readonly name: string;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_provider_registration
 // generated from terraform resource schema
 
@@ -25,13 +20,13 @@ export interface ResourceProviderRegistrationConfig extends cdktf.TerraformMetaA
   readonly name: string;
   /**
   * feature block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_provider_registration#feature ResourceProviderRegistration#feature}
   */
   readonly feature?: ResourceProviderRegistrationFeature[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/resource_provider_registration#timeouts ResourceProviderRegistration#timeouts}
   */
   readonly timeouts?: ResourceProviderRegistrationTimeouts;

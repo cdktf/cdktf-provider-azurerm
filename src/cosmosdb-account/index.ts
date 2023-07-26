@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_account
 // generated from terraform resource schema
 
@@ -105,67 +100,67 @@ export interface CosmosdbAccountConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * analytical_storage block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_account#analytical_storage CosmosdbAccount#analytical_storage}
   */
   readonly analyticalStorage?: CosmosdbAccountAnalyticalStorage;
   /**
   * backup block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_account#backup CosmosdbAccount#backup}
   */
   readonly backup?: CosmosdbAccountBackup;
   /**
   * capabilities block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_account#capabilities CosmosdbAccount#capabilities}
   */
   readonly capabilities?: CosmosdbAccountCapabilities[] | cdktf.IResolvable;
   /**
   * capacity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_account#capacity CosmosdbAccount#capacity}
   */
   readonly capacity?: CosmosdbAccountCapacity;
   /**
   * consistency_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_account#consistency_policy CosmosdbAccount#consistency_policy}
   */
   readonly consistencyPolicy: CosmosdbAccountConsistencyPolicy;
   /**
   * cors_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_account#cors_rule CosmosdbAccount#cors_rule}
   */
   readonly corsRule?: CosmosdbAccountCorsRule;
   /**
   * geo_location block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_account#geo_location CosmosdbAccount#geo_location}
   */
   readonly geoLocation: CosmosdbAccountGeoLocation[] | cdktf.IResolvable;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_account#identity CosmosdbAccount#identity}
   */
   readonly identity?: CosmosdbAccountIdentity;
   /**
   * restore block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_account#restore CosmosdbAccount#restore}
   */
   readonly restore?: CosmosdbAccountRestore;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_account#timeouts CosmosdbAccount#timeouts}
   */
   readonly timeouts?: CosmosdbAccountTimeouts;
   /**
   * virtual_network_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_account#virtual_network_rule CosmosdbAccount#virtual_network_rule}
   */
   readonly virtualNetworkRule?: CosmosdbAccountVirtualNetworkRule[] | cdktf.IResolvable;
@@ -1186,7 +1181,7 @@ export interface CosmosdbAccountRestore {
   readonly sourceCosmosdbAccountId: string;
   /**
   * database block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_account#database CosmosdbAccount#database}
   */
   readonly database?: CosmosdbAccountRestoreDatabase[] | cdktf.IResolvable;

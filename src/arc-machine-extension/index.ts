@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/arc_machine_extension
 // generated from terraform resource schema
 
@@ -65,7 +60,7 @@ export interface ArcMachineExtensionConfig extends cdktf.TerraformMetaArguments 
   readonly typeHandlerVersion?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/arc_machine_extension#timeouts ArcMachineExtension#timeouts}
   */
   readonly timeouts?: ArcMachineExtensionTimeouts;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lighthouse_definition
 // generated from terraform resource schema
 
@@ -41,25 +36,25 @@ export interface LighthouseDefinitionConfig extends cdktf.TerraformMetaArguments
   readonly scope: string;
   /**
   * authorization block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lighthouse_definition#authorization LighthouseDefinition#authorization}
   */
   readonly authorization: LighthouseDefinitionAuthorization[] | cdktf.IResolvable;
   /**
   * eligible_authorization block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lighthouse_definition#eligible_authorization LighthouseDefinition#eligible_authorization}
   */
   readonly eligibleAuthorization?: LighthouseDefinitionEligibleAuthorization[] | cdktf.IResolvable;
   /**
   * plan block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lighthouse_definition#plan LighthouseDefinition#plan}
   */
   readonly plan?: LighthouseDefinitionPlan;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lighthouse_definition#timeouts LighthouseDefinition#timeouts}
   */
   readonly timeouts?: LighthouseDefinitionTimeouts;
@@ -368,7 +363,7 @@ export interface LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicy
   readonly multiFactorAuthProvider?: string;
   /**
   * approver block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lighthouse_definition#approver LighthouseDefinition#approver}
   */
   readonly approver?: LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApprover[] | cdktf.IResolvable;
@@ -493,7 +488,7 @@ export interface LighthouseDefinitionEligibleAuthorization {
   readonly roleDefinitionId: string;
   /**
   * just_in_time_access_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lighthouse_definition#just_in_time_access_policy LighthouseDefinition#just_in_time_access_policy}
   */
   readonly justInTimeAccessPolicy?: LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicy;

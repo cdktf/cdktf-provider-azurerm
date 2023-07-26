@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dedicated_hardware_security_module
 // generated from terraform resource schema
 
@@ -49,19 +44,19 @@ export interface DedicatedHardwareSecurityModuleConfig extends cdktf.TerraformMe
   readonly zones?: string[];
   /**
   * management_network_profile block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dedicated_hardware_security_module#management_network_profile DedicatedHardwareSecurityModule#management_network_profile}
   */
   readonly managementNetworkProfile?: DedicatedHardwareSecurityModuleManagementNetworkProfile;
   /**
   * network_profile block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dedicated_hardware_security_module#network_profile DedicatedHardwareSecurityModule#network_profile}
   */
   readonly networkProfile: DedicatedHardwareSecurityModuleNetworkProfile;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dedicated_hardware_security_module#timeouts DedicatedHardwareSecurityModule#timeouts}
   */
   readonly timeouts?: DedicatedHardwareSecurityModuleTimeouts;

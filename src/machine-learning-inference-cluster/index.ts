@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/machine_learning_inference_cluster
 // generated from terraform resource schema
 
@@ -49,19 +44,19 @@ export interface MachineLearningInferenceClusterConfig extends cdktf.TerraformMe
   readonly tags?: { [key: string]: string };
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/machine_learning_inference_cluster#identity MachineLearningInferenceCluster#identity}
   */
   readonly identity?: MachineLearningInferenceClusterIdentity;
   /**
   * ssl block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/machine_learning_inference_cluster#ssl MachineLearningInferenceCluster#ssl}
   */
   readonly ssl?: MachineLearningInferenceClusterSsl;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/machine_learning_inference_cluster#timeouts MachineLearningInferenceCluster#timeouts}
   */
   readonly timeouts?: MachineLearningInferenceClusterTimeouts;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mysql_flexible_server
 // generated from terraform resource schema
 
@@ -89,37 +84,37 @@ export interface MysqlFlexibleServerConfig extends cdktf.TerraformMetaArguments 
   readonly zone?: string;
   /**
   * customer_managed_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mysql_flexible_server#customer_managed_key MysqlFlexibleServer#customer_managed_key}
   */
   readonly customerManagedKey?: MysqlFlexibleServerCustomerManagedKey;
   /**
   * high_availability block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mysql_flexible_server#high_availability MysqlFlexibleServer#high_availability}
   */
   readonly highAvailability?: MysqlFlexibleServerHighAvailability;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mysql_flexible_server#identity MysqlFlexibleServer#identity}
   */
   readonly identity?: MysqlFlexibleServerIdentity;
   /**
   * maintenance_window block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mysql_flexible_server#maintenance_window MysqlFlexibleServer#maintenance_window}
   */
   readonly maintenanceWindow?: MysqlFlexibleServerMaintenanceWindow;
   /**
   * storage block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mysql_flexible_server#storage MysqlFlexibleServer#storage}
   */
   readonly storage?: MysqlFlexibleServerStorage;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mysql_flexible_server#timeouts MysqlFlexibleServer#timeouts}
   */
   readonly timeouts?: MysqlFlexibleServerTimeouts;

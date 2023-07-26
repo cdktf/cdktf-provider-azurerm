@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_flux_configuration
 // generated from terraform resource schema
 
@@ -41,31 +36,31 @@ export interface KubernetesFluxConfigurationConfig extends cdktf.TerraformMetaAr
   readonly scope?: string;
   /**
   * blob_storage block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_flux_configuration#blob_storage KubernetesFluxConfiguration#blob_storage}
   */
   readonly blobStorage?: KubernetesFluxConfigurationBlobStorage;
   /**
   * bucket block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_flux_configuration#bucket KubernetesFluxConfiguration#bucket}
   */
   readonly bucket?: KubernetesFluxConfigurationBucket;
   /**
   * git_repository block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_flux_configuration#git_repository KubernetesFluxConfiguration#git_repository}
   */
   readonly gitRepository?: KubernetesFluxConfigurationGitRepository;
   /**
   * kustomizations block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_flux_configuration#kustomizations KubernetesFluxConfiguration#kustomizations}
   */
   readonly kustomizations: KubernetesFluxConfigurationKustomizations[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_flux_configuration#timeouts KubernetesFluxConfiguration#timeouts}
   */
   readonly timeouts?: KubernetesFluxConfigurationTimeouts;
@@ -353,13 +348,13 @@ export interface KubernetesFluxConfigurationBlobStorage {
   readonly timeoutInSeconds?: number;
   /**
   * managed_identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_flux_configuration#managed_identity KubernetesFluxConfiguration#managed_identity}
   */
   readonly managedIdentity?: KubernetesFluxConfigurationBlobStorageManagedIdentity;
   /**
   * service_principal block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_flux_configuration#service_principal KubernetesFluxConfiguration#service_principal}
   */
   readonly servicePrincipal?: KubernetesFluxConfigurationBlobStorageServicePrincipal;

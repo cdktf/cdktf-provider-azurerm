@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iot_security_device_group
 // generated from terraform resource schema
 
@@ -29,19 +24,19 @@ export interface IotSecurityDeviceGroupConfig extends cdktf.TerraformMetaArgumen
   readonly name: string;
   /**
   * allow_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iot_security_device_group#allow_rule IotSecurityDeviceGroup#allow_rule}
   */
   readonly allowRule?: IotSecurityDeviceGroupAllowRule;
   /**
   * range_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iot_security_device_group#range_rule IotSecurityDeviceGroup#range_rule}
   */
   readonly rangeRule?: IotSecurityDeviceGroupRangeRule[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iot_security_device_group#timeouts IotSecurityDeviceGroup#timeouts}
   */
   readonly timeouts?: IotSecurityDeviceGroupTimeouts;

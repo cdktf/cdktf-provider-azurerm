@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automanage_configuration
 // generated from terraform resource schema
 
@@ -61,25 +56,25 @@ export interface AutomanageConfigurationConfig extends cdktf.TerraformMetaArgume
   readonly tags?: { [key: string]: string };
   /**
   * antimalware block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automanage_configuration#antimalware AutomanageConfiguration#antimalware}
   */
   readonly antimalware?: AutomanageConfigurationAntimalware;
   /**
   * azure_security_baseline block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automanage_configuration#azure_security_baseline AutomanageConfiguration#azure_security_baseline}
   */
   readonly azureSecurityBaseline?: AutomanageConfigurationAzureSecurityBaseline;
   /**
   * backup block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automanage_configuration#backup AutomanageConfiguration#backup}
   */
   readonly backup?: AutomanageConfigurationBackup;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automanage_configuration#timeouts AutomanageConfiguration#timeouts}
   */
   readonly timeouts?: AutomanageConfigurationTimeouts;
@@ -226,7 +221,7 @@ export interface AutomanageConfigurationAntimalware {
   readonly scheduledScanType?: string;
   /**
   * exclusions block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automanage_configuration#exclusions AutomanageConfiguration#exclusions}
   */
   readonly exclusions?: AutomanageConfigurationAntimalwareExclusions;
@@ -569,7 +564,7 @@ export interface AutomanageConfigurationBackupRetentionPolicyDailySchedule {
   readonly retentionTimes?: string[];
   /**
   * retention_duration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automanage_configuration#retention_duration AutomanageConfiguration#retention_duration}
   */
   readonly retentionDuration?: AutomanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDuration;
@@ -755,7 +750,7 @@ export interface AutomanageConfigurationBackupRetentionPolicyWeeklySchedule {
   readonly retentionTimes?: string[];
   /**
   * retention_duration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automanage_configuration#retention_duration AutomanageConfiguration#retention_duration}
   */
   readonly retentionDuration?: AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDuration;
@@ -849,13 +844,13 @@ export interface AutomanageConfigurationBackupRetentionPolicy {
   readonly retentionPolicyType?: string;
   /**
   * daily_schedule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automanage_configuration#daily_schedule AutomanageConfiguration#daily_schedule}
   */
   readonly dailySchedule?: AutomanageConfigurationBackupRetentionPolicyDailySchedule;
   /**
   * weekly_schedule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automanage_configuration#weekly_schedule AutomanageConfiguration#weekly_schedule}
   */
   readonly weeklySchedule?: AutomanageConfigurationBackupRetentionPolicyWeeklySchedule;
@@ -1126,13 +1121,13 @@ export interface AutomanageConfigurationBackup {
   readonly timeZone?: string;
   /**
   * retention_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automanage_configuration#retention_policy AutomanageConfiguration#retention_policy}
   */
   readonly retentionPolicy?: AutomanageConfigurationBackupRetentionPolicy;
   /**
   * schedule_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automanage_configuration#schedule_policy AutomanageConfiguration#schedule_policy}
   */
   readonly schedulePolicy?: AutomanageConfigurationBackupSchedulePolicy;

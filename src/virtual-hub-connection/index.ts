@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_hub_connection
 // generated from terraform resource schema
 
@@ -37,13 +32,13 @@ export interface VirtualHubConnectionConfig extends cdktf.TerraformMetaArguments
   readonly virtualHubId: string;
   /**
   * routing block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_hub_connection#routing VirtualHubConnection#routing}
   */
   readonly routing?: VirtualHubConnectionRouting;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_hub_connection#timeouts VirtualHubConnection#timeouts}
   */
   readonly timeouts?: VirtualHubConnectionTimeouts;
@@ -298,13 +293,13 @@ export interface VirtualHubConnectionRouting {
   readonly associatedRouteTableId?: string;
   /**
   * propagated_route_table block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_hub_connection#propagated_route_table VirtualHubConnection#propagated_route_table}
   */
   readonly propagatedRouteTable?: VirtualHubConnectionRoutingPropagatedRouteTable;
   /**
   * static_vnet_route block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_hub_connection#static_vnet_route VirtualHubConnection#static_vnet_route}
   */
   readonly staticVnetRoute?: VirtualHubConnectionRoutingStaticVnetRoute[] | cdktf.IResolvable;

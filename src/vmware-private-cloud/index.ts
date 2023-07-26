@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vmware_private_cloud
 // generated from terraform resource schema
 
@@ -57,13 +52,13 @@ export interface VmwarePrivateCloudConfig extends cdktf.TerraformMetaArguments {
   readonly vcenterPassword?: string;
   /**
   * management_cluster block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vmware_private_cloud#management_cluster VmwarePrivateCloud#management_cluster}
   */
   readonly managementCluster: VmwarePrivateCloudManagementCluster;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vmware_private_cloud#timeouts VmwarePrivateCloud#timeouts}
   */
   readonly timeouts?: VmwarePrivateCloudTimeouts;

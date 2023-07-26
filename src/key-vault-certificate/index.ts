@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/key_vault_certificate
 // generated from terraform resource schema
 
@@ -33,19 +28,19 @@ export interface KeyVaultCertificateConfig extends cdktf.TerraformMetaArguments 
   readonly tags?: { [key: string]: string };
   /**
   * certificate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/key_vault_certificate#certificate KeyVaultCertificate#certificate}
   */
   readonly certificate?: KeyVaultCertificateCertificate;
   /**
   * certificate_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/key_vault_certificate#certificate_policy KeyVaultCertificate#certificate_policy}
   */
   readonly certificatePolicy?: KeyVaultCertificateCertificatePolicy;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/key_vault_certificate#timeouts KeyVaultCertificate#timeouts}
   */
   readonly timeouts?: KeyVaultCertificateTimeouts;
@@ -611,13 +606,13 @@ export class KeyVaultCertificateCertificatePolicyLifetimeActionTriggerOutputRefe
 export interface KeyVaultCertificateCertificatePolicyLifetimeAction {
   /**
   * action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/key_vault_certificate#action KeyVaultCertificate#action}
   */
   readonly action: KeyVaultCertificateCertificatePolicyLifetimeActionAction;
   /**
   * trigger block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/key_vault_certificate#trigger KeyVaultCertificate#trigger}
   */
   readonly trigger: KeyVaultCertificateCertificatePolicyLifetimeActionTrigger;
@@ -930,7 +925,7 @@ export interface KeyVaultCertificateCertificatePolicyX509CertificateProperties {
   readonly validityInMonths: number;
   /**
   * subject_alternative_names block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/key_vault_certificate#subject_alternative_names KeyVaultCertificate#subject_alternative_names}
   */
   readonly subjectAlternativeNames?: KeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames;
@@ -1080,31 +1075,31 @@ export class KeyVaultCertificateCertificatePolicyX509CertificatePropertiesOutput
 export interface KeyVaultCertificateCertificatePolicy {
   /**
   * issuer_parameters block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/key_vault_certificate#issuer_parameters KeyVaultCertificate#issuer_parameters}
   */
   readonly issuerParameters: KeyVaultCertificateCertificatePolicyIssuerParameters;
   /**
   * key_properties block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/key_vault_certificate#key_properties KeyVaultCertificate#key_properties}
   */
   readonly keyProperties: KeyVaultCertificateCertificatePolicyKeyProperties;
   /**
   * lifetime_action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/key_vault_certificate#lifetime_action KeyVaultCertificate#lifetime_action}
   */
   readonly lifetimeAction?: KeyVaultCertificateCertificatePolicyLifetimeAction[] | cdktf.IResolvable;
   /**
   * secret_properties block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/key_vault_certificate#secret_properties KeyVaultCertificate#secret_properties}
   */
   readonly secretProperties: KeyVaultCertificateCertificatePolicySecretProperties;
   /**
   * x509_certificate_properties block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/key_vault_certificate#x509_certificate_properties KeyVaultCertificate#x509_certificate_properties}
   */
   readonly x509CertificateProperties?: KeyVaultCertificateCertificatePolicyX509CertificateProperties;

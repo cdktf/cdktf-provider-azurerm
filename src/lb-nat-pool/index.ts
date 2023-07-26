@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lb_nat_pool
 // generated from terraform resource schema
 
@@ -65,7 +60,7 @@ export interface LbNatPoolConfig extends cdktf.TerraformMetaArguments {
   readonly tcpResetEnabled?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lb_nat_pool#timeouts LbNatPool#timeouts}
   */
   readonly timeouts?: LbNatPoolTimeouts;

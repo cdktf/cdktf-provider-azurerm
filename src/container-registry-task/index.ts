@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_registry_task
 // generated from terraform resource schema
 
@@ -53,67 +48,67 @@ export interface ContainerRegistryTaskConfig extends cdktf.TerraformMetaArgument
   readonly timeoutInSeconds?: number;
   /**
   * agent_setting block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_registry_task#agent_setting ContainerRegistryTask#agent_setting}
   */
   readonly agentSetting?: ContainerRegistryTaskAgentSetting;
   /**
   * base_image_trigger block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_registry_task#base_image_trigger ContainerRegistryTask#base_image_trigger}
   */
   readonly baseImageTrigger?: ContainerRegistryTaskBaseImageTrigger;
   /**
   * docker_step block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_registry_task#docker_step ContainerRegistryTask#docker_step}
   */
   readonly dockerStep?: ContainerRegistryTaskDockerStep;
   /**
   * encoded_step block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_registry_task#encoded_step ContainerRegistryTask#encoded_step}
   */
   readonly encodedStep?: ContainerRegistryTaskEncodedStep;
   /**
   * file_step block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_registry_task#file_step ContainerRegistryTask#file_step}
   */
   readonly fileStep?: ContainerRegistryTaskFileStep;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_registry_task#identity ContainerRegistryTask#identity}
   */
   readonly identity?: ContainerRegistryTaskIdentity;
   /**
   * platform block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_registry_task#platform ContainerRegistryTask#platform}
   */
   readonly platform?: ContainerRegistryTaskPlatform;
   /**
   * registry_credential block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_registry_task#registry_credential ContainerRegistryTask#registry_credential}
   */
   readonly registryCredential?: ContainerRegistryTaskRegistryCredential;
   /**
   * source_trigger block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_registry_task#source_trigger ContainerRegistryTask#source_trigger}
   */
   readonly sourceTrigger?: ContainerRegistryTaskSourceTrigger[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_registry_task#timeouts ContainerRegistryTask#timeouts}
   */
   readonly timeouts?: ContainerRegistryTaskTimeouts;
   /**
   * timer_trigger block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_registry_task#timer_trigger ContainerRegistryTask#timer_trigger}
   */
   readonly timerTrigger?: ContainerRegistryTaskTimerTrigger[] | cdktf.IResolvable;
@@ -1468,13 +1463,13 @@ export class ContainerRegistryTaskRegistryCredentialSourceOutputReference extend
 export interface ContainerRegistryTaskRegistryCredential {
   /**
   * custom block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_registry_task#custom ContainerRegistryTask#custom}
   */
   readonly custom?: ContainerRegistryTaskRegistryCredentialCustom[] | cdktf.IResolvable;
   /**
   * source block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_registry_task#source ContainerRegistryTask#source}
   */
   readonly source?: ContainerRegistryTaskRegistryCredentialSource;
@@ -1755,7 +1750,7 @@ export interface ContainerRegistryTaskSourceTrigger {
   readonly sourceType: string;
   /**
   * authentication block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_registry_task#authentication ContainerRegistryTask#authentication}
   */
   readonly authentication?: ContainerRegistryTaskSourceTriggerAuthentication;

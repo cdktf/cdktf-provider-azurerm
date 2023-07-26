@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/policy_set_definition
 // generated from terraform resource schema
 
@@ -49,19 +44,19 @@ export interface PolicySetDefinitionConfig extends cdktf.TerraformMetaArguments 
   readonly policyType: string;
   /**
   * policy_definition_group block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/policy_set_definition#policy_definition_group PolicySetDefinition#policy_definition_group}
   */
   readonly policyDefinitionGroup?: PolicySetDefinitionPolicyDefinitionGroup[] | cdktf.IResolvable;
   /**
   * policy_definition_reference block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/policy_set_definition#policy_definition_reference PolicySetDefinition#policy_definition_reference}
   */
   readonly policyDefinitionReference: PolicySetDefinitionPolicyDefinitionReference[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/policy_set_definition#timeouts PolicySetDefinition#timeouts}
   */
   readonly timeouts?: PolicySetDefinitionTimeouts;

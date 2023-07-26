@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot
 // generated from terraform resource schema
 
@@ -30,7 +25,7 @@ export interface WindowsWebAppSlotConfig extends cdktf.TerraformMetaArguments {
   readonly clientCertificateEnabled?: boolean | cdktf.IResolvable;
   /**
   * Paths to exclude when using client certificates, separated by ;
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#client_certificate_exclusion_paths WindowsWebAppSlot#client_certificate_exclusion_paths}
   */
   readonly clientCertificateExclusionPaths?: string;
@@ -79,61 +74,61 @@ export interface WindowsWebAppSlotConfig extends cdktf.TerraformMetaArguments {
   readonly virtualNetworkSubnetId?: string;
   /**
   * The local path and filename of the Zip packaged application to deploy to this Windows Web App. **Note:** Using this value requires `WEBSITE_RUN_FROM_PACKAGE=1` on the App in `app_settings`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#zip_deploy_file WindowsWebAppSlot#zip_deploy_file}
   */
   readonly zipDeployFile?: string;
   /**
   * auth_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#auth_settings WindowsWebAppSlot#auth_settings}
   */
   readonly authSettings?: WindowsWebAppSlotAuthSettings;
   /**
   * auth_settings_v2 block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#auth_settings_v2 WindowsWebAppSlot#auth_settings_v2}
   */
   readonly authSettingsV2?: WindowsWebAppSlotAuthSettingsV2;
   /**
   * backup block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#backup WindowsWebAppSlot#backup}
   */
   readonly backup?: WindowsWebAppSlotBackup;
   /**
   * connection_string block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#connection_string WindowsWebAppSlot#connection_string}
   */
   readonly connectionString?: WindowsWebAppSlotConnectionString[] | cdktf.IResolvable;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#identity WindowsWebAppSlot#identity}
   */
   readonly identity?: WindowsWebAppSlotIdentity;
   /**
   * logs block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#logs WindowsWebAppSlot#logs}
   */
   readonly logs?: WindowsWebAppSlotLogs;
   /**
   * site_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#site_config WindowsWebAppSlot#site_config}
   */
   readonly siteConfig: WindowsWebAppSlotSiteConfig;
   /**
   * storage_account block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#storage_account WindowsWebAppSlot#storage_account}
   */
   readonly storageAccount?: WindowsWebAppSlotStorageAccount[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#timeouts WindowsWebAppSlot#timeouts}
   */
   readonly timeouts?: WindowsWebAppSlotTimeouts;
@@ -210,25 +205,25 @@ export class WindowsWebAppSlotSiteCredentialList extends cdktf.ComplexList {
 export interface WindowsWebAppSlotAuthSettingsActiveDirectory {
   /**
   * Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#allowed_audiences WindowsWebAppSlot#allowed_audiences}
   */
   readonly allowedAudiences?: string[];
   /**
   * The ID of the Client to use to authenticate with Azure Active Directory.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#client_id WindowsWebAppSlot#client_id}
   */
   readonly clientId: string;
   /**
   * The Client Secret for the Client ID. Cannot be used with `client_secret_setting_name`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#client_secret WindowsWebAppSlot#client_secret}
   */
   readonly clientSecret?: string;
   /**
   * The App Setting name that contains the client secret of the Client. Cannot be used with `client_secret`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#client_secret_setting_name WindowsWebAppSlot#client_secret_setting_name}
   */
   readonly clientSecretSettingName?: string;
@@ -361,25 +356,25 @@ export class WindowsWebAppSlotAuthSettingsActiveDirectoryOutputReference extends
 export interface WindowsWebAppSlotAuthSettingsFacebook {
   /**
   * The App ID of the Facebook app used for login.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#app_id WindowsWebAppSlot#app_id}
   */
   readonly appId: string;
   /**
   * The App Secret of the Facebook app used for Facebook Login. Cannot be specified with `app_secret_setting_name`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#app_secret WindowsWebAppSlot#app_secret}
   */
   readonly appSecret?: string;
   /**
   * The app setting name that contains the `app_secret` value used for Facebook Login. Cannot be specified with `app_secret`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#app_secret_setting_name WindowsWebAppSlot#app_secret_setting_name}
   */
   readonly appSecretSettingName?: string;
   /**
   * Specifies a list of OAuth 2.0 scopes to be requested as part of Facebook Login authentication.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#oauth_scopes WindowsWebAppSlot#oauth_scopes}
   */
   readonly oauthScopes?: string[];
@@ -512,25 +507,25 @@ export class WindowsWebAppSlotAuthSettingsFacebookOutputReference extends cdktf.
 export interface WindowsWebAppSlotAuthSettingsGithub {
   /**
   * The ID of the GitHub app used for login.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#client_id WindowsWebAppSlot#client_id}
   */
   readonly clientId: string;
   /**
   * The Client Secret of the GitHub app used for GitHub Login. Cannot be specified with `client_secret_setting_name`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#client_secret WindowsWebAppSlot#client_secret}
   */
   readonly clientSecret?: string;
   /**
   * The app setting name that contains the `client_secret` value used for GitHub Login. Cannot be specified with `client_secret`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#client_secret_setting_name WindowsWebAppSlot#client_secret_setting_name}
   */
   readonly clientSecretSettingName?: string;
   /**
   * Specifies a list of OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#oauth_scopes WindowsWebAppSlot#oauth_scopes}
   */
   readonly oauthScopes?: string[];
@@ -663,25 +658,25 @@ export class WindowsWebAppSlotAuthSettingsGithubOutputReference extends cdktf.Co
 export interface WindowsWebAppSlotAuthSettingsGoogle {
   /**
   * The OpenID Connect Client ID for the Google web application.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#client_id WindowsWebAppSlot#client_id}
   */
   readonly clientId: string;
   /**
   * The client secret associated with the Google web application.  Cannot be specified with `client_secret_setting_name`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#client_secret WindowsWebAppSlot#client_secret}
   */
   readonly clientSecret?: string;
   /**
   * The app setting name that contains the `client_secret` value used for Google Login. Cannot be specified with `client_secret`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#client_secret_setting_name WindowsWebAppSlot#client_secret_setting_name}
   */
   readonly clientSecretSettingName?: string;
   /**
   * Specifies a list of OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication. If not specified, "openid", "profile", and "email" are used as default scopes.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#oauth_scopes WindowsWebAppSlot#oauth_scopes}
   */
   readonly oauthScopes?: string[];
@@ -814,25 +809,25 @@ export class WindowsWebAppSlotAuthSettingsGoogleOutputReference extends cdktf.Co
 export interface WindowsWebAppSlotAuthSettingsMicrosoft {
   /**
   * The OAuth 2.0 client ID that was created for the app used for authentication.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#client_id WindowsWebAppSlot#client_id}
   */
   readonly clientId: string;
   /**
   * The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret_setting_name`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#client_secret WindowsWebAppSlot#client_secret}
   */
   readonly clientSecret?: string;
   /**
   * The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#client_secret_setting_name WindowsWebAppSlot#client_secret_setting_name}
   */
   readonly clientSecretSettingName?: string;
   /**
   * The list of OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication. If not specified, `wl.basic` is used as the default scope.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#oauth_scopes WindowsWebAppSlot#oauth_scopes}
   */
   readonly oauthScopes?: string[];
@@ -965,19 +960,19 @@ export class WindowsWebAppSlotAuthSettingsMicrosoftOutputReference extends cdktf
 export interface WindowsWebAppSlotAuthSettingsTwitter {
   /**
   * The OAuth 1.0a consumer key of the Twitter application used for sign-in.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#consumer_key WindowsWebAppSlot#consumer_key}
   */
   readonly consumerKey: string;
   /**
   * The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret_setting_name`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#consumer_secret WindowsWebAppSlot#consumer_secret}
   */
   readonly consumerSecret?: string;
   /**
   * The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#consumer_secret_setting_name WindowsWebAppSlot#consumer_secret_setting_name}
   */
   readonly consumerSecretSettingName?: string;
@@ -1087,91 +1082,91 @@ export class WindowsWebAppSlotAuthSettingsTwitterOutputReference extends cdktf.C
 export interface WindowsWebAppSlotAuthSettings {
   /**
   * Specifies a map of Login Parameters to send to the OpenID Connect authorization endpoint when a user logs in.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#additional_login_parameters WindowsWebAppSlot#additional_login_parameters}
   */
   readonly additionalLoginParameters?: { [key: string]: string };
   /**
   * Specifies a list of External URLs that can be redirected to as part of logging in or logging out of the Windows Web App.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#allowed_external_redirect_urls WindowsWebAppSlot#allowed_external_redirect_urls}
   */
   readonly allowedExternalRedirectUrls?: string[];
   /**
   * The default authentication provider to use when multiple providers are configured. Possible values include: `AzureActiveDirectory`, `Facebook`, `Google`, `MicrosoftAccount`, `Twitter`, `Github`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#default_provider WindowsWebAppSlot#default_provider}
   */
   readonly defaultProvider?: string;
   /**
   * Should the Authentication / Authorization feature be enabled?
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#enabled WindowsWebAppSlot#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
   /**
   * The OpenID Connect Issuer URI that represents the entity which issues access tokens.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#issuer WindowsWebAppSlot#issuer}
   */
   readonly issuer?: string;
   /**
   * The RuntimeVersion of the Authentication / Authorization feature in use.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#runtime_version WindowsWebAppSlot#runtime_version}
   */
   readonly runtimeVersion?: string;
   /**
   * The number of hours after session token expiration that a session token can be used to call the token refresh API. Defaults to `72` hours.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#token_refresh_extension_hours WindowsWebAppSlot#token_refresh_extension_hours}
   */
   readonly tokenRefreshExtensionHours?: number;
   /**
   * Should the Windows Web App durably store platform-specific security tokens that are obtained during login flows? Defaults to `false`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#token_store_enabled WindowsWebAppSlot#token_store_enabled}
   */
   readonly tokenStoreEnabled?: boolean | cdktf.IResolvable;
   /**
   * The action to take when an unauthenticated client attempts to access the app. Possible values include: `RedirectToLoginPage`, `AllowAnonymous`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#unauthenticated_client_action WindowsWebAppSlot#unauthenticated_client_action}
   */
   readonly unauthenticatedClientAction?: string;
   /**
   * active_directory block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#active_directory WindowsWebAppSlot#active_directory}
   */
   readonly activeDirectory?: WindowsWebAppSlotAuthSettingsActiveDirectory;
   /**
   * facebook block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#facebook WindowsWebAppSlot#facebook}
   */
   readonly facebook?: WindowsWebAppSlotAuthSettingsFacebook;
   /**
   * github block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#github WindowsWebAppSlot#github}
   */
   readonly github?: WindowsWebAppSlotAuthSettingsGithub;
   /**
   * google block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#google WindowsWebAppSlot#google}
   */
   readonly google?: WindowsWebAppSlotAuthSettingsGoogle;
   /**
   * microsoft block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#microsoft WindowsWebAppSlot#microsoft}
   */
   readonly microsoft?: WindowsWebAppSlotAuthSettingsMicrosoft;
   /**
   * twitter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#twitter WindowsWebAppSlot#twitter}
   */
   readonly twitter?: WindowsWebAppSlotAuthSettingsTwitter;
@@ -1557,73 +1552,73 @@ export class WindowsWebAppSlotAuthSettingsOutputReference extends cdktf.ComplexO
 export interface WindowsWebAppSlotAuthSettingsV2ActiveDirectoryV2 {
   /**
   * The list of allowed Applications for the Default Authorisation Policy.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#allowed_applications WindowsWebAppSlot#allowed_applications}
   */
   readonly allowedApplications?: string[];
   /**
   * Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#allowed_audiences WindowsWebAppSlot#allowed_audiences}
   */
   readonly allowedAudiences?: string[];
   /**
   * The list of allowed Group Names for the Default Authorisation Policy.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#allowed_groups WindowsWebAppSlot#allowed_groups}
   */
   readonly allowedGroups?: string[];
   /**
   * The list of allowed Identities for the Default Authorisation Policy.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#allowed_identities WindowsWebAppSlot#allowed_identities}
   */
   readonly allowedIdentities?: string[];
   /**
   * The ID of the Client to use to authenticate with Azure Active Directory.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#client_id WindowsWebAppSlot#client_id}
   */
   readonly clientId: string;
   /**
   * The thumbprint of the certificate used for signing purposes.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#client_secret_certificate_thumbprint WindowsWebAppSlot#client_secret_certificate_thumbprint}
   */
   readonly clientSecretCertificateThumbprint?: string;
   /**
   * The App Setting name that contains the client secret of the Client.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#client_secret_setting_name WindowsWebAppSlot#client_secret_setting_name}
   */
   readonly clientSecretSettingName?: string;
   /**
   * A list of Allowed Client Applications in the JWT Claim.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#jwt_allowed_client_applications WindowsWebAppSlot#jwt_allowed_client_applications}
   */
   readonly jwtAllowedClientApplications?: string[];
   /**
   * A list of Allowed Groups in the JWT Claim.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#jwt_allowed_groups WindowsWebAppSlot#jwt_allowed_groups}
   */
   readonly jwtAllowedGroups?: string[];
   /**
   * A map of key-value pairs to send to the Authorisation Endpoint when a user logs in.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#login_parameters WindowsWebAppSlot#login_parameters}
   */
   readonly loginParameters?: { [key: string]: string };
   /**
   * The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#tenant_auth_endpoint WindowsWebAppSlot#tenant_auth_endpoint}
   */
   readonly tenantAuthEndpoint: string;
   /**
   * Should the www-authenticate provider should be omitted from the request? Defaults to `false`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#www_authentication_disabled WindowsWebAppSlot#www_authentication_disabled}
   */
   readonly wwwAuthenticationDisabled?: boolean | cdktf.IResolvable;
@@ -1937,13 +1932,13 @@ export class WindowsWebAppSlotAuthSettingsV2ActiveDirectoryV2OutputReference ext
 export interface WindowsWebAppSlotAuthSettingsV2AppleV2 {
   /**
   * The OpenID Connect Client ID for the Apple web application.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#client_id WindowsWebAppSlot#client_id}
   */
   readonly clientId: string;
   /**
   * The app setting name that contains the `client_secret` value used for Apple Login.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#client_secret_setting_name WindowsWebAppSlot#client_secret_setting_name}
   */
   readonly clientSecretSettingName: string;
@@ -2032,7 +2027,7 @@ export class WindowsWebAppSlotAuthSettingsV2AppleV2OutputReference extends cdktf
 export interface WindowsWebAppSlotAuthSettingsV2AzureStaticWebAppV2 {
   /**
   * The ID of the Client to use to authenticate with Azure Static Web App Authentication.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#client_id WindowsWebAppSlot#client_id}
   */
   readonly clientId: string;
@@ -2096,31 +2091,31 @@ export class WindowsWebAppSlotAuthSettingsV2AzureStaticWebAppV2OutputReference e
 export interface WindowsWebAppSlotAuthSettingsV2CustomOidcV2 {
   /**
   * The ID of the Client to use to authenticate with this Custom OIDC.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#client_id WindowsWebAppSlot#client_id}
   */
   readonly clientId: string;
   /**
   * The name of the Custom OIDC Authentication Provider.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#name WindowsWebAppSlot#name}
   */
   readonly name: string;
   /**
   * The name of the claim that contains the users name.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#name_claim_type WindowsWebAppSlot#name_claim_type}
   */
   readonly nameClaimType?: string;
   /**
   * The endpoint that contains all the configuration endpoints for this Custom OIDC provider.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#openid_configuration_endpoint WindowsWebAppSlot#openid_configuration_endpoint}
   */
   readonly openidConfigurationEndpoint: string;
   /**
   * The list of the scopes that should be requested while authenticating.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#scopes WindowsWebAppSlot#scopes}
   */
   readonly scopes?: string[];
@@ -2332,25 +2327,25 @@ export class WindowsWebAppSlotAuthSettingsV2CustomOidcV2List extends cdktf.Compl
 export interface WindowsWebAppSlotAuthSettingsV2FacebookV2 {
   /**
   * The App ID of the Facebook app used for login.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#app_id WindowsWebAppSlot#app_id}
   */
   readonly appId: string;
   /**
   * The app setting name that contains the `app_secret` value used for Facebook Login.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#app_secret_setting_name WindowsWebAppSlot#app_secret_setting_name}
   */
   readonly appSecretSettingName: string;
   /**
   * The version of the Facebook API to be used while logging in.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#graph_api_version WindowsWebAppSlot#graph_api_version}
   */
   readonly graphApiVersion?: string;
   /**
   * Specifies a list of scopes to be requested as part of Facebook Login authentication.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#login_scopes WindowsWebAppSlot#login_scopes}
   */
   readonly loginScopes?: string[];
@@ -2480,19 +2475,19 @@ export class WindowsWebAppSlotAuthSettingsV2FacebookV2OutputReference extends cd
 export interface WindowsWebAppSlotAuthSettingsV2GithubV2 {
   /**
   * The ID of the GitHub app used for login.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#client_id WindowsWebAppSlot#client_id}
   */
   readonly clientId: string;
   /**
   * The app setting name that contains the `client_secret` value used for GitHub Login.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#client_secret_setting_name WindowsWebAppSlot#client_secret_setting_name}
   */
   readonly clientSecretSettingName: string;
   /**
   * Specifies a list of OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#login_scopes WindowsWebAppSlot#login_scopes}
   */
   readonly loginScopes?: string[];
@@ -2599,25 +2594,25 @@ export class WindowsWebAppSlotAuthSettingsV2GithubV2OutputReference extends cdkt
 export interface WindowsWebAppSlotAuthSettingsV2GoogleV2 {
   /**
   * Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#allowed_audiences WindowsWebAppSlot#allowed_audiences}
   */
   readonly allowedAudiences?: string[];
   /**
   * The OpenID Connect Client ID for the Google web application.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#client_id WindowsWebAppSlot#client_id}
   */
   readonly clientId: string;
   /**
   * The app setting name that contains the `client_secret` value used for Google Login.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#client_secret_setting_name WindowsWebAppSlot#client_secret_setting_name}
   */
   readonly clientSecretSettingName: string;
   /**
   * Specifies a list of Login scopes that will be requested as part of Google Sign-In authentication.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#login_scopes WindowsWebAppSlot#login_scopes}
   */
   readonly loginScopes?: string[];
@@ -2747,67 +2742,67 @@ export class WindowsWebAppSlotAuthSettingsV2GoogleV2OutputReference extends cdkt
 export interface WindowsWebAppSlotAuthSettingsV2Login {
   /**
   * External URLs that can be redirected to as part of logging in or logging out of the app. This is an advanced setting typically only needed by Windows Store application backends. **Note:** URLs within the current domain are always implicitly allowed.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#allowed_external_redirect_urls WindowsWebAppSlot#allowed_external_redirect_urls}
   */
   readonly allowedExternalRedirectUrls?: string[];
   /**
   * The method by which cookies expire. Possible values include: `FixedTime`, and `IdentityProviderDerived`. Defaults to `FixedTime`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#cookie_expiration_convention WindowsWebAppSlot#cookie_expiration_convention}
   */
   readonly cookieExpirationConvention?: string;
   /**
   * The time after the request is made when the session cookie should expire. Defaults to `08:00:00`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#cookie_expiration_time WindowsWebAppSlot#cookie_expiration_time}
   */
   readonly cookieExpirationTime?: string;
   /**
   * The endpoint to which logout requests should be made.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#logout_endpoint WindowsWebAppSlot#logout_endpoint}
   */
   readonly logoutEndpoint?: string;
   /**
   * The time after the request is made when the nonce should expire. Defaults to `00:05:00`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#nonce_expiration_time WindowsWebAppSlot#nonce_expiration_time}
   */
   readonly nonceExpirationTime?: string;
   /**
   * Should the fragments from the request be preserved after the login request is made. Defaults to `false`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#preserve_url_fragments_for_logins WindowsWebAppSlot#preserve_url_fragments_for_logins}
   */
   readonly preserveUrlFragmentsForLogins?: boolean | cdktf.IResolvable;
   /**
   * The number of hours after session token expiration that a session token can be used to call the token refresh API. Defaults to `72` hours.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#token_refresh_extension_time WindowsWebAppSlot#token_refresh_extension_time}
   */
   readonly tokenRefreshExtensionTime?: number;
   /**
   * Should the Token Store configuration Enabled. Defaults to `false`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#token_store_enabled WindowsWebAppSlot#token_store_enabled}
   */
   readonly tokenStoreEnabled?: boolean | cdktf.IResolvable;
   /**
   * The directory path in the App Filesystem in which the tokens will be stored.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#token_store_path WindowsWebAppSlot#token_store_path}
   */
   readonly tokenStorePath?: string;
   /**
   * The name of the app setting which contains the SAS URL of the blob storage containing the tokens.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#token_store_sas_setting_name WindowsWebAppSlot#token_store_sas_setting_name}
   */
   readonly tokenStoreSasSettingName?: string;
   /**
   * Should the nonce be validated while completing the login flow. Defaults to `true`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#validate_nonce WindowsWebAppSlot#validate_nonce}
   */
   readonly validateNonce?: boolean | cdktf.IResolvable;
@@ -3104,25 +3099,25 @@ export class WindowsWebAppSlotAuthSettingsV2LoginOutputReference extends cdktf.C
 export interface WindowsWebAppSlotAuthSettingsV2MicrosoftV2 {
   /**
   * Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#allowed_audiences WindowsWebAppSlot#allowed_audiences}
   */
   readonly allowedAudiences?: string[];
   /**
   * The OAuth 2.0 client ID that was created for the app used for authentication.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#client_id WindowsWebAppSlot#client_id}
   */
   readonly clientId: string;
   /**
   * The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#client_secret_setting_name WindowsWebAppSlot#client_secret_setting_name}
   */
   readonly clientSecretSettingName: string;
   /**
   * The list of Login scopes that will be requested as part of Microsoft Account authentication.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#login_scopes WindowsWebAppSlot#login_scopes}
   */
   readonly loginScopes?: string[];
@@ -3252,13 +3247,13 @@ export class WindowsWebAppSlotAuthSettingsV2MicrosoftV2OutputReference extends c
 export interface WindowsWebAppSlotAuthSettingsV2TwitterV2 {
   /**
   * The OAuth 1.0a consumer key of the Twitter application used for sign-in.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#consumer_key WindowsWebAppSlot#consumer_key}
   */
   readonly consumerKey: string;
   /**
   * The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#consumer_secret_setting_name WindowsWebAppSlot#consumer_secret_setting_name}
   */
   readonly consumerSecretSettingName: string;
@@ -3342,133 +3337,133 @@ export class WindowsWebAppSlotAuthSettingsV2TwitterV2OutputReference extends cdk
 export interface WindowsWebAppSlotAuthSettingsV2 {
   /**
   * Should the AuthV2 Settings be enabled. Defaults to `false`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#auth_enabled WindowsWebAppSlot#auth_enabled}
   */
   readonly authEnabled?: boolean | cdktf.IResolvable;
   /**
   * The path to the App Auth settings. **Note:** Relative Paths are evaluated from the Site Root directory.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#config_file_path WindowsWebAppSlot#config_file_path}
   */
   readonly configFilePath?: string;
   /**
   * The Default Authentication Provider to use when the `unauthenticated_action` is set to `RedirectToLoginPage`. Possible values include: `apple`, `azureactivedirectory`, `facebook`, `github`, `google`, `twitter` and the `name` of your `custom_oidc_v2` provider.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#default_provider WindowsWebAppSlot#default_provider}
   */
   readonly defaultProvider?: string;
   /**
   * The paths which should be excluded from the `unauthenticated_action` when it is set to `RedirectToLoginPage`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#excluded_paths WindowsWebAppSlot#excluded_paths}
   */
   readonly excludedPaths?: string[];
   /**
   * The convention used to determine the url of the request made. Possible values include `ForwardProxyConventionNoProxy`, `ForwardProxyConventionStandard`, `ForwardProxyConventionCustom`. Defaults to `ForwardProxyConventionNoProxy`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#forward_proxy_convention WindowsWebAppSlot#forward_proxy_convention}
   */
   readonly forwardProxyConvention?: string;
   /**
   * The name of the header containing the host of the request.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#forward_proxy_custom_host_header_name WindowsWebAppSlot#forward_proxy_custom_host_header_name}
   */
   readonly forwardProxyCustomHostHeaderName?: string;
   /**
   * The name of the header containing the scheme of the request.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#forward_proxy_custom_scheme_header_name WindowsWebAppSlot#forward_proxy_custom_scheme_header_name}
   */
   readonly forwardProxyCustomSchemeHeaderName?: string;
   /**
   * The prefix that should precede all the authentication and authorisation paths. Defaults to `/.auth`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#http_route_api_prefix WindowsWebAppSlot#http_route_api_prefix}
   */
   readonly httpRouteApiPrefix?: string;
   /**
   * Should the authentication flow be used for all requests.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#require_authentication WindowsWebAppSlot#require_authentication}
   */
   readonly requireAuthentication?: boolean | cdktf.IResolvable;
   /**
   * Should HTTPS be required on connections? Defaults to true.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#require_https WindowsWebAppSlot#require_https}
   */
   readonly requireHttps?: boolean | cdktf.IResolvable;
   /**
   * The Runtime Version of the Authentication and Authorisation feature of this App. Defaults to `~1`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#runtime_version WindowsWebAppSlot#runtime_version}
   */
   readonly runtimeVersion?: string;
   /**
   * The action to take for requests made without authentication. Possible values include `RedirectToLoginPage`, `AllowAnonymous`, `Return401`, and `Return403`. Defaults to `RedirectToLoginPage`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#unauthenticated_action WindowsWebAppSlot#unauthenticated_action}
   */
   readonly unauthenticatedAction?: string;
   /**
   * active_directory_v2 block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#active_directory_v2 WindowsWebAppSlot#active_directory_v2}
   */
   readonly activeDirectoryV2?: WindowsWebAppSlotAuthSettingsV2ActiveDirectoryV2;
   /**
   * apple_v2 block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#apple_v2 WindowsWebAppSlot#apple_v2}
   */
   readonly appleV2?: WindowsWebAppSlotAuthSettingsV2AppleV2;
   /**
   * azure_static_web_app_v2 block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#azure_static_web_app_v2 WindowsWebAppSlot#azure_static_web_app_v2}
   */
   readonly azureStaticWebAppV2?: WindowsWebAppSlotAuthSettingsV2AzureStaticWebAppV2;
   /**
   * custom_oidc_v2 block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#custom_oidc_v2 WindowsWebAppSlot#custom_oidc_v2}
   */
   readonly customOidcV2?: WindowsWebAppSlotAuthSettingsV2CustomOidcV2[] | cdktf.IResolvable;
   /**
   * facebook_v2 block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#facebook_v2 WindowsWebAppSlot#facebook_v2}
   */
   readonly facebookV2?: WindowsWebAppSlotAuthSettingsV2FacebookV2;
   /**
   * github_v2 block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#github_v2 WindowsWebAppSlot#github_v2}
   */
   readonly githubV2?: WindowsWebAppSlotAuthSettingsV2GithubV2;
   /**
   * google_v2 block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#google_v2 WindowsWebAppSlot#google_v2}
   */
   readonly googleV2?: WindowsWebAppSlotAuthSettingsV2GoogleV2;
   /**
   * login block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#login WindowsWebAppSlot#login}
   */
   readonly login: WindowsWebAppSlotAuthSettingsV2Login;
   /**
   * microsoft_v2 block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#microsoft_v2 WindowsWebAppSlot#microsoft_v2}
   */
   readonly microsoftV2?: WindowsWebAppSlotAuthSettingsV2MicrosoftV2;
   /**
   * twitter_v2 block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#twitter_v2 WindowsWebAppSlot#twitter_v2}
   */
   readonly twitterV2?: WindowsWebAppSlotAuthSettingsV2TwitterV2;
@@ -4015,31 +4010,31 @@ export class WindowsWebAppSlotAuthSettingsV2OutputReference extends cdktf.Comple
 export interface WindowsWebAppSlotBackupSchedule {
   /**
   * How often the backup should be executed (e.g. for weekly backup, this should be set to `7` and `frequency_unit` should be set to `Day`).
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#frequency_interval WindowsWebAppSlot#frequency_interval}
   */
   readonly frequencyInterval: number;
   /**
   * The unit of time for how often the backup should take place. Possible values include: `Day` and `Hour`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#frequency_unit WindowsWebAppSlot#frequency_unit}
   */
   readonly frequencyUnit: string;
   /**
   * Should the service keep at least one backup, regardless of age of backup. Defaults to `false`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#keep_at_least_one_backup WindowsWebAppSlot#keep_at_least_one_backup}
   */
   readonly keepAtLeastOneBackup?: boolean | cdktf.IResolvable;
   /**
   * After how many days backups should be deleted.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#retention_period_days WindowsWebAppSlot#retention_period_days}
   */
   readonly retentionPeriodDays?: number;
   /**
   * When the schedule should start working in RFC-3339 format.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#start_time WindowsWebAppSlot#start_time}
   */
   readonly startTime?: string;
@@ -4197,25 +4192,25 @@ export class WindowsWebAppSlotBackupScheduleOutputReference extends cdktf.Comple
 export interface WindowsWebAppSlotBackup {
   /**
   * Should this backup job be enabled?
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#enabled WindowsWebAppSlot#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
   * The name which should be used for this Backup.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#name WindowsWebAppSlot#name}
   */
   readonly name: string;
   /**
   * The SAS URL to the container.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#storage_account_url WindowsWebAppSlot#storage_account_url}
   */
   readonly storageAccountUrl: string;
   /**
   * schedule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#schedule WindowsWebAppSlot#schedule}
   */
   readonly schedule: WindowsWebAppSlotBackupSchedule;
@@ -4342,19 +4337,19 @@ export class WindowsWebAppSlotBackupOutputReference extends cdktf.ComplexObject 
 export interface WindowsWebAppSlotConnectionString {
   /**
   * The name which should be used for this Connection.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#name WindowsWebAppSlot#name}
   */
   readonly name: string;
   /**
   * Type of database. Possible values include: `MySQL`, `SQLServer`, `SQLAzure`, `Custom`, `NotificationHub`, `ServiceBus`, `EventHub`, `APIHub`, `DocDb`, `RedisCache`, and `PostgreSQL`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#type WindowsWebAppSlot#type}
   */
   readonly type: string;
   /**
   * The connection string value.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#value WindowsWebAppSlot#value}
   */
   readonly value: string;
@@ -4703,7 +4698,7 @@ export interface WindowsWebAppSlotLogsApplicationLogs {
   readonly fileSystemLevel: string;
   /**
   * azure_blob_storage block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#azure_blob_storage WindowsWebAppSlot#azure_blob_storage}
   */
   readonly azureBlobStorage?: WindowsWebAppSlotLogsApplicationLogsAzureBlobStorage;
@@ -4965,13 +4960,13 @@ export class WindowsWebAppSlotLogsHttpLogsFileSystemOutputReference extends cdkt
 export interface WindowsWebAppSlotLogsHttpLogs {
   /**
   * azure_blob_storage block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#azure_blob_storage WindowsWebAppSlot#azure_blob_storage}
   */
   readonly azureBlobStorage?: WindowsWebAppSlotLogsHttpLogsAzureBlobStorage;
   /**
   * file_system block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#file_system WindowsWebAppSlot#file_system}
   */
   readonly fileSystem?: WindowsWebAppSlotLogsHttpLogsFileSystem;
@@ -5069,13 +5064,13 @@ export interface WindowsWebAppSlotLogs {
   readonly failedRequestTracing?: boolean | cdktf.IResolvable;
   /**
   * application_logs block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#application_logs WindowsWebAppSlot#application_logs}
   */
   readonly applicationLogs?: WindowsWebAppSlotLogsApplicationLogs;
   /**
   * http_logs block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#http_logs WindowsWebAppSlot#http_logs}
   */
   readonly httpLogs?: WindowsWebAppSlotLogsHttpLogs;
@@ -5243,7 +5238,7 @@ export interface WindowsWebAppSlotSiteConfigApplicationStack {
   readonly dockerRegistryUsername?: string;
   /**
   * The version of DotNetCore to use.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#dotnet_core_version WindowsWebAppSlot#dotnet_core_version}
   */
   readonly dotnetCoreVersion?: string;
@@ -5261,7 +5256,7 @@ export interface WindowsWebAppSlotSiteConfigApplicationStack {
   readonly javaContainerVersion?: string;
   /**
   * Should the application use the embedded web server for the version of Java in use.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#java_embedded_server_enabled WindowsWebAppSlot#java_embedded_server_enabled}
   */
   readonly javaEmbeddedServerEnabled?: boolean | cdktf.IResolvable;
@@ -5863,7 +5858,7 @@ export interface WindowsWebAppSlotSiteConfigAutoHealSettingAction {
   readonly minimumProcessExecutionTime?: string;
   /**
   * custom_action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#custom_action WindowsWebAppSlot#custom_action}
   */
   readonly customAction?: WindowsWebAppSlotSiteConfigAutoHealSettingActionCustomAction;
@@ -6423,19 +6418,19 @@ export interface WindowsWebAppSlotSiteConfigAutoHealSettingTrigger {
   readonly privateMemoryKb?: number;
   /**
   * requests block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#requests WindowsWebAppSlot#requests}
   */
   readonly requests?: WindowsWebAppSlotSiteConfigAutoHealSettingTriggerRequests;
   /**
   * slow_request block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#slow_request WindowsWebAppSlot#slow_request}
   */
   readonly slowRequest?: WindowsWebAppSlotSiteConfigAutoHealSettingTriggerSlowRequest;
   /**
   * status_code block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#status_code WindowsWebAppSlot#status_code}
   */
   readonly statusCode?: WindowsWebAppSlotSiteConfigAutoHealSettingTriggerStatusCode[] | cdktf.IResolvable;
@@ -6571,13 +6566,13 @@ export class WindowsWebAppSlotSiteConfigAutoHealSettingTriggerOutputReference ex
 export interface WindowsWebAppSlotSiteConfigAutoHealSetting {
   /**
   * action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#action WindowsWebAppSlot#action}
   */
   readonly action: WindowsWebAppSlotSiteConfigAutoHealSettingAction;
   /**
   * trigger block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#trigger WindowsWebAppSlot#trigger}
   */
   readonly trigger: WindowsWebAppSlotSiteConfigAutoHealSettingTrigger;
@@ -6661,13 +6656,13 @@ export class WindowsWebAppSlotSiteConfigAutoHealSettingOutputReference extends c
 export interface WindowsWebAppSlotSiteConfigCors {
   /**
   * Specifies a list of origins that should be allowed to make cross-origin calls.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#allowed_origins WindowsWebAppSlot#allowed_origins}
   */
   readonly allowedOrigins?: string[];
   /**
   * Are credentials allowed in CORS requests? Defaults to `false`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#support_credentials WindowsWebAppSlot#support_credentials}
   */
   readonly supportCredentials?: boolean | cdktf.IResolvable;
@@ -6935,7 +6930,7 @@ export class WindowsWebAppSlotSiteConfigIpRestrictionHeadersList extends cdktf.C
 export interface WindowsWebAppSlotSiteConfigIpRestriction {
   /**
   * The action to take. Possible values are `Allow` or `Deny`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#action WindowsWebAppSlot#action}
   */
   readonly action?: string;
@@ -6945,31 +6940,31 @@ export interface WindowsWebAppSlotSiteConfigIpRestriction {
   readonly headers?: WindowsWebAppSlotSiteConfigIpRestrictionHeaders[] | cdktf.IResolvable;
   /**
   * The CIDR notation of the IP or IP Range to match. For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#ip_address WindowsWebAppSlot#ip_address}
   */
   readonly ipAddress?: string;
   /**
   * The name which should be used for this `ip_restriction`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#name WindowsWebAppSlot#name}
   */
   readonly name?: string;
   /**
   * The priority value of this `ip_restriction`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#priority WindowsWebAppSlot#priority}
   */
   readonly priority?: number;
   /**
   * The Service Tag used for this IP Restriction.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#service_tag WindowsWebAppSlot#service_tag}
   */
   readonly serviceTag?: string;
   /**
   * The Virtual Network Subnet ID used for this IP Restriction.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#virtual_network_subnet_id WindowsWebAppSlot#virtual_network_subnet_id}
   */
   readonly virtualNetworkSubnetId?: string;
@@ -7384,7 +7379,7 @@ export class WindowsWebAppSlotSiteConfigScmIpRestrictionHeadersList extends cdkt
 export interface WindowsWebAppSlotSiteConfigScmIpRestriction {
   /**
   * The action to take. Possible values are `Allow` or `Deny`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#action WindowsWebAppSlot#action}
   */
   readonly action?: string;
@@ -7394,31 +7389,31 @@ export interface WindowsWebAppSlotSiteConfigScmIpRestriction {
   readonly headers?: WindowsWebAppSlotSiteConfigScmIpRestrictionHeaders[] | cdktf.IResolvable;
   /**
   * The CIDR notation of the IP or IP Range to match. For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#ip_address WindowsWebAppSlot#ip_address}
   */
   readonly ipAddress?: string;
   /**
   * The name which should be used for this `ip_restriction`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#name WindowsWebAppSlot#name}
   */
   readonly name?: string;
   /**
   * The priority value of this `ip_restriction`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#priority WindowsWebAppSlot#priority}
   */
   readonly priority?: number;
   /**
   * The Service Tag used for this IP Restriction.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#service_tag WindowsWebAppSlot#service_tag}
   */
   readonly serviceTag?: string;
   /**
   * The Virtual Network Subnet ID used for this IP Restriction.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#virtual_network_subnet_id WindowsWebAppSlot#virtual_network_subnet_id}
   */
   readonly virtualNetworkSubnetId?: string;
@@ -7791,7 +7786,7 @@ export interface WindowsWebAppSlotSiteConfigVirtualApplication {
   readonly virtualPath: string;
   /**
   * virtual_directory block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#virtual_directory WindowsWebAppSlot#virtual_directory}
   */
   readonly virtualDirectory?: WindowsWebAppSlotSiteConfigVirtualApplicationVirtualDirectory[] | cdktf.IResolvable;
@@ -7990,7 +7985,7 @@ export interface WindowsWebAppSlotSiteConfig {
   readonly ftpsState?: string;
   /**
   * The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Defaults to `10`. Only valid in conjunction with `health_check_path`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#health_check_eviction_time_in_min WindowsWebAppSlot#health_check_eviction_time_in_min}
   */
   readonly healthCheckEvictionTimeInMin?: number;
@@ -8040,7 +8035,7 @@ export interface WindowsWebAppSlotSiteConfig {
   readonly use32BitWorker?: boolean | cdktf.IResolvable;
   /**
   * Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied? Defaults to `false`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#vnet_route_all_enabled WindowsWebAppSlot#vnet_route_all_enabled}
   */
   readonly vnetRouteAllEnabled?: boolean | cdktf.IResolvable;
@@ -8054,37 +8049,37 @@ export interface WindowsWebAppSlotSiteConfig {
   readonly workerCount?: number;
   /**
   * application_stack block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#application_stack WindowsWebAppSlot#application_stack}
   */
   readonly applicationStack?: WindowsWebAppSlotSiteConfigApplicationStack;
   /**
   * auto_heal_setting block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#auto_heal_setting WindowsWebAppSlot#auto_heal_setting}
   */
   readonly autoHealSetting?: WindowsWebAppSlotSiteConfigAutoHealSetting;
   /**
   * cors block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#cors WindowsWebAppSlot#cors}
   */
   readonly cors?: WindowsWebAppSlotSiteConfigCors;
   /**
   * ip_restriction block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#ip_restriction WindowsWebAppSlot#ip_restriction}
   */
   readonly ipRestriction?: WindowsWebAppSlotSiteConfigIpRestriction[] | cdktf.IResolvable;
   /**
   * scm_ip_restriction block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#scm_ip_restriction WindowsWebAppSlot#scm_ip_restriction}
   */
   readonly scmIpRestriction?: WindowsWebAppSlotSiteConfigScmIpRestriction[] | cdktf.IResolvable;
   /**
   * virtual_application block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_web_app_slot#virtual_application WindowsWebAppSlot#virtual_application}
   */
   readonly virtualApplication?: WindowsWebAppSlotSiteConfigVirtualApplication[] | cdktf.IResolvable;

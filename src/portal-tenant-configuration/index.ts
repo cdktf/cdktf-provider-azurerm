@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/portal_tenant_configuration
 // generated from terraform resource schema
 
@@ -25,7 +20,7 @@ export interface PortalTenantConfigurationConfig extends cdktf.TerraformMetaArgu
   readonly privateMarkdownStorageEnforced: boolean | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/portal_tenant_configuration#timeouts PortalTenantConfiguration#timeouts}
   */
   readonly timeouts?: PortalTenantConfigurationTimeouts;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_watchlist_item
 // generated from terraform resource schema
 
@@ -33,7 +28,7 @@ export interface SentinelWatchlistItemConfig extends cdktf.TerraformMetaArgument
   readonly watchlistId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_watchlist_item#timeouts SentinelWatchlistItem#timeouts}
   */
   readonly timeouts?: SentinelWatchlistItemTimeouts;

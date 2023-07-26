@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orbital_contact_profile
 // generated from terraform resource schema
 
@@ -57,13 +52,13 @@ export interface OrbitalContactProfileConfig extends cdktf.TerraformMetaArgument
   readonly tags?: { [key: string]: string };
   /**
   * links block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orbital_contact_profile#links OrbitalContactProfile#links}
   */
   readonly links: OrbitalContactProfileLinks[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orbital_contact_profile#timeouts OrbitalContactProfile#timeouts}
   */
   readonly timeouts?: OrbitalContactProfileTimeouts;
@@ -260,7 +255,7 @@ export interface OrbitalContactProfileLinksChannels {
   readonly name: string;
   /**
   * end_point block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orbital_contact_profile#end_point OrbitalContactProfile#end_point}
   */
   readonly endPoint: OrbitalContactProfileLinksChannelsEndPoint[] | cdktf.IResolvable;
@@ -474,7 +469,7 @@ export interface OrbitalContactProfileLinks {
   readonly polarization: string;
   /**
   * channels block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orbital_contact_profile#channels OrbitalContactProfile#channels}
   */
   readonly channels: OrbitalContactProfileLinksChannels[] | cdktf.IResolvable;

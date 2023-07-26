@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subscription_cost_management_view
 // generated from terraform resource schema
 
@@ -49,25 +44,25 @@ export interface SubscriptionCostManagementViewConfig extends cdktf.TerraformMet
   readonly timeframe: string;
   /**
   * dataset block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subscription_cost_management_view#dataset SubscriptionCostManagementView#dataset}
   */
   readonly dataset: SubscriptionCostManagementViewDataset;
   /**
   * kpi block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subscription_cost_management_view#kpi SubscriptionCostManagementView#kpi}
   */
   readonly kpi?: SubscriptionCostManagementViewKpi[] | cdktf.IResolvable;
   /**
   * pivot block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subscription_cost_management_view#pivot SubscriptionCostManagementView#pivot}
   */
   readonly pivot?: SubscriptionCostManagementViewPivot[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subscription_cost_management_view#timeouts SubscriptionCostManagementView#timeouts}
   */
   readonly timeouts?: SubscriptionCostManagementViewTimeouts;
@@ -433,19 +428,19 @@ export interface SubscriptionCostManagementViewDataset {
   readonly granularity: string;
   /**
   * aggregation block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subscription_cost_management_view#aggregation SubscriptionCostManagementView#aggregation}
   */
   readonly aggregation: SubscriptionCostManagementViewDatasetAggregation[] | cdktf.IResolvable;
   /**
   * grouping block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subscription_cost_management_view#grouping SubscriptionCostManagementView#grouping}
   */
   readonly grouping?: SubscriptionCostManagementViewDatasetGrouping[] | cdktf.IResolvable;
   /**
   * sorting block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subscription_cost_management_view#sorting SubscriptionCostManagementView#sorting}
   */
   readonly sorting?: SubscriptionCostManagementViewDatasetSorting[] | cdktf.IResolvable;

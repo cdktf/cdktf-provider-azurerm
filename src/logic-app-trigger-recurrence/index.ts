@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_trigger_recurrence
 // generated from terraform resource schema
 
@@ -45,13 +40,13 @@ export interface LogicAppTriggerRecurrenceConfig extends cdktf.TerraformMetaArgu
   readonly timeZone?: string;
   /**
   * schedule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_trigger_recurrence#schedule LogicAppTriggerRecurrence#schedule}
   */
   readonly schedule?: LogicAppTriggerRecurrenceSchedule;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_trigger_recurrence#timeouts LogicAppTriggerRecurrence#timeouts}
   */
   readonly timeouts?: LogicAppTriggerRecurrenceTimeouts;

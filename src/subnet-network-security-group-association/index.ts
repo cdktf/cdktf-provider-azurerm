@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subnet_network_security_group_association
 // generated from terraform resource schema
 
@@ -29,7 +24,7 @@ export interface SubnetNetworkSecurityGroupAssociationConfig extends cdktf.Terra
   readonly subnetId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subnet_network_security_group_association#timeouts SubnetNetworkSecurityGroupAssociation#timeouts}
   */
   readonly timeouts?: SubnetNetworkSecurityGroupAssociationTimeouts;

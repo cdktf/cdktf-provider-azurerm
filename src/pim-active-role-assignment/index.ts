@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_active_role_assignment
 // generated from terraform resource schema
 
@@ -21,43 +16,43 @@ export interface PimActiveRoleAssignmentConfig extends cdktf.TerraformMetaArgume
   readonly id?: string;
   /**
   * The justification of the role assignment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_active_role_assignment#justification PimActiveRoleAssignment#justification}
   */
   readonly justification?: string;
   /**
   * The principal id.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_active_role_assignment#principal_id PimActiveRoleAssignment#principal_id}
   */
   readonly principalId: string;
   /**
   * The role definition id.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_active_role_assignment#role_definition_id PimActiveRoleAssignment#role_definition_id}
   */
   readonly roleDefinitionId: string;
   /**
   * The scope.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_active_role_assignment#scope PimActiveRoleAssignment#scope}
   */
   readonly scope: string;
   /**
   * schedule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_active_role_assignment#schedule PimActiveRoleAssignment#schedule}
   */
   readonly schedule?: PimActiveRoleAssignmentSchedule;
   /**
   * ticket block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_active_role_assignment#ticket PimActiveRoleAssignment#ticket}
   */
   readonly ticket?: PimActiveRoleAssignmentTicket;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_active_role_assignment#timeouts PimActiveRoleAssignment#timeouts}
   */
   readonly timeouts?: PimActiveRoleAssignmentTimeouts;
@@ -65,19 +60,19 @@ export interface PimActiveRoleAssignmentConfig extends cdktf.TerraformMetaArgume
 export interface PimActiveRoleAssignmentScheduleExpiration {
   /**
   * The duration of the assignment in days.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_active_role_assignment#duration_days PimActiveRoleAssignment#duration_days}
   */
   readonly durationDays?: number;
   /**
   * The duration of the assignment in hours.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_active_role_assignment#duration_hours PimActiveRoleAssignment#duration_hours}
   */
   readonly durationHours?: number;
   /**
   * The end date time of the assignment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_active_role_assignment#end_date_time PimActiveRoleAssignment#end_date_time}
   */
   readonly endDateTime?: string;
@@ -190,13 +185,13 @@ export class PimActiveRoleAssignmentScheduleExpirationOutputReference extends cd
 export interface PimActiveRoleAssignmentSchedule {
   /**
   * The start date time.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_active_role_assignment#start_date_time PimActiveRoleAssignment#start_date_time}
   */
   readonly startDateTime?: string;
   /**
   * expiration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_active_role_assignment#expiration PimActiveRoleAssignment#expiration}
   */
   readonly expiration?: PimActiveRoleAssignmentScheduleExpiration;
@@ -286,13 +281,13 @@ export class PimActiveRoleAssignmentScheduleOutputReference extends cdktf.Comple
 export interface PimActiveRoleAssignmentTicket {
   /**
   * The ticket number.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_active_role_assignment#number PimActiveRoleAssignment#number}
   */
   readonly number?: string;
   /**
   * The ticket system.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/pim_active_role_assignment#system PimActiveRoleAssignment#system}
   */
   readonly systemAttribute?: string;

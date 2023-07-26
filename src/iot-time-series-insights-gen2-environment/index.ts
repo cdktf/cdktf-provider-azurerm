@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iot_time_series_insights_gen2_environment
 // generated from terraform resource schema
 
@@ -49,13 +44,13 @@ export interface IotTimeSeriesInsightsGen2EnvironmentConfig extends cdktf.Terraf
   readonly warmStoreDataRetentionTime?: string;
   /**
   * storage block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iot_time_series_insights_gen2_environment#storage IotTimeSeriesInsightsGen2Environment#storage}
   */
   readonly storage: IotTimeSeriesInsightsGen2EnvironmentStorage;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iot_time_series_insights_gen2_environment#timeouts IotTimeSeriesInsightsGen2Environment#timeouts}
   */
   readonly timeouts?: IotTimeSeriesInsightsGen2EnvironmentTimeouts;

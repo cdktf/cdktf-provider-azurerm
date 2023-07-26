@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_shared_access_policy
 // generated from terraform resource schema
 
@@ -53,7 +48,7 @@ export interface IothubDpsSharedAccessPolicyConfig extends cdktf.TerraformMetaAr
   readonly serviceConfig?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps_shared_access_policy#timeouts IothubDpsSharedAccessPolicy#timeouts}
   */
   readonly timeouts?: IothubDpsSharedAccessPolicyTimeouts;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/redis_linked_server
 // generated from terraform resource schema
 
@@ -41,7 +36,7 @@ export interface RedisLinkedServerConfig extends cdktf.TerraformMetaArguments {
   readonly targetRedisCacheName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/redis_linked_server#timeouts RedisLinkedServer#timeouts}
   */
   readonly timeouts?: RedisLinkedServerTimeouts;

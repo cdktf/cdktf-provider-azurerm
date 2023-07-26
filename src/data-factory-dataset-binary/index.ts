@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_dataset_binary
 // generated from terraform resource schema
 
@@ -53,31 +48,31 @@ export interface DataFactoryDatasetBinaryConfig extends cdktf.TerraformMetaArgum
   readonly parameters?: { [key: string]: string };
   /**
   * azure_blob_storage_location block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_dataset_binary#azure_blob_storage_location DataFactoryDatasetBinary#azure_blob_storage_location}
   */
   readonly azureBlobStorageLocation?: DataFactoryDatasetBinaryAzureBlobStorageLocation;
   /**
   * compression block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_dataset_binary#compression DataFactoryDatasetBinary#compression}
   */
   readonly compression?: DataFactoryDatasetBinaryCompression;
   /**
   * http_server_location block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_dataset_binary#http_server_location DataFactoryDatasetBinary#http_server_location}
   */
   readonly httpServerLocation?: DataFactoryDatasetBinaryHttpServerLocation;
   /**
   * sftp_server_location block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_dataset_binary#sftp_server_location DataFactoryDatasetBinary#sftp_server_location}
   */
   readonly sftpServerLocation?: DataFactoryDatasetBinarySftpServerLocation;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_dataset_binary#timeouts DataFactoryDatasetBinary#timeouts}
   */
   readonly timeouts?: DataFactoryDatasetBinaryTimeouts;

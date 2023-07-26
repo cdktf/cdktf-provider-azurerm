@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory
 // generated from terraform resource schema
 
@@ -57,31 +52,31 @@ export interface DataFactoryConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * github_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory#github_configuration DataFactory#github_configuration}
   */
   readonly githubConfiguration?: DataFactoryGithubConfiguration;
   /**
   * global_parameter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory#global_parameter DataFactory#global_parameter}
   */
   readonly globalParameter?: DataFactoryGlobalParameter[] | cdktf.IResolvable;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory#identity DataFactory#identity}
   */
   readonly identity?: DataFactoryIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory#timeouts DataFactory#timeouts}
   */
   readonly timeouts?: DataFactoryTimeouts;
   /**
   * vsts_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory#vsts_configuration DataFactory#vsts_configuration}
   */
   readonly vstsConfiguration?: DataFactoryVstsConfiguration;

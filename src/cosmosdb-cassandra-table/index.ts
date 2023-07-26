@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_cassandra_table
 // generated from terraform resource schema
 
@@ -41,19 +36,19 @@ export interface CosmosdbCassandraTableConfig extends cdktf.TerraformMetaArgumen
   readonly throughput?: number;
   /**
   * autoscale_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_cassandra_table#autoscale_settings CosmosdbCassandraTable#autoscale_settings}
   */
   readonly autoscaleSettings?: CosmosdbCassandraTableAutoscaleSettings;
   /**
   * schema block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_cassandra_table#schema CosmosdbCassandraTable#schema}
   */
   readonly schema: CosmosdbCassandraTableSchema;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_cassandra_table#timeouts CosmosdbCassandraTable#timeouts}
   */
   readonly timeouts?: CosmosdbCassandraTableTimeouts;
@@ -456,19 +451,19 @@ export class CosmosdbCassandraTableSchemaPartitionKeyList extends cdktf.ComplexL
 export interface CosmosdbCassandraTableSchema {
   /**
   * cluster_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_cassandra_table#cluster_key CosmosdbCassandraTable#cluster_key}
   */
   readonly clusterKey?: CosmosdbCassandraTableSchemaClusterKey[] | cdktf.IResolvable;
   /**
   * column block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_cassandra_table#column CosmosdbCassandraTable#column}
   */
   readonly column: CosmosdbCassandraTableSchemaColumn[] | cdktf.IResolvable;
   /**
   * partition_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cosmosdb_cassandra_table#partition_key CosmosdbCassandraTable#partition_key}
   */
   readonly partitionKey: CosmosdbCassandraTableSchemaPartitionKey[] | cdktf.IResolvable;

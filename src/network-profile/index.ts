@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_profile
 // generated from terraform resource schema
 
@@ -37,13 +32,13 @@ export interface NetworkProfileConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * container_network_interface block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_profile#container_network_interface NetworkProfile#container_network_interface}
   */
   readonly containerNetworkInterface: NetworkProfileContainerNetworkInterface;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_profile#timeouts NetworkProfile#timeouts}
   */
   readonly timeouts?: NetworkProfileTimeouts;
@@ -173,7 +168,7 @@ export interface NetworkProfileContainerNetworkInterface {
   readonly name: string;
   /**
   * ip_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_profile#ip_configuration NetworkProfile#ip_configuration}
   */
   readonly ipConfiguration: NetworkProfileContainerNetworkInterfaceIpConfiguration[] | cdktf.IResolvable;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lb_backend_address_pool
 // generated from terraform resource schema
 
@@ -33,13 +28,13 @@ export interface LbBackendAddressPoolConfig extends cdktf.TerraformMetaArguments
   readonly virtualNetworkId?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lb_backend_address_pool#timeouts LbBackendAddressPool#timeouts}
   */
   readonly timeouts?: LbBackendAddressPoolTimeouts;
   /**
   * tunnel_interface block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lb_backend_address_pool#tunnel_interface LbBackendAddressPool#tunnel_interface}
   */
   readonly tunnelInterface?: LbBackendAddressPoolTunnelInterface[] | cdktf.IResolvable;

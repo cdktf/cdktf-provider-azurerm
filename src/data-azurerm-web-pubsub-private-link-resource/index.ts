@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/web_pubsub_private_link_resource
 // generated from terraform resource schema
 
@@ -25,7 +20,7 @@ export interface DataAzurermWebPubsubPrivateLinkResourceConfig extends cdktf.Ter
   readonly webPubsubId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/web_pubsub_private_link_resource#timeouts DataAzurermWebPubsubPrivateLinkResource#timeouts}
   */
   readonly timeouts?: DataAzurermWebPubsubPrivateLinkResourceTimeouts;

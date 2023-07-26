@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subnet_service_endpoint_storage_policy
 // generated from terraform resource schema
 
@@ -37,13 +32,13 @@ export interface SubnetServiceEndpointStoragePolicyConfig extends cdktf.Terrafor
   readonly tags?: { [key: string]: string };
   /**
   * definition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subnet_service_endpoint_storage_policy#definition SubnetServiceEndpointStoragePolicy#definition}
   */
   readonly definition?: SubnetServiceEndpointStoragePolicyDefinition[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subnet_service_endpoint_storage_policy#timeouts SubnetServiceEndpointStoragePolicy#timeouts}
   */
   readonly timeouts?: SubnetServiceEndpointStoragePolicyTimeouts;

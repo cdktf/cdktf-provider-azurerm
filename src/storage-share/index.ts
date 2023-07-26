@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_share
 // generated from terraform resource schema
 
@@ -45,13 +40,13 @@ export interface StorageShareConfig extends cdktf.TerraformMetaArguments {
   readonly storageAccountName: string;
   /**
   * acl block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_share#acl StorageShare#acl}
   */
   readonly acl?: StorageShareAcl[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_share#timeouts StorageShare#timeouts}
   */
   readonly timeouts?: StorageShareTimeouts;
@@ -214,7 +209,7 @@ export interface StorageShareAcl {
   readonly id: string;
   /**
   * access_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_share#access_policy StorageShare#access_policy}
   */
   readonly accessPolicy?: StorageShareAclAccessPolicy[] | cdktf.IResolvable;

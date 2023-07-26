@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_connection
 // generated from terraform resource schema
 
@@ -41,19 +36,19 @@ export interface AppServiceConnectionConfig extends cdktf.TerraformMetaArguments
   readonly vnetSolution?: string;
   /**
   * authentication block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_connection#authentication AppServiceConnection#authentication}
   */
   readonly authentication: AppServiceConnectionAuthentication;
   /**
   * secret_store block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_connection#secret_store AppServiceConnection#secret_store}
   */
   readonly secretStore?: AppServiceConnectionSecretStore;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_connection#timeouts AppServiceConnection#timeouts}
   */
   readonly timeouts?: AppServiceConnectionTimeouts;

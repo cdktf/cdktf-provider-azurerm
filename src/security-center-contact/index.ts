@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/security_center_contact
 // generated from terraform resource schema
 
@@ -41,7 +36,7 @@ export interface SecurityCenterContactConfig extends cdktf.TerraformMetaArgument
   readonly phone?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/security_center_contact#timeouts SecurityCenterContact#timeouts}
   */
   readonly timeouts?: SecurityCenterContactTimeouts;

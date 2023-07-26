@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_sim_group
 // generated from terraform resource schema
 
@@ -41,13 +36,13 @@ export interface MobileNetworkSimGroupConfig extends cdktf.TerraformMetaArgument
   readonly tags?: { [key: string]: string };
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_sim_group#identity MobileNetworkSimGroup#identity}
   */
   readonly identity?: MobileNetworkSimGroupIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_sim_group#timeouts MobileNetworkSimGroup#timeouts}
   */
   readonly timeouts?: MobileNetworkSimGroupTimeouts;

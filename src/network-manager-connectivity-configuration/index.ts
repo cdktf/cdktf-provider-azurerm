@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_connectivity_configuration
 // generated from terraform resource schema
 
@@ -45,19 +40,19 @@ export interface NetworkManagerConnectivityConfigurationConfig extends cdktf.Ter
   readonly networkManagerId: string;
   /**
   * applies_to_group block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_connectivity_configuration#applies_to_group NetworkManagerConnectivityConfiguration#applies_to_group}
   */
   readonly appliesToGroup: NetworkManagerConnectivityConfigurationAppliesToGroup[] | cdktf.IResolvable;
   /**
   * hub block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_connectivity_configuration#hub NetworkManagerConnectivityConfiguration#hub}
   */
   readonly hub?: NetworkManagerConnectivityConfigurationHub;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_connectivity_configuration#timeouts NetworkManagerConnectivityConfiguration#timeouts}
   */
   readonly timeouts?: NetworkManagerConnectivityConfigurationTimeouts;

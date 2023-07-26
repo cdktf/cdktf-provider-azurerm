@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_desktop_application
 // generated from terraform resource schema
 
@@ -61,7 +56,7 @@ export interface VirtualDesktopApplicationConfig extends cdktf.TerraformMetaArgu
   readonly showInPortal?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_desktop_application#timeouts VirtualDesktopApplication#timeouts}
   */
   readonly timeouts?: VirtualDesktopApplicationTimeouts;

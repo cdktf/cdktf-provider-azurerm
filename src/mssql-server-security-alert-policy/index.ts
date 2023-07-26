@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_server_security_alert_policy
 // generated from terraform resource schema
 
@@ -57,7 +52,7 @@ export interface MssqlServerSecurityAlertPolicyConfig extends cdktf.TerraformMet
   readonly storageEndpoint?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_server_security_alert_policy#timeouts MssqlServerSecurityAlertPolicy#timeouts}
   */
   readonly timeouts?: MssqlServerSecurityAlertPolicyTimeouts;

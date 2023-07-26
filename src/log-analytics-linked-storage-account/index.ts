@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/log_analytics_linked_storage_account
 // generated from terraform resource schema
 
@@ -37,7 +32,7 @@ export interface LogAnalyticsLinkedStorageAccountConfig extends cdktf.TerraformM
   readonly workspaceResourceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/log_analytics_linked_storage_account#timeouts LogAnalyticsLinkedStorageAccount#timeouts}
   */
   readonly timeouts?: LogAnalyticsLinkedStorageAccountTimeouts;

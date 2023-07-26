@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_source_control_slot
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface AppServiceSourceControlSlotConfig extends cdktf.TerraformMetaArguments {
   /**
   * The URL for the repository
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_source_control_slot#branch AppServiceSourceControlSlot#branch}
   */
   readonly branch?: string;
@@ -27,49 +22,49 @@ export interface AppServiceSourceControlSlotConfig extends cdktf.TerraformMetaAr
   readonly id?: string;
   /**
   * The branch name to use for deployments.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_source_control_slot#repo_url AppServiceSourceControlSlot#repo_url}
   */
   readonly repoUrl?: string;
   /**
   * Should the Deployment Rollback be enabled? Defaults to `false`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_source_control_slot#rollback_enabled AppServiceSourceControlSlot#rollback_enabled}
   */
   readonly rollbackEnabled?: boolean | cdktf.IResolvable;
   /**
   * The ID of the Linux or Windows Web App Slot.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_source_control_slot#slot_id AppServiceSourceControlSlot#slot_id}
   */
   readonly slotId: string;
   /**
   * Should the Slot use local Git configuration.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_source_control_slot#use_local_git AppServiceSourceControlSlot#use_local_git}
   */
   readonly useLocalGit?: boolean | cdktf.IResolvable;
   /**
   * Should code be deployed manually. Set to `true` to disable continuous integration, such as webhooks into online repos such as GitHub. Defaults to `false`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_source_control_slot#use_manual_integration AppServiceSourceControlSlot#use_manual_integration}
   */
   readonly useManualIntegration?: boolean | cdktf.IResolvable;
   /**
   * The repository specified is Mercurial. Defaults to `false`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_source_control_slot#use_mercurial AppServiceSourceControlSlot#use_mercurial}
   */
   readonly useMercurial?: boolean | cdktf.IResolvable;
   /**
   * github_action_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_source_control_slot#github_action_configuration AppServiceSourceControlSlot#github_action_configuration}
   */
   readonly githubActionConfiguration?: AppServiceSourceControlSlotGithubActionConfiguration;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_source_control_slot#timeouts AppServiceSourceControlSlot#timeouts}
   */
   readonly timeouts?: AppServiceSourceControlSlotTimeouts;
@@ -77,13 +72,13 @@ export interface AppServiceSourceControlSlotConfig extends cdktf.TerraformMetaAr
 export interface AppServiceSourceControlSlotGithubActionConfigurationCodeConfiguration {
   /**
   * The value to use for the Runtime Stack in the workflow file content for code base apps.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_source_control_slot#runtime_stack AppServiceSourceControlSlot#runtime_stack}
   */
   readonly runtimeStack: string;
   /**
   * The value to use for the Runtime Version in the workflow file content for code base apps.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_source_control_slot#runtime_version AppServiceSourceControlSlot#runtime_version}
   */
   readonly runtimeVersion: string;
@@ -167,25 +162,25 @@ export class AppServiceSourceControlSlotGithubActionConfigurationCodeConfigurati
 export interface AppServiceSourceControlSlotGithubActionConfigurationContainerConfiguration {
   /**
   * The image name for the build.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_source_control_slot#image_name AppServiceSourceControlSlot#image_name}
   */
   readonly imageName: string;
   /**
   * The password used to upload the image to the container registry.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_source_control_slot#registry_password AppServiceSourceControlSlot#registry_password}
   */
   readonly registryPassword?: string;
   /**
   * The server URL for the container registry where the build will be hosted.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_source_control_slot#registry_url AppServiceSourceControlSlot#registry_url}
   */
   readonly registryUrl: string;
   /**
   * The username used to upload the image to the container registry.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_source_control_slot#registry_username AppServiceSourceControlSlot#registry_username}
   */
   readonly registryUsername?: string;
@@ -315,19 +310,19 @@ export class AppServiceSourceControlSlotGithubActionConfigurationContainerConfig
 export interface AppServiceSourceControlSlotGithubActionConfiguration {
   /**
   * Should the service generate the GitHub Action Workflow file. Defaults to `true`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_source_control_slot#generate_workflow_file AppServiceSourceControlSlot#generate_workflow_file}
   */
   readonly generateWorkflowFile?: boolean | cdktf.IResolvable;
   /**
   * code_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_source_control_slot#code_configuration AppServiceSourceControlSlot#code_configuration}
   */
   readonly codeConfiguration?: AppServiceSourceControlSlotGithubActionConfigurationCodeConfiguration;
   /**
   * container_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_source_control_slot#container_configuration AppServiceSourceControlSlot#container_configuration}
   */
   readonly containerConfiguration?: AppServiceSourceControlSlotGithubActionConfigurationContainerConfiguration;

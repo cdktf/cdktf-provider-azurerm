@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_workspace_aad_admin
 // generated from terraform resource schema
 
@@ -37,7 +32,7 @@ export interface SynapseWorkspaceAadAdminAConfig extends cdktf.TerraformMetaArgu
   readonly tenantId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_workspace_aad_admin#timeouts SynapseWorkspaceAadAdminA#timeouts}
   */
   readonly timeouts?: SynapseWorkspaceAadAdminTimeouts;

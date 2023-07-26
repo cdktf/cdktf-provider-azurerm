@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kusto_eventgrid_data_connection
 // generated from terraform resource schema
 
@@ -85,7 +80,7 @@ export interface KustoEventgridDataConnectionConfig extends cdktf.TerraformMetaA
   readonly tableName?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kusto_eventgrid_data_connection#timeouts KustoEventgridDataConnection#timeouts}
   */
   readonly timeouts?: KustoEventgridDataConnectionTimeouts;

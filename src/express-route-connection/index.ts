@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/express_route_connection
 // generated from terraform resource schema
 
@@ -49,13 +44,13 @@ export interface ExpressRouteConnectionConfig extends cdktf.TerraformMetaArgumen
   readonly routingWeight?: number;
   /**
   * routing block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/express_route_connection#routing ExpressRouteConnection#routing}
   */
   readonly routing?: ExpressRouteConnectionRouting;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/express_route_connection#timeouts ExpressRouteConnection#timeouts}
   */
   readonly timeouts?: ExpressRouteConnectionTimeouts;
@@ -167,7 +162,7 @@ export interface ExpressRouteConnectionRouting {
   readonly outboundRouteMapId?: string;
   /**
   * propagated_route_table block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/express_route_connection#propagated_route_table ExpressRouteConnection#propagated_route_table}
   */
   readonly propagatedRouteTable?: ExpressRouteConnectionRoutingPropagatedRouteTable;

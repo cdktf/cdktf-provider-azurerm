@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/notification_hub_authorization_rule
 // generated from terraform resource schema
 
@@ -49,7 +44,7 @@ export interface NotificationHubAuthorizationRuleConfig extends cdktf.TerraformM
   readonly send?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/notification_hub_authorization_rule#timeouts NotificationHubAuthorizationRule#timeouts}
   */
   readonly timeouts?: NotificationHubAuthorizationRuleTimeouts;

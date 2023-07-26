@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/sentinel_alert_rule_template
 // generated from terraform resource schema
 
@@ -33,7 +28,7 @@ export interface DataAzurermSentinelAlertRuleTemplateConfig extends cdktf.Terraf
   readonly name?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/sentinel_alert_rule_template#timeouts DataAzurermSentinelAlertRuleTemplate#timeouts}
   */
   readonly timeouts?: DataAzurermSentinelAlertRuleTemplateTimeouts;

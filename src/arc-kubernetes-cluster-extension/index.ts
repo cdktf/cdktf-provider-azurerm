@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/arc_kubernetes_cluster_extension
 // generated from terraform resource schema
 
@@ -57,13 +52,13 @@ export interface ArcKubernetesClusterExtensionConfig extends cdktf.TerraformMeta
   readonly version?: string;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/arc_kubernetes_cluster_extension#identity ArcKubernetesClusterExtension#identity}
   */
   readonly identity: ArcKubernetesClusterExtensionIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/arc_kubernetes_cluster_extension#timeouts ArcKubernetesClusterExtension#timeouts}
   */
   readonly timeouts?: ArcKubernetesClusterExtensionTimeouts;

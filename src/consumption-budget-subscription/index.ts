@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/consumption_budget_subscription
 // generated from terraform resource schema
 
@@ -41,25 +36,25 @@ export interface ConsumptionBudgetSubscriptionConfig extends cdktf.TerraformMeta
   readonly timeGrain?: string;
   /**
   * filter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/consumption_budget_subscription#filter ConsumptionBudgetSubscription#filter}
   */
   readonly filter?: ConsumptionBudgetSubscriptionFilter;
   /**
   * notification block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/consumption_budget_subscription#notification ConsumptionBudgetSubscription#notification}
   */
   readonly notification: ConsumptionBudgetSubscriptionNotification[] | cdktf.IResolvable;
   /**
   * time_period block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/consumption_budget_subscription#time_period ConsumptionBudgetSubscription#time_period}
   */
   readonly timePeriod: ConsumptionBudgetSubscriptionTimePeriod;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/consumption_budget_subscription#timeouts ConsumptionBudgetSubscription#timeouts}
   */
   readonly timeouts?: ConsumptionBudgetSubscriptionTimeouts;
@@ -438,13 +433,13 @@ export class ConsumptionBudgetSubscriptionFilterNotTagOutputReference extends cd
 export interface ConsumptionBudgetSubscriptionFilterNot {
   /**
   * dimension block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/consumption_budget_subscription#dimension ConsumptionBudgetSubscription#dimension}
   */
   readonly dimension?: ConsumptionBudgetSubscriptionFilterNotDimension;
   /**
   * tag block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/consumption_budget_subscription#tag ConsumptionBudgetSubscription#tag}
   */
   readonly tag?: ConsumptionBudgetSubscriptionFilterNotTag;
@@ -679,19 +674,19 @@ export class ConsumptionBudgetSubscriptionFilterTagList extends cdktf.ComplexLis
 export interface ConsumptionBudgetSubscriptionFilter {
   /**
   * dimension block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/consumption_budget_subscription#dimension ConsumptionBudgetSubscription#dimension}
   */
   readonly dimension?: ConsumptionBudgetSubscriptionFilterDimension[] | cdktf.IResolvable;
   /**
   * not block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/consumption_budget_subscription#not ConsumptionBudgetSubscription#not}
   */
   readonly not?: ConsumptionBudgetSubscriptionFilterNot;
   /**
   * tag block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/consumption_budget_subscription#tag ConsumptionBudgetSubscription#tag}
   */
   readonly tag?: ConsumptionBudgetSubscriptionFilterTag[] | cdktf.IResolvable;

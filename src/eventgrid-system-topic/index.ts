@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/eventgrid_system_topic
 // generated from terraform resource schema
 
@@ -45,13 +40,13 @@ export interface EventgridSystemTopicConfig extends cdktf.TerraformMetaArguments
   readonly topicType: string;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/eventgrid_system_topic#identity EventgridSystemTopic#identity}
   */
   readonly identity?: EventgridSystemTopicIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/eventgrid_system_topic#timeouts EventgridSystemTopic#timeouts}
   */
   readonly timeouts?: EventgridSystemTopicTimeouts;

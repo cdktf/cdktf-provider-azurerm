@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_rule_action_group
 // generated from terraform resource schema
 
@@ -45,19 +40,19 @@ export interface MonitorActionRuleActionGroupConfig extends cdktf.TerraformMetaA
   readonly tags?: { [key: string]: string };
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_rule_action_group#condition MonitorActionRuleActionGroup#condition}
   */
   readonly condition?: MonitorActionRuleActionGroupCondition;
   /**
   * scope block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_rule_action_group#scope MonitorActionRuleActionGroup#scope}
   */
   readonly scope?: MonitorActionRuleActionGroupScope;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_rule_action_group#timeouts MonitorActionRuleActionGroup#timeouts}
   */
   readonly timeouts?: MonitorActionRuleActionGroupTimeouts;
@@ -667,43 +662,43 @@ export class MonitorActionRuleActionGroupConditionTargetResourceTypeOutputRefere
 export interface MonitorActionRuleActionGroupCondition {
   /**
   * alert_context block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_rule_action_group#alert_context MonitorActionRuleActionGroup#alert_context}
   */
   readonly alertContext?: MonitorActionRuleActionGroupConditionAlertContext;
   /**
   * alert_rule_id block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_rule_action_group#alert_rule_id MonitorActionRuleActionGroup#alert_rule_id}
   */
   readonly alertRuleId?: MonitorActionRuleActionGroupConditionAlertRuleId;
   /**
   * description block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_rule_action_group#description MonitorActionRuleActionGroup#description}
   */
   readonly description?: MonitorActionRuleActionGroupConditionDescription;
   /**
   * monitor block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_rule_action_group#monitor MonitorActionRuleActionGroup#monitor}
   */
   readonly monitor?: MonitorActionRuleActionGroupConditionMonitor;
   /**
   * monitor_service block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_rule_action_group#monitor_service MonitorActionRuleActionGroup#monitor_service}
   */
   readonly monitorService?: MonitorActionRuleActionGroupConditionMonitorService;
   /**
   * severity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_rule_action_group#severity MonitorActionRuleActionGroup#severity}
   */
   readonly severity?: MonitorActionRuleActionGroupConditionSeverity;
   /**
   * target_resource_type block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_rule_action_group#target_resource_type MonitorActionRuleActionGroup#target_resource_type}
   */
   readonly targetResourceType?: MonitorActionRuleActionGroupConditionTargetResourceType;

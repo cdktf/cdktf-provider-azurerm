@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_scheduled_query_rules_log
 // generated from terraform resource schema
 
@@ -53,13 +48,13 @@ export interface MonitorScheduledQueryRulesLogConfig extends cdktf.TerraformMeta
   readonly tags?: { [key: string]: string };
   /**
   * criteria block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_scheduled_query_rules_log#criteria MonitorScheduledQueryRulesLog#criteria}
   */
   readonly criteria: MonitorScheduledQueryRulesLogCriteria;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_scheduled_query_rules_log#timeouts MonitorScheduledQueryRulesLog#timeouts}
   */
   readonly timeouts?: MonitorScheduledQueryRulesLogTimeouts;
@@ -216,7 +211,7 @@ export interface MonitorScheduledQueryRulesLogCriteria {
   readonly metricName: string;
   /**
   * dimension block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_scheduled_query_rules_log#dimension MonitorScheduledQueryRulesLog#dimension}
   */
   readonly dimension: MonitorScheduledQueryRulesLogCriteriaDimension[] | cdktf.IResolvable;

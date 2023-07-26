@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_cluster
 // generated from terraform resource schema
 
@@ -69,73 +64,73 @@ export interface ServiceFabricClusterConfig extends cdktf.TerraformMetaArguments
   readonly vmssZonalUpgradeMode?: string;
   /**
   * azure_active_directory block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_cluster#azure_active_directory ServiceFabricCluster#azure_active_directory}
   */
   readonly azureActiveDirectory?: ServiceFabricClusterAzureActiveDirectory;
   /**
   * certificate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_cluster#certificate ServiceFabricCluster#certificate}
   */
   readonly certificate?: ServiceFabricClusterCertificate;
   /**
   * certificate_common_names block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_cluster#certificate_common_names ServiceFabricCluster#certificate_common_names}
   */
   readonly certificateCommonNames?: ServiceFabricClusterCertificateCommonNames;
   /**
   * client_certificate_common_name block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_cluster#client_certificate_common_name ServiceFabricCluster#client_certificate_common_name}
   */
   readonly clientCertificateCommonName?: ServiceFabricClusterClientCertificateCommonName[] | cdktf.IResolvable;
   /**
   * client_certificate_thumbprint block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_cluster#client_certificate_thumbprint ServiceFabricCluster#client_certificate_thumbprint}
   */
   readonly clientCertificateThumbprint?: ServiceFabricClusterClientCertificateThumbprint[] | cdktf.IResolvable;
   /**
   * diagnostics_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_cluster#diagnostics_config ServiceFabricCluster#diagnostics_config}
   */
   readonly diagnosticsConfig?: ServiceFabricClusterDiagnosticsConfig;
   /**
   * fabric_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_cluster#fabric_settings ServiceFabricCluster#fabric_settings}
   */
   readonly fabricSettings?: ServiceFabricClusterFabricSettings[] | cdktf.IResolvable;
   /**
   * node_type block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_cluster#node_type ServiceFabricCluster#node_type}
   */
   readonly nodeType: ServiceFabricClusterNodeType[] | cdktf.IResolvable;
   /**
   * reverse_proxy_certificate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_cluster#reverse_proxy_certificate ServiceFabricCluster#reverse_proxy_certificate}
   */
   readonly reverseProxyCertificate?: ServiceFabricClusterReverseProxyCertificate;
   /**
   * reverse_proxy_certificate_common_names block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_cluster#reverse_proxy_certificate_common_names ServiceFabricCluster#reverse_proxy_certificate_common_names}
   */
   readonly reverseProxyCertificateCommonNames?: ServiceFabricClusterReverseProxyCertificateCommonNames;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_cluster#timeouts ServiceFabricCluster#timeouts}
   */
   readonly timeouts?: ServiceFabricClusterTimeouts;
   /**
   * upgrade_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_cluster#upgrade_policy ServiceFabricCluster#upgrade_policy}
   */
   readonly upgradePolicy?: ServiceFabricClusterUpgradePolicy;
@@ -491,7 +486,7 @@ export interface ServiceFabricClusterCertificateCommonNames {
   readonly x509StoreName: string;
   /**
   * common_names block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_cluster#common_names ServiceFabricCluster#common_names}
   */
   readonly commonNames: ServiceFabricClusterCertificateCommonNamesCommonNames[] | cdktf.IResolvable;
@@ -1333,13 +1328,13 @@ export interface ServiceFabricClusterNodeType {
   readonly reverseProxyEndpointPort?: number;
   /**
   * application_ports block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_cluster#application_ports ServiceFabricCluster#application_ports}
   */
   readonly applicationPorts?: ServiceFabricClusterNodeTypeApplicationPorts;
   /**
   * ephemeral_ports block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_cluster#ephemeral_ports ServiceFabricCluster#ephemeral_ports}
   */
   readonly ephemeralPorts?: ServiceFabricClusterNodeTypeEphemeralPorts;
@@ -1937,7 +1932,7 @@ export interface ServiceFabricClusterReverseProxyCertificateCommonNames {
   readonly x509StoreName: string;
   /**
   * common_names block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_cluster#common_names ServiceFabricCluster#common_names}
   */
   readonly commonNames: ServiceFabricClusterReverseProxyCertificateCommonNamesCommonNames[] | cdktf.IResolvable;
@@ -2416,13 +2411,13 @@ export interface ServiceFabricClusterUpgradePolicy {
   readonly upgradeTimeout?: string;
   /**
   * delta_health_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_cluster#delta_health_policy ServiceFabricCluster#delta_health_policy}
   */
   readonly deltaHealthPolicy?: ServiceFabricClusterUpgradePolicyDeltaHealthPolicy;
   /**
   * health_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/service_fabric_cluster#health_policy ServiceFabricCluster#health_policy}
   */
   readonly healthPolicy?: ServiceFabricClusterUpgradePolicyHealthPolicy;

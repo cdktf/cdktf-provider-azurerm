@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan
 // generated from terraform resource schema
 
@@ -37,37 +32,37 @@ export interface SiteRecoveryReplicationRecoveryPlanConfig extends cdktf.Terrafo
   readonly targetRecoveryFabricId: string;
   /**
   * azure_to_azure_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#azure_to_azure_settings SiteRecoveryReplicationRecoveryPlan#azure_to_azure_settings}
   */
   readonly azureToAzureSettings?: SiteRecoveryReplicationRecoveryPlanAzureToAzureSettings;
   /**
   * boot_recovery_group block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#boot_recovery_group SiteRecoveryReplicationRecoveryPlan#boot_recovery_group}
   */
   readonly bootRecoveryGroup?: SiteRecoveryReplicationRecoveryPlanBootRecoveryGroup[] | cdktf.IResolvable;
   /**
   * failover_recovery_group block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#failover_recovery_group SiteRecoveryReplicationRecoveryPlan#failover_recovery_group}
   */
   readonly failoverRecoveryGroup?: SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroup;
   /**
   * recovery_group block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#recovery_group SiteRecoveryReplicationRecoveryPlan#recovery_group}
   */
   readonly recoveryGroup?: SiteRecoveryReplicationRecoveryPlanRecoveryGroup[] | cdktf.IResolvable;
   /**
   * shutdown_recovery_group block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#shutdown_recovery_group SiteRecoveryReplicationRecoveryPlan#shutdown_recovery_group}
   */
   readonly shutdownRecoveryGroup?: SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroup;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#timeouts SiteRecoveryReplicationRecoveryPlan#timeouts}
   */
   readonly timeouts?: SiteRecoveryReplicationRecoveryPlanTimeouts;
@@ -773,13 +768,13 @@ export interface SiteRecoveryReplicationRecoveryPlanBootRecoveryGroup {
   readonly replicatedProtectedItems?: string[];
   /**
   * post_action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#post_action SiteRecoveryReplicationRecoveryPlan#post_action}
   */
   readonly postAction?: SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupPostAction[] | cdktf.IResolvable;
   /**
   * pre_action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#pre_action SiteRecoveryReplicationRecoveryPlan#pre_action}
   */
   readonly preAction?: SiteRecoveryReplicationRecoveryPlanBootRecoveryGroupPreAction[] | cdktf.IResolvable;
@@ -1472,13 +1467,13 @@ export class SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPreActionLi
 export interface SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroup {
   /**
   * post_action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#post_action SiteRecoveryReplicationRecoveryPlan#post_action}
   */
   readonly postAction?: SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPostAction[] | cdktf.IResolvable;
   /**
   * pre_action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#pre_action SiteRecoveryReplicationRecoveryPlan#pre_action}
   */
   readonly preAction?: SiteRecoveryReplicationRecoveryPlanFailoverRecoveryGroupPreAction[] | cdktf.IResolvable;
@@ -2124,13 +2119,13 @@ export interface SiteRecoveryReplicationRecoveryPlanRecoveryGroup {
   readonly type: string;
   /**
   * post_action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#post_action SiteRecoveryReplicationRecoveryPlan#post_action}
   */
   readonly postAction?: SiteRecoveryReplicationRecoveryPlanRecoveryGroupPostAction[] | cdktf.IResolvable;
   /**
   * pre_action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#pre_action SiteRecoveryReplicationRecoveryPlan#pre_action}
   */
   readonly preAction?: SiteRecoveryReplicationRecoveryPlanRecoveryGroupPreAction[] | cdktf.IResolvable;
@@ -2843,13 +2838,13 @@ export class SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPreActionLi
 export interface SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroup {
   /**
   * post_action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#post_action SiteRecoveryReplicationRecoveryPlan#post_action}
   */
   readonly postAction?: SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPostAction[] | cdktf.IResolvable;
   /**
   * pre_action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replication_recovery_plan#pre_action SiteRecoveryReplicationRecoveryPlan#pre_action}
   */
   readonly preAction?: SiteRecoveryReplicationRecoveryPlanShutdownRecoveryGroupPreAction[] | cdktf.IResolvable;

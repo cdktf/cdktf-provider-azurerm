@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_route
 // generated from terraform resource schema
 
@@ -73,13 +68,13 @@ export interface CdnFrontdoorRouteConfig extends cdktf.TerraformMetaArguments {
   readonly supportedProtocols: string[];
   /**
   * cache block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_route#cache CdnFrontdoorRoute#cache}
   */
   readonly cache?: CdnFrontdoorRouteCache;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_route#timeouts CdnFrontdoorRoute#timeouts}
   */
   readonly timeouts?: CdnFrontdoorRouteTimeouts;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_azure_file_storage
 // generated from terraform resource schema
 
@@ -69,13 +64,13 @@ export interface DataFactoryLinkedServiceAzureFileStorageConfig extends cdktf.Te
   readonly userId?: string;
   /**
   * key_vault_password block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_azure_file_storage#key_vault_password DataFactoryLinkedServiceAzureFileStorage#key_vault_password}
   */
   readonly keyVaultPassword?: DataFactoryLinkedServiceAzureFileStorageKeyVaultPassword;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_azure_file_storage#timeouts DataFactoryLinkedServiceAzureFileStorage#timeouts}
   */
   readonly timeouts?: DataFactoryLinkedServiceAzureFileStorageTimeouts;

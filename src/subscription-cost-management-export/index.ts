@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subscription_cost_management_export
 // generated from terraform resource schema
 
@@ -45,19 +40,19 @@ export interface SubscriptionCostManagementExportConfig extends cdktf.TerraformM
   readonly subscriptionId: string;
   /**
   * export_data_options block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subscription_cost_management_export#export_data_options SubscriptionCostManagementExport#export_data_options}
   */
   readonly exportDataOptions: SubscriptionCostManagementExportExportDataOptions;
   /**
   * export_data_storage_location block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subscription_cost_management_export#export_data_storage_location SubscriptionCostManagementExport#export_data_storage_location}
   */
   readonly exportDataStorageLocation: SubscriptionCostManagementExportExportDataStorageLocation;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subscription_cost_management_export#timeouts SubscriptionCostManagementExport#timeouts}
   */
   readonly timeouts?: SubscriptionCostManagementExportTimeouts;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_protection_backup_policy_postgresql
 // generated from terraform resource schema
 
@@ -41,13 +36,13 @@ export interface DataProtectionBackupPolicyPostgresqlConfig extends cdktf.Terraf
   readonly vaultName: string;
   /**
   * retention_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_protection_backup_policy_postgresql#retention_rule DataProtectionBackupPolicyPostgresql#retention_rule}
   */
   readonly retentionRule?: DataProtectionBackupPolicyPostgresqlRetentionRule[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_protection_backup_policy_postgresql#timeouts DataProtectionBackupPolicyPostgresql#timeouts}
   */
   readonly timeouts?: DataProtectionBackupPolicyPostgresqlTimeouts;
@@ -240,7 +235,7 @@ export interface DataProtectionBackupPolicyPostgresqlRetentionRule {
   readonly priority: number;
   /**
   * criteria block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_protection_backup_policy_postgresql#criteria DataProtectionBackupPolicyPostgresql#criteria}
   */
   readonly criteria: DataProtectionBackupPolicyPostgresqlRetentionRuleCriteria;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/video_analyzer
 // generated from terraform resource schema
 
@@ -37,19 +32,19 @@ export interface VideoAnalyzerConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/video_analyzer#identity VideoAnalyzer#identity}
   */
   readonly identity: VideoAnalyzerIdentity;
   /**
   * storage_account block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/video_analyzer#storage_account VideoAnalyzer#storage_account}
   */
   readonly storageAccount: VideoAnalyzerStorageAccount;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/video_analyzer#timeouts VideoAnalyzer#timeouts}
   */
   readonly timeouts?: VideoAnalyzerTimeouts;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_dataset_parquet
 // generated from terraform resource schema
 
@@ -61,25 +56,25 @@ export interface DataFactoryDatasetParquetConfig extends cdktf.TerraformMetaArgu
   readonly parameters?: { [key: string]: string };
   /**
   * azure_blob_storage_location block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_dataset_parquet#azure_blob_storage_location DataFactoryDatasetParquet#azure_blob_storage_location}
   */
   readonly azureBlobStorageLocation?: DataFactoryDatasetParquetAzureBlobStorageLocation;
   /**
   * http_server_location block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_dataset_parquet#http_server_location DataFactoryDatasetParquet#http_server_location}
   */
   readonly httpServerLocation?: DataFactoryDatasetParquetHttpServerLocation;
   /**
   * schema_column block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_dataset_parquet#schema_column DataFactoryDatasetParquet#schema_column}
   */
   readonly schemaColumn?: DataFactoryDatasetParquetSchemaColumn[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_dataset_parquet#timeouts DataFactoryDatasetParquet#timeouts}
   */
   readonly timeouts?: DataFactoryDatasetParquetTimeouts;

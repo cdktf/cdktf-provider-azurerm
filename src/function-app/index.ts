@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app
 // generated from terraform resource schema
 
@@ -85,37 +80,37 @@ export interface FunctionAppConfig extends cdktf.TerraformMetaArguments {
   readonly version?: string;
   /**
   * auth_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app#auth_settings FunctionApp#auth_settings}
   */
   readonly authSettings?: FunctionAppAuthSettings;
   /**
   * connection_string block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app#connection_string FunctionApp#connection_string}
   */
   readonly connectionString?: FunctionAppConnectionString[] | cdktf.IResolvable;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app#identity FunctionApp#identity}
   */
   readonly identity?: FunctionAppIdentity;
   /**
   * site_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app#site_config FunctionApp#site_config}
   */
   readonly siteConfig?: FunctionAppSiteConfig;
   /**
   * source_control block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app#source_control FunctionApp#source_control}
   */
   readonly sourceControl?: FunctionAppSourceControl;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app#timeouts FunctionApp#timeouts}
   */
   readonly timeouts?: FunctionAppTimeouts;
@@ -769,31 +764,31 @@ export interface FunctionAppAuthSettings {
   readonly unauthenticatedClientAction?: string;
   /**
   * active_directory block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app#active_directory FunctionApp#active_directory}
   */
   readonly activeDirectory?: FunctionAppAuthSettingsActiveDirectory;
   /**
   * facebook block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app#facebook FunctionApp#facebook}
   */
   readonly facebook?: FunctionAppAuthSettingsFacebook;
   /**
   * google block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app#google FunctionApp#google}
   */
   readonly google?: FunctionAppAuthSettingsGoogle;
   /**
   * microsoft block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app#microsoft FunctionApp#microsoft}
   */
   readonly microsoft?: FunctionAppAuthSettingsMicrosoft;
   /**
   * twitter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app#twitter FunctionApp#twitter}
   */
   readonly twitter?: FunctionAppAuthSettingsTwitter;
@@ -2440,7 +2435,7 @@ export interface FunctionAppSiteConfig {
   readonly websocketsEnabled?: boolean | cdktf.IResolvable;
   /**
   * cors block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app#cors FunctionApp#cors}
   */
   readonly cors?: FunctionAppSiteConfigCors;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_share_dataset_blob_storage
 // generated from terraform resource schema
 
@@ -41,13 +36,13 @@ export interface DataShareDatasetBlobStorageConfig extends cdktf.TerraformMetaAr
   readonly name: string;
   /**
   * storage_account block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_share_dataset_blob_storage#storage_account DataShareDatasetBlobStorage#storage_account}
   */
   readonly storageAccount: DataShareDatasetBlobStorageStorageAccount;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_share_dataset_blob_storage#timeouts DataShareDatasetBlobStorage#timeouts}
   */
   readonly timeouts?: DataShareDatasetBlobStorageTimeouts;

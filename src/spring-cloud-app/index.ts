@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_app
 // generated from terraform resource schema
 
@@ -53,31 +48,31 @@ export interface SpringCloudAppConfig extends cdktf.TerraformMetaArguments {
   readonly tlsEnabled?: boolean | cdktf.IResolvable;
   /**
   * custom_persistent_disk block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_app#custom_persistent_disk SpringCloudApp#custom_persistent_disk}
   */
   readonly customPersistentDisk?: SpringCloudAppCustomPersistentDisk[] | cdktf.IResolvable;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_app#identity SpringCloudApp#identity}
   */
   readonly identity?: SpringCloudAppIdentity;
   /**
   * ingress_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_app#ingress_settings SpringCloudApp#ingress_settings}
   */
   readonly ingressSettings?: SpringCloudAppIngressSettings;
   /**
   * persistent_disk block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_app#persistent_disk SpringCloudApp#persistent_disk}
   */
   readonly persistentDisk?: SpringCloudAppPersistentDisk;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_app#timeouts SpringCloudApp#timeouts}
   */
   readonly timeouts?: SpringCloudAppTimeouts;

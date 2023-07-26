@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_service
 // generated from terraform resource schema
 
@@ -57,43 +52,43 @@ export interface SpringCloudServiceConfig extends cdktf.TerraformMetaArguments {
   readonly zoneRedundant?: boolean | cdktf.IResolvable;
   /**
   * config_server_git_setting block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_service#config_server_git_setting SpringCloudService#config_server_git_setting}
   */
   readonly configServerGitSetting?: SpringCloudServiceConfigServerGitSetting;
   /**
   * container_registry block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_service#container_registry SpringCloudService#container_registry}
   */
   readonly containerRegistry?: SpringCloudServiceContainerRegistry[] | cdktf.IResolvable;
   /**
   * default_build_service block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_service#default_build_service SpringCloudService#default_build_service}
   */
   readonly defaultBuildService?: SpringCloudServiceDefaultBuildService;
   /**
   * marketplace block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_service#marketplace SpringCloudService#marketplace}
   */
   readonly marketplace?: SpringCloudServiceMarketplace;
   /**
   * network block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_service#network SpringCloudService#network}
   */
   readonly network?: SpringCloudServiceNetwork;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_service#timeouts SpringCloudService#timeouts}
   */
   readonly timeouts?: SpringCloudServiceTimeouts;
   /**
   * trace block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_service#trace SpringCloudService#trace}
   */
   readonly trace?: SpringCloudServiceTrace;
@@ -520,13 +515,13 @@ export interface SpringCloudServiceConfigServerGitSettingRepository {
   readonly uri: string;
   /**
   * http_basic_auth block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_service#http_basic_auth SpringCloudService#http_basic_auth}
   */
   readonly httpBasicAuth?: SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth;
   /**
   * ssh_auth block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_service#ssh_auth SpringCloudService#ssh_auth}
   */
   readonly sshAuth?: SpringCloudServiceConfigServerGitSettingRepositorySshAuth;
@@ -912,19 +907,19 @@ export interface SpringCloudServiceConfigServerGitSetting {
   readonly uri: string;
   /**
   * http_basic_auth block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_service#http_basic_auth SpringCloudService#http_basic_auth}
   */
   readonly httpBasicAuth?: SpringCloudServiceConfigServerGitSettingHttpBasicAuth;
   /**
   * repository block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_service#repository SpringCloudService#repository}
   */
   readonly repository?: SpringCloudServiceConfigServerGitSettingRepository[] | cdktf.IResolvable;
   /**
   * ssh_auth block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_service#ssh_auth SpringCloudService#ssh_auth}
   */
   readonly sshAuth?: SpringCloudServiceConfigServerGitSettingSshAuth;

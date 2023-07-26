@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/databricks_workspace
 // generated from terraform resource schema
 
@@ -77,13 +72,13 @@ export interface DatabricksWorkspaceConfig extends cdktf.TerraformMetaArguments 
   readonly tags?: { [key: string]: string };
   /**
   * custom_parameters block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/databricks_workspace#custom_parameters DatabricksWorkspace#custom_parameters}
   */
   readonly customParameters?: DatabricksWorkspaceCustomParameters;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/databricks_workspace#timeouts DatabricksWorkspace#timeouts}
   */
   readonly timeouts?: DatabricksWorkspaceTimeouts;

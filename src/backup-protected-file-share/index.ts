@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_protected_file_share
 // generated from terraform resource schema
 
@@ -41,7 +36,7 @@ export interface BackupProtectedFileShareConfig extends cdktf.TerraformMetaArgum
   readonly sourceStorageAccountId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_protected_file_share#timeouts BackupProtectedFileShare#timeouts}
   */
   readonly timeouts?: BackupProtectedFileShareTimeouts;

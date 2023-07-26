@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_builder
 // generated from terraform resource schema
 
@@ -29,19 +24,19 @@ export interface SpringCloudBuilderConfig extends cdktf.TerraformMetaArguments {
   readonly springCloudServiceId: string;
   /**
   * build_pack_group block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_builder#build_pack_group SpringCloudBuilder#build_pack_group}
   */
   readonly buildPackGroup: SpringCloudBuilderBuildPackGroup[] | cdktf.IResolvable;
   /**
   * stack block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_builder#stack SpringCloudBuilder#stack}
   */
   readonly stack: SpringCloudBuilderStack;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_builder#timeouts SpringCloudBuilder#timeouts}
   */
   readonly timeouts?: SpringCloudBuilderTimeouts;

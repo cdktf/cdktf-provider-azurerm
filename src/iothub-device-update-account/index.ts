@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_device_update_account
 // generated from terraform resource schema
 
@@ -45,13 +40,13 @@ export interface IothubDeviceUpdateAccountConfig extends cdktf.TerraformMetaArgu
   readonly tags?: { [key: string]: string };
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_device_update_account#identity IothubDeviceUpdateAccount#identity}
   */
   readonly identity?: IothubDeviceUpdateAccountIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_device_update_account#timeouts IothubDeviceUpdateAccount#timeouts}
   */
   readonly timeouts?: IothubDeviceUpdateAccountTimeouts;

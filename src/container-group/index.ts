@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_group
 // generated from terraform resource schema
 
@@ -77,43 +72,43 @@ export interface ContainerGroupConfig extends cdktf.TerraformMetaArguments {
   readonly zones?: string[];
   /**
   * container block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_group#container ContainerGroup#container}
   */
   readonly container: ContainerGroupContainer[] | cdktf.IResolvable;
   /**
   * diagnostics block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_group#diagnostics ContainerGroup#diagnostics}
   */
   readonly diagnostics?: ContainerGroupDiagnostics;
   /**
   * dns_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_group#dns_config ContainerGroup#dns_config}
   */
   readonly dnsConfig?: ContainerGroupDnsConfig;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_group#identity ContainerGroup#identity}
   */
   readonly identity?: ContainerGroupIdentity;
   /**
   * image_registry_credential block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_group#image_registry_credential ContainerGroup#image_registry_credential}
   */
   readonly imageRegistryCredential?: ContainerGroupImageRegistryCredential[] | cdktf.IResolvable;
   /**
   * init_container block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_group#init_container ContainerGroup#init_container}
   */
   readonly initContainer?: ContainerGroupInitContainer[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_group#timeouts ContainerGroup#timeouts}
   */
   readonly timeouts?: ContainerGroupTimeouts;
@@ -631,7 +626,7 @@ export interface ContainerGroupContainerLivenessProbe {
   readonly timeoutSeconds?: number;
   /**
   * http_get block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_group#http_get ContainerGroup#http_get}
   */
   readonly httpGet?: ContainerGroupContainerLivenessProbeHttpGet[] | cdktf.IResolvable;
@@ -1162,7 +1157,7 @@ export interface ContainerGroupContainerReadinessProbe {
   readonly timeoutSeconds?: number;
   /**
   * http_get block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_group#http_get ContainerGroup#http_get}
   */
   readonly httpGet?: ContainerGroupContainerReadinessProbeHttpGet[] | cdktf.IResolvable;
@@ -1515,7 +1510,7 @@ export interface ContainerGroupContainerVolume {
   readonly storageAccountName?: string;
   /**
   * git_repo block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_group#git_repo ContainerGroup#git_repo}
   */
   readonly gitRepo?: ContainerGroupContainerVolumeGitRepo;
@@ -1828,37 +1823,37 @@ export interface ContainerGroupContainer {
   readonly secureEnvironmentVariables?: { [key: string]: string };
   /**
   * gpu block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_group#gpu ContainerGroup#gpu}
   */
   readonly gpu?: ContainerGroupContainerGpu;
   /**
   * gpu_limit block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_group#gpu_limit ContainerGroup#gpu_limit}
   */
   readonly gpuLimit?: ContainerGroupContainerGpuLimit;
   /**
   * liveness_probe block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_group#liveness_probe ContainerGroup#liveness_probe}
   */
   readonly livenessProbe?: ContainerGroupContainerLivenessProbe;
   /**
   * ports block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_group#ports ContainerGroup#ports}
   */
   readonly ports?: ContainerGroupContainerPorts[] | cdktf.IResolvable;
   /**
   * readiness_probe block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_group#readiness_probe ContainerGroup#readiness_probe}
   */
   readonly readinessProbe?: ContainerGroupContainerReadinessProbe;
   /**
   * volume block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_group#volume ContainerGroup#volume}
   */
   readonly volume?: ContainerGroupContainerVolume[] | cdktf.IResolvable;
@@ -2407,7 +2402,7 @@ export class ContainerGroupDiagnosticsLogAnalyticsOutputReference extends cdktf.
 export interface ContainerGroupDiagnostics {
   /**
   * log_analytics block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_group#log_analytics ContainerGroup#log_analytics}
   */
   readonly logAnalytics: ContainerGroupDiagnosticsLogAnalytics;
@@ -2694,7 +2689,7 @@ export interface ContainerGroupImageRegistryCredential {
   readonly server: string;
   /**
   * The User Assigned Identity to use for Container Registry access.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_group#user_assigned_identity_id ContainerGroup#user_assigned_identity_id}
   */
   readonly userAssignedIdentityId?: string;
@@ -3011,7 +3006,7 @@ export interface ContainerGroupInitContainerVolume {
   readonly storageAccountName?: string;
   /**
   * git_repo block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_group#git_repo ContainerGroup#git_repo}
   */
   readonly gitRepo?: ContainerGroupInitContainerVolumeGitRepo;
@@ -3308,7 +3303,7 @@ export interface ContainerGroupInitContainer {
   readonly secureEnvironmentVariables?: { [key: string]: string };
   /**
   * volume block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_group#volume ContainerGroup#volume}
   */
   readonly volume?: ContainerGroupInitContainerVolume[] | cdktf.IResolvable;

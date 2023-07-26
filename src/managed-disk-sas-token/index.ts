@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/managed_disk_sas_token
 // generated from terraform resource schema
 
@@ -33,7 +28,7 @@ export interface ManagedDiskSasTokenConfig extends cdktf.TerraformMetaArguments 
   readonly managedDiskId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/managed_disk_sas_token#timeouts ManagedDiskSasToken#timeouts}
   */
   readonly timeouts?: ManagedDiskSasTokenTimeouts;

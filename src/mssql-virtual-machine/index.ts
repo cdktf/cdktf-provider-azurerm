@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_virtual_machine
 // generated from terraform resource schema
 
@@ -53,43 +48,43 @@ export interface MssqlVirtualMachineConfig extends cdktf.TerraformMetaArguments 
   readonly virtualMachineId: string;
   /**
   * assessment block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_virtual_machine#assessment MssqlVirtualMachine#assessment}
   */
   readonly assessment?: MssqlVirtualMachineAssessment;
   /**
   * auto_backup block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_virtual_machine#auto_backup MssqlVirtualMachine#auto_backup}
   */
   readonly autoBackup?: MssqlVirtualMachineAutoBackup;
   /**
   * auto_patching block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_virtual_machine#auto_patching MssqlVirtualMachine#auto_patching}
   */
   readonly autoPatching?: MssqlVirtualMachineAutoPatching;
   /**
   * key_vault_credential block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_virtual_machine#key_vault_credential MssqlVirtualMachine#key_vault_credential}
   */
   readonly keyVaultCredential?: MssqlVirtualMachineKeyVaultCredential;
   /**
   * sql_instance block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_virtual_machine#sql_instance MssqlVirtualMachine#sql_instance}
   */
   readonly sqlInstance?: MssqlVirtualMachineSqlInstance;
   /**
   * storage_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_virtual_machine#storage_configuration MssqlVirtualMachine#storage_configuration}
   */
   readonly storageConfiguration?: MssqlVirtualMachineStorageConfiguration;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_virtual_machine#timeouts MssqlVirtualMachine#timeouts}
   */
   readonly timeouts?: MssqlVirtualMachineTimeouts;
@@ -245,7 +240,7 @@ export interface MssqlVirtualMachineAssessment {
   readonly runImmediately?: boolean | cdktf.IResolvable;
   /**
   * schedule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_virtual_machine#schedule MssqlVirtualMachine#schedule}
   */
   readonly schedule?: MssqlVirtualMachineAssessmentSchedule;
@@ -543,7 +538,7 @@ export interface MssqlVirtualMachineAutoBackup {
   readonly systemDatabasesBackupEnabled?: boolean | cdktf.IResolvable;
   /**
   * manual_schedule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_virtual_machine#manual_schedule MssqlVirtualMachine#manual_schedule}
   */
   readonly manualSchedule?: MssqlVirtualMachineAutoBackupManualSchedule;
@@ -1615,19 +1610,19 @@ export interface MssqlVirtualMachineStorageConfiguration {
   readonly systemDbOnDataDiskEnabled?: boolean | cdktf.IResolvable;
   /**
   * data_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_virtual_machine#data_settings MssqlVirtualMachine#data_settings}
   */
   readonly dataSettings?: MssqlVirtualMachineStorageConfigurationDataSettings;
   /**
   * log_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_virtual_machine#log_settings MssqlVirtualMachine#log_settings}
   */
   readonly logSettings?: MssqlVirtualMachineStorageConfigurationLogSettings;
   /**
   * temp_db_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_virtual_machine#temp_db_settings MssqlVirtualMachine#temp_db_settings}
   */
   readonly tempDbSettings?: MssqlVirtualMachineStorageConfigurationTempDbSettings;

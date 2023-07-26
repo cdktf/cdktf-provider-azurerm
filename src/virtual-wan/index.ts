@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_wan
 // generated from terraform resource schema
 
@@ -53,7 +48,7 @@ export interface VirtualWanConfig extends cdktf.TerraformMetaArguments {
   readonly type?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_wan#timeouts VirtualWan#timeouts}
   */
   readonly timeouts?: VirtualWanTimeouts;

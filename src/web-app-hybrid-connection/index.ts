@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_app_hybrid_connection
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface WebAppHybridConnectionConfig extends cdktf.TerraformMetaArguments {
   /**
   * The hostname of the endpoint.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_app_hybrid_connection#hostname WebAppHybridConnection#hostname}
   */
   readonly hostname: string;
@@ -27,31 +22,31 @@ export interface WebAppHybridConnectionConfig extends cdktf.TerraformMetaArgumen
   readonly id?: string;
   /**
   * The port to use for the endpoint
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_app_hybrid_connection#port WebAppHybridConnection#port}
   */
   readonly port: number;
   /**
   * The ID of the Relay Hybrid Connection to use.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_app_hybrid_connection#relay_id WebAppHybridConnection#relay_id}
   */
   readonly relayId: string;
   /**
   * The name of the Relay key with `Send` permission to use. Defaults to `RootManageSharedAccessKey`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_app_hybrid_connection#send_key_name WebAppHybridConnection#send_key_name}
   */
   readonly sendKeyName?: string;
   /**
   * The ID of the Web App for this Hybrid Connection.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_app_hybrid_connection#web_app_id WebAppHybridConnection#web_app_id}
   */
   readonly webAppId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_app_hybrid_connection#timeouts WebAppHybridConnection#timeouts}
   */
   readonly timeouts?: WebAppHybridConnectionTimeouts;

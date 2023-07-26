@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subnet
 // generated from terraform resource schema
 
@@ -61,13 +56,13 @@ export interface SubnetConfig extends cdktf.TerraformMetaArguments {
   readonly virtualNetworkName: string;
   /**
   * delegation block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subnet#delegation Subnet#delegation}
   */
   readonly delegation?: SubnetDelegation[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subnet#timeouts Subnet#timeouts}
   */
   readonly timeouts?: SubnetTimeouts;
@@ -168,7 +163,7 @@ export interface SubnetDelegation {
   readonly name: string;
   /**
   * service_delegation block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subnet#service_delegation Subnet#service_delegation}
   */
   readonly serviceDelegation: SubnetDelegationServiceDelegation;

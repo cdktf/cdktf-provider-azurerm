@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cognitive_account
 // generated from terraform resource schema
 
@@ -97,31 +92,31 @@ export interface CognitiveAccountConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * customer_managed_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cognitive_account#customer_managed_key CognitiveAccount#customer_managed_key}
   */
   readonly customerManagedKey?: CognitiveAccountCustomerManagedKey;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cognitive_account#identity CognitiveAccount#identity}
   */
   readonly identity?: CognitiveAccountIdentity;
   /**
   * network_acls block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cognitive_account#network_acls CognitiveAccount#network_acls}
   */
   readonly networkAcls?: CognitiveAccountNetworkAcls;
   /**
   * storage block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cognitive_account#storage CognitiveAccount#storage}
   */
   readonly storage?: CognitiveAccountStorage[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cognitive_account#timeouts CognitiveAccount#timeouts}
   */
   readonly timeouts?: CognitiveAccountTimeouts;
@@ -446,7 +441,7 @@ export interface CognitiveAccountNetworkAcls {
   readonly ipRules?: string[];
   /**
   * virtual_network_rules block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cognitive_account#virtual_network_rules CognitiveAccount#virtual_network_rules}
   */
   readonly virtualNetworkRules?: CognitiveAccountNetworkAclsVirtualNetworkRules[] | cdktf.IResolvable;

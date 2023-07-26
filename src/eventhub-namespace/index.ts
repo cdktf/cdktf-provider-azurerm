@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/eventhub_namespace
 // generated from terraform resource schema
 
@@ -77,13 +72,13 @@ export interface EventhubNamespaceConfig extends cdktf.TerraformMetaArguments {
   readonly zoneRedundant?: boolean | cdktf.IResolvable;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/eventhub_namespace#identity EventhubNamespace#identity}
   */
   readonly identity?: EventhubNamespaceIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/eventhub_namespace#timeouts EventhubNamespace#timeouts}
   */
   readonly timeouts?: EventhubNamespaceTimeouts;

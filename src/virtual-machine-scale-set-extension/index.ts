@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set_extension
 // generated from terraform resource schema
 
@@ -69,13 +64,13 @@ export interface VirtualMachineScaleSetExtensionAConfig extends cdktf.TerraformM
   readonly virtualMachineScaleSetId: string;
   /**
   * protected_settings_from_key_vault block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set_extension#protected_settings_from_key_vault VirtualMachineScaleSetExtensionA#protected_settings_from_key_vault}
   */
   readonly protectedSettingsFromKeyVault?: VirtualMachineScaleSetExtensionProtectedSettingsFromKeyVault;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_scale_set_extension#timeouts VirtualMachineScaleSetExtensionA#timeouts}
   */
   readonly timeouts?: VirtualMachineScaleSetExtensionTimeouts;

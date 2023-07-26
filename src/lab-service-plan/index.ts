@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_plan
 // generated from terraform resource schema
 
@@ -49,25 +44,25 @@ export interface LabServicePlanConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * default_auto_shutdown block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_plan#default_auto_shutdown LabServicePlan#default_auto_shutdown}
   */
   readonly defaultAutoShutdown?: LabServicePlanDefaultAutoShutdown;
   /**
   * default_connection block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_plan#default_connection LabServicePlan#default_connection}
   */
   readonly defaultConnection?: LabServicePlanDefaultConnection;
   /**
   * support block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_plan#support LabServicePlan#support}
   */
   readonly support?: LabServicePlanSupport;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_plan#timeouts LabServicePlan#timeouts}
   */
   readonly timeouts?: LabServicePlanTimeouts;

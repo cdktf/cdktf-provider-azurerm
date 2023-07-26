@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_site
 // generated from terraform resource schema
 
@@ -53,19 +48,19 @@ export interface VpnSiteConfig extends cdktf.TerraformMetaArguments {
   readonly virtualWanId: string;
   /**
   * link block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_site#link VpnSite#link}
   */
   readonly link?: VpnSiteLink[] | cdktf.IResolvable;
   /**
   * o365_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_site#o365_policy VpnSite#o365_policy}
   */
   readonly o365Policy?: VpnSiteO365Policy;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_site#timeouts VpnSite#timeouts}
   */
   readonly timeouts?: VpnSiteTimeouts;
@@ -179,7 +174,7 @@ export interface VpnSiteLink {
   readonly speedInMbps?: number;
   /**
   * bgp block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_site#bgp VpnSite#bgp}
   */
   readonly bgp?: VpnSiteLinkBgp;
@@ -514,7 +509,7 @@ export class VpnSiteO365PolicyTrafficCategoryOutputReference extends cdktf.Compl
 export interface VpnSiteO365Policy {
   /**
   * traffic_category block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_site#traffic_category VpnSite#traffic_category}
   */
   readonly trafficCategory?: VpnSiteO365PolicyTrafficCategory;

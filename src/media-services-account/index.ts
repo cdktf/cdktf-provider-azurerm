@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_services_account
 // generated from terraform resource schema
 
@@ -45,31 +40,31 @@ export interface MediaServicesAccountConfig extends cdktf.TerraformMetaArguments
   readonly tags?: { [key: string]: string };
   /**
   * encryption block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_services_account#encryption MediaServicesAccount#encryption}
   */
   readonly encryption?: MediaServicesAccountEncryption;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_services_account#identity MediaServicesAccount#identity}
   */
   readonly identity?: MediaServicesAccountIdentity;
   /**
   * key_delivery_access_control block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_services_account#key_delivery_access_control MediaServicesAccount#key_delivery_access_control}
   */
   readonly keyDeliveryAccessControl?: MediaServicesAccountKeyDeliveryAccessControl;
   /**
   * storage_account block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_services_account#storage_account MediaServicesAccount#storage_account}
   */
   readonly storageAccount: MediaServicesAccountStorageAccount[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_services_account#timeouts MediaServicesAccount#timeouts}
   */
   readonly timeouts?: MediaServicesAccountTimeouts;
@@ -177,7 +172,7 @@ export interface MediaServicesAccountEncryption {
   readonly type?: string;
   /**
   * managed_identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_services_account#managed_identity MediaServicesAccount#managed_identity}
   */
   readonly managedIdentity?: MediaServicesAccountEncryptionManagedIdentity;
@@ -589,7 +584,7 @@ export interface MediaServicesAccountStorageAccount {
   readonly isPrimary?: boolean | cdktf.IResolvable;
   /**
   * managed_identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_services_account#managed_identity MediaServicesAccount#managed_identity}
   */
   readonly managedIdentity?: MediaServicesAccountStorageAccountManagedIdentity;

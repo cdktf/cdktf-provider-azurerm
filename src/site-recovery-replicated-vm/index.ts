@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replicated_vm
 // generated from terraform resource schema
 
@@ -113,7 +108,7 @@ export interface SiteRecoveryReplicatedVmConfig extends cdktf.TerraformMetaArgum
   readonly unmanagedDisk?: SiteRecoveryReplicatedVmUnmanagedDisk[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_replicated_vm#timeouts SiteRecoveryReplicatedVm#timeouts}
   */
   readonly timeouts?: SiteRecoveryReplicatedVmTimeouts;

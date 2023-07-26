@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_content_key_policy
 // generated from terraform resource schema
 
@@ -37,13 +32,13 @@ export interface MediaContentKeyPolicyConfig extends cdktf.TerraformMetaArgument
   readonly resourceGroupName: string;
   /**
   * policy_option block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_content_key_policy#policy_option MediaContentKeyPolicy#policy_option}
   */
   readonly policyOption: MediaContentKeyPolicyPolicyOption[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_content_key_policy#timeouts MediaContentKeyPolicy#timeouts}
   */
   readonly timeouts?: MediaContentKeyPolicyTimeouts;
@@ -163,7 +158,7 @@ export interface MediaContentKeyPolicyPolicyOptionFairplayConfiguration {
   readonly rentalDurationSeconds?: number;
   /**
   * offline_rental_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_content_key_policy#offline_rental_configuration MediaContentKeyPolicy#offline_rental_configuration}
   */
   readonly offlineRentalConfiguration?: MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfiguration;
@@ -482,7 +477,7 @@ export interface MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseP
   readonly uncompressedDigitalVideoOpl?: number;
   /**
   * explicit_analog_television_output_restriction block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_content_key_policy#explicit_analog_television_output_restriction MediaContentKeyPolicy#explicit_analog_television_output_restriction}
   */
   readonly explicitAnalogTelevisionOutputRestriction?: MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightExplicitAnalogTelevisionOutputRestriction;
@@ -869,7 +864,7 @@ export interface MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicense 
   readonly securityLevel?: string;
   /**
   * play_right block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_content_key_policy#play_right MediaContentKeyPolicy#play_right}
   */
   readonly playRight?: MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRight;
@@ -1555,13 +1550,13 @@ export interface MediaContentKeyPolicyPolicyOptionTokenRestriction {
   readonly tokenType?: string;
   /**
   * alternate_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_content_key_policy#alternate_key MediaContentKeyPolicy#alternate_key}
   */
   readonly alternateKey?: MediaContentKeyPolicyPolicyOptionTokenRestrictionAlternateKey[] | cdktf.IResolvable;
   /**
   * required_claim block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_content_key_policy#required_claim MediaContentKeyPolicy#required_claim}
   */
   readonly requiredClaim?: MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim[] | cdktf.IResolvable;
@@ -1855,19 +1850,19 @@ export interface MediaContentKeyPolicyPolicyOption {
   readonly widevineConfigurationTemplate?: string;
   /**
   * fairplay_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_content_key_policy#fairplay_configuration MediaContentKeyPolicy#fairplay_configuration}
   */
   readonly fairplayConfiguration?: MediaContentKeyPolicyPolicyOptionFairplayConfiguration;
   /**
   * playready_configuration_license block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_content_key_policy#playready_configuration_license MediaContentKeyPolicy#playready_configuration_license}
   */
   readonly playreadyConfigurationLicense?: MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicense[] | cdktf.IResolvable;
   /**
   * token_restriction block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_content_key_policy#token_restriction MediaContentKeyPolicy#token_restriction}
   */
   readonly tokenRestriction?: MediaContentKeyPolicyPolicyOptionTokenRestriction;

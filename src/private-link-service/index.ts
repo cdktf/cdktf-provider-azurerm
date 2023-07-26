@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/private_link_service
 // generated from terraform resource schema
 
@@ -57,13 +52,13 @@ export interface PrivateLinkServiceConfig extends cdktf.TerraformMetaArguments {
   readonly visibilitySubscriptionIds?: string[];
   /**
   * nat_ip_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/private_link_service#nat_ip_configuration PrivateLinkService#nat_ip_configuration}
   */
   readonly natIpConfiguration: PrivateLinkServiceNatIpConfiguration[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/private_link_service#timeouts PrivateLinkService#timeouts}
   */
   readonly timeouts?: PrivateLinkServiceTimeouts;

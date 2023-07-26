@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lb_backend_address_pool_address
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface LbBackendAddressPoolAddressConfig extends cdktf.TerraformMetaArguments {
   /**
   * For global load balancer, user needs to specify the `backend_address_ip_configuration_id` of the added regional load balancers
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lb_backend_address_pool_address#backend_address_ip_configuration_id LbBackendAddressPoolAddress#backend_address_ip_configuration_id}
   */
   readonly backendAddressIpConfigurationId?: string;
@@ -39,13 +34,13 @@ export interface LbBackendAddressPoolAddressConfig extends cdktf.TerraformMetaAr
   readonly name: string;
   /**
   * For regional load balancer, user needs to specify `virtual_network_id` and `ip_address`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lb_backend_address_pool_address#virtual_network_id LbBackendAddressPoolAddress#virtual_network_id}
   */
   readonly virtualNetworkId?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lb_backend_address_pool_address#timeouts LbBackendAddressPoolAddress#timeouts}
   */
   readonly timeouts?: LbBackendAddressPoolAddressTimeouts;

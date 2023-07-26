@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/machine_learning_datastore_fileshare
 // generated from terraform resource schema
 
@@ -53,7 +48,7 @@ export interface MachineLearningDatastoreFileshareConfig extends cdktf.Terraform
   readonly workspaceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/machine_learning_datastore_fileshare#timeouts MachineLearningDatastoreFileshare#timeouts}
   */
   readonly timeouts?: MachineLearningDatastoreFileshareTimeouts;

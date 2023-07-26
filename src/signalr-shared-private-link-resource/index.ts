@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/signalr_shared_private_link_resource
 // generated from terraform resource schema
 
@@ -41,7 +36,7 @@ export interface SignalrSharedPrivateLinkResourceConfig extends cdktf.TerraformM
   readonly targetResourceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/signalr_shared_private_link_resource#timeouts SignalrSharedPrivateLinkResource#timeouts}
   */
   readonly timeouts?: SignalrSharedPrivateLinkResourceTimeouts;

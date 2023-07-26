@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_pubsub
 // generated from terraform resource schema
 
@@ -61,19 +56,19 @@ export interface WebPubsubConfig extends cdktf.TerraformMetaArguments {
   readonly tlsClientCertEnabled?: boolean | cdktf.IResolvable;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_pubsub#identity WebPubsub#identity}
   */
   readonly identity?: WebPubsubIdentity;
   /**
   * live_trace block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_pubsub#live_trace WebPubsub#live_trace}
   */
   readonly liveTrace?: WebPubsubLiveTrace;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/web_pubsub#timeouts WebPubsub#timeouts}
   */
   readonly timeouts?: WebPubsubTimeouts;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_elasticpool
 // generated from terraform resource schema
 
@@ -61,19 +56,19 @@ export interface MssqlElasticpoolConfig extends cdktf.TerraformMetaArguments {
   readonly zoneRedundant?: boolean | cdktf.IResolvable;
   /**
   * per_database_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_elasticpool#per_database_settings MssqlElasticpool#per_database_settings}
   */
   readonly perDatabaseSettings: MssqlElasticpoolPerDatabaseSettings;
   /**
   * sku block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_elasticpool#sku MssqlElasticpool#sku}
   */
   readonly sku: MssqlElasticpoolSku;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_elasticpool#timeouts MssqlElasticpool#timeouts}
   */
   readonly timeouts?: MssqlElasticpoolTimeouts;

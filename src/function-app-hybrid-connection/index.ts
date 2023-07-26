@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app_hybrid_connection
 // generated from terraform resource schema
 
@@ -14,13 +9,13 @@ import * as cdktf from 'cdktf';
 export interface FunctionAppHybridConnectionConfig extends cdktf.TerraformMetaArguments {
   /**
   * The ID of the Function App for this Hybrid Connection.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app_hybrid_connection#function_app_id FunctionAppHybridConnection#function_app_id}
   */
   readonly functionAppId: string;
   /**
   * The hostname of the endpoint.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app_hybrid_connection#hostname FunctionAppHybridConnection#hostname}
   */
   readonly hostname: string;
@@ -33,25 +28,25 @@ export interface FunctionAppHybridConnectionConfig extends cdktf.TerraformMetaAr
   readonly id?: string;
   /**
   * The port to use for the endpoint
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app_hybrid_connection#port FunctionAppHybridConnection#port}
   */
   readonly port: number;
   /**
   * The ID of the Relay Hybrid Connection to use.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app_hybrid_connection#relay_id FunctionAppHybridConnection#relay_id}
   */
   readonly relayId: string;
   /**
   * The name of the Relay key with `Send` permission to use. Defaults to `RootManageSharedAccessKey`
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app_hybrid_connection#send_key_name FunctionAppHybridConnection#send_key_name}
   */
   readonly sendKeyName?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/function_app_hybrid_connection#timeouts FunctionAppHybridConnection#timeouts}
   */
   readonly timeouts?: FunctionAppHybridConnectionTimeouts;

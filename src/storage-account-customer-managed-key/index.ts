@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_account_customer_managed_key
 // generated from terraform resource schema
 
@@ -41,7 +36,7 @@ export interface StorageAccountCustomerManagedKeyAConfig extends cdktf.Terraform
   readonly userAssignedIdentityId?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_account_customer_managed_key#timeouts StorageAccountCustomerManagedKeyA#timeouts}
   */
   readonly timeouts?: StorageAccountCustomerManagedKeyTimeouts;

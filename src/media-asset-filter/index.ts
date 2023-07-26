@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_asset_filter
 // generated from terraform resource schema
 
@@ -33,19 +28,19 @@ export interface MediaAssetFilterConfig extends cdktf.TerraformMetaArguments {
   readonly name: string;
   /**
   * presentation_time_range block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_asset_filter#presentation_time_range MediaAssetFilter#presentation_time_range}
   */
   readonly presentationTimeRange?: MediaAssetFilterPresentationTimeRange;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_asset_filter#timeouts MediaAssetFilter#timeouts}
   */
   readonly timeouts?: MediaAssetFilterTimeouts;
   /**
   * track_selection block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_asset_filter#track_selection MediaAssetFilter#track_selection}
   */
   readonly trackSelection?: MediaAssetFilterTrackSelection[] | cdktf.IResolvable;
@@ -560,7 +555,7 @@ export class MediaAssetFilterTrackSelectionConditionList extends cdktf.ComplexLi
 export interface MediaAssetFilterTrackSelection {
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_asset_filter#condition MediaAssetFilter#condition}
   */
   readonly condition: MediaAssetFilterTrackSelectionCondition[] | cdktf.IResolvable;

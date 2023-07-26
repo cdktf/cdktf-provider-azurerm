@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/frontdoor
 // generated from terraform resource schema
 
@@ -41,43 +36,43 @@ export interface FrontdoorConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * backend_pool block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/frontdoor#backend_pool Frontdoor#backend_pool}
   */
   readonly backendPool: FrontdoorBackendPool[] | cdktf.IResolvable;
   /**
   * backend_pool_health_probe block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/frontdoor#backend_pool_health_probe Frontdoor#backend_pool_health_probe}
   */
   readonly backendPoolHealthProbe: FrontdoorBackendPoolHealthProbe[] | cdktf.IResolvable;
   /**
   * backend_pool_load_balancing block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/frontdoor#backend_pool_load_balancing Frontdoor#backend_pool_load_balancing}
   */
   readonly backendPoolLoadBalancing: FrontdoorBackendPoolLoadBalancing[] | cdktf.IResolvable;
   /**
   * backend_pool_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/frontdoor#backend_pool_settings Frontdoor#backend_pool_settings}
   */
   readonly backendPoolSettings?: FrontdoorBackendPoolSettings[] | cdktf.IResolvable;
   /**
   * frontend_endpoint block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/frontdoor#frontend_endpoint Frontdoor#frontend_endpoint}
   */
   readonly frontendEndpoint: FrontdoorFrontendEndpoint[] | cdktf.IResolvable;
   /**
   * routing_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/frontdoor#routing_rule Frontdoor#routing_rule}
   */
   readonly routingRule: FrontdoorRoutingRule[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/frontdoor#timeouts Frontdoor#timeouts}
   */
   readonly timeouts?: FrontdoorTimeouts;
@@ -428,7 +423,7 @@ export interface FrontdoorBackendPool {
   readonly name: string;
   /**
   * backend block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/frontdoor#backend Frontdoor#backend}
   */
   readonly backend: FrontdoorBackendPoolBackend[] | cdktf.IResolvable;
@@ -1793,13 +1788,13 @@ export interface FrontdoorRoutingRule {
   readonly patternsToMatch: string[];
   /**
   * forwarding_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/frontdoor#forwarding_configuration Frontdoor#forwarding_configuration}
   */
   readonly forwardingConfiguration?: FrontdoorRoutingRuleForwardingConfiguration;
   /**
   * redirect_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/frontdoor#redirect_configuration Frontdoor#redirect_configuration}
   */
   readonly redirectConfiguration?: FrontdoorRoutingRuleRedirectConfiguration;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/express_route_circuit
 // generated from terraform resource schema
 
@@ -65,13 +60,13 @@ export interface ExpressRouteCircuitConfig extends cdktf.TerraformMetaArguments 
   readonly tags?: { [key: string]: string };
   /**
   * sku block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/express_route_circuit#sku ExpressRouteCircuit#sku}
   */
   readonly sku: ExpressRouteCircuitSku;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/express_route_circuit#timeouts ExpressRouteCircuit#timeouts}
   */
   readonly timeouts?: ExpressRouteCircuitTimeouts;

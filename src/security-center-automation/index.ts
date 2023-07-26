@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/security_center_automation
 // generated from terraform resource schema
 
@@ -49,19 +44,19 @@ export interface SecurityCenterAutomationConfig extends cdktf.TerraformMetaArgum
   readonly tags?: { [key: string]: string };
   /**
   * action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/security_center_automation#action SecurityCenterAutomation#action}
   */
   readonly action: SecurityCenterAutomationAction[] | cdktf.IResolvable;
   /**
   * source block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/security_center_automation#source SecurityCenterAutomation#source}
   */
   readonly source: SecurityCenterAutomationSource[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/security_center_automation#timeouts SecurityCenterAutomation#timeouts}
   */
   readonly timeouts?: SecurityCenterAutomationTimeouts;
@@ -407,7 +402,7 @@ export class SecurityCenterAutomationSourceRuleSetRuleList extends cdktf.Complex
 export interface SecurityCenterAutomationSourceRuleSet {
   /**
   * rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/security_center_automation#rule SecurityCenterAutomation#rule}
   */
   readonly rule: SecurityCenterAutomationSourceRuleSetRule[] | cdktf.IResolvable;
@@ -507,7 +502,7 @@ export interface SecurityCenterAutomationSource {
   readonly eventSource: string;
   /**
   * rule_set block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/security_center_automation#rule_set SecurityCenterAutomation#rule_set}
   */
   readonly ruleSet?: SecurityCenterAutomationSourceRuleSet[] | cdktf.IResolvable;

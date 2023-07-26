@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_vmware_replication_policy_association
 // generated from terraform resource schema
 
@@ -33,7 +28,7 @@ export interface SiteRecoveryVmwareReplicationPolicyAssociationConfig extends cd
   readonly recoveryVaultId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_vmware_replication_policy_association#timeouts SiteRecoveryVmwareReplicationPolicyAssociation#timeouts}
   */
   readonly timeouts?: SiteRecoveryVmwareReplicationPolicyAssociationTimeouts;

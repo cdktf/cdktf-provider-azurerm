@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/private_dns_resolver_dns_forwarding_ruleset
 // generated from terraform resource schema
 
@@ -41,7 +36,7 @@ export interface PrivateDnsResolverDnsForwardingRulesetConfig extends cdktf.Terr
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/private_dns_resolver_dns_forwarding_ruleset#timeouts PrivateDnsResolverDnsForwardingRuleset#timeouts}
   */
   readonly timeouts?: PrivateDnsResolverDnsForwardingRulesetTimeouts;

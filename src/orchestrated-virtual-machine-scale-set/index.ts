@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set
 // generated from terraform resource schema
 
@@ -105,85 +100,85 @@ export interface OrchestratedVirtualMachineScaleSetConfig extends cdktf.Terrafor
   readonly zones?: string[];
   /**
   * additional_capabilities block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#additional_capabilities OrchestratedVirtualMachineScaleSet#additional_capabilities}
   */
   readonly additionalCapabilities?: OrchestratedVirtualMachineScaleSetAdditionalCapabilities;
   /**
   * automatic_instance_repair block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#automatic_instance_repair OrchestratedVirtualMachineScaleSet#automatic_instance_repair}
   */
   readonly automaticInstanceRepair?: OrchestratedVirtualMachineScaleSetAutomaticInstanceRepair;
   /**
   * boot_diagnostics block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#boot_diagnostics OrchestratedVirtualMachineScaleSet#boot_diagnostics}
   */
   readonly bootDiagnostics?: OrchestratedVirtualMachineScaleSetBootDiagnostics;
   /**
   * data_disk block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#data_disk OrchestratedVirtualMachineScaleSet#data_disk}
   */
   readonly dataDisk?: OrchestratedVirtualMachineScaleSetDataDisk[] | cdktf.IResolvable;
   /**
   * extension block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#extension OrchestratedVirtualMachineScaleSet#extension}
   */
   readonly extension?: OrchestratedVirtualMachineScaleSetExtension[] | cdktf.IResolvable;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#identity OrchestratedVirtualMachineScaleSet#identity}
   */
   readonly identity?: OrchestratedVirtualMachineScaleSetIdentity;
   /**
   * network_interface block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#network_interface OrchestratedVirtualMachineScaleSet#network_interface}
   */
   readonly networkInterface?: OrchestratedVirtualMachineScaleSetNetworkInterface[] | cdktf.IResolvable;
   /**
   * os_disk block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#os_disk OrchestratedVirtualMachineScaleSet#os_disk}
   */
   readonly osDisk?: OrchestratedVirtualMachineScaleSetOsDisk;
   /**
   * os_profile block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#os_profile OrchestratedVirtualMachineScaleSet#os_profile}
   */
   readonly osProfile?: OrchestratedVirtualMachineScaleSetOsProfile;
   /**
   * plan block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#plan OrchestratedVirtualMachineScaleSet#plan}
   */
   readonly plan?: OrchestratedVirtualMachineScaleSetPlan;
   /**
   * priority_mix block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#priority_mix OrchestratedVirtualMachineScaleSet#priority_mix}
   */
   readonly priorityMix?: OrchestratedVirtualMachineScaleSetPriorityMix;
   /**
   * source_image_reference block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#source_image_reference OrchestratedVirtualMachineScaleSet#source_image_reference}
   */
   readonly sourceImageReference?: OrchestratedVirtualMachineScaleSetSourceImageReference;
   /**
   * termination_notification block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#termination_notification OrchestratedVirtualMachineScaleSet#termination_notification}
   */
   readonly terminationNotification?: OrchestratedVirtualMachineScaleSetTerminationNotification;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#timeouts OrchestratedVirtualMachineScaleSet#timeouts}
   */
   readonly timeouts?: OrchestratedVirtualMachineScaleSetTimeouts;
@@ -837,7 +832,7 @@ export interface OrchestratedVirtualMachineScaleSetExtension {
   readonly typeHandlerVersion: string;
   /**
   * protected_settings_from_key_vault block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#protected_settings_from_key_vault OrchestratedVirtualMachineScaleSet#protected_settings_from_key_vault}
   */
   readonly protectedSettingsFromKeyVault?: OrchestratedVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVault;
@@ -1382,7 +1377,7 @@ export interface OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurati
   readonly version?: string;
   /**
   * ip_tag block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#ip_tag OrchestratedVirtualMachineScaleSet#ip_tag}
   */
   readonly ipTag?: OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag[] | cdktf.IResolvable;
@@ -1644,7 +1639,7 @@ export interface OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurati
   readonly version?: string;
   /**
   * public_ip_address block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#public_ip_address OrchestratedVirtualMachineScaleSet#public_ip_address}
   */
   readonly publicIpAddress?: OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress[] | cdktf.IResolvable;
@@ -1925,7 +1920,7 @@ export interface OrchestratedVirtualMachineScaleSetNetworkInterface {
   readonly primary?: boolean | cdktf.IResolvable;
   /**
   * ip_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#ip_configuration OrchestratedVirtualMachineScaleSet#ip_configuration}
   */
   readonly ipConfiguration: OrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfiguration[] | cdktf.IResolvable;
@@ -2265,7 +2260,7 @@ export interface OrchestratedVirtualMachineScaleSetOsDisk {
   readonly writeAcceleratorEnabled?: boolean | cdktf.IResolvable;
   /**
   * diff_disk_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#diff_disk_settings OrchestratedVirtualMachineScaleSet#diff_disk_settings}
   */
   readonly diffDiskSettings?: OrchestratedVirtualMachineScaleSetOsDiskDiffDiskSettings;
@@ -2657,7 +2652,7 @@ export interface OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSe
   readonly keyVaultId: string;
   /**
   * certificate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#certificate OrchestratedVirtualMachineScaleSet#certificate}
   */
   readonly certificate: OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecretCertificate[] | cdktf.IResolvable;
@@ -2801,13 +2796,13 @@ export interface OrchestratedVirtualMachineScaleSetOsProfileLinuxConfiguration {
   readonly provisionVmAgent?: boolean | cdktf.IResolvable;
   /**
   * admin_ssh_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#admin_ssh_key OrchestratedVirtualMachineScaleSet#admin_ssh_key}
   */
   readonly adminSshKey?: OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationAdminSshKey[] | cdktf.IResolvable;
   /**
   * secret block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#secret OrchestratedVirtualMachineScaleSet#secret}
   */
   readonly secret?: OrchestratedVirtualMachineScaleSetOsProfileLinuxConfigurationSecret[] | cdktf.IResolvable;
@@ -3177,7 +3172,7 @@ export interface OrchestratedVirtualMachineScaleSetOsProfileWindowsConfiguration
   readonly keyVaultId: string;
   /**
   * certificate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#certificate OrchestratedVirtualMachineScaleSet#certificate}
   */
   readonly certificate: OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecretCertificate[] | cdktf.IResolvable;
@@ -3450,13 +3445,13 @@ export interface OrchestratedVirtualMachineScaleSetOsProfileWindowsConfiguration
   readonly timezone?: string;
   /**
   * secret block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#secret OrchestratedVirtualMachineScaleSet#secret}
   */
   readonly secret?: OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationSecret[] | cdktf.IResolvable;
   /**
   * winrm_listener block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#winrm_listener OrchestratedVirtualMachineScaleSet#winrm_listener}
   */
   readonly winrmListener?: OrchestratedVirtualMachineScaleSetOsProfileWindowsConfigurationWinrmListener[] | cdktf.IResolvable;
@@ -3751,13 +3746,13 @@ export interface OrchestratedVirtualMachineScaleSetOsProfile {
   readonly customData?: string;
   /**
   * linux_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#linux_configuration OrchestratedVirtualMachineScaleSet#linux_configuration}
   */
   readonly linuxConfiguration?: OrchestratedVirtualMachineScaleSetOsProfileLinuxConfiguration;
   /**
   * windows_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/orchestrated_virtual_machine_scale_set#windows_configuration OrchestratedVirtualMachineScaleSet#windows_configuration}
   */
   readonly windowsConfiguration?: OrchestratedVirtualMachineScaleSetOsProfileWindowsConfiguration;

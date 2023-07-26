@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_firewall_policy
 // generated from terraform resource schema
 
@@ -57,19 +52,19 @@ export interface CdnFrontdoorFirewallPolicyConfig extends cdktf.TerraformMetaArg
   readonly tags?: { [key: string]: string };
   /**
   * custom_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_firewall_policy#custom_rule CdnFrontdoorFirewallPolicy#custom_rule}
   */
   readonly customRule?: CdnFrontdoorFirewallPolicyCustomRule[] | cdktf.IResolvable;
   /**
   * managed_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_firewall_policy#managed_rule CdnFrontdoorFirewallPolicy#managed_rule}
   */
   readonly managedRule?: CdnFrontdoorFirewallPolicyManagedRule[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_firewall_policy#timeouts CdnFrontdoorFirewallPolicy#timeouts}
   */
   readonly timeouts?: CdnFrontdoorFirewallPolicyTimeouts;
@@ -328,7 +323,7 @@ export interface CdnFrontdoorFirewallPolicyCustomRule {
   readonly type: string;
   /**
   * match_condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_firewall_policy#match_condition CdnFrontdoorFirewallPolicy#match_condition}
   */
   readonly matchCondition?: CdnFrontdoorFirewallPolicyCustomRuleMatchCondition[] | cdktf.IResolvable;
@@ -1017,7 +1012,7 @@ export interface CdnFrontdoorFirewallPolicyManagedRuleOverrideRule {
   readonly ruleId: string;
   /**
   * exclusion block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_firewall_policy#exclusion CdnFrontdoorFirewallPolicy#exclusion}
   */
   readonly exclusion?: CdnFrontdoorFirewallPolicyManagedRuleOverrideRuleExclusion[] | cdktf.IResolvable;
@@ -1183,13 +1178,13 @@ export interface CdnFrontdoorFirewallPolicyManagedRuleOverride {
   readonly ruleGroupName: string;
   /**
   * exclusion block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_firewall_policy#exclusion CdnFrontdoorFirewallPolicy#exclusion}
   */
   readonly exclusion?: CdnFrontdoorFirewallPolicyManagedRuleOverrideExclusion[] | cdktf.IResolvable;
   /**
   * rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_firewall_policy#rule CdnFrontdoorFirewallPolicy#rule}
   */
   readonly rule?: CdnFrontdoorFirewallPolicyManagedRuleOverrideRule[] | cdktf.IResolvable;
@@ -1343,13 +1338,13 @@ export interface CdnFrontdoorFirewallPolicyManagedRule {
   readonly version: string;
   /**
   * exclusion block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_firewall_policy#exclusion CdnFrontdoorFirewallPolicy#exclusion}
   */
   readonly exclusion?: CdnFrontdoorFirewallPolicyManagedRuleExclusion[] | cdktf.IResolvable;
   /**
   * override block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_firewall_policy#override CdnFrontdoorFirewallPolicy#override}
   */
   readonly override?: CdnFrontdoorFirewallPolicyManagedRuleOverride[] | cdktf.IResolvable;

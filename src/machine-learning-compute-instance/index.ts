@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/machine_learning_compute_instance
 // generated from terraform resource schema
 
@@ -61,25 +56,25 @@ export interface MachineLearningComputeInstanceConfig extends cdktf.TerraformMet
   readonly virtualMachineSize: string;
   /**
   * assign_to_user block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/machine_learning_compute_instance#assign_to_user MachineLearningComputeInstance#assign_to_user}
   */
   readonly assignToUser?: MachineLearningComputeInstanceAssignToUser;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/machine_learning_compute_instance#identity MachineLearningComputeInstance#identity}
   */
   readonly identity?: MachineLearningComputeInstanceIdentity;
   /**
   * ssh block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/machine_learning_compute_instance#ssh MachineLearningComputeInstance#ssh}
   */
   readonly ssh?: MachineLearningComputeInstanceSsh;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/machine_learning_compute_instance#timeouts MachineLearningComputeInstance#timeouts}
   */
   readonly timeouts?: MachineLearningComputeInstanceTimeouts;

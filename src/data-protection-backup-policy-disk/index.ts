@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_protection_backup_policy_disk
 // generated from terraform resource schema
 
@@ -37,13 +32,13 @@ export interface DataProtectionBackupPolicyDiskConfig extends cdktf.TerraformMet
   readonly vaultId: string;
   /**
   * retention_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_protection_backup_policy_disk#retention_rule DataProtectionBackupPolicyDisk#retention_rule}
   */
   readonly retentionRule?: DataProtectionBackupPolicyDiskRetentionRule[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_protection_backup_policy_disk#timeouts DataProtectionBackupPolicyDisk#timeouts}
   */
   readonly timeouts?: DataProtectionBackupPolicyDiskTimeouts;
@@ -128,7 +123,7 @@ export interface DataProtectionBackupPolicyDiskRetentionRule {
   readonly priority: number;
   /**
   * criteria block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_protection_backup_policy_disk#criteria DataProtectionBackupPolicyDisk#criteria}
   */
   readonly criteria: DataProtectionBackupPolicyDiskRetentionRuleCriteria;

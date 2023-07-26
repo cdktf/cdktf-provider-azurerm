@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_azure_databricks
 // generated from terraform resource schema
 
@@ -65,25 +60,25 @@ export interface DataFactoryLinkedServiceAzureDatabricksConfig extends cdktf.Ter
   readonly parameters?: { [key: string]: string };
   /**
   * instance_pool block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_azure_databricks#instance_pool DataFactoryLinkedServiceAzureDatabricks#instance_pool}
   */
   readonly instancePool?: DataFactoryLinkedServiceAzureDatabricksInstancePool;
   /**
   * key_vault_password block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_azure_databricks#key_vault_password DataFactoryLinkedServiceAzureDatabricks#key_vault_password}
   */
   readonly keyVaultPassword?: DataFactoryLinkedServiceAzureDatabricksKeyVaultPassword;
   /**
   * new_cluster_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_azure_databricks#new_cluster_config DataFactoryLinkedServiceAzureDatabricks#new_cluster_config}
   */
   readonly newClusterConfig?: DataFactoryLinkedServiceAzureDatabricksNewClusterConfig;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_azure_databricks#timeouts DataFactoryLinkedServiceAzureDatabricks#timeouts}
   */
   readonly timeouts?: DataFactoryLinkedServiceAzureDatabricksTimeouts;

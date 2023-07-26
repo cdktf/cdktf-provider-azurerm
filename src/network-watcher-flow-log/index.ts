@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_watcher_flow_log
 // generated from terraform resource schema
 
@@ -57,19 +52,19 @@ export interface NetworkWatcherFlowLogConfig extends cdktf.TerraformMetaArgument
   readonly version?: number;
   /**
   * retention_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_watcher_flow_log#retention_policy NetworkWatcherFlowLog#retention_policy}
   */
   readonly retentionPolicy: NetworkWatcherFlowLogRetentionPolicy;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_watcher_flow_log#timeouts NetworkWatcherFlowLog#timeouts}
   */
   readonly timeouts?: NetworkWatcherFlowLogTimeouts;
   /**
   * traffic_analytics block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_watcher_flow_log#traffic_analytics NetworkWatcherFlowLog#traffic_analytics}
   */
   readonly trafficAnalytics?: NetworkWatcherFlowLogTrafficAnalytics;

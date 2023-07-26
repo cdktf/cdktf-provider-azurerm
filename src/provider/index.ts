@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs
 // generated from terraform resource schema
 
@@ -18,157 +13,157 @@ export interface AzurermProviderConfig {
   readonly auxiliaryTenantIds?: string[];
   /**
   * Base64 encoded PKCS#12 certificate bundle to use when authenticating as a Service Principal using a Client Certificate
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#client_certificate AzurermProvider#client_certificate}
   */
   readonly clientCertificate?: string;
   /**
   * The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client Certificate
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#client_certificate_password AzurermProvider#client_certificate_password}
   */
   readonly clientCertificatePassword?: string;
   /**
   * The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service Principal using a Client Certificate.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#client_certificate_path AzurermProvider#client_certificate_path}
   */
   readonly clientCertificatePath?: string;
   /**
   * The Client ID which should be used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#client_id AzurermProvider#client_id}
   */
   readonly clientId?: string;
   /**
   * The path to a file containing the Client ID which should be used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#client_id_file_path AzurermProvider#client_id_file_path}
   */
   readonly clientIdFilePath?: string;
   /**
   * The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#client_secret AzurermProvider#client_secret}
   */
   readonly clientSecret?: string;
   /**
   * The path to a file containing the Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#client_secret_file_path AzurermProvider#client_secret_file_path}
   */
   readonly clientSecretFilePath?: string;
   /**
   * This will disable the x-ms-correlation-request-id header.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#disable_correlation_request_id AzurermProvider#disable_correlation_request_id}
   */
   readonly disableCorrelationRequestId?: boolean | cdktf.IResolvable;
   /**
   * This will disable the Terraform Partner ID which is used if a custom `partner_id` isn't specified.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#disable_terraform_partner_id AzurermProvider#disable_terraform_partner_id}
   */
   readonly disableTerraformPartnerId?: boolean | cdktf.IResolvable;
   /**
   * The Cloud Environment which should be used. Possible values are public, usgovernment, and china. Defaults to public.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#environment AzurermProvider#environment}
   */
   readonly environment?: string;
   /**
   * The Hostname which should be used for the Azure Metadata Service.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#metadata_host AzurermProvider#metadata_host}
   */
   readonly metadataHost?: string;
   /**
   * The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected automatically. 
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#msi_endpoint AzurermProvider#msi_endpoint}
   */
   readonly msiEndpoint?: string;
   /**
   * The bearer token for the request to the OIDC provider. For use when authenticating as a Service Principal using OpenID Connect.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#oidc_request_token AzurermProvider#oidc_request_token}
   */
   readonly oidcRequestToken?: string;
   /**
   * The URL for the OIDC provider from which to request an ID token. For use when authenticating as a Service Principal using OpenID Connect.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#oidc_request_url AzurermProvider#oidc_request_url}
   */
   readonly oidcRequestUrl?: string;
   /**
   * The OIDC ID token for use when authenticating as a Service Principal using OpenID Connect.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#oidc_token AzurermProvider#oidc_token}
   */
   readonly oidcToken?: string;
   /**
   * The path to a file containing an OIDC ID token for use when authenticating as a Service Principal using OpenID Connect.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#oidc_token_file_path AzurermProvider#oidc_token_file_path}
   */
   readonly oidcTokenFilePath?: string;
   /**
   * A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#partner_id AzurermProvider#partner_id}
   */
   readonly partnerId?: string;
   /**
   * Should the AzureRM Provider skip registering all of the Resource Providers that it supports, if they're not already registered?
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#skip_provider_registration AzurermProvider#skip_provider_registration}
   */
   readonly skipProviderRegistration?: boolean | cdktf.IResolvable;
   /**
   * Should the AzureRM Provider use AzureAD to access the Storage Data Plane API's?
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#storage_use_azuread AzurermProvider#storage_use_azuread}
   */
   readonly storageUseAzuread?: boolean | cdktf.IResolvable;
   /**
   * The Subscription ID which should be used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#subscription_id AzurermProvider#subscription_id}
   */
   readonly subscriptionId?: string;
   /**
   * The Tenant ID which should be used.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#tenant_id AzurermProvider#tenant_id}
   */
   readonly tenantId?: string;
   /**
   * Allow Azure CLI to be used for Authentication.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#use_cli AzurermProvider#use_cli}
   */
   readonly useCli?: boolean | cdktf.IResolvable;
   /**
   * Allow Managed Service Identity to be used for Authentication.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#use_msi AzurermProvider#use_msi}
   */
   readonly useMsi?: boolean | cdktf.IResolvable;
   /**
   * Allow OpenID Connect to be used for authentication
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#use_oidc AzurermProvider#use_oidc}
   */
   readonly useOidc?: boolean | cdktf.IResolvable;
   /**
   * Alias name
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#alias AzurermProvider#alias}
   */
   readonly alias?: string;
   /**
   * features block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#features AzurermProvider#features}
   */
   readonly features: AzurermProviderFeatures;
@@ -254,55 +249,55 @@ export function azurermProviderFeaturesCognitiveAccountToTerraform(struct?: Azur
 export interface AzurermProviderFeaturesKeyVault {
   /**
   * When enabled soft-deleted `azurerm_key_vault` resources will be permanently deleted (e.g purged), when destroyed
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#purge_soft_delete_on_destroy AzurermProvider#purge_soft_delete_on_destroy}
   */
   readonly purgeSoftDeleteOnDestroy?: boolean | cdktf.IResolvable;
   /**
   * When enabled soft-deleted `azurerm_key_vault_certificate` resources will be permanently deleted (e.g purged), when destroyed
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#purge_soft_deleted_certificates_on_destroy AzurermProvider#purge_soft_deleted_certificates_on_destroy}
   */
   readonly purgeSoftDeletedCertificatesOnDestroy?: boolean | cdktf.IResolvable;
   /**
   * When enabled soft-deleted `azurerm_key_vault_managed_hardware_security_module` resources will be permanently deleted (e.g purged), when destroyed
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#purge_soft_deleted_hardware_security_modules_on_destroy AzurermProvider#purge_soft_deleted_hardware_security_modules_on_destroy}
   */
   readonly purgeSoftDeletedHardwareSecurityModulesOnDestroy?: boolean | cdktf.IResolvable;
   /**
   * When enabled soft-deleted `azurerm_key_vault_key` resources will be permanently deleted (e.g purged), when destroyed
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#purge_soft_deleted_keys_on_destroy AzurermProvider#purge_soft_deleted_keys_on_destroy}
   */
   readonly purgeSoftDeletedKeysOnDestroy?: boolean | cdktf.IResolvable;
   /**
   * When enabled soft-deleted `azurerm_key_vault_secret` resources will be permanently deleted (e.g purged), when destroyed
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#purge_soft_deleted_secrets_on_destroy AzurermProvider#purge_soft_deleted_secrets_on_destroy}
   */
   readonly purgeSoftDeletedSecretsOnDestroy?: boolean | cdktf.IResolvable;
   /**
   * When enabled soft-deleted `azurerm_key_vault_certificate` resources will be restored, instead of creating new ones
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#recover_soft_deleted_certificates AzurermProvider#recover_soft_deleted_certificates}
   */
   readonly recoverSoftDeletedCertificates?: boolean | cdktf.IResolvable;
   /**
   * When enabled soft-deleted `azurerm_key_vault` resources will be restored, instead of creating new ones
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#recover_soft_deleted_key_vaults AzurermProvider#recover_soft_deleted_key_vaults}
   */
   readonly recoverSoftDeletedKeyVaults?: boolean | cdktf.IResolvable;
   /**
   * When enabled soft-deleted `azurerm_key_vault_key` resources will be restored, instead of creating new ones
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#recover_soft_deleted_keys AzurermProvider#recover_soft_deleted_keys}
   */
   readonly recoverSoftDeletedKeys?: boolean | cdktf.IResolvable;
   /**
   * When enabled soft-deleted `azurerm_key_vault_secret` resources will be restored, instead of creating new ones
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#recover_soft_deleted_secrets AzurermProvider#recover_soft_deleted_secrets}
   */
   readonly recoverSoftDeletedSecrets?: boolean | cdktf.IResolvable;
@@ -451,67 +446,67 @@ export function azurermProviderFeaturesVirtualMachineScaleSetToTerraform(struct?
 export interface AzurermProviderFeatures {
   /**
   * api_management block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#api_management AzurermProvider#api_management}
   */
   readonly apiManagement?: AzurermProviderFeaturesApiManagement;
   /**
   * app_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#app_configuration AzurermProvider#app_configuration}
   */
   readonly appConfiguration?: AzurermProviderFeaturesAppConfiguration;
   /**
   * application_insights block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#application_insights AzurermProvider#application_insights}
   */
   readonly applicationInsights?: AzurermProviderFeaturesApplicationInsights;
   /**
   * cognitive_account block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#cognitive_account AzurermProvider#cognitive_account}
   */
   readonly cognitiveAccount?: AzurermProviderFeaturesCognitiveAccount;
   /**
   * key_vault block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#key_vault AzurermProvider#key_vault}
   */
   readonly keyVault?: AzurermProviderFeaturesKeyVault;
   /**
   * log_analytics_workspace block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#log_analytics_workspace AzurermProvider#log_analytics_workspace}
   */
   readonly logAnalyticsWorkspace?: AzurermProviderFeaturesLogAnalyticsWorkspace;
   /**
   * managed_disk block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#managed_disk AzurermProvider#managed_disk}
   */
   readonly managedDisk?: AzurermProviderFeaturesManagedDisk;
   /**
   * resource_group block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#resource_group AzurermProvider#resource_group}
   */
   readonly resourceGroup?: AzurermProviderFeaturesResourceGroup;
   /**
   * template_deployment block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#template_deployment AzurermProvider#template_deployment}
   */
   readonly templateDeployment?: AzurermProviderFeaturesTemplateDeployment;
   /**
   * virtual_machine block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#virtual_machine AzurermProvider#virtual_machine}
   */
   readonly virtualMachine?: AzurermProviderFeaturesVirtualMachine;
   /**
   * virtual_machine_scale_set block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs#virtual_machine_scale_set AzurermProvider#virtual_machine_scale_set}
   */
   readonly virtualMachineScaleSet?: AzurermProviderFeaturesVirtualMachineScaleSet;

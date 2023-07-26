@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_slice
 // generated from terraform resource schema
 
@@ -41,13 +36,13 @@ export interface MobileNetworkSliceConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * single_network_slice_selection_assistance_information block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_slice#single_network_slice_selection_assistance_information MobileNetworkSlice#single_network_slice_selection_assistance_information}
   */
   readonly singleNetworkSliceSelectionAssistanceInformation: MobileNetworkSliceSingleNetworkSliceSelectionAssistanceInformation;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_slice#timeouts MobileNetworkSlice#timeouts}
   */
   readonly timeouts?: MobileNetworkSliceTimeouts;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_connection
 // generated from terraform resource schema
 
@@ -41,19 +36,19 @@ export interface SpringCloudConnectionConfig extends cdktf.TerraformMetaArgument
   readonly vnetSolution?: string;
   /**
   * authentication block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_connection#authentication SpringCloudConnection#authentication}
   */
   readonly authentication: SpringCloudConnectionAuthentication;
   /**
   * secret_store block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_connection#secret_store SpringCloudConnection#secret_store}
   */
   readonly secretStore?: SpringCloudConnectionSecretStore;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_connection#timeouts SpringCloudConnection#timeouts}
   */
   readonly timeouts?: SpringCloudConnectionTimeouts;

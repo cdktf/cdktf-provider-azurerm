@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_kafka_cluster
 // generated from terraform resource schema
 
@@ -53,85 +48,85 @@ export interface HdinsightKafkaClusterConfig extends cdktf.TerraformMetaArgument
   readonly tlsMinVersion?: string;
   /**
   * component_version block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_kafka_cluster#component_version HdinsightKafkaCluster#component_version}
   */
   readonly componentVersion: HdinsightKafkaClusterComponentVersion;
   /**
   * compute_isolation block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_kafka_cluster#compute_isolation HdinsightKafkaCluster#compute_isolation}
   */
   readonly computeIsolation?: HdinsightKafkaClusterComputeIsolation;
   /**
   * disk_encryption block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_kafka_cluster#disk_encryption HdinsightKafkaCluster#disk_encryption}
   */
   readonly diskEncryption?: HdinsightKafkaClusterDiskEncryption[] | cdktf.IResolvable;
   /**
   * extension block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_kafka_cluster#extension HdinsightKafkaCluster#extension}
   */
   readonly extension?: HdinsightKafkaClusterExtension;
   /**
   * gateway block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_kafka_cluster#gateway HdinsightKafkaCluster#gateway}
   */
   readonly gateway: HdinsightKafkaClusterGateway;
   /**
   * metastores block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_kafka_cluster#metastores HdinsightKafkaCluster#metastores}
   */
   readonly metastores?: HdinsightKafkaClusterMetastores;
   /**
   * monitor block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_kafka_cluster#monitor HdinsightKafkaCluster#monitor}
   */
   readonly monitor?: HdinsightKafkaClusterMonitor;
   /**
   * network block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_kafka_cluster#network HdinsightKafkaCluster#network}
   */
   readonly network?: HdinsightKafkaClusterNetwork;
   /**
   * rest_proxy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_kafka_cluster#rest_proxy HdinsightKafkaCluster#rest_proxy}
   */
   readonly restProxy?: HdinsightKafkaClusterRestProxy;
   /**
   * roles block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_kafka_cluster#roles HdinsightKafkaCluster#roles}
   */
   readonly roles: HdinsightKafkaClusterRoles;
   /**
   * security_profile block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_kafka_cluster#security_profile HdinsightKafkaCluster#security_profile}
   */
   readonly securityProfile?: HdinsightKafkaClusterSecurityProfile;
   /**
   * storage_account block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_kafka_cluster#storage_account HdinsightKafkaCluster#storage_account}
   */
   readonly storageAccount?: HdinsightKafkaClusterStorageAccount[] | cdktf.IResolvable;
   /**
   * storage_account_gen2 block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_kafka_cluster#storage_account_gen2 HdinsightKafkaCluster#storage_account_gen2}
   */
   readonly storageAccountGen2?: HdinsightKafkaClusterStorageAccountGen2;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_kafka_cluster#timeouts HdinsightKafkaCluster#timeouts}
   */
   readonly timeouts?: HdinsightKafkaClusterTimeouts;
@@ -1045,19 +1040,19 @@ export class HdinsightKafkaClusterMetastoresOozieOutputReference extends cdktf.C
 export interface HdinsightKafkaClusterMetastores {
   /**
   * ambari block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_kafka_cluster#ambari HdinsightKafkaCluster#ambari}
   */
   readonly ambari?: HdinsightKafkaClusterMetastoresAmbari;
   /**
   * hive block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_kafka_cluster#hive HdinsightKafkaCluster#hive}
   */
   readonly hive?: HdinsightKafkaClusterMetastoresHive;
   /**
   * oozie block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_kafka_cluster#oozie HdinsightKafkaCluster#oozie}
   */
   readonly oozie?: HdinsightKafkaClusterMetastoresOozie;
@@ -1603,7 +1598,7 @@ export interface HdinsightKafkaClusterRolesHeadNode {
   readonly vmSize: string;
   /**
   * script_actions block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_kafka_cluster#script_actions HdinsightKafkaCluster#script_actions}
   */
   readonly scriptActions?: HdinsightKafkaClusterRolesHeadNodeScriptActions[] | cdktf.IResolvable;
@@ -1971,7 +1966,7 @@ export interface HdinsightKafkaClusterRolesKafkaManagementNode {
   readonly vmSize: string;
   /**
   * script_actions block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_kafka_cluster#script_actions HdinsightKafkaCluster#script_actions}
   */
   readonly scriptActions?: HdinsightKafkaClusterRolesKafkaManagementNodeScriptActions[] | cdktf.IResolvable;
@@ -2347,7 +2342,7 @@ export interface HdinsightKafkaClusterRolesWorkerNode {
   readonly vmSize: string;
   /**
   * script_actions block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_kafka_cluster#script_actions HdinsightKafkaCluster#script_actions}
   */
   readonly scriptActions?: HdinsightKafkaClusterRolesWorkerNodeScriptActions[] | cdktf.IResolvable;
@@ -2755,7 +2750,7 @@ export interface HdinsightKafkaClusterRolesZookeeperNode {
   readonly vmSize: string;
   /**
   * script_actions block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_kafka_cluster#script_actions HdinsightKafkaCluster#script_actions}
   */
   readonly scriptActions?: HdinsightKafkaClusterRolesZookeeperNodeScriptActions[] | cdktf.IResolvable;
@@ -2954,25 +2949,25 @@ export class HdinsightKafkaClusterRolesZookeeperNodeOutputReference extends cdkt
 export interface HdinsightKafkaClusterRoles {
   /**
   * head_node block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_kafka_cluster#head_node HdinsightKafkaCluster#head_node}
   */
   readonly headNode: HdinsightKafkaClusterRolesHeadNode;
   /**
   * kafka_management_node block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_kafka_cluster#kafka_management_node HdinsightKafkaCluster#kafka_management_node}
   */
   readonly kafkaManagementNode?: HdinsightKafkaClusterRolesKafkaManagementNode;
   /**
   * worker_node block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_kafka_cluster#worker_node HdinsightKafkaCluster#worker_node}
   */
   readonly workerNode: HdinsightKafkaClusterRolesWorkerNode;
   /**
   * zookeeper_node block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hdinsight_kafka_cluster#zookeeper_node HdinsightKafkaCluster#zookeeper_node}
   */
   readonly zookeeperNode: HdinsightKafkaClusterRolesZookeeperNode;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/container_registry_token
 // generated from terraform resource schema
 
@@ -33,7 +28,7 @@ export interface DataAzurermContainerRegistryTokenConfig extends cdktf.Terraform
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/container_registry_token#timeouts DataAzurermContainerRegistryToken#timeouts}
   */
   readonly timeouts?: DataAzurermContainerRegistryTokenTimeouts;

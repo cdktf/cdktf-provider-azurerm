@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_insights_workbook
 // generated from terraform resource schema
 
@@ -61,13 +56,13 @@ export interface ApplicationInsightsWorkbookConfig extends cdktf.TerraformMetaAr
   readonly tags?: { [key: string]: string };
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_insights_workbook#identity ApplicationInsightsWorkbook#identity}
   */
   readonly identity?: ApplicationInsightsWorkbookIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_insights_workbook#timeouts ApplicationInsightsWorkbook#timeouts}
   */
   readonly timeouts?: ApplicationInsightsWorkbookTimeouts;

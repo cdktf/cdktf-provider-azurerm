@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_protection_backup_vault
 // generated from terraform resource schema
 
@@ -45,13 +40,13 @@ export interface DataProtectionBackupVaultConfig extends cdktf.TerraformMetaArgu
   readonly tags?: { [key: string]: string };
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_protection_backup_vault#identity DataProtectionBackupVault#identity}
   */
   readonly identity?: DataProtectionBackupVaultIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_protection_backup_vault#timeouts DataProtectionBackupVault#timeouts}
   */
   readonly timeouts?: DataProtectionBackupVaultTimeouts;

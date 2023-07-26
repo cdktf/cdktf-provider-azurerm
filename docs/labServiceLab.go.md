@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLab.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 labservicelab.NewLabServiceLab(scope Construct, id *string, config LabServiceLabConfig) LabServiceLab
 ```
@@ -424,7 +424,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLab.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 labservicelab.LabServiceLab_IsConstruct(x interface{}) *bool
 ```
@@ -456,7 +456,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLab.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 labservicelab.LabServiceLab_IsTerraformElement(x interface{}) *bool
 ```
@@ -470,7 +470,7 @@ labservicelab.LabServiceLab_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLab.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 labservicelab.LabServiceLab_IsTerraformResource(x interface{}) *bool
 ```
@@ -999,7 +999,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLabAutoShutdown.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 &labservicelab.LabServiceLabAutoShutdown {
 	DisconnectDelay: *string,
@@ -1073,7 +1073,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLabConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 &labservicelab.LabServiceLabConfig {
 	Connection: interface{},
@@ -1086,18 +1086,18 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
 	Location: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	Security: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.labServiceLab.LabServiceLabSecurity,
+	Security: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.labServiceLab.LabServiceLabSecurity,
 	Title: *string,
-	VirtualMachine: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.labServiceLab.LabServiceLabVirtualMachine,
-	AutoShutdown: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.labServiceLab.LabServiceLabAutoShutdown,
-	ConnectionSetting: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.labServiceLab.LabServiceLabConnectionSetting,
+	VirtualMachine: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.labServiceLab.LabServiceLabVirtualMachine,
+	AutoShutdown: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.labServiceLab.LabServiceLabAutoShutdown,
+	ConnectionSetting: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.labServiceLab.LabServiceLabConnectionSetting,
 	Description: *string,
 	Id: *string,
 	LabPlanId: *string,
-	Network: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.labServiceLab.LabServiceLabNetwork,
-	Roster: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.labServiceLab.LabServiceLabRoster,
+	Network: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.labServiceLab.LabServiceLabNetwork,
+	Roster: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.labServiceLab.LabServiceLabRoster,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.labServiceLab.LabServiceLabTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.labServiceLab.LabServiceLabTimeouts,
 }
 ```
 
@@ -1402,7 +1402,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLabConnectionSetting.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 &labservicelab.LabServiceLabConnectionSetting {
 	ClientRdpAccess: *string,
@@ -1448,7 +1448,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLabNetwork.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 &labservicelab.LabServiceLabNetwork {
 	SubnetId: *string,
@@ -1480,7 +1480,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLabRoster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 &labservicelab.LabServiceLabRoster {
 	ActiveDirectoryGroupId: *string,
@@ -1568,7 +1568,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLabSecurity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 &labservicelab.LabServiceLabSecurity {
 	OpenAccessEnabled: interface{},
@@ -1600,7 +1600,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLabTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 &labservicelab.LabServiceLabTimeouts {
 	Create: *string,
@@ -1674,15 +1674,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLabVirtualMachine.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 &labservicelab.LabServiceLabVirtualMachine {
-	AdminUser: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.labServiceLab.LabServiceLabVirtualMachineAdminUser,
-	ImageReference: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.labServiceLab.LabServiceLabVirtualMachineImageReference,
-	Sku: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.labServiceLab.LabServiceLabVirtualMachineSku,
+	AdminUser: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.labServiceLab.LabServiceLabVirtualMachineAdminUser,
+	ImageReference: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.labServiceLab.LabServiceLabVirtualMachineImageReference,
+	Sku: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.labServiceLab.LabServiceLabVirtualMachineSku,
 	AdditionalCapabilityGpuDriversInstalled: interface{},
 	CreateOption: *string,
-	NonAdminUser: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.labServiceLab.LabServiceLabVirtualMachineNonAdminUser,
+	NonAdminUser: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.labServiceLab.LabServiceLabVirtualMachineNonAdminUser,
 	SharedPasswordEnabled: interface{},
 	UsageQuota: *string,
 }
@@ -1812,7 +1812,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLabVirtualMachineAdminUser.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 &labservicelab.LabServiceLabVirtualMachineAdminUser {
 	Password: *string,
@@ -1858,7 +1858,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLabVirtualMachineImageReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 &labservicelab.LabServiceLabVirtualMachineImageReference {
 	Id: *string,
@@ -1949,7 +1949,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLabVirtualMachineNonAdminUser.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 &labservicelab.LabServiceLabVirtualMachineNonAdminUser {
 	Password: *string,
@@ -1995,7 +1995,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLabVirtualMachineSku.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 &labservicelab.LabServiceLabVirtualMachineSku {
 	Capacity: *f64,
@@ -2043,7 +2043,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLabAutoShutdownOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 labservicelab.NewLabServiceLabAutoShutdownOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LabServiceLabAutoShutdownOutputReference
 ```
@@ -2408,7 +2408,7 @@ func InternalValue() LabServiceLabAutoShutdown
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLabConnectionSettingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 labservicelab.NewLabServiceLabConnectionSettingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LabServiceLabConnectionSettingOutputReference
 ```
@@ -2715,7 +2715,7 @@ func InternalValue() LabServiceLabConnectionSetting
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLabNetworkOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 labservicelab.NewLabServiceLabNetworkOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LabServiceLabNetworkOutputReference
 ```
@@ -3015,7 +3015,7 @@ func InternalValue() LabServiceLabNetwork
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLabRosterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 labservicelab.NewLabServiceLabRosterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LabServiceLabRosterOutputReference
 ```
@@ -3409,7 +3409,7 @@ func InternalValue() LabServiceLabRoster
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLabSecurityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 labservicelab.NewLabServiceLabSecurityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LabServiceLabSecurityOutputReference
 ```
@@ -3691,7 +3691,7 @@ func InternalValue() LabServiceLabSecurity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLabTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 labservicelab.NewLabServiceLabTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LabServiceLabTimeoutsOutputReference
 ```
@@ -4056,7 +4056,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLabVirtualMachineAdminUserOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 labservicelab.NewLabServiceLabVirtualMachineAdminUserOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LabServiceLabVirtualMachineAdminUserOutputReference
 ```
@@ -4349,7 +4349,7 @@ func InternalValue() LabServiceLabVirtualMachineAdminUser
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLabVirtualMachineImageReferenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 labservicelab.NewLabServiceLabVirtualMachineImageReferenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LabServiceLabVirtualMachineImageReferenceOutputReference
 ```
@@ -4743,7 +4743,7 @@ func InternalValue() LabServiceLabVirtualMachineImageReference
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLabVirtualMachineNonAdminUserOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 labservicelab.NewLabServiceLabVirtualMachineNonAdminUserOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LabServiceLabVirtualMachineNonAdminUserOutputReference
 ```
@@ -5036,7 +5036,7 @@ func InternalValue() LabServiceLabVirtualMachineNonAdminUser
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLabVirtualMachineOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 labservicelab.NewLabServiceLabVirtualMachineOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LabServiceLabVirtualMachineOutputReference
 ```
@@ -5548,7 +5548,7 @@ func InternalValue() LabServiceLabVirtualMachine
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServiceLab.LabServiceLabVirtualMachineSkuOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/labservicelab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labservicelab"
 
 labservicelab.NewLabServiceLabVirtualMachineSkuOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LabServiceLabVirtualMachineSkuOutputReference
 ```

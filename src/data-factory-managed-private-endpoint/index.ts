@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_managed_private_endpoint
 // generated from terraform resource schema
 
@@ -41,7 +36,7 @@ export interface DataFactoryManagedPrivateEndpointConfig extends cdktf.Terraform
   readonly targetResourceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_managed_private_endpoint#timeouts DataFactoryManagedPrivateEndpoint#timeouts}
   */
   readonly timeouts?: DataFactoryManagedPrivateEndpointTimeouts;

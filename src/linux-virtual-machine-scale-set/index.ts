@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set
 // generated from terraform resource schema
 
@@ -161,127 +156,127 @@ export interface LinuxVirtualMachineScaleSetConfig extends cdktf.TerraformMetaAr
   readonly zones?: string[];
   /**
   * additional_capabilities block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#additional_capabilities LinuxVirtualMachineScaleSet#additional_capabilities}
   */
   readonly additionalCapabilities?: LinuxVirtualMachineScaleSetAdditionalCapabilities;
   /**
   * admin_ssh_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#admin_ssh_key LinuxVirtualMachineScaleSet#admin_ssh_key}
   */
   readonly adminSshKey?: LinuxVirtualMachineScaleSetAdminSshKey[] | cdktf.IResolvable;
   /**
   * automatic_instance_repair block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#automatic_instance_repair LinuxVirtualMachineScaleSet#automatic_instance_repair}
   */
   readonly automaticInstanceRepair?: LinuxVirtualMachineScaleSetAutomaticInstanceRepair;
   /**
   * automatic_os_upgrade_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#automatic_os_upgrade_policy LinuxVirtualMachineScaleSet#automatic_os_upgrade_policy}
   */
   readonly automaticOsUpgradePolicy?: LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicy;
   /**
   * boot_diagnostics block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#boot_diagnostics LinuxVirtualMachineScaleSet#boot_diagnostics}
   */
   readonly bootDiagnostics?: LinuxVirtualMachineScaleSetBootDiagnostics;
   /**
   * data_disk block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#data_disk LinuxVirtualMachineScaleSet#data_disk}
   */
   readonly dataDisk?: LinuxVirtualMachineScaleSetDataDisk[] | cdktf.IResolvable;
   /**
   * extension block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#extension LinuxVirtualMachineScaleSet#extension}
   */
   readonly extension?: LinuxVirtualMachineScaleSetExtension[] | cdktf.IResolvable;
   /**
   * gallery_application block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#gallery_application LinuxVirtualMachineScaleSet#gallery_application}
   */
   readonly galleryApplication?: LinuxVirtualMachineScaleSetGalleryApplication[] | cdktf.IResolvable;
   /**
   * gallery_applications block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#gallery_applications LinuxVirtualMachineScaleSet#gallery_applications}
   */
   readonly galleryApplications?: LinuxVirtualMachineScaleSetGalleryApplications[] | cdktf.IResolvable;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#identity LinuxVirtualMachineScaleSet#identity}
   */
   readonly identity?: LinuxVirtualMachineScaleSetIdentity;
   /**
   * network_interface block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#network_interface LinuxVirtualMachineScaleSet#network_interface}
   */
   readonly networkInterface: LinuxVirtualMachineScaleSetNetworkInterface[] | cdktf.IResolvable;
   /**
   * os_disk block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#os_disk LinuxVirtualMachineScaleSet#os_disk}
   */
   readonly osDisk: LinuxVirtualMachineScaleSetOsDisk;
   /**
   * plan block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#plan LinuxVirtualMachineScaleSet#plan}
   */
   readonly plan?: LinuxVirtualMachineScaleSetPlan;
   /**
   * rolling_upgrade_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#rolling_upgrade_policy LinuxVirtualMachineScaleSet#rolling_upgrade_policy}
   */
   readonly rollingUpgradePolicy?: LinuxVirtualMachineScaleSetRollingUpgradePolicy;
   /**
   * scale_in block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#scale_in LinuxVirtualMachineScaleSet#scale_in}
   */
   readonly scaleIn?: LinuxVirtualMachineScaleSetScaleIn;
   /**
   * secret block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#secret LinuxVirtualMachineScaleSet#secret}
   */
   readonly secret?: LinuxVirtualMachineScaleSetSecret[] | cdktf.IResolvable;
   /**
   * source_image_reference block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#source_image_reference LinuxVirtualMachineScaleSet#source_image_reference}
   */
   readonly sourceImageReference?: LinuxVirtualMachineScaleSetSourceImageReference;
   /**
   * spot_restore block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#spot_restore LinuxVirtualMachineScaleSet#spot_restore}
   */
   readonly spotRestore?: LinuxVirtualMachineScaleSetSpotRestore;
   /**
   * terminate_notification block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#terminate_notification LinuxVirtualMachineScaleSet#terminate_notification}
   */
   readonly terminateNotification?: LinuxVirtualMachineScaleSetTerminateNotification;
   /**
   * termination_notification block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#termination_notification LinuxVirtualMachineScaleSet#termination_notification}
   */
   readonly terminationNotification?: LinuxVirtualMachineScaleSetTerminationNotification;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#timeouts LinuxVirtualMachineScaleSet#timeouts}
   */
   readonly timeouts?: LinuxVirtualMachineScaleSetTimeouts;
@@ -1166,7 +1161,7 @@ export interface LinuxVirtualMachineScaleSetExtension {
   readonly typeHandlerVersion: string;
   /**
   * protected_settings_from_key_vault block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#protected_settings_from_key_vault LinuxVirtualMachineScaleSet#protected_settings_from_key_vault}
   */
   readonly protectedSettingsFromKeyVault?: LinuxVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVault;
@@ -2070,7 +2065,7 @@ export interface LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPubli
   readonly version?: string;
   /**
   * ip_tag block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#ip_tag LinuxVirtualMachineScaleSet#ip_tag}
   */
   readonly ipTag?: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag[] | cdktf.IResolvable;
@@ -2313,7 +2308,7 @@ export interface LinuxVirtualMachineScaleSetNetworkInterfaceIpConfiguration {
   readonly version?: string;
   /**
   * public_ip_address block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#public_ip_address LinuxVirtualMachineScaleSet#public_ip_address}
   */
   readonly publicIpAddress?: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress[] | cdktf.IResolvable;
@@ -2617,7 +2612,7 @@ export interface LinuxVirtualMachineScaleSetNetworkInterface {
   readonly primary?: boolean | cdktf.IResolvable;
   /**
   * ip_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#ip_configuration LinuxVirtualMachineScaleSet#ip_configuration}
   */
   readonly ipConfiguration: LinuxVirtualMachineScaleSetNetworkInterfaceIpConfiguration[] | cdktf.IResolvable;
@@ -2965,7 +2960,7 @@ export interface LinuxVirtualMachineScaleSetOsDisk {
   readonly writeAcceleratorEnabled?: boolean | cdktf.IResolvable;
   /**
   * diff_disk_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#diff_disk_settings LinuxVirtualMachineScaleSet#diff_disk_settings}
   */
   readonly diffDiskSettings?: LinuxVirtualMachineScaleSetOsDiskDiffDiskSettings;
@@ -3675,7 +3670,7 @@ export interface LinuxVirtualMachineScaleSetSecret {
   readonly keyVaultId: string;
   /**
   * certificate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/linux_virtual_machine_scale_set#certificate LinuxVirtualMachineScaleSet#certificate}
   */
   readonly certificate: LinuxVirtualMachineScaleSetSecretCertificate[] | cdktf.IResolvable;

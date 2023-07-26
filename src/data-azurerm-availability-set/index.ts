@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/availability_set
 // generated from terraform resource schema
 
@@ -29,7 +24,7 @@ export interface DataAzurermAvailabilitySetConfig extends cdktf.TerraformMetaArg
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/availability_set#timeouts DataAzurermAvailabilitySet#timeouts}
   */
   readonly timeouts?: DataAzurermAvailabilitySetTimeouts;

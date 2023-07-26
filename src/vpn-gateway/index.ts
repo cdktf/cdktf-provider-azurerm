@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_gateway
 // generated from terraform resource schema
 
@@ -53,13 +48,13 @@ export interface VpnGatewayConfig extends cdktf.TerraformMetaArguments {
   readonly virtualHubId: string;
   /**
   * bgp_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_gateway#bgp_settings VpnGateway#bgp_settings}
   */
   readonly bgpSettings?: VpnGatewayBgpSettings;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_gateway#timeouts VpnGateway#timeouts}
   */
   readonly timeouts?: VpnGatewayTimeouts;
@@ -229,13 +224,13 @@ export interface VpnGatewayBgpSettings {
   readonly peerWeight: number;
   /**
   * instance_0_bgp_peering_address block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_gateway#instance_0_bgp_peering_address VpnGateway#instance_0_bgp_peering_address}
   */
   readonly instance0BgpPeeringAddress?: VpnGatewayBgpSettingsInstance0BgpPeeringAddress;
   /**
   * instance_1_bgp_peering_address block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vpn_gateway#instance_1_bgp_peering_address VpnGateway#instance_1_bgp_peering_address}
   */
   readonly instance1BgpPeeringAddress?: VpnGatewayBgpSettingsInstance1BgpPeeringAddress;

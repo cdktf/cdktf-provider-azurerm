@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_schedule
 // generated from terraform resource schema
 
@@ -65,13 +60,13 @@ export interface AutomationScheduleConfig extends cdktf.TerraformMetaArguments {
   readonly weekDays?: string[];
   /**
   * monthly_occurrence block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_schedule#monthly_occurrence AutomationSchedule#monthly_occurrence}
   */
   readonly monthlyOccurrence?: AutomationScheduleMonthlyOccurrence[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_schedule#timeouts AutomationSchedule#timeouts}
   */
   readonly timeouts?: AutomationScheduleTimeouts;

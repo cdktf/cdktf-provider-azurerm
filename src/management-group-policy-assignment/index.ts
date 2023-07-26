@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/management_group_policy_assignment
 // generated from terraform resource schema
 
@@ -61,31 +56,31 @@ export interface ManagementGroupPolicyAssignmentConfig extends cdktf.TerraformMe
   readonly policyDefinitionId: string;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/management_group_policy_assignment#identity ManagementGroupPolicyAssignment#identity}
   */
   readonly identity?: ManagementGroupPolicyAssignmentIdentity;
   /**
   * non_compliance_message block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/management_group_policy_assignment#non_compliance_message ManagementGroupPolicyAssignment#non_compliance_message}
   */
   readonly nonComplianceMessage?: ManagementGroupPolicyAssignmentNonComplianceMessage[] | cdktf.IResolvable;
   /**
   * overrides block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/management_group_policy_assignment#overrides ManagementGroupPolicyAssignment#overrides}
   */
   readonly overrides?: ManagementGroupPolicyAssignmentOverrides[] | cdktf.IResolvable;
   /**
   * resource_selectors block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/management_group_policy_assignment#resource_selectors ManagementGroupPolicyAssignment#resource_selectors}
   */
   readonly resourceSelectors?: ManagementGroupPolicyAssignmentResourceSelectors[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/management_group_policy_assignment#timeouts ManagementGroupPolicyAssignment#timeouts}
   */
   readonly timeouts?: ManagementGroupPolicyAssignmentTimeouts;
@@ -446,7 +441,7 @@ export interface ManagementGroupPolicyAssignmentOverrides {
   readonly value: string;
   /**
   * selectors block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/management_group_policy_assignment#selectors ManagementGroupPolicyAssignment#selectors}
   */
   readonly selectors?: ManagementGroupPolicyAssignmentOverridesSelectors[] | cdktf.IResolvable;
@@ -717,7 +712,7 @@ export interface ManagementGroupPolicyAssignmentResourceSelectors {
   readonly name?: string;
   /**
   * selectors block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/management_group_policy_assignment#selectors ManagementGroupPolicyAssignment#selectors}
   */
   readonly selectors: ManagementGroupPolicyAssignmentResourceSelectorsSelectors[] | cdktf.IResolvable;

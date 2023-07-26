@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/eventhub
 // generated from terraform resource schema
 
@@ -45,13 +40,13 @@ export interface EventhubConfig extends cdktf.TerraformMetaArguments {
   readonly status?: string;
   /**
   * capture_description block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/eventhub#capture_description Eventhub#capture_description}
   */
   readonly captureDescription?: EventhubCaptureDescription;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/eventhub#timeouts Eventhub#timeouts}
   */
   readonly timeouts?: EventhubTimeouts;
@@ -213,7 +208,7 @@ export interface EventhubCaptureDescription {
   readonly skipEmptyArchives?: boolean | cdktf.IResolvable;
   /**
   * destination block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/eventhub#destination Eventhub#destination}
   */
   readonly destination: EventhubCaptureDescriptionDestination;

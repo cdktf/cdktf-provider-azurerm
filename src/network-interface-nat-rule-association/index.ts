@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_interface_nat_rule_association
 // generated from terraform resource schema
 
@@ -33,7 +28,7 @@ export interface NetworkInterfaceNatRuleAssociationConfig extends cdktf.Terrafor
   readonly networkInterfaceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_interface_nat_rule_association#timeouts NetworkInterfaceNatRuleAssociation#timeouts}
   */
   readonly timeouts?: NetworkInterfaceNatRuleAssociationTimeouts;

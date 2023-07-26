@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_packet_core_control_plane
 // generated from terraform resource schema
 
@@ -77,25 +72,25 @@ export interface MobileNetworkPacketCoreControlPlaneConfig extends cdktf.Terrafo
   readonly userEquipmentMtuInBytes?: number;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_packet_core_control_plane#identity MobileNetworkPacketCoreControlPlane#identity}
   */
   readonly identity?: MobileNetworkPacketCoreControlPlaneIdentity;
   /**
   * local_diagnostics_access block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_packet_core_control_plane#local_diagnostics_access MobileNetworkPacketCoreControlPlane#local_diagnostics_access}
   */
   readonly localDiagnosticsAccess: MobileNetworkPacketCoreControlPlaneLocalDiagnosticsAccess;
   /**
   * platform block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_packet_core_control_plane#platform MobileNetworkPacketCoreControlPlane#platform}
   */
   readonly platform?: MobileNetworkPacketCoreControlPlanePlatform;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_packet_core_control_plane#timeouts MobileNetworkPacketCoreControlPlane#timeouts}
   */
   readonly timeouts?: MobileNetworkPacketCoreControlPlaneTimeouts;

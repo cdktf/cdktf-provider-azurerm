@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_virtual_machine
 // generated from terraform resource schema
 
@@ -165,73 +160,73 @@ export interface WindowsVirtualMachineConfig extends cdktf.TerraformMetaArgument
   readonly zone?: string;
   /**
   * additional_capabilities block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_virtual_machine#additional_capabilities WindowsVirtualMachine#additional_capabilities}
   */
   readonly additionalCapabilities?: WindowsVirtualMachineAdditionalCapabilities;
   /**
   * additional_unattend_content block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_virtual_machine#additional_unattend_content WindowsVirtualMachine#additional_unattend_content}
   */
   readonly additionalUnattendContent?: WindowsVirtualMachineAdditionalUnattendContent[] | cdktf.IResolvable;
   /**
   * boot_diagnostics block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_virtual_machine#boot_diagnostics WindowsVirtualMachine#boot_diagnostics}
   */
   readonly bootDiagnostics?: WindowsVirtualMachineBootDiagnostics;
   /**
   * gallery_application block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_virtual_machine#gallery_application WindowsVirtualMachine#gallery_application}
   */
   readonly galleryApplication?: WindowsVirtualMachineGalleryApplication[] | cdktf.IResolvable;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_virtual_machine#identity WindowsVirtualMachine#identity}
   */
   readonly identity?: WindowsVirtualMachineIdentity;
   /**
   * os_disk block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_virtual_machine#os_disk WindowsVirtualMachine#os_disk}
   */
   readonly osDisk: WindowsVirtualMachineOsDisk;
   /**
   * plan block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_virtual_machine#plan WindowsVirtualMachine#plan}
   */
   readonly plan?: WindowsVirtualMachinePlan;
   /**
   * secret block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_virtual_machine#secret WindowsVirtualMachine#secret}
   */
   readonly secret?: WindowsVirtualMachineSecret[] | cdktf.IResolvable;
   /**
   * source_image_reference block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_virtual_machine#source_image_reference WindowsVirtualMachine#source_image_reference}
   */
   readonly sourceImageReference?: WindowsVirtualMachineSourceImageReference;
   /**
   * termination_notification block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_virtual_machine#termination_notification WindowsVirtualMachine#termination_notification}
   */
   readonly terminationNotification?: WindowsVirtualMachineTerminationNotification;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_virtual_machine#timeouts WindowsVirtualMachine#timeouts}
   */
   readonly timeouts?: WindowsVirtualMachineTimeouts;
   /**
   * winrm_listener block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_virtual_machine#winrm_listener WindowsVirtualMachine#winrm_listener}
   */
   readonly winrmListener?: WindowsVirtualMachineWinrmListener[] | cdktf.IResolvable;
@@ -882,7 +877,7 @@ export interface WindowsVirtualMachineOsDisk {
   readonly writeAcceleratorEnabled?: boolean | cdktf.IResolvable;
   /**
   * diff_disk_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_virtual_machine#diff_disk_settings WindowsVirtualMachine#diff_disk_settings}
   */
   readonly diffDiskSettings?: WindowsVirtualMachineOsDiskDiffDiskSettings;
@@ -1359,7 +1354,7 @@ export interface WindowsVirtualMachineSecret {
   readonly keyVaultId: string;
   /**
   * certificate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/windows_virtual_machine#certificate WindowsVirtualMachine#certificate}
   */
   readonly certificate: WindowsVirtualMachineSecretCertificate[] | cdktf.IResolvable;

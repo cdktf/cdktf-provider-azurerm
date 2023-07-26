@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster_node_pool
 // generated from terraform resource schema
 
@@ -169,37 +164,37 @@ export interface KubernetesClusterNodePoolConfig extends cdktf.TerraformMetaArgu
   readonly zones?: string[];
   /**
   * kubelet_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster_node_pool#kubelet_config KubernetesClusterNodePool#kubelet_config}
   */
   readonly kubeletConfig?: KubernetesClusterNodePoolKubeletConfig;
   /**
   * linux_os_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster_node_pool#linux_os_config KubernetesClusterNodePool#linux_os_config}
   */
   readonly linuxOsConfig?: KubernetesClusterNodePoolLinuxOsConfig;
   /**
   * node_network_profile block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster_node_pool#node_network_profile KubernetesClusterNodePool#node_network_profile}
   */
   readonly nodeNetworkProfile?: KubernetesClusterNodePoolNodeNetworkProfile;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster_node_pool#timeouts KubernetesClusterNodePool#timeouts}
   */
   readonly timeouts?: KubernetesClusterNodePoolTimeouts;
   /**
   * upgrade_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster_node_pool#upgrade_settings KubernetesClusterNodePool#upgrade_settings}
   */
   readonly upgradeSettings?: KubernetesClusterNodePoolUpgradeSettings;
   /**
   * windows_profile block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster_node_pool#windows_profile KubernetesClusterNodePool#windows_profile}
   */
   readonly windowsProfile?: KubernetesClusterNodePoolWindowsProfile;
@@ -1348,7 +1343,7 @@ export interface KubernetesClusterNodePoolLinuxOsConfig {
   readonly transparentHugePageEnabled?: string;
   /**
   * sysctl_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster_node_pool#sysctl_config KubernetesClusterNodePool#sysctl_config}
   */
   readonly sysctlConfig?: KubernetesClusterNodePoolLinuxOsConfigSysctlConfig;

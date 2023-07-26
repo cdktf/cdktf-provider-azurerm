@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_locator
 // generated from terraform resource schema
 
@@ -65,13 +60,13 @@ export interface MediaStreamingLocatorConfig extends cdktf.TerraformMetaArgument
   readonly streamingPolicyName: string;
   /**
   * content_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_locator#content_key MediaStreamingLocator#content_key}
   */
   readonly contentKey?: MediaStreamingLocatorContentKey[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_streaming_locator#timeouts MediaStreamingLocator#timeouts}
   */
   readonly timeouts?: MediaStreamingLocatorTimeouts;

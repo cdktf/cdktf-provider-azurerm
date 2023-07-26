@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logz_sub_account_tag_rule
 // generated from terraform resource schema
 
@@ -37,13 +32,13 @@ export interface LogzSubAccountTagRuleConfig extends cdktf.TerraformMetaArgument
   readonly sendSubscriptionLogs?: boolean | cdktf.IResolvable;
   /**
   * tag_filter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logz_sub_account_tag_rule#tag_filter LogzSubAccountTagRule#tag_filter}
   */
   readonly tagFilter?: LogzSubAccountTagRuleTagFilter[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logz_sub_account_tag_rule#timeouts LogzSubAccountTagRule#timeouts}
   */
   readonly timeouts?: LogzSubAccountTagRuleTimeouts;

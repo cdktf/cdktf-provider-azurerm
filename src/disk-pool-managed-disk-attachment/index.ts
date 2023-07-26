@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/disk_pool_managed_disk_attachment
 // generated from terraform resource schema
 
@@ -29,7 +24,7 @@ export interface DiskPoolManagedDiskAttachmentConfig extends cdktf.TerraformMeta
   readonly managedDiskId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/disk_pool_managed_disk_attachment#timeouts DiskPoolManagedDiskAttachment#timeouts}
   */
   readonly timeouts?: DiskPoolManagedDiskAttachmentTimeouts;

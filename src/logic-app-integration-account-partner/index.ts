@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_integration_account_partner
 // generated from terraform resource schema
 
@@ -37,13 +32,13 @@ export interface LogicAppIntegrationAccountPartnerConfig extends cdktf.Terraform
   readonly resourceGroupName: string;
   /**
   * business_identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_integration_account_partner#business_identity LogicAppIntegrationAccountPartner#business_identity}
   */
   readonly businessIdentity: LogicAppIntegrationAccountPartnerBusinessIdentity[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_integration_account_partner#timeouts LogicAppIntegrationAccountPartner#timeouts}
   */
   readonly timeouts?: LogicAppIntegrationAccountPartnerTimeouts;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_data_connector_office_365_project
 // generated from terraform resource schema
 
@@ -33,7 +28,7 @@ export interface SentinelDataConnectorOffice365ProjectConfig extends cdktf.Terra
   readonly tenantId?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_data_connector_office_365_project#timeouts SentinelDataConnectorOffice365Project#timeouts}
   */
   readonly timeouts?: SentinelDataConnectorOffice365ProjectTimeouts;

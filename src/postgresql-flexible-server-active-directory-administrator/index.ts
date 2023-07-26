@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/postgresql_flexible_server_active_directory_administrator
 // generated from terraform resource schema
 
@@ -45,7 +40,7 @@ export interface PostgresqlFlexibleServerActiveDirectoryAdministratorConfig exte
   readonly tenantId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/postgresql_flexible_server_active_directory_administrator#timeouts PostgresqlFlexibleServerActiveDirectoryAdministrator#timeouts}
   */
   readonly timeouts?: PostgresqlFlexibleServerActiveDirectoryAdministratorTimeouts;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/healthcare_dicom_service
 // generated from terraform resource schema
 
@@ -41,13 +36,13 @@ export interface HealthcareDicomServiceConfig extends cdktf.TerraformMetaArgumen
   readonly workspaceId: string;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/healthcare_dicom_service#identity HealthcareDicomService#identity}
   */
   readonly identity?: HealthcareDicomServiceIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/healthcare_dicom_service#timeouts HealthcareDicomService#timeouts}
   */
   readonly timeouts?: HealthcareDicomServiceTimeouts;

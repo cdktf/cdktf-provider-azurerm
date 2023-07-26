@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logz_monitor
 // generated from terraform resource schema
 
@@ -49,19 +44,19 @@ export interface LogzMonitorConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * plan block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logz_monitor#plan LogzMonitor#plan}
   */
   readonly plan: LogzMonitorPlan;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logz_monitor#timeouts LogzMonitor#timeouts}
   */
   readonly timeouts?: LogzMonitorTimeouts;
   /**
   * user block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logz_monitor#user LogzMonitor#user}
   */
   readonly user: LogzMonitorUser;

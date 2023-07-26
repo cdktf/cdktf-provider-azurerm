@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_runbook
 // generated from terraform resource schema
 
@@ -69,19 +64,19 @@ export interface AutomationRunbookConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * draft block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_runbook#draft AutomationRunbook#draft}
   */
   readonly draft?: AutomationRunbookDraft;
   /**
   * publish_content_link block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_runbook#publish_content_link AutomationRunbook#publish_content_link}
   */
   readonly publishContentLink?: AutomationRunbookPublishContentLink;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_runbook#timeouts AutomationRunbook#timeouts}
   */
   readonly timeouts?: AutomationRunbookTimeouts;
@@ -361,7 +356,7 @@ export interface AutomationRunbookDraftContentLink {
   readonly version?: string;
   /**
   * hash block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_runbook#hash AutomationRunbook#hash}
   */
   readonly hash?: AutomationRunbookDraftContentLinkHash;
@@ -678,13 +673,13 @@ export interface AutomationRunbookDraft {
   readonly outputTypes?: string[];
   /**
   * content_link block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_runbook#content_link AutomationRunbook#content_link}
   */
   readonly contentLink?: AutomationRunbookDraftContentLink;
   /**
   * parameters block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_runbook#parameters AutomationRunbook#parameters}
   */
   readonly parameters?: AutomationRunbookDraftParameters[] | cdktf.IResolvable;
@@ -924,7 +919,7 @@ export interface AutomationRunbookPublishContentLink {
   readonly version?: string;
   /**
   * hash block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_runbook#hash AutomationRunbook#hash}
   */
   readonly hash?: AutomationRunbookPublishContentLinkHash;

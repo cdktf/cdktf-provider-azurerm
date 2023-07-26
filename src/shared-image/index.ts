@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/shared_image
 // generated from terraform resource schema
 
@@ -113,19 +108,19 @@ export interface SharedImageConfig extends cdktf.TerraformMetaArguments {
   readonly trustedLaunchEnabled?: boolean | cdktf.IResolvable;
   /**
   * identifier block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/shared_image#identifier SharedImage#identifier}
   */
   readonly identifier: SharedImageIdentifier;
   /**
   * purchase_plan block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/shared_image#purchase_plan SharedImage#purchase_plan}
   */
   readonly purchasePlan?: SharedImagePurchasePlan;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/shared_image#timeouts SharedImage#timeouts}
   */
   readonly timeouts?: SharedImageTimeouts;

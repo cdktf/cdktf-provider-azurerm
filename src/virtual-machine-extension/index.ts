@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_extension
 // generated from terraform resource schema
 
@@ -65,13 +60,13 @@ export interface VirtualMachineExtensionConfig extends cdktf.TerraformMetaArgume
   readonly virtualMachineId: string;
   /**
   * protected_settings_from_key_vault block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_extension#protected_settings_from_key_vault VirtualMachineExtension#protected_settings_from_key_vault}
   */
   readonly protectedSettingsFromKeyVault?: VirtualMachineExtensionProtectedSettingsFromKeyVault;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/virtual_machine_extension#timeouts VirtualMachineExtension#timeouts}
   */
   readonly timeouts?: VirtualMachineExtensionTimeouts;

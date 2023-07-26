@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform
 // generated from terraform resource schema
 
@@ -37,13 +32,13 @@ export interface MediaTransformConfig extends cdktf.TerraformMetaArguments {
   readonly resourceGroupName: string;
   /**
   * output block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#output MediaTransform#output}
   */
   readonly output?: MediaTransformOutput[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#timeouts MediaTransform#timeouts}
   */
   readonly timeouts?: MediaTransformTimeouts;
@@ -428,7 +423,7 @@ export interface MediaTransformOutputBuiltinPreset {
   readonly presetName: string;
   /**
   * preset_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#preset_configuration MediaTransform#preset_configuration}
   */
   readonly presetConfiguration?: MediaTransformOutputBuiltinPresetPresetConfiguration;
@@ -1464,7 +1459,7 @@ export interface MediaTransformOutputCustomPresetCodecH264Video {
   readonly syncMode?: string;
   /**
   * layer block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#layer MediaTransform#layer}
   */
   readonly layer?: MediaTransformOutputCustomPresetCodecH264VideoLayer[] | cdktf.IResolvable;
@@ -2161,7 +2156,7 @@ export interface MediaTransformOutputCustomPresetCodecH265Video {
   readonly syncMode?: string;
   /**
   * layer block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#layer MediaTransform#layer}
   */
   readonly layer?: MediaTransformOutputCustomPresetCodecH265VideoLayer[] | cdktf.IResolvable;
@@ -2576,7 +2571,7 @@ export interface MediaTransformOutputCustomPresetCodecJpgImage {
   readonly syncMode?: string;
   /**
   * layer block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#layer MediaTransform#layer}
   */
   readonly layer?: MediaTransformOutputCustomPresetCodecJpgImageLayer[] | cdktf.IResolvable;
@@ -3003,7 +2998,7 @@ export interface MediaTransformOutputCustomPresetCodecPngImage {
   readonly syncMode?: string;
   /**
   * layer block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#layer MediaTransform#layer}
   */
   readonly layer?: MediaTransformOutputCustomPresetCodecPngImageLayer[] | cdktf.IResolvable;
@@ -3228,49 +3223,49 @@ export class MediaTransformOutputCustomPresetCodecPngImageOutputReference extend
 export interface MediaTransformOutputCustomPresetCodec {
   /**
   * aac_audio block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#aac_audio MediaTransform#aac_audio}
   */
   readonly aacAudio?: MediaTransformOutputCustomPresetCodecAacAudio;
   /**
   * copy_audio block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#copy_audio MediaTransform#copy_audio}
   */
   readonly copyAudio?: MediaTransformOutputCustomPresetCodecCopyAudio;
   /**
   * copy_video block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#copy_video MediaTransform#copy_video}
   */
   readonly copyVideo?: MediaTransformOutputCustomPresetCodecCopyVideo;
   /**
   * dd_audio block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#dd_audio MediaTransform#dd_audio}
   */
   readonly ddAudio?: MediaTransformOutputCustomPresetCodecDdAudio;
   /**
   * h264_video block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#h264_video MediaTransform#h264_video}
   */
   readonly h264Video?: MediaTransformOutputCustomPresetCodecH264Video;
   /**
   * h265_video block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#h265_video MediaTransform#h265_video}
   */
   readonly h265Video?: MediaTransformOutputCustomPresetCodecH265Video;
   /**
   * jpg_image block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#jpg_image MediaTransform#jpg_image}
   */
   readonly jpgImage?: MediaTransformOutputCustomPresetCodecJpgImage;
   /**
   * png_image block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#png_image MediaTransform#png_image}
   */
   readonly pngImage?: MediaTransformOutputCustomPresetCodecPngImage;
@@ -4511,13 +4506,13 @@ export interface MediaTransformOutputCustomPresetFilterOverlayVideo {
   readonly start?: string;
   /**
   * crop_rectangle block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#crop_rectangle MediaTransform#crop_rectangle}
   */
   readonly cropRectangle?: MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle;
   /**
   * position block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#position MediaTransform#position}
   */
   readonly position?: MediaTransformOutputCustomPresetFilterOverlayVideoPosition;
@@ -4765,13 +4760,13 @@ export class MediaTransformOutputCustomPresetFilterOverlayVideoOutputReference e
 export interface MediaTransformOutputCustomPresetFilterOverlay {
   /**
   * audio block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#audio MediaTransform#audio}
   */
   readonly audio?: MediaTransformOutputCustomPresetFilterOverlayAudio;
   /**
   * video block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#video MediaTransform#video}
   */
   readonly video?: MediaTransformOutputCustomPresetFilterOverlayVideo;
@@ -4897,31 +4892,31 @@ export interface MediaTransformOutputCustomPresetFilter {
   readonly rotation?: string;
   /**
   * crop_rectangle block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#crop_rectangle MediaTransform#crop_rectangle}
   */
   readonly cropRectangle?: MediaTransformOutputCustomPresetFilterCropRectangle;
   /**
   * deinterlace block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#deinterlace MediaTransform#deinterlace}
   */
   readonly deinterlace?: MediaTransformOutputCustomPresetFilterDeinterlace;
   /**
   * fade_in block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#fade_in MediaTransform#fade_in}
   */
   readonly fadeIn?: MediaTransformOutputCustomPresetFilterFadeIn;
   /**
   * fade_out block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#fade_out MediaTransform#fade_out}
   */
   readonly fadeOut?: MediaTransformOutputCustomPresetFilterFadeOut;
   /**
   * overlay block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#overlay MediaTransform#overlay}
   */
   readonly overlay?: MediaTransformOutputCustomPresetFilterOverlay[] | cdktf.IResolvable;
@@ -5263,7 +5258,7 @@ export interface MediaTransformOutputCustomPresetFormatMp4 {
   readonly filenamePattern: string;
   /**
   * output_file block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#output_file MediaTransform#output_file}
   */
   readonly outputFile?: MediaTransformOutputCustomPresetFormatMp4OutputFile[] | cdktf.IResolvable;
@@ -5510,7 +5505,7 @@ export interface MediaTransformOutputCustomPresetFormatTransportStream {
   readonly filenamePattern: string;
   /**
   * output_file block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#output_file MediaTransform#output_file}
   */
   readonly outputFile?: MediaTransformOutputCustomPresetFormatTransportStreamOutputFile[] | cdktf.IResolvable;
@@ -5597,25 +5592,25 @@ export class MediaTransformOutputCustomPresetFormatTransportStreamOutputReferenc
 export interface MediaTransformOutputCustomPresetFormat {
   /**
   * jpg block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#jpg MediaTransform#jpg}
   */
   readonly jpg?: MediaTransformOutputCustomPresetFormatJpg;
   /**
   * mp4 block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#mp4 MediaTransform#mp4}
   */
   readonly mp4?: MediaTransformOutputCustomPresetFormatMp4;
   /**
   * png block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#png MediaTransform#png}
   */
   readonly png?: MediaTransformOutputCustomPresetFormatPng;
   /**
   * transport_stream block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#transport_stream MediaTransform#transport_stream}
   */
   readonly transportStream?: MediaTransformOutputCustomPresetFormatTransportStream;
@@ -5787,19 +5782,19 @@ export interface MediaTransformOutputCustomPreset {
   readonly experimentalOptions?: { [key: string]: string };
   /**
   * codec block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#codec MediaTransform#codec}
   */
   readonly codec: MediaTransformOutputCustomPresetCodec[] | cdktf.IResolvable;
   /**
   * filter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#filter MediaTransform#filter}
   */
   readonly filter?: MediaTransformOutputCustomPresetFilter;
   /**
   * format block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#format MediaTransform#format}
   */
   readonly format: MediaTransformOutputCustomPresetFormat[] | cdktf.IResolvable;
@@ -6229,31 +6224,31 @@ export interface MediaTransformOutput {
   readonly relativePriority?: string;
   /**
   * audio_analyzer_preset block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#audio_analyzer_preset MediaTransform#audio_analyzer_preset}
   */
   readonly audioAnalyzerPreset?: MediaTransformOutputAudioAnalyzerPreset;
   /**
   * builtin_preset block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#builtin_preset MediaTransform#builtin_preset}
   */
   readonly builtinPreset?: MediaTransformOutputBuiltinPreset;
   /**
   * custom_preset block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#custom_preset MediaTransform#custom_preset}
   */
   readonly customPreset?: MediaTransformOutputCustomPreset;
   /**
   * face_detector_preset block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#face_detector_preset MediaTransform#face_detector_preset}
   */
   readonly faceDetectorPreset?: MediaTransformOutputFaceDetectorPreset;
   /**
   * video_analyzer_preset block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_transform#video_analyzer_preset MediaTransform#video_analyzer_preset}
   */
   readonly videoAnalyzerPreset?: MediaTransformOutputVideoAnalyzerPreset;

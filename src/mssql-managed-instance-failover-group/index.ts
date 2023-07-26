@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_managed_instance_failover_group
 // generated from terraform resource schema
 
@@ -41,13 +36,13 @@ export interface MssqlManagedInstanceFailoverGroupConfig extends cdktf.Terraform
   readonly readonlyEndpointFailoverPolicyEnabled?: boolean | cdktf.IResolvable;
   /**
   * read_write_endpoint_failover_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_managed_instance_failover_group#read_write_endpoint_failover_policy MssqlManagedInstanceFailoverGroup#read_write_endpoint_failover_policy}
   */
   readonly readWriteEndpointFailoverPolicy: MssqlManagedInstanceFailoverGroupReadWriteEndpointFailoverPolicy;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_managed_instance_failover_group#timeouts MssqlManagedInstanceFailoverGroup#timeouts}
   */
   readonly timeouts?: MssqlManagedInstanceFailoverGroupTimeouts;

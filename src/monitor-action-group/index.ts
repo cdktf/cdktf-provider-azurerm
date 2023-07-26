@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_group
 // generated from terraform resource schema
 
@@ -45,73 +40,73 @@ export interface MonitorActionGroupConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * arm_role_receiver block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_group#arm_role_receiver MonitorActionGroup#arm_role_receiver}
   */
   readonly armRoleReceiver?: MonitorActionGroupArmRoleReceiver[] | cdktf.IResolvable;
   /**
   * automation_runbook_receiver block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_group#automation_runbook_receiver MonitorActionGroup#automation_runbook_receiver}
   */
   readonly automationRunbookReceiver?: MonitorActionGroupAutomationRunbookReceiver[] | cdktf.IResolvable;
   /**
   * azure_app_push_receiver block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_group#azure_app_push_receiver MonitorActionGroup#azure_app_push_receiver}
   */
   readonly azureAppPushReceiver?: MonitorActionGroupAzureAppPushReceiver[] | cdktf.IResolvable;
   /**
   * azure_function_receiver block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_group#azure_function_receiver MonitorActionGroup#azure_function_receiver}
   */
   readonly azureFunctionReceiver?: MonitorActionGroupAzureFunctionReceiver[] | cdktf.IResolvable;
   /**
   * email_receiver block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_group#email_receiver MonitorActionGroup#email_receiver}
   */
   readonly emailReceiver?: MonitorActionGroupEmailReceiver[] | cdktf.IResolvable;
   /**
   * event_hub_receiver block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_group#event_hub_receiver MonitorActionGroup#event_hub_receiver}
   */
   readonly eventHubReceiver?: MonitorActionGroupEventHubReceiver[] | cdktf.IResolvable;
   /**
   * itsm_receiver block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_group#itsm_receiver MonitorActionGroup#itsm_receiver}
   */
   readonly itsmReceiver?: MonitorActionGroupItsmReceiver[] | cdktf.IResolvable;
   /**
   * logic_app_receiver block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_group#logic_app_receiver MonitorActionGroup#logic_app_receiver}
   */
   readonly logicAppReceiver?: MonitorActionGroupLogicAppReceiver[] | cdktf.IResolvable;
   /**
   * sms_receiver block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_group#sms_receiver MonitorActionGroup#sms_receiver}
   */
   readonly smsReceiver?: MonitorActionGroupSmsReceiver[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_group#timeouts MonitorActionGroup#timeouts}
   */
   readonly timeouts?: MonitorActionGroupTimeouts;
   /**
   * voice_receiver block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_group#voice_receiver MonitorActionGroup#voice_receiver}
   */
   readonly voiceReceiver?: MonitorActionGroupVoiceReceiver[] | cdktf.IResolvable;
   /**
   * webhook_receiver block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_group#webhook_receiver MonitorActionGroup#webhook_receiver}
   */
   readonly webhookReceiver?: MonitorActionGroupWebhookReceiver[] | cdktf.IResolvable;
@@ -2144,7 +2139,7 @@ export interface MonitorActionGroupWebhookReceiver {
   readonly useCommonAlertSchema?: boolean | cdktf.IResolvable;
   /**
   * aad_auth block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_action_group#aad_auth MonitorActionGroup#aad_auth}
   */
   readonly aadAuth?: MonitorActionGroupWebhookReceiverAadAuth;

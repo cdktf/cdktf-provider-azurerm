@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_admin_rule
 // generated from terraform resource schema
 
@@ -57,19 +52,19 @@ export interface NetworkManagerAdminRuleConfig extends cdktf.TerraformMetaArgume
   readonly sourcePortRanges?: string[];
   /**
   * destination block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_admin_rule#destination NetworkManagerAdminRule#destination}
   */
   readonly destination?: NetworkManagerAdminRuleDestination[] | cdktf.IResolvable;
   /**
   * source block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_admin_rule#source NetworkManagerAdminRule#source}
   */
   readonly source?: NetworkManagerAdminRuleSource[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_manager_admin_rule#timeouts NetworkManagerAdminRule#timeouts}
   */
   readonly timeouts?: NetworkManagerAdminRuleTimeouts;

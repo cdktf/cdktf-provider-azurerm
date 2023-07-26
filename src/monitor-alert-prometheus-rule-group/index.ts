@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_prometheus_rule_group
 // generated from terraform resource schema
 
@@ -57,13 +52,13 @@ export interface MonitorAlertPrometheusRuleGroupConfig extends cdktf.TerraformMe
   readonly tags?: { [key: string]: string };
   /**
   * rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_prometheus_rule_group#rule MonitorAlertPrometheusRuleGroup#rule}
   */
   readonly rule: MonitorAlertPrometheusRuleGroupRule[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_prometheus_rule_group#timeouts MonitorAlertPrometheusRuleGroup#timeouts}
   */
   readonly timeouts?: MonitorAlertPrometheusRuleGroupTimeouts;
@@ -316,13 +311,13 @@ export interface MonitorAlertPrometheusRuleGroupRule {
   readonly severity?: number;
   /**
   * action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_prometheus_rule_group#action MonitorAlertPrometheusRuleGroup#action}
   */
   readonly action?: MonitorAlertPrometheusRuleGroupRuleAction[] | cdktf.IResolvable;
   /**
   * alert_resolution block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_prometheus_rule_group#alert_resolution MonitorAlertPrometheusRuleGroup#alert_resolution}
   */
   readonly alertResolution?: MonitorAlertPrometheusRuleGroupRuleAlertResolution;

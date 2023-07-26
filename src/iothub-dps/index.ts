@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps
 // generated from terraform resource schema
 
@@ -49,25 +44,25 @@ export interface IothubDpsConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * ip_filter_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps#ip_filter_rule IothubDps#ip_filter_rule}
   */
   readonly ipFilterRule?: IothubDpsIpFilterRule[] | cdktf.IResolvable;
   /**
   * linked_hub block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps#linked_hub IothubDps#linked_hub}
   */
   readonly linkedHub?: IothubDpsLinkedHub[] | cdktf.IResolvable;
   /**
   * sku block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps#sku IothubDps#sku}
   */
   readonly sku: IothubDpsSku;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iothub_dps#timeouts IothubDps#timeouts}
   */
   readonly timeouts?: IothubDpsTimeouts;

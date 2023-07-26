@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_encryption_scope
 // generated from terraform resource schema
 
@@ -41,7 +36,7 @@ export interface StorageEncryptionScopeConfig extends cdktf.TerraformMetaArgumen
   readonly storageAccountId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_encryption_scope#timeouts StorageEncryptionScope#timeouts}
   */
   readonly timeouts?: StorageEncryptionScopeTimeouts;

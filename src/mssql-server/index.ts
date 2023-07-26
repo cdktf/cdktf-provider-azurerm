@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_server
 // generated from terraform resource schema
 
@@ -73,19 +68,19 @@ export interface MssqlServerConfig extends cdktf.TerraformMetaArguments {
   readonly version: string;
   /**
   * azuread_administrator block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_server#azuread_administrator MssqlServer#azuread_administrator}
   */
   readonly azureadAdministrator?: MssqlServerAzureadAdministrator;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_server#identity MssqlServer#identity}
   */
   readonly identity?: MssqlServerIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_server#timeouts MssqlServer#timeouts}
   */
   readonly timeouts?: MssqlServerTimeouts;

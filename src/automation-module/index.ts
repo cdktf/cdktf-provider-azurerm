@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_module
 // generated from terraform resource schema
 
@@ -33,13 +28,13 @@ export interface AutomationModuleConfig extends cdktf.TerraformMetaArguments {
   readonly resourceGroupName: string;
   /**
   * module_link block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_module#module_link AutomationModule#module_link}
   */
   readonly moduleLink: AutomationModuleModuleLink;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_module#timeouts AutomationModule#timeouts}
   */
   readonly timeouts?: AutomationModuleTimeouts;
@@ -137,7 +132,7 @@ export interface AutomationModuleModuleLink {
   readonly uri: string;
   /**
   * hash block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_module#hash AutomationModule#hash}
   */
   readonly hash?: AutomationModuleModuleLinkHash;

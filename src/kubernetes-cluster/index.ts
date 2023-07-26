@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster
 // generated from terraform resource schema
 
@@ -141,163 +136,163 @@ export interface KubernetesClusterConfig extends cdktf.TerraformMetaArguments {
   readonly workloadIdentityEnabled?: boolean | cdktf.IResolvable;
   /**
   * aci_connector_linux block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#aci_connector_linux KubernetesCluster#aci_connector_linux}
   */
   readonly aciConnectorLinux?: KubernetesClusterAciConnectorLinux;
   /**
   * api_server_access_profile block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#api_server_access_profile KubernetesCluster#api_server_access_profile}
   */
   readonly apiServerAccessProfile?: KubernetesClusterApiServerAccessProfile;
   /**
   * auto_scaler_profile block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#auto_scaler_profile KubernetesCluster#auto_scaler_profile}
   */
   readonly autoScalerProfile?: KubernetesClusterAutoScalerProfile;
   /**
   * azure_active_directory_role_based_access_control block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#azure_active_directory_role_based_access_control KubernetesCluster#azure_active_directory_role_based_access_control}
   */
   readonly azureActiveDirectoryRoleBasedAccessControl?: KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl;
   /**
   * confidential_computing block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#confidential_computing KubernetesCluster#confidential_computing}
   */
   readonly confidentialComputing?: KubernetesClusterConfidentialComputing;
   /**
   * default_node_pool block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#default_node_pool KubernetesCluster#default_node_pool}
   */
   readonly defaultNodePool: KubernetesClusterDefaultNodePool;
   /**
   * http_proxy_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#http_proxy_config KubernetesCluster#http_proxy_config}
   */
   readonly httpProxyConfig?: KubernetesClusterHttpProxyConfig;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#identity KubernetesCluster#identity}
   */
   readonly identity?: KubernetesClusterIdentity;
   /**
   * ingress_application_gateway block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#ingress_application_gateway KubernetesCluster#ingress_application_gateway}
   */
   readonly ingressApplicationGateway?: KubernetesClusterIngressApplicationGateway;
   /**
   * key_management_service block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#key_management_service KubernetesCluster#key_management_service}
   */
   readonly keyManagementService?: KubernetesClusterKeyManagementService;
   /**
   * key_vault_secrets_provider block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#key_vault_secrets_provider KubernetesCluster#key_vault_secrets_provider}
   */
   readonly keyVaultSecretsProvider?: KubernetesClusterKeyVaultSecretsProvider;
   /**
   * kubelet_identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#kubelet_identity KubernetesCluster#kubelet_identity}
   */
   readonly kubeletIdentity?: KubernetesClusterKubeletIdentity;
   /**
   * linux_profile block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#linux_profile KubernetesCluster#linux_profile}
   */
   readonly linuxProfile?: KubernetesClusterLinuxProfile;
   /**
   * maintenance_window block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#maintenance_window KubernetesCluster#maintenance_window}
   */
   readonly maintenanceWindow?: KubernetesClusterMaintenanceWindow;
   /**
   * maintenance_window_auto_upgrade block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#maintenance_window_auto_upgrade KubernetesCluster#maintenance_window_auto_upgrade}
   */
   readonly maintenanceWindowAutoUpgrade?: KubernetesClusterMaintenanceWindowAutoUpgrade;
   /**
   * maintenance_window_node_os block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#maintenance_window_node_os KubernetesCluster#maintenance_window_node_os}
   */
   readonly maintenanceWindowNodeOs?: KubernetesClusterMaintenanceWindowNodeOs;
   /**
   * microsoft_defender block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#microsoft_defender KubernetesCluster#microsoft_defender}
   */
   readonly microsoftDefender?: KubernetesClusterMicrosoftDefender;
   /**
   * monitor_metrics block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#monitor_metrics KubernetesCluster#monitor_metrics}
   */
   readonly monitorMetrics?: KubernetesClusterMonitorMetrics;
   /**
   * network_profile block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#network_profile KubernetesCluster#network_profile}
   */
   readonly networkProfile?: KubernetesClusterNetworkProfile;
   /**
   * oms_agent block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#oms_agent KubernetesCluster#oms_agent}
   */
   readonly omsAgent?: KubernetesClusterOmsAgent;
   /**
   * service_mesh_profile block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#service_mesh_profile KubernetesCluster#service_mesh_profile}
   */
   readonly serviceMeshProfile?: KubernetesClusterServiceMeshProfile;
   /**
   * service_principal block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#service_principal KubernetesCluster#service_principal}
   */
   readonly servicePrincipal?: KubernetesClusterServicePrincipal;
   /**
   * storage_profile block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#storage_profile KubernetesCluster#storage_profile}
   */
   readonly storageProfile?: KubernetesClusterStorageProfile;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#timeouts KubernetesCluster#timeouts}
   */
   readonly timeouts?: KubernetesClusterTimeouts;
   /**
   * web_app_routing block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#web_app_routing KubernetesCluster#web_app_routing}
   */
   readonly webAppRouting?: KubernetesClusterWebAppRouting;
   /**
   * windows_profile block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#windows_profile KubernetesCluster#windows_profile}
   */
   readonly windowsProfile?: KubernetesClusterWindowsProfile;
   /**
   * workload_autoscaler_profile block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#workload_autoscaler_profile KubernetesCluster#workload_autoscaler_profile}
   */
   readonly workloadAutoscalerProfile?: KubernetesClusterWorkloadAutoscalerProfile;
@@ -2671,7 +2666,7 @@ export interface KubernetesClusterDefaultNodePoolLinuxOsConfig {
   readonly transparentHugePageEnabled?: string;
   /**
   * sysctl_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#sysctl_config KubernetesCluster#sysctl_config}
   */
   readonly sysctlConfig?: KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig;
@@ -3066,25 +3061,25 @@ export interface KubernetesClusterDefaultNodePool {
   readonly zones?: string[];
   /**
   * kubelet_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#kubelet_config KubernetesCluster#kubelet_config}
   */
   readonly kubeletConfig?: KubernetesClusterDefaultNodePoolKubeletConfig;
   /**
   * linux_os_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#linux_os_config KubernetesCluster#linux_os_config}
   */
   readonly linuxOsConfig?: KubernetesClusterDefaultNodePoolLinuxOsConfig;
   /**
   * node_network_profile block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#node_network_profile KubernetesCluster#node_network_profile}
   */
   readonly nodeNetworkProfile?: KubernetesClusterDefaultNodePoolNodeNetworkProfile;
   /**
   * upgrade_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#upgrade_settings KubernetesCluster#upgrade_settings}
   */
   readonly upgradeSettings?: KubernetesClusterDefaultNodePoolUpgradeSettings;
@@ -4895,7 +4890,7 @@ export interface KubernetesClusterLinuxProfile {
   readonly adminUsername: string;
   /**
   * ssh_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#ssh_key KubernetesCluster#ssh_key}
   */
   readonly sshKey: KubernetesClusterLinuxProfileSshKey;
@@ -5215,13 +5210,13 @@ export class KubernetesClusterMaintenanceWindowNotAllowedList extends cdktf.Comp
 export interface KubernetesClusterMaintenanceWindow {
   /**
   * allowed block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#allowed KubernetesCluster#allowed}
   */
   readonly allowed?: KubernetesClusterMaintenanceWindowAllowed[] | cdktf.IResolvable;
   /**
   * not_allowed block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#not_allowed KubernetesCluster#not_allowed}
   */
   readonly notAllowed?: KubernetesClusterMaintenanceWindowNotAllowed[] | cdktf.IResolvable;
@@ -5465,7 +5460,7 @@ export interface KubernetesClusterMaintenanceWindowAutoUpgrade {
   readonly weekIndex?: string;
   /**
   * not_allowed block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#not_allowed KubernetesCluster#not_allowed}
   */
   readonly notAllowed?: KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed[] | cdktf.IResolvable;
@@ -5884,7 +5879,7 @@ export interface KubernetesClusterMaintenanceWindowNodeOs {
   readonly weekIndex?: string;
   /**
   * not_allowed block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#not_allowed KubernetesCluster#not_allowed}
   */
   readonly notAllowed?: KubernetesClusterMaintenanceWindowNodeOsNotAllowed[] | cdktf.IResolvable;
@@ -6661,13 +6656,13 @@ export interface KubernetesClusterNetworkProfile {
   readonly serviceCidrs?: string[];
   /**
   * load_balancer_profile block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#load_balancer_profile KubernetesCluster#load_balancer_profile}
   */
   readonly loadBalancerProfile?: KubernetesClusterNetworkProfileLoadBalancerProfile;
   /**
   * nat_gateway_profile block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#nat_gateway_profile KubernetesCluster#nat_gateway_profile}
   */
   readonly natGatewayProfile?: KubernetesClusterNetworkProfileNatGatewayProfile;
@@ -7936,7 +7931,7 @@ export interface KubernetesClusterWindowsProfile {
   readonly license?: string;
   /**
   * gmsa block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/kubernetes_cluster#gmsa KubernetesCluster#gmsa}
   */
   readonly gmsa?: KubernetesClusterWindowsProfileGmsa;

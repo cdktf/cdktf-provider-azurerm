@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_build_pack_binding
 // generated from terraform resource schema
 
@@ -33,13 +28,13 @@ export interface SpringCloudBuildPackBindingConfig extends cdktf.TerraformMetaAr
   readonly springCloudBuilderId: string;
   /**
   * launch block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_build_pack_binding#launch SpringCloudBuildPackBinding#launch}
   */
   readonly launch?: SpringCloudBuildPackBindingLaunch;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_build_pack_binding#timeouts SpringCloudBuildPackBinding#timeouts}
   */
   readonly timeouts?: SpringCloudBuildPackBindingTimeouts;

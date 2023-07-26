@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/private_dns_resolver
 // generated from terraform resource schema
 
@@ -41,7 +36,7 @@ export interface PrivateDnsResolverConfig extends cdktf.TerraformMetaArguments {
   readonly virtualNetworkId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/private_dns_resolver#timeouts PrivateDnsResolver#timeouts}
   */
   readonly timeouts?: PrivateDnsResolverTimeouts;

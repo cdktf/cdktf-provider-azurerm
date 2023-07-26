@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_policy_vm
 // generated from terraform resource schema
 
@@ -45,43 +40,43 @@ export interface BackupPolicyVmConfig extends cdktf.TerraformMetaArguments {
   readonly timezone?: string;
   /**
   * backup block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_policy_vm#backup BackupPolicyVm#backup}
   */
   readonly backup: BackupPolicyVmBackup;
   /**
   * instant_restore_resource_group block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_policy_vm#instant_restore_resource_group BackupPolicyVm#instant_restore_resource_group}
   */
   readonly instantRestoreResourceGroup?: BackupPolicyVmInstantRestoreResourceGroup;
   /**
   * retention_daily block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_policy_vm#retention_daily BackupPolicyVm#retention_daily}
   */
   readonly retentionDaily?: BackupPolicyVmRetentionDaily;
   /**
   * retention_monthly block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_policy_vm#retention_monthly BackupPolicyVm#retention_monthly}
   */
   readonly retentionMonthly?: BackupPolicyVmRetentionMonthly;
   /**
   * retention_weekly block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_policy_vm#retention_weekly BackupPolicyVm#retention_weekly}
   */
   readonly retentionWeekly?: BackupPolicyVmRetentionWeekly;
   /**
   * retention_yearly block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_policy_vm#retention_yearly BackupPolicyVm#retention_yearly}
   */
   readonly retentionYearly?: BackupPolicyVmRetentionYearly;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_policy_vm#timeouts BackupPolicyVm#timeouts}
   */
   readonly timeouts?: BackupPolicyVmTimeouts;

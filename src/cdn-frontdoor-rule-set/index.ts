@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule_set
 // generated from terraform resource schema
 
@@ -29,7 +24,7 @@ export interface CdnFrontdoorRuleSetConfig extends cdktf.TerraformMetaArguments 
   readonly name: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_rule_set#timeouts CdnFrontdoorRuleSet#timeouts}
   */
   readonly timeouts?: CdnFrontdoorRuleSetTimeouts;

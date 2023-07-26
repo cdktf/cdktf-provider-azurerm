@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_protection_container_mapping
 // generated from terraform resource schema
 
@@ -49,13 +44,13 @@ export interface SiteRecoveryProtectionContainerMappingConfig extends cdktf.Terr
   readonly resourceGroupName: string;
   /**
   * automatic_update block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_protection_container_mapping#automatic_update SiteRecoveryProtectionContainerMapping#automatic_update}
   */
   readonly automaticUpdate?: SiteRecoveryProtectionContainerMappingAutomaticUpdate;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/site_recovery_protection_container_mapping#timeouts SiteRecoveryProtectionContainerMapping#timeouts}
   */
   readonly timeouts?: SiteRecoveryProtectionContainerMappingTimeouts;

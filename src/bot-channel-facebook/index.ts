@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_facebook
 // generated from terraform resource schema
 
@@ -41,13 +36,13 @@ export interface BotChannelFacebookConfig extends cdktf.TerraformMetaArguments {
   readonly resourceGroupName: string;
   /**
   * page block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_facebook#page BotChannelFacebook#page}
   */
   readonly page: BotChannelFacebookPage[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_facebook#timeouts BotChannelFacebook#timeouts}
   */
   readonly timeouts?: BotChannelFacebookTimeouts;

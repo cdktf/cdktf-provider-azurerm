@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_packet_capture
 // generated from terraform resource schema
 
@@ -49,19 +44,19 @@ export interface NetworkPacketCaptureConfig extends cdktf.TerraformMetaArguments
   readonly targetResourceId: string;
   /**
   * filter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_packet_capture#filter NetworkPacketCapture#filter}
   */
   readonly filter?: NetworkPacketCaptureFilter[] | cdktf.IResolvable;
   /**
   * storage_location block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_packet_capture#storage_location NetworkPacketCapture#storage_location}
   */
   readonly storageLocation: NetworkPacketCaptureStorageLocation;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_packet_capture#timeouts NetworkPacketCapture#timeouts}
   */
   readonly timeouts?: NetworkPacketCaptureTimeouts;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hpc_cache
 // generated from terraform resource schema
 
@@ -65,43 +60,43 @@ export interface HpcCacheConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * default_access_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hpc_cache#default_access_policy HpcCache#default_access_policy}
   */
   readonly defaultAccessPolicy?: HpcCacheDefaultAccessPolicy;
   /**
   * directory_active_directory block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hpc_cache#directory_active_directory HpcCache#directory_active_directory}
   */
   readonly directoryActiveDirectory?: HpcCacheDirectoryActiveDirectory;
   /**
   * directory_flat_file block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hpc_cache#directory_flat_file HpcCache#directory_flat_file}
   */
   readonly directoryFlatFile?: HpcCacheDirectoryFlatFile;
   /**
   * directory_ldap block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hpc_cache#directory_ldap HpcCache#directory_ldap}
   */
   readonly directoryLdap?: HpcCacheDirectoryLdap;
   /**
   * dns block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hpc_cache#dns HpcCache#dns}
   */
   readonly dns?: HpcCacheDns;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hpc_cache#identity HpcCache#identity}
   */
   readonly identity?: HpcCacheIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hpc_cache#timeouts HpcCache#timeouts}
   */
   readonly timeouts?: HpcCacheTimeouts;
@@ -389,7 +384,7 @@ export class HpcCacheDefaultAccessPolicyAccessRuleList extends cdktf.ComplexList
 export interface HpcCacheDefaultAccessPolicy {
   /**
   * access_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hpc_cache#access_rule HpcCache#access_rule}
   */
   readonly accessRule: HpcCacheDefaultAccessPolicyAccessRule[] | cdktf.IResolvable;
@@ -854,7 +849,7 @@ export interface HpcCacheDirectoryLdap {
   readonly server: string;
   /**
   * bind block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/hpc_cache#bind HpcCache#bind}
   */
   readonly bind?: HpcCacheDirectoryLdapBind;

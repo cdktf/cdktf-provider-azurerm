@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/traffic_manager_external_endpoint
 // generated from terraform resource schema
 
@@ -53,19 +48,19 @@ export interface TrafficManagerExternalEndpointConfig extends cdktf.TerraformMet
   readonly weight?: number;
   /**
   * custom_header block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/traffic_manager_external_endpoint#custom_header TrafficManagerExternalEndpoint#custom_header}
   */
   readonly customHeader?: TrafficManagerExternalEndpointCustomHeader[] | cdktf.IResolvable;
   /**
   * subnet block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/traffic_manager_external_endpoint#subnet TrafficManagerExternalEndpoint#subnet}
   */
   readonly subnet?: TrafficManagerExternalEndpointSubnet[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/traffic_manager_external_endpoint#timeouts TrafficManagerExternalEndpoint#timeouts}
   */
   readonly timeouts?: TrafficManagerExternalEndpointTimeouts;

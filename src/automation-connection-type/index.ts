@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_connection_type
 // generated from terraform resource schema
 
@@ -37,13 +32,13 @@ export interface AutomationConnectionTypeConfig extends cdktf.TerraformMetaArgum
   readonly resourceGroupName: string;
   /**
   * field block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_connection_type#field AutomationConnectionType#field}
   */
   readonly field: AutomationConnectionTypeField[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_connection_type#timeouts AutomationConnectionType#timeouts}
   */
   readonly timeouts?: AutomationConnectionTypeTimeouts;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_sim_policy
 // generated from terraform resource schema
 
@@ -49,19 +44,19 @@ export interface MobileNetworkSimPolicyConfig extends cdktf.TerraformMetaArgumen
   readonly tags?: { [key: string]: string };
   /**
   * slice block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_sim_policy#slice MobileNetworkSimPolicy#slice}
   */
   readonly slice: MobileNetworkSimPolicySlice[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_sim_policy#timeouts MobileNetworkSimPolicy#timeouts}
   */
   readonly timeouts?: MobileNetworkSimPolicyTimeouts;
   /**
   * user_equipment_aggregate_maximum_bit_rate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_sim_policy#user_equipment_aggregate_maximum_bit_rate MobileNetworkSimPolicy#user_equipment_aggregate_maximum_bit_rate}
   */
   readonly userEquipmentAggregateMaximumBitRate: MobileNetworkSimPolicyUserEquipmentAggregateMaximumBitRate;
@@ -191,7 +186,7 @@ export interface MobileNetworkSimPolicySliceDataNetwork {
   readonly qosIndicator: number;
   /**
   * session_aggregate_maximum_bit_rate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_sim_policy#session_aggregate_maximum_bit_rate MobileNetworkSimPolicy#session_aggregate_maximum_bit_rate}
   */
   readonly sessionAggregateMaximumBitRate: MobileNetworkSimPolicySliceDataNetworkSessionAggregateMaximumBitRate;
@@ -493,7 +488,7 @@ export interface MobileNetworkSimPolicySlice {
   readonly sliceId: string;
   /**
   * data_network block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_sim_policy#data_network MobileNetworkSimPolicy#data_network}
   */
   readonly dataNetwork: MobileNetworkSimPolicySliceDataNetwork[] | cdktf.IResolvable;

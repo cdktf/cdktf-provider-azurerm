@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sql_database
 // generated from terraform resource schema
 
@@ -93,19 +88,19 @@ export interface SqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   readonly zoneRedundant?: boolean | cdktf.IResolvable;
   /**
   * import block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sql_database#import SqlDatabase#import}
   */
   readonly import?: SqlDatabaseImport;
   /**
   * threat_detection_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sql_database#threat_detection_policy SqlDatabase#threat_detection_policy}
   */
   readonly threatDetectionPolicy?: SqlDatabaseThreatDetectionPolicy;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sql_database#timeouts SqlDatabase#timeouts}
   */
   readonly timeouts?: SqlDatabaseTimeouts;

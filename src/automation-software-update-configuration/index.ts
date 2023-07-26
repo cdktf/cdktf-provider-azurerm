@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_software_update_configuration
 // generated from terraform resource schema
 
@@ -45,43 +40,43 @@ export interface AutomationSoftwareUpdateConfigurationConfig extends cdktf.Terra
   readonly virtualMachineIds?: string[];
   /**
   * linux block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_software_update_configuration#linux AutomationSoftwareUpdateConfiguration#linux}
   */
   readonly linux?: AutomationSoftwareUpdateConfigurationLinux;
   /**
   * post_task block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_software_update_configuration#post_task AutomationSoftwareUpdateConfiguration#post_task}
   */
   readonly postTask?: AutomationSoftwareUpdateConfigurationPostTask;
   /**
   * pre_task block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_software_update_configuration#pre_task AutomationSoftwareUpdateConfiguration#pre_task}
   */
   readonly preTask?: AutomationSoftwareUpdateConfigurationPreTask;
   /**
   * schedule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_software_update_configuration#schedule AutomationSoftwareUpdateConfiguration#schedule}
   */
   readonly schedule: AutomationSoftwareUpdateConfigurationSchedule;
   /**
   * target block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_software_update_configuration#target AutomationSoftwareUpdateConfiguration#target}
   */
   readonly target?: AutomationSoftwareUpdateConfigurationTarget;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_software_update_configuration#timeouts AutomationSoftwareUpdateConfiguration#timeouts}
   */
   readonly timeouts?: AutomationSoftwareUpdateConfigurationTimeouts;
   /**
   * windows block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_software_update_configuration#windows AutomationSoftwareUpdateConfiguration#windows}
   */
   readonly windows?: AutomationSoftwareUpdateConfigurationWindows;
@@ -584,7 +579,7 @@ export interface AutomationSoftwareUpdateConfigurationSchedule {
   readonly timeZone?: string;
   /**
   * monthly_occurrence block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_software_update_configuration#monthly_occurrence AutomationSoftwareUpdateConfiguration#monthly_occurrence}
   */
   readonly monthlyOccurrence?: AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrence;
@@ -1087,7 +1082,7 @@ export interface AutomationSoftwareUpdateConfigurationTargetAzureQuery {
   readonly tagFilter?: string;
   /**
   * tags block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_software_update_configuration#tags AutomationSoftwareUpdateConfiguration#tags}
   */
   readonly tags?: AutomationSoftwareUpdateConfigurationTargetAzureQueryTags[] | cdktf.IResolvable;
@@ -1379,13 +1374,13 @@ export class AutomationSoftwareUpdateConfigurationTargetNonAzureQueryList extend
 export interface AutomationSoftwareUpdateConfigurationTarget {
   /**
   * azure_query block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_software_update_configuration#azure_query AutomationSoftwareUpdateConfiguration#azure_query}
   */
   readonly azureQuery?: AutomationSoftwareUpdateConfigurationTargetAzureQuery[] | cdktf.IResolvable;
   /**
   * non_azure_query block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_software_update_configuration#non_azure_query AutomationSoftwareUpdateConfiguration#non_azure_query}
   */
   readonly nonAzureQuery?: AutomationSoftwareUpdateConfigurationTargetNonAzureQuery[] | cdktf.IResolvable;

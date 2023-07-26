@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bastion_host
 // generated from terraform resource schema
 
@@ -65,13 +60,13 @@ export interface BastionHostConfig extends cdktf.TerraformMetaArguments {
   readonly tunnelingEnabled?: boolean | cdktf.IResolvable;
   /**
   * ip_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bastion_host#ip_configuration BastionHost#ip_configuration}
   */
   readonly ipConfiguration: BastionHostIpConfiguration;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bastion_host#timeouts BastionHost#timeouts}
   */
   readonly timeouts?: BastionHostTimeouts;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_anomaly_duplicate
 // generated from terraform resource schema
 
@@ -41,31 +36,31 @@ export interface SentinelAlertRuleAnomalyDuplicateConfig extends cdktf.Terraform
   readonly mode: string;
   /**
   * multi_select_observation block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_anomaly_duplicate#multi_select_observation SentinelAlertRuleAnomalyDuplicate#multi_select_observation}
   */
   readonly multiSelectObservation?: SentinelAlertRuleAnomalyDuplicateMultiSelectObservation[] | cdktf.IResolvable;
   /**
   * prioritized_exclude_observation block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_anomaly_duplicate#prioritized_exclude_observation SentinelAlertRuleAnomalyDuplicate#prioritized_exclude_observation}
   */
   readonly prioritizedExcludeObservation?: SentinelAlertRuleAnomalyDuplicatePrioritizedExcludeObservation[] | cdktf.IResolvable;
   /**
   * single_select_observation block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_anomaly_duplicate#single_select_observation SentinelAlertRuleAnomalyDuplicate#single_select_observation}
   */
   readonly singleSelectObservation?: SentinelAlertRuleAnomalyDuplicateSingleSelectObservation[] | cdktf.IResolvable;
   /**
   * threshold_observation block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_anomaly_duplicate#threshold_observation SentinelAlertRuleAnomalyDuplicate#threshold_observation}
   */
   readonly thresholdObservation?: SentinelAlertRuleAnomalyDuplicateThresholdObservation[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_anomaly_duplicate#timeouts SentinelAlertRuleAnomalyDuplicate#timeouts}
   */
   readonly timeouts?: SentinelAlertRuleAnomalyDuplicateTimeouts;

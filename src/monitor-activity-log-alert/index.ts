@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_activity_log_alert
 // generated from terraform resource schema
 
@@ -45,19 +40,19 @@ export interface MonitorActivityLogAlertConfig extends cdktf.TerraformMetaArgume
   readonly tags?: { [key: string]: string };
   /**
   * action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_activity_log_alert#action MonitorActivityLogAlert#action}
   */
   readonly action?: MonitorActivityLogAlertAction[] | cdktf.IResolvable;
   /**
   * criteria block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_activity_log_alert#criteria MonitorActivityLogAlert#criteria}
   */
   readonly criteria: MonitorActivityLogAlertCriteria;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_activity_log_alert#timeouts MonitorActivityLogAlert#timeouts}
   */
   readonly timeouts?: MonitorActivityLogAlertTimeouts;
@@ -504,13 +499,13 @@ export interface MonitorActivityLogAlertCriteria {
   readonly subStatuses?: string[];
   /**
   * resource_health block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_activity_log_alert#resource_health MonitorActivityLogAlert#resource_health}
   */
   readonly resourceHealth?: MonitorActivityLogAlertCriteriaResourceHealth;
   /**
   * service_health block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_activity_log_alert#service_health MonitorActivityLogAlert#service_health}
   */
   readonly serviceHealth?: MonitorActivityLogAlertCriteriaServiceHealth;

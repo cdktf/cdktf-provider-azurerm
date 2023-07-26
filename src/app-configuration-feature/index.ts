@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_configuration_feature
 // generated from terraform resource schema
 
@@ -61,19 +56,19 @@ export interface AppConfigurationFeatureConfig extends cdktf.TerraformMetaArgume
   readonly tags?: { [key: string]: string };
   /**
   * targeting_filter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_configuration_feature#targeting_filter AppConfigurationFeature#targeting_filter}
   */
   readonly targetingFilter?: AppConfigurationFeatureTargetingFilter[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_configuration_feature#timeouts AppConfigurationFeature#timeouts}
   */
   readonly timeouts?: AppConfigurationFeatureTimeouts;
   /**
   * timewindow_filter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_configuration_feature#timewindow_filter AppConfigurationFeature#timewindow_filter}
   */
   readonly timewindowFilter?: AppConfigurationFeatureTimewindowFilter[] | cdktf.IResolvable;
@@ -207,7 +202,7 @@ export interface AppConfigurationFeatureTargetingFilter {
   readonly users?: string[];
   /**
   * groups block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_configuration_feature#groups AppConfigurationFeature#groups}
   */
   readonly groups?: AppConfigurationFeatureTargetingFilterGroups[] | cdktf.IResolvable;

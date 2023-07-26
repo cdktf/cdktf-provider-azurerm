@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_managed_instance_active_directory_administrator
 // generated from terraform resource schema
 
@@ -41,7 +36,7 @@ export interface MssqlManagedInstanceActiveDirectoryAdministratorConfig extends 
   readonly tenantId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mssql_managed_instance_active_directory_administrator#timeouts MssqlManagedInstanceActiveDirectoryAdministrator#timeouts}
   */
   readonly timeouts?: MssqlManagedInstanceActiveDirectoryAdministratorTimeouts;

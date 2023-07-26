@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_job
 // generated from terraform resource schema
 
@@ -45,19 +40,19 @@ export interface MediaJobConfig extends cdktf.TerraformMetaArguments {
   readonly transformName: string;
   /**
   * input_asset block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_job#input_asset MediaJob#input_asset}
   */
   readonly inputAsset: MediaJobInputAsset;
   /**
   * output_asset block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_job#output_asset MediaJob#output_asset}
   */
   readonly outputAsset: MediaJobOutputAsset[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/media_job#timeouts MediaJob#timeouts}
   */
   readonly timeouts?: MediaJobTimeouts;

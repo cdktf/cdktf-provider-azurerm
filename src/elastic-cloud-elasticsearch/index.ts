@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/elastic_cloud_elasticsearch
 // generated from terraform resource schema
 
@@ -49,13 +44,13 @@ export interface ElasticCloudElasticsearchConfig extends cdktf.TerraformMetaArgu
   readonly tags?: { [key: string]: string };
   /**
   * logs block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/elastic_cloud_elasticsearch#logs ElasticCloudElasticsearch#logs}
   */
   readonly logs?: ElasticCloudElasticsearchLogs;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/elastic_cloud_elasticsearch#timeouts ElasticCloudElasticsearch#timeouts}
   */
   readonly timeouts?: ElasticCloudElasticsearchTimeouts;
@@ -217,7 +212,7 @@ export interface ElasticCloudElasticsearchLogs {
   readonly sendSubscriptionLogs?: boolean | cdktf.IResolvable;
   /**
   * filtering_tag block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/elastic_cloud_elasticsearch#filtering_tag ElasticCloudElasticsearch#filtering_tag}
   */
   readonly filteringTag?: ElasticCloudElasticsearchLogsFilteringTag[] | cdktf.IResolvable;

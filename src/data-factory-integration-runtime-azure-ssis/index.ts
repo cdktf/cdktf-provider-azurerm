@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_integration_runtime_azure_ssis
 // generated from terraform resource schema
 
@@ -57,49 +52,49 @@ export interface DataFactoryIntegrationRuntimeAzureSsisConfig extends cdktf.Terr
   readonly numberOfNodes?: number;
   /**
   * catalog_info block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_integration_runtime_azure_ssis#catalog_info DataFactoryIntegrationRuntimeAzureSsis#catalog_info}
   */
   readonly catalogInfo?: DataFactoryIntegrationRuntimeAzureSsisCatalogInfo;
   /**
   * custom_setup_script block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_integration_runtime_azure_ssis#custom_setup_script DataFactoryIntegrationRuntimeAzureSsis#custom_setup_script}
   */
   readonly customSetupScript?: DataFactoryIntegrationRuntimeAzureSsisCustomSetupScript;
   /**
   * express_custom_setup block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_integration_runtime_azure_ssis#express_custom_setup DataFactoryIntegrationRuntimeAzureSsis#express_custom_setup}
   */
   readonly expressCustomSetup?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup;
   /**
   * express_vnet_integration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_integration_runtime_azure_ssis#express_vnet_integration DataFactoryIntegrationRuntimeAzureSsis#express_vnet_integration}
   */
   readonly expressVnetIntegration?: DataFactoryIntegrationRuntimeAzureSsisExpressVnetIntegration;
   /**
   * package_store block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_integration_runtime_azure_ssis#package_store DataFactoryIntegrationRuntimeAzureSsis#package_store}
   */
   readonly packageStore?: DataFactoryIntegrationRuntimeAzureSsisPackageStore[] | cdktf.IResolvable;
   /**
   * proxy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_integration_runtime_azure_ssis#proxy DataFactoryIntegrationRuntimeAzureSsis#proxy}
   */
   readonly proxy?: DataFactoryIntegrationRuntimeAzureSsisProxy;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_integration_runtime_azure_ssis#timeouts DataFactoryIntegrationRuntimeAzureSsis#timeouts}
   */
   readonly timeouts?: DataFactoryIntegrationRuntimeAzureSsisTimeouts;
   /**
   * vnet_integration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_integration_runtime_azure_ssis#vnet_integration DataFactoryIntegrationRuntimeAzureSsis#vnet_integration}
   */
   readonly vnetIntegration?: DataFactoryIntegrationRuntimeAzureSsisVnetIntegration;
@@ -542,7 +537,7 @@ export interface DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommand
   readonly userName: string;
   /**
   * key_vault_password block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_integration_runtime_azure_ssis#key_vault_password DataFactoryIntegrationRuntimeAzureSsis#key_vault_password}
   */
   readonly keyVaultPassword?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPassword;
@@ -852,7 +847,7 @@ export interface DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCompone
   readonly name: string;
   /**
   * key_vault_license block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_integration_runtime_azure_ssis#key_vault_license DataFactoryIntegrationRuntimeAzureSsis#key_vault_license}
   */
   readonly keyVaultLicense?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicense;
@@ -1002,13 +997,13 @@ export interface DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup {
   readonly powershellVersion?: string;
   /**
   * command_key block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_integration_runtime_azure_ssis#command_key DataFactoryIntegrationRuntimeAzureSsis#command_key}
   */
   readonly commandKey?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKey[] | cdktf.IResolvable;
   /**
   * component block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_integration_runtime_azure_ssis#component DataFactoryIntegrationRuntimeAzureSsis#component}
   */
   readonly component?: DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponent[] | cdktf.IResolvable;

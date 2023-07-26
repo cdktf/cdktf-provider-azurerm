@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/api_management_api
 // generated from terraform resource schema
 
@@ -37,7 +32,7 @@ export interface DataAzurermApiManagementApiConfig extends cdktf.TerraformMetaAr
   readonly revision: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/api_management_api#timeouts DataAzurermApiManagementApi#timeouts}
   */
   readonly timeouts?: DataAzurermApiManagementApiTimeouts;

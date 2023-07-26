@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_policy_rule_collection_group
 // generated from terraform resource schema
 
@@ -33,25 +28,25 @@ export interface FirewallPolicyRuleCollectionGroupConfig extends cdktf.Terraform
   readonly priority: number;
   /**
   * application_rule_collection block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_policy_rule_collection_group#application_rule_collection FirewallPolicyRuleCollectionGroup#application_rule_collection}
   */
   readonly applicationRuleCollection?: FirewallPolicyRuleCollectionGroupApplicationRuleCollection[] | cdktf.IResolvable;
   /**
   * nat_rule_collection block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_policy_rule_collection_group#nat_rule_collection FirewallPolicyRuleCollectionGroup#nat_rule_collection}
   */
   readonly natRuleCollection?: FirewallPolicyRuleCollectionGroupNatRuleCollection[] | cdktf.IResolvable;
   /**
   * network_rule_collection block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_policy_rule_collection_group#network_rule_collection FirewallPolicyRuleCollectionGroup#network_rule_collection}
   */
   readonly networkRuleCollection?: FirewallPolicyRuleCollectionGroupNetworkRuleCollection[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_policy_rule_collection_group#timeouts FirewallPolicyRuleCollectionGroup#timeouts}
   */
   readonly timeouts?: FirewallPolicyRuleCollectionGroupTimeouts;
@@ -217,7 +212,7 @@ export interface FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRule 
   readonly webCategories?: string[];
   /**
   * protocols block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_policy_rule_collection_group#protocols FirewallPolicyRuleCollectionGroup#protocols}
   */
   readonly protocols?: FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleProtocols[] | cdktf.IResolvable;
@@ -555,7 +550,7 @@ export interface FirewallPolicyRuleCollectionGroupApplicationRuleCollection {
   readonly priority: number;
   /**
   * rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_policy_rule_collection_group#rule FirewallPolicyRuleCollectionGroup#rule}
   */
   readonly rule: FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRule[] | cdktf.IResolvable;
@@ -1027,7 +1022,7 @@ export interface FirewallPolicyRuleCollectionGroupNatRuleCollection {
   readonly priority: number;
   /**
   * rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_policy_rule_collection_group#rule FirewallPolicyRuleCollectionGroup#rule}
   */
   readonly rule: FirewallPolicyRuleCollectionGroupNatRuleCollectionRule[] | cdktf.IResolvable;
@@ -1472,7 +1467,7 @@ export interface FirewallPolicyRuleCollectionGroupNetworkRuleCollection {
   readonly priority: number;
   /**
   * rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_policy_rule_collection_group#rule FirewallPolicyRuleCollectionGroup#rule}
   */
   readonly rule: FirewallPolicyRuleCollectionGroupNetworkRuleCollectionRule[] | cdktf.IResolvable;

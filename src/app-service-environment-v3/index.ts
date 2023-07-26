@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_environment_v3
 // generated from terraform resource schema
 
@@ -53,13 +48,13 @@ export interface AppServiceEnvironmentV3Config extends cdktf.TerraformMetaArgume
   readonly zoneRedundant?: boolean | cdktf.IResolvable;
   /**
   * cluster_setting block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_environment_v3#cluster_setting AppServiceEnvironmentV3#cluster_setting}
   */
   readonly clusterSetting?: AppServiceEnvironmentV3ClusterSetting[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/app_service_environment_v3#timeouts AppServiceEnvironmentV3#timeouts}
   */
   readonly timeouts?: AppServiceEnvironmentV3Timeouts;

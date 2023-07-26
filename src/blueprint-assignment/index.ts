@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/blueprint_assignment
 // generated from terraform resource schema
 
@@ -57,13 +52,13 @@ export interface BlueprintAssignmentConfig extends cdktf.TerraformMetaArguments 
   readonly versionId: string;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/blueprint_assignment#identity BlueprintAssignment#identity}
   */
   readonly identity: BlueprintAssignmentIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/blueprint_assignment#timeouts BlueprintAssignment#timeouts}
   */
   readonly timeouts?: BlueprintAssignmentTimeouts;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_interface_application_gateway_backend_address_pool_association
 // generated from terraform resource schema
 
@@ -33,7 +28,7 @@ export interface NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation
   readonly networkInterfaceId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/network_interface_application_gateway_backend_address_pool_association#timeouts NetworkInterfaceApplicationGatewayBackendAddressPoolAssociation#timeouts}
   */
   readonly timeouts?: NetworkInterfaceApplicationGatewayBackendAddressPoolAssociationTimeouts;

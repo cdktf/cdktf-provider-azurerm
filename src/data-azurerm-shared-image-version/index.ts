@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/shared_image_version
 // generated from terraform resource schema
 
@@ -41,7 +36,7 @@ export interface DataAzurermSharedImageVersionConfig extends cdktf.TerraformMeta
   readonly sortVersionsBySemver?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/shared_image_version#timeouts DataAzurermSharedImageVersion#timeouts}
   */
   readonly timeouts?: DataAzurermSharedImageVersionTimeouts;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_custom_dataset
 // generated from terraform resource schema
 
@@ -61,13 +56,13 @@ export interface DataFactoryCustomDatasetConfig extends cdktf.TerraformMetaArgum
   readonly typePropertiesJson: string;
   /**
   * linked_service block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_custom_dataset#linked_service DataFactoryCustomDataset#linked_service}
   */
   readonly linkedService: DataFactoryCustomDatasetLinkedService;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_custom_dataset#timeouts DataFactoryCustomDataset#timeouts}
   */
   readonly timeouts?: DataFactoryCustomDatasetTimeouts;

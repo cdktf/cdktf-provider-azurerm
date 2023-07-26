@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/eventgrid_domain
 // generated from terraform resource schema
 
@@ -61,25 +56,25 @@ export interface EventgridDomainConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/eventgrid_domain#identity EventgridDomain#identity}
   */
   readonly identity?: EventgridDomainIdentity;
   /**
   * input_mapping_default_values block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/eventgrid_domain#input_mapping_default_values EventgridDomain#input_mapping_default_values}
   */
   readonly inputMappingDefaultValues?: EventgridDomainInputMappingDefaultValues;
   /**
   * input_mapping_fields block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/eventgrid_domain#input_mapping_fields EventgridDomain#input_mapping_fields}
   */
   readonly inputMappingFields?: EventgridDomainInputMappingFields;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/eventgrid_domain#timeouts EventgridDomain#timeouts}
   */
   readonly timeouts?: EventgridDomainTimeouts;

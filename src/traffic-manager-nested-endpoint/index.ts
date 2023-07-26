@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/traffic_manager_nested_endpoint
 // generated from terraform resource schema
 
@@ -65,19 +60,19 @@ export interface TrafficManagerNestedEndpointConfig extends cdktf.TerraformMetaA
   readonly weight?: number;
   /**
   * custom_header block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/traffic_manager_nested_endpoint#custom_header TrafficManagerNestedEndpoint#custom_header}
   */
   readonly customHeader?: TrafficManagerNestedEndpointCustomHeader[] | cdktf.IResolvable;
   /**
   * subnet block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/traffic_manager_nested_endpoint#subnet TrafficManagerNestedEndpoint#subnet}
   */
   readonly subnet?: TrafficManagerNestedEndpointSubnet[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/traffic_manager_nested_endpoint#timeouts TrafficManagerNestedEndpoint#timeouts}
   */
   readonly timeouts?: TrafficManagerNestedEndpointTimeouts;

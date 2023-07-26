@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/netapp_volume_group_sap_hana
 // generated from terraform resource schema
 
@@ -45,13 +40,13 @@ export interface NetappVolumeGroupSapHanaConfig extends cdktf.TerraformMetaArgum
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/netapp_volume_group_sap_hana#timeouts NetappVolumeGroupSapHana#timeouts}
   */
   readonly timeouts?: NetappVolumeGroupSapHanaTimeouts;
   /**
   * volume block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/netapp_volume_group_sap_hana#volume NetappVolumeGroupSapHana#volume}
   */
   readonly volume: NetappVolumeGroupSapHanaVolume[] | cdktf.IResolvable;
@@ -713,19 +708,19 @@ export interface NetappVolumeGroupSapHanaVolume {
   readonly volumeSpecName: string;
   /**
   * data_protection_replication block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/netapp_volume_group_sap_hana#data_protection_replication NetappVolumeGroupSapHana#data_protection_replication}
   */
   readonly dataProtectionReplication?: NetappVolumeGroupSapHanaVolumeDataProtectionReplication;
   /**
   * data_protection_snapshot_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/netapp_volume_group_sap_hana#data_protection_snapshot_policy NetappVolumeGroupSapHana#data_protection_snapshot_policy}
   */
   readonly dataProtectionSnapshotPolicy?: NetappVolumeGroupSapHanaVolumeDataProtectionSnapshotPolicy;
   /**
   * export_policy_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/netapp_volume_group_sap_hana#export_policy_rule NetappVolumeGroupSapHana#export_policy_rule}
   */
   readonly exportPolicyRule: NetappVolumeGroupSapHanaVolumeExportPolicyRule[] | cdktf.IResolvable;

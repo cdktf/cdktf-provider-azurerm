@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/recovery_services_vault
 // generated from terraform resource schema
 
@@ -65,25 +60,25 @@ export interface RecoveryServicesVaultConfig extends cdktf.TerraformMetaArgument
   readonly tags?: { [key: string]: string };
   /**
   * encryption block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/recovery_services_vault#encryption RecoveryServicesVault#encryption}
   */
   readonly encryption?: RecoveryServicesVaultEncryption;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/recovery_services_vault#identity RecoveryServicesVault#identity}
   */
   readonly identity?: RecoveryServicesVaultIdentity;
   /**
   * monitoring block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/recovery_services_vault#monitoring RecoveryServicesVault#monitoring}
   */
   readonly monitoring?: RecoveryServicesVaultMonitoring;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/recovery_services_vault#timeouts RecoveryServicesVault#timeouts}
   */
   readonly timeouts?: RecoveryServicesVaultTimeouts;

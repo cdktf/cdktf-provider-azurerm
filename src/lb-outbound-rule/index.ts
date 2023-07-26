@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lb_outbound_rule
 // generated from terraform resource schema
 
@@ -49,13 +44,13 @@ export interface LbOutboundRuleConfig extends cdktf.TerraformMetaArguments {
   readonly protocol: string;
   /**
   * frontend_ip_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lb_outbound_rule#frontend_ip_configuration LbOutboundRule#frontend_ip_configuration}
   */
   readonly frontendIpConfiguration?: LbOutboundRuleFrontendIpConfiguration[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lb_outbound_rule#timeouts LbOutboundRule#timeouts}
   */
   readonly timeouts?: LbOutboundRuleTimeouts;

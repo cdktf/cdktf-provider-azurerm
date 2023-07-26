@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_app_cosmosdb_association
 // generated from terraform resource schema
 
@@ -61,7 +56,7 @@ export interface SpringCloudAppCosmosdbAssociationConfig extends cdktf.Terraform
   readonly springCloudAppId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_app_cosmosdb_association#timeouts SpringCloudAppCosmosdbAssociation#timeouts}
   */
   readonly timeouts?: SpringCloudAppCosmosdbAssociationTimeouts;

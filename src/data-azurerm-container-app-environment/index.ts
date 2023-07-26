@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/container_app_environment
 // generated from terraform resource schema
 
@@ -21,7 +16,7 @@ export interface DataAzurermContainerAppEnvironmentConfig extends cdktf.Terrafor
   readonly id?: string;
   /**
   * The name of the Container Apps Managed Environment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/container_app_environment#name DataAzurermContainerAppEnvironment#name}
   */
   readonly name: string;
@@ -31,7 +26,7 @@ export interface DataAzurermContainerAppEnvironmentConfig extends cdktf.Terrafor
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/container_app_environment#timeouts DataAzurermContainerAppEnvironment#timeouts}
   */
   readonly timeouts?: DataAzurermContainerAppEnvironmentTimeouts;

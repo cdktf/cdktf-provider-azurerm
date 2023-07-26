@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_container_deployment
 // generated from terraform resource schema
 
@@ -61,13 +56,13 @@ export interface SpringCloudContainerDeploymentConfig extends cdktf.TerraformMet
   readonly springCloudAppId: string;
   /**
   * quota block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_container_deployment#quota SpringCloudContainerDeployment#quota}
   */
   readonly quota?: SpringCloudContainerDeploymentQuota;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_container_deployment#timeouts SpringCloudContainerDeployment#timeouts}
   */
   readonly timeouts?: SpringCloudContainerDeploymentTimeouts;

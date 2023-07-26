@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/relay_hybrid_connection
 // generated from terraform resource schema
 
@@ -41,7 +36,7 @@ export interface RelayHybridConnectionConfig extends cdktf.TerraformMetaArgument
   readonly userMetadata?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/relay_hybrid_connection#timeouts RelayHybridConnection#timeouts}
   */
   readonly timeouts?: RelayHybridConnectionTimeouts;

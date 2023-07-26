@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/express_route_circuit_peering
 // generated from terraform resource schema
 
@@ -61,19 +56,19 @@ export interface ExpressRouteCircuitPeeringConfig extends cdktf.TerraformMetaArg
   readonly vlanId: number;
   /**
   * ipv6 block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/express_route_circuit_peering#ipv6 ExpressRouteCircuitPeering#ipv6}
   */
   readonly ipv6?: ExpressRouteCircuitPeeringIpv6;
   /**
   * microsoft_peering_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/express_route_circuit_peering#microsoft_peering_config ExpressRouteCircuitPeering#microsoft_peering_config}
   */
   readonly microsoftPeeringConfig?: ExpressRouteCircuitPeeringMicrosoftPeeringConfig;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/express_route_circuit_peering#timeouts ExpressRouteCircuitPeering#timeouts}
   */
   readonly timeouts?: ExpressRouteCircuitPeeringTimeouts;
@@ -243,7 +238,7 @@ export interface ExpressRouteCircuitPeeringIpv6 {
   readonly secondaryPeerAddressPrefix: string;
   /**
   * microsoft_peering block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/express_route_circuit_peering#microsoft_peering ExpressRouteCircuitPeering#microsoft_peering}
   */
   readonly microsoftPeering?: ExpressRouteCircuitPeeringIpv6MicrosoftPeering;

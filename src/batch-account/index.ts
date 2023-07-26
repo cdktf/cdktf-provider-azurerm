@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_account
 // generated from terraform resource schema
 
@@ -65,25 +60,25 @@ export interface BatchAccountConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_account#identity BatchAccount#identity}
   */
   readonly identity?: BatchAccountIdentity;
   /**
   * key_vault_reference block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_account#key_vault_reference BatchAccount#key_vault_reference}
   */
   readonly keyVaultReference?: BatchAccountKeyVaultReference;
   /**
   * network_profile block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_account#network_profile BatchAccount#network_profile}
   */
   readonly networkProfile?: BatchAccountNetworkProfile;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_account#timeouts BatchAccount#timeouts}
   */
   readonly timeouts?: BatchAccountTimeouts;
@@ -501,7 +496,7 @@ export interface BatchAccountNetworkProfileAccountAccess {
   readonly defaultAction?: string;
   /**
   * ip_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_account#ip_rule BatchAccount#ip_rule}
   */
   readonly ipRule?: BatchAccountNetworkProfileAccountAccessIpRule[] | cdktf.IResolvable;
@@ -716,7 +711,7 @@ export interface BatchAccountNetworkProfileNodeManagementAccess {
   readonly defaultAction?: string;
   /**
   * ip_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_account#ip_rule BatchAccount#ip_rule}
   */
   readonly ipRule?: BatchAccountNetworkProfileNodeManagementAccessIpRule[] | cdktf.IResolvable;
@@ -806,13 +801,13 @@ export class BatchAccountNetworkProfileNodeManagementAccessOutputReference exten
 export interface BatchAccountNetworkProfile {
   /**
   * account_access block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_account#account_access BatchAccount#account_access}
   */
   readonly accountAccess?: BatchAccountNetworkProfileAccountAccess;
   /**
   * node_management_access block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/batch_account#node_management_access BatchAccount#node_management_access}
   */
   readonly nodeManagementAccess?: BatchAccountNetworkProfileNodeManagementAccess;

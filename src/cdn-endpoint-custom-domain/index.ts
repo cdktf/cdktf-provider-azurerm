@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_endpoint_custom_domain
 // generated from terraform resource schema
 
@@ -33,19 +28,19 @@ export interface CdnEndpointCustomDomainConfig extends cdktf.TerraformMetaArgume
   readonly name: string;
   /**
   * cdn_managed_https block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_endpoint_custom_domain#cdn_managed_https CdnEndpointCustomDomain#cdn_managed_https}
   */
   readonly cdnManagedHttps?: CdnEndpointCustomDomainCdnManagedHttps;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_endpoint_custom_domain#timeouts CdnEndpointCustomDomain#timeouts}
   */
   readonly timeouts?: CdnEndpointCustomDomainTimeouts;
   /**
   * user_managed_https block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_endpoint_custom_domain#user_managed_https CdnEndpointCustomDomain#user_managed_https}
   */
   readonly userManagedHttps?: CdnEndpointCustomDomainUserManagedHttps;

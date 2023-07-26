@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_app_environment
 // generated from terraform resource schema
 
@@ -21,13 +16,13 @@ export interface ContainerAppEnvironmentConfig extends cdktf.TerraformMetaArgume
   readonly id?: string;
   /**
   * The existing Subnet to use for the Container Apps Control Plane. **NOTE:** The Subnet must have a `/21` or larger address space.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_app_environment#infrastructure_subnet_id ContainerAppEnvironment#infrastructure_subnet_id}
   */
   readonly infrastructureSubnetId?: string;
   /**
   * Should the Container Environment operate in Internal Load Balancing Mode? Defaults to `false`. **Note:** can only be set to `true` if `infrastructure_subnet_id` is specified.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_app_environment#internal_load_balancer_enabled ContainerAppEnvironment#internal_load_balancer_enabled}
   */
   readonly internalLoadBalancerEnabled?: boolean | cdktf.IResolvable;
@@ -37,13 +32,13 @@ export interface ContainerAppEnvironmentConfig extends cdktf.TerraformMetaArgume
   readonly location: string;
   /**
   * The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_app_environment#log_analytics_workspace_id ContainerAppEnvironment#log_analytics_workspace_id}
   */
   readonly logAnalyticsWorkspaceId: string;
   /**
   * The name of the Container Apps Managed Environment.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_app_environment#name ContainerAppEnvironment#name}
   */
   readonly name: string;
@@ -57,7 +52,7 @@ export interface ContainerAppEnvironmentConfig extends cdktf.TerraformMetaArgume
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_app_environment#timeouts ContainerAppEnvironment#timeouts}
   */
   readonly timeouts?: ContainerAppEnvironmentTimeouts;

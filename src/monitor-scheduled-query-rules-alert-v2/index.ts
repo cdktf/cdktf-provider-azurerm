@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_scheduled_query_rules_alert_v2
 // generated from terraform resource schema
 
@@ -89,19 +84,19 @@ export interface MonitorScheduledQueryRulesAlertV2Config extends cdktf.Terraform
   readonly workspaceAlertsStorageEnabled?: boolean | cdktf.IResolvable;
   /**
   * action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_scheduled_query_rules_alert_v2#action MonitorScheduledQueryRulesAlertV2#action}
   */
   readonly action?: MonitorScheduledQueryRulesAlertV2Action;
   /**
   * criteria block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_scheduled_query_rules_alert_v2#criteria MonitorScheduledQueryRulesAlertV2#criteria}
   */
   readonly criteria: MonitorScheduledQueryRulesAlertV2Criteria[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_scheduled_query_rules_alert_v2#timeouts MonitorScheduledQueryRulesAlertV2#timeouts}
   */
   readonly timeouts?: MonitorScheduledQueryRulesAlertV2Timeouts;
@@ -453,13 +448,13 @@ export interface MonitorScheduledQueryRulesAlertV2Criteria {
   readonly timeAggregationMethod: string;
   /**
   * dimension block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_scheduled_query_rules_alert_v2#dimension MonitorScheduledQueryRulesAlertV2#dimension}
   */
   readonly dimension?: MonitorScheduledQueryRulesAlertV2CriteriaDimension[] | cdktf.IResolvable;
   /**
   * failing_periods block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_scheduled_query_rules_alert_v2#failing_periods MonitorScheduledQueryRulesAlertV2#failing_periods}
   */
   readonly failingPeriods?: MonitorScheduledQueryRulesAlertV2CriteriaFailingPeriods;

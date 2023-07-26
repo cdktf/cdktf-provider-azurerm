@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/logic_app_standard
 // generated from terraform resource schema
 
@@ -33,13 +28,13 @@ export interface DataAzurermLogicAppStandardConfig extends cdktf.TerraformMetaAr
   readonly tags?: { [key: string]: string };
   /**
   * site_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/logic_app_standard#site_config DataAzurermLogicAppStandard#site_config}
   */
   readonly siteConfig?: DataAzurermLogicAppStandardSiteConfig;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/logic_app_standard#timeouts DataAzurermLogicAppStandard#timeouts}
   */
   readonly timeouts?: DataAzurermLogicAppStandardTimeouts;
@@ -1303,7 +1298,7 @@ export interface DataAzurermLogicAppStandardSiteConfig {
   readonly websocketsEnabled?: boolean | cdktf.IResolvable;
   /**
   * cors block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/logic_app_standard#cors DataAzurermLogicAppStandard#cors}
   */
   readonly cors?: DataAzurermLogicAppStandardSiteConfigCors;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_job_schedule
 // generated from terraform resource schema
 
@@ -49,7 +44,7 @@ export interface AutomationJobScheduleConfig extends cdktf.TerraformMetaArgument
   readonly scheduleName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/automation_job_schedule#timeouts AutomationJobSchedule#timeouts}
   */
   readonly timeouts?: AutomationJobScheduleTimeouts;

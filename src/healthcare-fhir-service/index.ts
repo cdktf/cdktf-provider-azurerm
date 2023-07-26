@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/healthcare_fhir_service
 // generated from terraform resource schema
 
@@ -57,31 +52,31 @@ export interface HealthcareFhirServiceConfig extends cdktf.TerraformMetaArgument
   readonly workspaceId: string;
   /**
   * authentication block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/healthcare_fhir_service#authentication HealthcareFhirService#authentication}
   */
   readonly authentication: HealthcareFhirServiceAuthentication;
   /**
   * cors block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/healthcare_fhir_service#cors HealthcareFhirService#cors}
   */
   readonly cors?: HealthcareFhirServiceCors;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/healthcare_fhir_service#identity HealthcareFhirService#identity}
   */
   readonly identity?: HealthcareFhirServiceIdentity;
   /**
   * oci_artifact block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/healthcare_fhir_service#oci_artifact HealthcareFhirService#oci_artifact}
   */
   readonly ociArtifact?: HealthcareFhirServiceOciArtifact[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/healthcare_fhir_service#timeouts HealthcareFhirService#timeouts}
   */
   readonly timeouts?: HealthcareFhirServiceTimeouts;

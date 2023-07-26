@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_ms_security_incident
 // generated from terraform resource schema
 
@@ -61,7 +56,7 @@ export interface SentinelAlertRuleMsSecurityIncidentConfig extends cdktf.Terrafo
   readonly severityFilter: string[];
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/sentinel_alert_rule_ms_security_incident#timeouts SentinelAlertRuleMsSecurityIncident#timeouts}
   */
   readonly timeouts?: SentinelAlertRuleMsSecurityIncidentTimeouts;

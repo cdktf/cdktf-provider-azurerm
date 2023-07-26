@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/digital_twins_instance
 // generated from terraform resource schema
 
@@ -37,13 +32,13 @@ export interface DigitalTwinsInstanceConfig extends cdktf.TerraformMetaArguments
   readonly tags?: { [key: string]: string };
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/digital_twins_instance#identity DigitalTwinsInstance#identity}
   */
   readonly identity?: DigitalTwinsInstanceIdentity;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/digital_twins_instance#timeouts DigitalTwinsInstance#timeouts}
   */
   readonly timeouts?: DigitalTwinsInstanceTimeouts;

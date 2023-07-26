@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_action_group
 // generated from terraform resource schema
 
@@ -49,19 +44,19 @@ export interface MonitorAlertProcessingRuleActionGroupConfig extends cdktf.Terra
   readonly tags?: { [key: string]: string };
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_action_group#condition MonitorAlertProcessingRuleActionGroup#condition}
   */
   readonly condition?: MonitorAlertProcessingRuleActionGroupCondition;
   /**
   * schedule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_action_group#schedule MonitorAlertProcessingRuleActionGroup#schedule}
   */
   readonly schedule?: MonitorAlertProcessingRuleActionGroupSchedule;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_action_group#timeouts MonitorAlertProcessingRuleActionGroup#timeouts}
   */
   readonly timeouts?: MonitorAlertProcessingRuleActionGroupTimeouts;
@@ -1015,67 +1010,67 @@ export class MonitorAlertProcessingRuleActionGroupConditionTargetResourceTypeOut
 export interface MonitorAlertProcessingRuleActionGroupCondition {
   /**
   * alert_context block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_action_group#alert_context MonitorAlertProcessingRuleActionGroup#alert_context}
   */
   readonly alertContext?: MonitorAlertProcessingRuleActionGroupConditionAlertContext;
   /**
   * alert_rule_id block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_action_group#alert_rule_id MonitorAlertProcessingRuleActionGroup#alert_rule_id}
   */
   readonly alertRuleId?: MonitorAlertProcessingRuleActionGroupConditionAlertRuleId;
   /**
   * alert_rule_name block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_action_group#alert_rule_name MonitorAlertProcessingRuleActionGroup#alert_rule_name}
   */
   readonly alertRuleName?: MonitorAlertProcessingRuleActionGroupConditionAlertRuleName;
   /**
   * description block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_action_group#description MonitorAlertProcessingRuleActionGroup#description}
   */
   readonly description?: MonitorAlertProcessingRuleActionGroupConditionDescription;
   /**
   * monitor_condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_action_group#monitor_condition MonitorAlertProcessingRuleActionGroup#monitor_condition}
   */
   readonly monitorCondition?: MonitorAlertProcessingRuleActionGroupConditionMonitorCondition;
   /**
   * monitor_service block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_action_group#monitor_service MonitorAlertProcessingRuleActionGroup#monitor_service}
   */
   readonly monitorService?: MonitorAlertProcessingRuleActionGroupConditionMonitorService;
   /**
   * severity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_action_group#severity MonitorAlertProcessingRuleActionGroup#severity}
   */
   readonly severity?: MonitorAlertProcessingRuleActionGroupConditionSeverity;
   /**
   * signal_type block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_action_group#signal_type MonitorAlertProcessingRuleActionGroup#signal_type}
   */
   readonly signalType?: MonitorAlertProcessingRuleActionGroupConditionSignalType;
   /**
   * target_resource block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_action_group#target_resource MonitorAlertProcessingRuleActionGroup#target_resource}
   */
   readonly targetResource?: MonitorAlertProcessingRuleActionGroupConditionTargetResource;
   /**
   * target_resource_group block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_action_group#target_resource_group MonitorAlertProcessingRuleActionGroup#target_resource_group}
   */
   readonly targetResourceGroup?: MonitorAlertProcessingRuleActionGroupConditionTargetResourceGroup;
   /**
   * target_resource_type block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_action_group#target_resource_type MonitorAlertProcessingRuleActionGroup#target_resource_type}
   */
   readonly targetResourceType?: MonitorAlertProcessingRuleActionGroupConditionTargetResourceType;
@@ -1786,19 +1781,19 @@ export class MonitorAlertProcessingRuleActionGroupScheduleRecurrenceWeeklyList e
 export interface MonitorAlertProcessingRuleActionGroupScheduleRecurrence {
   /**
   * daily block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_action_group#daily MonitorAlertProcessingRuleActionGroup#daily}
   */
   readonly daily?: MonitorAlertProcessingRuleActionGroupScheduleRecurrenceDaily[] | cdktf.IResolvable;
   /**
   * monthly block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_action_group#monthly MonitorAlertProcessingRuleActionGroup#monthly}
   */
   readonly monthly?: MonitorAlertProcessingRuleActionGroupScheduleRecurrenceMonthly[] | cdktf.IResolvable;
   /**
   * weekly block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_action_group#weekly MonitorAlertProcessingRuleActionGroup#weekly}
   */
   readonly weekly?: MonitorAlertProcessingRuleActionGroupScheduleRecurrenceWeekly[] | cdktf.IResolvable;
@@ -1923,7 +1918,7 @@ export interface MonitorAlertProcessingRuleActionGroupSchedule {
   readonly timeZone?: string;
   /**
   * recurrence block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/monitor_alert_processing_rule_action_group#recurrence MonitorAlertProcessingRuleActionGroup#recurrence}
   */
   readonly recurrence?: MonitorAlertProcessingRuleActionGroupScheduleRecurrence;

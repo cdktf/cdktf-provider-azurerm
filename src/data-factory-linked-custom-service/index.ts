@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_custom_service
 // generated from terraform resource schema
 
@@ -53,13 +48,13 @@ export interface DataFactoryLinkedCustomServiceConfig extends cdktf.TerraformMet
   readonly typePropertiesJson: string;
   /**
   * integration_runtime block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_custom_service#integration_runtime DataFactoryLinkedCustomService#integration_runtime}
   */
   readonly integrationRuntime?: DataFactoryLinkedCustomServiceIntegrationRuntime;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_custom_service#timeouts DataFactoryLinkedCustomService#timeouts}
   */
   readonly timeouts?: DataFactoryLinkedCustomServiceTimeouts;

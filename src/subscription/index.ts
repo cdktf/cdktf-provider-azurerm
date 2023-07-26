@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subscription
 // generated from terraform resource schema
 
@@ -14,7 +9,7 @@ import * as cdktf from 'cdktf';
 export interface SubscriptionConfig extends cdktf.TerraformMetaArguments {
   /**
   * The Alias Name of the subscription. If omitted a new UUID will be generated for this property.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subscription#alias Subscription#alias}
   */
   readonly alias?: string;
@@ -31,13 +26,13 @@ export interface SubscriptionConfig extends cdktf.TerraformMetaArguments {
   readonly id?: string;
   /**
   * The GUID of the Subscription.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subscription#subscription_id Subscription#subscription_id}
   */
   readonly subscriptionId?: string;
   /**
   * The Display Name for the Subscription.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subscription#subscription_name Subscription#subscription_name}
   */
   readonly subscriptionName: string;
@@ -47,13 +42,13 @@ export interface SubscriptionConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * The workload type for the Subscription. Possible values are `Production` (default) and `DevTest`.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subscription#workload Subscription#workload}
   */
   readonly workload?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/subscription#timeouts Subscription#timeouts}
   */
   readonly timeouts?: SubscriptionTimeouts;

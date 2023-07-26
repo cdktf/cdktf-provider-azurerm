@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway
 // generated from terraform resource schema
 
@@ -57,151 +52,151 @@ export interface ApplicationGatewayConfig extends cdktf.TerraformMetaArguments {
   readonly zones?: string[];
   /**
   * authentication_certificate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#authentication_certificate ApplicationGateway#authentication_certificate}
   */
   readonly authenticationCertificate?: ApplicationGatewayAuthenticationCertificate[] | cdktf.IResolvable;
   /**
   * autoscale_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#autoscale_configuration ApplicationGateway#autoscale_configuration}
   */
   readonly autoscaleConfiguration?: ApplicationGatewayAutoscaleConfiguration;
   /**
   * backend_address_pool block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#backend_address_pool ApplicationGateway#backend_address_pool}
   */
   readonly backendAddressPool: ApplicationGatewayBackendAddressPool[] | cdktf.IResolvable;
   /**
   * backend_http_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#backend_http_settings ApplicationGateway#backend_http_settings}
   */
   readonly backendHttpSettings: ApplicationGatewayBackendHttpSettings[] | cdktf.IResolvable;
   /**
   * custom_error_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#custom_error_configuration ApplicationGateway#custom_error_configuration}
   */
   readonly customErrorConfiguration?: ApplicationGatewayCustomErrorConfiguration[] | cdktf.IResolvable;
   /**
   * frontend_ip_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#frontend_ip_configuration ApplicationGateway#frontend_ip_configuration}
   */
   readonly frontendIpConfiguration: ApplicationGatewayFrontendIpConfiguration[] | cdktf.IResolvable;
   /**
   * frontend_port block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#frontend_port ApplicationGateway#frontend_port}
   */
   readonly frontendPort: ApplicationGatewayFrontendPort[] | cdktf.IResolvable;
   /**
   * gateway_ip_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#gateway_ip_configuration ApplicationGateway#gateway_ip_configuration}
   */
   readonly gatewayIpConfiguration: ApplicationGatewayGatewayIpConfiguration[] | cdktf.IResolvable;
   /**
   * global block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#global ApplicationGateway#global}
   */
   readonly global?: ApplicationGatewayGlobal;
   /**
   * http_listener block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#http_listener ApplicationGateway#http_listener}
   */
   readonly httpListener: ApplicationGatewayHttpListener[] | cdktf.IResolvable;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#identity ApplicationGateway#identity}
   */
   readonly identity?: ApplicationGatewayIdentity;
   /**
   * private_link_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#private_link_configuration ApplicationGateway#private_link_configuration}
   */
   readonly privateLinkConfiguration?: ApplicationGatewayPrivateLinkConfiguration[] | cdktf.IResolvable;
   /**
   * probe block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#probe ApplicationGateway#probe}
   */
   readonly probe?: ApplicationGatewayProbe[] | cdktf.IResolvable;
   /**
   * redirect_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#redirect_configuration ApplicationGateway#redirect_configuration}
   */
   readonly redirectConfiguration?: ApplicationGatewayRedirectConfiguration[] | cdktf.IResolvable;
   /**
   * request_routing_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#request_routing_rule ApplicationGateway#request_routing_rule}
   */
   readonly requestRoutingRule: ApplicationGatewayRequestRoutingRule[] | cdktf.IResolvable;
   /**
   * rewrite_rule_set block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#rewrite_rule_set ApplicationGateway#rewrite_rule_set}
   */
   readonly rewriteRuleSet?: ApplicationGatewayRewriteRuleSet[] | cdktf.IResolvable;
   /**
   * sku block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#sku ApplicationGateway#sku}
   */
   readonly sku: ApplicationGatewaySku;
   /**
   * ssl_certificate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#ssl_certificate ApplicationGateway#ssl_certificate}
   */
   readonly sslCertificate?: ApplicationGatewaySslCertificate[] | cdktf.IResolvable;
   /**
   * ssl_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#ssl_policy ApplicationGateway#ssl_policy}
   */
   readonly sslPolicy?: ApplicationGatewaySslPolicy;
   /**
   * ssl_profile block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#ssl_profile ApplicationGateway#ssl_profile}
   */
   readonly sslProfile?: ApplicationGatewaySslProfile[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#timeouts ApplicationGateway#timeouts}
   */
   readonly timeouts?: ApplicationGatewayTimeouts;
   /**
   * trusted_client_certificate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#trusted_client_certificate ApplicationGateway#trusted_client_certificate}
   */
   readonly trustedClientCertificate?: ApplicationGatewayTrustedClientCertificate[] | cdktf.IResolvable;
   /**
   * trusted_root_certificate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#trusted_root_certificate ApplicationGateway#trusted_root_certificate}
   */
   readonly trustedRootCertificate?: ApplicationGatewayTrustedRootCertificate[] | cdktf.IResolvable;
   /**
   * url_path_map block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#url_path_map ApplicationGateway#url_path_map}
   */
   readonly urlPathMap?: ApplicationGatewayUrlPathMap[] | cdktf.IResolvable;
   /**
   * waf_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#waf_configuration ApplicationGateway#waf_configuration}
   */
   readonly wafConfiguration?: ApplicationGatewayWafConfiguration;
@@ -872,13 +867,13 @@ export interface ApplicationGatewayBackendHttpSettings {
   readonly trustedRootCertificateNames?: string[];
   /**
   * authentication_certificate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#authentication_certificate ApplicationGateway#authentication_certificate}
   */
   readonly authenticationCertificate?: ApplicationGatewayBackendHttpSettingsAuthenticationCertificate[] | cdktf.IResolvable;
   /**
   * connection_draining block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#connection_draining ApplicationGateway#connection_draining}
   */
   readonly connectionDraining?: ApplicationGatewayBackendHttpSettingsConnectionDraining;
@@ -2108,7 +2103,7 @@ export interface ApplicationGatewayHttpListener {
   readonly sslProfileName?: string;
   /**
   * custom_error_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#custom_error_configuration ApplicationGateway#custom_error_configuration}
   */
   readonly customErrorConfiguration?: ApplicationGatewayHttpListenerCustomErrorConfiguration[] | cdktf.IResolvable;
@@ -2733,7 +2728,7 @@ export interface ApplicationGatewayPrivateLinkConfiguration {
   readonly name: string;
   /**
   * ip_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#ip_configuration ApplicationGateway#ip_configuration}
   */
   readonly ipConfiguration: ApplicationGatewayPrivateLinkConfigurationIpConfiguration[] | cdktf.IResolvable;
@@ -2983,7 +2978,7 @@ export interface ApplicationGatewayProbe {
   readonly unhealthyThreshold: number;
   /**
   * match block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#match ApplicationGateway#match}
   */
   readonly match?: ApplicationGatewayProbeMatch;
@@ -4436,25 +4431,25 @@ export interface ApplicationGatewayRewriteRuleSetRewriteRule {
   readonly ruleSequence: number;
   /**
   * condition block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#condition ApplicationGateway#condition}
   */
   readonly condition?: ApplicationGatewayRewriteRuleSetRewriteRuleCondition[] | cdktf.IResolvable;
   /**
   * request_header_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#request_header_configuration ApplicationGateway#request_header_configuration}
   */
   readonly requestHeaderConfiguration?: ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration[] | cdktf.IResolvable;
   /**
   * response_header_configuration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#response_header_configuration ApplicationGateway#response_header_configuration}
   */
   readonly responseHeaderConfiguration?: ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration[] | cdktf.IResolvable;
   /**
   * url block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#url ApplicationGateway#url}
   */
   readonly url?: ApplicationGatewayRewriteRuleSetRewriteRuleUrl;
@@ -4666,7 +4661,7 @@ export interface ApplicationGatewayRewriteRuleSet {
   readonly name: string;
   /**
   * rewrite_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#rewrite_rule ApplicationGateway#rewrite_rule}
   */
   readonly rewriteRule?: ApplicationGatewayRewriteRuleSetRewriteRule[] | cdktf.IResolvable;
@@ -5446,7 +5441,7 @@ export interface ApplicationGatewaySslProfile {
   readonly verifyClientCertIssuerDn?: boolean | cdktf.IResolvable;
   /**
   * ssl_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#ssl_policy ApplicationGateway#ssl_policy}
   */
   readonly sslPolicy?: ApplicationGatewaySslProfileSslPolicy;
@@ -6346,7 +6341,7 @@ export interface ApplicationGatewayUrlPathMap {
   readonly name: string;
   /**
   * path_rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#path_rule ApplicationGateway#path_rule}
   */
   readonly pathRule: ApplicationGatewayUrlPathMapPathRule[] | cdktf.IResolvable;
@@ -6876,13 +6871,13 @@ export interface ApplicationGatewayWafConfiguration {
   readonly ruleSetVersion: string;
   /**
   * disabled_rule_group block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#disabled_rule_group ApplicationGateway#disabled_rule_group}
   */
   readonly disabledRuleGroup?: ApplicationGatewayWafConfigurationDisabledRuleGroup[] | cdktf.IResolvable;
   /**
   * exclusion block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_gateway#exclusion ApplicationGateway#exclusion}
   */
   readonly exclusion?: ApplicationGatewayWafConfigurationExclusion[] | cdktf.IResolvable;

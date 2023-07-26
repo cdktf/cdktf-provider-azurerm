@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iot_security_solution
 // generated from terraform resource schema
 
@@ -73,19 +68,19 @@ export interface IotSecuritySolutionConfig extends cdktf.TerraformMetaArguments 
   readonly tags?: { [key: string]: string };
   /**
   * additional_workspace block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iot_security_solution#additional_workspace IotSecuritySolution#additional_workspace}
   */
   readonly additionalWorkspace?: IotSecuritySolutionAdditionalWorkspace[] | cdktf.IResolvable;
   /**
   * recommendations_enabled block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iot_security_solution#recommendations_enabled IotSecuritySolution#recommendations_enabled}
   */
   readonly recommendationsEnabled?: IotSecuritySolutionRecommendationsEnabled;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/iot_security_solution#timeouts IotSecuritySolution#timeouts}
   */
   readonly timeouts?: IotSecuritySolutionTimeouts;

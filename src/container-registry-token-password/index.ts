@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_registry_token_password
 // generated from terraform resource schema
 
@@ -25,19 +20,19 @@ export interface ContainerRegistryTokenPasswordConfig extends cdktf.TerraformMet
   readonly id?: string;
   /**
   * password1 block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_registry_token_password#password1 ContainerRegistryTokenPassword#password1}
   */
   readonly password1: ContainerRegistryTokenPasswordPassword1;
   /**
   * password2 block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_registry_token_password#password2 ContainerRegistryTokenPassword#password2}
   */
   readonly password2?: ContainerRegistryTokenPasswordPassword2;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_registry_token_password#timeouts ContainerRegistryTokenPassword#timeouts}
   */
   readonly timeouts?: ContainerRegistryTokenPasswordTimeouts;

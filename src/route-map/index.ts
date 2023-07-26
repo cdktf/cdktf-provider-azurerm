@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/route_map
 // generated from terraform resource schema
 
@@ -29,13 +24,13 @@ export interface RouteMapConfig extends cdktf.TerraformMetaArguments {
   readonly virtualHubId: string;
   /**
   * rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/route_map#rule RouteMap#rule}
   */
   readonly rule?: RouteMapRule[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/route_map#timeouts RouteMap#timeouts}
   */
   readonly timeouts?: RouteMapTimeouts;
@@ -198,7 +193,7 @@ export interface RouteMapRuleAction {
   readonly type: string;
   /**
   * parameter block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/route_map#parameter RouteMap#parameter}
   */
   readonly parameter: RouteMapRuleActionParameter[] | cdktf.IResolvable;
@@ -497,13 +492,13 @@ export interface RouteMapRule {
   readonly nextStepIfMatched?: string;
   /**
   * action block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/route_map#action RouteMap#action}
   */
   readonly action?: RouteMapRuleAction[] | cdktf.IResolvable;
   /**
   * match_criterion block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/route_map#match_criterion RouteMap#match_criterion}
   */
   readonly matchCriterion?: RouteMapRuleMatchCriterion[] | cdktf.IResolvable;

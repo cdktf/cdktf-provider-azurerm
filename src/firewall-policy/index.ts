@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_policy
 // generated from terraform resource schema
 
@@ -61,49 +56,49 @@ export interface FirewallPolicyConfig extends cdktf.TerraformMetaArguments {
   readonly threatIntelligenceMode?: string;
   /**
   * dns block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_policy#dns FirewallPolicy#dns}
   */
   readonly dns?: FirewallPolicyDns;
   /**
   * explicit_proxy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_policy#explicit_proxy FirewallPolicy#explicit_proxy}
   */
   readonly explicitProxy?: FirewallPolicyExplicitProxy;
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_policy#identity FirewallPolicy#identity}
   */
   readonly identity?: FirewallPolicyIdentity;
   /**
   * insights block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_policy#insights FirewallPolicy#insights}
   */
   readonly insights?: FirewallPolicyInsights;
   /**
   * intrusion_detection block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_policy#intrusion_detection FirewallPolicy#intrusion_detection}
   */
   readonly intrusionDetection?: FirewallPolicyIntrusionDetection;
   /**
   * threat_intelligence_allowlist block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_policy#threat_intelligence_allowlist FirewallPolicy#threat_intelligence_allowlist}
   */
   readonly threatIntelligenceAllowlist?: FirewallPolicyThreatIntelligenceAllowlistStruct;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_policy#timeouts FirewallPolicy#timeouts}
   */
   readonly timeouts?: FirewallPolicyTimeouts;
   /**
   * tls_certificate block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_policy#tls_certificate FirewallPolicy#tls_certificate}
   */
   readonly tlsCertificate?: FirewallPolicyTlsCertificate;
@@ -622,7 +617,7 @@ export interface FirewallPolicyInsights {
   readonly retentionInDays?: number;
   /**
   * log_analytics_workspace block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_policy#log_analytics_workspace FirewallPolicy#log_analytics_workspace}
   */
   readonly logAnalyticsWorkspace?: FirewallPolicyInsightsLogAnalyticsWorkspace[] | cdktf.IResolvable;
@@ -1167,13 +1162,13 @@ export interface FirewallPolicyIntrusionDetection {
   readonly privateRanges?: string[];
   /**
   * signature_overrides block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_policy#signature_overrides FirewallPolicy#signature_overrides}
   */
   readonly signatureOverrides?: FirewallPolicyIntrusionDetectionSignatureOverrides[] | cdktf.IResolvable;
   /**
   * traffic_bypass block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_policy#traffic_bypass FirewallPolicy#traffic_bypass}
   */
   readonly trafficBypass?: FirewallPolicyIntrusionDetectionTrafficBypass[] | cdktf.IResolvable;

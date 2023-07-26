@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_application_rule_collection
 // generated from terraform resource schema
 
@@ -41,13 +36,13 @@ export interface FirewallApplicationRuleCollectionConfig extends cdktf.Terraform
   readonly resourceGroupName: string;
   /**
   * rule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_application_rule_collection#rule FirewallApplicationRuleCollection#rule}
   */
   readonly rule: FirewallApplicationRuleCollectionRule[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_application_rule_collection#timeouts FirewallApplicationRuleCollection#timeouts}
   */
   readonly timeouts?: FirewallApplicationRuleCollectionTimeouts;
@@ -197,7 +192,7 @@ export interface FirewallApplicationRuleCollectionRule {
   readonly targetFqdns?: string[];
   /**
   * protocol block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/firewall_application_rule_collection#protocol FirewallApplicationRuleCollection#protocol}
   */
   readonly protocol?: FirewallApplicationRuleCollectionRuleProtocol[] | cdktf.IResolvable;

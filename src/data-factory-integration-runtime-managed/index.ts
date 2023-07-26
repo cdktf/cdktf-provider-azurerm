@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_integration_runtime_managed
 // generated from terraform resource schema
 
@@ -57,25 +52,25 @@ export interface DataFactoryIntegrationRuntimeManagedConfig extends cdktf.Terraf
   readonly numberOfNodes?: number;
   /**
   * catalog_info block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_integration_runtime_managed#catalog_info DataFactoryIntegrationRuntimeManaged#catalog_info}
   */
   readonly catalogInfo?: DataFactoryIntegrationRuntimeManagedCatalogInfo;
   /**
   * custom_setup_script block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_integration_runtime_managed#custom_setup_script DataFactoryIntegrationRuntimeManaged#custom_setup_script}
   */
   readonly customSetupScript?: DataFactoryIntegrationRuntimeManagedCustomSetupScript;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_integration_runtime_managed#timeouts DataFactoryIntegrationRuntimeManaged#timeouts}
   */
   readonly timeouts?: DataFactoryIntegrationRuntimeManagedTimeouts;
   /**
   * vnet_integration block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_integration_runtime_managed#vnet_integration DataFactoryIntegrationRuntimeManaged#vnet_integration}
   */
   readonly vnetIntegration?: DataFactoryIntegrationRuntimeManagedVnetIntegration;

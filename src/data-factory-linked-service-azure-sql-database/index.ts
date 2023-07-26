@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_azure_sql_database
 // generated from terraform resource schema
 
@@ -69,19 +64,19 @@ export interface DataFactoryLinkedServiceAzureSqlDatabaseConfig extends cdktf.Te
   readonly useManagedIdentity?: boolean | cdktf.IResolvable;
   /**
   * key_vault_connection_string block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_azure_sql_database#key_vault_connection_string DataFactoryLinkedServiceAzureSqlDatabase#key_vault_connection_string}
   */
   readonly keyVaultConnectionString?: DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultConnectionString;
   /**
   * key_vault_password block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_azure_sql_database#key_vault_password DataFactoryLinkedServiceAzureSqlDatabase#key_vault_password}
   */
   readonly keyVaultPassword?: DataFactoryLinkedServiceAzureSqlDatabaseKeyVaultPassword;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_linked_service_azure_sql_database#timeouts DataFactoryLinkedServiceAzureSqlDatabase#timeouts}
   */
   readonly timeouts?: DataFactoryLinkedServiceAzureSqlDatabaseTimeouts;

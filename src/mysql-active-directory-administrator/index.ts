@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mysql_active_directory_administrator
 // generated from terraform resource schema
 
@@ -41,7 +36,7 @@ export interface MysqlActiveDirectoryAdministratorConfig extends cdktf.Terraform
   readonly tenantId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mysql_active_directory_administrator#timeouts MysqlActiveDirectoryAdministrator#timeouts}
   */
   readonly timeouts?: MysqlActiveDirectoryAdministratorTimeouts;

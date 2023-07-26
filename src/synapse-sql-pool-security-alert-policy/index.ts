@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_sql_pool_security_alert_policy
 // generated from terraform resource schema
 
@@ -53,7 +48,7 @@ export interface SynapseSqlPoolSecurityAlertPolicyConfig extends cdktf.Terraform
   readonly storageEndpoint?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_sql_pool_security_alert_policy#timeouts SynapseSqlPoolSecurityAlertPolicy#timeouts}
   */
   readonly timeouts?: SynapseSqlPoolSecurityAlertPolicyTimeouts;

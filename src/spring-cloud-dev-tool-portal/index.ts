@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_dev_tool_portal
 // generated from terraform resource schema
 
@@ -41,13 +36,13 @@ export interface SpringCloudDevToolPortalConfig extends cdktf.TerraformMetaArgum
   readonly springCloudServiceId: string;
   /**
   * sso block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_dev_tool_portal#sso SpringCloudDevToolPortal#sso}
   */
   readonly sso?: SpringCloudDevToolPortalSso;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_dev_tool_portal#timeouts SpringCloudDevToolPortal#timeouts}
   */
   readonly timeouts?: SpringCloudDevToolPortalTimeouts;

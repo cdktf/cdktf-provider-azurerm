@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/databox_edge_order
 // generated from terraform resource schema
 
@@ -29,19 +24,19 @@ export interface DataboxEdgeOrderConfig extends cdktf.TerraformMetaArguments {
   readonly resourceGroupName: string;
   /**
   * contact block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/databox_edge_order#contact DataboxEdgeOrder#contact}
   */
   readonly contact: DataboxEdgeOrderContact;
   /**
   * shipment_address block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/databox_edge_order#shipment_address DataboxEdgeOrder#shipment_address}
   */
   readonly shipmentAddress: DataboxEdgeOrderShipmentAddress;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/databox_edge_order#timeouts DataboxEdgeOrder#timeouts}
   */
   readonly timeouts?: DataboxEdgeOrderTimeouts;

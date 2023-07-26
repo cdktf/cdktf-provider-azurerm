@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/lb_backend_address_pool
 // generated from terraform resource schema
 
@@ -29,7 +24,7 @@ export interface DataAzurermLbBackendAddressPoolConfig extends cdktf.TerraformMe
   readonly name: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/lb_backend_address_pool#timeouts DataAzurermLbBackendAddressPool#timeouts}
   */
   readonly timeouts?: DataAzurermLbBackendAddressPoolTimeouts;

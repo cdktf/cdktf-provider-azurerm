@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_trigger_tumbling_window
 // generated from terraform resource schema
 
@@ -69,25 +64,25 @@ export interface DataFactoryTriggerTumblingWindowConfig extends cdktf.TerraformM
   readonly startTime: string;
   /**
   * pipeline block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_trigger_tumbling_window#pipeline DataFactoryTriggerTumblingWindow#pipeline}
   */
   readonly pipeline: DataFactoryTriggerTumblingWindowPipeline;
   /**
   * retry block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_trigger_tumbling_window#retry DataFactoryTriggerTumblingWindow#retry}
   */
   readonly retry?: DataFactoryTriggerTumblingWindowRetry;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_trigger_tumbling_window#timeouts DataFactoryTriggerTumblingWindow#timeouts}
   */
   readonly timeouts?: DataFactoryTriggerTumblingWindowTimeouts;
   /**
   * trigger_dependency block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_trigger_tumbling_window#trigger_dependency DataFactoryTriggerTumblingWindow#trigger_dependency}
   */
   readonly triggerDependency?: DataFactoryTriggerTumblingWindowTriggerDependency[] | cdktf.IResolvable;

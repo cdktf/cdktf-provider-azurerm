@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dns_srv_record
 // generated from terraform resource schema
 
@@ -41,13 +36,13 @@ export interface DnsSrvRecordConfig extends cdktf.TerraformMetaArguments {
   readonly zoneName: string;
   /**
   * record block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dns_srv_record#record DnsSrvRecord#record}
   */
   readonly record: DnsSrvRecordRecord[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dns_srv_record#timeouts DnsSrvRecord#timeouts}
   */
   readonly timeouts?: DnsSrvRecordTimeouts;

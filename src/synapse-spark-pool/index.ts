@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_spark_pool
 // generated from terraform resource schema
 
@@ -81,31 +76,31 @@ export interface SynapseSparkPoolConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * auto_pause block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_spark_pool#auto_pause SynapseSparkPool#auto_pause}
   */
   readonly autoPause?: SynapseSparkPoolAutoPause;
   /**
   * auto_scale block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_spark_pool#auto_scale SynapseSparkPool#auto_scale}
   */
   readonly autoScale?: SynapseSparkPoolAutoScale;
   /**
   * library_requirement block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_spark_pool#library_requirement SynapseSparkPool#library_requirement}
   */
   readonly libraryRequirement?: SynapseSparkPoolLibraryRequirement;
   /**
   * spark_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_spark_pool#spark_config SynapseSparkPool#spark_config}
   */
   readonly sparkConfig?: SynapseSparkPoolSparkConfig;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/synapse_spark_pool#timeouts SynapseSparkPool#timeouts}
   */
   readonly timeouts?: SynapseSparkPoolTimeouts;

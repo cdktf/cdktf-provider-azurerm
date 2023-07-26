@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_integration_account_batch_configuration
 // generated from terraform resource schema
 
@@ -41,13 +36,13 @@ export interface LogicAppIntegrationAccountBatchConfigurationConfig extends cdkt
   readonly resourceGroupName: string;
   /**
   * release_criteria block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_integration_account_batch_configuration#release_criteria LogicAppIntegrationAccountBatchConfiguration#release_criteria}
   */
   readonly releaseCriteria: LogicAppIntegrationAccountBatchConfigurationReleaseCriteria;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_integration_account_batch_configuration#timeouts LogicAppIntegrationAccountBatchConfiguration#timeouts}
   */
   readonly timeouts?: LogicAppIntegrationAccountBatchConfigurationTimeouts;
@@ -189,7 +184,7 @@ export interface LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecu
   readonly weekDays?: string[];
   /**
   * monthly block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_integration_account_batch_configuration#monthly LogicAppIntegrationAccountBatchConfiguration#monthly}
   */
   readonly monthly?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthly[] | cdktf.IResolvable;
@@ -368,7 +363,7 @@ export interface LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecu
   readonly timeZone?: string;
   /**
   * schedule block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_integration_account_batch_configuration#schedule LogicAppIntegrationAccountBatchConfiguration#schedule}
   */
   readonly schedule?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceSchedule;
@@ -552,7 +547,7 @@ export interface LogicAppIntegrationAccountBatchConfigurationReleaseCriteria {
   readonly messageCount?: number;
   /**
   * recurrence block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/logic_app_integration_account_batch_configuration#recurrence LogicAppIntegrationAccountBatchConfiguration#recurrence}
   */
   readonly recurrence?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrence;

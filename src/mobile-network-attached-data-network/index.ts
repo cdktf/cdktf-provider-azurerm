@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_attached_data_network
 // generated from terraform resource schema
 
@@ -65,13 +60,13 @@ export interface MobileNetworkAttachedDataNetworkConfig extends cdktf.TerraformM
   readonly userPlaneAccessName?: string;
   /**
   * network_address_port_translation block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_attached_data_network#network_address_port_translation MobileNetworkAttachedDataNetwork#network_address_port_translation}
   */
   readonly networkAddressPortTranslation?: MobileNetworkAttachedDataNetworkNetworkAddressPortTranslation;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_attached_data_network#timeouts MobileNetworkAttachedDataNetwork#timeouts}
   */
   readonly timeouts?: MobileNetworkAttachedDataNetworkTimeouts;
@@ -195,7 +190,7 @@ export interface MobileNetworkAttachedDataNetworkNetworkAddressPortTranslation {
   readonly udpPortReuseMinimumHoldTimeInSeconds?: number;
   /**
   * port_range block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/mobile_network_attached_data_network#port_range MobileNetworkAttachedDataNetwork#port_range}
   */
   readonly portRange?: MobileNetworkAttachedDataNetworkNetworkAddressPortTranslationPortRange;

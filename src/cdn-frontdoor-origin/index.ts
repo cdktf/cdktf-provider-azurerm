@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_origin
 // generated from terraform resource schema
 
@@ -65,13 +60,13 @@ export interface CdnFrontdoorOriginConfig extends cdktf.TerraformMetaArguments {
   readonly weight?: number;
   /**
   * private_link block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_origin#private_link CdnFrontdoorOrigin#private_link}
   */
   readonly privateLink?: CdnFrontdoorOriginPrivateLink;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/cdn_frontdoor_origin#timeouts CdnFrontdoorOrigin#timeouts}
   */
   readonly timeouts?: CdnFrontdoorOriginTimeouts;

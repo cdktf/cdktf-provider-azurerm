@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_policy_vm_workload
 // generated from terraform resource schema
 
@@ -37,19 +32,19 @@ export interface BackupPolicyVmWorkloadConfig extends cdktf.TerraformMetaArgumen
   readonly workloadType: string;
   /**
   * protection_policy block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_policy_vm_workload#protection_policy BackupPolicyVmWorkload#protection_policy}
   */
   readonly protectionPolicy: BackupPolicyVmWorkloadProtectionPolicy[] | cdktf.IResolvable;
   /**
   * settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_policy_vm_workload#settings BackupPolicyVmWorkload#settings}
   */
   readonly settings: BackupPolicyVmWorkloadSettings;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_policy_vm_workload#timeouts BackupPolicyVmWorkload#timeouts}
   */
   readonly timeouts?: BackupPolicyVmWorkloadTimeouts;
@@ -775,37 +770,37 @@ export interface BackupPolicyVmWorkloadProtectionPolicy {
   readonly policyType: string;
   /**
   * backup block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_policy_vm_workload#backup BackupPolicyVmWorkload#backup}
   */
   readonly backup: BackupPolicyVmWorkloadProtectionPolicyBackup;
   /**
   * retention_daily block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_policy_vm_workload#retention_daily BackupPolicyVmWorkload#retention_daily}
   */
   readonly retentionDaily?: BackupPolicyVmWorkloadProtectionPolicyRetentionDaily;
   /**
   * retention_monthly block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_policy_vm_workload#retention_monthly BackupPolicyVmWorkload#retention_monthly}
   */
   readonly retentionMonthly?: BackupPolicyVmWorkloadProtectionPolicyRetentionMonthly;
   /**
   * retention_weekly block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_policy_vm_workload#retention_weekly BackupPolicyVmWorkload#retention_weekly}
   */
   readonly retentionWeekly?: BackupPolicyVmWorkloadProtectionPolicyRetentionWeekly;
   /**
   * retention_yearly block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_policy_vm_workload#retention_yearly BackupPolicyVmWorkload#retention_yearly}
   */
   readonly retentionYearly?: BackupPolicyVmWorkloadProtectionPolicyRetentionYearly;
   /**
   * simple_retention block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/backup_policy_vm_workload#simple_retention BackupPolicyVmWorkload#simple_retention}
   */
   readonly simpleRetention?: BackupPolicyVmWorkloadProtectionPolicySimpleRetention;

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/role_definition
 // generated from terraform resource schema
 
@@ -41,13 +36,13 @@ export interface RoleDefinitionConfig extends cdktf.TerraformMetaArguments {
   readonly scope: string;
   /**
   * permissions block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/role_definition#permissions RoleDefinition#permissions}
   */
   readonly permissions?: RoleDefinitionPermissions[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/role_definition#timeouts RoleDefinition#timeouts}
   */
   readonly timeouts?: RoleDefinitionTimeouts;

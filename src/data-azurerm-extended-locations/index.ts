@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/extended_locations
 // generated from terraform resource schema
 
@@ -25,7 +20,7 @@ export interface DataAzurermExtendedLocationsConfig extends cdktf.TerraformMetaA
   readonly location: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/extended_locations#timeouts DataAzurermExtendedLocations#timeouts}
   */
   readonly timeouts?: DataAzurermExtendedLocationsTimeouts;

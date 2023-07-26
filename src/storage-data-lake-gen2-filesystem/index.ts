@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_data_lake_gen2_filesystem
 // generated from terraform resource schema
 
@@ -41,13 +36,13 @@ export interface StorageDataLakeGen2FilesystemConfig extends cdktf.TerraformMeta
   readonly storageAccountId: string;
   /**
   * ace block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_data_lake_gen2_filesystem#ace StorageDataLakeGen2Filesystem#ace}
   */
   readonly ace?: StorageDataLakeGen2FilesystemAce[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_data_lake_gen2_filesystem#timeouts StorageDataLakeGen2Filesystem#timeouts}
   */
   readonly timeouts?: StorageDataLakeGen2FilesystemTimeouts;

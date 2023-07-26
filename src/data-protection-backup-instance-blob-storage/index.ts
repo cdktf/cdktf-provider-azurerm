@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_protection_backup_instance_blob_storage
 // generated from terraform resource schema
 
@@ -41,7 +36,7 @@ export interface DataProtectionBackupInstanceBlobStorageConfig extends cdktf.Ter
   readonly vaultId: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_protection_backup_instance_blob_storage#timeouts DataProtectionBackupInstanceBlobStorage#timeouts}
   */
   readonly timeouts?: DataProtectionBackupInstanceBlobStorageTimeouts;

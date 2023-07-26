@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_flowlet_data_flow
 // generated from terraform resource schema
 
@@ -49,25 +44,25 @@ export interface DataFactoryFlowletDataFlowConfig extends cdktf.TerraformMetaArg
   readonly scriptLines?: string[];
   /**
   * sink block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_flowlet_data_flow#sink DataFactoryFlowletDataFlow#sink}
   */
   readonly sink: DataFactoryFlowletDataFlowSink[] | cdktf.IResolvable;
   /**
   * source block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_flowlet_data_flow#source DataFactoryFlowletDataFlow#source}
   */
   readonly source: DataFactoryFlowletDataFlowSource[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_flowlet_data_flow#timeouts DataFactoryFlowletDataFlow#timeouts}
   */
   readonly timeouts?: DataFactoryFlowletDataFlowTimeouts;
   /**
   * transformation block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_flowlet_data_flow#transformation DataFactoryFlowletDataFlow#transformation}
   */
   readonly transformation?: DataFactoryFlowletDataFlowTransformation[] | cdktf.IResolvable;
@@ -555,31 +550,31 @@ export interface DataFactoryFlowletDataFlowSink {
   readonly name: string;
   /**
   * dataset block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_flowlet_data_flow#dataset DataFactoryFlowletDataFlow#dataset}
   */
   readonly dataset?: DataFactoryFlowletDataFlowSinkDataset;
   /**
   * flowlet block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_flowlet_data_flow#flowlet DataFactoryFlowletDataFlow#flowlet}
   */
   readonly flowlet?: DataFactoryFlowletDataFlowSinkFlowlet;
   /**
   * linked_service block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_flowlet_data_flow#linked_service DataFactoryFlowletDataFlow#linked_service}
   */
   readonly linkedService?: DataFactoryFlowletDataFlowSinkLinkedService;
   /**
   * rejected_linked_service block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_flowlet_data_flow#rejected_linked_service DataFactoryFlowletDataFlow#rejected_linked_service}
   */
   readonly rejectedLinkedService?: DataFactoryFlowletDataFlowSinkRejectedLinkedService;
   /**
   * schema_linked_service block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_flowlet_data_flow#schema_linked_service DataFactoryFlowletDataFlow#schema_linked_service}
   */
   readonly schemaLinkedService?: DataFactoryFlowletDataFlowSinkSchemaLinkedService;
@@ -1293,31 +1288,31 @@ export interface DataFactoryFlowletDataFlowSource {
   readonly name: string;
   /**
   * dataset block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_flowlet_data_flow#dataset DataFactoryFlowletDataFlow#dataset}
   */
   readonly dataset?: DataFactoryFlowletDataFlowSourceDataset;
   /**
   * flowlet block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_flowlet_data_flow#flowlet DataFactoryFlowletDataFlow#flowlet}
   */
   readonly flowlet?: DataFactoryFlowletDataFlowSourceFlowlet;
   /**
   * linked_service block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_flowlet_data_flow#linked_service DataFactoryFlowletDataFlow#linked_service}
   */
   readonly linkedService?: DataFactoryFlowletDataFlowSourceLinkedService;
   /**
   * rejected_linked_service block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_flowlet_data_flow#rejected_linked_service DataFactoryFlowletDataFlow#rejected_linked_service}
   */
   readonly rejectedLinkedService?: DataFactoryFlowletDataFlowSourceRejectedLinkedService;
   /**
   * schema_linked_service block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_flowlet_data_flow#schema_linked_service DataFactoryFlowletDataFlow#schema_linked_service}
   */
   readonly schemaLinkedService?: DataFactoryFlowletDataFlowSourceSchemaLinkedService;
@@ -2009,19 +2004,19 @@ export interface DataFactoryFlowletDataFlowTransformation {
   readonly name: string;
   /**
   * dataset block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_flowlet_data_flow#dataset DataFactoryFlowletDataFlow#dataset}
   */
   readonly dataset?: DataFactoryFlowletDataFlowTransformationDataset;
   /**
   * flowlet block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_flowlet_data_flow#flowlet DataFactoryFlowletDataFlow#flowlet}
   */
   readonly flowlet?: DataFactoryFlowletDataFlowTransformationFlowlet;
   /**
   * linked_service block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/data_factory_flowlet_data_flow#linked_service DataFactoryFlowletDataFlow#linked_service}
   */
   readonly linkedService?: DataFactoryFlowletDataFlowTransformationLinkedService;

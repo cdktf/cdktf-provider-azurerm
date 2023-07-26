@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/express_route_port
 // generated from terraform resource schema
 
@@ -53,25 +48,25 @@ export interface ExpressRoutePortConfig extends cdktf.TerraformMetaArguments {
   readonly tags?: { [key: string]: string };
   /**
   * identity block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/express_route_port#identity ExpressRoutePort#identity}
   */
   readonly identity?: ExpressRoutePortIdentity;
   /**
   * link1 block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/express_route_port#link1 ExpressRoutePort#link1}
   */
   readonly link1?: ExpressRoutePortLink1;
   /**
   * link2 block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/express_route_port#link2 ExpressRoutePort#link2}
   */
   readonly link2?: ExpressRoutePortLink2;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/express_route_port#timeouts ExpressRoutePort#timeouts}
   */
   readonly timeouts?: ExpressRoutePortTimeouts;

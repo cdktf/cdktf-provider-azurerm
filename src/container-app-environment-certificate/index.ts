@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_app_environment_certificate
 // generated from terraform resource schema
 
@@ -14,19 +9,19 @@ import * as cdktf from 'cdktf';
 export interface ContainerAppEnvironmentCertificateConfig extends cdktf.TerraformMetaArguments {
   /**
   * The Certificate Private Key as a base64 encoded PFX or PEM.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_app_environment_certificate#certificate_blob_base64 ContainerAppEnvironmentCertificate#certificate_blob_base64}
   */
   readonly certificateBlobBase64: string;
   /**
   * The password for the Certificate.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_app_environment_certificate#certificate_password ContainerAppEnvironmentCertificate#certificate_password}
   */
   readonly certificatePassword: string;
   /**
   * The Container App Managed Environment ID to configure this Certificate on.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_app_environment_certificate#container_app_environment_id ContainerAppEnvironmentCertificate#container_app_environment_id}
   */
   readonly containerAppEnvironmentId: string;
@@ -39,7 +34,7 @@ export interface ContainerAppEnvironmentCertificateConfig extends cdktf.Terrafor
   readonly id?: string;
   /**
   * The name of the Container Apps Environment Certificate.
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_app_environment_certificate#name ContainerAppEnvironmentCertificate#name}
   */
   readonly name: string;
@@ -49,7 +44,7 @@ export interface ContainerAppEnvironmentCertificateConfig extends cdktf.Terrafor
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/container_app_environment_certificate#timeouts ContainerAppEnvironmentCertificate#timeouts}
   */
   readonly timeouts?: ContainerAppEnvironmentCertificateTimeouts;

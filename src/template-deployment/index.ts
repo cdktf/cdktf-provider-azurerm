@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/template_deployment
 // generated from terraform resource schema
 
@@ -45,7 +40,7 @@ export interface TemplateDeploymentConfig extends cdktf.TerraformMetaArguments {
   readonly templateBody?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/template_deployment#timeouts TemplateDeployment#timeouts}
   */
   readonly timeouts?: TemplateDeploymentTimeouts;

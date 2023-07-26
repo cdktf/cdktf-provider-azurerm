@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dev_test_global_vm_shutdown_schedule
 // generated from terraform resource schema
 
@@ -45,13 +40,13 @@ export interface DevTestGlobalVmShutdownScheduleConfig extends cdktf.TerraformMe
   readonly virtualMachineId: string;
   /**
   * notification_settings block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dev_test_global_vm_shutdown_schedule#notification_settings DevTestGlobalVmShutdownSchedule#notification_settings}
   */
   readonly notificationSettings: DevTestGlobalVmShutdownScheduleNotificationSettings;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/dev_test_global_vm_shutdown_schedule#timeouts DevTestGlobalVmShutdownSchedule#timeouts}
   */
   readonly timeouts?: DevTestGlobalVmShutdownScheduleTimeouts;

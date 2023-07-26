@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/web_pubsub
 // generated from terraform resource schema
 
@@ -29,7 +24,7 @@ export interface DataAzurermWebPubsubConfig extends cdktf.TerraformMetaArguments
   readonly resourceGroupName: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/web_pubsub#timeouts DataAzurermWebPubsub#timeouts}
   */
   readonly timeouts?: DataAzurermWebPubsubTimeouts;

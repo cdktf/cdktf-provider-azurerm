@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/key_vault_managed_hardware_security_module
 // generated from terraform resource schema
 
@@ -69,13 +64,13 @@ export interface KeyVaultManagedHardwareSecurityModuleConfig extends cdktf.Terra
   readonly tenantId: string;
   /**
   * network_acls block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/key_vault_managed_hardware_security_module#network_acls KeyVaultManagedHardwareSecurityModule#network_acls}
   */
   readonly networkAcls?: KeyVaultManagedHardwareSecurityModuleNetworkAcls;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/key_vault_managed_hardware_security_module#timeouts KeyVaultManagedHardwareSecurityModule#timeouts}
   */
   readonly timeouts?: KeyVaultManagedHardwareSecurityModuleTimeouts;

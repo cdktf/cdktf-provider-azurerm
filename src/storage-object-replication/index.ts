@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_object_replication
 // generated from terraform resource schema
 
@@ -29,13 +24,13 @@ export interface StorageObjectReplicationConfig extends cdktf.TerraformMetaArgum
   readonly sourceStorageAccountId: string;
   /**
   * rules block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_object_replication#rules StorageObjectReplication#rules}
   */
   readonly rules: StorageObjectReplicationRules[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/storage_object_replication#timeouts StorageObjectReplication#timeouts}
   */
   readonly timeouts?: StorageObjectReplicationTimeouts;

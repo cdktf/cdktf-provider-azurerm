@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/automation_variables
 // generated from terraform resource schema
 
@@ -25,7 +20,7 @@ export interface DataAzurermAutomationVariablesConfig extends cdktf.TerraformMet
   readonly id?: string;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/data-sources/automation_variables#timeouts DataAzurermAutomationVariables#timeouts}
   */
   readonly timeouts?: DataAzurermAutomationVariablesTimeouts;

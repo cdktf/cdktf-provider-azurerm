@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_configuration_service
 // generated from terraform resource schema
 
@@ -33,13 +28,13 @@ export interface SpringCloudConfigurationServiceConfig extends cdktf.TerraformMe
   readonly springCloudServiceId: string;
   /**
   * repository block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_configuration_service#repository SpringCloudConfigurationService#repository}
   */
   readonly repository?: SpringCloudConfigurationServiceRepository[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/spring_cloud_configuration_service#timeouts SpringCloudConfigurationService#timeouts}
   */
   readonly timeouts?: SpringCloudConfigurationServiceTimeouts;

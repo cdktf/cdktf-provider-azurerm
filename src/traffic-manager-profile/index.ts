@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/traffic_manager_profile
 // generated from terraform resource schema
 
@@ -49,19 +44,19 @@ export interface TrafficManagerProfileConfig extends cdktf.TerraformMetaArgument
   readonly trafficViewEnabled?: boolean | cdktf.IResolvable;
   /**
   * dns_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/traffic_manager_profile#dns_config TrafficManagerProfile#dns_config}
   */
   readonly dnsConfig: TrafficManagerProfileDnsConfig;
   /**
   * monitor_config block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/traffic_manager_profile#monitor_config TrafficManagerProfile#monitor_config}
   */
   readonly monitorConfig: TrafficManagerProfileMonitorConfig;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/traffic_manager_profile#timeouts TrafficManagerProfile#timeouts}
   */
   readonly timeouts?: TrafficManagerProfileTimeouts;
@@ -301,7 +296,7 @@ export interface TrafficManagerProfileMonitorConfig {
   readonly toleratedNumberOfFailures?: number;
   /**
   * custom_header block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/traffic_manager_profile#custom_header TrafficManagerProfile#custom_header}
   */
   readonly customHeader?: TrafficManagerProfileMonitorConfigCustomHeader[] | cdktf.IResolvable;

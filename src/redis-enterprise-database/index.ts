@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/redis_enterprise_database
 // generated from terraform resource schema
 
@@ -57,13 +52,13 @@ export interface RedisEnterpriseDatabaseConfig extends cdktf.TerraformMetaArgume
   readonly resourceGroupName?: string;
   /**
   * module block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/redis_enterprise_database#module RedisEnterpriseDatabase#module}
   */
   readonly module?: RedisEnterpriseDatabaseModule[] | cdktf.IResolvable;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/redis_enterprise_database#timeouts RedisEnterpriseDatabase#timeouts}
   */
   readonly timeouts?: RedisEnterpriseDatabaseTimeouts;

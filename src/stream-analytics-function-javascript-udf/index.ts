@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/stream_analytics_function_javascript_udf
 // generated from terraform resource schema
 
@@ -37,19 +32,19 @@ export interface StreamAnalyticsFunctionJavascriptUdfConfig extends cdktf.Terraf
   readonly streamAnalyticsJobName: string;
   /**
   * input block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/stream_analytics_function_javascript_udf#input StreamAnalyticsFunctionJavascriptUdf#input}
   */
   readonly input: StreamAnalyticsFunctionJavascriptUdfInput[] | cdktf.IResolvable;
   /**
   * output block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/stream_analytics_function_javascript_udf#output StreamAnalyticsFunctionJavascriptUdf#output}
   */
   readonly output: StreamAnalyticsFunctionJavascriptUdfOutput;
   /**
   * timeouts block
-  * 
+  *
   * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/stream_analytics_function_javascript_udf#timeouts StreamAnalyticsFunctionJavascriptUdf#timeouts}
   */
   readonly timeouts?: StreamAnalyticsFunctionJavascriptUdfTimeouts;
