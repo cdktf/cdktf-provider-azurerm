@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermServicebusTopic.DataAzurermServicebusTopic.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermservicebustopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermservicebustopic"
 
 dataazurermservicebustopic.NewDataAzurermServicebusTopic(scope Construct, id *string, config DataAzurermServicebusTopicConfig) DataAzurermServicebusTopic
 ```
@@ -318,7 +318,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermServicebusTopic.DataAzurermServicebusTopic.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermservicebustopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermservicebustopic"
 
 dataazurermservicebustopic.DataAzurermServicebusTopic_IsConstruct(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermServicebusTopic.DataAzurermServicebusTopic.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermservicebustopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermservicebustopic"
 
 dataazurermservicebustopic.DataAzurermServicebusTopic_IsTerraformElement(x interface{}) *bool
 ```
@@ -364,7 +364,7 @@ dataazurermservicebustopic.DataAzurermServicebusTopic_IsTerraformElement(x inter
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermServicebusTopic.DataAzurermServicebusTopic.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermservicebustopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermservicebustopic"
 
 dataazurermservicebustopic.DataAzurermServicebusTopic_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -783,7 +783,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermServicebusTopic.DataAzurermServicebusTopicConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermservicebustopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermservicebustopic"
 
 &dataazurermservicebustopic.DataAzurermServicebusTopicConfig {
 	Connection: interface{},
@@ -798,7 +798,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermservicebus
 	NamespaceId: *string,
 	NamespaceName: *string,
 	ResourceGroupName: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermServicebusTopic.DataAzurermServicebusTopicTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.dataAzurermServicebusTopic.DataAzurermServicebusTopicTimeouts,
 }
 ```
 
@@ -974,7 +974,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermServicebusTopic.DataAzurermServicebusTopicTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermservicebustopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermservicebustopic"
 
 &dataazurermservicebustopic.DataAzurermServicebusTopicTimeouts {
 	Read: *string,
@@ -1008,7 +1008,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermServicebusTopic.DataAzurermServicebusTopicTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermservicebustopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermservicebustopic"
 
 dataazurermservicebustopic.NewDataAzurermServicebusTopicTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermServicebusTopicTimeoutsOutputReference
 ```
