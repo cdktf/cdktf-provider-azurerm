@@ -1,3 +1,3 @@
 # `azurerm_eventhub`
 
-Refer to the Terraform Registory for docs: [`azurerm_eventhub`](https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/eventhub).
+Refer to the Terraform Registory for docs: [`azurerm_eventhub`](https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/eventhub).

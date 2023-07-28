@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,98 +8,98 @@ import * as cdktf from 'cdktf';
 
 export interface LabServiceLabConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#description LabServiceLab#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#description LabServiceLab#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#id LabServiceLab#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#id LabServiceLab#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#lab_plan_id LabServiceLab#lab_plan_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#lab_plan_id LabServiceLab#lab_plan_id}
   */
   readonly labPlanId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#location LabServiceLab#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#location LabServiceLab#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#name LabServiceLab#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#name LabServiceLab#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#resource_group_name LabServiceLab#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#resource_group_name LabServiceLab#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#tags LabServiceLab#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#tags LabServiceLab#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#title LabServiceLab#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#title LabServiceLab#title}
   */
   readonly title: string;
   /**
   * auto_shutdown block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#auto_shutdown LabServiceLab#auto_shutdown}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#auto_shutdown LabServiceLab#auto_shutdown}
   */
   readonly autoShutdown?: LabServiceLabAutoShutdown;
   /**
   * connection_setting block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#connection_setting LabServiceLab#connection_setting}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#connection_setting LabServiceLab#connection_setting}
   */
   readonly connectionSetting?: LabServiceLabConnectionSetting;
   /**
   * network block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#network LabServiceLab#network}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#network LabServiceLab#network}
   */
   readonly network?: LabServiceLabNetwork;
   /**
   * roster block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#roster LabServiceLab#roster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#roster LabServiceLab#roster}
   */
   readonly roster?: LabServiceLabRoster;
   /**
   * security block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#security LabServiceLab#security}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#security LabServiceLab#security}
   */
   readonly security: LabServiceLabSecurity;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#timeouts LabServiceLab#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#timeouts LabServiceLab#timeouts}
   */
   readonly timeouts?: LabServiceLabTimeouts;
   /**
   * virtual_machine block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#virtual_machine LabServiceLab#virtual_machine}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#virtual_machine LabServiceLab#virtual_machine}
   */
   readonly virtualMachine: LabServiceLabVirtualMachine;
 }
 export interface LabServiceLabAutoShutdown {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#disconnect_delay LabServiceLab#disconnect_delay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#disconnect_delay LabServiceLab#disconnect_delay}
   */
   readonly disconnectDelay?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#idle_delay LabServiceLab#idle_delay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#idle_delay LabServiceLab#idle_delay}
   */
   readonly idleDelay?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#no_connect_delay LabServiceLab#no_connect_delay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#no_connect_delay LabServiceLab#no_connect_delay}
   */
   readonly noConnectDelay?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#shutdown_on_idle LabServiceLab#shutdown_on_idle}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#shutdown_on_idle LabServiceLab#shutdown_on_idle}
   */
   readonly shutdownOnIdle?: string;
 }
@@ -238,11 +233,11 @@ export class LabServiceLabAutoShutdownOutputReference extends cdktf.ComplexObjec
 }
 export interface LabServiceLabConnectionSetting {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#client_rdp_access LabServiceLab#client_rdp_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#client_rdp_access LabServiceLab#client_rdp_access}
   */
   readonly clientRdpAccess?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#client_ssh_access LabServiceLab#client_ssh_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#client_ssh_access LabServiceLab#client_ssh_access}
   */
   readonly clientSshAccess?: string;
 }
@@ -330,7 +325,7 @@ export class LabServiceLabConnectionSettingOutputReference extends cdktf.Complex
 }
 export interface LabServiceLabNetwork {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#subnet_id LabServiceLab#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#subnet_id LabServiceLab#subnet_id}
   */
   readonly subnetId?: string;
 }
@@ -405,23 +400,23 @@ export class LabServiceLabNetworkOutputReference extends cdktf.ComplexObject {
 }
 export interface LabServiceLabRoster {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#active_directory_group_id LabServiceLab#active_directory_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#active_directory_group_id LabServiceLab#active_directory_group_id}
   */
   readonly activeDirectoryGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#lms_instance LabServiceLab#lms_instance}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#lms_instance LabServiceLab#lms_instance}
   */
   readonly lmsInstance?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#lti_client_id LabServiceLab#lti_client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#lti_client_id LabServiceLab#lti_client_id}
   */
   readonly ltiClientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#lti_context_id LabServiceLab#lti_context_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#lti_context_id LabServiceLab#lti_context_id}
   */
   readonly ltiContextId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#lti_roster_endpoint LabServiceLab#lti_roster_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#lti_roster_endpoint LabServiceLab#lti_roster_endpoint}
   */
   readonly ltiRosterEndpoint?: string;
 }
@@ -578,7 +573,7 @@ export class LabServiceLabRosterOutputReference extends cdktf.ComplexObject {
 }
 export interface LabServiceLabSecurity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#open_access_enabled LabServiceLab#open_access_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#open_access_enabled LabServiceLab#open_access_enabled}
   */
   readonly openAccessEnabled: boolean | cdktf.IResolvable;
 }
@@ -645,19 +640,19 @@ export class LabServiceLabSecurityOutputReference extends cdktf.ComplexObject {
 }
 export interface LabServiceLabTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#create LabServiceLab#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#create LabServiceLab#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#delete LabServiceLab#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#delete LabServiceLab#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#read LabServiceLab#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#read LabServiceLab#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#update LabServiceLab#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#update LabServiceLab#update}
   */
   readonly update?: string;
 }
@@ -801,11 +796,11 @@ export class LabServiceLabTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 export interface LabServiceLabVirtualMachineAdminUser {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#password LabServiceLab#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#password LabServiceLab#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#username LabServiceLab#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#username LabServiceLab#username}
   */
   readonly username: string;
 }
@@ -887,26 +882,26 @@ export class LabServiceLabVirtualMachineAdminUserOutputReference extends cdktf.C
 }
 export interface LabServiceLabVirtualMachineImageReference {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#id LabServiceLab#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#id LabServiceLab#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#offer LabServiceLab#offer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#offer LabServiceLab#offer}
   */
   readonly offer?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#publisher LabServiceLab#publisher}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#publisher LabServiceLab#publisher}
   */
   readonly publisher?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#sku LabServiceLab#sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#sku LabServiceLab#sku}
   */
   readonly sku?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#version LabServiceLab#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#version LabServiceLab#version}
   */
   readonly version?: string;
 }
@@ -1063,11 +1058,11 @@ export class LabServiceLabVirtualMachineImageReferenceOutputReference extends cd
 }
 export interface LabServiceLabVirtualMachineNonAdminUser {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#password LabServiceLab#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#password LabServiceLab#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#username LabServiceLab#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#username LabServiceLab#username}
   */
   readonly username: string;
 }
@@ -1149,11 +1144,11 @@ export class LabServiceLabVirtualMachineNonAdminUserOutputReference extends cdkt
 }
 export interface LabServiceLabVirtualMachineSku {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#capacity LabServiceLab#capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#capacity LabServiceLab#capacity}
   */
   readonly capacity: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#name LabServiceLab#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#name LabServiceLab#name}
   */
   readonly name: string;
 }
@@ -1235,43 +1230,43 @@ export class LabServiceLabVirtualMachineSkuOutputReference extends cdktf.Complex
 }
 export interface LabServiceLabVirtualMachine {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#additional_capability_gpu_drivers_installed LabServiceLab#additional_capability_gpu_drivers_installed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#additional_capability_gpu_drivers_installed LabServiceLab#additional_capability_gpu_drivers_installed}
   */
   readonly additionalCapabilityGpuDriversInstalled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#create_option LabServiceLab#create_option}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#create_option LabServiceLab#create_option}
   */
   readonly createOption?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#shared_password_enabled LabServiceLab#shared_password_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#shared_password_enabled LabServiceLab#shared_password_enabled}
   */
   readonly sharedPasswordEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#usage_quota LabServiceLab#usage_quota}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#usage_quota LabServiceLab#usage_quota}
   */
   readonly usageQuota?: string;
   /**
   * admin_user block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#admin_user LabServiceLab#admin_user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#admin_user LabServiceLab#admin_user}
   */
   readonly adminUser: LabServiceLabVirtualMachineAdminUser;
   /**
   * image_reference block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#image_reference LabServiceLab#image_reference}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#image_reference LabServiceLab#image_reference}
   */
   readonly imageReference: LabServiceLabVirtualMachineImageReference;
   /**
   * non_admin_user block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#non_admin_user LabServiceLab#non_admin_user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#non_admin_user LabServiceLab#non_admin_user}
   */
   readonly nonAdminUser?: LabServiceLabVirtualMachineNonAdminUser;
   /**
   * sku block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab#sku LabServiceLab#sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab#sku LabServiceLab#sku}
   */
   readonly sku: LabServiceLabVirtualMachineSku;
 }
@@ -1488,7 +1483,7 @@ export class LabServiceLabVirtualMachineOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab azurerm_lab_service_lab}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab azurerm_lab_service_lab}
 */
 export class LabServiceLab extends cdktf.TerraformResource {
 
@@ -1502,7 +1497,7 @@ export class LabServiceLab extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/lab_service_lab azurerm_lab_service_lab} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/lab_service_lab azurerm_lab_service_lab} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1513,7 +1508,7 @@ export class LabServiceLab extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_lab_service_lab',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.66.0',
+        providerVersion: '3.67.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
