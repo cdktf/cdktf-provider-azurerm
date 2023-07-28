@@ -1,3 +1,3 @@
 # `azurerm_netapp_account`
 
-Refer to the Terraform Registory for docs: [`azurerm_netapp_account`](https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/netapp_account).
+Refer to the Terraform Registory for docs: [`azurerm_netapp_account`](https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/netapp_account).

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/digital_twins_instance
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/digital_twins_instance
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,44 +13,44 @@ import * as cdktf from 'cdktf';
 
 export interface DigitalTwinsInstanceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/digital_twins_instance#id DigitalTwinsInstance#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/digital_twins_instance#id DigitalTwinsInstance#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/digital_twins_instance#location DigitalTwinsInstance#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/digital_twins_instance#location DigitalTwinsInstance#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/digital_twins_instance#name DigitalTwinsInstance#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/digital_twins_instance#name DigitalTwinsInstance#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/digital_twins_instance#resource_group_name DigitalTwinsInstance#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/digital_twins_instance#resource_group_name DigitalTwinsInstance#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/digital_twins_instance#tags DigitalTwinsInstance#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/digital_twins_instance#tags DigitalTwinsInstance#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/digital_twins_instance#identity DigitalTwinsInstance#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/digital_twins_instance#identity DigitalTwinsInstance#identity}
   */
   readonly identity?: DigitalTwinsInstanceIdentity;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/digital_twins_instance#timeouts DigitalTwinsInstance#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/digital_twins_instance#timeouts DigitalTwinsInstance#timeouts}
   */
   readonly timeouts?: DigitalTwinsInstanceTimeouts;
 }
 export interface DigitalTwinsInstanceIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/digital_twins_instance#type DigitalTwinsInstance#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/digital_twins_instance#type DigitalTwinsInstance#type}
   */
   readonly type: string;
 }
@@ -122,19 +122,19 @@ export class DigitalTwinsInstanceIdentityOutputReference extends cdktf.ComplexOb
 }
 export interface DigitalTwinsInstanceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/digital_twins_instance#create DigitalTwinsInstance#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/digital_twins_instance#create DigitalTwinsInstance#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/digital_twins_instance#delete DigitalTwinsInstance#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/digital_twins_instance#delete DigitalTwinsInstance#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/digital_twins_instance#read DigitalTwinsInstance#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/digital_twins_instance#read DigitalTwinsInstance#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/digital_twins_instance#update DigitalTwinsInstance#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/digital_twins_instance#update DigitalTwinsInstance#update}
   */
   readonly update?: string;
 }
@@ -278,7 +278,7 @@ export class DigitalTwinsInstanceTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/digital_twins_instance azurerm_digital_twins_instance}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/digital_twins_instance azurerm_digital_twins_instance}
 */
 export class DigitalTwinsInstance extends cdktf.TerraformResource {
 
@@ -292,7 +292,7 @@ export class DigitalTwinsInstance extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/digital_twins_instance azurerm_digital_twins_instance} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/digital_twins_instance azurerm_digital_twins_instance} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -303,7 +303,7 @@ export class DigitalTwinsInstance extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_digital_twins_instance',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.66.0',
+        providerVersion: '3.67.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

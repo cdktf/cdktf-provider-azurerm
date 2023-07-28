@@ -1,6 +1,6 @@
 # `azurerm_bot_channel_alexa`
 
-Refer to the Terraform Registory for docs: [`azurerm_bot_channel_alexa`](https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_alexa).
+Refer to the Terraform Registory for docs: [`azurerm_bot_channel_alexa`](https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/bot_channel_alexa).
 
 # `botChannelAlexa` Submodule <a name="`botChannelAlexa` Submodule" id="@cdktf/provider-azurerm.botChannelAlexa"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_bot_channel_alexa`](https:/
 
 ### BotChannelAlexa <a name="BotChannelAlexa" id="@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexa"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_alexa azurerm_bot_channel_alexa}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/bot_channel_alexa azurerm_bot_channel_alexa}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexa.Initializer"></a>
 
@@ -690,11 +690,11 @@ const botChannelAlexaConfig: botChannelAlexa.BotChannelAlexaConfig = { ... }
 | <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexaConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexaConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexaConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexaConfig.property.botName">botName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_alexa#bot_name BotChannelAlexa#bot_name}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexaConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_alexa#location BotChannelAlexa#location}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexaConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_alexa#resource_group_name BotChannelAlexa#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexaConfig.property.skillId">skillId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_alexa#skill_id BotChannelAlexa#skill_id}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexaConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_alexa#id BotChannelAlexa#id}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexaConfig.property.botName">botName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/bot_channel_alexa#bot_name BotChannelAlexa#bot_name}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexaConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/bot_channel_alexa#location BotChannelAlexa#location}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexaConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/bot_channel_alexa#resource_group_name BotChannelAlexa#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexaConfig.property.skillId">skillId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/bot_channel_alexa#skill_id BotChannelAlexa#skill_id}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexaConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/bot_channel_alexa#id BotChannelAlexa#id}. |
 | <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexaConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexaTimeouts">BotChannelAlexaTimeouts</a></code> | timeouts block. |
 
 ---
@@ -777,7 +777,7 @@ public readonly botName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_alexa#bot_name BotChannelAlexa#bot_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/bot_channel_alexa#bot_name BotChannelAlexa#bot_name}.
 
 ---
 
@@ -789,7 +789,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_alexa#location BotChannelAlexa#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/bot_channel_alexa#location BotChannelAlexa#location}.
 
 ---
 
@@ -801,7 +801,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_alexa#resource_group_name BotChannelAlexa#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/bot_channel_alexa#resource_group_name BotChannelAlexa#resource_group_name}.
 
 ---
 
@@ -813,7 +813,7 @@ public readonly skillId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_alexa#skill_id BotChannelAlexa#skill_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/bot_channel_alexa#skill_id BotChannelAlexa#skill_id}.
 
 ---
 
@@ -825,7 +825,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_alexa#id BotChannelAlexa#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/bot_channel_alexa#id BotChannelAlexa#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -842,7 +842,7 @@ public readonly timeouts: BotChannelAlexaTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_alexa#timeouts BotChannelAlexa#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/bot_channel_alexa#timeouts BotChannelAlexa#timeouts}
 
 ---
 
@@ -860,10 +860,10 @@ const botChannelAlexaTimeouts: botChannelAlexa.BotChannelAlexaTimeouts = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexaTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_alexa#create BotChannelAlexa#create}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexaTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_alexa#delete BotChannelAlexa#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexaTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_alexa#read BotChannelAlexa#read}. |
-| <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexaTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_alexa#update BotChannelAlexa#update}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexaTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/bot_channel_alexa#create BotChannelAlexa#create}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexaTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/bot_channel_alexa#delete BotChannelAlexa#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexaTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/bot_channel_alexa#read BotChannelAlexa#read}. |
+| <code><a href="#@cdktf/provider-azurerm.botChannelAlexa.BotChannelAlexaTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/bot_channel_alexa#update BotChannelAlexa#update}. |
 
 ---
 
@@ -875,7 +875,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_alexa#create BotChannelAlexa#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/bot_channel_alexa#create BotChannelAlexa#create}.
 
 ---
 
@@ -887,7 +887,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_alexa#delete BotChannelAlexa#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/bot_channel_alexa#delete BotChannelAlexa#delete}.
 
 ---
 
@@ -899,7 +899,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_alexa#read BotChannelAlexa#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/bot_channel_alexa#read BotChannelAlexa#read}.
 
 ---
 
@@ -911,7 +911,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/bot_channel_alexa#update BotChannelAlexa#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/bot_channel_alexa#update BotChannelAlexa#update}.
 
 ---
 

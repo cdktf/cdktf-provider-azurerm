@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vmware_express_route_authorization
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/vmware_express_route_authorization
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,38 +13,38 @@ import * as cdktf from 'cdktf';
 
 export interface VmwareExpressRouteAuthorizationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vmware_express_route_authorization#id VmwareExpressRouteAuthorization#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/vmware_express_route_authorization#id VmwareExpressRouteAuthorization#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vmware_express_route_authorization#name VmwareExpressRouteAuthorization#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/vmware_express_route_authorization#name VmwareExpressRouteAuthorization#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vmware_express_route_authorization#private_cloud_id VmwareExpressRouteAuthorization#private_cloud_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/vmware_express_route_authorization#private_cloud_id VmwareExpressRouteAuthorization#private_cloud_id}
   */
   readonly privateCloudId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vmware_express_route_authorization#timeouts VmwareExpressRouteAuthorization#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/vmware_express_route_authorization#timeouts VmwareExpressRouteAuthorization#timeouts}
   */
   readonly timeouts?: VmwareExpressRouteAuthorizationTimeouts;
 }
 export interface VmwareExpressRouteAuthorizationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vmware_express_route_authorization#create VmwareExpressRouteAuthorization#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/vmware_express_route_authorization#create VmwareExpressRouteAuthorization#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vmware_express_route_authorization#delete VmwareExpressRouteAuthorization#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/vmware_express_route_authorization#delete VmwareExpressRouteAuthorization#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vmware_express_route_authorization#read VmwareExpressRouteAuthorization#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/vmware_express_route_authorization#read VmwareExpressRouteAuthorization#read}
   */
   readonly read?: string;
 }
@@ -165,7 +165,7 @@ export class VmwareExpressRouteAuthorizationTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vmware_express_route_authorization azurerm_vmware_express_route_authorization}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/vmware_express_route_authorization azurerm_vmware_express_route_authorization}
 */
 export class VmwareExpressRouteAuthorization extends cdktf.TerraformResource {
 
@@ -179,7 +179,7 @@ export class VmwareExpressRouteAuthorization extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/vmware_express_route_authorization azurerm_vmware_express_route_authorization} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/vmware_express_route_authorization azurerm_vmware_express_route_authorization} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -190,7 +190,7 @@ export class VmwareExpressRouteAuthorization extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_vmware_express_route_authorization',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.66.0',
+        providerVersion: '3.67.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

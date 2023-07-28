@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_insights_api_key
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/application_insights_api_key
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +13,50 @@ import * as cdktf from 'cdktf';
 
 export interface ApplicationInsightsApiKeyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_insights_api_key#application_insights_id ApplicationInsightsApiKey#application_insights_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/application_insights_api_key#application_insights_id ApplicationInsightsApiKey#application_insights_id}
   */
   readonly applicationInsightsId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_insights_api_key#id ApplicationInsightsApiKey#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/application_insights_api_key#id ApplicationInsightsApiKey#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_insights_api_key#name ApplicationInsightsApiKey#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/application_insights_api_key#name ApplicationInsightsApiKey#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_insights_api_key#read_permissions ApplicationInsightsApiKey#read_permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/application_insights_api_key#read_permissions ApplicationInsightsApiKey#read_permissions}
   */
   readonly readPermissions?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_insights_api_key#write_permissions ApplicationInsightsApiKey#write_permissions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/application_insights_api_key#write_permissions ApplicationInsightsApiKey#write_permissions}
   */
   readonly writePermissions?: string[];
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_insights_api_key#timeouts ApplicationInsightsApiKey#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/application_insights_api_key#timeouts ApplicationInsightsApiKey#timeouts}
   */
   readonly timeouts?: ApplicationInsightsApiKeyTimeouts;
 }
 export interface ApplicationInsightsApiKeyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_insights_api_key#create ApplicationInsightsApiKey#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/application_insights_api_key#create ApplicationInsightsApiKey#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_insights_api_key#delete ApplicationInsightsApiKey#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/application_insights_api_key#delete ApplicationInsightsApiKey#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_insights_api_key#read ApplicationInsightsApiKey#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/application_insights_api_key#read ApplicationInsightsApiKey#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_insights_api_key#update ApplicationInsightsApiKey#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/application_insights_api_key#update ApplicationInsightsApiKey#update}
   */
   readonly update?: string;
 }
@@ -200,7 +200,7 @@ export class ApplicationInsightsApiKeyTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_insights_api_key azurerm_application_insights_api_key}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/application_insights_api_key azurerm_application_insights_api_key}
 */
 export class ApplicationInsightsApiKey extends cdktf.TerraformResource {
 
@@ -214,7 +214,7 @@ export class ApplicationInsightsApiKey extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.66.0/docs/resources/application_insights_api_key azurerm_application_insights_api_key} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/application_insights_api_key azurerm_application_insights_api_key} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -225,7 +225,7 @@ export class ApplicationInsightsApiKey extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_application_insights_api_key',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.66.0',
+        providerVersion: '3.67.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
