@@ -1,3 +1,3 @@
 # `data_azurerm_private_dns_aaaa_record`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_private_dns_aaaa_record`](https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/data-sources/private_dns_aaaa_record).
+Refer to the Terraform Registory for docs: [`data_azurerm_private_dns_aaaa_record`](https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/private_dns_aaaa_record).

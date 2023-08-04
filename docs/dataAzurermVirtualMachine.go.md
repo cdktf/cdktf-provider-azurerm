@@ -1,6 +1,6 @@
 # `data_azurerm_virtual_machine`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_virtual_machine`](https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/data-sources/virtual_machine).
+Refer to the Terraform Registory for docs: [`data_azurerm_virtual_machine`](https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/virtual_machine).
 
 # `dataAzurermVirtualMachine` Submodule <a name="`dataAzurermVirtualMachine` Submodule" id="@cdktf/provider-azurerm.dataAzurermVirtualMachine"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_azurerm_virtual_machine`](http
 
 ### DataAzurermVirtualMachine <a name="DataAzurermVirtualMachine" id="@cdktf/provider-azurerm.dataAzurermVirtualMachine.DataAzurermVirtualMachine"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/data-sources/virtual_machine azurerm_virtual_machine}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/virtual_machine azurerm_virtual_machine}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVirtualMachine.DataAzurermVirtualMachine.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualmachine"
 
 dataazurermvirtualmachine.NewDataAzurermVirtualMachine(scope Construct, id *string, config DataAzurermVirtualMachineConfig) DataAzurermVirtualMachine
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermVirtualMachine.DataAzurermVirtualMachine.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualmachine"
 
 dataazurermvirtualmachine.DataAzurermVirtualMachine_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermVirtualMachine.DataAzurermVirtualMachine.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualmachine"
 
 dataazurermvirtualmachine.DataAzurermVirtualMachine_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ dataazurermvirtualmachine.DataAzurermVirtualMachine_IsTerraformElement(x interfa
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermVirtualMachine.DataAzurermVirtualMachine.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualmachine"
 
 dataazurermvirtualmachine.DataAzurermVirtualMachine_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -685,7 +685,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermVirtualMachine.DataAzurermVirtualMachineConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualmachine"
 
 &dataazurermvirtualmachine.DataAzurermVirtualMachineConfig {
 	Connection: interface{},
@@ -698,7 +698,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermvirtual
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.dataAzurermVirtualMachine.DataAzurermVirtualMachineTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermVirtualMachine.DataAzurermVirtualMachineTimeouts,
 }
 ```
 
@@ -713,9 +713,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermvirtual
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualMachine.DataAzurermVirtualMachineConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualMachine.DataAzurermVirtualMachineConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualMachine.DataAzurermVirtualMachineConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualMachine.DataAzurermVirtualMachineConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/data-sources/virtual_machine#name DataAzurermVirtualMachine#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualMachine.DataAzurermVirtualMachineConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/data-sources/virtual_machine#resource_group_name DataAzurermVirtualMachine#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualMachine.DataAzurermVirtualMachineConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/data-sources/virtual_machine#id DataAzurermVirtualMachine#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualMachine.DataAzurermVirtualMachineConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/virtual_machine#name DataAzurermVirtualMachine#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualMachine.DataAzurermVirtualMachineConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/virtual_machine#resource_group_name DataAzurermVirtualMachine#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualMachine.DataAzurermVirtualMachineConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/virtual_machine#id DataAzurermVirtualMachine#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualMachine.DataAzurermVirtualMachineConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualMachine.DataAzurermVirtualMachineTimeouts">DataAzurermVirtualMachineTimeouts</a></code> | timeouts block. |
 
 ---
@@ -798,7 +798,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/data-sources/virtual_machine#name DataAzurermVirtualMachine#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/virtual_machine#name DataAzurermVirtualMachine#name}.
 
 ---
 
@@ -810,7 +810,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/data-sources/virtual_machine#resource_group_name DataAzurermVirtualMachine#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/virtual_machine#resource_group_name DataAzurermVirtualMachine#resource_group_name}.
 
 ---
 
@@ -822,7 +822,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/data-sources/virtual_machine#id DataAzurermVirtualMachine#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/virtual_machine#id DataAzurermVirtualMachine#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -839,7 +839,7 @@ Timeouts DataAzurermVirtualMachineTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/data-sources/virtual_machine#timeouts DataAzurermVirtualMachine#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/virtual_machine#timeouts DataAzurermVirtualMachine#timeouts}
 
 ---
 
@@ -848,7 +848,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermVirtualMachine.DataAzurermVirtualMachineIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualmachine"
 
 &dataazurermvirtualmachine.DataAzurermVirtualMachineIdentity {
 
@@ -861,7 +861,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermvirtual
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermVirtualMachine.DataAzurermVirtualMachineTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualmachine"
 
 &dataazurermvirtualmachine.DataAzurermVirtualMachineTimeouts {
 	Read: *string,
@@ -872,7 +872,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermvirtual
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualMachine.DataAzurermVirtualMachineTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/data-sources/virtual_machine#read DataAzurermVirtualMachine#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualMachine.DataAzurermVirtualMachineTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/virtual_machine#read DataAzurermVirtualMachine#read}. |
 
 ---
 
@@ -884,7 +884,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/data-sources/virtual_machine#read DataAzurermVirtualMachine#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/virtual_machine#read DataAzurermVirtualMachine#read}.
 
 ---
 
@@ -895,7 +895,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVirtualMachine.DataAzurermVirtualMachineIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualmachine"
 
 dataazurermvirtualmachine.NewDataAzurermVirtualMachineIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermVirtualMachineIdentityList
 ```
@@ -1027,7 +1027,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVirtualMachine.DataAzurermVirtualMachineIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualmachine"
 
 dataazurermvirtualmachine.NewDataAzurermVirtualMachineIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermVirtualMachineIdentityOutputReference
 ```
@@ -1338,7 +1338,7 @@ func InternalValue() DataAzurermVirtualMachineIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVirtualMachine.DataAzurermVirtualMachineTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualmachine"
 
 dataazurermvirtualmachine.NewDataAzurermVirtualMachineTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermVirtualMachineTimeoutsOutputReference
 ```

@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,60 +8,60 @@ import * as cdktf from 'cdktf';
 
 export interface WebApplicationFirewallPolicyConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#id WebApplicationFirewallPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#id WebApplicationFirewallPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#location WebApplicationFirewallPolicy#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#location WebApplicationFirewallPolicy#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#name WebApplicationFirewallPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#name WebApplicationFirewallPolicy#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#resource_group_name WebApplicationFirewallPolicy#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#resource_group_name WebApplicationFirewallPolicy#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#tags WebApplicationFirewallPolicy#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#tags WebApplicationFirewallPolicy#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * custom_rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#custom_rules WebApplicationFirewallPolicy#custom_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#custom_rules WebApplicationFirewallPolicy#custom_rules}
   */
   readonly customRules?: WebApplicationFirewallPolicyCustomRules[] | cdktf.IResolvable;
   /**
   * managed_rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#managed_rules WebApplicationFirewallPolicy#managed_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#managed_rules WebApplicationFirewallPolicy#managed_rules}
   */
   readonly managedRules: WebApplicationFirewallPolicyManagedRules;
   /**
   * policy_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#policy_settings WebApplicationFirewallPolicy#policy_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#policy_settings WebApplicationFirewallPolicy#policy_settings}
   */
   readonly policySettings?: WebApplicationFirewallPolicyPolicySettings;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#timeouts WebApplicationFirewallPolicy#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#timeouts WebApplicationFirewallPolicy#timeouts}
   */
   readonly timeouts?: WebApplicationFirewallPolicyTimeouts;
 }
 export interface WebApplicationFirewallPolicyCustomRulesMatchConditionsMatchVariables {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#selector WebApplicationFirewallPolicy#selector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#selector WebApplicationFirewallPolicy#selector}
   */
   readonly selector?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#variable_name WebApplicationFirewallPolicy#variable_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#variable_name WebApplicationFirewallPolicy#variable_name}
   */
   readonly variableName: string;
 }
@@ -183,25 +178,25 @@ export class WebApplicationFirewallPolicyCustomRulesMatchConditionsMatchVariable
 }
 export interface WebApplicationFirewallPolicyCustomRulesMatchConditions {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#match_values WebApplicationFirewallPolicy#match_values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#match_values WebApplicationFirewallPolicy#match_values}
   */
   readonly matchValues?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#negation_condition WebApplicationFirewallPolicy#negation_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#negation_condition WebApplicationFirewallPolicy#negation_condition}
   */
   readonly negationCondition?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#operator WebApplicationFirewallPolicy#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#operator WebApplicationFirewallPolicy#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#transforms WebApplicationFirewallPolicy#transforms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#transforms WebApplicationFirewallPolicy#transforms}
   */
   readonly transforms?: string[];
   /**
   * match_variables block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#match_variables WebApplicationFirewallPolicy#match_variables}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#match_variables WebApplicationFirewallPolicy#match_variables}
   */
   readonly matchVariables: WebApplicationFirewallPolicyCustomRulesMatchConditionsMatchVariables[] | cdktf.IResolvable;
 }
@@ -384,25 +379,25 @@ export class WebApplicationFirewallPolicyCustomRulesMatchConditionsList extends 
 }
 export interface WebApplicationFirewallPolicyCustomRules {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#action WebApplicationFirewallPolicy#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#action WebApplicationFirewallPolicy#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#name WebApplicationFirewallPolicy#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#name WebApplicationFirewallPolicy#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#priority WebApplicationFirewallPolicy#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#priority WebApplicationFirewallPolicy#priority}
   */
   readonly priority: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#rule_type WebApplicationFirewallPolicy#rule_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#rule_type WebApplicationFirewallPolicy#rule_type}
   */
   readonly ruleType: string;
   /**
   * match_conditions block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#match_conditions WebApplicationFirewallPolicy#match_conditions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#match_conditions WebApplicationFirewallPolicy#match_conditions}
   */
   readonly matchConditions: WebApplicationFirewallPolicyCustomRulesMatchConditions[] | cdktf.IResolvable;
 }
@@ -579,11 +574,11 @@ export class WebApplicationFirewallPolicyCustomRulesList extends cdktf.ComplexLi
 }
 export interface WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSetRuleGroup {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#excluded_rules WebApplicationFirewallPolicy#excluded_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#excluded_rules WebApplicationFirewallPolicy#excluded_rules}
   */
   readonly excludedRules?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#rule_group_name WebApplicationFirewallPolicy#rule_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#rule_group_name WebApplicationFirewallPolicy#rule_group_name}
   */
   readonly ruleGroupName: string;
 }
@@ -700,17 +695,17 @@ export class WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSetRul
 }
 export interface WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSet {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#type WebApplicationFirewallPolicy#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#type WebApplicationFirewallPolicy#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#version WebApplicationFirewallPolicy#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#version WebApplicationFirewallPolicy#version}
   */
   readonly version?: string;
   /**
   * rule_group block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#rule_group WebApplicationFirewallPolicy#rule_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#rule_group WebApplicationFirewallPolicy#rule_group}
   */
   readonly ruleGroup?: WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSetRuleGroup[] | cdktf.IResolvable;
 }
@@ -821,21 +816,21 @@ export class WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSetOut
 }
 export interface WebApplicationFirewallPolicyManagedRulesExclusion {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#match_variable WebApplicationFirewallPolicy#match_variable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#match_variable WebApplicationFirewallPolicy#match_variable}
   */
   readonly matchVariable: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#selector WebApplicationFirewallPolicy#selector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#selector WebApplicationFirewallPolicy#selector}
   */
   readonly selector: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#selector_match_operator WebApplicationFirewallPolicy#selector_match_operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#selector_match_operator WebApplicationFirewallPolicy#selector_match_operator}
   */
   readonly selectorMatchOperator: string;
   /**
   * excluded_rule_set block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#excluded_rule_set WebApplicationFirewallPolicy#excluded_rule_set}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#excluded_rule_set WebApplicationFirewallPolicy#excluded_rule_set}
   */
   readonly excludedRuleSet?: WebApplicationFirewallPolicyManagedRulesExclusionExcludedRuleSet;
 }
@@ -992,15 +987,15 @@ export class WebApplicationFirewallPolicyManagedRulesExclusionList extends cdktf
 }
 export interface WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverrideRule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#action WebApplicationFirewallPolicy#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#action WebApplicationFirewallPolicy#action}
   */
   readonly action?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#enabled WebApplicationFirewallPolicy#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#enabled WebApplicationFirewallPolicy#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#id WebApplicationFirewallPolicy#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#id WebApplicationFirewallPolicy#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1143,17 +1138,17 @@ export class WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOver
 }
 export interface WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverride {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#disabled_rules WebApplicationFirewallPolicy#disabled_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#disabled_rules WebApplicationFirewallPolicy#disabled_rules}
   */
   readonly disabledRules?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#rule_group_name WebApplicationFirewallPolicy#rule_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#rule_group_name WebApplicationFirewallPolicy#rule_group_name}
   */
   readonly ruleGroupName: string;
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#rule WebApplicationFirewallPolicy#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#rule WebApplicationFirewallPolicy#rule}
   */
   readonly rule?: WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverrideRule[] | cdktf.IResolvable;
 }
@@ -1293,17 +1288,17 @@ export class WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOver
 }
 export interface WebApplicationFirewallPolicyManagedRulesManagedRuleSet {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#type WebApplicationFirewallPolicy#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#type WebApplicationFirewallPolicy#type}
   */
   readonly type?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#version WebApplicationFirewallPolicy#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#version WebApplicationFirewallPolicy#version}
   */
   readonly version: string;
   /**
   * rule_group_override block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#rule_group_override WebApplicationFirewallPolicy#rule_group_override}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#rule_group_override WebApplicationFirewallPolicy#rule_group_override}
   */
   readonly ruleGroupOverride?: WebApplicationFirewallPolicyManagedRulesManagedRuleSetRuleGroupOverride[] | cdktf.IResolvable;
 }
@@ -1445,13 +1440,13 @@ export interface WebApplicationFirewallPolicyManagedRules {
   /**
   * exclusion block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#exclusion WebApplicationFirewallPolicy#exclusion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#exclusion WebApplicationFirewallPolicy#exclusion}
   */
   readonly exclusion?: WebApplicationFirewallPolicyManagedRulesExclusion[] | cdktf.IResolvable;
   /**
   * managed_rule_set block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#managed_rule_set WebApplicationFirewallPolicy#managed_rule_set}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#managed_rule_set WebApplicationFirewallPolicy#managed_rule_set}
   */
   readonly managedRuleSet: WebApplicationFirewallPolicyManagedRulesManagedRuleSet[] | cdktf.IResolvable;
 }
@@ -1534,27 +1529,304 @@ export class WebApplicationFirewallPolicyManagedRulesOutputReference extends cdk
     return this._managedRuleSet.internalValue;
   }
 }
-export interface WebApplicationFirewallPolicyPolicySettings {
+export interface WebApplicationFirewallPolicyPolicySettingsLogScrubbingRule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#enabled WebApplicationFirewallPolicy#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#enabled WebApplicationFirewallPolicy#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#file_upload_limit_in_mb WebApplicationFirewallPolicy#file_upload_limit_in_mb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#match_variable WebApplicationFirewallPolicy#match_variable}
+  */
+  readonly matchVariable: string;
+  /**
+  * When matchVariable is a collection, operator used to specify which elements in the collection this rule applies to.
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#selector WebApplicationFirewallPolicy#selector}
+  */
+  readonly selector?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#selector_match_operator WebApplicationFirewallPolicy#selector_match_operator}
+  */
+  readonly selectorMatchOperator?: string;
+}
+
+export function webApplicationFirewallPolicyPolicySettingsLogScrubbingRuleToTerraform(struct?: WebApplicationFirewallPolicyPolicySettingsLogScrubbingRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    match_variable: cdktf.stringToTerraform(struct!.matchVariable),
+    selector: cdktf.stringToTerraform(struct!.selector),
+    selector_match_operator: cdktf.stringToTerraform(struct!.selectorMatchOperator),
+  }
+}
+
+export class WebApplicationFirewallPolicyPolicySettingsLogScrubbingRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): WebApplicationFirewallPolicyPolicySettingsLogScrubbingRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._matchVariable !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.matchVariable = this._matchVariable;
+    }
+    if (this._selector !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.selector = this._selector;
+    }
+    if (this._selectorMatchOperator !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.selectorMatchOperator = this._selectorMatchOperator;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WebApplicationFirewallPolicyPolicySettingsLogScrubbingRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._enabled = undefined;
+      this._matchVariable = undefined;
+      this._selector = undefined;
+      this._selectorMatchOperator = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._enabled = value.enabled;
+      this._matchVariable = value.matchVariable;
+      this._selector = value.selector;
+      this._selectorMatchOperator = value.selectorMatchOperator;
+    }
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // match_variable - computed: false, optional: false, required: true
+  private _matchVariable?: string; 
+  public get matchVariable() {
+    return this.getStringAttribute('match_variable');
+  }
+  public set matchVariable(value: string) {
+    this._matchVariable = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get matchVariableInput() {
+    return this._matchVariable;
+  }
+
+  // selector - computed: false, optional: true, required: false
+  private _selector?: string; 
+  public get selector() {
+    return this.getStringAttribute('selector');
+  }
+  public set selector(value: string) {
+    this._selector = value;
+  }
+  public resetSelector() {
+    this._selector = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get selectorInput() {
+    return this._selector;
+  }
+
+  // selector_match_operator - computed: false, optional: true, required: false
+  private _selectorMatchOperator?: string; 
+  public get selectorMatchOperator() {
+    return this.getStringAttribute('selector_match_operator');
+  }
+  public set selectorMatchOperator(value: string) {
+    this._selectorMatchOperator = value;
+  }
+  public resetSelectorMatchOperator() {
+    this._selectorMatchOperator = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get selectorMatchOperatorInput() {
+    return this._selectorMatchOperator;
+  }
+}
+
+export class WebApplicationFirewallPolicyPolicySettingsLogScrubbingRuleList extends cdktf.ComplexList {
+  public internalValue? : WebApplicationFirewallPolicyPolicySettingsLogScrubbingRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): WebApplicationFirewallPolicyPolicySettingsLogScrubbingRuleOutputReference {
+    return new WebApplicationFirewallPolicyPolicySettingsLogScrubbingRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface WebApplicationFirewallPolicyPolicySettingsLogScrubbing {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#enabled WebApplicationFirewallPolicy#enabled}
+  */
+  readonly enabled?: boolean | cdktf.IResolvable;
+  /**
+  * rule block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#rule WebApplicationFirewallPolicy#rule}
+  */
+  readonly rule?: WebApplicationFirewallPolicyPolicySettingsLogScrubbingRule[] | cdktf.IResolvable;
+}
+
+export function webApplicationFirewallPolicyPolicySettingsLogScrubbingToTerraform(struct?: WebApplicationFirewallPolicyPolicySettingsLogScrubbingOutputReference | WebApplicationFirewallPolicyPolicySettingsLogScrubbing): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enabled: cdktf.booleanToTerraform(struct!.enabled),
+    rule: cdktf.listMapper(webApplicationFirewallPolicyPolicySettingsLogScrubbingRuleToTerraform, true)(struct!.rule),
+  }
+}
+
+export class WebApplicationFirewallPolicyPolicySettingsLogScrubbingOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): WebApplicationFirewallPolicyPolicySettingsLogScrubbing | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enabled = this._enabled;
+    }
+    if (this._rule?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.rule = this._rule?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: WebApplicationFirewallPolicyPolicySettingsLogScrubbing | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enabled = undefined;
+      this._rule.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enabled = value.enabled;
+      this._rule.internalValue = value.rule;
+    }
+  }
+
+  // enabled - computed: false, optional: true, required: false
+  private _enabled?: boolean | cdktf.IResolvable; 
+  public get enabled() {
+    return this.getBooleanAttribute('enabled');
+  }
+  public set enabled(value: boolean | cdktf.IResolvable) {
+    this._enabled = value;
+  }
+  public resetEnabled() {
+    this._enabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enabledInput() {
+    return this._enabled;
+  }
+
+  // rule - computed: false, optional: true, required: false
+  private _rule = new WebApplicationFirewallPolicyPolicySettingsLogScrubbingRuleList(this, "rule", false);
+  public get rule() {
+    return this._rule;
+  }
+  public putRule(value: WebApplicationFirewallPolicyPolicySettingsLogScrubbingRule[] | cdktf.IResolvable) {
+    this._rule.internalValue = value;
+  }
+  public resetRule() {
+    this._rule.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ruleInput() {
+    return this._rule.internalValue;
+  }
+}
+export interface WebApplicationFirewallPolicyPolicySettings {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#enabled WebApplicationFirewallPolicy#enabled}
+  */
+  readonly enabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#file_upload_limit_in_mb WebApplicationFirewallPolicy#file_upload_limit_in_mb}
   */
   readonly fileUploadLimitInMb?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#max_request_body_size_in_kb WebApplicationFirewallPolicy#max_request_body_size_in_kb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#max_request_body_size_in_kb WebApplicationFirewallPolicy#max_request_body_size_in_kb}
   */
   readonly maxRequestBodySizeInKb?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#mode WebApplicationFirewallPolicy#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#mode WebApplicationFirewallPolicy#mode}
   */
   readonly mode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#request_body_check WebApplicationFirewallPolicy#request_body_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#request_body_check WebApplicationFirewallPolicy#request_body_check}
   */
   readonly requestBodyCheck?: boolean | cdktf.IResolvable;
+  /**
+  * log_scrubbing block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#log_scrubbing WebApplicationFirewallPolicy#log_scrubbing}
+  */
+  readonly logScrubbing?: WebApplicationFirewallPolicyPolicySettingsLogScrubbing;
 }
 
 export function webApplicationFirewallPolicyPolicySettingsToTerraform(struct?: WebApplicationFirewallPolicyPolicySettingsOutputReference | WebApplicationFirewallPolicyPolicySettings): any {
@@ -1568,6 +1840,7 @@ export function webApplicationFirewallPolicyPolicySettingsToTerraform(struct?: W
     max_request_body_size_in_kb: cdktf.numberToTerraform(struct!.maxRequestBodySizeInKb),
     mode: cdktf.stringToTerraform(struct!.mode),
     request_body_check: cdktf.booleanToTerraform(struct!.requestBodyCheck),
+    log_scrubbing: webApplicationFirewallPolicyPolicySettingsLogScrubbingToTerraform(struct!.logScrubbing),
   }
 }
 
@@ -1605,6 +1878,10 @@ export class WebApplicationFirewallPolicyPolicySettingsOutputReference extends c
       hasAnyValues = true;
       internalValueResult.requestBodyCheck = this._requestBodyCheck;
     }
+    if (this._logScrubbing?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.logScrubbing = this._logScrubbing?.internalValue;
+    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -1616,6 +1893,7 @@ export class WebApplicationFirewallPolicyPolicySettingsOutputReference extends c
       this._maxRequestBodySizeInKb = undefined;
       this._mode = undefined;
       this._requestBodyCheck = undefined;
+      this._logScrubbing.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -1624,6 +1902,7 @@ export class WebApplicationFirewallPolicyPolicySettingsOutputReference extends c
       this._maxRequestBodySizeInKb = value.maxRequestBodySizeInKb;
       this._mode = value.mode;
       this._requestBodyCheck = value.requestBodyCheck;
+      this._logScrubbing.internalValue = value.logScrubbing;
     }
   }
 
@@ -1706,22 +1985,38 @@ export class WebApplicationFirewallPolicyPolicySettingsOutputReference extends c
   public get requestBodyCheckInput() {
     return this._requestBodyCheck;
   }
+
+  // log_scrubbing - computed: false, optional: true, required: false
+  private _logScrubbing = new WebApplicationFirewallPolicyPolicySettingsLogScrubbingOutputReference(this, "log_scrubbing");
+  public get logScrubbing() {
+    return this._logScrubbing;
+  }
+  public putLogScrubbing(value: WebApplicationFirewallPolicyPolicySettingsLogScrubbing) {
+    this._logScrubbing.internalValue = value;
+  }
+  public resetLogScrubbing() {
+    this._logScrubbing.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get logScrubbingInput() {
+    return this._logScrubbing.internalValue;
+  }
 }
 export interface WebApplicationFirewallPolicyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#create WebApplicationFirewallPolicy#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#create WebApplicationFirewallPolicy#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#delete WebApplicationFirewallPolicy#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#delete WebApplicationFirewallPolicy#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#read WebApplicationFirewallPolicy#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#read WebApplicationFirewallPolicy#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy#update WebApplicationFirewallPolicy#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy#update WebApplicationFirewallPolicy#update}
   */
   readonly update?: string;
 }
@@ -1865,7 +2160,7 @@ export class WebApplicationFirewallPolicyTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy azurerm_web_application_firewall_policy}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy azurerm_web_application_firewall_policy}
 */
 export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
 
@@ -1879,7 +2174,7 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/web_application_firewall_policy azurerm_web_application_firewall_policy} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/web_application_firewall_policy azurerm_web_application_firewall_policy} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1890,7 +2185,7 @@ export class WebApplicationFirewallPolicy extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_web_application_firewall_policy',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.67.0',
+        providerVersion: '3.68.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
