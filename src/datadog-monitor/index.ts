@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,84 +13,84 @@ import * as cdktf from 'cdktf';
 
 export interface DatadogMonitorConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor#id DatadogMonitor#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor#id DatadogMonitor#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor#location DatadogMonitor#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor#location DatadogMonitor#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor#monitoring_enabled DatadogMonitor#monitoring_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor#monitoring_enabled DatadogMonitor#monitoring_enabled}
   */
   readonly monitoringEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor#name DatadogMonitor#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor#name DatadogMonitor#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor#resource_group_name DatadogMonitor#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor#resource_group_name DatadogMonitor#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor#sku_name DatadogMonitor#sku_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor#sku_name DatadogMonitor#sku_name}
   */
   readonly skuName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor#tags DatadogMonitor#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor#tags DatadogMonitor#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * datadog_organization block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor#datadog_organization DatadogMonitor#datadog_organization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor#datadog_organization DatadogMonitor#datadog_organization}
   */
   readonly datadogOrganization: DatadogMonitorDatadogOrganization;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor#identity DatadogMonitor#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor#identity DatadogMonitor#identity}
   */
   readonly identity?: DatadogMonitorIdentity;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor#timeouts DatadogMonitor#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor#timeouts DatadogMonitor#timeouts}
   */
   readonly timeouts?: DatadogMonitorTimeouts;
   /**
   * user block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor#user DatadogMonitor#user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor#user DatadogMonitor#user}
   */
   readonly user: DatadogMonitorUser;
 }
 export interface DatadogMonitorDatadogOrganization {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor#api_key DatadogMonitor#api_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor#api_key DatadogMonitor#api_key}
   */
   readonly apiKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor#application_key DatadogMonitor#application_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor#application_key DatadogMonitor#application_key}
   */
   readonly applicationKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor#enterprise_app_id DatadogMonitor#enterprise_app_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor#enterprise_app_id DatadogMonitor#enterprise_app_id}
   */
   readonly enterpriseAppId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor#linking_auth_code DatadogMonitor#linking_auth_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor#linking_auth_code DatadogMonitor#linking_auth_code}
   */
   readonly linkingAuthCode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor#linking_client_id DatadogMonitor#linking_client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor#linking_client_id DatadogMonitor#linking_client_id}
   */
   readonly linkingClientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor#redirect_uri DatadogMonitor#redirect_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor#redirect_uri DatadogMonitor#redirect_uri}
   */
   readonly redirectUri?: string;
 }
@@ -274,7 +274,7 @@ export class DatadogMonitorDatadogOrganizationOutputReference extends cdktf.Comp
 }
 export interface DatadogMonitorIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor#type DatadogMonitor#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor#type DatadogMonitor#type}
   */
   readonly type: string;
 }
@@ -346,19 +346,19 @@ export class DatadogMonitorIdentityOutputReference extends cdktf.ComplexObject {
 }
 export interface DatadogMonitorTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor#create DatadogMonitor#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor#create DatadogMonitor#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor#delete DatadogMonitor#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor#delete DatadogMonitor#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor#read DatadogMonitor#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor#read DatadogMonitor#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor#update DatadogMonitor#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor#update DatadogMonitor#update}
   */
   readonly update?: string;
 }
@@ -502,15 +502,15 @@ export class DatadogMonitorTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 export interface DatadogMonitorUser {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor#email DatadogMonitor#email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor#email DatadogMonitor#email}
   */
   readonly email: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor#name DatadogMonitor#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor#name DatadogMonitor#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor#phone_number DatadogMonitor#phone_number}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor#phone_number DatadogMonitor#phone_number}
   */
   readonly phoneNumber?: string;
 }
@@ -615,7 +615,7 @@ export class DatadogMonitorUserOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor azurerm_datadog_monitor}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor azurerm_datadog_monitor}
 */
 export class DatadogMonitor extends cdktf.TerraformResource {
 
@@ -629,7 +629,7 @@ export class DatadogMonitor extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/datadog_monitor azurerm_datadog_monitor} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/datadog_monitor azurerm_datadog_monitor} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -640,7 +640,7 @@ export class DatadogMonitor extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_datadog_monitor',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.67.0',
+        providerVersion: '3.68.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

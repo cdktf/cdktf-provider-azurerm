@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/virtual_network
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,83 +13,89 @@ import * as cdktf from 'cdktf';
 
 export interface VirtualNetworkConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/virtual_network#address_space VirtualNetwork#address_space}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network#address_space VirtualNetwork#address_space}
   */
   readonly addressSpace: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/virtual_network#bgp_community VirtualNetwork#bgp_community}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network#bgp_community VirtualNetwork#bgp_community}
   */
   readonly bgpCommunity?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/virtual_network#dns_servers VirtualNetwork#dns_servers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network#dns_servers VirtualNetwork#dns_servers}
   */
   readonly dnsServers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/virtual_network#edge_zone VirtualNetwork#edge_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network#edge_zone VirtualNetwork#edge_zone}
   */
   readonly edgeZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/virtual_network#flow_timeout_in_minutes VirtualNetwork#flow_timeout_in_minutes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network#flow_timeout_in_minutes VirtualNetwork#flow_timeout_in_minutes}
   */
   readonly flowTimeoutInMinutes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/virtual_network#id VirtualNetwork#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network#id VirtualNetwork#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/virtual_network#location VirtualNetwork#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network#location VirtualNetwork#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/virtual_network#name VirtualNetwork#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network#name VirtualNetwork#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/virtual_network#resource_group_name VirtualNetwork#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network#resource_group_name VirtualNetwork#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/virtual_network#subnet VirtualNetwork#subnet}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network#subnet VirtualNetwork#subnet}
   */
   readonly subnet?: VirtualNetworkSubnet[] | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/virtual_network#tags VirtualNetwork#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network#tags VirtualNetwork#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * ddos_protection_plan block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/virtual_network#ddos_protection_plan VirtualNetwork#ddos_protection_plan}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network#ddos_protection_plan VirtualNetwork#ddos_protection_plan}
   */
   readonly ddosProtectionPlan?: VirtualNetworkDdosProtectionPlan;
   /**
+  * encryption block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network#encryption VirtualNetwork#encryption}
+  */
+  readonly encryption?: VirtualNetworkEncryption;
+  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/virtual_network#timeouts VirtualNetwork#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network#timeouts VirtualNetwork#timeouts}
   */
   readonly timeouts?: VirtualNetworkTimeouts;
 }
 export interface VirtualNetworkSubnet {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/virtual_network#address_prefix VirtualNetwork#address_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network#address_prefix VirtualNetwork#address_prefix}
   */
   readonly addressPrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/virtual_network#id VirtualNetwork#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network#id VirtualNetwork#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/virtual_network#name VirtualNetwork#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network#name VirtualNetwork#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/virtual_network#security_group VirtualNetwork#security_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network#security_group VirtualNetwork#security_group}
   */
   readonly securityGroup?: string;
 }
@@ -255,11 +261,11 @@ export class VirtualNetworkSubnetList extends cdktf.ComplexList {
 }
 export interface VirtualNetworkDdosProtectionPlan {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/virtual_network#enable VirtualNetwork#enable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network#enable VirtualNetwork#enable}
   */
   readonly enable: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/virtual_network#id VirtualNetwork#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network#id VirtualNetwork#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -342,21 +348,83 @@ export class VirtualNetworkDdosProtectionPlanOutputReference extends cdktf.Compl
     return this._id;
   }
 }
+export interface VirtualNetworkEncryption {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network#enforcement VirtualNetwork#enforcement}
+  */
+  readonly enforcement: string;
+}
+
+export function virtualNetworkEncryptionToTerraform(struct?: VirtualNetworkEncryptionOutputReference | VirtualNetworkEncryption): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    enforcement: cdktf.stringToTerraform(struct!.enforcement),
+  }
+}
+
+export class VirtualNetworkEncryptionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): VirtualNetworkEncryption | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._enforcement !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.enforcement = this._enforcement;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VirtualNetworkEncryption | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._enforcement = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._enforcement = value.enforcement;
+    }
+  }
+
+  // enforcement - computed: false, optional: false, required: true
+  private _enforcement?: string; 
+  public get enforcement() {
+    return this.getStringAttribute('enforcement');
+  }
+  public set enforcement(value: string) {
+    this._enforcement = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get enforcementInput() {
+    return this._enforcement;
+  }
+}
 export interface VirtualNetworkTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/virtual_network#create VirtualNetwork#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network#create VirtualNetwork#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/virtual_network#delete VirtualNetwork#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network#delete VirtualNetwork#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/virtual_network#read VirtualNetwork#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network#read VirtualNetwork#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/virtual_network#update VirtualNetwork#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network#update VirtualNetwork#update}
   */
   readonly update?: string;
 }
@@ -500,7 +568,7 @@ export class VirtualNetworkTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/virtual_network azurerm_virtual_network}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network azurerm_virtual_network}
 */
 export class VirtualNetwork extends cdktf.TerraformResource {
 
@@ -514,7 +582,7 @@ export class VirtualNetwork extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/resources/virtual_network azurerm_virtual_network} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_network azurerm_virtual_network} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -525,7 +593,7 @@ export class VirtualNetwork extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_virtual_network',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.67.0',
+        providerVersion: '3.68.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -548,6 +616,7 @@ export class VirtualNetwork extends cdktf.TerraformResource {
     this._subnet.internalValue = config.subnet;
     this._tags = config.tags;
     this._ddosProtectionPlan.internalValue = config.ddosProtectionPlan;
+    this._encryption.internalValue = config.encryption;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -740,6 +809,22 @@ export class VirtualNetwork extends cdktf.TerraformResource {
     return this._ddosProtectionPlan.internalValue;
   }
 
+  // encryption - computed: false, optional: true, required: false
+  private _encryption = new VirtualNetworkEncryptionOutputReference(this, "encryption");
+  public get encryption() {
+    return this._encryption;
+  }
+  public putEncryption(value: VirtualNetworkEncryption) {
+    this._encryption.internalValue = value;
+  }
+  public resetEncryption() {
+    this._encryption.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get encryptionInput() {
+    return this._encryption.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new VirtualNetworkTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -774,6 +859,7 @@ export class VirtualNetwork extends cdktf.TerraformResource {
       subnet: cdktf.listMapper(virtualNetworkSubnetToTerraform, false)(this._subnet.internalValue),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       ddos_protection_plan: virtualNetworkDdosProtectionPlanToTerraform(this._ddosProtectionPlan.internalValue),
+      encryption: virtualNetworkEncryptionToTerraform(this._encryption.internalValue),
       timeouts: virtualNetworkTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

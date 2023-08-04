@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/data-sources/eventgrid_domain
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/eventgrid_domain
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,64 +13,41 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermEventgridDomainConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/data-sources/eventgrid_domain#id DataAzurermEventgridDomain#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/eventgrid_domain#id DataAzurermEventgridDomain#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/data-sources/eventgrid_domain#inbound_ip_rule DataAzurermEventgridDomain#inbound_ip_rule}
-  */
-  readonly inboundIpRule?: DataAzurermEventgridDomainInboundIpRule[] | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/data-sources/eventgrid_domain#name DataAzurermEventgridDomain#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/eventgrid_domain#name DataAzurermEventgridDomain#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/data-sources/eventgrid_domain#public_network_access_enabled DataAzurermEventgridDomain#public_network_access_enabled}
-  */
-  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/data-sources/eventgrid_domain#resource_group_name DataAzurermEventgridDomain#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/eventgrid_domain#resource_group_name DataAzurermEventgridDomain#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/data-sources/eventgrid_domain#tags DataAzurermEventgridDomain#tags}
-  */
-  readonly tags?: { [key: string]: string };
-  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/data-sources/eventgrid_domain#timeouts DataAzurermEventgridDomain#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/eventgrid_domain#timeouts DataAzurermEventgridDomain#timeouts}
   */
   readonly timeouts?: DataAzurermEventgridDomainTimeouts;
 }
 export interface DataAzurermEventgridDomainInboundIpRule {
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/data-sources/eventgrid_domain#action DataAzurermEventgridDomain#action}
-  */
-  readonly action?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/data-sources/eventgrid_domain#ip_mask DataAzurermEventgridDomain#ip_mask}
-  */
-  readonly ipMask?: string;
 }
 
-export function dataAzurermEventgridDomainInboundIpRuleToTerraform(struct?: DataAzurermEventgridDomainInboundIpRule | cdktf.IResolvable): any {
+export function dataAzurermEventgridDomainInboundIpRuleToTerraform(struct?: DataAzurermEventgridDomainInboundIpRule): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
   }
   return {
-    action: cdktf.stringToTerraform(struct!.action),
-    ip_mask: cdktf.stringToTerraform(struct!.ipMask),
   }
 }
 
 export class DataAzurermEventgridDomainInboundIpRuleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
-  private resolvableValue?: cdktf.IResolvable;
 
   /**
   * @param terraformResource The parent resource
@@ -82,77 +59,33 @@ export class DataAzurermEventgridDomainInboundIpRuleOutputReference extends cdkt
     super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
   }
 
-  public get internalValue(): DataAzurermEventgridDomainInboundIpRule | cdktf.IResolvable | undefined {
-    if (this.resolvableValue) {
-      return this.resolvableValue;
-    }
+  public get internalValue(): DataAzurermEventgridDomainInboundIpRule | undefined {
     let hasAnyValues = this.isEmptyObject;
     const internalValueResult: any = {};
-    if (this._action !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.action = this._action;
-    }
-    if (this._ipMask !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.ipMask = this._ipMask;
-    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: DataAzurermEventgridDomainInboundIpRule | cdktf.IResolvable | undefined) {
+  public set internalValue(value: DataAzurermEventgridDomainInboundIpRule | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
-      this.resolvableValue = undefined;
-      this._action = undefined;
-      this._ipMask = undefined;
-    }
-    else if (cdktf.Tokenization.isResolvable(value)) {
-      this.isEmptyObject = false;
-      this.resolvableValue = value;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
-      this.resolvableValue = undefined;
-      this._action = value.action;
-      this._ipMask = value.ipMask;
     }
   }
 
-  // action - computed: false, optional: true, required: false
-  private _action?: string; 
+  // action - computed: true, optional: false, required: false
   public get action() {
     return this.getStringAttribute('action');
   }
-  public set action(value: string) {
-    this._action = value;
-  }
-  public resetAction() {
-    this._action = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get actionInput() {
-    return this._action;
-  }
 
-  // ip_mask - computed: false, optional: true, required: false
-  private _ipMask?: string; 
+  // ip_mask - computed: true, optional: false, required: false
   public get ipMask() {
     return this.getStringAttribute('ip_mask');
-  }
-  public set ipMask(value: string) {
-    this._ipMask = value;
-  }
-  public resetIpMask() {
-    this._ipMask = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get ipMaskInput() {
-    return this._ipMask;
   }
 }
 
 export class DataAzurermEventgridDomainInboundIpRuleList extends cdktf.ComplexList {
-  public internalValue? : DataAzurermEventgridDomainInboundIpRule[] | cdktf.IResolvable
 
   /**
   * @param terraformResource The parent resource
@@ -335,7 +268,7 @@ export class DataAzurermEventgridDomainInputMappingFieldsList extends cdktf.Comp
 }
 export interface DataAzurermEventgridDomainTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/data-sources/eventgrid_domain#read DataAzurermEventgridDomain#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/eventgrid_domain#read DataAzurermEventgridDomain#read}
   */
   readonly read?: string;
 }
@@ -410,7 +343,7 @@ export class DataAzurermEventgridDomainTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/data-sources/eventgrid_domain azurerm_eventgrid_domain}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/eventgrid_domain azurerm_eventgrid_domain}
 */
 export class DataAzurermEventgridDomain extends cdktf.TerraformDataSource {
 
@@ -424,7 +357,7 @@ export class DataAzurermEventgridDomain extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.67.0/docs/data-sources/eventgrid_domain azurerm_eventgrid_domain} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/eventgrid_domain azurerm_eventgrid_domain} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -435,7 +368,7 @@ export class DataAzurermEventgridDomain extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_eventgrid_domain',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.67.0',
+        providerVersion: '3.68.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -447,11 +380,8 @@ export class DataAzurermEventgridDomain extends cdktf.TerraformDataSource {
       forEach: config.forEach
     });
     this._id = config.id;
-    this._inboundIpRule.internalValue = config.inboundIpRule;
     this._name = config.name;
-    this._publicNetworkAccessEnabled = config.publicNetworkAccessEnabled;
     this._resourceGroupName = config.resourceGroupName;
-    this._tags = config.tags;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -480,20 +410,10 @@ export class DataAzurermEventgridDomain extends cdktf.TerraformDataSource {
     return this._id;
   }
 
-  // inbound_ip_rule - computed: false, optional: true, required: false
+  // inbound_ip_rule - computed: true, optional: false, required: false
   private _inboundIpRule = new DataAzurermEventgridDomainInboundIpRuleList(this, "inbound_ip_rule", false);
   public get inboundIpRule() {
     return this._inboundIpRule;
-  }
-  public putInboundIpRule(value: DataAzurermEventgridDomainInboundIpRule[] | cdktf.IResolvable) {
-    this._inboundIpRule.internalValue = value;
-  }
-  public resetInboundIpRule() {
-    this._inboundIpRule.internalValue = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get inboundIpRuleInput() {
-    return this._inboundIpRule.internalValue;
   }
 
   // input_mapping_default_values - computed: true, optional: false, required: false
@@ -536,20 +456,9 @@ export class DataAzurermEventgridDomain extends cdktf.TerraformDataSource {
     return this.getStringAttribute('primary_access_key');
   }
 
-  // public_network_access_enabled - computed: false, optional: true, required: false
-  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
+  // public_network_access_enabled - computed: true, optional: false, required: false
   public get publicNetworkAccessEnabled() {
     return this.getBooleanAttribute('public_network_access_enabled');
-  }
-  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
-    this._publicNetworkAccessEnabled = value;
-  }
-  public resetPublicNetworkAccessEnabled() {
-    this._publicNetworkAccessEnabled = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get publicNetworkAccessEnabledInput() {
-    return this._publicNetworkAccessEnabled;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -570,19 +479,9 @@ export class DataAzurermEventgridDomain extends cdktf.TerraformDataSource {
     return this.getStringAttribute('secondary_access_key');
   }
 
-  // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string }; 
+  // tags - computed: true, optional: false, required: false
+  private _tags = new cdktf.StringMap(this, "tags");
   public get tags() {
-    return this.getStringMapAttribute('tags');
-  }
-  public set tags(value: { [key: string]: string }) {
-    this._tags = value;
-  }
-  public resetTags() {
-    this._tags = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get tagsInput() {
     return this._tags;
   }
 
@@ -609,11 +508,8 @@ export class DataAzurermEventgridDomain extends cdktf.TerraformDataSource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       id: cdktf.stringToTerraform(this._id),
-      inbound_ip_rule: cdktf.listMapper(dataAzurermEventgridDomainInboundIpRuleToTerraform, false)(this._inboundIpRule.internalValue),
       name: cdktf.stringToTerraform(this._name),
-      public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: dataAzurermEventgridDomainTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
