@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/virtual_hub_connection
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/virtual_hub_connection
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,28 +13,28 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermVirtualHubConnectionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/virtual_hub_connection#id DataAzurermVirtualHubConnection#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/virtual_hub_connection#id DataAzurermVirtualHubConnection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/virtual_hub_connection#name DataAzurermVirtualHubConnection#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/virtual_hub_connection#name DataAzurermVirtualHubConnection#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/virtual_hub_connection#resource_group_name DataAzurermVirtualHubConnection#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/virtual_hub_connection#resource_group_name DataAzurermVirtualHubConnection#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/virtual_hub_connection#virtual_hub_name DataAzurermVirtualHubConnection#virtual_hub_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/virtual_hub_connection#virtual_hub_name DataAzurermVirtualHubConnection#virtual_hub_name}
   */
   readonly virtualHubName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/virtual_hub_connection#timeouts DataAzurermVirtualHubConnection#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/virtual_hub_connection#timeouts DataAzurermVirtualHubConnection#timeouts}
   */
   readonly timeouts?: DataAzurermVirtualHubConnectionTimeouts;
 }
@@ -259,7 +259,7 @@ export class DataAzurermVirtualHubConnectionRoutingList extends cdktf.ComplexLis
 }
 export interface DataAzurermVirtualHubConnectionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/virtual_hub_connection#read DataAzurermVirtualHubConnection#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/virtual_hub_connection#read DataAzurermVirtualHubConnection#read}
   */
   readonly read?: string;
 }
@@ -334,7 +334,7 @@ export class DataAzurermVirtualHubConnectionTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/virtual_hub_connection azurerm_virtual_hub_connection}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/virtual_hub_connection azurerm_virtual_hub_connection}
 */
 export class DataAzurermVirtualHubConnection extends cdktf.TerraformDataSource {
 
@@ -348,7 +348,7 @@ export class DataAzurermVirtualHubConnection extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/virtual_hub_connection azurerm_virtual_hub_connection} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/virtual_hub_connection azurerm_virtual_hub_connection} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -359,7 +359,7 @@ export class DataAzurermVirtualHubConnection extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_virtual_hub_connection',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.68.0',
+        providerVersion: '3.69.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

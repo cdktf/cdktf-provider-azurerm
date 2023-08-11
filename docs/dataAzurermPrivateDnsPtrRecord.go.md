@@ -1,6 +1,6 @@
 # `data_azurerm_private_dns_ptr_record`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_private_dns_ptr_record`](https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/private_dns_ptr_record).
+Refer to the Terraform Registory for docs: [`data_azurerm_private_dns_ptr_record`](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/private_dns_ptr_record).
 
 # `dataAzurermPrivateDnsPtrRecord` Submodule <a name="`dataAzurermPrivateDnsPtrRecord` Submodule" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsPtrRecord"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_private_dns_ptr_record
 
 ### DataAzurermPrivateDnsPtrRecord <a name="DataAzurermPrivateDnsPtrRecord" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsPtrRecord.DataAzurermPrivateDnsPtrRecord"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/private_dns_ptr_record azurerm_private_dns_ptr_record}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/private_dns_ptr_record azurerm_private_dns_ptr_record}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsPtrRecord.DataAzurermPrivateDnsPtrRecord.Initializer"></a>
 
@@ -703,10 +703,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermprivate
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsPtrRecord.DataAzurermPrivateDnsPtrRecordConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsPtrRecord.DataAzurermPrivateDnsPtrRecordConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsPtrRecord.DataAzurermPrivateDnsPtrRecordConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsPtrRecord.DataAzurermPrivateDnsPtrRecordConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/private_dns_ptr_record#name DataAzurermPrivateDnsPtrRecord#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsPtrRecord.DataAzurermPrivateDnsPtrRecordConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/private_dns_ptr_record#resource_group_name DataAzurermPrivateDnsPtrRecord#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsPtrRecord.DataAzurermPrivateDnsPtrRecordConfig.property.zoneName">ZoneName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/private_dns_ptr_record#zone_name DataAzurermPrivateDnsPtrRecord#zone_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsPtrRecord.DataAzurermPrivateDnsPtrRecordConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/private_dns_ptr_record#id DataAzurermPrivateDnsPtrRecord#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsPtrRecord.DataAzurermPrivateDnsPtrRecordConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/private_dns_ptr_record#name DataAzurermPrivateDnsPtrRecord#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsPtrRecord.DataAzurermPrivateDnsPtrRecordConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/private_dns_ptr_record#resource_group_name DataAzurermPrivateDnsPtrRecord#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsPtrRecord.DataAzurermPrivateDnsPtrRecordConfig.property.zoneName">ZoneName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/private_dns_ptr_record#zone_name DataAzurermPrivateDnsPtrRecord#zone_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsPtrRecord.DataAzurermPrivateDnsPtrRecordConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/private_dns_ptr_record#id DataAzurermPrivateDnsPtrRecord#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsPtrRecord.DataAzurermPrivateDnsPtrRecordConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsPtrRecord.DataAzurermPrivateDnsPtrRecordTimeouts">DataAzurermPrivateDnsPtrRecordTimeouts</a></code> | timeouts block. |
 
 ---
@@ -789,7 +789,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/private_dns_ptr_record#name DataAzurermPrivateDnsPtrRecord#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/private_dns_ptr_record#name DataAzurermPrivateDnsPtrRecord#name}.
 
 ---
 
@@ -801,7 +801,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/private_dns_ptr_record#resource_group_name DataAzurermPrivateDnsPtrRecord#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/private_dns_ptr_record#resource_group_name DataAzurermPrivateDnsPtrRecord#resource_group_name}.
 
 ---
 
@@ -813,7 +813,7 @@ ZoneName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/private_dns_ptr_record#zone_name DataAzurermPrivateDnsPtrRecord#zone_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/private_dns_ptr_record#zone_name DataAzurermPrivateDnsPtrRecord#zone_name}.
 
 ---
 
@@ -825,7 +825,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/private_dns_ptr_record#id DataAzurermPrivateDnsPtrRecord#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/private_dns_ptr_record#id DataAzurermPrivateDnsPtrRecord#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -842,7 +842,7 @@ Timeouts DataAzurermPrivateDnsPtrRecordTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/private_dns_ptr_record#timeouts DataAzurermPrivateDnsPtrRecord#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/private_dns_ptr_record#timeouts DataAzurermPrivateDnsPtrRecord#timeouts}
 
 ---
 
@@ -862,7 +862,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermprivate
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsPtrRecord.DataAzurermPrivateDnsPtrRecordTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/private_dns_ptr_record#read DataAzurermPrivateDnsPtrRecord#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateDnsPtrRecord.DataAzurermPrivateDnsPtrRecordTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/private_dns_ptr_record#read DataAzurermPrivateDnsPtrRecord#read}. |
 
 ---
 
@@ -874,7 +874,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/private_dns_ptr_record#read DataAzurermPrivateDnsPtrRecord#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/private_dns_ptr_record#read DataAzurermPrivateDnsPtrRecord#read}.
 
 ---
 

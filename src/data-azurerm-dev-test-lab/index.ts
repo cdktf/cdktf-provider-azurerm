@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/dev_test_lab
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/dev_test_lab
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,30 +13,30 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermDevTestLabConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/dev_test_lab#id DataAzurermDevTestLab#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/dev_test_lab#id DataAzurermDevTestLab#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/dev_test_lab#name DataAzurermDevTestLab#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/dev_test_lab#name DataAzurermDevTestLab#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/dev_test_lab#resource_group_name DataAzurermDevTestLab#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/dev_test_lab#resource_group_name DataAzurermDevTestLab#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/dev_test_lab#timeouts DataAzurermDevTestLab#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/dev_test_lab#timeouts DataAzurermDevTestLab#timeouts}
   */
   readonly timeouts?: DataAzurermDevTestLabTimeouts;
 }
 export interface DataAzurermDevTestLabTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/dev_test_lab#read DataAzurermDevTestLab#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/dev_test_lab#read DataAzurermDevTestLab#read}
   */
   readonly read?: string;
 }
@@ -111,7 +111,7 @@ export class DataAzurermDevTestLabTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/dev_test_lab azurerm_dev_test_lab}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/dev_test_lab azurerm_dev_test_lab}
 */
 export class DataAzurermDevTestLab extends cdktf.TerraformDataSource {
 
@@ -125,7 +125,7 @@ export class DataAzurermDevTestLab extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/dev_test_lab azurerm_dev_test_lab} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/dev_test_lab azurerm_dev_test_lab} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -136,7 +136,7 @@ export class DataAzurermDevTestLab extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_dev_test_lab',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.68.0',
+        providerVersion: '3.69.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

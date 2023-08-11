@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/stream_analytics_output_function
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/stream_analytics_output_function
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,66 +13,66 @@ import * as cdktf from 'cdktf';
 
 export interface StreamAnalyticsOutputFunctionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/stream_analytics_output_function#api_key StreamAnalyticsOutputFunction#api_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/stream_analytics_output_function#api_key StreamAnalyticsOutputFunction#api_key}
   */
   readonly apiKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/stream_analytics_output_function#batch_max_count StreamAnalyticsOutputFunction#batch_max_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/stream_analytics_output_function#batch_max_count StreamAnalyticsOutputFunction#batch_max_count}
   */
   readonly batchMaxCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/stream_analytics_output_function#batch_max_in_bytes StreamAnalyticsOutputFunction#batch_max_in_bytes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/stream_analytics_output_function#batch_max_in_bytes StreamAnalyticsOutputFunction#batch_max_in_bytes}
   */
   readonly batchMaxInBytes?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/stream_analytics_output_function#function_app StreamAnalyticsOutputFunction#function_app}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/stream_analytics_output_function#function_app StreamAnalyticsOutputFunction#function_app}
   */
   readonly functionApp: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/stream_analytics_output_function#function_name StreamAnalyticsOutputFunction#function_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/stream_analytics_output_function#function_name StreamAnalyticsOutputFunction#function_name}
   */
   readonly functionName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/stream_analytics_output_function#id StreamAnalyticsOutputFunction#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/stream_analytics_output_function#id StreamAnalyticsOutputFunction#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/stream_analytics_output_function#name StreamAnalyticsOutputFunction#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/stream_analytics_output_function#name StreamAnalyticsOutputFunction#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/stream_analytics_output_function#resource_group_name StreamAnalyticsOutputFunction#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/stream_analytics_output_function#resource_group_name StreamAnalyticsOutputFunction#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/stream_analytics_output_function#stream_analytics_job_name StreamAnalyticsOutputFunction#stream_analytics_job_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/stream_analytics_output_function#stream_analytics_job_name StreamAnalyticsOutputFunction#stream_analytics_job_name}
   */
   readonly streamAnalyticsJobName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/stream_analytics_output_function#timeouts StreamAnalyticsOutputFunction#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/stream_analytics_output_function#timeouts StreamAnalyticsOutputFunction#timeouts}
   */
   readonly timeouts?: StreamAnalyticsOutputFunctionTimeouts;
 }
 export interface StreamAnalyticsOutputFunctionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/stream_analytics_output_function#create StreamAnalyticsOutputFunction#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/stream_analytics_output_function#create StreamAnalyticsOutputFunction#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/stream_analytics_output_function#delete StreamAnalyticsOutputFunction#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/stream_analytics_output_function#delete StreamAnalyticsOutputFunction#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/stream_analytics_output_function#read StreamAnalyticsOutputFunction#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/stream_analytics_output_function#read StreamAnalyticsOutputFunction#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/stream_analytics_output_function#update StreamAnalyticsOutputFunction#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/stream_analytics_output_function#update StreamAnalyticsOutputFunction#update}
   */
   readonly update?: string;
 }
@@ -216,7 +216,7 @@ export class StreamAnalyticsOutputFunctionTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/stream_analytics_output_function azurerm_stream_analytics_output_function}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/stream_analytics_output_function azurerm_stream_analytics_output_function}
 */
 export class StreamAnalyticsOutputFunction extends cdktf.TerraformResource {
 
@@ -230,7 +230,7 @@ export class StreamAnalyticsOutputFunction extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/stream_analytics_output_function azurerm_stream_analytics_output_function} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/stream_analytics_output_function azurerm_stream_analytics_output_function} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -241,7 +241,7 @@ export class StreamAnalyticsOutputFunction extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_stream_analytics_output_function',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.68.0',
+        providerVersion: '3.69.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

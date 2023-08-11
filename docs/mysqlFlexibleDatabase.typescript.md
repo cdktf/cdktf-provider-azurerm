@@ -1,6 +1,6 @@
 # `azurerm_mysql_flexible_database`
 
-Refer to the Terraform Registory for docs: [`azurerm_mysql_flexible_database`](https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/mysql_flexible_database).
+Refer to the Terraform Registory for docs: [`azurerm_mysql_flexible_database`](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_flexible_database).
 
 # `mysqlFlexibleDatabase` Submodule <a name="`mysqlFlexibleDatabase` Submodule" id="@cdktf/provider-azurerm.mysqlFlexibleDatabase"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_mysql_flexible_database`](h
 
 ### MysqlFlexibleDatabase <a name="MysqlFlexibleDatabase" id="@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabase"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/mysql_flexible_database azurerm_mysql_flexible_database}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_flexible_database azurerm_mysql_flexible_database}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabase.Initializer"></a>
 
@@ -712,12 +712,12 @@ const mysqlFlexibleDatabaseConfig: mysqlFlexibleDatabase.MysqlFlexibleDatabaseCo
 | <code><a href="#@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabaseConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabaseConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabaseConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabaseConfig.property.charset">charset</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/mysql_flexible_database#charset MysqlFlexibleDatabase#charset}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabaseConfig.property.collation">collation</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/mysql_flexible_database#collation MysqlFlexibleDatabase#collation}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabaseConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/mysql_flexible_database#name MysqlFlexibleDatabase#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabaseConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/mysql_flexible_database#resource_group_name MysqlFlexibleDatabase#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabaseConfig.property.serverName">serverName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/mysql_flexible_database#server_name MysqlFlexibleDatabase#server_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabaseConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/mysql_flexible_database#id MysqlFlexibleDatabase#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabaseConfig.property.charset">charset</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_flexible_database#charset MysqlFlexibleDatabase#charset}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabaseConfig.property.collation">collation</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_flexible_database#collation MysqlFlexibleDatabase#collation}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabaseConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_flexible_database#name MysqlFlexibleDatabase#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabaseConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_flexible_database#resource_group_name MysqlFlexibleDatabase#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabaseConfig.property.serverName">serverName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_flexible_database#server_name MysqlFlexibleDatabase#server_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabaseConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_flexible_database#id MysqlFlexibleDatabase#id}. |
 | <code><a href="#@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabaseConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabaseTimeouts">MysqlFlexibleDatabaseTimeouts</a></code> | timeouts block. |
 
 ---
@@ -800,7 +800,7 @@ public readonly charset: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/mysql_flexible_database#charset MysqlFlexibleDatabase#charset}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_flexible_database#charset MysqlFlexibleDatabase#charset}.
 
 ---
 
@@ -812,7 +812,7 @@ public readonly collation: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/mysql_flexible_database#collation MysqlFlexibleDatabase#collation}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_flexible_database#collation MysqlFlexibleDatabase#collation}.
 
 ---
 
@@ -824,7 +824,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/mysql_flexible_database#name MysqlFlexibleDatabase#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_flexible_database#name MysqlFlexibleDatabase#name}.
 
 ---
 
@@ -836,7 +836,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/mysql_flexible_database#resource_group_name MysqlFlexibleDatabase#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_flexible_database#resource_group_name MysqlFlexibleDatabase#resource_group_name}.
 
 ---
 
@@ -848,7 +848,7 @@ public readonly serverName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/mysql_flexible_database#server_name MysqlFlexibleDatabase#server_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_flexible_database#server_name MysqlFlexibleDatabase#server_name}.
 
 ---
 
@@ -860,7 +860,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/mysql_flexible_database#id MysqlFlexibleDatabase#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_flexible_database#id MysqlFlexibleDatabase#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -877,7 +877,7 @@ public readonly timeouts: MysqlFlexibleDatabaseTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/mysql_flexible_database#timeouts MysqlFlexibleDatabase#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_flexible_database#timeouts MysqlFlexibleDatabase#timeouts}
 
 ---
 
@@ -895,10 +895,10 @@ const mysqlFlexibleDatabaseTimeouts: mysqlFlexibleDatabase.MysqlFlexibleDatabase
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabaseTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/mysql_flexible_database#create MysqlFlexibleDatabase#create}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabaseTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/mysql_flexible_database#delete MysqlFlexibleDatabase#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabaseTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/mysql_flexible_database#read MysqlFlexibleDatabase#read}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabaseTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/mysql_flexible_database#update MysqlFlexibleDatabase#update}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabaseTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_flexible_database#create MysqlFlexibleDatabase#create}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabaseTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_flexible_database#delete MysqlFlexibleDatabase#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabaseTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_flexible_database#read MysqlFlexibleDatabase#read}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlFlexibleDatabase.MysqlFlexibleDatabaseTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_flexible_database#update MysqlFlexibleDatabase#update}. |
 
 ---
 
@@ -910,7 +910,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/mysql_flexible_database#create MysqlFlexibleDatabase#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_flexible_database#create MysqlFlexibleDatabase#create}.
 
 ---
 
@@ -922,7 +922,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/mysql_flexible_database#delete MysqlFlexibleDatabase#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_flexible_database#delete MysqlFlexibleDatabase#delete}.
 
 ---
 
@@ -934,7 +934,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/mysql_flexible_database#read MysqlFlexibleDatabase#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_flexible_database#read MysqlFlexibleDatabase#read}.
 
 ---
 
@@ -946,7 +946,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/mysql_flexible_database#update MysqlFlexibleDatabase#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_flexible_database#update MysqlFlexibleDatabase#update}.
 
 ---
 

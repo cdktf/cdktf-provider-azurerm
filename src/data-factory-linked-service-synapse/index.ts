@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/data_factory_linked_service_synapse
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/data_factory_linked_service_synapse
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,64 +13,64 @@ import * as cdktf from 'cdktf';
 
 export interface DataFactoryLinkedServiceSynapseConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/data_factory_linked_service_synapse#additional_properties DataFactoryLinkedServiceSynapse#additional_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/data_factory_linked_service_synapse#additional_properties DataFactoryLinkedServiceSynapse#additional_properties}
   */
   readonly additionalProperties?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/data_factory_linked_service_synapse#annotations DataFactoryLinkedServiceSynapse#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/data_factory_linked_service_synapse#annotations DataFactoryLinkedServiceSynapse#annotations}
   */
   readonly annotations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/data_factory_linked_service_synapse#connection_string DataFactoryLinkedServiceSynapse#connection_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/data_factory_linked_service_synapse#connection_string DataFactoryLinkedServiceSynapse#connection_string}
   */
   readonly connectionString: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/data_factory_linked_service_synapse#data_factory_id DataFactoryLinkedServiceSynapse#data_factory_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/data_factory_linked_service_synapse#data_factory_id DataFactoryLinkedServiceSynapse#data_factory_id}
   */
   readonly dataFactoryId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/data_factory_linked_service_synapse#description DataFactoryLinkedServiceSynapse#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/data_factory_linked_service_synapse#description DataFactoryLinkedServiceSynapse#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/data_factory_linked_service_synapse#id DataFactoryLinkedServiceSynapse#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/data_factory_linked_service_synapse#id DataFactoryLinkedServiceSynapse#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/data_factory_linked_service_synapse#integration_runtime_name DataFactoryLinkedServiceSynapse#integration_runtime_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/data_factory_linked_service_synapse#integration_runtime_name DataFactoryLinkedServiceSynapse#integration_runtime_name}
   */
   readonly integrationRuntimeName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/data_factory_linked_service_synapse#name DataFactoryLinkedServiceSynapse#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/data_factory_linked_service_synapse#name DataFactoryLinkedServiceSynapse#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/data_factory_linked_service_synapse#parameters DataFactoryLinkedServiceSynapse#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/data_factory_linked_service_synapse#parameters DataFactoryLinkedServiceSynapse#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
   * key_vault_password block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/data_factory_linked_service_synapse#key_vault_password DataFactoryLinkedServiceSynapse#key_vault_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/data_factory_linked_service_synapse#key_vault_password DataFactoryLinkedServiceSynapse#key_vault_password}
   */
   readonly keyVaultPassword?: DataFactoryLinkedServiceSynapseKeyVaultPassword;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/data_factory_linked_service_synapse#timeouts DataFactoryLinkedServiceSynapse#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/data_factory_linked_service_synapse#timeouts DataFactoryLinkedServiceSynapse#timeouts}
   */
   readonly timeouts?: DataFactoryLinkedServiceSynapseTimeouts;
 }
 export interface DataFactoryLinkedServiceSynapseKeyVaultPassword {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/data_factory_linked_service_synapse#linked_service_name DataFactoryLinkedServiceSynapse#linked_service_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/data_factory_linked_service_synapse#linked_service_name DataFactoryLinkedServiceSynapse#linked_service_name}
   */
   readonly linkedServiceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/data_factory_linked_service_synapse#secret_name DataFactoryLinkedServiceSynapse#secret_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/data_factory_linked_service_synapse#secret_name DataFactoryLinkedServiceSynapse#secret_name}
   */
   readonly secretName: string;
 }
@@ -152,19 +152,19 @@ export class DataFactoryLinkedServiceSynapseKeyVaultPasswordOutputReference exte
 }
 export interface DataFactoryLinkedServiceSynapseTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/data_factory_linked_service_synapse#create DataFactoryLinkedServiceSynapse#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/data_factory_linked_service_synapse#create DataFactoryLinkedServiceSynapse#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/data_factory_linked_service_synapse#delete DataFactoryLinkedServiceSynapse#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/data_factory_linked_service_synapse#delete DataFactoryLinkedServiceSynapse#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/data_factory_linked_service_synapse#read DataFactoryLinkedServiceSynapse#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/data_factory_linked_service_synapse#read DataFactoryLinkedServiceSynapse#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/data_factory_linked_service_synapse#update DataFactoryLinkedServiceSynapse#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/data_factory_linked_service_synapse#update DataFactoryLinkedServiceSynapse#update}
   */
   readonly update?: string;
 }
@@ -308,7 +308,7 @@ export class DataFactoryLinkedServiceSynapseTimeoutsOutputReference extends cdkt
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/data_factory_linked_service_synapse azurerm_data_factory_linked_service_synapse}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/data_factory_linked_service_synapse azurerm_data_factory_linked_service_synapse}
 */
 export class DataFactoryLinkedServiceSynapse extends cdktf.TerraformResource {
 
@@ -322,7 +322,7 @@ export class DataFactoryLinkedServiceSynapse extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/data_factory_linked_service_synapse azurerm_data_factory_linked_service_synapse} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/data_factory_linked_service_synapse azurerm_data_factory_linked_service_synapse} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -333,7 +333,7 @@ export class DataFactoryLinkedServiceSynapse extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_factory_linked_service_synapse',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.68.0',
+        providerVersion: '3.69.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

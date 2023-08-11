@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/policy_definition
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/policy_definition
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,70 +13,70 @@ import * as cdktf from 'cdktf';
 
 export interface PolicyDefinitionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/policy_definition#description PolicyDefinition#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/policy_definition#description PolicyDefinition#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/policy_definition#display_name PolicyDefinition#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/policy_definition#display_name PolicyDefinition#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/policy_definition#id PolicyDefinition#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/policy_definition#id PolicyDefinition#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/policy_definition#management_group_id PolicyDefinition#management_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/policy_definition#management_group_id PolicyDefinition#management_group_id}
   */
   readonly managementGroupId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/policy_definition#metadata PolicyDefinition#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/policy_definition#metadata PolicyDefinition#metadata}
   */
   readonly metadata?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/policy_definition#mode PolicyDefinition#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/policy_definition#mode PolicyDefinition#mode}
   */
   readonly mode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/policy_definition#name PolicyDefinition#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/policy_definition#name PolicyDefinition#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/policy_definition#parameters PolicyDefinition#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/policy_definition#parameters PolicyDefinition#parameters}
   */
   readonly parameters?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/policy_definition#policy_rule PolicyDefinition#policy_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/policy_definition#policy_rule PolicyDefinition#policy_rule}
   */
   readonly policyRule?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/policy_definition#policy_type PolicyDefinition#policy_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/policy_definition#policy_type PolicyDefinition#policy_type}
   */
   readonly policyType: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/policy_definition#timeouts PolicyDefinition#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/policy_definition#timeouts PolicyDefinition#timeouts}
   */
   readonly timeouts?: PolicyDefinitionTimeouts;
 }
 export interface PolicyDefinitionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/policy_definition#create PolicyDefinition#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/policy_definition#create PolicyDefinition#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/policy_definition#delete PolicyDefinition#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/policy_definition#delete PolicyDefinition#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/policy_definition#read PolicyDefinition#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/policy_definition#read PolicyDefinition#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/policy_definition#update PolicyDefinition#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/policy_definition#update PolicyDefinition#update}
   */
   readonly update?: string;
 }
@@ -220,7 +220,7 @@ export class PolicyDefinitionTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/policy_definition azurerm_policy_definition}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/policy_definition azurerm_policy_definition}
 */
 export class PolicyDefinition extends cdktf.TerraformResource {
 
@@ -234,7 +234,7 @@ export class PolicyDefinition extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/policy_definition azurerm_policy_definition} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/policy_definition azurerm_policy_definition} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -245,7 +245,7 @@ export class PolicyDefinition extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_policy_definition',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.68.0',
+        providerVersion: '3.69.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

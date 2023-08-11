@@ -1,6 +1,6 @@
 # `azurerm_virtual_desktop_workspace`
 
-Refer to the Terraform Registory for docs: [`azurerm_virtual_desktop_workspace`](https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_desktop_workspace).
+Refer to the Terraform Registory for docs: [`azurerm_virtual_desktop_workspace`](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace).
 
 # `virtualDesktopWorkspace` Submodule <a name="`virtualDesktopWorkspace` Submodule" id="@cdktf/provider-azurerm.virtualDesktopWorkspace"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_virtual_desktop_workspace`]
 
 ### VirtualDesktopWorkspace <a name="VirtualDesktopWorkspace" id="@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_desktop_workspace azurerm_virtual_desktop_workspace}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace azurerm_virtual_desktop_workspace}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace.Initializer"></a>
 
@@ -74,6 +74,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace.resetDescription">resetDescription</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace.resetFriendlyName">resetFriendlyName</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace.resetId">resetId</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace.resetPublicNetworkAccessEnabled">resetPublicNetworkAccessEnabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace.resetTags">resetTags</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace.resetTimeouts">resetTimeouts</a></code> | *No description.* |
 
@@ -293,6 +294,12 @@ public resetFriendlyName(): void
 public resetId(): void
 ```
 
+##### `resetPublicNetworkAccessEnabled` <a name="resetPublicNetworkAccessEnabled" id="@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace.resetPublicNetworkAccessEnabled"></a>
+
+```typescript
+public resetPublicNetworkAccessEnabled(): void
+```
+
 ##### `resetTags` <a name="resetTags" id="@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace.resetTags"></a>
 
 ```typescript
@@ -399,6 +406,7 @@ virtualDesktopWorkspace.VirtualDesktopWorkspace.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace.property.locationInput">locationInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace.property.nameInput">nameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace.property.publicNetworkAccessEnabledInput">publicNetworkAccessEnabledInput</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace.property.tagsInput">tagsInput</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace.property.timeoutsInput">timeoutsInput</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceTimeouts">VirtualDesktopWorkspaceTimeouts</a></code> | *No description.* |
@@ -407,6 +415,7 @@ virtualDesktopWorkspace.VirtualDesktopWorkspace.isTerraformResource(x: any)
 | <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace.property.id">id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace.property.location">location</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace.property.name">name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace.property.publicNetworkAccessEnabled">publicNetworkAccessEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | *No description.* |
 
@@ -614,6 +623,16 @@ public readonly nameInput: string;
 
 ---
 
+##### `publicNetworkAccessEnabledInput`<sup>Optional</sup> <a name="publicNetworkAccessEnabledInput" id="@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace.property.publicNetworkAccessEnabledInput"></a>
+
+```typescript
+public readonly publicNetworkAccessEnabledInput: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+---
+
 ##### `resourceGroupNameInput`<sup>Optional</sup> <a name="resourceGroupNameInput" id="@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace.property.resourceGroupNameInput"></a>
 
 ```typescript
@@ -694,6 +713,16 @@ public readonly name: string;
 
 ---
 
+##### `publicNetworkAccessEnabled`<sup>Required</sup> <a name="publicNetworkAccessEnabled" id="@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace.property.publicNetworkAccessEnabled"></a>
+
+```typescript
+public readonly publicNetworkAccessEnabled: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+---
+
 ##### `resourceGroupName`<sup>Required</sup> <a name="resourceGroupName" id="@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspace.property.resourceGroupName"></a>
 
 ```typescript
@@ -755,13 +784,14 @@ const virtualDesktopWorkspaceConfig: virtualDesktopWorkspace.VirtualDesktopWorks
 | <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_desktop_workspace#location VirtualDesktopWorkspace#location}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_desktop_workspace#name VirtualDesktopWorkspace#name}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_desktop_workspace#resource_group_name VirtualDesktopWorkspace#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceConfig.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_desktop_workspace#description VirtualDesktopWorkspace#description}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceConfig.property.friendlyName">friendlyName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_desktop_workspace#friendly_name VirtualDesktopWorkspace#friendly_name}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_desktop_workspace#id VirtualDesktopWorkspace#id}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_desktop_workspace#tags VirtualDesktopWorkspace#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace#location VirtualDesktopWorkspace#location}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace#name VirtualDesktopWorkspace#name}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace#resource_group_name VirtualDesktopWorkspace#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceConfig.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace#description VirtualDesktopWorkspace#description}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceConfig.property.friendlyName">friendlyName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace#friendly_name VirtualDesktopWorkspace#friendly_name}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace#id VirtualDesktopWorkspace#id}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceConfig.property.publicNetworkAccessEnabled">publicNetworkAccessEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace#public_network_access_enabled VirtualDesktopWorkspace#public_network_access_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace#tags VirtualDesktopWorkspace#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceTimeouts">VirtualDesktopWorkspaceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -844,7 +874,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_desktop_workspace#location VirtualDesktopWorkspace#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace#location VirtualDesktopWorkspace#location}.
 
 ---
 
@@ -856,7 +886,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_desktop_workspace#name VirtualDesktopWorkspace#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace#name VirtualDesktopWorkspace#name}.
 
 ---
 
@@ -868,7 +898,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_desktop_workspace#resource_group_name VirtualDesktopWorkspace#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace#resource_group_name VirtualDesktopWorkspace#resource_group_name}.
 
 ---
 
@@ -880,7 +910,7 @@ public readonly description: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_desktop_workspace#description VirtualDesktopWorkspace#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace#description VirtualDesktopWorkspace#description}.
 
 ---
 
@@ -892,7 +922,7 @@ public readonly friendlyName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_desktop_workspace#friendly_name VirtualDesktopWorkspace#friendly_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace#friendly_name VirtualDesktopWorkspace#friendly_name}.
 
 ---
 
@@ -904,10 +934,22 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_desktop_workspace#id VirtualDesktopWorkspace#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace#id VirtualDesktopWorkspace#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `publicNetworkAccessEnabled`<sup>Optional</sup> <a name="publicNetworkAccessEnabled" id="@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceConfig.property.publicNetworkAccessEnabled"></a>
+
+```typescript
+public readonly publicNetworkAccessEnabled: boolean | IResolvable;
+```
+
+- *Type:* boolean | cdktf.IResolvable
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace#public_network_access_enabled VirtualDesktopWorkspace#public_network_access_enabled}.
 
 ---
 
@@ -919,7 +961,7 @@ public readonly tags: {[ key: string ]: string};
 
 - *Type:* {[ key: string ]: string}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_desktop_workspace#tags VirtualDesktopWorkspace#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace#tags VirtualDesktopWorkspace#tags}.
 
 ---
 
@@ -933,7 +975,7 @@ public readonly timeouts: VirtualDesktopWorkspaceTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_desktop_workspace#timeouts VirtualDesktopWorkspace#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace#timeouts VirtualDesktopWorkspace#timeouts}
 
 ---
 
@@ -951,10 +993,10 @@ const virtualDesktopWorkspaceTimeouts: virtualDesktopWorkspace.VirtualDesktopWor
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_desktop_workspace#create VirtualDesktopWorkspace#create}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_desktop_workspace#delete VirtualDesktopWorkspace#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_desktop_workspace#read VirtualDesktopWorkspace#read}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_desktop_workspace#update VirtualDesktopWorkspace#update}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace#create VirtualDesktopWorkspace#create}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace#delete VirtualDesktopWorkspace#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace#read VirtualDesktopWorkspace#read}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopWorkspace.VirtualDesktopWorkspaceTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace#update VirtualDesktopWorkspace#update}. |
 
 ---
 
@@ -966,7 +1008,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_desktop_workspace#create VirtualDesktopWorkspace#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace#create VirtualDesktopWorkspace#create}.
 
 ---
 
@@ -978,7 +1020,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_desktop_workspace#delete VirtualDesktopWorkspace#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace#delete VirtualDesktopWorkspace#delete}.
 
 ---
 
@@ -990,7 +1032,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_desktop_workspace#read VirtualDesktopWorkspace#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace#read VirtualDesktopWorkspace#read}.
 
 ---
 
@@ -1002,7 +1044,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/virtual_desktop_workspace#update VirtualDesktopWorkspace#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_desktop_workspace#update VirtualDesktopWorkspace#update}.
 
 ---
 

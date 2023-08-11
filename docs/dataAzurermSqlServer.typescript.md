@@ -1,6 +1,6 @@
 # `data_azurerm_sql_server`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_sql_server`](https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/sql_server).
+Refer to the Terraform Registory for docs: [`data_azurerm_sql_server`](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/sql_server).
 
 # `dataAzurermSqlServer` Submodule <a name="`dataAzurermSqlServer` Submodule" id="@cdktf/provider-azurerm.dataAzurermSqlServer"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_sql_server`](https://r
 
 ### DataAzurermSqlServer <a name="DataAzurermSqlServer" id="@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServer"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/sql_server azurerm_sql_server}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/sql_server azurerm_sql_server}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServer.Initializer"></a>
 
@@ -690,9 +690,9 @@ const dataAzurermSqlServerConfig: dataAzurermSqlServer.DataAzurermSqlServerConfi
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/sql_server#name DataAzurermSqlServer#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/sql_server#resource_group_name DataAzurermSqlServer#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/sql_server#id DataAzurermSqlServer#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/sql_server#name DataAzurermSqlServer#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/sql_server#resource_group_name DataAzurermSqlServer#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/sql_server#id DataAzurermSqlServer#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerTimeouts">DataAzurermSqlServerTimeouts</a></code> | timeouts block. |
 
 ---
@@ -775,7 +775,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/sql_server#name DataAzurermSqlServer#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/sql_server#name DataAzurermSqlServer#name}.
 
 ---
 
@@ -787,7 +787,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/sql_server#resource_group_name DataAzurermSqlServer#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/sql_server#resource_group_name DataAzurermSqlServer#resource_group_name}.
 
 ---
 
@@ -799,7 +799,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/sql_server#id DataAzurermSqlServer#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/sql_server#id DataAzurermSqlServer#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -816,7 +816,7 @@ public readonly timeouts: DataAzurermSqlServerTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/sql_server#timeouts DataAzurermSqlServer#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/sql_server#timeouts DataAzurermSqlServer#timeouts}
 
 ---
 
@@ -845,7 +845,7 @@ const dataAzurermSqlServerTimeouts: dataAzurermSqlServer.DataAzurermSqlServerTim
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/sql_server#read DataAzurermSqlServer#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/sql_server#read DataAzurermSqlServer#read}. |
 
 ---
 
@@ -857,7 +857,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/data-sources/sql_server#read DataAzurermSqlServer#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/sql_server#read DataAzurermSqlServer#read}.
 
 ---
 
