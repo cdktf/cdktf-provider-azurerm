@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/security_center_subscription_pricing
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/security_center_subscription_pricing
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +8,173 @@ import * as cdktf from 'cdktf';
 
 export interface SecurityCenterSubscriptionPricingConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/security_center_subscription_pricing#id SecurityCenterSubscriptionPricing#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/security_center_subscription_pricing#id SecurityCenterSubscriptionPricing#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/security_center_subscription_pricing#resource_type SecurityCenterSubscriptionPricing#resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/security_center_subscription_pricing#resource_type SecurityCenterSubscriptionPricing#resource_type}
   */
   readonly resourceType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/security_center_subscription_pricing#subplan SecurityCenterSubscriptionPricing#subplan}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/security_center_subscription_pricing#subplan SecurityCenterSubscriptionPricing#subplan}
   */
   readonly subplan?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/security_center_subscription_pricing#tier SecurityCenterSubscriptionPricing#tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/security_center_subscription_pricing#tier SecurityCenterSubscriptionPricing#tier}
   */
   readonly tier: string;
   /**
+  * extension block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/security_center_subscription_pricing#extension SecurityCenterSubscriptionPricing#extension}
+  */
+  readonly extension?: SecurityCenterSubscriptionPricingExtension[] | cdktf.IResolvable;
+  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/security_center_subscription_pricing#timeouts SecurityCenterSubscriptionPricing#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/security_center_subscription_pricing#timeouts SecurityCenterSubscriptionPricing#timeouts}
   */
   readonly timeouts?: SecurityCenterSubscriptionPricingTimeouts;
 }
+export interface SecurityCenterSubscriptionPricingExtension {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/security_center_subscription_pricing#additional_extension_properties SecurityCenterSubscriptionPricing#additional_extension_properties}
+  */
+  readonly additionalExtensionProperties?: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/security_center_subscription_pricing#name SecurityCenterSubscriptionPricing#name}
+  */
+  readonly name: string;
+}
+
+export function securityCenterSubscriptionPricingExtensionToTerraform(struct?: SecurityCenterSubscriptionPricingExtension | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    additional_extension_properties: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.additionalExtensionProperties),
+    name: cdktf.stringToTerraform(struct!.name),
+  }
+}
+
+export class SecurityCenterSubscriptionPricingExtensionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): SecurityCenterSubscriptionPricingExtension | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._additionalExtensionProperties !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.additionalExtensionProperties = this._additionalExtensionProperties;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: SecurityCenterSubscriptionPricingExtension | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._additionalExtensionProperties = undefined;
+      this._name = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._additionalExtensionProperties = value.additionalExtensionProperties;
+      this._name = value.name;
+    }
+  }
+
+  // additional_extension_properties - computed: false, optional: true, required: false
+  private _additionalExtensionProperties?: { [key: string]: string }; 
+  public get additionalExtensionProperties() {
+    return this.getStringMapAttribute('additional_extension_properties');
+  }
+  public set additionalExtensionProperties(value: { [key: string]: string }) {
+    this._additionalExtensionProperties = value;
+  }
+  public resetAdditionalExtensionProperties() {
+    this._additionalExtensionProperties = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get additionalExtensionPropertiesInput() {
+    return this._additionalExtensionProperties;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+}
+
+export class SecurityCenterSubscriptionPricingExtensionList extends cdktf.ComplexList {
+  public internalValue? : SecurityCenterSubscriptionPricingExtension[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): SecurityCenterSubscriptionPricingExtensionOutputReference {
+    return new SecurityCenterSubscriptionPricingExtensionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface SecurityCenterSubscriptionPricingTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/security_center_subscription_pricing#create SecurityCenterSubscriptionPricing#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/security_center_subscription_pricing#create SecurityCenterSubscriptionPricing#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/security_center_subscription_pricing#delete SecurityCenterSubscriptionPricing#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/security_center_subscription_pricing#delete SecurityCenterSubscriptionPricing#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/security_center_subscription_pricing#read SecurityCenterSubscriptionPricing#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/security_center_subscription_pricing#read SecurityCenterSubscriptionPricing#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/security_center_subscription_pricing#update SecurityCenterSubscriptionPricing#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/security_center_subscription_pricing#update SecurityCenterSubscriptionPricing#update}
   */
   readonly update?: string;
 }
@@ -196,7 +318,7 @@ export class SecurityCenterSubscriptionPricingTimeoutsOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/security_center_subscription_pricing azurerm_security_center_subscription_pricing}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/security_center_subscription_pricing azurerm_security_center_subscription_pricing}
 */
 export class SecurityCenterSubscriptionPricing extends cdktf.TerraformResource {
 
@@ -210,7 +332,7 @@ export class SecurityCenterSubscriptionPricing extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.68.0/docs/resources/security_center_subscription_pricing azurerm_security_center_subscription_pricing} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/security_center_subscription_pricing azurerm_security_center_subscription_pricing} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -221,7 +343,7 @@ export class SecurityCenterSubscriptionPricing extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_security_center_subscription_pricing',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.68.0',
+        providerVersion: '3.69.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -236,6 +358,7 @@ export class SecurityCenterSubscriptionPricing extends cdktf.TerraformResource {
     this._resourceType = config.resourceType;
     this._subplan = config.subplan;
     this._tier = config.tier;
+    this._extension.internalValue = config.extension;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -304,6 +427,22 @@ export class SecurityCenterSubscriptionPricing extends cdktf.TerraformResource {
     return this._tier;
   }
 
+  // extension - computed: false, optional: true, required: false
+  private _extension = new SecurityCenterSubscriptionPricingExtensionList(this, "extension", true);
+  public get extension() {
+    return this._extension;
+  }
+  public putExtension(value: SecurityCenterSubscriptionPricingExtension[] | cdktf.IResolvable) {
+    this._extension.internalValue = value;
+  }
+  public resetExtension() {
+    this._extension.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get extensionInput() {
+    return this._extension.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new SecurityCenterSubscriptionPricingTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -330,6 +469,7 @@ export class SecurityCenterSubscriptionPricing extends cdktf.TerraformResource {
       resource_type: cdktf.stringToTerraform(this._resourceType),
       subplan: cdktf.stringToTerraform(this._subplan),
       tier: cdktf.stringToTerraform(this._tier),
+      extension: cdktf.listMapper(securityCenterSubscriptionPricingExtensionToTerraform, true)(this._extension.internalValue),
       timeouts: securityCenterSubscriptionPricingTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
