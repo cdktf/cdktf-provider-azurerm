@@ -606,6 +606,8 @@ export * as mssqlServerSecurityAlertPolicy from './mssql-server-security-alert-p
 export * as mssqlServerTransparentDataEncryption from './mssql-server-transparent-data-encryption';
 export * as mssqlServerVulnerabilityAssessment from './mssql-server-vulnerability-assessment';
 export * as mssqlVirtualMachine from './mssql-virtual-machine';
+export * as mssqlVirtualMachineAvailabilityGroupListener from './mssql-virtual-machine-availability-group-listener';
+export * as mssqlVirtualMachineGroup from './mssql-virtual-machine-group';
 export * as mssqlVirtualNetworkRule from './mssql-virtual-network-rule';
 export * as mysqlActiveDirectoryAdministrator from './mysql-active-directory-administrator';
 export * as mysqlConfiguration from './mysql-configuration';

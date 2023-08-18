@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_network_dns_servers
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/virtual_network_dns_servers
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,42 +13,42 @@ import * as cdktf from 'cdktf';
 
 export interface VirtualNetworkDnsServersConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_network_dns_servers#dns_servers VirtualNetworkDnsServers#dns_servers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/virtual_network_dns_servers#dns_servers VirtualNetworkDnsServers#dns_servers}
   */
   readonly dnsServers?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_network_dns_servers#id VirtualNetworkDnsServers#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/virtual_network_dns_servers#id VirtualNetworkDnsServers#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_network_dns_servers#virtual_network_id VirtualNetworkDnsServers#virtual_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/virtual_network_dns_servers#virtual_network_id VirtualNetworkDnsServers#virtual_network_id}
   */
   readonly virtualNetworkId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_network_dns_servers#timeouts VirtualNetworkDnsServers#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/virtual_network_dns_servers#timeouts VirtualNetworkDnsServers#timeouts}
   */
   readonly timeouts?: VirtualNetworkDnsServersTimeouts;
 }
 export interface VirtualNetworkDnsServersTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_network_dns_servers#create VirtualNetworkDnsServers#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/virtual_network_dns_servers#create VirtualNetworkDnsServers#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_network_dns_servers#delete VirtualNetworkDnsServers#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/virtual_network_dns_servers#delete VirtualNetworkDnsServers#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_network_dns_servers#read VirtualNetworkDnsServers#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/virtual_network_dns_servers#read VirtualNetworkDnsServers#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_network_dns_servers#update VirtualNetworkDnsServers#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/virtual_network_dns_servers#update VirtualNetworkDnsServers#update}
   */
   readonly update?: string;
 }
@@ -192,7 +192,7 @@ export class VirtualNetworkDnsServersTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_network_dns_servers azurerm_virtual_network_dns_servers}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/virtual_network_dns_servers azurerm_virtual_network_dns_servers}
 */
 export class VirtualNetworkDnsServers extends cdktf.TerraformResource {
 
@@ -206,7 +206,7 @@ export class VirtualNetworkDnsServers extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/virtual_network_dns_servers azurerm_virtual_network_dns_servers} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/virtual_network_dns_servers azurerm_virtual_network_dns_servers} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -217,7 +217,7 @@ export class VirtualNetworkDnsServers extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_virtual_network_dns_servers',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.69.0',
+        providerVersion: '3.70.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

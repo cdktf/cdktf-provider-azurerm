@@ -928,6 +928,8 @@ The following submodules are available:
 - [mssqlServerTransparentDataEncryption](./mssqlServerTransparentDataEncryption.typescript.md)
 - [mssqlServerVulnerabilityAssessment](./mssqlServerVulnerabilityAssessment.typescript.md)
 - [mssqlVirtualMachine](./mssqlVirtualMachine.typescript.md)
+- [mssqlVirtualMachineAvailabilityGroupListener](./mssqlVirtualMachineAvailabilityGroupListener.typescript.md)
+- [mssqlVirtualMachineGroup](./mssqlVirtualMachineGroup.typescript.md)
 - [mssqlVirtualNetworkRule](./mssqlVirtualNetworkRule.typescript.md)
 - [mysqlActiveDirectoryAdministrator](./mysqlActiveDirectoryAdministrator.typescript.md)
 - [mysqlConfiguration](./mysqlConfiguration.typescript.md)

@@ -1,6 +1,6 @@
 # `azurerm_mysql_server_key`
 
-Refer to the Terraform Registory for docs: [`azurerm_mysql_server_key`](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_server_key).
+Refer to the Terraform Registory for docs: [`azurerm_mysql_server_key`](https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/mysql_server_key).
 
 # `mysqlServerKey` Submodule <a name="`mysqlServerKey` Submodule" id="@cdktf/provider-azurerm.mysqlServerKey"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_mysql_server_key`](https://
 
 ### MysqlServerKey <a name="MysqlServerKey" id="@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_server_key azurerm_mysql_server_key}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/mysql_server_key azurerm_mysql_server_key}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.Initializer"></a>
 
@@ -646,9 +646,9 @@ const mysqlServerKeyConfig: mysqlServerKey.MysqlServerKeyConfig = { ... }
 | <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyConfig.property.keyVaultKeyId">keyVaultKeyId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_server_key#key_vault_key_id MysqlServerKey#key_vault_key_id}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyConfig.property.serverId">serverId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_server_key#server_id MysqlServerKey#server_id}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_server_key#id MysqlServerKey#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyConfig.property.keyVaultKeyId">keyVaultKeyId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/mysql_server_key#key_vault_key_id MysqlServerKey#key_vault_key_id}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyConfig.property.serverId">serverId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/mysql_server_key#server_id MysqlServerKey#server_id}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/mysql_server_key#id MysqlServerKey#id}. |
 | <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts">MysqlServerKeyTimeouts</a></code> | timeouts block. |
 
 ---
@@ -731,7 +731,7 @@ public readonly keyVaultKeyId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_server_key#key_vault_key_id MysqlServerKey#key_vault_key_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/mysql_server_key#key_vault_key_id MysqlServerKey#key_vault_key_id}.
 
 ---
 
@@ -743,7 +743,7 @@ public readonly serverId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_server_key#server_id MysqlServerKey#server_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/mysql_server_key#server_id MysqlServerKey#server_id}.
 
 ---
 
@@ -755,7 +755,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_server_key#id MysqlServerKey#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/mysql_server_key#id MysqlServerKey#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -772,7 +772,7 @@ public readonly timeouts: MysqlServerKeyTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_server_key#timeouts MysqlServerKey#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/mysql_server_key#timeouts MysqlServerKey#timeouts}
 
 ---
 
@@ -790,10 +790,10 @@ const mysqlServerKeyTimeouts: mysqlServerKey.MysqlServerKeyTimeouts = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_server_key#create MysqlServerKey#create}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_server_key#delete MysqlServerKey#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_server_key#read MysqlServerKey#read}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_server_key#update MysqlServerKey#update}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/mysql_server_key#create MysqlServerKey#create}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/mysql_server_key#delete MysqlServerKey#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/mysql_server_key#read MysqlServerKey#read}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/mysql_server_key#update MysqlServerKey#update}. |
 
 ---
 
@@ -805,7 +805,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_server_key#create MysqlServerKey#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/mysql_server_key#create MysqlServerKey#create}.
 
 ---
 
@@ -817,7 +817,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_server_key#delete MysqlServerKey#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/mysql_server_key#delete MysqlServerKey#delete}.
 
 ---
 
@@ -829,7 +829,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_server_key#read MysqlServerKey#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/mysql_server_key#read MysqlServerKey#read}.
 
 ---
 
@@ -841,7 +841,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/mysql_server_key#update MysqlServerKey#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/mysql_server_key#update MysqlServerKey#update}.
 
 ---
 

@@ -928,6 +928,8 @@ The following submodules are available:
 - [mssqlServerTransparentDataEncryption](./mssqlServerTransparentDataEncryption.python.md)
 - [mssqlServerVulnerabilityAssessment](./mssqlServerVulnerabilityAssessment.python.md)
 - [mssqlVirtualMachine](./mssqlVirtualMachine.python.md)
+- [mssqlVirtualMachineAvailabilityGroupListener](./mssqlVirtualMachineAvailabilityGroupListener.python.md)
+- [mssqlVirtualMachineGroup](./mssqlVirtualMachineGroup.python.md)
 - [mssqlVirtualNetworkRule](./mssqlVirtualNetworkRule.python.md)
 - [mysqlActiveDirectoryAdministrator](./mysqlActiveDirectoryAdministrator.python.md)
 - [mysqlConfiguration](./mysqlConfiguration.python.md)

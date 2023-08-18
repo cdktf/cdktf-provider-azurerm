@@ -928,6 +928,8 @@ The following submodules are available:
 - [mssqlServerTransparentDataEncryption](./mssqlServerTransparentDataEncryption.go.md)
 - [mssqlServerVulnerabilityAssessment](./mssqlServerVulnerabilityAssessment.go.md)
 - [mssqlVirtualMachine](./mssqlVirtualMachine.go.md)
+- [mssqlVirtualMachineAvailabilityGroupListener](./mssqlVirtualMachineAvailabilityGroupListener.go.md)
+- [mssqlVirtualMachineGroup](./mssqlVirtualMachineGroup.go.md)
 - [mssqlVirtualNetworkRule](./mssqlVirtualNetworkRule.go.md)
 - [mysqlActiveDirectoryAdministrator](./mysqlActiveDirectoryAdministrator.go.md)
 - [mysqlConfiguration](./mysqlConfiguration.go.md)
