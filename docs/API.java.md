@@ -928,6 +928,8 @@ The following submodules are available:
 - [mssqlServerTransparentDataEncryption](./mssqlServerTransparentDataEncryption.java.md)
 - [mssqlServerVulnerabilityAssessment](./mssqlServerVulnerabilityAssessment.java.md)
 - [mssqlVirtualMachine](./mssqlVirtualMachine.java.md)
+- [mssqlVirtualMachineAvailabilityGroupListener](./mssqlVirtualMachineAvailabilityGroupListener.java.md)
+- [mssqlVirtualMachineGroup](./mssqlVirtualMachineGroup.java.md)
 - [mssqlVirtualNetworkRule](./mssqlVirtualNetworkRule.java.md)
 - [mysqlActiveDirectoryAdministrator](./mysqlActiveDirectoryAdministrator.java.md)
 - [mysqlConfiguration](./mysqlConfiguration.java.md)

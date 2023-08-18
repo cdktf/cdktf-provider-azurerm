@@ -1,3 +1,3 @@
 # `azurerm_app_service_public_certificate`
 
-Refer to the Terraform Registory for docs: [`azurerm_app_service_public_certificate`](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/app_service_public_certificate).
+Refer to the Terraform Registory for docs: [`azurerm_app_service_public_certificate`](https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/app_service_public_certificate).

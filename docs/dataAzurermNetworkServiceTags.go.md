@@ -1,6 +1,6 @@
 # `data_azurerm_network_service_tags`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_network_service_tags`](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/network_service_tags).
+Refer to the Terraform Registory for docs: [`data_azurerm_network_service_tags`](https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/network_service_tags).
 
 # `dataAzurermNetworkServiceTags` Submodule <a name="`dataAzurermNetworkServiceTags` Submodule" id="@cdktf/provider-azurerm.dataAzurermNetworkServiceTags"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_azurerm_network_service_tags`]
 
 ### DataAzurermNetworkServiceTags <a name="DataAzurermNetworkServiceTags" id="@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTags"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/network_service_tags azurerm_network_service_tags}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/network_service_tags azurerm_network_service_tags}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTags.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermnetworkservicetags"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetworkservicetags"
 
 dataazurermnetworkservicetags.NewDataAzurermNetworkServiceTags(scope Construct, id *string, config DataAzurermNetworkServiceTagsConfig) DataAzurermNetworkServiceTags
 ```
@@ -304,7 +304,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTags.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermnetworkservicetags"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetworkservicetags"
 
 dataazurermnetworkservicetags.DataAzurermNetworkServiceTags_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTags.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermnetworkservicetags"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetworkservicetags"
 
 dataazurermnetworkservicetags.DataAzurermNetworkServiceTags_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ dataazurermnetworkservicetags.DataAzurermNetworkServiceTags_IsTerraformElement(x
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTags.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermnetworkservicetags"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetworkservicetags"
 
 dataazurermnetworkservicetags.DataAzurermNetworkServiceTags_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -670,7 +670,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermnetworkservicetags"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetworkservicetags"
 
 &dataazurermnetworkservicetags.DataAzurermNetworkServiceTagsConfig {
 	Connection: interface{},
@@ -684,7 +684,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermnetwork
 	Service: *string,
 	Id: *string,
 	LocationFilter: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsTimeouts,
 }
 ```
 
@@ -699,10 +699,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermnetwork
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/network_service_tags#location DataAzurermNetworkServiceTags#location}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsConfig.property.service">Service</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/network_service_tags#service DataAzurermNetworkServiceTags#service}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/network_service_tags#id DataAzurermNetworkServiceTags#id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsConfig.property.locationFilter">LocationFilter</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/network_service_tags#location_filter DataAzurermNetworkServiceTags#location_filter}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/network_service_tags#location DataAzurermNetworkServiceTags#location}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsConfig.property.service">Service</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/network_service_tags#service DataAzurermNetworkServiceTags#service}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/network_service_tags#id DataAzurermNetworkServiceTags#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsConfig.property.locationFilter">LocationFilter</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/network_service_tags#location_filter DataAzurermNetworkServiceTags#location_filter}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsTimeouts">DataAzurermNetworkServiceTagsTimeouts</a></code> | timeouts block. |
 
 ---
@@ -785,7 +785,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/network_service_tags#location DataAzurermNetworkServiceTags#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/network_service_tags#location DataAzurermNetworkServiceTags#location}.
 
 ---
 
@@ -797,7 +797,7 @@ Service *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/network_service_tags#service DataAzurermNetworkServiceTags#service}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/network_service_tags#service DataAzurermNetworkServiceTags#service}.
 
 ---
 
@@ -809,7 +809,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/network_service_tags#id DataAzurermNetworkServiceTags#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/network_service_tags#id DataAzurermNetworkServiceTags#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -824,7 +824,7 @@ LocationFilter *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/network_service_tags#location_filter DataAzurermNetworkServiceTags#location_filter}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/network_service_tags#location_filter DataAzurermNetworkServiceTags#location_filter}.
 
 ---
 
@@ -838,7 +838,7 @@ Timeouts DataAzurermNetworkServiceTagsTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/network_service_tags#timeouts DataAzurermNetworkServiceTags#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/network_service_tags#timeouts DataAzurermNetworkServiceTags#timeouts}
 
 ---
 
@@ -847,7 +847,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermnetworkservicetags"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetworkservicetags"
 
 &dataazurermnetworkservicetags.DataAzurermNetworkServiceTagsTimeouts {
 	Read: *string,
@@ -858,7 +858,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermnetwork
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/network_service_tags#read DataAzurermNetworkServiceTags#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/network_service_tags#read DataAzurermNetworkServiceTags#read}. |
 
 ---
 
@@ -870,7 +870,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/network_service_tags#read DataAzurermNetworkServiceTags#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/network_service_tags#read DataAzurermNetworkServiceTags#read}.
 
 ---
 
@@ -881,7 +881,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNetworkServiceTags.DataAzurermNetworkServiceTagsTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermnetworkservicetags"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetworkservicetags"
 
 dataazurermnetworkservicetags.NewDataAzurermNetworkServiceTagsTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermNetworkServiceTagsTimeoutsOutputReference
 ```

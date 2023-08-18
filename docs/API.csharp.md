@@ -928,6 +928,8 @@ The following submodules are available:
 - [mssqlServerTransparentDataEncryption](./mssqlServerTransparentDataEncryption.csharp.md)
 - [mssqlServerVulnerabilityAssessment](./mssqlServerVulnerabilityAssessment.csharp.md)
 - [mssqlVirtualMachine](./mssqlVirtualMachine.csharp.md)
+- [mssqlVirtualMachineAvailabilityGroupListener](./mssqlVirtualMachineAvailabilityGroupListener.csharp.md)
+- [mssqlVirtualMachineGroup](./mssqlVirtualMachineGroup.csharp.md)
 - [mssqlVirtualNetworkRule](./mssqlVirtualNetworkRule.csharp.md)
 - [mysqlActiveDirectoryAdministrator](./mysqlActiveDirectoryAdministrator.csharp.md)
 - [mysqlConfiguration](./mysqlConfiguration.csharp.md)

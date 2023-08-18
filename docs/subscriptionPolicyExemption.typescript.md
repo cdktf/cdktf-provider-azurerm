@@ -1,6 +1,6 @@
 # `azurerm_subscription_policy_exemption`
 
-Refer to the Terraform Registory for docs: [`azurerm_subscription_policy_exemption`](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption).
+Refer to the Terraform Registory for docs: [`azurerm_subscription_policy_exemption`](https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption).
 
 # `subscriptionPolicyExemption` Submodule <a name="`subscriptionPolicyExemption` Submodule" id="@cdktf/provider-azurerm.subscriptionPolicyExemption"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_subscription_policy_exempti
 
 ### SubscriptionPolicyExemption <a name="SubscriptionPolicyExemption" id="@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemption"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption azurerm_subscription_policy_exemption}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption azurerm_subscription_policy_exemption}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemption.Initializer"></a>
 
@@ -835,16 +835,16 @@ const subscriptionPolicyExemptionConfig: subscriptionPolicyExemption.Subscriptio
 | <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionConfig.property.exemptionCategory">exemptionCategory</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#exemption_category SubscriptionPolicyExemption#exemption_category}. |
-| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#name SubscriptionPolicyExemption#name}. |
-| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionConfig.property.policyAssignmentId">policyAssignmentId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#policy_assignment_id SubscriptionPolicyExemption#policy_assignment_id}. |
-| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionConfig.property.subscriptionId">subscriptionId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#subscription_id SubscriptionPolicyExemption#subscription_id}. |
-| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionConfig.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#description SubscriptionPolicyExemption#description}. |
-| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionConfig.property.displayName">displayName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#display_name SubscriptionPolicyExemption#display_name}. |
-| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionConfig.property.expiresOn">expiresOn</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#expires_on SubscriptionPolicyExemption#expires_on}. |
-| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#id SubscriptionPolicyExemption#id}. |
-| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionConfig.property.metadata">metadata</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#metadata SubscriptionPolicyExemption#metadata}. |
-| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionConfig.property.policyDefinitionReferenceIds">policyDefinitionReferenceIds</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#policy_definition_reference_ids SubscriptionPolicyExemption#policy_definition_reference_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionConfig.property.exemptionCategory">exemptionCategory</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#exemption_category SubscriptionPolicyExemption#exemption_category}. |
+| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#name SubscriptionPolicyExemption#name}. |
+| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionConfig.property.policyAssignmentId">policyAssignmentId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#policy_assignment_id SubscriptionPolicyExemption#policy_assignment_id}. |
+| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionConfig.property.subscriptionId">subscriptionId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#subscription_id SubscriptionPolicyExemption#subscription_id}. |
+| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionConfig.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#description SubscriptionPolicyExemption#description}. |
+| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionConfig.property.displayName">displayName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#display_name SubscriptionPolicyExemption#display_name}. |
+| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionConfig.property.expiresOn">expiresOn</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#expires_on SubscriptionPolicyExemption#expires_on}. |
+| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#id SubscriptionPolicyExemption#id}. |
+| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionConfig.property.metadata">metadata</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#metadata SubscriptionPolicyExemption#metadata}. |
+| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionConfig.property.policyDefinitionReferenceIds">policyDefinitionReferenceIds</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#policy_definition_reference_ids SubscriptionPolicyExemption#policy_definition_reference_ids}. |
 | <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionTimeouts">SubscriptionPolicyExemptionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -927,7 +927,7 @@ public readonly exemptionCategory: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#exemption_category SubscriptionPolicyExemption#exemption_category}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#exemption_category SubscriptionPolicyExemption#exemption_category}.
 
 ---
 
@@ -939,7 +939,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#name SubscriptionPolicyExemption#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#name SubscriptionPolicyExemption#name}.
 
 ---
 
@@ -951,7 +951,7 @@ public readonly policyAssignmentId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#policy_assignment_id SubscriptionPolicyExemption#policy_assignment_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#policy_assignment_id SubscriptionPolicyExemption#policy_assignment_id}.
 
 ---
 
@@ -963,7 +963,7 @@ public readonly subscriptionId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#subscription_id SubscriptionPolicyExemption#subscription_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#subscription_id SubscriptionPolicyExemption#subscription_id}.
 
 ---
 
@@ -975,7 +975,7 @@ public readonly description: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#description SubscriptionPolicyExemption#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#description SubscriptionPolicyExemption#description}.
 
 ---
 
@@ -987,7 +987,7 @@ public readonly displayName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#display_name SubscriptionPolicyExemption#display_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#display_name SubscriptionPolicyExemption#display_name}.
 
 ---
 
@@ -999,7 +999,7 @@ public readonly expiresOn: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#expires_on SubscriptionPolicyExemption#expires_on}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#expires_on SubscriptionPolicyExemption#expires_on}.
 
 ---
 
@@ -1011,7 +1011,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#id SubscriptionPolicyExemption#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#id SubscriptionPolicyExemption#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1026,7 +1026,7 @@ public readonly metadata: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#metadata SubscriptionPolicyExemption#metadata}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#metadata SubscriptionPolicyExemption#metadata}.
 
 ---
 
@@ -1038,7 +1038,7 @@ public readonly policyDefinitionReferenceIds: string[];
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#policy_definition_reference_ids SubscriptionPolicyExemption#policy_definition_reference_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#policy_definition_reference_ids SubscriptionPolicyExemption#policy_definition_reference_ids}.
 
 ---
 
@@ -1052,7 +1052,7 @@ public readonly timeouts: SubscriptionPolicyExemptionTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#timeouts SubscriptionPolicyExemption#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#timeouts SubscriptionPolicyExemption#timeouts}
 
 ---
 
@@ -1070,10 +1070,10 @@ const subscriptionPolicyExemptionTimeouts: subscriptionPolicyExemption.Subscript
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#create SubscriptionPolicyExemption#create}. |
-| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#delete SubscriptionPolicyExemption#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#read SubscriptionPolicyExemption#read}. |
-| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#update SubscriptionPolicyExemption#update}. |
+| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#create SubscriptionPolicyExemption#create}. |
+| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#delete SubscriptionPolicyExemption#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#read SubscriptionPolicyExemption#read}. |
+| <code><a href="#@cdktf/provider-azurerm.subscriptionPolicyExemption.SubscriptionPolicyExemptionTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#update SubscriptionPolicyExemption#update}. |
 
 ---
 
@@ -1085,7 +1085,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#create SubscriptionPolicyExemption#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#create SubscriptionPolicyExemption#create}.
 
 ---
 
@@ -1097,7 +1097,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#delete SubscriptionPolicyExemption#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#delete SubscriptionPolicyExemption#delete}.
 
 ---
 
@@ -1109,7 +1109,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#read SubscriptionPolicyExemption#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#read SubscriptionPolicyExemption#read}.
 
 ---
 
@@ -1121,7 +1121,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/subscription_policy_exemption#update SubscriptionPolicyExemption#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/subscription_policy_exemption#update SubscriptionPolicyExemption#update}.
 
 ---
 

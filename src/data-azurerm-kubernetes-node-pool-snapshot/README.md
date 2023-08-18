@@ -1,3 +1,3 @@
 # `data_azurerm_kubernetes_node_pool_snapshot`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_kubernetes_node_pool_snapshot`](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/kubernetes_node_pool_snapshot).
+Refer to the Terraform Registory for docs: [`data_azurerm_kubernetes_node_pool_snapshot`](https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/kubernetes_node_pool_snapshot).

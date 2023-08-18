@@ -1,6 +1,6 @@
 # `azurerm_digital_twins_instance`
 
-Refer to the Terraform Registory for docs: [`azurerm_digital_twins_instance`](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/digital_twins_instance).
+Refer to the Terraform Registory for docs: [`azurerm_digital_twins_instance`](https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/digital_twins_instance).
 
 # `digitalTwinsInstance` Submodule <a name="`digitalTwinsInstance` Submodule" id="@cdktf/provider-azurerm.digitalTwinsInstance"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_digital_twins_instance`](ht
 
 ### DigitalTwinsInstance <a name="DigitalTwinsInstance" id="@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstance"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/digital_twins_instance azurerm_digital_twins_instance}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/digital_twins_instance azurerm_digital_twins_instance}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstance.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/digitaltwinsinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/digitaltwinsinstance"
 
 digitaltwinsinstance.NewDigitalTwinsInstance(scope Construct, id *string, config DigitalTwinsInstanceConfig) DigitalTwinsInstance
 ```
@@ -324,7 +324,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstance.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/digitaltwinsinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/digitaltwinsinstance"
 
 digitaltwinsinstance.DigitalTwinsInstance_IsConstruct(x interface{}) *bool
 ```
@@ -356,7 +356,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstance.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/digitaltwinsinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/digitaltwinsinstance"
 
 digitaltwinsinstance.DigitalTwinsInstance_IsTerraformElement(x interface{}) *bool
 ```
@@ -370,7 +370,7 @@ digitaltwinsinstance.DigitalTwinsInstance_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstance.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/digitaltwinsinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/digitaltwinsinstance"
 
 digitaltwinsinstance.DigitalTwinsInstance_IsTerraformResource(x interface{}) *bool
 ```
@@ -734,7 +734,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/digitaltwinsinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/digitaltwinsinstance"
 
 &digitaltwinsinstance.DigitalTwinsInstanceConfig {
 	Connection: interface{},
@@ -748,9 +748,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/digitaltwinsinstan
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.digitalTwinsInstance.DigitalTwinsInstanceIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.digitalTwinsInstance.DigitalTwinsInstanceIdentity,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.digitalTwinsInstance.DigitalTwinsInstanceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.digitalTwinsInstance.DigitalTwinsInstanceTimeouts,
 }
 ```
 
@@ -765,12 +765,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/digitaltwinsinstan
 | <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/digital_twins_instance#location DigitalTwinsInstance#location}. |
-| <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/digital_twins_instance#name DigitalTwinsInstance#name}. |
-| <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/digital_twins_instance#resource_group_name DigitalTwinsInstance#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/digital_twins_instance#id DigitalTwinsInstance#id}. |
+| <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/digital_twins_instance#location DigitalTwinsInstance#location}. |
+| <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/digital_twins_instance#name DigitalTwinsInstance#name}. |
+| <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/digital_twins_instance#resource_group_name DigitalTwinsInstance#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/digital_twins_instance#id DigitalTwinsInstance#id}. |
 | <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceConfig.property.identity">Identity</a></code> | <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceIdentity">DigitalTwinsInstanceIdentity</a></code> | identity block. |
-| <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/digital_twins_instance#tags DigitalTwinsInstance#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/digital_twins_instance#tags DigitalTwinsInstance#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceTimeouts">DigitalTwinsInstanceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -853,7 +853,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/digital_twins_instance#location DigitalTwinsInstance#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/digital_twins_instance#location DigitalTwinsInstance#location}.
 
 ---
 
@@ -865,7 +865,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/digital_twins_instance#name DigitalTwinsInstance#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/digital_twins_instance#name DigitalTwinsInstance#name}.
 
 ---
 
@@ -877,7 +877,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/digital_twins_instance#resource_group_name DigitalTwinsInstance#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/digital_twins_instance#resource_group_name DigitalTwinsInstance#resource_group_name}.
 
 ---
 
@@ -889,7 +889,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/digital_twins_instance#id DigitalTwinsInstance#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/digital_twins_instance#id DigitalTwinsInstance#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -906,7 +906,7 @@ Identity DigitalTwinsInstanceIdentity
 
 identity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/digital_twins_instance#identity DigitalTwinsInstance#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/digital_twins_instance#identity DigitalTwinsInstance#identity}
 
 ---
 
@@ -918,7 +918,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/digital_twins_instance#tags DigitalTwinsInstance#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/digital_twins_instance#tags DigitalTwinsInstance#tags}.
 
 ---
 
@@ -932,7 +932,7 @@ Timeouts DigitalTwinsInstanceTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/digital_twins_instance#timeouts DigitalTwinsInstance#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/digital_twins_instance#timeouts DigitalTwinsInstance#timeouts}
 
 ---
 
@@ -941,7 +941,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/digitaltwinsinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/digitaltwinsinstance"
 
 &digitaltwinsinstance.DigitalTwinsInstanceIdentity {
 	Type: *string,
@@ -953,8 +953,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/digitaltwinsinstan
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceIdentity.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/digital_twins_instance#type DigitalTwinsInstance#type}. |
-| <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceIdentity.property.identityIds">IdentityIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/digital_twins_instance#identity_ids DigitalTwinsInstance#identity_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceIdentity.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/digital_twins_instance#type DigitalTwinsInstance#type}. |
+| <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceIdentity.property.identityIds">IdentityIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/digital_twins_instance#identity_ids DigitalTwinsInstance#identity_ids}. |
 
 ---
 
@@ -966,7 +966,7 @@ Type *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/digital_twins_instance#type DigitalTwinsInstance#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/digital_twins_instance#type DigitalTwinsInstance#type}.
 
 ---
 
@@ -978,7 +978,7 @@ IdentityIds *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/digital_twins_instance#identity_ids DigitalTwinsInstance#identity_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/digital_twins_instance#identity_ids DigitalTwinsInstance#identity_ids}.
 
 ---
 
@@ -987,7 +987,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/digitaltwinsinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/digitaltwinsinstance"
 
 &digitaltwinsinstance.DigitalTwinsInstanceTimeouts {
 	Create: *string,
@@ -1001,10 +1001,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/digitaltwinsinstan
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/digital_twins_instance#create DigitalTwinsInstance#create}. |
-| <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/digital_twins_instance#delete DigitalTwinsInstance#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/digital_twins_instance#read DigitalTwinsInstance#read}. |
-| <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/digital_twins_instance#update DigitalTwinsInstance#update}. |
+| <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/digital_twins_instance#create DigitalTwinsInstance#create}. |
+| <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/digital_twins_instance#delete DigitalTwinsInstance#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/digital_twins_instance#read DigitalTwinsInstance#read}. |
+| <code><a href="#@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/digital_twins_instance#update DigitalTwinsInstance#update}. |
 
 ---
 
@@ -1016,7 +1016,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/digital_twins_instance#create DigitalTwinsInstance#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/digital_twins_instance#create DigitalTwinsInstance#create}.
 
 ---
 
@@ -1028,7 +1028,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/digital_twins_instance#delete DigitalTwinsInstance#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/digital_twins_instance#delete DigitalTwinsInstance#delete}.
 
 ---
 
@@ -1040,7 +1040,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/digital_twins_instance#read DigitalTwinsInstance#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/digital_twins_instance#read DigitalTwinsInstance#read}.
 
 ---
 
@@ -1052,7 +1052,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/resources/digital_twins_instance#update DigitalTwinsInstance#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/digital_twins_instance#update DigitalTwinsInstance#update}.
 
 ---
 
@@ -1063,7 +1063,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/digitaltwinsinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/digitaltwinsinstance"
 
 digitaltwinsinstance.NewDigitalTwinsInstanceIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DigitalTwinsInstanceIdentityOutputReference
 ```
@@ -1385,7 +1385,7 @@ func InternalValue() DigitalTwinsInstanceIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.digitalTwinsInstance.DigitalTwinsInstanceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/digitaltwinsinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/digitaltwinsinstance"
 
 digitaltwinsinstance.NewDigitalTwinsInstanceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DigitalTwinsInstanceTimeoutsOutputReference
 ```

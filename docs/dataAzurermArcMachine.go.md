@@ -1,6 +1,6 @@
 # `data_azurerm_arc_machine`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_arc_machine`](https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/arc_machine).
+Refer to the Terraform Registory for docs: [`data_azurerm_arc_machine`](https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/arc_machine).
 
 # `dataAzurermArcMachine` Submodule <a name="`dataAzurermArcMachine` Submodule" id="@cdktf/provider-azurerm.dataAzurermArcMachine"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_azurerm_arc_machine`](https://
 
 ### DataAzurermArcMachine <a name="DataAzurermArcMachine" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachine"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/arc_machine azurerm_arc_machine}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/arc_machine azurerm_arc_machine}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachine.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachine(scope Construct, id *string, config DataAzurermArcMachineConfig) DataAzurermArcMachine
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachine.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.DataAzurermArcMachine_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachine.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.DataAzurermArcMachine_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ dataazurermarcmachine.DataAzurermArcMachine_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachine.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.DataAzurermArcMachine_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -905,7 +905,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineAgent.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 &dataazurermarcmachine.DataAzurermArcMachineAgent {
 
@@ -918,7 +918,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmach
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineAgentExtensionsAllowListStruct.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 &dataazurermarcmachine.DataAzurermArcMachineAgentExtensionsAllowListStruct {
 
@@ -931,7 +931,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmach
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineAgentExtensionsBlockListStruct.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 &dataazurermarcmachine.DataAzurermArcMachineAgentExtensionsBlockListStruct {
 
@@ -944,7 +944,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmach
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineCloudMetadata.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 &dataazurermarcmachine.DataAzurermArcMachineCloudMetadata {
 
@@ -957,7 +957,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmach
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 &dataazurermarcmachine.DataAzurermArcMachineConfig {
 	Connection: interface{},
@@ -970,7 +970,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmach
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.dataAzurermArcMachine.DataAzurermArcMachineTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermArcMachine.DataAzurermArcMachineTimeouts,
 }
 ```
 
@@ -985,9 +985,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmach
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/arc_machine#name DataAzurermArcMachine#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/arc_machine#resource_group_name DataAzurermArcMachine#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/arc_machine#id DataAzurermArcMachine#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/arc_machine#name DataAzurermArcMachine#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/arc_machine#resource_group_name DataAzurermArcMachine#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/arc_machine#id DataAzurermArcMachine#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineTimeouts">DataAzurermArcMachineTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1070,7 +1070,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/arc_machine#name DataAzurermArcMachine#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/arc_machine#name DataAzurermArcMachine#name}.
 
 ---
 
@@ -1082,7 +1082,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/arc_machine#resource_group_name DataAzurermArcMachine#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/arc_machine#resource_group_name DataAzurermArcMachine#resource_group_name}.
 
 ---
 
@@ -1094,7 +1094,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/arc_machine#id DataAzurermArcMachine#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/arc_machine#id DataAzurermArcMachine#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1111,7 +1111,7 @@ Timeouts DataAzurermArcMachineTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/arc_machine#timeouts DataAzurermArcMachine#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/arc_machine#timeouts DataAzurermArcMachine#timeouts}
 
 ---
 
@@ -1120,7 +1120,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 &dataazurermarcmachine.DataAzurermArcMachineIdentity {
 
@@ -1133,7 +1133,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmach
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineLocationData.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 &dataazurermarcmachine.DataAzurermArcMachineLocationData {
 
@@ -1146,7 +1146,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmach
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineOsProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 &dataazurermarcmachine.DataAzurermArcMachineOsProfile {
 
@@ -1159,7 +1159,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmach
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineOsProfileLinux.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 &dataazurermarcmachine.DataAzurermArcMachineOsProfileLinux {
 
@@ -1172,7 +1172,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmach
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineOsProfileLinuxPatch.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 &dataazurermarcmachine.DataAzurermArcMachineOsProfileLinuxPatch {
 
@@ -1185,7 +1185,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmach
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineOsProfileWindows.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 &dataazurermarcmachine.DataAzurermArcMachineOsProfileWindows {
 
@@ -1198,7 +1198,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmach
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineOsProfileWindowsPatch.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 &dataazurermarcmachine.DataAzurermArcMachineOsProfileWindowsPatch {
 
@@ -1211,7 +1211,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmach
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineServiceStatus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 &dataazurermarcmachine.DataAzurermArcMachineServiceStatus {
 
@@ -1224,7 +1224,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmach
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineServiceStatusExtensionService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 &dataazurermarcmachine.DataAzurermArcMachineServiceStatusExtensionService {
 
@@ -1237,7 +1237,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmach
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineServiceStatusGuestConfigurationService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 &dataazurermarcmachine.DataAzurermArcMachineServiceStatusGuestConfigurationService {
 
@@ -1250,7 +1250,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmach
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 &dataazurermarcmachine.DataAzurermArcMachineTimeouts {
 	Read: *string,
@@ -1261,7 +1261,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmach
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/arc_machine#read DataAzurermArcMachine#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/arc_machine#read DataAzurermArcMachine#read}. |
 
 ---
 
@@ -1273,7 +1273,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.69.0/docs/data-sources/arc_machine#read DataAzurermArcMachine#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/arc_machine#read DataAzurermArcMachine#read}.
 
 ---
 
@@ -1284,7 +1284,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineAgentExtensionsAllowListStructList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineAgentExtensionsAllowListStructList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermArcMachineAgentExtensionsAllowListStructList
 ```
@@ -1416,7 +1416,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineAgentExtensionsAllowListStructOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineAgentExtensionsAllowListStructOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermArcMachineAgentExtensionsAllowListStructOutputReference
 ```
@@ -1705,7 +1705,7 @@ func InternalValue() DataAzurermArcMachineAgentExtensionsAllowListStruct
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineAgentExtensionsBlockListStructList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineAgentExtensionsBlockListStructList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermArcMachineAgentExtensionsBlockListStructList
 ```
@@ -1837,7 +1837,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineAgentExtensionsBlockListStructOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineAgentExtensionsBlockListStructOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermArcMachineAgentExtensionsBlockListStructOutputReference
 ```
@@ -2126,7 +2126,7 @@ func InternalValue() DataAzurermArcMachineAgentExtensionsBlockListStruct
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineAgentList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineAgentList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermArcMachineAgentList
 ```
@@ -2258,7 +2258,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineAgentOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineAgentOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermArcMachineAgentOutputReference
 ```
@@ -2602,7 +2602,7 @@ func InternalValue() DataAzurermArcMachineAgent
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineCloudMetadataList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineCloudMetadataList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermArcMachineCloudMetadataList
 ```
@@ -2734,7 +2734,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineCloudMetadataOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineCloudMetadataOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermArcMachineCloudMetadataOutputReference
 ```
@@ -3012,7 +3012,7 @@ func InternalValue() DataAzurermArcMachineCloudMetadata
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermArcMachineIdentityList
 ```
@@ -3144,7 +3144,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermArcMachineIdentityOutputReference
 ```
@@ -3444,7 +3444,7 @@ func InternalValue() DataAzurermArcMachineIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineLocationDataList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineLocationDataList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermArcMachineLocationDataList
 ```
@@ -3576,7 +3576,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineLocationDataOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineLocationDataOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermArcMachineLocationDataOutputReference
 ```
@@ -3887,7 +3887,7 @@ func InternalValue() DataAzurermArcMachineLocationData
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineOsProfileLinuxList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineOsProfileLinuxList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermArcMachineOsProfileLinuxList
 ```
@@ -4019,7 +4019,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineOsProfileLinuxOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineOsProfileLinuxOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermArcMachineOsProfileLinuxOutputReference
 ```
@@ -4297,7 +4297,7 @@ func InternalValue() DataAzurermArcMachineOsProfileLinux
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineOsProfileLinuxPatchList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineOsProfileLinuxPatchList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermArcMachineOsProfileLinuxPatchList
 ```
@@ -4429,7 +4429,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineOsProfileLinuxPatchOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineOsProfileLinuxPatchOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermArcMachineOsProfileLinuxPatchOutputReference
 ```
@@ -4718,7 +4718,7 @@ func InternalValue() DataAzurermArcMachineOsProfileLinuxPatch
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineOsProfileList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineOsProfileList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermArcMachineOsProfileList
 ```
@@ -4850,7 +4850,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineOsProfileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineOsProfileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermArcMachineOsProfileOutputReference
 ```
@@ -5150,7 +5150,7 @@ func InternalValue() DataAzurermArcMachineOsProfile
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineOsProfileWindowsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineOsProfileWindowsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermArcMachineOsProfileWindowsList
 ```
@@ -5282,7 +5282,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineOsProfileWindowsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineOsProfileWindowsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermArcMachineOsProfileWindowsOutputReference
 ```
@@ -5560,7 +5560,7 @@ func InternalValue() DataAzurermArcMachineOsProfileWindows
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineOsProfileWindowsPatchList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineOsProfileWindowsPatchList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermArcMachineOsProfileWindowsPatchList
 ```
@@ -5692,7 +5692,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineOsProfileWindowsPatchOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineOsProfileWindowsPatchOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermArcMachineOsProfileWindowsPatchOutputReference
 ```
@@ -5981,7 +5981,7 @@ func InternalValue() DataAzurermArcMachineOsProfileWindowsPatch
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineServiceStatusExtensionServiceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineServiceStatusExtensionServiceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermArcMachineServiceStatusExtensionServiceList
 ```
@@ -6113,7 +6113,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineServiceStatusExtensionServiceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineServiceStatusExtensionServiceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermArcMachineServiceStatusExtensionServiceOutputReference
 ```
@@ -6402,7 +6402,7 @@ func InternalValue() DataAzurermArcMachineServiceStatusExtensionService
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineServiceStatusGuestConfigurationServiceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineServiceStatusGuestConfigurationServiceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermArcMachineServiceStatusGuestConfigurationServiceList
 ```
@@ -6534,7 +6534,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineServiceStatusGuestConfigurationServiceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineServiceStatusGuestConfigurationServiceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermArcMachineServiceStatusGuestConfigurationServiceOutputReference
 ```
@@ -6823,7 +6823,7 @@ func InternalValue() DataAzurermArcMachineServiceStatusGuestConfigurationService
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineServiceStatusList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineServiceStatusList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermArcMachineServiceStatusList
 ```
@@ -6955,7 +6955,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineServiceStatusOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineServiceStatusOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermArcMachineServiceStatusOutputReference
 ```
@@ -7244,7 +7244,7 @@ func InternalValue() DataAzurermArcMachineServiceStatus
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermArcMachine.DataAzurermArcMachineTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermarcmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermarcmachine"
 
 dataazurermarcmachine.NewDataAzurermArcMachineTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermArcMachineTimeoutsOutputReference
 ```
