@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.customIpPrefix.CustomIpPrefix.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/customipprefix"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/customipprefix"
 
 customipprefix.NewCustomIpPrefix(scope Construct, id *string, config CustomIpPrefixConfig) CustomIpPrefix
 ```
@@ -346,7 +346,7 @@ func ResetZones()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.customIpPrefix.CustomIpPrefix.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/customipprefix"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/customipprefix"
 
 customipprefix.CustomIpPrefix_IsConstruct(x interface{}) *bool
 ```
@@ -378,7 +378,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.customIpPrefix.CustomIpPrefix.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/customipprefix"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/customipprefix"
 
 customipprefix.CustomIpPrefix_IsTerraformElement(x interface{}) *bool
 ```
@@ -392,7 +392,7 @@ customipprefix.CustomIpPrefix_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.customIpPrefix.CustomIpPrefix.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/customipprefix"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/customipprefix"
 
 customipprefix.CustomIpPrefix_IsTerraformResource(x interface{}) *bool
 ```
@@ -877,7 +877,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.customIpPrefix.CustomIpPrefixConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/customipprefix"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/customipprefix"
 
 &customipprefix.CustomIpPrefixConfig {
 	Connection: interface{},
@@ -897,7 +897,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/customipprefix"
 	ParentCustomIpPrefixId: *string,
 	RoaValidityEndDate: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.customIpPrefix.CustomIpPrefixTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.customIpPrefix.CustomIpPrefixTimeouts,
 	WanValidationSignedMessage: *string,
 	Zones: *[]*string,
 }
@@ -1166,7 +1166,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.customIpPrefix.CustomIpPrefixTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/customipprefix"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/customipprefix"
 
 &customipprefix.CustomIpPrefixTimeouts {
 	Create: *string,
@@ -1242,7 +1242,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.customIpPrefix.CustomIpPrefixTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/customipprefix"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/customipprefix"
 
 customipprefix.NewCustomIpPrefixTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CustomIpPrefixTimeoutsOutputReference
 ```
