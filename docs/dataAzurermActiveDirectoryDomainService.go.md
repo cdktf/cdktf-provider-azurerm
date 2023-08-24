@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermActiveDirectoryDomainService.DataAzurermActiveDirectoryDomainService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermactivedirectorydomainservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermactivedirectorydomainservice"
 
 dataazurermactivedirectorydomainservice.NewDataAzurermActiveDirectoryDomainService(scope Construct, id *string, config DataAzurermActiveDirectoryDomainServiceConfig) DataAzurermActiveDirectoryDomainService
 ```
@@ -304,7 +304,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermActiveDirectoryDomainService.DataAzurermActiveDirectoryDomainService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermactivedirectorydomainservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermactivedirectorydomainservice"
 
 dataazurermactivedirectorydomainservice.DataAzurermActiveDirectoryDomainService_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermActiveDirectoryDomainService.DataAzurermActiveDirectoryDomainService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermactivedirectorydomainservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermactivedirectorydomainservice"
 
 dataazurermactivedirectorydomainservice.DataAzurermActiveDirectoryDomainService_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ dataazurermactivedirectorydomainservice.DataAzurermActiveDirectoryDomainService_
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermActiveDirectoryDomainService.DataAzurermActiveDirectoryDomainService.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermactivedirectorydomainservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermactivedirectorydomainservice"
 
 dataazurermactivedirectorydomainservice.DataAzurermActiveDirectoryDomainService_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -791,7 +791,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermActiveDirectoryDomainService.DataAzurermActiveDirectoryDomainServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermactivedirectorydomainservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermactivedirectorydomainservice"
 
 &dataazurermactivedirectorydomainservice.DataAzurermActiveDirectoryDomainServiceConfig {
 	Connection: interface{},
@@ -805,7 +805,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermactived
 	ResourceGroupName: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.dataAzurermActiveDirectoryDomainService.DataAzurermActiveDirectoryDomainServiceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.dataAzurermActiveDirectoryDomainService.DataAzurermActiveDirectoryDomainServiceTimeouts,
 }
 ```
 
@@ -968,7 +968,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermActiveDirectoryDomainService.DataAzurermActiveDirectoryDomainServiceNotifications.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermactivedirectorydomainservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermactivedirectorydomainservice"
 
 &dataazurermactivedirectorydomainservice.DataAzurermActiveDirectoryDomainServiceNotifications {
 
@@ -981,7 +981,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermactived
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermActiveDirectoryDomainService.DataAzurermActiveDirectoryDomainServiceReplicaSets.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermactivedirectorydomainservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermactivedirectorydomainservice"
 
 &dataazurermactivedirectorydomainservice.DataAzurermActiveDirectoryDomainServiceReplicaSets {
 
@@ -994,7 +994,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermactived
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermActiveDirectoryDomainService.DataAzurermActiveDirectoryDomainServiceSecureLdap.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermactivedirectorydomainservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermactivedirectorydomainservice"
 
 &dataazurermactivedirectorydomainservice.DataAzurermActiveDirectoryDomainServiceSecureLdap {
 
@@ -1007,7 +1007,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermactived
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermActiveDirectoryDomainService.DataAzurermActiveDirectoryDomainServiceSecurity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermactivedirectorydomainservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermactivedirectorydomainservice"
 
 &dataazurermactivedirectorydomainservice.DataAzurermActiveDirectoryDomainServiceSecurity {
 
@@ -1020,7 +1020,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermactived
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermActiveDirectoryDomainService.DataAzurermActiveDirectoryDomainServiceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermactivedirectorydomainservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermactivedirectorydomainservice"
 
 &dataazurermactivedirectorydomainservice.DataAzurermActiveDirectoryDomainServiceTimeouts {
 	Read: *string,
@@ -1054,7 +1054,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermActiveDirectoryDomainService.DataAzurermActiveDirectoryDomainServiceNotificationsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermactivedirectorydomainservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermactivedirectorydomainservice"
 
 dataazurermactivedirectorydomainservice.NewDataAzurermActiveDirectoryDomainServiceNotificationsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermActiveDirectoryDomainServiceNotificationsList
 ```
@@ -1186,7 +1186,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermActiveDirectoryDomainService.DataAzurermActiveDirectoryDomainServiceNotificationsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermactivedirectorydomainservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermactivedirectorydomainservice"
 
 dataazurermactivedirectorydomainservice.NewDataAzurermActiveDirectoryDomainServiceNotificationsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermActiveDirectoryDomainServiceNotificationsOutputReference
 ```
@@ -1486,7 +1486,7 @@ func InternalValue() DataAzurermActiveDirectoryDomainServiceNotifications
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermActiveDirectoryDomainService.DataAzurermActiveDirectoryDomainServiceReplicaSetsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermactivedirectorydomainservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermactivedirectorydomainservice"
 
 dataazurermactivedirectorydomainservice.NewDataAzurermActiveDirectoryDomainServiceReplicaSetsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermActiveDirectoryDomainServiceReplicaSetsList
 ```
@@ -1618,7 +1618,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermActiveDirectoryDomainService.DataAzurermActiveDirectoryDomainServiceReplicaSetsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermactivedirectorydomainservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermactivedirectorydomainservice"
 
 dataazurermactivedirectorydomainservice.NewDataAzurermActiveDirectoryDomainServiceReplicaSetsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermActiveDirectoryDomainServiceReplicaSetsOutputReference
 ```
@@ -1951,7 +1951,7 @@ func InternalValue() DataAzurermActiveDirectoryDomainServiceReplicaSets
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermActiveDirectoryDomainService.DataAzurermActiveDirectoryDomainServiceSecureLdapList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermactivedirectorydomainservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermactivedirectorydomainservice"
 
 dataazurermactivedirectorydomainservice.NewDataAzurermActiveDirectoryDomainServiceSecureLdapList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermActiveDirectoryDomainServiceSecureLdapList
 ```
@@ -2083,7 +2083,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermActiveDirectoryDomainService.DataAzurermActiveDirectoryDomainServiceSecureLdapOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermactivedirectorydomainservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermactivedirectorydomainservice"
 
 dataazurermactivedirectorydomainservice.NewDataAzurermActiveDirectoryDomainServiceSecureLdapOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermActiveDirectoryDomainServiceSecureLdapOutputReference
 ```
@@ -2405,7 +2405,7 @@ func InternalValue() DataAzurermActiveDirectoryDomainServiceSecureLdap
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermActiveDirectoryDomainService.DataAzurermActiveDirectoryDomainServiceSecurityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermactivedirectorydomainservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermactivedirectorydomainservice"
 
 dataazurermactivedirectorydomainservice.NewDataAzurermActiveDirectoryDomainServiceSecurityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermActiveDirectoryDomainServiceSecurityList
 ```
@@ -2537,7 +2537,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermActiveDirectoryDomainService.DataAzurermActiveDirectoryDomainServiceSecurityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermactivedirectorydomainservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermactivedirectorydomainservice"
 
 dataazurermactivedirectorydomainservice.NewDataAzurermActiveDirectoryDomainServiceSecurityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermActiveDirectoryDomainServiceSecurityOutputReference
 ```
@@ -2881,7 +2881,7 @@ func InternalValue() DataAzurermActiveDirectoryDomainServiceSecurity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermActiveDirectoryDomainService.DataAzurermActiveDirectoryDomainServiceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermactivedirectorydomainservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermactivedirectorydomainservice"
 
 dataazurermactivedirectorydomainservice.NewDataAzurermActiveDirectoryDomainServiceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermActiveDirectoryDomainServiceTimeoutsOutputReference
 ```

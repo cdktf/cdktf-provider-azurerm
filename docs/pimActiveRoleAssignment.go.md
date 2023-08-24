@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/pimactiveroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/pimactiveroleassignment"
 
 pimactiveroleassignment.NewPimActiveRoleAssignment(scope Construct, id *string, config PimActiveRoleAssignmentConfig) PimActiveRoleAssignment
 ```
@@ -344,7 +344,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/pimactiveroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/pimactiveroleassignment"
 
 pimactiveroleassignment.PimActiveRoleAssignment_IsConstruct(x interface{}) *bool
 ```
@@ -376,7 +376,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/pimactiveroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/pimactiveroleassignment"
 
 pimactiveroleassignment.PimActiveRoleAssignment_IsTerraformElement(x interface{}) *bool
 ```
@@ -390,7 +390,7 @@ pimactiveroleassignment.PimActiveRoleAssignment_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/pimactiveroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/pimactiveroleassignment"
 
 pimactiveroleassignment.PimActiveRoleAssignment_IsTerraformResource(x interface{}) *bool
 ```
@@ -776,7 +776,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/pimactiveroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/pimactiveroleassignment"
 
 &pimactiveroleassignment.PimActiveRoleAssignmentConfig {
 	Connection: interface{},
@@ -791,9 +791,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/pimactiveroleassig
 	Scope: *string,
 	Id: *string,
 	Justification: *string,
-	Schedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.pimActiveRoleAssignment.PimActiveRoleAssignmentSchedule,
-	Ticket: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.pimActiveRoleAssignment.PimActiveRoleAssignmentTicket,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.pimActiveRoleAssignment.PimActiveRoleAssignmentTimeouts,
+	Schedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.pimActiveRoleAssignment.PimActiveRoleAssignmentSchedule,
+	Ticket: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.pimActiveRoleAssignment.PimActiveRoleAssignmentTicket,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.pimActiveRoleAssignment.PimActiveRoleAssignmentTimeouts,
 }
 ```
 
@@ -1007,10 +1007,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignmentSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/pimactiveroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/pimactiveroleassignment"
 
 &pimactiveroleassignment.PimActiveRoleAssignmentSchedule {
-	Expiration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.pimActiveRoleAssignment.PimActiveRoleAssignmentScheduleExpiration,
+	Expiration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.pimActiveRoleAssignment.PimActiveRoleAssignmentScheduleExpiration,
 	StartDateTime: *string,
 }
 ```
@@ -1057,7 +1057,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignmentScheduleExpiration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/pimactiveroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/pimactiveroleassignment"
 
 &pimactiveroleassignment.PimActiveRoleAssignmentScheduleExpiration {
 	DurationDays: *f64,
@@ -1123,7 +1123,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignmentTicket.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/pimactiveroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/pimactiveroleassignment"
 
 &pimactiveroleassignment.PimActiveRoleAssignmentTicket {
 	Number: *string,
@@ -1173,7 +1173,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/pimactiveroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/pimactiveroleassignment"
 
 &pimactiveroleassignment.PimActiveRoleAssignmentTimeouts {
 	Create: *string,
@@ -1235,7 +1235,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignmentScheduleExpirationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/pimactiveroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/pimactiveroleassignment"
 
 pimactiveroleassignment.NewPimActiveRoleAssignmentScheduleExpirationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PimActiveRoleAssignmentScheduleExpirationOutputReference
 ```
@@ -1571,7 +1571,7 @@ func InternalValue() PimActiveRoleAssignmentScheduleExpiration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignmentScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/pimactiveroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/pimactiveroleassignment"
 
 pimactiveroleassignment.NewPimActiveRoleAssignmentScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PimActiveRoleAssignmentScheduleOutputReference
 ```
@@ -1891,7 +1891,7 @@ func InternalValue() PimActiveRoleAssignmentSchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignmentTicketOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/pimactiveroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/pimactiveroleassignment"
 
 pimactiveroleassignment.NewPimActiveRoleAssignmentTicketOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PimActiveRoleAssignmentTicketOutputReference
 ```
@@ -2198,7 +2198,7 @@ func InternalValue() PimActiveRoleAssignmentTicket
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/pimactiveroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/pimactiveroleassignment"
 
 pimactiveroleassignment.NewPimActiveRoleAssignmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PimActiveRoleAssignmentTimeoutsOutputReference
 ```

@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetwork.DataAzurermMobileNetwork.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermmobilenetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermmobilenetwork"
 
 dataazurermmobilenetwork.NewDataAzurermMobileNetwork(scope Construct, id *string, config DataAzurermMobileNetworkConfig) DataAzurermMobileNetwork
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermMobileNetwork.DataAzurermMobileNetwork.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermmobilenetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermmobilenetwork"
 
 dataazurermmobilenetwork.DataAzurermMobileNetwork_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermMobileNetwork.DataAzurermMobileNetwork.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermmobilenetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermmobilenetwork"
 
 dataazurermmobilenetwork.DataAzurermMobileNetwork_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ dataazurermmobilenetwork.DataAzurermMobileNetwork_IsTerraformElement(x interface
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermMobileNetwork.DataAzurermMobileNetwork.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermmobilenetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermmobilenetwork"
 
 dataazurermmobilenetwork.DataAzurermMobileNetwork_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -663,7 +663,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMobileNetwork.DataAzurermMobileNetworkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermmobilenetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermmobilenetwork"
 
 &dataazurermmobilenetwork.DataAzurermMobileNetworkConfig {
 	Connection: interface{},
@@ -676,7 +676,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermmobilen
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.dataAzurermMobileNetwork.DataAzurermMobileNetworkTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.dataAzurermMobileNetwork.DataAzurermMobileNetworkTimeouts,
 }
 ```
 
@@ -826,7 +826,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMobileNetwork.DataAzurermMobileNetworkTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermmobilenetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermmobilenetwork"
 
 &dataazurermmobilenetwork.DataAzurermMobileNetworkTimeouts {
 	Read: *string,
@@ -860,7 +860,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetwork.DataAzurermMobileNetworkTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermmobilenetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermmobilenetwork"
 
 dataazurermmobilenetwork.NewDataAzurermMobileNetworkTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermMobileNetworkTimeoutsOutputReference
 ```

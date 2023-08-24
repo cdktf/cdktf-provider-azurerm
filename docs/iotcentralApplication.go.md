@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iotcentralApplication.IotcentralApplication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/iotcentralapplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iotcentralapplication"
 
 iotcentralapplication.NewIotcentralApplication(scope Construct, id *string, config IotcentralApplicationConfig) IotcentralApplication
 ```
@@ -352,7 +352,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.iotcentralApplication.IotcentralApplication.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/iotcentralapplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iotcentralapplication"
 
 iotcentralapplication.IotcentralApplication_IsConstruct(x interface{}) *bool
 ```
@@ -384,7 +384,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.iotcentralApplication.IotcentralApplication.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/iotcentralapplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iotcentralapplication"
 
 iotcentralapplication.IotcentralApplication_IsTerraformElement(x interface{}) *bool
 ```
@@ -398,7 +398,7 @@ iotcentralapplication.IotcentralApplication_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.iotcentralApplication.IotcentralApplication.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/iotcentralapplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iotcentralapplication"
 
 iotcentralapplication.IotcentralApplication_IsTerraformResource(x interface{}) *bool
 ```
@@ -861,7 +861,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iotcentralApplication.IotcentralApplicationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/iotcentralapplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iotcentralapplication"
 
 &iotcentralapplication.IotcentralApplicationConfig {
 	Connection: interface{},
@@ -877,12 +877,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/iotcentralapplicat
 	SubDomain: *string,
 	DisplayName: *string,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.iotcentralApplication.IotcentralApplicationIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.iotcentralApplication.IotcentralApplicationIdentity,
 	PublicNetworkAccessEnabled: interface{},
 	Sku: *string,
 	Tags: *map[string]*string,
 	Template: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.iotcentralApplication.IotcentralApplicationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.iotcentralApplication.IotcentralApplicationTimeouts,
 }
 ```
 
@@ -1138,7 +1138,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iotcentralApplication.IotcentralApplicationIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/iotcentralapplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iotcentralapplication"
 
 &iotcentralapplication.IotcentralApplicationIdentity {
 	Type: *string,
@@ -1170,7 +1170,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iotcentralApplication.IotcentralApplicationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/iotcentralapplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iotcentralapplication"
 
 &iotcentralapplication.IotcentralApplicationTimeouts {
 	Create: *string,
@@ -1246,7 +1246,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iotcentralApplication.IotcentralApplicationIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/iotcentralapplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iotcentralapplication"
 
 iotcentralapplication.NewIotcentralApplicationIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IotcentralApplicationIdentityOutputReference
 ```
@@ -1539,7 +1539,7 @@ func InternalValue() IotcentralApplicationIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iotcentralApplication.IotcentralApplicationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/iotcentralapplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iotcentralapplication"
 
 iotcentralapplication.NewIotcentralApplicationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IotcentralApplicationTimeoutsOutputReference
 ```

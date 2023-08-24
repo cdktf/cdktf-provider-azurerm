@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorScheduledQueryRulesLog.MonitorScheduledQueryRulesLog.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitorscheduledqueryruleslog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/monitorscheduledqueryruleslog"
 
 monitorscheduledqueryruleslog.NewMonitorScheduledQueryRulesLog(scope Construct, id *string, config MonitorScheduledQueryRulesLogConfig) MonitorScheduledQueryRulesLog
 ```
@@ -338,7 +338,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.monitorScheduledQueryRulesLog.MonitorScheduledQueryRulesLog.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitorscheduledqueryruleslog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/monitorscheduledqueryruleslog"
 
 monitorscheduledqueryruleslog.MonitorScheduledQueryRulesLog_IsConstruct(x interface{}) *bool
 ```
@@ -370,7 +370,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.monitorScheduledQueryRulesLog.MonitorScheduledQueryRulesLog.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitorscheduledqueryruleslog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/monitorscheduledqueryruleslog"
 
 monitorscheduledqueryruleslog.MonitorScheduledQueryRulesLog_IsTerraformElement(x interface{}) *bool
 ```
@@ -384,7 +384,7 @@ monitorscheduledqueryruleslog.MonitorScheduledQueryRulesLog_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.monitorScheduledQueryRulesLog.MonitorScheduledQueryRulesLog.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitorscheduledqueryruleslog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/monitorscheduledqueryruleslog"
 
 monitorscheduledqueryruleslog.MonitorScheduledQueryRulesLog_IsTerraformResource(x interface{}) *bool
 ```
@@ -825,7 +825,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorScheduledQueryRulesLog.MonitorScheduledQueryRulesLogConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitorscheduledqueryruleslog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/monitorscheduledqueryruleslog"
 
 &monitorscheduledqueryruleslog.MonitorScheduledQueryRulesLogConfig {
 	Connection: interface{},
@@ -835,7 +835,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitorscheduledqu
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Criteria: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.monitorScheduledQueryRulesLog.MonitorScheduledQueryRulesLogCriteria,
+	Criteria: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.monitorScheduledQueryRulesLog.MonitorScheduledQueryRulesLogCriteria,
 	DataSourceId: *string,
 	Location: *string,
 	Name: *string,
@@ -845,7 +845,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitorscheduledqu
 	Enabled: interface{},
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.monitorScheduledQueryRulesLog.MonitorScheduledQueryRulesLogTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.monitorScheduledQueryRulesLog.MonitorScheduledQueryRulesLogTimeouts,
 }
 ```
 
@@ -1088,7 +1088,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorScheduledQueryRulesLog.MonitorScheduledQueryRulesLogCriteria.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitorscheduledqueryruleslog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/monitorscheduledqueryruleslog"
 
 &monitorscheduledqueryruleslog.MonitorScheduledQueryRulesLogCriteria {
 	Dimension: interface{},
@@ -1136,7 +1136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorScheduledQueryRulesLog.MonitorScheduledQueryRulesLogCriteriaDimension.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitorscheduledqueryruleslog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/monitorscheduledqueryruleslog"
 
 &monitorscheduledqueryruleslog.MonitorScheduledQueryRulesLogCriteriaDimension {
 	Name: *string,
@@ -1196,7 +1196,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorScheduledQueryRulesLog.MonitorScheduledQueryRulesLogTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitorscheduledqueryruleslog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/monitorscheduledqueryruleslog"
 
 &monitorscheduledqueryruleslog.MonitorScheduledQueryRulesLogTimeouts {
 	Create: *string,
@@ -1272,7 +1272,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorScheduledQueryRulesLog.MonitorScheduledQueryRulesLogCriteriaDimensionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitorscheduledqueryruleslog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/monitorscheduledqueryruleslog"
 
 monitorscheduledqueryruleslog.NewMonitorScheduledQueryRulesLogCriteriaDimensionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MonitorScheduledQueryRulesLogCriteriaDimensionList
 ```
@@ -1415,7 +1415,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorScheduledQueryRulesLog.MonitorScheduledQueryRulesLogCriteriaDimensionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitorscheduledqueryruleslog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/monitorscheduledqueryruleslog"
 
 monitorscheduledqueryruleslog.NewMonitorScheduledQueryRulesLogCriteriaDimensionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MonitorScheduledQueryRulesLogCriteriaDimensionOutputReference
 ```
@@ -1755,7 +1755,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorScheduledQueryRulesLog.MonitorScheduledQueryRulesLogCriteriaOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitorscheduledqueryruleslog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/monitorscheduledqueryruleslog"
 
 monitorscheduledqueryruleslog.NewMonitorScheduledQueryRulesLogCriteriaOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorScheduledQueryRulesLogCriteriaOutputReference
 ```
@@ -2061,7 +2061,7 @@ func InternalValue() MonitorScheduledQueryRulesLogCriteria
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorScheduledQueryRulesLog.MonitorScheduledQueryRulesLogTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/monitorscheduledqueryruleslog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/monitorscheduledqueryruleslog"
 
 monitorscheduledqueryruleslog.NewMonitorScheduledQueryRulesLogTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorScheduledQueryRulesLogTimeoutsOutputReference
 ```

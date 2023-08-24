@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermpolicyassignment"
 
 dataazurermpolicyassignment.NewDataAzurermPolicyAssignment(scope Construct, id *string, config DataAzurermPolicyAssignmentConfig) DataAzurermPolicyAssignment
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermpolicyassignment"
 
 dataazurermpolicyassignment.DataAzurermPolicyAssignment_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermpolicyassignment"
 
 dataazurermpolicyassignment.DataAzurermPolicyAssignment_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ dataazurermpolicyassignment.DataAzurermPolicyAssignment_IsTerraformElement(x int
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignment.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermpolicyassignment"
 
 dataazurermpolicyassignment.DataAzurermPolicyAssignment_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -718,7 +718,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermpolicyassignment"
 
 &dataazurermpolicyassignment.DataAzurermPolicyAssignmentConfig {
 	Connection: interface{},
@@ -731,7 +731,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermpolicya
 	Name: *string,
 	ScopeId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeouts,
 }
 ```
 
@@ -881,7 +881,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermpolicyassignment"
 
 &dataazurermpolicyassignment.DataAzurermPolicyAssignmentIdentity {
 
@@ -894,7 +894,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermpolicya
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentNonComplianceMessage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermpolicyassignment"
 
 &dataazurermpolicyassignment.DataAzurermPolicyAssignmentNonComplianceMessage {
 
@@ -907,7 +907,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermpolicya
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermpolicyassignment"
 
 &dataazurermpolicyassignment.DataAzurermPolicyAssignmentTimeouts {
 	Read: *string,
@@ -941,7 +941,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermpolicyassignment"
 
 dataazurermpolicyassignment.NewDataAzurermPolicyAssignmentIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermPolicyAssignmentIdentityList
 ```
@@ -1073,7 +1073,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermpolicyassignment"
 
 dataazurermpolicyassignment.NewDataAzurermPolicyAssignmentIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermPolicyAssignmentIdentityOutputReference
 ```
@@ -1384,7 +1384,7 @@ func InternalValue() DataAzurermPolicyAssignmentIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentNonComplianceMessageList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermpolicyassignment"
 
 dataazurermpolicyassignment.NewDataAzurermPolicyAssignmentNonComplianceMessageList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermPolicyAssignmentNonComplianceMessageList
 ```
@@ -1516,7 +1516,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentNonComplianceMessageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermpolicyassignment"
 
 dataazurermpolicyassignment.NewDataAzurermPolicyAssignmentNonComplianceMessageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermPolicyAssignmentNonComplianceMessageOutputReference
 ```
@@ -1805,7 +1805,7 @@ func InternalValue() DataAzurermPolicyAssignmentNonComplianceMessage
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPolicyAssignment.DataAzurermPolicyAssignmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/dataazurermpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermpolicyassignment"
 
 dataazurermpolicyassignment.NewDataAzurermPolicyAssignmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermPolicyAssignmentTimeoutsOutputReference
 ```

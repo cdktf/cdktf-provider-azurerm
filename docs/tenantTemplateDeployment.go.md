@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.tenantTemplateDeployment.TenantTemplateDeployment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/tenanttemplatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/tenanttemplatedeployment"
 
 tenanttemplatedeployment.NewTenantTemplateDeployment(scope Construct, id *string, config TenantTemplateDeploymentConfig) TenantTemplateDeployment
 ```
@@ -332,7 +332,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.tenantTemplateDeployment.TenantTemplateDeployment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/tenanttemplatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/tenanttemplatedeployment"
 
 tenanttemplatedeployment.TenantTemplateDeployment_IsConstruct(x interface{}) *bool
 ```
@@ -364,7 +364,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.tenantTemplateDeployment.TenantTemplateDeployment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/tenanttemplatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/tenanttemplatedeployment"
 
 tenanttemplatedeployment.TenantTemplateDeployment_IsTerraformElement(x interface{}) *bool
 ```
@@ -378,7 +378,7 @@ tenanttemplatedeployment.TenantTemplateDeployment_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.tenantTemplateDeployment.TenantTemplateDeployment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/tenanttemplatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/tenanttemplatedeployment"
 
 tenanttemplatedeployment.TenantTemplateDeployment_IsTerraformResource(x interface{}) *bool
 ```
@@ -786,7 +786,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.tenantTemplateDeployment.TenantTemplateDeploymentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/tenanttemplatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/tenanttemplatedeployment"
 
 &tenanttemplatedeployment.TenantTemplateDeploymentConfig {
 	Connection: interface{},
@@ -804,7 +804,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/tenanttemplatedepl
 	Tags: *map[string]*string,
 	TemplateContent: *string,
 	TemplateSpecVersionId: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.tenantTemplateDeployment.TenantTemplateDeploymentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.tenantTemplateDeployment.TenantTemplateDeploymentTimeouts,
 }
 ```
 
@@ -1019,7 +1019,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.tenantTemplateDeployment.TenantTemplateDeploymentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/tenanttemplatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/tenanttemplatedeployment"
 
 &tenanttemplatedeployment.TenantTemplateDeploymentTimeouts {
 	Create: *string,
@@ -1095,7 +1095,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.tenantTemplateDeployment.TenantTemplateDeploymentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/tenanttemplatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/tenanttemplatedeployment"
 
 tenanttemplatedeployment.NewTenantTemplateDeploymentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) TenantTemplateDeploymentTimeoutsOutputReference
 ```

@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementCertificate.ApiManagementCertificateA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/apimanagementcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementcertificate"
 
 apimanagementcertificate.NewApiManagementCertificateA(scope Construct, id *string, config ApiManagementCertificateAConfig) ApiManagementCertificateA
 ```
@@ -325,7 +325,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.apiManagementCertificate.ApiManagementCertificateA.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/apimanagementcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementcertificate"
 
 apimanagementcertificate.ApiManagementCertificateA_IsConstruct(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.apiManagementCertificate.ApiManagementCertificateA.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/apimanagementcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementcertificate"
 
 apimanagementcertificate.ApiManagementCertificateA_IsTerraformElement(x interface{}) *bool
 ```
@@ -371,7 +371,7 @@ apimanagementcertificate.ApiManagementCertificateA_IsTerraformElement(x interfac
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.apiManagementCertificate.ApiManagementCertificateA.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/apimanagementcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementcertificate"
 
 apimanagementcertificate.ApiManagementCertificateA_IsTerraformResource(x interface{}) *bool
 ```
@@ -801,7 +801,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementCertificate.ApiManagementCertificateAConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/apimanagementcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementcertificate"
 
 &apimanagementcertificate.ApiManagementCertificateAConfig {
 	Connection: interface{},
@@ -819,7 +819,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/apimanagementcerti
 	KeyVaultIdentityClientId: *string,
 	KeyVaultSecretId: *string,
 	Password: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9.apiManagementCertificate.ApiManagementCertificateTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.apiManagementCertificate.ApiManagementCertificateTimeouts,
 }
 ```
 
@@ -1034,7 +1034,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementCertificate.ApiManagementCertificateTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/apimanagementcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementcertificate"
 
 &apimanagementcertificate.ApiManagementCertificateTimeouts {
 	Create: *string,
@@ -1110,7 +1110,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementCertificate.ApiManagementCertificateTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v9/apimanagementcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementcertificate"
 
 apimanagementcertificate.NewApiManagementCertificateTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementCertificateTimeoutsOutputReference
 ```
