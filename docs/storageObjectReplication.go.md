@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageObjectReplication.StorageObjectReplication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageobjectreplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/storageobjectreplication"
 
 storageobjectreplication.NewStorageObjectReplication(scope Construct, id *string, config StorageObjectReplicationConfig) StorageObjectReplication
 ```
@@ -310,7 +310,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.storageObjectReplication.StorageObjectReplication.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageobjectreplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/storageobjectreplication"
 
 storageobjectreplication.StorageObjectReplication_IsConstruct(x interface{}) *bool
 ```
@@ -342,7 +342,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.storageObjectReplication.StorageObjectReplication.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageobjectreplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/storageobjectreplication"
 
 storageobjectreplication.StorageObjectReplication_IsTerraformElement(x interface{}) *bool
 ```
@@ -356,7 +356,7 @@ storageobjectreplication.StorageObjectReplication_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.storageObjectReplication.StorageObjectReplication.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageobjectreplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/storageobjectreplication"
 
 storageobjectreplication.StorageObjectReplication_IsTerraformResource(x interface{}) *bool
 ```
@@ -687,7 +687,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageObjectReplication.StorageObjectReplicationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageobjectreplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/storageobjectreplication"
 
 &storageobjectreplication.StorageObjectReplicationConfig {
 	Connection: interface{},
@@ -701,7 +701,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageobjectreplicat
 	Rules: interface{},
 	SourceStorageAccountId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageObjectReplication.StorageObjectReplicationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.storageObjectReplication.StorageObjectReplicationTimeouts,
 }
 ```
 
@@ -866,7 +866,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageObjectReplication.StorageObjectReplicationRules.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageobjectreplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/storageobjectreplication"
 
 &storageobjectreplication.StorageObjectReplicationRules {
 	DestinationContainerName: *string,
@@ -940,7 +940,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageObjectReplication.StorageObjectReplicationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageobjectreplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/storageobjectreplication"
 
 &storageobjectreplication.StorageObjectReplicationTimeouts {
 	Create: *string,
@@ -1016,7 +1016,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageObjectReplication.StorageObjectReplicationRulesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageobjectreplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/storageobjectreplication"
 
 storageobjectreplication.NewStorageObjectReplicationRulesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) StorageObjectReplicationRulesList
 ```
@@ -1159,7 +1159,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageObjectReplication.StorageObjectReplicationRulesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageobjectreplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/storageobjectreplication"
 
 storageobjectreplication.NewStorageObjectReplicationRulesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) StorageObjectReplicationRulesOutputReference
 ```
@@ -1539,7 +1539,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageObjectReplication.StorageObjectReplicationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageobjectreplication"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/storageobjectreplication"
 
 storageobjectreplication.NewStorageObjectReplicationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageObjectReplicationTimeoutsOutputReference
 ```

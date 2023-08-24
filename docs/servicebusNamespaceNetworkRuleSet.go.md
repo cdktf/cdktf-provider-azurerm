@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.servicebusNamespaceNetworkRuleSet.ServicebusNamespaceNetworkRuleSet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicebusnamespacenetworkruleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/servicebusnamespacenetworkruleset"
 
 servicebusnamespacenetworkruleset.NewServicebusNamespaceNetworkRuleSet(scope Construct, id *string, config ServicebusNamespaceNetworkRuleSetConfig) ServicebusNamespaceNetworkRuleSet
 ```
@@ -345,7 +345,7 @@ func ResetTrustedServicesAllowed()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.servicebusNamespaceNetworkRuleSet.ServicebusNamespaceNetworkRuleSet.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicebusnamespacenetworkruleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/servicebusnamespacenetworkruleset"
 
 servicebusnamespacenetworkruleset.ServicebusNamespaceNetworkRuleSet_IsConstruct(x interface{}) *bool
 ```
@@ -377,7 +377,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.servicebusNamespaceNetworkRuleSet.ServicebusNamespaceNetworkRuleSet.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicebusnamespacenetworkruleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/servicebusnamespacenetworkruleset"
 
 servicebusnamespacenetworkruleset.ServicebusNamespaceNetworkRuleSet_IsTerraformElement(x interface{}) *bool
 ```
@@ -391,7 +391,7 @@ servicebusnamespacenetworkruleset.ServicebusNamespaceNetworkRuleSet_IsTerraformE
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.servicebusNamespaceNetworkRuleSet.ServicebusNamespaceNetworkRuleSet.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicebusnamespacenetworkruleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/servicebusnamespacenetworkruleset"
 
 servicebusnamespacenetworkruleset.ServicebusNamespaceNetworkRuleSet_IsTerraformResource(x interface{}) *bool
 ```
@@ -766,7 +766,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.servicebusNamespaceNetworkRuleSet.ServicebusNamespaceNetworkRuleSetConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicebusnamespacenetworkruleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/servicebusnamespacenetworkruleset"
 
 &servicebusnamespacenetworkruleset.ServicebusNamespaceNetworkRuleSetConfig {
 	Connection: interface{},
@@ -782,7 +782,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicebusnamespacene
 	IpRules: *[]*string,
 	NetworkRules: interface{},
 	PublicNetworkAccessEnabled: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.servicebusNamespaceNetworkRuleSet.ServicebusNamespaceNetworkRuleSetTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.servicebusNamespaceNetworkRuleSet.ServicebusNamespaceNetworkRuleSetTimeouts,
 	TrustedServicesAllowed: interface{},
 }
 ```
@@ -987,7 +987,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.servicebusNamespaceNetworkRuleSet.ServicebusNamespaceNetworkRuleSetNetworkRules.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicebusnamespacenetworkruleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/servicebusnamespacenetworkruleset"
 
 &servicebusnamespacenetworkruleset.ServicebusNamespaceNetworkRuleSetNetworkRules {
 	SubnetId: *string,
@@ -1033,7 +1033,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.servicebusNamespaceNetworkRuleSet.ServicebusNamespaceNetworkRuleSetTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicebusnamespacenetworkruleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/servicebusnamespacenetworkruleset"
 
 &servicebusnamespacenetworkruleset.ServicebusNamespaceNetworkRuleSetTimeouts {
 	Create: *string,
@@ -1109,7 +1109,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.servicebusNamespaceNetworkRuleSet.ServicebusNamespaceNetworkRuleSetNetworkRulesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicebusnamespacenetworkruleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/servicebusnamespacenetworkruleset"
 
 servicebusnamespacenetworkruleset.NewServicebusNamespaceNetworkRuleSetNetworkRulesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ServicebusNamespaceNetworkRuleSetNetworkRulesList
 ```
@@ -1252,7 +1252,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.servicebusNamespaceNetworkRuleSet.ServicebusNamespaceNetworkRuleSetNetworkRulesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicebusnamespacenetworkruleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/servicebusnamespacenetworkruleset"
 
 servicebusnamespacenetworkruleset.NewServicebusNamespaceNetworkRuleSetNetworkRulesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ServicebusNamespaceNetworkRuleSetNetworkRulesOutputReference
 ```
@@ -1570,7 +1570,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.servicebusNamespaceNetworkRuleSet.ServicebusNamespaceNetworkRuleSetTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicebusnamespacenetworkruleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/servicebusnamespacenetworkruleset"
 
 servicebusnamespacenetworkruleset.NewServicebusNamespaceNetworkRuleSetTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ServicebusNamespaceNetworkRuleSetTimeoutsOutputReference
 ```

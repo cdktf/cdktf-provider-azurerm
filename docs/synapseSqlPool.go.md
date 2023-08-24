@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.synapseSqlPool.SynapseSqlPool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapsesqlpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/synapsesqlpool"
 
 synapsesqlpool.NewSynapseSqlPool(scope Construct, id *string, config SynapseSqlPoolConfig) SynapseSqlPool
 ```
@@ -359,7 +359,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.synapseSqlPool.SynapseSqlPool.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapsesqlpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/synapsesqlpool"
 
 synapsesqlpool.SynapseSqlPool_IsConstruct(x interface{}) *bool
 ```
@@ -391,7 +391,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.synapseSqlPool.SynapseSqlPool.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapsesqlpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/synapsesqlpool"
 
 synapsesqlpool.SynapseSqlPool_IsTerraformElement(x interface{}) *bool
 ```
@@ -405,7 +405,7 @@ synapsesqlpool.SynapseSqlPool_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.synapseSqlPool.SynapseSqlPool.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapsesqlpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/synapsesqlpool"
 
 synapsesqlpool.SynapseSqlPool_IsTerraformResource(x interface{}) *bool
 ```
@@ -868,7 +868,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.synapseSqlPool.SynapseSqlPoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapsesqlpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/synapsesqlpool"
 
 &synapsesqlpool.SynapseSqlPoolConfig {
 	Connection: interface{},
@@ -887,9 +887,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapsesqlpool"
 	GeoBackupPolicyEnabled: interface{},
 	Id: *string,
 	RecoveryDatabaseId: *string,
-	Restore: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.synapseSqlPool.SynapseSqlPoolRestore,
+	Restore: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.synapseSqlPool.SynapseSqlPoolRestore,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.synapseSqlPool.SynapseSqlPoolTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.synapseSqlPool.SynapseSqlPoolTimeouts,
 }
 ```
 
@@ -1145,7 +1145,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.synapseSqlPool.SynapseSqlPoolRestore.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapsesqlpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/synapsesqlpool"
 
 &synapsesqlpool.SynapseSqlPoolRestore {
 	PointInTime: *string,
@@ -1191,7 +1191,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.synapseSqlPool.SynapseSqlPoolTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapsesqlpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/synapsesqlpool"
 
 &synapsesqlpool.SynapseSqlPoolTimeouts {
 	Create: *string,
@@ -1267,7 +1267,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.synapseSqlPool.SynapseSqlPoolRestoreOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapsesqlpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/synapsesqlpool"
 
 synapsesqlpool.NewSynapseSqlPoolRestoreOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SynapseSqlPoolRestoreOutputReference
 ```
@@ -1560,7 +1560,7 @@ func InternalValue() SynapseSqlPoolRestore
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.synapseSqlPool.SynapseSqlPoolTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapsesqlpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/synapsesqlpool"
 
 synapsesqlpool.NewSynapseSqlPoolTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SynapseSqlPoolTimeoutsOutputReference
 ```

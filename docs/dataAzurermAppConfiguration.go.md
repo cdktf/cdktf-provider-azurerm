@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppConfiguration.DataAzurermAppConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappconfiguration"
 
 dataazurermappconfiguration.NewDataAzurermAppConfiguration(scope Construct, id *string, config DataAzurermAppConfigurationConfig) DataAzurermAppConfiguration
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermAppConfiguration.DataAzurermAppConfiguration.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappconfiguration"
 
 dataazurermappconfiguration.DataAzurermAppConfiguration_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermAppConfiguration.DataAzurermAppConfiguration.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappconfiguration"
 
 dataazurermappconfiguration.DataAzurermAppConfiguration_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ dataazurermappconfiguration.DataAzurermAppConfiguration_IsTerraformElement(x int
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermAppConfiguration.DataAzurermAppConfiguration.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappconfiguration"
 
 dataazurermappconfiguration.DataAzurermAppConfiguration_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -773,7 +773,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppConfiguration.DataAzurermAppConfigurationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappconfiguration"
 
 &dataazurermappconfiguration.DataAzurermAppConfigurationConfig {
 	Connection: interface{},
@@ -786,7 +786,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfigu
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermAppConfiguration.DataAzurermAppConfigurationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.dataAzurermAppConfiguration.DataAzurermAppConfigurationTimeouts,
 }
 ```
 
@@ -936,7 +936,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppConfiguration.DataAzurermAppConfigurationEncryption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappconfiguration"
 
 &dataazurermappconfiguration.DataAzurermAppConfigurationEncryption {
 
@@ -949,7 +949,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfigu
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppConfiguration.DataAzurermAppConfigurationIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappconfiguration"
 
 &dataazurermappconfiguration.DataAzurermAppConfigurationIdentity {
 
@@ -962,7 +962,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfigu
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppConfiguration.DataAzurermAppConfigurationPrimaryReadKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappconfiguration"
 
 &dataazurermappconfiguration.DataAzurermAppConfigurationPrimaryReadKey {
 
@@ -975,7 +975,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfigu
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppConfiguration.DataAzurermAppConfigurationPrimaryWriteKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappconfiguration"
 
 &dataazurermappconfiguration.DataAzurermAppConfigurationPrimaryWriteKey {
 
@@ -988,7 +988,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfigu
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppConfiguration.DataAzurermAppConfigurationSecondaryReadKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappconfiguration"
 
 &dataazurermappconfiguration.DataAzurermAppConfigurationSecondaryReadKey {
 
@@ -1001,7 +1001,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfigu
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppConfiguration.DataAzurermAppConfigurationSecondaryWriteKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappconfiguration"
 
 &dataazurermappconfiguration.DataAzurermAppConfigurationSecondaryWriteKey {
 
@@ -1014,7 +1014,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfigu
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppConfiguration.DataAzurermAppConfigurationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappconfiguration"
 
 &dataazurermappconfiguration.DataAzurermAppConfigurationTimeouts {
 	Read: *string,
@@ -1048,7 +1048,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppConfiguration.DataAzurermAppConfigurationEncryptionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappconfiguration"
 
 dataazurermappconfiguration.NewDataAzurermAppConfigurationEncryptionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermAppConfigurationEncryptionList
 ```
@@ -1180,7 +1180,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppConfiguration.DataAzurermAppConfigurationEncryptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappconfiguration"
 
 dataazurermappconfiguration.NewDataAzurermAppConfigurationEncryptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermAppConfigurationEncryptionOutputReference
 ```
@@ -1469,7 +1469,7 @@ func InternalValue() DataAzurermAppConfigurationEncryption
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppConfiguration.DataAzurermAppConfigurationIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappconfiguration"
 
 dataazurermappconfiguration.NewDataAzurermAppConfigurationIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermAppConfigurationIdentityList
 ```
@@ -1601,7 +1601,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppConfiguration.DataAzurermAppConfigurationIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappconfiguration"
 
 dataazurermappconfiguration.NewDataAzurermAppConfigurationIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermAppConfigurationIdentityOutputReference
 ```
@@ -1912,7 +1912,7 @@ func InternalValue() DataAzurermAppConfigurationIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppConfiguration.DataAzurermAppConfigurationPrimaryReadKeyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappconfiguration"
 
 dataazurermappconfiguration.NewDataAzurermAppConfigurationPrimaryReadKeyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermAppConfigurationPrimaryReadKeyList
 ```
@@ -2044,7 +2044,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppConfiguration.DataAzurermAppConfigurationPrimaryReadKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappconfiguration"
 
 dataazurermappconfiguration.NewDataAzurermAppConfigurationPrimaryReadKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermAppConfigurationPrimaryReadKeyOutputReference
 ```
@@ -2344,7 +2344,7 @@ func InternalValue() DataAzurermAppConfigurationPrimaryReadKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppConfiguration.DataAzurermAppConfigurationPrimaryWriteKeyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappconfiguration"
 
 dataazurermappconfiguration.NewDataAzurermAppConfigurationPrimaryWriteKeyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermAppConfigurationPrimaryWriteKeyList
 ```
@@ -2476,7 +2476,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppConfiguration.DataAzurermAppConfigurationPrimaryWriteKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappconfiguration"
 
 dataazurermappconfiguration.NewDataAzurermAppConfigurationPrimaryWriteKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermAppConfigurationPrimaryWriteKeyOutputReference
 ```
@@ -2776,7 +2776,7 @@ func InternalValue() DataAzurermAppConfigurationPrimaryWriteKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppConfiguration.DataAzurermAppConfigurationSecondaryReadKeyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappconfiguration"
 
 dataazurermappconfiguration.NewDataAzurermAppConfigurationSecondaryReadKeyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermAppConfigurationSecondaryReadKeyList
 ```
@@ -2908,7 +2908,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppConfiguration.DataAzurermAppConfigurationSecondaryReadKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappconfiguration"
 
 dataazurermappconfiguration.NewDataAzurermAppConfigurationSecondaryReadKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermAppConfigurationSecondaryReadKeyOutputReference
 ```
@@ -3208,7 +3208,7 @@ func InternalValue() DataAzurermAppConfigurationSecondaryReadKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppConfiguration.DataAzurermAppConfigurationSecondaryWriteKeyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappconfiguration"
 
 dataazurermappconfiguration.NewDataAzurermAppConfigurationSecondaryWriteKeyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermAppConfigurationSecondaryWriteKeyList
 ```
@@ -3340,7 +3340,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppConfiguration.DataAzurermAppConfigurationSecondaryWriteKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappconfiguration"
 
 dataazurermappconfiguration.NewDataAzurermAppConfigurationSecondaryWriteKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermAppConfigurationSecondaryWriteKeyOutputReference
 ```
@@ -3640,7 +3640,7 @@ func InternalValue() DataAzurermAppConfigurationSecondaryWriteKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppConfiguration.DataAzurermAppConfigurationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappconfiguration"
 
 dataazurermappconfiguration.NewDataAzurermAppConfigurationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermAppConfigurationTimeoutsOutputReference
 ```

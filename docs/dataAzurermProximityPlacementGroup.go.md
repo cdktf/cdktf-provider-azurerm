@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermProximityPlacementGroup.DataAzurermProximityPlacementGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermproximityplacementgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermproximityplacementgroup"
 
 dataazurermproximityplacementgroup.NewDataAzurermProximityPlacementGroup(scope Construct, id *string, config DataAzurermProximityPlacementGroupConfig) DataAzurermProximityPlacementGroup
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermProximityPlacementGroup.DataAzurermProximityPlacementGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermproximityplacementgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermproximityplacementgroup"
 
 dataazurermproximityplacementgroup.DataAzurermProximityPlacementGroup_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermProximityPlacementGroup.DataAzurermProximityPlacementGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermproximityplacementgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermproximityplacementgroup"
 
 dataazurermproximityplacementgroup.DataAzurermProximityPlacementGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ dataazurermproximityplacementgroup.DataAzurermProximityPlacementGroup_IsTerrafor
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermProximityPlacementGroup.DataAzurermProximityPlacementGroup.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermproximityplacementgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermproximityplacementgroup"
 
 dataazurermproximityplacementgroup.DataAzurermProximityPlacementGroup_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -630,7 +630,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermProximityPlacementGroup.DataAzurermProximityPlacementGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermproximityplacementgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermproximityplacementgroup"
 
 &dataazurermproximityplacementgroup.DataAzurermProximityPlacementGroupConfig {
 	Connection: interface{},
@@ -643,7 +643,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermproximityp
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermProximityPlacementGroup.DataAzurermProximityPlacementGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.dataAzurermProximityPlacementGroup.DataAzurermProximityPlacementGroupTimeouts,
 }
 ```
 
@@ -793,7 +793,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermProximityPlacementGroup.DataAzurermProximityPlacementGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermproximityplacementgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermproximityplacementgroup"
 
 &dataazurermproximityplacementgroup.DataAzurermProximityPlacementGroupTimeouts {
 	Read: *string,
@@ -827,7 +827,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermProximityPlacementGroup.DataAzurermProximityPlacementGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermproximityplacementgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermproximityplacementgroup"
 
 dataazurermproximityplacementgroup.NewDataAzurermProximityPlacementGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermProximityPlacementGroupTimeoutsOutputReference
 ```
