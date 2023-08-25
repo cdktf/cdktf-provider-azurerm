@@ -1,6 +1,6 @@
 # `data_azurerm_disk_access`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_disk_access`](https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/disk_access).
+Refer to the Terraform Registory for docs: [`data_azurerm_disk_access`](https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/disk_access).
 
 # `dataAzurermDiskAccess` Submodule <a name="`dataAzurermDiskAccess` Submodule" id="@cdktf/provider-azurerm.dataAzurermDiskAccess"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_disk_access`](https://
 
 ### DataAzurermDiskAccess <a name="DataAzurermDiskAccess" id="@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/disk_access azurerm_disk_access}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/disk_access azurerm_disk_access}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.Initializer"></a>
 
@@ -45,9 +45,9 @@ DataAzurermDiskAccess.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/disk_access#name DataAzurermDiskAccess#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/disk_access#resource_group_name DataAzurermDiskAccess#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/disk_access#id DataAzurermDiskAccess#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/disk_access#name DataAzurermDiskAccess#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/disk_access#resource_group_name DataAzurermDiskAccess#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/disk_access#id DataAzurermDiskAccess#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccess.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessTimeouts">DataAzurermDiskAccessTimeouts</a></code> | timeouts block. |
 
 ---
@@ -116,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/disk_access#name DataAzurermDiskAccess#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/disk_access#name DataAzurermDiskAccess#name}.
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/disk_access#resource_group_name DataAzurermDiskAccess#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/disk_access#resource_group_name DataAzurermDiskAccess#resource_group_name}.
 
 ---
 
@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/disk_access#id DataAzurermDiskAccess#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/disk_access#id DataAzurermDiskAccess#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -145,7 +145,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/disk_access#timeouts DataAzurermDiskAccess#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/disk_access#timeouts DataAzurermDiskAccess#timeouts}
 
 ---
 
@@ -750,9 +750,9 @@ DataAzurermDiskAccessConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/disk_access#name DataAzurermDiskAccess#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/disk_access#resource_group_name DataAzurermDiskAccess#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/disk_access#id DataAzurermDiskAccess#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/disk_access#name DataAzurermDiskAccess#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/disk_access#resource_group_name DataAzurermDiskAccess#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/disk_access#id DataAzurermDiskAccess#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessTimeouts">DataAzurermDiskAccessTimeouts</a></code> | timeouts block. |
 
 ---
@@ -835,7 +835,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/disk_access#name DataAzurermDiskAccess#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/disk_access#name DataAzurermDiskAccess#name}.
 
 ---
 
@@ -847,7 +847,7 @@ public java.lang.String getResourceGroupName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/disk_access#resource_group_name DataAzurermDiskAccess#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/disk_access#resource_group_name DataAzurermDiskAccess#resource_group_name}.
 
 ---
 
@@ -859,7 +859,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/disk_access#id DataAzurermDiskAccess#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/disk_access#id DataAzurermDiskAccess#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -876,7 +876,7 @@ public DataAzurermDiskAccessTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/disk_access#timeouts DataAzurermDiskAccess#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/disk_access#timeouts DataAzurermDiskAccess#timeouts}
 
 ---
 
@@ -896,7 +896,7 @@ DataAzurermDiskAccessTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/disk_access#read DataAzurermDiskAccess#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDiskAccess.DataAzurermDiskAccessTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/disk_access#read DataAzurermDiskAccess#read}. |
 
 ---
 
@@ -908,7 +908,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/disk_access#read DataAzurermDiskAccess#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/disk_access#read DataAzurermDiskAccess#read}.
 
 ---
 

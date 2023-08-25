@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/container_app_environment_storage
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/container_app_environment_storage
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,29 +15,29 @@ export interface ContainerAppEnvironmentStorageConfig extends cdktf.TerraformMet
   /**
   * The Storage Account Access Key.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/container_app_environment_storage#access_key ContainerAppEnvironmentStorage#access_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/container_app_environment_storage#access_key ContainerAppEnvironmentStorage#access_key}
   */
   readonly accessKey: string;
   /**
   * The access mode to connect this storage to the Container App. Possible values include `ReadOnly` and `ReadWrite`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/container_app_environment_storage#access_mode ContainerAppEnvironmentStorage#access_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/container_app_environment_storage#access_mode ContainerAppEnvironmentStorage#access_mode}
   */
   readonly accessMode: string;
   /**
   * The Azure Storage Account in which the Share to be used is located.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/container_app_environment_storage#account_name ContainerAppEnvironmentStorage#account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/container_app_environment_storage#account_name ContainerAppEnvironmentStorage#account_name}
   */
   readonly accountName: string;
   /**
   * The ID of the Container App Environment to which this storage belongs.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/container_app_environment_storage#container_app_environment_id ContainerAppEnvironmentStorage#container_app_environment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/container_app_environment_storage#container_app_environment_id ContainerAppEnvironmentStorage#container_app_environment_id}
   */
   readonly containerAppEnvironmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/container_app_environment_storage#id ContainerAppEnvironmentStorage#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/container_app_environment_storage#id ContainerAppEnvironmentStorage#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -46,37 +46,37 @@ export interface ContainerAppEnvironmentStorageConfig extends cdktf.TerraformMet
   /**
   * The name for this Storage.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/container_app_environment_storage#name ContainerAppEnvironmentStorage#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/container_app_environment_storage#name ContainerAppEnvironmentStorage#name}
   */
   readonly name: string;
   /**
   * The name of the Azure Storage Share to use.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/container_app_environment_storage#share_name ContainerAppEnvironmentStorage#share_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/container_app_environment_storage#share_name ContainerAppEnvironmentStorage#share_name}
   */
   readonly shareName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/container_app_environment_storage#timeouts ContainerAppEnvironmentStorage#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/container_app_environment_storage#timeouts ContainerAppEnvironmentStorage#timeouts}
   */
   readonly timeouts?: ContainerAppEnvironmentStorageTimeouts;
 }
 export interface ContainerAppEnvironmentStorageTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/container_app_environment_storage#create ContainerAppEnvironmentStorage#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/container_app_environment_storage#create ContainerAppEnvironmentStorage#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/container_app_environment_storage#delete ContainerAppEnvironmentStorage#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/container_app_environment_storage#delete ContainerAppEnvironmentStorage#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/container_app_environment_storage#read ContainerAppEnvironmentStorage#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/container_app_environment_storage#read ContainerAppEnvironmentStorage#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/container_app_environment_storage#update ContainerAppEnvironmentStorage#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/container_app_environment_storage#update ContainerAppEnvironmentStorage#update}
   */
   readonly update?: string;
 }
@@ -220,7 +220,7 @@ export class ContainerAppEnvironmentStorageTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/container_app_environment_storage azurerm_container_app_environment_storage}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/container_app_environment_storage azurerm_container_app_environment_storage}
 */
 export class ContainerAppEnvironmentStorage extends cdktf.TerraformResource {
 
@@ -234,7 +234,7 @@ export class ContainerAppEnvironmentStorage extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/container_app_environment_storage azurerm_container_app_environment_storage} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/container_app_environment_storage azurerm_container_app_environment_storage} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -245,7 +245,7 @@ export class ContainerAppEnvironmentStorage extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_container_app_environment_storage',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.70.0',
+        providerVersion: '3.71.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

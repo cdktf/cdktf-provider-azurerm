@@ -293,6 +293,7 @@ export * as databricksAccessConnector from './databricks-access-connector';
 export * as databricksVirtualNetworkPeering from './databricks-virtual-network-peering';
 export * as databricksWorkspace from './databricks-workspace';
 export * as databricksWorkspaceCustomerManagedKey from './databricks-workspace-customer-managed-key';
+export * as databricksWorkspaceRootDbfsCustomerManagedKey from './databricks-workspace-root-dbfs-customer-managed-key';
 export * as datadogMonitor from './datadog-monitor';
 export * as datadogMonitorSsoConfiguration from './datadog-monitor-sso-configuration';
 export * as datadogMonitorTagRule from './datadog-monitor-tag-rule';

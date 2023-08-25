@@ -615,6 +615,7 @@ The following submodules are available:
 - [databricksVirtualNetworkPeering](./databricksVirtualNetworkPeering.typescript.md)
 - [databricksWorkspace](./databricksWorkspace.typescript.md)
 - [databricksWorkspaceCustomerManagedKey](./databricksWorkspaceCustomerManagedKey.typescript.md)
+- [databricksWorkspaceRootDbfsCustomerManagedKey](./databricksWorkspaceRootDbfsCustomerManagedKey.typescript.md)
 - [datadogMonitor](./datadogMonitor.typescript.md)
 - [datadogMonitorSsoConfiguration](./datadogMonitorSsoConfiguration.typescript.md)
 - [datadogMonitorTagRule](./datadogMonitorTagRule.typescript.md)

@@ -293,6 +293,7 @@ Object.defineProperty(exports, 'databricksAccessConnector', { get: function () {
 Object.defineProperty(exports, 'databricksVirtualNetworkPeering', { get: function () { return require('./databricks-virtual-network-peering'); } });
 Object.defineProperty(exports, 'databricksWorkspace', { get: function () { return require('./databricks-workspace'); } });
 Object.defineProperty(exports, 'databricksWorkspaceCustomerManagedKey', { get: function () { return require('./databricks-workspace-customer-managed-key'); } });
+Object.defineProperty(exports, 'databricksWorkspaceRootDbfsCustomerManagedKey', { get: function () { return require('./databricks-workspace-root-dbfs-customer-managed-key'); } });
 Object.defineProperty(exports, 'datadogMonitor', { get: function () { return require('./datadog-monitor'); } });
 Object.defineProperty(exports, 'datadogMonitorSsoConfiguration', { get: function () { return require('./datadog-monitor-sso-configuration'); } });
 Object.defineProperty(exports, 'datadogMonitorTagRule', { get: function () { return require('./datadog-monitor-tag-rule'); } });

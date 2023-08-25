@@ -615,6 +615,7 @@ The following submodules are available:
 - [databricksVirtualNetworkPeering](./databricksVirtualNetworkPeering.java.md)
 - [databricksWorkspace](./databricksWorkspace.java.md)
 - [databricksWorkspaceCustomerManagedKey](./databricksWorkspaceCustomerManagedKey.java.md)
+- [databricksWorkspaceRootDbfsCustomerManagedKey](./databricksWorkspaceRootDbfsCustomerManagedKey.java.md)
 - [datadogMonitor](./datadogMonitor.java.md)
 - [datadogMonitorSsoConfiguration](./datadogMonitorSsoConfiguration.java.md)
 - [datadogMonitorTagRule](./datadogMonitorTagRule.java.md)

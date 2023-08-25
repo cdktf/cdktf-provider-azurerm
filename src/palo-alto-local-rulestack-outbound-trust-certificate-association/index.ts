@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/palo_alto_local_rulestack_outbound_trust_certificate_association
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/palo_alto_local_rulestack_outbound_trust_certificate_association
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,11 +13,11 @@ import * as cdktf from 'cdktf';
 
 export interface PaloAltoLocalRulestackOutboundTrustCertificateAssociationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/palo_alto_local_rulestack_outbound_trust_certificate_association#certificate_id PaloAltoLocalRulestackOutboundTrustCertificateAssociation#certificate_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/palo_alto_local_rulestack_outbound_trust_certificate_association#certificate_id PaloAltoLocalRulestackOutboundTrustCertificateAssociation#certificate_id}
   */
   readonly certificateId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/palo_alto_local_rulestack_outbound_trust_certificate_association#id PaloAltoLocalRulestackOutboundTrustCertificateAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/palo_alto_local_rulestack_outbound_trust_certificate_association#id PaloAltoLocalRulestackOutboundTrustCertificateAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -26,21 +26,21 @@ export interface PaloAltoLocalRulestackOutboundTrustCertificateAssociationConfig
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/palo_alto_local_rulestack_outbound_trust_certificate_association#timeouts PaloAltoLocalRulestackOutboundTrustCertificateAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/palo_alto_local_rulestack_outbound_trust_certificate_association#timeouts PaloAltoLocalRulestackOutboundTrustCertificateAssociation#timeouts}
   */
   readonly timeouts?: PaloAltoLocalRulestackOutboundTrustCertificateAssociationTimeouts;
 }
 export interface PaloAltoLocalRulestackOutboundTrustCertificateAssociationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/palo_alto_local_rulestack_outbound_trust_certificate_association#create PaloAltoLocalRulestackOutboundTrustCertificateAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/palo_alto_local_rulestack_outbound_trust_certificate_association#create PaloAltoLocalRulestackOutboundTrustCertificateAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/palo_alto_local_rulestack_outbound_trust_certificate_association#delete PaloAltoLocalRulestackOutboundTrustCertificateAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/palo_alto_local_rulestack_outbound_trust_certificate_association#delete PaloAltoLocalRulestackOutboundTrustCertificateAssociation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/palo_alto_local_rulestack_outbound_trust_certificate_association#read PaloAltoLocalRulestackOutboundTrustCertificateAssociation#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/palo_alto_local_rulestack_outbound_trust_certificate_association#read PaloAltoLocalRulestackOutboundTrustCertificateAssociation#read}
   */
   readonly read?: string;
 }
@@ -161,7 +161,7 @@ export class PaloAltoLocalRulestackOutboundTrustCertificateAssociationTimeoutsOu
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/palo_alto_local_rulestack_outbound_trust_certificate_association azurerm_palo_alto_local_rulestack_outbound_trust_certificate_association}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/palo_alto_local_rulestack_outbound_trust_certificate_association azurerm_palo_alto_local_rulestack_outbound_trust_certificate_association}
 */
 export class PaloAltoLocalRulestackOutboundTrustCertificateAssociation extends cdktf.TerraformResource {
 
@@ -175,7 +175,7 @@ export class PaloAltoLocalRulestackOutboundTrustCertificateAssociation extends c
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/palo_alto_local_rulestack_outbound_trust_certificate_association azurerm_palo_alto_local_rulestack_outbound_trust_certificate_association} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/palo_alto_local_rulestack_outbound_trust_certificate_association azurerm_palo_alto_local_rulestack_outbound_trust_certificate_association} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -186,7 +186,7 @@ export class PaloAltoLocalRulestackOutboundTrustCertificateAssociation extends c
       terraformResourceType: 'azurerm_palo_alto_local_rulestack_outbound_trust_certificate_association',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.70.0',
+        providerVersion: '3.71.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

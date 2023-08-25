@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,82 +13,88 @@ import * as cdktf from 'cdktf';
 
 export interface ServicebusNamespaceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace#capacity ServicebusNamespace#capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#capacity ServicebusNamespace#capacity}
   */
   readonly capacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace#id ServicebusNamespace#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#id ServicebusNamespace#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace#local_auth_enabled ServicebusNamespace#local_auth_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#local_auth_enabled ServicebusNamespace#local_auth_enabled}
   */
   readonly localAuthEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace#location ServicebusNamespace#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#location ServicebusNamespace#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace#minimum_tls_version ServicebusNamespace#minimum_tls_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#minimum_tls_version ServicebusNamespace#minimum_tls_version}
   */
   readonly minimumTlsVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace#name ServicebusNamespace#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#name ServicebusNamespace#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace#public_network_access_enabled ServicebusNamespace#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#public_network_access_enabled ServicebusNamespace#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace#resource_group_name ServicebusNamespace#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#resource_group_name ServicebusNamespace#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace#sku ServicebusNamespace#sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#sku ServicebusNamespace#sku}
   */
   readonly sku: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace#tags ServicebusNamespace#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#tags ServicebusNamespace#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace#zone_redundant ServicebusNamespace#zone_redundant}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#zone_redundant ServicebusNamespace#zone_redundant}
   */
   readonly zoneRedundant?: boolean | cdktf.IResolvable;
   /**
   * customer_managed_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace#customer_managed_key ServicebusNamespace#customer_managed_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#customer_managed_key ServicebusNamespace#customer_managed_key}
   */
   readonly customerManagedKey?: ServicebusNamespaceCustomerManagedKey;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace#identity ServicebusNamespace#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#identity ServicebusNamespace#identity}
   */
   readonly identity?: ServicebusNamespaceIdentity;
   /**
+  * network_rule_set block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#network_rule_set ServicebusNamespace#network_rule_set}
+  */
+  readonly networkRuleSet?: ServicebusNamespaceNetworkRuleSet;
+  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace#timeouts ServicebusNamespace#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#timeouts ServicebusNamespace#timeouts}
   */
   readonly timeouts?: ServicebusNamespaceTimeouts;
 }
 export interface ServicebusNamespaceCustomerManagedKey {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace#identity_id ServicebusNamespace#identity_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#identity_id ServicebusNamespace#identity_id}
   */
   readonly identityId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace#infrastructure_encryption_enabled ServicebusNamespace#infrastructure_encryption_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#infrastructure_encryption_enabled ServicebusNamespace#infrastructure_encryption_enabled}
   */
   readonly infrastructureEncryptionEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace#key_vault_key_id ServicebusNamespace#key_vault_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#key_vault_key_id ServicebusNamespace#key_vault_key_id}
   */
   readonly keyVaultKeyId: string;
 }
@@ -193,11 +199,11 @@ export class ServicebusNamespaceCustomerManagedKeyOutputReference extends cdktf.
 }
 export interface ServicebusNamespaceIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace#identity_ids ServicebusNamespace#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#identity_ids ServicebusNamespace#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace#type ServicebusNamespace#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#type ServicebusNamespace#type}
   */
   readonly type: string;
 }
@@ -290,21 +296,317 @@ export class ServicebusNamespaceIdentityOutputReference extends cdktf.ComplexObj
     return this._type;
   }
 }
+export interface ServicebusNamespaceNetworkRuleSetNetworkRules {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#ignore_missing_vnet_service_endpoint ServicebusNamespace#ignore_missing_vnet_service_endpoint}
+  */
+  readonly ignoreMissingVnetServiceEndpoint?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#subnet_id ServicebusNamespace#subnet_id}
+  */
+  readonly subnetId: string;
+}
+
+export function servicebusNamespaceNetworkRuleSetNetworkRulesToTerraform(struct?: ServicebusNamespaceNetworkRuleSetNetworkRules | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    ignore_missing_vnet_service_endpoint: cdktf.booleanToTerraform(struct!.ignoreMissingVnetServiceEndpoint),
+    subnet_id: cdktf.stringToTerraform(struct!.subnetId),
+  }
+}
+
+export class ServicebusNamespaceNetworkRuleSetNetworkRulesOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ServicebusNamespaceNetworkRuleSetNetworkRules | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._ignoreMissingVnetServiceEndpoint !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ignoreMissingVnetServiceEndpoint = this._ignoreMissingVnetServiceEndpoint;
+    }
+    if (this._subnetId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.subnetId = this._subnetId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ServicebusNamespaceNetworkRuleSetNetworkRules | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._ignoreMissingVnetServiceEndpoint = undefined;
+      this._subnetId = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._ignoreMissingVnetServiceEndpoint = value.ignoreMissingVnetServiceEndpoint;
+      this._subnetId = value.subnetId;
+    }
+  }
+
+  // ignore_missing_vnet_service_endpoint - computed: false, optional: true, required: false
+  private _ignoreMissingVnetServiceEndpoint?: boolean | cdktf.IResolvable; 
+  public get ignoreMissingVnetServiceEndpoint() {
+    return this.getBooleanAttribute('ignore_missing_vnet_service_endpoint');
+  }
+  public set ignoreMissingVnetServiceEndpoint(value: boolean | cdktf.IResolvable) {
+    this._ignoreMissingVnetServiceEndpoint = value;
+  }
+  public resetIgnoreMissingVnetServiceEndpoint() {
+    this._ignoreMissingVnetServiceEndpoint = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ignoreMissingVnetServiceEndpointInput() {
+    return this._ignoreMissingVnetServiceEndpoint;
+  }
+
+  // subnet_id - computed: false, optional: false, required: true
+  private _subnetId?: string; 
+  public get subnetId() {
+    return this.getStringAttribute('subnet_id');
+  }
+  public set subnetId(value: string) {
+    this._subnetId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get subnetIdInput() {
+    return this._subnetId;
+  }
+}
+
+export class ServicebusNamespaceNetworkRuleSetNetworkRulesList extends cdktf.ComplexList {
+  public internalValue? : ServicebusNamespaceNetworkRuleSetNetworkRules[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ServicebusNamespaceNetworkRuleSetNetworkRulesOutputReference {
+    return new ServicebusNamespaceNetworkRuleSetNetworkRulesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ServicebusNamespaceNetworkRuleSet {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#default_action ServicebusNamespace#default_action}
+  */
+  readonly defaultAction?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#ip_rules ServicebusNamespace#ip_rules}
+  */
+  readonly ipRules?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#public_network_access_enabled ServicebusNamespace#public_network_access_enabled}
+  */
+  readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#trusted_services_allowed ServicebusNamespace#trusted_services_allowed}
+  */
+  readonly trustedServicesAllowed?: boolean | cdktf.IResolvable;
+  /**
+  * network_rules block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#network_rules ServicebusNamespace#network_rules}
+  */
+  readonly networkRules?: ServicebusNamespaceNetworkRuleSetNetworkRules[] | cdktf.IResolvable;
+}
+
+export function servicebusNamespaceNetworkRuleSetToTerraform(struct?: ServicebusNamespaceNetworkRuleSetOutputReference | ServicebusNamespaceNetworkRuleSet): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    default_action: cdktf.stringToTerraform(struct!.defaultAction),
+    ip_rules: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ipRules),
+    public_network_access_enabled: cdktf.booleanToTerraform(struct!.publicNetworkAccessEnabled),
+    trusted_services_allowed: cdktf.booleanToTerraform(struct!.trustedServicesAllowed),
+    network_rules: cdktf.listMapper(servicebusNamespaceNetworkRuleSetNetworkRulesToTerraform, true)(struct!.networkRules),
+  }
+}
+
+export class ServicebusNamespaceNetworkRuleSetOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ServicebusNamespaceNetworkRuleSet | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._defaultAction !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.defaultAction = this._defaultAction;
+    }
+    if (this._ipRules !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipRules = this._ipRules;
+    }
+    if (this._publicNetworkAccessEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.publicNetworkAccessEnabled = this._publicNetworkAccessEnabled;
+    }
+    if (this._trustedServicesAllowed !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.trustedServicesAllowed = this._trustedServicesAllowed;
+    }
+    if (this._networkRules?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.networkRules = this._networkRules?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ServicebusNamespaceNetworkRuleSet | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._defaultAction = undefined;
+      this._ipRules = undefined;
+      this._publicNetworkAccessEnabled = undefined;
+      this._trustedServicesAllowed = undefined;
+      this._networkRules.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._defaultAction = value.defaultAction;
+      this._ipRules = value.ipRules;
+      this._publicNetworkAccessEnabled = value.publicNetworkAccessEnabled;
+      this._trustedServicesAllowed = value.trustedServicesAllowed;
+      this._networkRules.internalValue = value.networkRules;
+    }
+  }
+
+  // default_action - computed: false, optional: true, required: false
+  private _defaultAction?: string; 
+  public get defaultAction() {
+    return this.getStringAttribute('default_action');
+  }
+  public set defaultAction(value: string) {
+    this._defaultAction = value;
+  }
+  public resetDefaultAction() {
+    this._defaultAction = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get defaultActionInput() {
+    return this._defaultAction;
+  }
+
+  // ip_rules - computed: false, optional: true, required: false
+  private _ipRules?: string[]; 
+  public get ipRules() {
+    return cdktf.Fn.tolist(this.getListAttribute('ip_rules'));
+  }
+  public set ipRules(value: string[]) {
+    this._ipRules = value;
+  }
+  public resetIpRules() {
+    this._ipRules = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipRulesInput() {
+    return this._ipRules;
+  }
+
+  // public_network_access_enabled - computed: false, optional: true, required: false
+  private _publicNetworkAccessEnabled?: boolean | cdktf.IResolvable; 
+  public get publicNetworkAccessEnabled() {
+    return this.getBooleanAttribute('public_network_access_enabled');
+  }
+  public set publicNetworkAccessEnabled(value: boolean | cdktf.IResolvable) {
+    this._publicNetworkAccessEnabled = value;
+  }
+  public resetPublicNetworkAccessEnabled() {
+    this._publicNetworkAccessEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get publicNetworkAccessEnabledInput() {
+    return this._publicNetworkAccessEnabled;
+  }
+
+  // trusted_services_allowed - computed: false, optional: true, required: false
+  private _trustedServicesAllowed?: boolean | cdktf.IResolvable; 
+  public get trustedServicesAllowed() {
+    return this.getBooleanAttribute('trusted_services_allowed');
+  }
+  public set trustedServicesAllowed(value: boolean | cdktf.IResolvable) {
+    this._trustedServicesAllowed = value;
+  }
+  public resetTrustedServicesAllowed() {
+    this._trustedServicesAllowed = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get trustedServicesAllowedInput() {
+    return this._trustedServicesAllowed;
+  }
+
+  // network_rules - computed: false, optional: true, required: false
+  private _networkRules = new ServicebusNamespaceNetworkRuleSetNetworkRulesList(this, "network_rules", true);
+  public get networkRules() {
+    return this._networkRules;
+  }
+  public putNetworkRules(value: ServicebusNamespaceNetworkRuleSetNetworkRules[] | cdktf.IResolvable) {
+    this._networkRules.internalValue = value;
+  }
+  public resetNetworkRules() {
+    this._networkRules.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkRulesInput() {
+    return this._networkRules.internalValue;
+  }
+}
 export interface ServicebusNamespaceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace#create ServicebusNamespace#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#create ServicebusNamespace#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace#delete ServicebusNamespace#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#delete ServicebusNamespace#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace#read ServicebusNamespace#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#read ServicebusNamespace#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace#update ServicebusNamespace#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace#update ServicebusNamespace#update}
   */
   readonly update?: string;
 }
@@ -448,7 +750,7 @@ export class ServicebusNamespaceTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace azurerm_servicebus_namespace}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace azurerm_servicebus_namespace}
 */
 export class ServicebusNamespace extends cdktf.TerraformResource {
 
@@ -462,7 +764,7 @@ export class ServicebusNamespace extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace azurerm_servicebus_namespace} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace azurerm_servicebus_namespace} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -473,7 +775,7 @@ export class ServicebusNamespace extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_servicebus_namespace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.70.0',
+        providerVersion: '3.71.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -497,6 +799,7 @@ export class ServicebusNamespace extends cdktf.TerraformResource {
     this._zoneRedundant = config.zoneRedundant;
     this._customerManagedKey.internalValue = config.customerManagedKey;
     this._identity.internalValue = config.identity;
+    this._networkRuleSet.internalValue = config.networkRuleSet;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -725,6 +1028,22 @@ export class ServicebusNamespace extends cdktf.TerraformResource {
     return this._identity.internalValue;
   }
 
+  // network_rule_set - computed: false, optional: true, required: false
+  private _networkRuleSet = new ServicebusNamespaceNetworkRuleSetOutputReference(this, "network_rule_set");
+  public get networkRuleSet() {
+    return this._networkRuleSet;
+  }
+  public putNetworkRuleSet(value: ServicebusNamespaceNetworkRuleSet) {
+    this._networkRuleSet.internalValue = value;
+  }
+  public resetNetworkRuleSet() {
+    this._networkRuleSet.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get networkRuleSetInput() {
+    return this._networkRuleSet.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new ServicebusNamespaceTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -760,6 +1079,7 @@ export class ServicebusNamespace extends cdktf.TerraformResource {
       zone_redundant: cdktf.booleanToTerraform(this._zoneRedundant),
       customer_managed_key: servicebusNamespaceCustomerManagedKeyToTerraform(this._customerManagedKey.internalValue),
       identity: servicebusNamespaceIdentityToTerraform(this._identity.internalValue),
+      network_rule_set: servicebusNamespaceNetworkRuleSetToTerraform(this._networkRuleSet.internalValue),
       timeouts: servicebusNamespaceTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
