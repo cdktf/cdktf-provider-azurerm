@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace_network_rule_set
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace_network_rule_set
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -11,59 +6,59 @@ import * as cdktf from 'cdktf';
 
 // Configuration
 
-export interface ServicebusNamespaceNetworkRuleSetConfig extends cdktf.TerraformMetaArguments {
+export interface ServicebusNamespaceNetworkRuleSetAConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace_network_rule_set#default_action ServicebusNamespaceNetworkRuleSet#default_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace_network_rule_set#default_action ServicebusNamespaceNetworkRuleSetA#default_action}
   */
   readonly defaultAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace_network_rule_set#id ServicebusNamespaceNetworkRuleSet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace_network_rule_set#id ServicebusNamespaceNetworkRuleSetA#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace_network_rule_set#ip_rules ServicebusNamespaceNetworkRuleSet#ip_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace_network_rule_set#ip_rules ServicebusNamespaceNetworkRuleSetA#ip_rules}
   */
   readonly ipRules?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace_network_rule_set#namespace_id ServicebusNamespaceNetworkRuleSet#namespace_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace_network_rule_set#namespace_id ServicebusNamespaceNetworkRuleSetA#namespace_id}
   */
   readonly namespaceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace_network_rule_set#public_network_access_enabled ServicebusNamespaceNetworkRuleSet#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace_network_rule_set#public_network_access_enabled ServicebusNamespaceNetworkRuleSetA#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace_network_rule_set#trusted_services_allowed ServicebusNamespaceNetworkRuleSet#trusted_services_allowed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace_network_rule_set#trusted_services_allowed ServicebusNamespaceNetworkRuleSetA#trusted_services_allowed}
   */
   readonly trustedServicesAllowed?: boolean | cdktf.IResolvable;
   /**
   * network_rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace_network_rule_set#network_rules ServicebusNamespaceNetworkRuleSet#network_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace_network_rule_set#network_rules ServicebusNamespaceNetworkRuleSetA#network_rules}
   */
-  readonly networkRules?: ServicebusNamespaceNetworkRuleSetNetworkRules[] | cdktf.IResolvable;
+  readonly networkRules?: ServicebusNamespaceNetworkRuleSetNetworkRulesA[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace_network_rule_set#timeouts ServicebusNamespaceNetworkRuleSet#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace_network_rule_set#timeouts ServicebusNamespaceNetworkRuleSetA#timeouts}
   */
   readonly timeouts?: ServicebusNamespaceNetworkRuleSetTimeouts;
 }
-export interface ServicebusNamespaceNetworkRuleSetNetworkRules {
+export interface ServicebusNamespaceNetworkRuleSetNetworkRulesA {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace_network_rule_set#ignore_missing_vnet_service_endpoint ServicebusNamespaceNetworkRuleSet#ignore_missing_vnet_service_endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace_network_rule_set#ignore_missing_vnet_service_endpoint ServicebusNamespaceNetworkRuleSetA#ignore_missing_vnet_service_endpoint}
   */
   readonly ignoreMissingVnetServiceEndpoint?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace_network_rule_set#subnet_id ServicebusNamespaceNetworkRuleSet#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace_network_rule_set#subnet_id ServicebusNamespaceNetworkRuleSetA#subnet_id}
   */
   readonly subnetId: string;
 }
 
-export function servicebusNamespaceNetworkRuleSetNetworkRulesToTerraform(struct?: ServicebusNamespaceNetworkRuleSetNetworkRules | cdktf.IResolvable): any {
+export function servicebusNamespaceNetworkRuleSetNetworkRulesAToTerraform(struct?: ServicebusNamespaceNetworkRuleSetNetworkRulesA | cdktf.IResolvable): any {
   if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
   if (cdktf.isComplexElement(struct)) {
     throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
@@ -74,7 +69,7 @@ export function servicebusNamespaceNetworkRuleSetNetworkRulesToTerraform(struct?
   }
 }
 
-export class ServicebusNamespaceNetworkRuleSetNetworkRulesOutputReference extends cdktf.ComplexObject {
+export class ServicebusNamespaceNetworkRuleSetNetworkRulesAOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
 
@@ -88,7 +83,7 @@ export class ServicebusNamespaceNetworkRuleSetNetworkRulesOutputReference extend
     super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
   }
 
-  public get internalValue(): ServicebusNamespaceNetworkRuleSetNetworkRules | cdktf.IResolvable | undefined {
+  public get internalValue(): ServicebusNamespaceNetworkRuleSetNetworkRulesA | cdktf.IResolvable | undefined {
     if (this.resolvableValue) {
       return this.resolvableValue;
     }
@@ -105,7 +100,7 @@ export class ServicebusNamespaceNetworkRuleSetNetworkRulesOutputReference extend
     return hasAnyValues ? internalValueResult : undefined;
   }
 
-  public set internalValue(value: ServicebusNamespaceNetworkRuleSetNetworkRules | cdktf.IResolvable | undefined) {
+  public set internalValue(value: ServicebusNamespaceNetworkRuleSetNetworkRulesA | cdktf.IResolvable | undefined) {
     if (value === undefined) {
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
@@ -154,8 +149,8 @@ export class ServicebusNamespaceNetworkRuleSetNetworkRulesOutputReference extend
   }
 }
 
-export class ServicebusNamespaceNetworkRuleSetNetworkRulesList extends cdktf.ComplexList {
-  public internalValue? : ServicebusNamespaceNetworkRuleSetNetworkRules[] | cdktf.IResolvable
+export class ServicebusNamespaceNetworkRuleSetNetworkRulesAList extends cdktf.ComplexList {
+  public internalValue? : ServicebusNamespaceNetworkRuleSetNetworkRulesA[] | cdktf.IResolvable
 
   /**
   * @param terraformResource The parent resource
@@ -169,25 +164,25 @@ export class ServicebusNamespaceNetworkRuleSetNetworkRulesList extends cdktf.Com
   /**
   * @param index the index of the item to return
   */
-  public get(index: number): ServicebusNamespaceNetworkRuleSetNetworkRulesOutputReference {
-    return new ServicebusNamespaceNetworkRuleSetNetworkRulesOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  public get(index: number): ServicebusNamespaceNetworkRuleSetNetworkRulesAOutputReference {
+    return new ServicebusNamespaceNetworkRuleSetNetworkRulesAOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
 export interface ServicebusNamespaceNetworkRuleSetTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace_network_rule_set#create ServicebusNamespaceNetworkRuleSet#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace_network_rule_set#create ServicebusNamespaceNetworkRuleSetA#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace_network_rule_set#delete ServicebusNamespaceNetworkRuleSet#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace_network_rule_set#delete ServicebusNamespaceNetworkRuleSetA#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace_network_rule_set#read ServicebusNamespaceNetworkRuleSet#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace_network_rule_set#read ServicebusNamespaceNetworkRuleSetA#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace_network_rule_set#update ServicebusNamespaceNetworkRuleSet#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace_network_rule_set#update ServicebusNamespaceNetworkRuleSetA#update}
   */
   readonly update?: string;
 }
@@ -331,9 +326,9 @@ export class ServicebusNamespaceNetworkRuleSetTimeoutsOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace_network_rule_set azurerm_servicebus_namespace_network_rule_set}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace_network_rule_set azurerm_servicebus_namespace_network_rule_set}
 */
-export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
+export class ServicebusNamespaceNetworkRuleSetA extends cdktf.TerraformResource {
 
   // =================
   // STATIC PROPERTIES
@@ -345,18 +340,18 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/servicebus_namespace_network_rule_set azurerm_servicebus_namespace_network_rule_set} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/servicebus_namespace_network_rule_set azurerm_servicebus_namespace_network_rule_set} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
-  * @param options ServicebusNamespaceNetworkRuleSetConfig
+  * @param options ServicebusNamespaceNetworkRuleSetAConfig
   */
-  public constructor(scope: Construct, id: string, config: ServicebusNamespaceNetworkRuleSetConfig) {
+  public constructor(scope: Construct, id: string, config: ServicebusNamespaceNetworkRuleSetAConfig) {
     super(scope, id, {
       terraformResourceType: 'azurerm_servicebus_namespace_network_rule_set',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.70.0',
+        providerVersion: '3.71.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -475,11 +470,11 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
   }
 
   // network_rules - computed: false, optional: true, required: false
-  private _networkRules = new ServicebusNamespaceNetworkRuleSetNetworkRulesList(this, "network_rules", true);
+  private _networkRules = new ServicebusNamespaceNetworkRuleSetNetworkRulesAList(this, "network_rules", true);
   public get networkRules() {
     return this._networkRules;
   }
-  public putNetworkRules(value: ServicebusNamespaceNetworkRuleSetNetworkRules[] | cdktf.IResolvable) {
+  public putNetworkRules(value: ServicebusNamespaceNetworkRuleSetNetworkRulesA[] | cdktf.IResolvable) {
     this._networkRules.internalValue = value;
   }
   public resetNetworkRules() {
@@ -518,7 +513,7 @@ export class ServicebusNamespaceNetworkRuleSet extends cdktf.TerraformResource {
       namespace_id: cdktf.stringToTerraform(this._namespaceId),
       public_network_access_enabled: cdktf.booleanToTerraform(this._publicNetworkAccessEnabled),
       trusted_services_allowed: cdktf.booleanToTerraform(this._trustedServicesAllowed),
-      network_rules: cdktf.listMapper(servicebusNamespaceNetworkRuleSetNetworkRulesToTerraform, true)(this._networkRules.internalValue),
+      network_rules: cdktf.listMapper(servicebusNamespaceNetworkRuleSetNetworkRulesAToTerraform, true)(this._networkRules.internalValue),
       timeouts: servicebusNamespaceNetworkRuleSetTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

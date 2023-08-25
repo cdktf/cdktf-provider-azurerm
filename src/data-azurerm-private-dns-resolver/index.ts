@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/private_dns_resolver
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/private_dns_resolver
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,30 +8,30 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermPrivateDnsResolverConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/private_dns_resolver#id DataAzurermPrivateDnsResolver#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/private_dns_resolver#id DataAzurermPrivateDnsResolver#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/private_dns_resolver#name DataAzurermPrivateDnsResolver#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/private_dns_resolver#name DataAzurermPrivateDnsResolver#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/private_dns_resolver#resource_group_name DataAzurermPrivateDnsResolver#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/private_dns_resolver#resource_group_name DataAzurermPrivateDnsResolver#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/private_dns_resolver#timeouts DataAzurermPrivateDnsResolver#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/private_dns_resolver#timeouts DataAzurermPrivateDnsResolver#timeouts}
   */
   readonly timeouts?: DataAzurermPrivateDnsResolverTimeouts;
 }
 export interface DataAzurermPrivateDnsResolverTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/private_dns_resolver#read DataAzurermPrivateDnsResolver#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/private_dns_resolver#read DataAzurermPrivateDnsResolver#read}
   */
   readonly read?: string;
 }
@@ -111,7 +106,7 @@ export class DataAzurermPrivateDnsResolverTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/private_dns_resolver azurerm_private_dns_resolver}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/private_dns_resolver azurerm_private_dns_resolver}
 */
 export class DataAzurermPrivateDnsResolver extends cdktf.TerraformDataSource {
 
@@ -125,7 +120,7 @@ export class DataAzurermPrivateDnsResolver extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/data-sources/private_dns_resolver azurerm_private_dns_resolver} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/private_dns_resolver azurerm_private_dns_resolver} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -136,7 +131,7 @@ export class DataAzurermPrivateDnsResolver extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_private_dns_resolver',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.70.0',
+        providerVersion: '3.71.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/orbital_spacecraft
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/orbital_spacecraft
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,72 +8,72 @@ import * as cdktf from 'cdktf';
 
 export interface OrbitalSpacecraftConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/orbital_spacecraft#id OrbitalSpacecraft#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/orbital_spacecraft#id OrbitalSpacecraft#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/orbital_spacecraft#location OrbitalSpacecraft#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/orbital_spacecraft#location OrbitalSpacecraft#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/orbital_spacecraft#name OrbitalSpacecraft#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/orbital_spacecraft#name OrbitalSpacecraft#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/orbital_spacecraft#norad_id OrbitalSpacecraft#norad_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/orbital_spacecraft#norad_id OrbitalSpacecraft#norad_id}
   */
   readonly noradId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/orbital_spacecraft#resource_group_name OrbitalSpacecraft#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/orbital_spacecraft#resource_group_name OrbitalSpacecraft#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/orbital_spacecraft#tags OrbitalSpacecraft#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/orbital_spacecraft#tags OrbitalSpacecraft#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/orbital_spacecraft#title_line OrbitalSpacecraft#title_line}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/orbital_spacecraft#title_line OrbitalSpacecraft#title_line}
   */
   readonly titleLine: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/orbital_spacecraft#two_line_elements OrbitalSpacecraft#two_line_elements}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/orbital_spacecraft#two_line_elements OrbitalSpacecraft#two_line_elements}
   */
   readonly twoLineElements: string[];
   /**
   * links block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/orbital_spacecraft#links OrbitalSpacecraft#links}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/orbital_spacecraft#links OrbitalSpacecraft#links}
   */
   readonly links: OrbitalSpacecraftLinks[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/orbital_spacecraft#timeouts OrbitalSpacecraft#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/orbital_spacecraft#timeouts OrbitalSpacecraft#timeouts}
   */
   readonly timeouts?: OrbitalSpacecraftTimeouts;
 }
 export interface OrbitalSpacecraftLinks {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/orbital_spacecraft#bandwidth_mhz OrbitalSpacecraft#bandwidth_mhz}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/orbital_spacecraft#bandwidth_mhz OrbitalSpacecraft#bandwidth_mhz}
   */
   readonly bandwidthMhz: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/orbital_spacecraft#center_frequency_mhz OrbitalSpacecraft#center_frequency_mhz}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/orbital_spacecraft#center_frequency_mhz OrbitalSpacecraft#center_frequency_mhz}
   */
   readonly centerFrequencyMhz: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/orbital_spacecraft#direction OrbitalSpacecraft#direction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/orbital_spacecraft#direction OrbitalSpacecraft#direction}
   */
   readonly direction: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/orbital_spacecraft#name OrbitalSpacecraft#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/orbital_spacecraft#name OrbitalSpacecraft#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/orbital_spacecraft#polarization OrbitalSpacecraft#polarization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/orbital_spacecraft#polarization OrbitalSpacecraft#polarization}
   */
   readonly polarization: string;
 }
@@ -252,19 +247,19 @@ export class OrbitalSpacecraftLinksList extends cdktf.ComplexList {
 }
 export interface OrbitalSpacecraftTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/orbital_spacecraft#create OrbitalSpacecraft#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/orbital_spacecraft#create OrbitalSpacecraft#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/orbital_spacecraft#delete OrbitalSpacecraft#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/orbital_spacecraft#delete OrbitalSpacecraft#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/orbital_spacecraft#read OrbitalSpacecraft#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/orbital_spacecraft#read OrbitalSpacecraft#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/orbital_spacecraft#update OrbitalSpacecraft#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/orbital_spacecraft#update OrbitalSpacecraft#update}
   */
   readonly update?: string;
 }
@@ -408,7 +403,7 @@ export class OrbitalSpacecraftTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/orbital_spacecraft azurerm_orbital_spacecraft}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/orbital_spacecraft azurerm_orbital_spacecraft}
 */
 export class OrbitalSpacecraft extends cdktf.TerraformResource {
 
@@ -422,7 +417,7 @@ export class OrbitalSpacecraft extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.70.0/docs/resources/orbital_spacecraft azurerm_orbital_spacecraft} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/orbital_spacecraft azurerm_orbital_spacecraft} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -433,7 +428,7 @@ export class OrbitalSpacecraft extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_orbital_spacecraft',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.70.0',
+        providerVersion: '3.71.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -615,6 +615,7 @@ The following submodules are available:
 - [databricksVirtualNetworkPeering](./databricksVirtualNetworkPeering.csharp.md)
 - [databricksWorkspace](./databricksWorkspace.csharp.md)
 - [databricksWorkspaceCustomerManagedKey](./databricksWorkspaceCustomerManagedKey.csharp.md)
+- [databricksWorkspaceRootDbfsCustomerManagedKey](./databricksWorkspaceRootDbfsCustomerManagedKey.csharp.md)
 - [datadogMonitor](./datadogMonitor.csharp.md)
 - [datadogMonitorSsoConfiguration](./datadogMonitorSsoConfiguration.csharp.md)
 - [datadogMonitorTagRule](./datadogMonitorTagRule.csharp.md)
