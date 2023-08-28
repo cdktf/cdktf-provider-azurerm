@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerRegistryToken.DataAzurermContainerRegistryToken.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerregistrytoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermcontainerregistrytoken"
 
 dataazurermcontainerregistrytoken.NewDataAzurermContainerRegistryToken(scope Construct, id *string, config DataAzurermContainerRegistryTokenConfig) DataAzurermContainerRegistryToken
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermContainerRegistryToken.DataAzurermContainerRegistryToken.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerregistrytoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermcontainerregistrytoken"
 
 dataazurermcontainerregistrytoken.DataAzurermContainerRegistryToken_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermContainerRegistryToken.DataAzurermContainerRegistryToken.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerregistrytoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermcontainerregistrytoken"
 
 dataazurermcontainerregistrytoken.DataAzurermContainerRegistryToken_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ dataazurermcontainerregistrytoken.DataAzurermContainerRegistryToken_IsTerraformE
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermContainerRegistryToken.DataAzurermContainerRegistryToken.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerregistrytoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermcontainerregistrytoken"
 
 dataazurermcontainerregistrytoken.DataAzurermContainerRegistryToken_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -652,7 +652,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerRegistryToken.DataAzurermContainerRegistryTokenConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerregistrytoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermcontainerregistrytoken"
 
 &dataazurermcontainerregistrytoken.DataAzurermContainerRegistryTokenConfig {
 	Connection: interface{},
@@ -666,7 +666,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerr
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermContainerRegistryToken.DataAzurermContainerRegistryTokenTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.dataAzurermContainerRegistryToken.DataAzurermContainerRegistryTokenTimeouts,
 }
 ```
 
@@ -829,7 +829,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerRegistryToken.DataAzurermContainerRegistryTokenTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerregistrytoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermcontainerregistrytoken"
 
 &dataazurermcontainerregistrytoken.DataAzurermContainerRegistryTokenTimeouts {
 	Read: *string,
@@ -863,7 +863,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerRegistryToken.DataAzurermContainerRegistryTokenTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerregistrytoken"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermcontainerregistrytoken"
 
 dataazurermcontainerregistrytoken.NewDataAzurermContainerRegistryTokenTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermContainerRegistryTokenTimeoutsOutputReference
 ```
