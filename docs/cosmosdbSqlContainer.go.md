@@ -1,6 +1,6 @@
 # `azurerm_cosmosdb_sql_container`
 
-Refer to the Terraform Registory for docs: [`azurerm_cosmosdb_sql_container`](https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container).
+Refer to the Terraform Registory for docs: [`azurerm_cosmosdb_sql_container`](https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container).
 
 # `cosmosdbSqlContainer` Submodule <a name="`cosmosdbSqlContainer` Submodule" id="@cdktf/provider-azurerm.cosmosdbSqlContainer"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_cosmosdb_sql_container`](ht
 
 ### CosmosdbSqlContainer <a name="CosmosdbSqlContainer" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainer"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container azurerm_cosmosdb_sql_container}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container azurerm_cosmosdb_sql_container}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 cosmosdbsqlcontainer.NewCosmosdbSqlContainer(scope Construct, id *string, config CosmosdbSqlContainerConfig) CosmosdbSqlContainer
 ```
@@ -405,7 +405,7 @@ func ResetUniqueKey()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainer.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 cosmosdbsqlcontainer.CosmosdbSqlContainer_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainer.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 cosmosdbsqlcontainer.CosmosdbSqlContainer_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ cosmosdbsqlcontainer.CosmosdbSqlContainer_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainer.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 cosmosdbsqlcontainer.CosmosdbSqlContainer_IsTerraformResource(x interface{}) *bool
 ```
@@ -980,7 +980,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerAutoscaleSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 &cosmosdbsqlcontainer.CosmosdbSqlContainerAutoscaleSettings {
 	MaxThroughput: *f64,
@@ -991,7 +991,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontai
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerAutoscaleSettings.property.maxThroughput">MaxThroughput</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#max_throughput CosmosdbSqlContainer#max_throughput}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerAutoscaleSettings.property.maxThroughput">MaxThroughput</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#max_throughput CosmosdbSqlContainer#max_throughput}. |
 
 ---
 
@@ -1003,7 +1003,7 @@ MaxThroughput *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#max_throughput CosmosdbSqlContainer#max_throughput}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#max_throughput CosmosdbSqlContainer#max_throughput}.
 
 ---
 
@@ -1012,7 +1012,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 &cosmosdbsqlcontainer.CosmosdbSqlContainerConfig {
 	Connection: interface{},
@@ -1028,14 +1028,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontai
 	PartitionKeyPath: *string,
 	ResourceGroupName: *string,
 	AnalyticalStorageTtl: *f64,
-	AutoscaleSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.cosmosdbSqlContainer.CosmosdbSqlContainerAutoscaleSettings,
-	ConflictResolutionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.cosmosdbSqlContainer.CosmosdbSqlContainerConflictResolutionPolicy,
+	AutoscaleSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerAutoscaleSettings,
+	ConflictResolutionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConflictResolutionPolicy,
 	DefaultTtl: *f64,
 	Id: *string,
-	IndexingPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicy,
+	IndexingPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicy,
 	PartitionKeyVersion: *f64,
 	Throughput: *f64,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.cosmosdbSqlContainer.CosmosdbSqlContainerTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerTimeouts,
 	UniqueKey: interface{},
 }
 ```
@@ -1051,19 +1051,19 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontai
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.accountName">AccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#account_name CosmosdbSqlContainer#account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.databaseName">DatabaseName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#database_name CosmosdbSqlContainer#database_name}. |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#name CosmosdbSqlContainer#name}. |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.partitionKeyPath">PartitionKeyPath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#partition_key_path CosmosdbSqlContainer#partition_key_path}. |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#resource_group_name CosmosdbSqlContainer#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.analyticalStorageTtl">AnalyticalStorageTtl</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#analytical_storage_ttl CosmosdbSqlContainer#analytical_storage_ttl}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.accountName">AccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#account_name CosmosdbSqlContainer#account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.databaseName">DatabaseName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#database_name CosmosdbSqlContainer#database_name}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#name CosmosdbSqlContainer#name}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.partitionKeyPath">PartitionKeyPath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#partition_key_path CosmosdbSqlContainer#partition_key_path}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#resource_group_name CosmosdbSqlContainer#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.analyticalStorageTtl">AnalyticalStorageTtl</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#analytical_storage_ttl CosmosdbSqlContainer#analytical_storage_ttl}. |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.autoscaleSettings">AutoscaleSettings</a></code> | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerAutoscaleSettings">CosmosdbSqlContainerAutoscaleSettings</a></code> | autoscale_settings block. |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.conflictResolutionPolicy">ConflictResolutionPolicy</a></code> | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConflictResolutionPolicy">CosmosdbSqlContainerConflictResolutionPolicy</a></code> | conflict_resolution_policy block. |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.defaultTtl">DefaultTtl</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#default_ttl CosmosdbSqlContainer#default_ttl}. |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#id CosmosdbSqlContainer#id}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.defaultTtl">DefaultTtl</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#default_ttl CosmosdbSqlContainer#default_ttl}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#id CosmosdbSqlContainer#id}. |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.indexingPolicy">IndexingPolicy</a></code> | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicy">CosmosdbSqlContainerIndexingPolicy</a></code> | indexing_policy block. |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.partitionKeyVersion">PartitionKeyVersion</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#partition_key_version CosmosdbSqlContainer#partition_key_version}. |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.throughput">Throughput</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#throughput CosmosdbSqlContainer#throughput}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.partitionKeyVersion">PartitionKeyVersion</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#partition_key_version CosmosdbSqlContainer#partition_key_version}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.throughput">Throughput</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#throughput CosmosdbSqlContainer#throughput}. |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerTimeouts">CosmosdbSqlContainerTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConfig.property.uniqueKey">UniqueKey</a></code> | <code>interface{}</code> | unique_key block. |
 
@@ -1147,7 +1147,7 @@ AccountName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#account_name CosmosdbSqlContainer#account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#account_name CosmosdbSqlContainer#account_name}.
 
 ---
 
@@ -1159,7 +1159,7 @@ DatabaseName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#database_name CosmosdbSqlContainer#database_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#database_name CosmosdbSqlContainer#database_name}.
 
 ---
 
@@ -1171,7 +1171,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#name CosmosdbSqlContainer#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#name CosmosdbSqlContainer#name}.
 
 ---
 
@@ -1183,7 +1183,7 @@ PartitionKeyPath *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#partition_key_path CosmosdbSqlContainer#partition_key_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#partition_key_path CosmosdbSqlContainer#partition_key_path}.
 
 ---
 
@@ -1195,7 +1195,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#resource_group_name CosmosdbSqlContainer#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#resource_group_name CosmosdbSqlContainer#resource_group_name}.
 
 ---
 
@@ -1207,7 +1207,7 @@ AnalyticalStorageTtl *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#analytical_storage_ttl CosmosdbSqlContainer#analytical_storage_ttl}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#analytical_storage_ttl CosmosdbSqlContainer#analytical_storage_ttl}.
 
 ---
 
@@ -1221,7 +1221,7 @@ AutoscaleSettings CosmosdbSqlContainerAutoscaleSettings
 
 autoscale_settings block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#autoscale_settings CosmosdbSqlContainer#autoscale_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#autoscale_settings CosmosdbSqlContainer#autoscale_settings}
 
 ---
 
@@ -1235,7 +1235,7 @@ ConflictResolutionPolicy CosmosdbSqlContainerConflictResolutionPolicy
 
 conflict_resolution_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#conflict_resolution_policy CosmosdbSqlContainer#conflict_resolution_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#conflict_resolution_policy CosmosdbSqlContainer#conflict_resolution_policy}
 
 ---
 
@@ -1247,7 +1247,7 @@ DefaultTtl *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#default_ttl CosmosdbSqlContainer#default_ttl}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#default_ttl CosmosdbSqlContainer#default_ttl}.
 
 ---
 
@@ -1259,7 +1259,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#id CosmosdbSqlContainer#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#id CosmosdbSqlContainer#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1276,7 +1276,7 @@ IndexingPolicy CosmosdbSqlContainerIndexingPolicy
 
 indexing_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#indexing_policy CosmosdbSqlContainer#indexing_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#indexing_policy CosmosdbSqlContainer#indexing_policy}
 
 ---
 
@@ -1288,7 +1288,7 @@ PartitionKeyVersion *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#partition_key_version CosmosdbSqlContainer#partition_key_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#partition_key_version CosmosdbSqlContainer#partition_key_version}.
 
 ---
 
@@ -1300,7 +1300,7 @@ Throughput *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#throughput CosmosdbSqlContainer#throughput}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#throughput CosmosdbSqlContainer#throughput}.
 
 ---
 
@@ -1314,7 +1314,7 @@ Timeouts CosmosdbSqlContainerTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#timeouts CosmosdbSqlContainer#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#timeouts CosmosdbSqlContainer#timeouts}
 
 ---
 
@@ -1328,7 +1328,7 @@ UniqueKey interface{}
 
 unique_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#unique_key CosmosdbSqlContainer#unique_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#unique_key CosmosdbSqlContainer#unique_key}
 
 ---
 
@@ -1337,7 +1337,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConflictResolutionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 &cosmosdbsqlcontainer.CosmosdbSqlContainerConflictResolutionPolicy {
 	Mode: *string,
@@ -1350,9 +1350,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontai
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConflictResolutionPolicy.property.mode">Mode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#mode CosmosdbSqlContainer#mode}. |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConflictResolutionPolicy.property.conflictResolutionPath">ConflictResolutionPath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#conflict_resolution_path CosmosdbSqlContainer#conflict_resolution_path}. |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConflictResolutionPolicy.property.conflictResolutionProcedure">ConflictResolutionProcedure</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#conflict_resolution_procedure CosmosdbSqlContainer#conflict_resolution_procedure}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConflictResolutionPolicy.property.mode">Mode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#mode CosmosdbSqlContainer#mode}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConflictResolutionPolicy.property.conflictResolutionPath">ConflictResolutionPath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#conflict_resolution_path CosmosdbSqlContainer#conflict_resolution_path}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConflictResolutionPolicy.property.conflictResolutionProcedure">ConflictResolutionProcedure</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#conflict_resolution_procedure CosmosdbSqlContainer#conflict_resolution_procedure}. |
 
 ---
 
@@ -1364,7 +1364,7 @@ Mode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#mode CosmosdbSqlContainer#mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#mode CosmosdbSqlContainer#mode}.
 
 ---
 
@@ -1376,7 +1376,7 @@ ConflictResolutionPath *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#conflict_resolution_path CosmosdbSqlContainer#conflict_resolution_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#conflict_resolution_path CosmosdbSqlContainer#conflict_resolution_path}.
 
 ---
 
@@ -1388,7 +1388,7 @@ ConflictResolutionProcedure *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#conflict_resolution_procedure CosmosdbSqlContainer#conflict_resolution_procedure}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#conflict_resolution_procedure CosmosdbSqlContainer#conflict_resolution_procedure}.
 
 ---
 
@@ -1397,7 +1397,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 &cosmosdbsqlcontainer.CosmosdbSqlContainerIndexingPolicy {
 	CompositeIndex: interface{},
@@ -1415,7 +1415,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontai
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicy.property.compositeIndex">CompositeIndex</a></code> | <code>interface{}</code> | composite_index block. |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicy.property.excludedPath">ExcludedPath</a></code> | <code>interface{}</code> | excluded_path block. |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicy.property.includedPath">IncludedPath</a></code> | <code>interface{}</code> | included_path block. |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicy.property.indexingMode">IndexingMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#indexing_mode CosmosdbSqlContainer#indexing_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicy.property.indexingMode">IndexingMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#indexing_mode CosmosdbSqlContainer#indexing_mode}. |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicy.property.spatialIndex">SpatialIndex</a></code> | <code>interface{}</code> | spatial_index block. |
 
 ---
@@ -1430,7 +1430,7 @@ CompositeIndex interface{}
 
 composite_index block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#composite_index CosmosdbSqlContainer#composite_index}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#composite_index CosmosdbSqlContainer#composite_index}
 
 ---
 
@@ -1444,7 +1444,7 @@ ExcludedPath interface{}
 
 excluded_path block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#excluded_path CosmosdbSqlContainer#excluded_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#excluded_path CosmosdbSqlContainer#excluded_path}
 
 ---
 
@@ -1458,7 +1458,7 @@ IncludedPath interface{}
 
 included_path block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#included_path CosmosdbSqlContainer#included_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#included_path CosmosdbSqlContainer#included_path}
 
 ---
 
@@ -1470,7 +1470,7 @@ IndexingMode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#indexing_mode CosmosdbSqlContainer#indexing_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#indexing_mode CosmosdbSqlContainer#indexing_mode}.
 
 ---
 
@@ -1484,7 +1484,7 @@ SpatialIndex interface{}
 
 spatial_index block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#spatial_index CosmosdbSqlContainer#spatial_index}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#spatial_index CosmosdbSqlContainer#spatial_index}
 
 ---
 
@@ -1493,7 +1493,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicyCompositeIndex.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 &cosmosdbsqlcontainer.CosmosdbSqlContainerIndexingPolicyCompositeIndex {
 	Index: interface{},
@@ -1518,7 +1518,7 @@ Index interface{}
 
 index block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#index CosmosdbSqlContainer#index}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#index CosmosdbSqlContainer#index}
 
 ---
 
@@ -1527,7 +1527,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 &cosmosdbsqlcontainer.CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex {
 	Order: *string,
@@ -1539,8 +1539,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontai
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex.property.order">Order</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#order CosmosdbSqlContainer#order}. |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex.property.path">Path</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#path CosmosdbSqlContainer#path}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex.property.order">Order</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#order CosmosdbSqlContainer#order}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicyCompositeIndexIndex.property.path">Path</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#path CosmosdbSqlContainer#path}. |
 
 ---
 
@@ -1552,7 +1552,7 @@ Order *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#order CosmosdbSqlContainer#order}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#order CosmosdbSqlContainer#order}.
 
 ---
 
@@ -1564,7 +1564,7 @@ Path *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#path CosmosdbSqlContainer#path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#path CosmosdbSqlContainer#path}.
 
 ---
 
@@ -1573,7 +1573,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicyExcludedPath.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 &cosmosdbsqlcontainer.CosmosdbSqlContainerIndexingPolicyExcludedPath {
 	Path: *string,
@@ -1584,7 +1584,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontai
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicyExcludedPath.property.path">Path</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#path CosmosdbSqlContainer#path}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicyExcludedPath.property.path">Path</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#path CosmosdbSqlContainer#path}. |
 
 ---
 
@@ -1596,7 +1596,7 @@ Path *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#path CosmosdbSqlContainer#path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#path CosmosdbSqlContainer#path}.
 
 ---
 
@@ -1605,7 +1605,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicyIncludedPath.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 &cosmosdbsqlcontainer.CosmosdbSqlContainerIndexingPolicyIncludedPath {
 	Path: *string,
@@ -1616,7 +1616,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontai
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicyIncludedPath.property.path">Path</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#path CosmosdbSqlContainer#path}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicyIncludedPath.property.path">Path</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#path CosmosdbSqlContainer#path}. |
 
 ---
 
@@ -1628,7 +1628,7 @@ Path *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#path CosmosdbSqlContainer#path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#path CosmosdbSqlContainer#path}.
 
 ---
 
@@ -1637,7 +1637,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicySpatialIndex.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 &cosmosdbsqlcontainer.CosmosdbSqlContainerIndexingPolicySpatialIndex {
 	Path: *string,
@@ -1648,7 +1648,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontai
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicySpatialIndex.property.path">Path</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#path CosmosdbSqlContainer#path}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicySpatialIndex.property.path">Path</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#path CosmosdbSqlContainer#path}. |
 
 ---
 
@@ -1660,7 +1660,7 @@ Path *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#path CosmosdbSqlContainer#path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#path CosmosdbSqlContainer#path}.
 
 ---
 
@@ -1669,7 +1669,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 &cosmosdbsqlcontainer.CosmosdbSqlContainerTimeouts {
 	Create: *string,
@@ -1683,10 +1683,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontai
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#create CosmosdbSqlContainer#create}. |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#delete CosmosdbSqlContainer#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#read CosmosdbSqlContainer#read}. |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#update CosmosdbSqlContainer#update}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#create CosmosdbSqlContainer#create}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#delete CosmosdbSqlContainer#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#read CosmosdbSqlContainer#read}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#update CosmosdbSqlContainer#update}. |
 
 ---
 
@@ -1698,7 +1698,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#create CosmosdbSqlContainer#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#create CosmosdbSqlContainer#create}.
 
 ---
 
@@ -1710,7 +1710,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#delete CosmosdbSqlContainer#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#delete CosmosdbSqlContainer#delete}.
 
 ---
 
@@ -1722,7 +1722,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#read CosmosdbSqlContainer#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#read CosmosdbSqlContainer#read}.
 
 ---
 
@@ -1734,7 +1734,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#update CosmosdbSqlContainer#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#update CosmosdbSqlContainer#update}.
 
 ---
 
@@ -1743,7 +1743,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerUniqueKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 &cosmosdbsqlcontainer.CosmosdbSqlContainerUniqueKey {
 	Paths: *[]*string,
@@ -1754,7 +1754,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontai
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerUniqueKey.property.paths">Paths</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#paths CosmosdbSqlContainer#paths}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerUniqueKey.property.paths">Paths</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#paths CosmosdbSqlContainer#paths}. |
 
 ---
 
@@ -1766,7 +1766,7 @@ Paths *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/cosmosdb_sql_container#paths CosmosdbSqlContainer#paths}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/cosmosdb_sql_container#paths CosmosdbSqlContainer#paths}.
 
 ---
 
@@ -1777,7 +1777,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerAutoscaleSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 cosmosdbsqlcontainer.NewCosmosdbSqlContainerAutoscaleSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbSqlContainerAutoscaleSettingsOutputReference
 ```
@@ -2055,7 +2055,7 @@ func InternalValue() CosmosdbSqlContainerAutoscaleSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerConflictResolutionPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 cosmosdbsqlcontainer.NewCosmosdbSqlContainerConflictResolutionPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbSqlContainerConflictResolutionPolicyOutputReference
 ```
@@ -2384,7 +2384,7 @@ func InternalValue() CosmosdbSqlContainerConflictResolutionPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicyCompositeIndexIndexList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 cosmosdbsqlcontainer.NewCosmosdbSqlContainerIndexingPolicyCompositeIndexIndexList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CosmosdbSqlContainerIndexingPolicyCompositeIndexIndexList
 ```
@@ -2527,7 +2527,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicyCompositeIndexIndexOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 cosmosdbsqlcontainer.NewCosmosdbSqlContainerIndexingPolicyCompositeIndexIndexOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CosmosdbSqlContainerIndexingPolicyCompositeIndexIndexOutputReference
 ```
@@ -2838,7 +2838,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicyCompositeIndexList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 cosmosdbsqlcontainer.NewCosmosdbSqlContainerIndexingPolicyCompositeIndexList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CosmosdbSqlContainerIndexingPolicyCompositeIndexList
 ```
@@ -2981,7 +2981,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicyCompositeIndexOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 cosmosdbsqlcontainer.NewCosmosdbSqlContainerIndexingPolicyCompositeIndexOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CosmosdbSqlContainerIndexingPolicyCompositeIndexOutputReference
 ```
@@ -3283,7 +3283,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicyExcludedPathList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 cosmosdbsqlcontainer.NewCosmosdbSqlContainerIndexingPolicyExcludedPathList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CosmosdbSqlContainerIndexingPolicyExcludedPathList
 ```
@@ -3426,7 +3426,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicyExcludedPathOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 cosmosdbsqlcontainer.NewCosmosdbSqlContainerIndexingPolicyExcludedPathOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CosmosdbSqlContainerIndexingPolicyExcludedPathOutputReference
 ```
@@ -3715,7 +3715,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicyIncludedPathList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 cosmosdbsqlcontainer.NewCosmosdbSqlContainerIndexingPolicyIncludedPathList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CosmosdbSqlContainerIndexingPolicyIncludedPathList
 ```
@@ -3858,7 +3858,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicyIncludedPathOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 cosmosdbsqlcontainer.NewCosmosdbSqlContainerIndexingPolicyIncludedPathOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CosmosdbSqlContainerIndexingPolicyIncludedPathOutputReference
 ```
@@ -4147,7 +4147,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 cosmosdbsqlcontainer.NewCosmosdbSqlContainerIndexingPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbSqlContainerIndexingPolicyOutputReference
 ```
@@ -4593,7 +4593,7 @@ func InternalValue() CosmosdbSqlContainerIndexingPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicySpatialIndexList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 cosmosdbsqlcontainer.NewCosmosdbSqlContainerIndexingPolicySpatialIndexList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CosmosdbSqlContainerIndexingPolicySpatialIndexList
 ```
@@ -4736,7 +4736,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerIndexingPolicySpatialIndexOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 cosmosdbsqlcontainer.NewCosmosdbSqlContainerIndexingPolicySpatialIndexOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CosmosdbSqlContainerIndexingPolicySpatialIndexOutputReference
 ```
@@ -5036,7 +5036,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 cosmosdbsqlcontainer.NewCosmosdbSqlContainerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbSqlContainerTimeoutsOutputReference
 ```
@@ -5401,7 +5401,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerUniqueKeyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 cosmosdbsqlcontainer.NewCosmosdbSqlContainerUniqueKeyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CosmosdbSqlContainerUniqueKeyList
 ```
@@ -5544,7 +5544,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbSqlContainer.CosmosdbSqlContainerUniqueKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/cosmosdbsqlcontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlcontainer"
 
 cosmosdbsqlcontainer.NewCosmosdbSqlContainerUniqueKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CosmosdbSqlContainerUniqueKeyOutputReference
 ```

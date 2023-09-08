@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/mysql_flexible_server
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/mysql_flexible_server
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermMysqlFlexibleServerConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/mysql_flexible_server#id DataAzurermMysqlFlexibleServer#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/mysql_flexible_server#id DataAzurermMysqlFlexibleServer#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/mysql_flexible_server#name DataAzurermMysqlFlexibleServer#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/mysql_flexible_server#name DataAzurermMysqlFlexibleServer#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/mysql_flexible_server#resource_group_name DataAzurermMysqlFlexibleServer#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/mysql_flexible_server#resource_group_name DataAzurermMysqlFlexibleServer#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/mysql_flexible_server#timeouts DataAzurermMysqlFlexibleServer#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/mysql_flexible_server#timeouts DataAzurermMysqlFlexibleServer#timeouts}
   */
   readonly timeouts?: DataAzurermMysqlFlexibleServerTimeouts;
 }
@@ -253,7 +248,7 @@ export class DataAzurermMysqlFlexibleServerStorageList extends cdktf.ComplexList
 }
 export interface DataAzurermMysqlFlexibleServerTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/mysql_flexible_server#read DataAzurermMysqlFlexibleServer#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/mysql_flexible_server#read DataAzurermMysqlFlexibleServer#read}
   */
   readonly read?: string;
 }
@@ -328,7 +323,7 @@ export class DataAzurermMysqlFlexibleServerTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/mysql_flexible_server azurerm_mysql_flexible_server}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/mysql_flexible_server azurerm_mysql_flexible_server}
 */
 export class DataAzurermMysqlFlexibleServer extends cdktf.TerraformDataSource {
 
@@ -342,7 +337,7 @@ export class DataAzurermMysqlFlexibleServer extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/mysql_flexible_server azurerm_mysql_flexible_server} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/mysql_flexible_server azurerm_mysql_flexible_server} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -353,7 +348,7 @@ export class DataAzurermMysqlFlexibleServer extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_mysql_flexible_server',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.71.0',
+        providerVersion: '3.72.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

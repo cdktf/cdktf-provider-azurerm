@@ -1,6 +1,6 @@
 # `azurerm_arc_machine_extension`
 
-Refer to the Terraform Registory for docs: [`azurerm_arc_machine_extension`](https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension).
+Refer to the Terraform Registory for docs: [`azurerm_arc_machine_extension`](https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension).
 
 # `arcMachineExtension` Submodule <a name="`arcMachineExtension` Submodule" id="@cdktf/provider-azurerm.arcMachineExtension"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_arc_machine_extension`](htt
 
 ### ArcMachineExtension <a name="ArcMachineExtension" id="@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtension"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension azurerm_arc_machine_extension}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension azurerm_arc_machine_extension}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtension.Initializer"></a>
 
@@ -907,19 +907,19 @@ new ArcMachineExtensionConfig {
 | <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.arcMachineId">ArcMachineId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#arc_machine_id ArcMachineExtension#arc_machine_id}. |
-| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#location ArcMachineExtension#location}. |
-| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#name ArcMachineExtension#name}. |
-| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.publisher">Publisher</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#publisher ArcMachineExtension#publisher}. |
-| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.type">Type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#type ArcMachineExtension#type}. |
-| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.automaticUpgradeEnabled">AutomaticUpgradeEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#automatic_upgrade_enabled ArcMachineExtension#automatic_upgrade_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.forceUpdateTag">ForceUpdateTag</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#force_update_tag ArcMachineExtension#force_update_tag}. |
-| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#id ArcMachineExtension#id}. |
-| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.protectedSettings">ProtectedSettings</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#protected_settings ArcMachineExtension#protected_settings}. |
-| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.settings">Settings</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#settings ArcMachineExtension#settings}. |
-| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#tags ArcMachineExtension#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.arcMachineId">ArcMachineId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#arc_machine_id ArcMachineExtension#arc_machine_id}. |
+| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#location ArcMachineExtension#location}. |
+| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#name ArcMachineExtension#name}. |
+| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.publisher">Publisher</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#publisher ArcMachineExtension#publisher}. |
+| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.type">Type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#type ArcMachineExtension#type}. |
+| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.automaticUpgradeEnabled">AutomaticUpgradeEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#automatic_upgrade_enabled ArcMachineExtension#automatic_upgrade_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.forceUpdateTag">ForceUpdateTag</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#force_update_tag ArcMachineExtension#force_update_tag}. |
+| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#id ArcMachineExtension#id}. |
+| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.protectedSettings">ProtectedSettings</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#protected_settings ArcMachineExtension#protected_settings}. |
+| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.settings">Settings</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#settings ArcMachineExtension#settings}. |
+| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#tags ArcMachineExtension#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionTimeouts">ArcMachineExtensionTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.typeHandlerVersion">TypeHandlerVersion</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#type_handler_version ArcMachineExtension#type_handler_version}. |
+| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionConfig.property.typeHandlerVersion">TypeHandlerVersion</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#type_handler_version ArcMachineExtension#type_handler_version}. |
 
 ---
 
@@ -1001,7 +1001,7 @@ public string ArcMachineId { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#arc_machine_id ArcMachineExtension#arc_machine_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#arc_machine_id ArcMachineExtension#arc_machine_id}.
 
 ---
 
@@ -1013,7 +1013,7 @@ public string Location { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#location ArcMachineExtension#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#location ArcMachineExtension#location}.
 
 ---
 
@@ -1025,7 +1025,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#name ArcMachineExtension#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#name ArcMachineExtension#name}.
 
 ---
 
@@ -1037,7 +1037,7 @@ public string Publisher { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#publisher ArcMachineExtension#publisher}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#publisher ArcMachineExtension#publisher}.
 
 ---
 
@@ -1049,7 +1049,7 @@ public string Type { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#type ArcMachineExtension#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#type ArcMachineExtension#type}.
 
 ---
 
@@ -1061,7 +1061,7 @@ public object AutomaticUpgradeEnabled { get; set; }
 
 - *Type:* object
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#automatic_upgrade_enabled ArcMachineExtension#automatic_upgrade_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#automatic_upgrade_enabled ArcMachineExtension#automatic_upgrade_enabled}.
 
 ---
 
@@ -1073,7 +1073,7 @@ public string ForceUpdateTag { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#force_update_tag ArcMachineExtension#force_update_tag}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#force_update_tag ArcMachineExtension#force_update_tag}.
 
 ---
 
@@ -1085,7 +1085,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#id ArcMachineExtension#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#id ArcMachineExtension#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1100,7 +1100,7 @@ public string ProtectedSettings { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#protected_settings ArcMachineExtension#protected_settings}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#protected_settings ArcMachineExtension#protected_settings}.
 
 ---
 
@@ -1112,7 +1112,7 @@ public string Settings { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#settings ArcMachineExtension#settings}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#settings ArcMachineExtension#settings}.
 
 ---
 
@@ -1124,7 +1124,7 @@ public System.Collections.Generic.IDictionary<string, string> Tags { get; set; }
 
 - *Type:* System.Collections.Generic.IDictionary<string, string>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#tags ArcMachineExtension#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#tags ArcMachineExtension#tags}.
 
 ---
 
@@ -1138,7 +1138,7 @@ public ArcMachineExtensionTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#timeouts ArcMachineExtension#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#timeouts ArcMachineExtension#timeouts}
 
 ---
 
@@ -1150,7 +1150,7 @@ public string TypeHandlerVersion { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#type_handler_version ArcMachineExtension#type_handler_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#type_handler_version ArcMachineExtension#type_handler_version}.
 
 ---
 
@@ -1173,10 +1173,10 @@ new ArcMachineExtensionTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#create ArcMachineExtension#create}. |
-| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#delete ArcMachineExtension#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#read ArcMachineExtension#read}. |
-| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#update ArcMachineExtension#update}. |
+| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#create ArcMachineExtension#create}. |
+| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#delete ArcMachineExtension#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#read ArcMachineExtension#read}. |
+| <code><a href="#@cdktf/provider-azurerm.arcMachineExtension.ArcMachineExtensionTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#update ArcMachineExtension#update}. |
 
 ---
 
@@ -1188,7 +1188,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#create ArcMachineExtension#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#create ArcMachineExtension#create}.
 
 ---
 
@@ -1200,7 +1200,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#delete ArcMachineExtension#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#delete ArcMachineExtension#delete}.
 
 ---
 
@@ -1212,7 +1212,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#read ArcMachineExtension#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#read ArcMachineExtension#read}.
 
 ---
 
@@ -1224,7 +1224,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/arc_machine_extension#update ArcMachineExtension#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/arc_machine_extension#update ArcMachineExtension#update}.
 
 ---
 

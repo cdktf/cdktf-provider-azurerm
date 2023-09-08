@@ -1,6 +1,6 @@
 # `azurerm_batch_pool`
 
-Refer to the Terraform Registory for docs: [`azurerm_batch_pool`](https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool).
+Refer to the Terraform Registory for docs: [`azurerm_batch_pool`](https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool).
 
 # `batchPool` Submodule <a name="`batchPool` Submodule" id="@cdktf/provider-azurerm.batchPool"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_batch_pool`](https://regist
 
 ### BatchPool <a name="BatchPool" id="@cdktf/provider-azurerm.batchPool.BatchPool"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool azurerm_batch_pool}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool azurerm_batch_pool}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPool(scope Construct, id *string, config BatchPoolConfig) BatchPool
 ```
@@ -666,7 +666,7 @@ func ResetWindows()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.batchPool.BatchPool.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.BatchPool_IsConstruct(x interface{}) *bool
 ```
@@ -698,7 +698,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.batchPool.BatchPool.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.BatchPool_IsTerraformElement(x interface{}) *bool
 ```
@@ -712,7 +712,7 @@ batchpool.BatchPool_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.batchPool.BatchPool.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.BatchPool_IsTerraformResource(x interface{}) *bool
 ```
@@ -1593,7 +1593,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolAutoScale.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolAutoScale {
 	Formula: *string,
@@ -1605,8 +1605,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolAutoScale.property.formula">Formula</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#formula BatchPool#formula}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolAutoScale.property.evaluationInterval">EvaluationInterval</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#evaluation_interval BatchPool#evaluation_interval}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolAutoScale.property.formula">Formula</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#formula BatchPool#formula}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolAutoScale.property.evaluationInterval">EvaluationInterval</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#evaluation_interval BatchPool#evaluation_interval}. |
 
 ---
 
@@ -1618,7 +1618,7 @@ Formula *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#formula BatchPool#formula}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#formula BatchPool#formula}.
 
 ---
 
@@ -1630,7 +1630,7 @@ EvaluationInterval *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#evaluation_interval BatchPool#evaluation_interval}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#evaluation_interval BatchPool#evaluation_interval}.
 
 ---
 
@@ -1639,7 +1639,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolCertificate {
 	Id: *string,
@@ -1653,10 +1653,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificate.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#id BatchPool#id}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificate.property.storeLocation">StoreLocation</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#store_location BatchPool#store_location}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificate.property.storeName">StoreName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#store_name BatchPool#store_name}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificate.property.visibility">Visibility</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#visibility BatchPool#visibility}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificate.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#id BatchPool#id}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificate.property.storeLocation">StoreLocation</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#store_location BatchPool#store_location}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificate.property.storeName">StoreName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#store_name BatchPool#store_name}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificate.property.visibility">Visibility</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#visibility BatchPool#visibility}. |
 
 ---
 
@@ -1668,7 +1668,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#id BatchPool#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#id BatchPool#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1683,7 +1683,7 @@ StoreLocation *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#store_location BatchPool#store_location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#store_location BatchPool#store_location}.
 
 ---
 
@@ -1695,7 +1695,7 @@ StoreName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#store_name BatchPool#store_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#store_name BatchPool#store_name}.
 
 ---
 
@@ -1707,7 +1707,7 @@ Visibility *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#visibility BatchPool#visibility}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#visibility BatchPool#visibility}.
 
 ---
 
@@ -1716,7 +1716,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolConfig {
 	Connection: interface{},
@@ -1730,31 +1730,31 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 	Name: *string,
 	NodeAgentSkuId: *string,
 	ResourceGroupName: *string,
-	StorageImageReference: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.batchPool.BatchPoolStorageImageReference,
+	StorageImageReference: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.batchPool.BatchPoolStorageImageReference,
 	VmSize: *string,
-	AutoScale: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.batchPool.BatchPoolAutoScale,
+	AutoScale: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.batchPool.BatchPoolAutoScale,
 	Certificate: interface{},
-	ContainerConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.batchPool.BatchPoolContainerConfiguration,
+	ContainerConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.batchPool.BatchPoolContainerConfiguration,
 	DataDisks: interface{},
 	DiskEncryption: interface{},
 	DisplayName: *string,
 	Extensions: interface{},
-	FixedScale: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.batchPool.BatchPoolFixedScale,
+	FixedScale: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.batchPool.BatchPoolFixedScale,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.batchPool.BatchPoolIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.batchPool.BatchPoolIdentity,
 	InterNodeCommunication: *string,
 	LicenseType: *string,
 	MaxTasksPerNode: *f64,
 	Metadata: *map[string]*string,
 	Mount: interface{},
-	NetworkConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.batchPool.BatchPoolNetworkConfiguration,
+	NetworkConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.batchPool.BatchPoolNetworkConfiguration,
 	NodePlacement: interface{},
 	OsDiskPlacement: *string,
-	StartTask: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.batchPool.BatchPoolStartTask,
+	StartTask: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.batchPool.BatchPoolStartTask,
 	StopPendingResizeOperation: interface{},
 	TargetNodeCommunicationMode: *string,
 	TaskSchedulingPolicy: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.batchPool.BatchPoolTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.batchPool.BatchPoolTimeouts,
 	UserAccounts: interface{},
 	Windows: interface{},
 }
@@ -1771,33 +1771,33 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.accountName">AccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#account_name BatchPool#account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#name BatchPool#name}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.nodeAgentSkuId">NodeAgentSkuId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#node_agent_sku_id BatchPool#node_agent_sku_id}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#resource_group_name BatchPool#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.accountName">AccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#account_name BatchPool#account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#name BatchPool#name}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.nodeAgentSkuId">NodeAgentSkuId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#node_agent_sku_id BatchPool#node_agent_sku_id}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#resource_group_name BatchPool#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.storageImageReference">StorageImageReference</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStorageImageReference">BatchPoolStorageImageReference</a></code> | storage_image_reference block. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.vmSize">VmSize</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#vm_size BatchPool#vm_size}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.vmSize">VmSize</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#vm_size BatchPool#vm_size}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.autoScale">AutoScale</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolAutoScale">BatchPoolAutoScale</a></code> | auto_scale block. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.certificate">Certificate</a></code> | <code>interface{}</code> | certificate block. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.containerConfiguration">ContainerConfiguration</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfiguration">BatchPoolContainerConfiguration</a></code> | container_configuration block. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.dataDisks">DataDisks</a></code> | <code>interface{}</code> | data_disks block. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.diskEncryption">DiskEncryption</a></code> | <code>interface{}</code> | disk_encryption block. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#display_name BatchPool#display_name}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.displayName">DisplayName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#display_name BatchPool#display_name}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.extensions">Extensions</a></code> | <code>interface{}</code> | extensions block. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.fixedScale">FixedScale</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolFixedScale">BatchPoolFixedScale</a></code> | fixed_scale block. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#id BatchPool#id}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#id BatchPool#id}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.identity">Identity</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolIdentity">BatchPoolIdentity</a></code> | identity block. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.interNodeCommunication">InterNodeCommunication</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#inter_node_communication BatchPool#inter_node_communication}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.licenseType">LicenseType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#license_type BatchPool#license_type}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.maxTasksPerNode">MaxTasksPerNode</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#max_tasks_per_node BatchPool#max_tasks_per_node}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.metadata">Metadata</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#metadata BatchPool#metadata}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.interNodeCommunication">InterNodeCommunication</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#inter_node_communication BatchPool#inter_node_communication}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.licenseType">LicenseType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#license_type BatchPool#license_type}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.maxTasksPerNode">MaxTasksPerNode</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#max_tasks_per_node BatchPool#max_tasks_per_node}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.metadata">Metadata</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#metadata BatchPool#metadata}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.mount">Mount</a></code> | <code>interface{}</code> | mount block. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.networkConfiguration">NetworkConfiguration</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration">BatchPoolNetworkConfiguration</a></code> | network_configuration block. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.nodePlacement">NodePlacement</a></code> | <code>interface{}</code> | node_placement block. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.osDiskPlacement">OsDiskPlacement</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#os_disk_placement BatchPool#os_disk_placement}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.osDiskPlacement">OsDiskPlacement</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#os_disk_placement BatchPool#os_disk_placement}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.startTask">StartTask</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTask">BatchPoolStartTask</a></code> | start_task block. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.stopPendingResizeOperation">StopPendingResizeOperation</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#stop_pending_resize_operation BatchPool#stop_pending_resize_operation}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.targetNodeCommunicationMode">TargetNodeCommunicationMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#target_node_communication_mode BatchPool#target_node_communication_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.stopPendingResizeOperation">StopPendingResizeOperation</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#stop_pending_resize_operation BatchPool#stop_pending_resize_operation}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.targetNodeCommunicationMode">TargetNodeCommunicationMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#target_node_communication_mode BatchPool#target_node_communication_mode}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.taskSchedulingPolicy">TaskSchedulingPolicy</a></code> | <code>interface{}</code> | task_scheduling_policy block. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTimeouts">BatchPoolTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.userAccounts">UserAccounts</a></code> | <code>interface{}</code> | user_accounts block. |
@@ -1883,7 +1883,7 @@ AccountName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#account_name BatchPool#account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#account_name BatchPool#account_name}.
 
 ---
 
@@ -1895,7 +1895,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#name BatchPool#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#name BatchPool#name}.
 
 ---
 
@@ -1907,7 +1907,7 @@ NodeAgentSkuId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#node_agent_sku_id BatchPool#node_agent_sku_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#node_agent_sku_id BatchPool#node_agent_sku_id}.
 
 ---
 
@@ -1919,7 +1919,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#resource_group_name BatchPool#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#resource_group_name BatchPool#resource_group_name}.
 
 ---
 
@@ -1933,7 +1933,7 @@ StorageImageReference BatchPoolStorageImageReference
 
 storage_image_reference block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#storage_image_reference BatchPool#storage_image_reference}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#storage_image_reference BatchPool#storage_image_reference}
 
 ---
 
@@ -1945,7 +1945,7 @@ VmSize *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#vm_size BatchPool#vm_size}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#vm_size BatchPool#vm_size}.
 
 ---
 
@@ -1959,7 +1959,7 @@ AutoScale BatchPoolAutoScale
 
 auto_scale block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#auto_scale BatchPool#auto_scale}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#auto_scale BatchPool#auto_scale}
 
 ---
 
@@ -1973,7 +1973,7 @@ Certificate interface{}
 
 certificate block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#certificate BatchPool#certificate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#certificate BatchPool#certificate}
 
 ---
 
@@ -1987,7 +1987,7 @@ ContainerConfiguration BatchPoolContainerConfiguration
 
 container_configuration block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#container_configuration BatchPool#container_configuration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#container_configuration BatchPool#container_configuration}
 
 ---
 
@@ -2001,7 +2001,7 @@ DataDisks interface{}
 
 data_disks block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#data_disks BatchPool#data_disks}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#data_disks BatchPool#data_disks}
 
 ---
 
@@ -2015,7 +2015,7 @@ DiskEncryption interface{}
 
 disk_encryption block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#disk_encryption BatchPool#disk_encryption}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#disk_encryption BatchPool#disk_encryption}
 
 ---
 
@@ -2027,7 +2027,7 @@ DisplayName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#display_name BatchPool#display_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#display_name BatchPool#display_name}.
 
 ---
 
@@ -2041,7 +2041,7 @@ Extensions interface{}
 
 extensions block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#extensions BatchPool#extensions}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#extensions BatchPool#extensions}
 
 ---
 
@@ -2055,7 +2055,7 @@ FixedScale BatchPoolFixedScale
 
 fixed_scale block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#fixed_scale BatchPool#fixed_scale}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#fixed_scale BatchPool#fixed_scale}
 
 ---
 
@@ -2067,7 +2067,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#id BatchPool#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#id BatchPool#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -2084,7 +2084,7 @@ Identity BatchPoolIdentity
 
 identity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#identity BatchPool#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#identity BatchPool#identity}
 
 ---
 
@@ -2096,7 +2096,7 @@ InterNodeCommunication *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#inter_node_communication BatchPool#inter_node_communication}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#inter_node_communication BatchPool#inter_node_communication}.
 
 ---
 
@@ -2108,7 +2108,7 @@ LicenseType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#license_type BatchPool#license_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#license_type BatchPool#license_type}.
 
 ---
 
@@ -2120,7 +2120,7 @@ MaxTasksPerNode *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#max_tasks_per_node BatchPool#max_tasks_per_node}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#max_tasks_per_node BatchPool#max_tasks_per_node}.
 
 ---
 
@@ -2132,7 +2132,7 @@ Metadata *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#metadata BatchPool#metadata}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#metadata BatchPool#metadata}.
 
 ---
 
@@ -2146,7 +2146,7 @@ Mount interface{}
 
 mount block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#mount BatchPool#mount}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#mount BatchPool#mount}
 
 ---
 
@@ -2160,7 +2160,7 @@ NetworkConfiguration BatchPoolNetworkConfiguration
 
 network_configuration block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#network_configuration BatchPool#network_configuration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#network_configuration BatchPool#network_configuration}
 
 ---
 
@@ -2174,7 +2174,7 @@ NodePlacement interface{}
 
 node_placement block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#node_placement BatchPool#node_placement}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#node_placement BatchPool#node_placement}
 
 ---
 
@@ -2186,7 +2186,7 @@ OsDiskPlacement *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#os_disk_placement BatchPool#os_disk_placement}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#os_disk_placement BatchPool#os_disk_placement}.
 
 ---
 
@@ -2200,7 +2200,7 @@ StartTask BatchPoolStartTask
 
 start_task block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#start_task BatchPool#start_task}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#start_task BatchPool#start_task}
 
 ---
 
@@ -2212,7 +2212,7 @@ StopPendingResizeOperation interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#stop_pending_resize_operation BatchPool#stop_pending_resize_operation}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#stop_pending_resize_operation BatchPool#stop_pending_resize_operation}.
 
 ---
 
@@ -2224,7 +2224,7 @@ TargetNodeCommunicationMode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#target_node_communication_mode BatchPool#target_node_communication_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#target_node_communication_mode BatchPool#target_node_communication_mode}.
 
 ---
 
@@ -2238,7 +2238,7 @@ TaskSchedulingPolicy interface{}
 
 task_scheduling_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#task_scheduling_policy BatchPool#task_scheduling_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#task_scheduling_policy BatchPool#task_scheduling_policy}
 
 ---
 
@@ -2252,7 +2252,7 @@ Timeouts BatchPoolTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#timeouts BatchPool#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#timeouts BatchPool#timeouts}
 
 ---
 
@@ -2266,7 +2266,7 @@ UserAccounts interface{}
 
 user_accounts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#user_accounts BatchPool#user_accounts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#user_accounts BatchPool#user_accounts}
 
 ---
 
@@ -2280,7 +2280,7 @@ Windows interface{}
 
 windows block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#windows BatchPool#windows}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#windows BatchPool#windows}
 
 ---
 
@@ -2289,7 +2289,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolContainerConfiguration {
 	ContainerImageNames: *[]*string,
@@ -2302,9 +2302,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfiguration.property.containerImageNames">ContainerImageNames</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#container_image_names BatchPool#container_image_names}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfiguration.property.containerRegistries">ContainerRegistries</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#container_registries BatchPool#container_registries}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfiguration.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#type BatchPool#type}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfiguration.property.containerImageNames">ContainerImageNames</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#container_image_names BatchPool#container_image_names}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfiguration.property.containerRegistries">ContainerRegistries</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#container_registries BatchPool#container_registries}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfiguration.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#type BatchPool#type}. |
 
 ---
 
@@ -2316,7 +2316,7 @@ ContainerImageNames *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#container_image_names BatchPool#container_image_names}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#container_image_names BatchPool#container_image_names}.
 
 ---
 
@@ -2328,7 +2328,7 @@ ContainerRegistries interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#container_registries BatchPool#container_registries}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#container_registries BatchPool#container_registries}.
 
 ---
 
@@ -2340,7 +2340,7 @@ Type *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#type BatchPool#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#type BatchPool#type}.
 
 ---
 
@@ -2349,7 +2349,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistries.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolContainerConfigurationContainerRegistries {
 	Password: *string,
@@ -2363,10 +2363,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistries.property.password">Password</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#password BatchPool#password}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistries.property.registryServer">RegistryServer</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#registry_server BatchPool#registry_server}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistries.property.userAssignedIdentityId">UserAssignedIdentityId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#user_assigned_identity_id BatchPool#user_assigned_identity_id}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistries.property.userName">UserName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#user_name BatchPool#user_name}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistries.property.password">Password</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#password BatchPool#password}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistries.property.registryServer">RegistryServer</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#registry_server BatchPool#registry_server}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistries.property.userAssignedIdentityId">UserAssignedIdentityId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#user_assigned_identity_id BatchPool#user_assigned_identity_id}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistries.property.userName">UserName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#user_name BatchPool#user_name}. |
 
 ---
 
@@ -2378,7 +2378,7 @@ Password *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#password BatchPool#password}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#password BatchPool#password}.
 
 ---
 
@@ -2390,7 +2390,7 @@ RegistryServer *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#registry_server BatchPool#registry_server}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#registry_server BatchPool#registry_server}.
 
 ---
 
@@ -2402,7 +2402,7 @@ UserAssignedIdentityId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#user_assigned_identity_id BatchPool#user_assigned_identity_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#user_assigned_identity_id BatchPool#user_assigned_identity_id}.
 
 ---
 
@@ -2414,7 +2414,7 @@ UserName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#user_name BatchPool#user_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#user_name BatchPool#user_name}.
 
 ---
 
@@ -2423,7 +2423,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolDataDisks.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolDataDisks {
 	DiskSizeGb: *f64,
@@ -2437,10 +2437,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDataDisks.property.diskSizeGb">DiskSizeGb</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#disk_size_gb BatchPool#disk_size_gb}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDataDisks.property.lun">Lun</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#lun BatchPool#lun}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDataDisks.property.caching">Caching</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#caching BatchPool#caching}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDataDisks.property.storageAccountType">StorageAccountType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#storage_account_type BatchPool#storage_account_type}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDataDisks.property.diskSizeGb">DiskSizeGb</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#disk_size_gb BatchPool#disk_size_gb}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDataDisks.property.lun">Lun</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#lun BatchPool#lun}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDataDisks.property.caching">Caching</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#caching BatchPool#caching}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDataDisks.property.storageAccountType">StorageAccountType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#storage_account_type BatchPool#storage_account_type}. |
 
 ---
 
@@ -2452,7 +2452,7 @@ DiskSizeGb *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#disk_size_gb BatchPool#disk_size_gb}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#disk_size_gb BatchPool#disk_size_gb}.
 
 ---
 
@@ -2464,7 +2464,7 @@ Lun *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#lun BatchPool#lun}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#lun BatchPool#lun}.
 
 ---
 
@@ -2476,7 +2476,7 @@ Caching *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#caching BatchPool#caching}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#caching BatchPool#caching}.
 
 ---
 
@@ -2488,7 +2488,7 @@ StorageAccountType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#storage_account_type BatchPool#storage_account_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#storage_account_type BatchPool#storage_account_type}.
 
 ---
 
@@ -2497,7 +2497,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolDiskEncryption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolDiskEncryption {
 	DiskEncryptionTarget: *string,
@@ -2508,7 +2508,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDiskEncryption.property.diskEncryptionTarget">DiskEncryptionTarget</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#disk_encryption_target BatchPool#disk_encryption_target}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDiskEncryption.property.diskEncryptionTarget">DiskEncryptionTarget</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#disk_encryption_target BatchPool#disk_encryption_target}. |
 
 ---
 
@@ -2520,7 +2520,7 @@ DiskEncryptionTarget *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#disk_encryption_target BatchPool#disk_encryption_target}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#disk_encryption_target BatchPool#disk_encryption_target}.
 
 ---
 
@@ -2529,12 +2529,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolExtensions {
 	Name: *string,
 	Publisher: *string,
 	Type: *string,
+	AutomaticUpgradeEnabled: interface{},
 	AutoUpgradeMinorVersion: interface{},
 	ProtectedSettings: *string,
 	ProvisionAfterExtensions: *[]*string,
@@ -2547,14 +2548,15 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#name BatchPool#name}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.publisher">Publisher</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#publisher BatchPool#publisher}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#type BatchPool#type}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.autoUpgradeMinorVersion">AutoUpgradeMinorVersion</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#auto_upgrade_minor_version BatchPool#auto_upgrade_minor_version}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.protectedSettings">ProtectedSettings</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#protected_settings BatchPool#protected_settings}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.provisionAfterExtensions">ProvisionAfterExtensions</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#provision_after_extensions BatchPool#provision_after_extensions}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.settingsJson">SettingsJson</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#settings_json BatchPool#settings_json}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.typeHandlerVersion">TypeHandlerVersion</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#type_handler_version BatchPool#type_handler_version}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#name BatchPool#name}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.publisher">Publisher</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#publisher BatchPool#publisher}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#type BatchPool#type}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.automaticUpgradeEnabled">AutomaticUpgradeEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#automatic_upgrade_enabled BatchPool#automatic_upgrade_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.autoUpgradeMinorVersion">AutoUpgradeMinorVersion</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#auto_upgrade_minor_version BatchPool#auto_upgrade_minor_version}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.protectedSettings">ProtectedSettings</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#protected_settings BatchPool#protected_settings}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.provisionAfterExtensions">ProvisionAfterExtensions</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#provision_after_extensions BatchPool#provision_after_extensions}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.settingsJson">SettingsJson</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#settings_json BatchPool#settings_json}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.typeHandlerVersion">TypeHandlerVersion</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#type_handler_version BatchPool#type_handler_version}. |
 
 ---
 
@@ -2566,7 +2568,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#name BatchPool#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#name BatchPool#name}.
 
 ---
 
@@ -2578,7 +2580,7 @@ Publisher *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#publisher BatchPool#publisher}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#publisher BatchPool#publisher}.
 
 ---
 
@@ -2590,7 +2592,19 @@ Type *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#type BatchPool#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#type BatchPool#type}.
+
+---
+
+##### `AutomaticUpgradeEnabled`<sup>Optional</sup> <a name="AutomaticUpgradeEnabled" id="@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.automaticUpgradeEnabled"></a>
+
+```go
+AutomaticUpgradeEnabled interface{}
+```
+
+- *Type:* interface{}
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#automatic_upgrade_enabled BatchPool#automatic_upgrade_enabled}.
 
 ---
 
@@ -2602,7 +2616,7 @@ AutoUpgradeMinorVersion interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#auto_upgrade_minor_version BatchPool#auto_upgrade_minor_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#auto_upgrade_minor_version BatchPool#auto_upgrade_minor_version}.
 
 ---
 
@@ -2614,7 +2628,7 @@ ProtectedSettings *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#protected_settings BatchPool#protected_settings}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#protected_settings BatchPool#protected_settings}.
 
 ---
 
@@ -2626,7 +2640,7 @@ ProvisionAfterExtensions *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#provision_after_extensions BatchPool#provision_after_extensions}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#provision_after_extensions BatchPool#provision_after_extensions}.
 
 ---
 
@@ -2638,7 +2652,7 @@ SettingsJson *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#settings_json BatchPool#settings_json}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#settings_json BatchPool#settings_json}.
 
 ---
 
@@ -2650,7 +2664,7 @@ TypeHandlerVersion *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#type_handler_version BatchPool#type_handler_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#type_handler_version BatchPool#type_handler_version}.
 
 ---
 
@@ -2659,7 +2673,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolFixedScale.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolFixedScale {
 	NodeDeallocationMethod: *string,
@@ -2673,10 +2687,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolFixedScale.property.nodeDeallocationMethod">NodeDeallocationMethod</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#node_deallocation_method BatchPool#node_deallocation_method}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolFixedScale.property.resizeTimeout">ResizeTimeout</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#resize_timeout BatchPool#resize_timeout}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolFixedScale.property.targetDedicatedNodes">TargetDedicatedNodes</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#target_dedicated_nodes BatchPool#target_dedicated_nodes}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolFixedScale.property.targetLowPriorityNodes">TargetLowPriorityNodes</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#target_low_priority_nodes BatchPool#target_low_priority_nodes}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolFixedScale.property.nodeDeallocationMethod">NodeDeallocationMethod</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#node_deallocation_method BatchPool#node_deallocation_method}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolFixedScale.property.resizeTimeout">ResizeTimeout</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#resize_timeout BatchPool#resize_timeout}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolFixedScale.property.targetDedicatedNodes">TargetDedicatedNodes</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#target_dedicated_nodes BatchPool#target_dedicated_nodes}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolFixedScale.property.targetLowPriorityNodes">TargetLowPriorityNodes</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#target_low_priority_nodes BatchPool#target_low_priority_nodes}. |
 
 ---
 
@@ -2688,7 +2702,7 @@ NodeDeallocationMethod *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#node_deallocation_method BatchPool#node_deallocation_method}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#node_deallocation_method BatchPool#node_deallocation_method}.
 
 ---
 
@@ -2700,7 +2714,7 @@ ResizeTimeout *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#resize_timeout BatchPool#resize_timeout}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#resize_timeout BatchPool#resize_timeout}.
 
 ---
 
@@ -2712,7 +2726,7 @@ TargetDedicatedNodes *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#target_dedicated_nodes BatchPool#target_dedicated_nodes}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#target_dedicated_nodes BatchPool#target_dedicated_nodes}.
 
 ---
 
@@ -2724,7 +2738,7 @@ TargetLowPriorityNodes *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#target_low_priority_nodes BatchPool#target_low_priority_nodes}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#target_low_priority_nodes BatchPool#target_low_priority_nodes}.
 
 ---
 
@@ -2733,7 +2747,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolIdentity {
 	IdentityIds: *[]*string,
@@ -2745,8 +2759,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolIdentity.property.identityIds">IdentityIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#identity_ids BatchPool#identity_ids}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolIdentity.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#type BatchPool#type}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolIdentity.property.identityIds">IdentityIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#identity_ids BatchPool#identity_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolIdentity.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#type BatchPool#type}. |
 
 ---
 
@@ -2758,7 +2772,7 @@ IdentityIds *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#identity_ids BatchPool#identity_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#identity_ids BatchPool#identity_ids}.
 
 ---
 
@@ -2770,7 +2784,7 @@ Type *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#type BatchPool#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#type BatchPool#type}.
 
 ---
 
@@ -2779,10 +2793,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolMount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolMount {
-	AzureBlobFileSystem: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.batchPool.BatchPoolMountAzureBlobFileSystem,
+	AzureBlobFileSystem: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.batchPool.BatchPoolMountAzureBlobFileSystem,
 	AzureFileShare: interface{},
 	CifsMount: interface{},
 	NfsMount: interface{},
@@ -2810,7 +2824,7 @@ AzureBlobFileSystem BatchPoolMountAzureBlobFileSystem
 
 azure_blob_file_system block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#azure_blob_file_system BatchPool#azure_blob_file_system}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#azure_blob_file_system BatchPool#azure_blob_file_system}
 
 ---
 
@@ -2824,7 +2838,7 @@ AzureFileShare interface{}
 
 azure_file_share block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#azure_file_share BatchPool#azure_file_share}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#azure_file_share BatchPool#azure_file_share}
 
 ---
 
@@ -2838,7 +2852,7 @@ CifsMount interface{}
 
 cifs_mount block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#cifs_mount BatchPool#cifs_mount}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#cifs_mount BatchPool#cifs_mount}
 
 ---
 
@@ -2852,7 +2866,7 @@ NfsMount interface{}
 
 nfs_mount block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#nfs_mount BatchPool#nfs_mount}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#nfs_mount BatchPool#nfs_mount}
 
 ---
 
@@ -2861,7 +2875,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureBlobFileSystem.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolMountAzureBlobFileSystem {
 	AccountName: *string,
@@ -2878,13 +2892,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureBlobFileSystem.property.accountName">AccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#account_name BatchPool#account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureBlobFileSystem.property.containerName">ContainerName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#container_name BatchPool#container_name}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureBlobFileSystem.property.relativeMountPath">RelativeMountPath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#relative_mount_path BatchPool#relative_mount_path}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureBlobFileSystem.property.accountKey">AccountKey</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#account_key BatchPool#account_key}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureBlobFileSystem.property.blobfuseOptions">BlobfuseOptions</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#blobfuse_options BatchPool#blobfuse_options}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureBlobFileSystem.property.identityId">IdentityId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#identity_id BatchPool#identity_id}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureBlobFileSystem.property.sasKey">SasKey</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#sas_key BatchPool#sas_key}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureBlobFileSystem.property.accountName">AccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#account_name BatchPool#account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureBlobFileSystem.property.containerName">ContainerName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#container_name BatchPool#container_name}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureBlobFileSystem.property.relativeMountPath">RelativeMountPath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#relative_mount_path BatchPool#relative_mount_path}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureBlobFileSystem.property.accountKey">AccountKey</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#account_key BatchPool#account_key}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureBlobFileSystem.property.blobfuseOptions">BlobfuseOptions</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#blobfuse_options BatchPool#blobfuse_options}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureBlobFileSystem.property.identityId">IdentityId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#identity_id BatchPool#identity_id}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureBlobFileSystem.property.sasKey">SasKey</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#sas_key BatchPool#sas_key}. |
 
 ---
 
@@ -2896,7 +2910,7 @@ AccountName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#account_name BatchPool#account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#account_name BatchPool#account_name}.
 
 ---
 
@@ -2908,7 +2922,7 @@ ContainerName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#container_name BatchPool#container_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#container_name BatchPool#container_name}.
 
 ---
 
@@ -2920,7 +2934,7 @@ RelativeMountPath *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#relative_mount_path BatchPool#relative_mount_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#relative_mount_path BatchPool#relative_mount_path}.
 
 ---
 
@@ -2932,7 +2946,7 @@ AccountKey *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#account_key BatchPool#account_key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#account_key BatchPool#account_key}.
 
 ---
 
@@ -2944,7 +2958,7 @@ BlobfuseOptions *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#blobfuse_options BatchPool#blobfuse_options}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#blobfuse_options BatchPool#blobfuse_options}.
 
 ---
 
@@ -2956,7 +2970,7 @@ IdentityId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#identity_id BatchPool#identity_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#identity_id BatchPool#identity_id}.
 
 ---
 
@@ -2968,7 +2982,7 @@ SasKey *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#sas_key BatchPool#sas_key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#sas_key BatchPool#sas_key}.
 
 ---
 
@@ -2977,7 +2991,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShare.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolMountAzureFileShare {
 	AccountKey: *string,
@@ -2992,11 +3006,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShare.property.accountKey">AccountKey</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#account_key BatchPool#account_key}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShare.property.accountName">AccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#account_name BatchPool#account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShare.property.azureFileUrl">AzureFileUrl</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#azure_file_url BatchPool#azure_file_url}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShare.property.relativeMountPath">RelativeMountPath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#relative_mount_path BatchPool#relative_mount_path}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShare.property.mountOptions">MountOptions</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#mount_options BatchPool#mount_options}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShare.property.accountKey">AccountKey</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#account_key BatchPool#account_key}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShare.property.accountName">AccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#account_name BatchPool#account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShare.property.azureFileUrl">AzureFileUrl</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#azure_file_url BatchPool#azure_file_url}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShare.property.relativeMountPath">RelativeMountPath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#relative_mount_path BatchPool#relative_mount_path}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShare.property.mountOptions">MountOptions</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#mount_options BatchPool#mount_options}. |
 
 ---
 
@@ -3008,7 +3022,7 @@ AccountKey *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#account_key BatchPool#account_key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#account_key BatchPool#account_key}.
 
 ---
 
@@ -3020,7 +3034,7 @@ AccountName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#account_name BatchPool#account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#account_name BatchPool#account_name}.
 
 ---
 
@@ -3032,7 +3046,7 @@ AzureFileUrl *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#azure_file_url BatchPool#azure_file_url}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#azure_file_url BatchPool#azure_file_url}.
 
 ---
 
@@ -3044,7 +3058,7 @@ RelativeMountPath *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#relative_mount_path BatchPool#relative_mount_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#relative_mount_path BatchPool#relative_mount_path}.
 
 ---
 
@@ -3056,7 +3070,7 @@ MountOptions *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#mount_options BatchPool#mount_options}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#mount_options BatchPool#mount_options}.
 
 ---
 
@@ -3065,7 +3079,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolMountCifsMount {
 	Password: *string,
@@ -3080,11 +3094,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMount.property.password">Password</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#password BatchPool#password}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMount.property.relativeMountPath">RelativeMountPath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#relative_mount_path BatchPool#relative_mount_path}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMount.property.source">Source</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#source BatchPool#source}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMount.property.userName">UserName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#user_name BatchPool#user_name}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMount.property.mountOptions">MountOptions</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#mount_options BatchPool#mount_options}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMount.property.password">Password</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#password BatchPool#password}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMount.property.relativeMountPath">RelativeMountPath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#relative_mount_path BatchPool#relative_mount_path}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMount.property.source">Source</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#source BatchPool#source}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMount.property.userName">UserName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#user_name BatchPool#user_name}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMount.property.mountOptions">MountOptions</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#mount_options BatchPool#mount_options}. |
 
 ---
 
@@ -3096,7 +3110,7 @@ Password *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#password BatchPool#password}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#password BatchPool#password}.
 
 ---
 
@@ -3108,7 +3122,7 @@ RelativeMountPath *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#relative_mount_path BatchPool#relative_mount_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#relative_mount_path BatchPool#relative_mount_path}.
 
 ---
 
@@ -3120,7 +3134,7 @@ Source *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#source BatchPool#source}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#source BatchPool#source}.
 
 ---
 
@@ -3132,7 +3146,7 @@ UserName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#user_name BatchPool#user_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#user_name BatchPool#user_name}.
 
 ---
 
@@ -3144,7 +3158,7 @@ MountOptions *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#mount_options BatchPool#mount_options}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#mount_options BatchPool#mount_options}.
 
 ---
 
@@ -3153,7 +3167,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolMountNfsMount {
 	RelativeMountPath: *string,
@@ -3166,9 +3180,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMount.property.relativeMountPath">RelativeMountPath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#relative_mount_path BatchPool#relative_mount_path}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMount.property.source">Source</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#source BatchPool#source}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMount.property.mountOptions">MountOptions</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#mount_options BatchPool#mount_options}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMount.property.relativeMountPath">RelativeMountPath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#relative_mount_path BatchPool#relative_mount_path}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMount.property.source">Source</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#source BatchPool#source}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMount.property.mountOptions">MountOptions</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#mount_options BatchPool#mount_options}. |
 
 ---
 
@@ -3180,7 +3194,7 @@ RelativeMountPath *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#relative_mount_path BatchPool#relative_mount_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#relative_mount_path BatchPool#relative_mount_path}.
 
 ---
 
@@ -3192,7 +3206,7 @@ Source *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#source BatchPool#source}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#source BatchPool#source}.
 
 ---
 
@@ -3204,7 +3218,7 @@ MountOptions *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#mount_options BatchPool#mount_options}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#mount_options BatchPool#mount_options}.
 
 ---
 
@@ -3213,14 +3227,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolNetworkConfiguration {
-	SubnetId: *string,
+	AcceleratedNetworkingEnabled: interface{},
 	DynamicVnetAssignmentScope: *string,
 	EndpointConfiguration: interface{},
 	PublicAddressProvisioningType: *string,
 	PublicIps: *[]*string,
+	SubnetId: *string,
 }
 ```
 
@@ -3228,23 +3243,24 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration.property.subnetId">SubnetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#subnet_id BatchPool#subnet_id}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration.property.dynamicVnetAssignmentScope">DynamicVnetAssignmentScope</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#dynamic_vnet_assignment_scope BatchPool#dynamic_vnet_assignment_scope}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration.property.acceleratedNetworkingEnabled">AcceleratedNetworkingEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#accelerated_networking_enabled BatchPool#accelerated_networking_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration.property.dynamicVnetAssignmentScope">DynamicVnetAssignmentScope</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#dynamic_vnet_assignment_scope BatchPool#dynamic_vnet_assignment_scope}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration.property.endpointConfiguration">EndpointConfiguration</a></code> | <code>interface{}</code> | endpoint_configuration block. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration.property.publicAddressProvisioningType">PublicAddressProvisioningType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#public_address_provisioning_type BatchPool#public_address_provisioning_type}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration.property.publicIps">PublicIps</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#public_ips BatchPool#public_ips}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration.property.publicAddressProvisioningType">PublicAddressProvisioningType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#public_address_provisioning_type BatchPool#public_address_provisioning_type}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration.property.publicIps">PublicIps</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#public_ips BatchPool#public_ips}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration.property.subnetId">SubnetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#subnet_id BatchPool#subnet_id}. |
 
 ---
 
-##### `SubnetId`<sup>Required</sup> <a name="SubnetId" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration.property.subnetId"></a>
+##### `AcceleratedNetworkingEnabled`<sup>Optional</sup> <a name="AcceleratedNetworkingEnabled" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration.property.acceleratedNetworkingEnabled"></a>
 
 ```go
-SubnetId *string
+AcceleratedNetworkingEnabled interface{}
 ```
 
-- *Type:* *string
+- *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#subnet_id BatchPool#subnet_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#accelerated_networking_enabled BatchPool#accelerated_networking_enabled}.
 
 ---
 
@@ -3256,7 +3272,7 @@ DynamicVnetAssignmentScope *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#dynamic_vnet_assignment_scope BatchPool#dynamic_vnet_assignment_scope}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#dynamic_vnet_assignment_scope BatchPool#dynamic_vnet_assignment_scope}.
 
 ---
 
@@ -3270,7 +3286,7 @@ EndpointConfiguration interface{}
 
 endpoint_configuration block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#endpoint_configuration BatchPool#endpoint_configuration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#endpoint_configuration BatchPool#endpoint_configuration}
 
 ---
 
@@ -3282,7 +3298,7 @@ PublicAddressProvisioningType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#public_address_provisioning_type BatchPool#public_address_provisioning_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#public_address_provisioning_type BatchPool#public_address_provisioning_type}.
 
 ---
 
@@ -3294,7 +3310,19 @@ PublicIps *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#public_ips BatchPool#public_ips}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#public_ips BatchPool#public_ips}.
+
+---
+
+##### `SubnetId`<sup>Optional</sup> <a name="SubnetId" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration.property.subnetId"></a>
+
+```go
+SubnetId *string
+```
+
+- *Type:* *string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#subnet_id BatchPool#subnet_id}.
 
 ---
 
@@ -3303,7 +3331,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolNetworkConfigurationEndpointConfiguration {
 	BackendPort: *f64,
@@ -3318,10 +3346,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfiguration.property.backendPort">BackendPort</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#backend_port BatchPool#backend_port}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfiguration.property.frontendPortRange">FrontendPortRange</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#frontend_port_range BatchPool#frontend_port_range}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfiguration.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#name BatchPool#name}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfiguration.property.protocol">Protocol</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#protocol BatchPool#protocol}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfiguration.property.backendPort">BackendPort</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#backend_port BatchPool#backend_port}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfiguration.property.frontendPortRange">FrontendPortRange</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#frontend_port_range BatchPool#frontend_port_range}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfiguration.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#name BatchPool#name}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfiguration.property.protocol">Protocol</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#protocol BatchPool#protocol}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfiguration.property.networkSecurityGroupRules">NetworkSecurityGroupRules</a></code> | <code>interface{}</code> | network_security_group_rules block. |
 
 ---
@@ -3334,7 +3362,7 @@ BackendPort *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#backend_port BatchPool#backend_port}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#backend_port BatchPool#backend_port}.
 
 ---
 
@@ -3346,7 +3374,7 @@ FrontendPortRange *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#frontend_port_range BatchPool#frontend_port_range}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#frontend_port_range BatchPool#frontend_port_range}.
 
 ---
 
@@ -3358,7 +3386,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#name BatchPool#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#name BatchPool#name}.
 
 ---
 
@@ -3370,7 +3398,7 @@ Protocol *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#protocol BatchPool#protocol}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#protocol BatchPool#protocol}.
 
 ---
 
@@ -3384,7 +3412,7 @@ NetworkSecurityGroupRules interface{}
 
 network_security_group_rules block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#network_security_group_rules BatchPool#network_security_group_rules}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#network_security_group_rules BatchPool#network_security_group_rules}
 
 ---
 
@@ -3393,7 +3421,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules {
 	Access: *string,
@@ -3407,10 +3435,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules.property.access">Access</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#access BatchPool#access}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules.property.priority">Priority</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#priority BatchPool#priority}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules.property.sourceAddressPrefix">SourceAddressPrefix</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#source_address_prefix BatchPool#source_address_prefix}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules.property.sourcePortRanges">SourcePortRanges</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#source_port_ranges BatchPool#source_port_ranges}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules.property.access">Access</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#access BatchPool#access}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules.property.priority">Priority</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#priority BatchPool#priority}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules.property.sourceAddressPrefix">SourceAddressPrefix</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#source_address_prefix BatchPool#source_address_prefix}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules.property.sourcePortRanges">SourcePortRanges</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#source_port_ranges BatchPool#source_port_ranges}. |
 
 ---
 
@@ -3422,7 +3450,7 @@ Access *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#access BatchPool#access}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#access BatchPool#access}.
 
 ---
 
@@ -3434,7 +3462,7 @@ Priority *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#priority BatchPool#priority}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#priority BatchPool#priority}.
 
 ---
 
@@ -3446,7 +3474,7 @@ SourceAddressPrefix *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#source_address_prefix BatchPool#source_address_prefix}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#source_address_prefix BatchPool#source_address_prefix}.
 
 ---
 
@@ -3458,7 +3486,7 @@ SourcePortRanges *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#source_port_ranges BatchPool#source_port_ranges}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#source_port_ranges BatchPool#source_port_ranges}.
 
 ---
 
@@ -3467,7 +3495,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolNodePlacement.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolNodePlacement {
 	Policy: *string,
@@ -3478,7 +3506,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNodePlacement.property.policy">Policy</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#policy BatchPool#policy}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNodePlacement.property.policy">Policy</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#policy BatchPool#policy}. |
 
 ---
 
@@ -3490,7 +3518,7 @@ Policy *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#policy BatchPool#policy}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#policy BatchPool#policy}.
 
 ---
 
@@ -3499,11 +3527,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTask.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolStartTask {
 	CommandLine: *string,
-	UserIdentity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.batchPool.BatchPoolStartTaskUserIdentity,
+	UserIdentity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.batchPool.BatchPoolStartTaskUserIdentity,
 	CommonEnvironmentProperties: *map[string]*string,
 	Container: interface{},
 	ResourceFile: interface{},
@@ -3516,13 +3544,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTask.property.commandLine">CommandLine</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#command_line BatchPool#command_line}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTask.property.commandLine">CommandLine</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#command_line BatchPool#command_line}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTask.property.userIdentity">UserIdentity</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskUserIdentity">BatchPoolStartTaskUserIdentity</a></code> | user_identity block. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTask.property.commonEnvironmentProperties">CommonEnvironmentProperties</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#common_environment_properties BatchPool#common_environment_properties}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTask.property.commonEnvironmentProperties">CommonEnvironmentProperties</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#common_environment_properties BatchPool#common_environment_properties}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTask.property.container">Container</a></code> | <code>interface{}</code> | container block. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTask.property.resourceFile">ResourceFile</a></code> | <code>interface{}</code> | resource_file block. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTask.property.taskRetryMaximum">TaskRetryMaximum</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#task_retry_maximum BatchPool#task_retry_maximum}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTask.property.waitForSuccess">WaitForSuccess</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#wait_for_success BatchPool#wait_for_success}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTask.property.taskRetryMaximum">TaskRetryMaximum</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#task_retry_maximum BatchPool#task_retry_maximum}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTask.property.waitForSuccess">WaitForSuccess</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#wait_for_success BatchPool#wait_for_success}. |
 
 ---
 
@@ -3534,7 +3562,7 @@ CommandLine *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#command_line BatchPool#command_line}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#command_line BatchPool#command_line}.
 
 ---
 
@@ -3548,7 +3576,7 @@ UserIdentity BatchPoolStartTaskUserIdentity
 
 user_identity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#user_identity BatchPool#user_identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#user_identity BatchPool#user_identity}
 
 ---
 
@@ -3560,7 +3588,7 @@ CommonEnvironmentProperties *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#common_environment_properties BatchPool#common_environment_properties}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#common_environment_properties BatchPool#common_environment_properties}.
 
 ---
 
@@ -3574,7 +3602,7 @@ Container interface{}
 
 container block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#container BatchPool#container}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#container BatchPool#container}
 
 ---
 
@@ -3588,7 +3616,7 @@ ResourceFile interface{}
 
 resource_file block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#resource_file BatchPool#resource_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#resource_file BatchPool#resource_file}
 
 ---
 
@@ -3600,7 +3628,7 @@ TaskRetryMaximum *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#task_retry_maximum BatchPool#task_retry_maximum}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#task_retry_maximum BatchPool#task_retry_maximum}.
 
 ---
 
@@ -3612,7 +3640,7 @@ WaitForSuccess interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#wait_for_success BatchPool#wait_for_success}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#wait_for_success BatchPool#wait_for_success}.
 
 ---
 
@@ -3621,7 +3649,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolStartTaskContainer {
 	ImageName: *string,
@@ -3635,10 +3663,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainer.property.imageName">ImageName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#image_name BatchPool#image_name}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainer.property.imageName">ImageName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#image_name BatchPool#image_name}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainer.property.registry">Registry</a></code> | <code>interface{}</code> | registry block. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainer.property.runOptions">RunOptions</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#run_options BatchPool#run_options}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainer.property.workingDirectory">WorkingDirectory</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#working_directory BatchPool#working_directory}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainer.property.runOptions">RunOptions</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#run_options BatchPool#run_options}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainer.property.workingDirectory">WorkingDirectory</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#working_directory BatchPool#working_directory}. |
 
 ---
 
@@ -3650,7 +3678,7 @@ ImageName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#image_name BatchPool#image_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#image_name BatchPool#image_name}.
 
 ---
 
@@ -3664,7 +3692,7 @@ Registry interface{}
 
 registry block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#registry BatchPool#registry}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#registry BatchPool#registry}
 
 ---
 
@@ -3676,7 +3704,7 @@ RunOptions *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#run_options BatchPool#run_options}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#run_options BatchPool#run_options}.
 
 ---
 
@@ -3688,7 +3716,7 @@ WorkingDirectory *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#working_directory BatchPool#working_directory}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#working_directory BatchPool#working_directory}.
 
 ---
 
@@ -3697,7 +3725,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistry.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolStartTaskContainerRegistry {
 	RegistryServer: *string,
@@ -3711,10 +3739,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistry.property.registryServer">RegistryServer</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#registry_server BatchPool#registry_server}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistry.property.password">Password</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#password BatchPool#password}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistry.property.registryServer">RegistryServer</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#registry_server BatchPool#registry_server}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistry.property.password">Password</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#password BatchPool#password}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistry.property.userAssignedIdentityId">UserAssignedIdentityId</a></code> | <code>*string</code> | The User Assigned Identity to use for Container Registry access. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistry.property.userName">UserName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#user_name BatchPool#user_name}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistry.property.userName">UserName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#user_name BatchPool#user_name}. |
 
 ---
 
@@ -3726,7 +3754,7 @@ RegistryServer *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#registry_server BatchPool#registry_server}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#registry_server BatchPool#registry_server}.
 
 ---
 
@@ -3738,7 +3766,7 @@ Password *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#password BatchPool#password}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#password BatchPool#password}.
 
 ---
 
@@ -3752,7 +3780,7 @@ UserAssignedIdentityId *string
 
 The User Assigned Identity to use for Container Registry access.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#user_assigned_identity_id BatchPool#user_assigned_identity_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#user_assigned_identity_id BatchPool#user_assigned_identity_id}
 
 ---
 
@@ -3764,7 +3792,7 @@ UserName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#user_name BatchPool#user_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#user_name BatchPool#user_name}.
 
 ---
 
@@ -3773,7 +3801,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolStartTaskResourceFile {
 	AutoStorageContainerName: *string,
@@ -3790,13 +3818,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFile.property.autoStorageContainerName">AutoStorageContainerName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#auto_storage_container_name BatchPool#auto_storage_container_name}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFile.property.blobPrefix">BlobPrefix</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#blob_prefix BatchPool#blob_prefix}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFile.property.fileMode">FileMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#file_mode BatchPool#file_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFile.property.filePath">FilePath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#file_path BatchPool#file_path}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFile.property.httpUrl">HttpUrl</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#http_url BatchPool#http_url}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFile.property.storageContainerUrl">StorageContainerUrl</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#storage_container_url BatchPool#storage_container_url}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFile.property.userAssignedIdentityId">UserAssignedIdentityId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#user_assigned_identity_id BatchPool#user_assigned_identity_id}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFile.property.autoStorageContainerName">AutoStorageContainerName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#auto_storage_container_name BatchPool#auto_storage_container_name}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFile.property.blobPrefix">BlobPrefix</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#blob_prefix BatchPool#blob_prefix}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFile.property.fileMode">FileMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#file_mode BatchPool#file_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFile.property.filePath">FilePath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#file_path BatchPool#file_path}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFile.property.httpUrl">HttpUrl</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#http_url BatchPool#http_url}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFile.property.storageContainerUrl">StorageContainerUrl</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#storage_container_url BatchPool#storage_container_url}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFile.property.userAssignedIdentityId">UserAssignedIdentityId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#user_assigned_identity_id BatchPool#user_assigned_identity_id}. |
 
 ---
 
@@ -3808,7 +3836,7 @@ AutoStorageContainerName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#auto_storage_container_name BatchPool#auto_storage_container_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#auto_storage_container_name BatchPool#auto_storage_container_name}.
 
 ---
 
@@ -3820,7 +3848,7 @@ BlobPrefix *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#blob_prefix BatchPool#blob_prefix}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#blob_prefix BatchPool#blob_prefix}.
 
 ---
 
@@ -3832,7 +3860,7 @@ FileMode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#file_mode BatchPool#file_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#file_mode BatchPool#file_mode}.
 
 ---
 
@@ -3844,7 +3872,7 @@ FilePath *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#file_path BatchPool#file_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#file_path BatchPool#file_path}.
 
 ---
 
@@ -3856,7 +3884,7 @@ HttpUrl *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#http_url BatchPool#http_url}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#http_url BatchPool#http_url}.
 
 ---
 
@@ -3868,7 +3896,7 @@ StorageContainerUrl *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#storage_container_url BatchPool#storage_container_url}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#storage_container_url BatchPool#storage_container_url}.
 
 ---
 
@@ -3880,7 +3908,7 @@ UserAssignedIdentityId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#user_assigned_identity_id BatchPool#user_assigned_identity_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#user_assigned_identity_id BatchPool#user_assigned_identity_id}.
 
 ---
 
@@ -3889,10 +3917,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskUserIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolStartTaskUserIdentity {
-	AutoUser: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.batchPool.BatchPoolStartTaskUserIdentityAutoUser,
+	AutoUser: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.batchPool.BatchPoolStartTaskUserIdentityAutoUser,
 	UserName: *string,
 }
 ```
@@ -3902,7 +3930,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskUserIdentity.property.autoUser">AutoUser</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskUserIdentityAutoUser">BatchPoolStartTaskUserIdentityAutoUser</a></code> | auto_user block. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskUserIdentity.property.userName">UserName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#user_name BatchPool#user_name}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskUserIdentity.property.userName">UserName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#user_name BatchPool#user_name}. |
 
 ---
 
@@ -3916,7 +3944,7 @@ AutoUser BatchPoolStartTaskUserIdentityAutoUser
 
 auto_user block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#auto_user BatchPool#auto_user}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#auto_user BatchPool#auto_user}
 
 ---
 
@@ -3928,7 +3956,7 @@ UserName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#user_name BatchPool#user_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#user_name BatchPool#user_name}.
 
 ---
 
@@ -3937,7 +3965,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskUserIdentityAutoUser.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolStartTaskUserIdentityAutoUser {
 	ElevationLevel: *string,
@@ -3949,8 +3977,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskUserIdentityAutoUser.property.elevationLevel">ElevationLevel</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#elevation_level BatchPool#elevation_level}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskUserIdentityAutoUser.property.scope">Scope</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#scope BatchPool#scope}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskUserIdentityAutoUser.property.elevationLevel">ElevationLevel</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#elevation_level BatchPool#elevation_level}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskUserIdentityAutoUser.property.scope">Scope</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#scope BatchPool#scope}. |
 
 ---
 
@@ -3962,7 +3990,7 @@ ElevationLevel *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#elevation_level BatchPool#elevation_level}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#elevation_level BatchPool#elevation_level}.
 
 ---
 
@@ -3974,7 +4002,7 @@ Scope *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#scope BatchPool#scope}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#scope BatchPool#scope}.
 
 ---
 
@@ -3983,7 +4011,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolStorageImageReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolStorageImageReference {
 	Id: *string,
@@ -3998,11 +4026,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStorageImageReference.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#id BatchPool#id}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStorageImageReference.property.offer">Offer</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#offer BatchPool#offer}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStorageImageReference.property.publisher">Publisher</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#publisher BatchPool#publisher}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStorageImageReference.property.sku">Sku</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#sku BatchPool#sku}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStorageImageReference.property.version">Version</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#version BatchPool#version}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStorageImageReference.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#id BatchPool#id}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStorageImageReference.property.offer">Offer</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#offer BatchPool#offer}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStorageImageReference.property.publisher">Publisher</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#publisher BatchPool#publisher}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStorageImageReference.property.sku">Sku</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#sku BatchPool#sku}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStorageImageReference.property.version">Version</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#version BatchPool#version}. |
 
 ---
 
@@ -4014,7 +4042,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#id BatchPool#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#id BatchPool#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -4029,7 +4057,7 @@ Offer *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#offer BatchPool#offer}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#offer BatchPool#offer}.
 
 ---
 
@@ -4041,7 +4069,7 @@ Publisher *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#publisher BatchPool#publisher}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#publisher BatchPool#publisher}.
 
 ---
 
@@ -4053,7 +4081,7 @@ Sku *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#sku BatchPool#sku}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#sku BatchPool#sku}.
 
 ---
 
@@ -4065,7 +4093,7 @@ Version *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#version BatchPool#version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#version BatchPool#version}.
 
 ---
 
@@ -4074,7 +4102,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolTaskSchedulingPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolTaskSchedulingPolicy {
 	NodeFillType: *string,
@@ -4085,7 +4113,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTaskSchedulingPolicy.property.nodeFillType">NodeFillType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#node_fill_type BatchPool#node_fill_type}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTaskSchedulingPolicy.property.nodeFillType">NodeFillType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#node_fill_type BatchPool#node_fill_type}. |
 
 ---
 
@@ -4097,7 +4125,7 @@ NodeFillType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#node_fill_type BatchPool#node_fill_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#node_fill_type BatchPool#node_fill_type}.
 
 ---
 
@@ -4106,7 +4134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolTimeouts {
 	Create: *string,
@@ -4120,10 +4148,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#create BatchPool#create}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#delete BatchPool#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#read BatchPool#read}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#update BatchPool#update}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#create BatchPool#create}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#delete BatchPool#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#read BatchPool#read}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#update BatchPool#update}. |
 
 ---
 
@@ -4135,7 +4163,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#create BatchPool#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#create BatchPool#create}.
 
 ---
 
@@ -4147,7 +4175,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#delete BatchPool#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#delete BatchPool#delete}.
 
 ---
 
@@ -4159,7 +4187,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#read BatchPool#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#read BatchPool#read}.
 
 ---
 
@@ -4171,7 +4199,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#update BatchPool#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#update BatchPool#update}.
 
 ---
 
@@ -4180,7 +4208,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolUserAccounts {
 	ElevationLevel: *string,
@@ -4195,9 +4223,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts.property.elevationLevel">ElevationLevel</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#elevation_level BatchPool#elevation_level}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#name BatchPool#name}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts.property.password">Password</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#password BatchPool#password}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts.property.elevationLevel">ElevationLevel</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#elevation_level BatchPool#elevation_level}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#name BatchPool#name}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts.property.password">Password</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#password BatchPool#password}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts.property.linuxUserConfiguration">LinuxUserConfiguration</a></code> | <code>interface{}</code> | linux_user_configuration block. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts.property.windowsUserConfiguration">WindowsUserConfiguration</a></code> | <code>interface{}</code> | windows_user_configuration block. |
 
@@ -4211,7 +4239,7 @@ ElevationLevel *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#elevation_level BatchPool#elevation_level}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#elevation_level BatchPool#elevation_level}.
 
 ---
 
@@ -4223,7 +4251,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#name BatchPool#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#name BatchPool#name}.
 
 ---
 
@@ -4235,7 +4263,7 @@ Password *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#password BatchPool#password}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#password BatchPool#password}.
 
 ---
 
@@ -4249,7 +4277,7 @@ LinuxUserConfiguration interface{}
 
 linux_user_configuration block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#linux_user_configuration BatchPool#linux_user_configuration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#linux_user_configuration BatchPool#linux_user_configuration}
 
 ---
 
@@ -4263,7 +4291,7 @@ WindowsUserConfiguration interface{}
 
 windows_user_configuration block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#windows_user_configuration BatchPool#windows_user_configuration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#windows_user_configuration BatchPool#windows_user_configuration}
 
 ---
 
@@ -4272,7 +4300,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolUserAccountsLinuxUserConfiguration {
 	Gid: *f64,
@@ -4285,9 +4313,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfiguration.property.gid">Gid</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#gid BatchPool#gid}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfiguration.property.sshPrivateKey">SshPrivateKey</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#ssh_private_key BatchPool#ssh_private_key}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfiguration.property.uid">Uid</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#uid BatchPool#uid}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfiguration.property.gid">Gid</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#gid BatchPool#gid}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfiguration.property.sshPrivateKey">SshPrivateKey</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#ssh_private_key BatchPool#ssh_private_key}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfiguration.property.uid">Uid</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#uid BatchPool#uid}. |
 
 ---
 
@@ -4299,7 +4327,7 @@ Gid *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#gid BatchPool#gid}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#gid BatchPool#gid}.
 
 ---
 
@@ -4311,7 +4339,7 @@ SshPrivateKey *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#ssh_private_key BatchPool#ssh_private_key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#ssh_private_key BatchPool#ssh_private_key}.
 
 ---
 
@@ -4323,7 +4351,7 @@ Uid *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#uid BatchPool#uid}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#uid BatchPool#uid}.
 
 ---
 
@@ -4332,7 +4360,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsWindowsUserConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolUserAccountsWindowsUserConfiguration {
 	LoginMode: *string,
@@ -4343,7 +4371,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsWindowsUserConfiguration.property.loginMode">LoginMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#login_mode BatchPool#login_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsWindowsUserConfiguration.property.loginMode">LoginMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#login_mode BatchPool#login_mode}. |
 
 ---
 
@@ -4355,7 +4383,7 @@ LoginMode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#login_mode BatchPool#login_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#login_mode BatchPool#login_mode}.
 
 ---
 
@@ -4364,7 +4392,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchPool.BatchPoolWindows.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 &batchpool.BatchPoolWindows {
 	EnableAutomaticUpdates: interface{},
@@ -4375,7 +4403,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolWindows.property.enableAutomaticUpdates">EnableAutomaticUpdates</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#enable_automatic_updates BatchPool#enable_automatic_updates}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolWindows.property.enableAutomaticUpdates">EnableAutomaticUpdates</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#enable_automatic_updates BatchPool#enable_automatic_updates}. |
 
 ---
 
@@ -4387,7 +4415,7 @@ EnableAutomaticUpdates interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/batch_pool#enable_automatic_updates BatchPool#enable_automatic_updates}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/batch_pool#enable_automatic_updates BatchPool#enable_automatic_updates}.
 
 ---
 
@@ -4398,7 +4426,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolAutoScaleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolAutoScaleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BatchPoolAutoScaleOutputReference
 ```
@@ -4698,7 +4726,7 @@ func InternalValue() BatchPoolAutoScale
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolCertificateList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolCertificateList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BatchPoolCertificateList
 ```
@@ -4841,7 +4869,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolCertificateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolCertificateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BatchPoolCertificateOutputReference
 ```
@@ -5210,7 +5238,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistriesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolContainerConfigurationContainerRegistriesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BatchPoolContainerConfigurationContainerRegistriesList
 ```
@@ -5353,7 +5381,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistriesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolContainerConfigurationContainerRegistriesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BatchPoolContainerConfigurationContainerRegistriesOutputReference
 ```
@@ -5736,7 +5764,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolContainerConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BatchPoolContainerConfigurationOutputReference
 ```
@@ -6085,7 +6113,7 @@ func InternalValue() BatchPoolContainerConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolDataDisksList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolDataDisksList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BatchPoolDataDisksList
 ```
@@ -6228,7 +6256,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolDataDisksOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolDataDisksOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BatchPoolDataDisksOutputReference
 ```
@@ -6597,7 +6625,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolDiskEncryptionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolDiskEncryptionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BatchPoolDiskEncryptionList
 ```
@@ -6740,7 +6768,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolDiskEncryptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolDiskEncryptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BatchPoolDiskEncryptionOutputReference
 ```
@@ -7029,7 +7057,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolExtensionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BatchPoolExtensionsList
 ```
@@ -7172,7 +7200,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolExtensionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BatchPoolExtensionsOutputReference
 ```
@@ -7235,6 +7263,7 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.resetAutomaticUpgradeEnabled">ResetAutomaticUpgradeEnabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.resetAutoUpgradeMinorVersion">ResetAutoUpgradeMinorVersion</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.resetProtectedSettings">ResetProtectedSettings</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.resetProvisionAfterExtensions">ResetProvisionAfterExtensions</a></code> | *No description.* |
@@ -7393,6 +7422,12 @@ Return a string representation of this resolvable object.
 
 Returns a reversible string representation.
 
+##### `ResetAutomaticUpgradeEnabled` <a name="ResetAutomaticUpgradeEnabled" id="@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.resetAutomaticUpgradeEnabled"></a>
+
+```go
+func ResetAutomaticUpgradeEnabled()
+```
+
 ##### `ResetAutoUpgradeMinorVersion` <a name="ResetAutoUpgradeMinorVersion" id="@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.resetAutoUpgradeMinorVersion"></a>
 
 ```go
@@ -7430,6 +7465,7 @@ func ResetTypeHandlerVersion()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.automaticUpgradeEnabledInput">AutomaticUpgradeEnabledInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.autoUpgradeMinorVersionInput">AutoUpgradeMinorVersionInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.nameInput">NameInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.protectedSettingsInput">ProtectedSettingsInput</a></code> | <code>*string</code> | *No description.* |
@@ -7438,6 +7474,7 @@ func ResetTypeHandlerVersion()
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.settingsJsonInput">SettingsJsonInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.typeHandlerVersionInput">TypeHandlerVersionInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.typeInput">TypeInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.automaticUpgradeEnabled">AutomaticUpgradeEnabled</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.autoUpgradeMinorVersion">AutoUpgradeMinorVersion</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.name">Name</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.protectedSettings">ProtectedSettings</a></code> | <code>*string</code> | *No description.* |
@@ -7471,6 +7508,16 @@ func Fqn() *string
 ```
 
 - *Type:* *string
+
+---
+
+##### `AutomaticUpgradeEnabledInput`<sup>Optional</sup> <a name="AutomaticUpgradeEnabledInput" id="@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.automaticUpgradeEnabledInput"></a>
+
+```go
+func AutomaticUpgradeEnabledInput() interface{}
+```
+
+- *Type:* interface{}
 
 ---
 
@@ -7551,6 +7598,16 @@ func TypeInput() *string
 ```
 
 - *Type:* *string
+
+---
+
+##### `AutomaticUpgradeEnabled`<sup>Required</sup> <a name="AutomaticUpgradeEnabled" id="@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.automaticUpgradeEnabled"></a>
+
+```go
+func AutomaticUpgradeEnabled() interface{}
+```
+
+- *Type:* interface{}
 
 ---
 
@@ -7650,7 +7707,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolFixedScaleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolFixedScaleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BatchPoolFixedScaleOutputReference
 ```
@@ -8015,7 +8072,7 @@ func InternalValue() BatchPoolFixedScale
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BatchPoolIdentityOutputReference
 ```
@@ -8308,7 +8365,7 @@ func InternalValue() BatchPoolIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureBlobFileSystemOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolMountAzureBlobFileSystemOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BatchPoolMountAzureBlobFileSystemOutputReference
 ```
@@ -8739,7 +8796,7 @@ func InternalValue() BatchPoolMountAzureBlobFileSystem
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShareList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolMountAzureFileShareList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BatchPoolMountAzureFileShareList
 ```
@@ -8882,7 +8939,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShareOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolMountAzureFileShareOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BatchPoolMountAzureFileShareOutputReference
 ```
@@ -9266,7 +9323,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMountList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolMountCifsMountList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BatchPoolMountCifsMountList
 ```
@@ -9409,7 +9466,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMountOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolMountCifsMountOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BatchPoolMountCifsMountOutputReference
 ```
@@ -9793,7 +9850,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolMountList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BatchPoolMountList
 ```
@@ -9936,7 +9993,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMountList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolMountNfsMountList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BatchPoolMountNfsMountList
 ```
@@ -10079,7 +10136,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMountOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolMountNfsMountOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BatchPoolMountNfsMountOutputReference
 ```
@@ -10419,7 +10476,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolMountOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BatchPoolMountOutputReference
 ```
@@ -10854,7 +10911,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolNetworkConfigurationEndpointConfigurationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BatchPoolNetworkConfigurationEndpointConfigurationList
 ```
@@ -10997,7 +11054,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesList
 ```
@@ -11140,7 +11197,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesOutputReference
 ```
@@ -11502,7 +11559,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolNetworkConfigurationEndpointConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BatchPoolNetworkConfigurationEndpointConfigurationOutputReference
 ```
@@ -11899,7 +11956,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolNetworkConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BatchPoolNetworkConfigurationOutputReference
 ```
@@ -11945,10 +12002,12 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.putEndpointConfiguration">PutEndpointConfiguration</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.resetAcceleratedNetworkingEnabled">ResetAcceleratedNetworkingEnabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.resetDynamicVnetAssignmentScope">ResetDynamicVnetAssignmentScope</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.resetEndpointConfiguration">ResetEndpointConfiguration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.resetPublicAddressProvisioningType">ResetPublicAddressProvisioningType</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.resetPublicIps">ResetPublicIps</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.resetSubnetId">ResetSubnetId</a></code> | *No description.* |
 
 ---
 
@@ -12114,6 +12173,12 @@ func PutEndpointConfiguration(value interface{})
 
 ---
 
+##### `ResetAcceleratedNetworkingEnabled` <a name="ResetAcceleratedNetworkingEnabled" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.resetAcceleratedNetworkingEnabled"></a>
+
+```go
+func ResetAcceleratedNetworkingEnabled()
+```
+
 ##### `ResetDynamicVnetAssignmentScope` <a name="ResetDynamicVnetAssignmentScope" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.resetDynamicVnetAssignmentScope"></a>
 
 ```go
@@ -12138,6 +12203,12 @@ func ResetPublicAddressProvisioningType()
 func ResetPublicIps()
 ```
 
+##### `ResetSubnetId` <a name="ResetSubnetId" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.resetSubnetId"></a>
+
+```go
+func ResetSubnetId()
+```
+
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -12146,11 +12217,13 @@ func ResetPublicIps()
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.creationStack">CreationStack</a></code> | <code>*[]*string</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.fqn">Fqn</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.endpointConfiguration">EndpointConfiguration</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationList">BatchPoolNetworkConfigurationEndpointConfigurationList</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.acceleratedNetworkingEnabledInput">AcceleratedNetworkingEnabledInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.dynamicVnetAssignmentScopeInput">DynamicVnetAssignmentScopeInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.endpointConfigurationInput">EndpointConfigurationInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.publicAddressProvisioningTypeInput">PublicAddressProvisioningTypeInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.publicIpsInput">PublicIpsInput</a></code> | <code>*[]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.subnetIdInput">SubnetIdInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.acceleratedNetworkingEnabled">AcceleratedNetworkingEnabled</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.dynamicVnetAssignmentScope">DynamicVnetAssignmentScope</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.publicAddressProvisioningType">PublicAddressProvisioningType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.publicIps">PublicIps</a></code> | <code>*[]*string</code> | *No description.* |
@@ -12190,6 +12263,16 @@ func EndpointConfiguration() BatchPoolNetworkConfigurationEndpointConfigurationL
 ```
 
 - *Type:* <a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationList">BatchPoolNetworkConfigurationEndpointConfigurationList</a>
+
+---
+
+##### `AcceleratedNetworkingEnabledInput`<sup>Optional</sup> <a name="AcceleratedNetworkingEnabledInput" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.acceleratedNetworkingEnabledInput"></a>
+
+```go
+func AcceleratedNetworkingEnabledInput() interface{}
+```
+
+- *Type:* interface{}
 
 ---
 
@@ -12240,6 +12323,16 @@ func SubnetIdInput() *string
 ```
 
 - *Type:* *string
+
+---
+
+##### `AcceleratedNetworkingEnabled`<sup>Required</sup> <a name="AcceleratedNetworkingEnabled" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.acceleratedNetworkingEnabled"></a>
+
+```go
+func AcceleratedNetworkingEnabled() interface{}
+```
+
+- *Type:* interface{}
 
 ---
 
@@ -12299,7 +12392,7 @@ func InternalValue() BatchPoolNetworkConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolNodePlacementList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolNodePlacementList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BatchPoolNodePlacementList
 ```
@@ -12442,7 +12535,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolNodePlacementOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolNodePlacementOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BatchPoolNodePlacementOutputReference
 ```
@@ -12738,7 +12831,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolStartTaskContainerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BatchPoolStartTaskContainerList
 ```
@@ -12881,7 +12974,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolStartTaskContainerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BatchPoolStartTaskContainerOutputReference
 ```
@@ -13270,7 +13363,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistryList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolStartTaskContainerRegistryList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BatchPoolStartTaskContainerRegistryList
 ```
@@ -13413,7 +13506,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolStartTaskContainerRegistryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BatchPoolStartTaskContainerRegistryOutputReference
 ```
@@ -13789,7 +13882,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolStartTaskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BatchPoolStartTaskOutputReference
 ```
@@ -14266,7 +14359,7 @@ func InternalValue() BatchPoolStartTask
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFileList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolStartTaskResourceFileList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BatchPoolStartTaskResourceFileList
 ```
@@ -14409,7 +14502,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolStartTaskResourceFileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BatchPoolStartTaskResourceFileOutputReference
 ```
@@ -14879,7 +14972,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskUserIdentityAutoUserOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolStartTaskUserIdentityAutoUserOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BatchPoolStartTaskUserIdentityAutoUserOutputReference
 ```
@@ -15186,7 +15279,7 @@ func InternalValue() BatchPoolStartTaskUserIdentityAutoUser
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskUserIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolStartTaskUserIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BatchPoolStartTaskUserIdentityOutputReference
 ```
@@ -15506,7 +15599,7 @@ func InternalValue() BatchPoolStartTaskUserIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolStorageImageReferenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolStorageImageReferenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BatchPoolStorageImageReferenceOutputReference
 ```
@@ -15900,7 +15993,7 @@ func InternalValue() BatchPoolStorageImageReference
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolTaskSchedulingPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolTaskSchedulingPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BatchPoolTaskSchedulingPolicyList
 ```
@@ -16043,7 +16136,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolTaskSchedulingPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolTaskSchedulingPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BatchPoolTaskSchedulingPolicyOutputReference
 ```
@@ -16339,7 +16432,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BatchPoolTimeoutsOutputReference
 ```
@@ -16704,7 +16797,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfigurationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolUserAccountsLinuxUserConfigurationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BatchPoolUserAccountsLinuxUserConfigurationList
 ```
@@ -16847,7 +16940,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolUserAccountsLinuxUserConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BatchPoolUserAccountsLinuxUserConfigurationOutputReference
 ```
@@ -17201,7 +17294,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolUserAccountsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BatchPoolUserAccountsList
 ```
@@ -17344,7 +17437,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolUserAccountsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BatchPoolUserAccountsOutputReference
 ```
@@ -17761,7 +17854,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsWindowsUserConfigurationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolUserAccountsWindowsUserConfigurationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BatchPoolUserAccountsWindowsUserConfigurationList
 ```
@@ -17904,7 +17997,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsWindowsUserConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolUserAccountsWindowsUserConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BatchPoolUserAccountsWindowsUserConfigurationOutputReference
 ```
@@ -18193,7 +18286,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolWindowsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolWindowsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BatchPoolWindowsList
 ```
@@ -18336,7 +18429,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchPool.BatchPoolWindowsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/batchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchpool"
 
 batchpool.NewBatchPoolWindowsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BatchPoolWindowsOutputReference
 ```

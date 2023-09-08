@@ -1,6 +1,6 @@
 # `azurerm_postgresql_active_directory_administrator`
 
-Refer to the Terraform Registory for docs: [`azurerm_postgresql_active_directory_administrator`](https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/postgresql_active_directory_administrator).
+Refer to the Terraform Registory for docs: [`azurerm_postgresql_active_directory_administrator`](https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_active_directory_administrator).
 
 # `postgresqlActiveDirectoryAdministrator` Submodule <a name="`postgresqlActiveDirectoryAdministrator` Submodule" id="@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_postgresql_active_directory
 
 ### PostgresqlActiveDirectoryAdministrator <a name="PostgresqlActiveDirectoryAdministrator" id="@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministrator"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/postgresql_active_directory_administrator azurerm_postgresql_active_directory_administrator}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_active_directory_administrator azurerm_postgresql_active_directory_administrator}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministrator.Initializer"></a>
 
@@ -712,12 +712,12 @@ const postgresqlActiveDirectoryAdministratorConfig: postgresqlActiveDirectoryAdm
 | <code><a href="#@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministratorConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministratorConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministratorConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministratorConfig.property.login">login</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/postgresql_active_directory_administrator#login PostgresqlActiveDirectoryAdministrator#login}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministratorConfig.property.objectId">objectId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/postgresql_active_directory_administrator#object_id PostgresqlActiveDirectoryAdministrator#object_id}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministratorConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/postgresql_active_directory_administrator#resource_group_name PostgresqlActiveDirectoryAdministrator#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministratorConfig.property.serverName">serverName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/postgresql_active_directory_administrator#server_name PostgresqlActiveDirectoryAdministrator#server_name}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministratorConfig.property.tenantId">tenantId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/postgresql_active_directory_administrator#tenant_id PostgresqlActiveDirectoryAdministrator#tenant_id}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministratorConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/postgresql_active_directory_administrator#id PostgresqlActiveDirectoryAdministrator#id}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministratorConfig.property.login">login</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_active_directory_administrator#login PostgresqlActiveDirectoryAdministrator#login}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministratorConfig.property.objectId">objectId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_active_directory_administrator#object_id PostgresqlActiveDirectoryAdministrator#object_id}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministratorConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_active_directory_administrator#resource_group_name PostgresqlActiveDirectoryAdministrator#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministratorConfig.property.serverName">serverName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_active_directory_administrator#server_name PostgresqlActiveDirectoryAdministrator#server_name}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministratorConfig.property.tenantId">tenantId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_active_directory_administrator#tenant_id PostgresqlActiveDirectoryAdministrator#tenant_id}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministratorConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_active_directory_administrator#id PostgresqlActiveDirectoryAdministrator#id}. |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministratorConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministratorTimeouts">PostgresqlActiveDirectoryAdministratorTimeouts</a></code> | timeouts block. |
 
 ---
@@ -800,7 +800,7 @@ public readonly login: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/postgresql_active_directory_administrator#login PostgresqlActiveDirectoryAdministrator#login}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_active_directory_administrator#login PostgresqlActiveDirectoryAdministrator#login}.
 
 ---
 
@@ -812,7 +812,7 @@ public readonly objectId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/postgresql_active_directory_administrator#object_id PostgresqlActiveDirectoryAdministrator#object_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_active_directory_administrator#object_id PostgresqlActiveDirectoryAdministrator#object_id}.
 
 ---
 
@@ -824,7 +824,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/postgresql_active_directory_administrator#resource_group_name PostgresqlActiveDirectoryAdministrator#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_active_directory_administrator#resource_group_name PostgresqlActiveDirectoryAdministrator#resource_group_name}.
 
 ---
 
@@ -836,7 +836,7 @@ public readonly serverName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/postgresql_active_directory_administrator#server_name PostgresqlActiveDirectoryAdministrator#server_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_active_directory_administrator#server_name PostgresqlActiveDirectoryAdministrator#server_name}.
 
 ---
 
@@ -848,7 +848,7 @@ public readonly tenantId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/postgresql_active_directory_administrator#tenant_id PostgresqlActiveDirectoryAdministrator#tenant_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_active_directory_administrator#tenant_id PostgresqlActiveDirectoryAdministrator#tenant_id}.
 
 ---
 
@@ -860,7 +860,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/postgresql_active_directory_administrator#id PostgresqlActiveDirectoryAdministrator#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_active_directory_administrator#id PostgresqlActiveDirectoryAdministrator#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -877,7 +877,7 @@ public readonly timeouts: PostgresqlActiveDirectoryAdministratorTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/postgresql_active_directory_administrator#timeouts PostgresqlActiveDirectoryAdministrator#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_active_directory_administrator#timeouts PostgresqlActiveDirectoryAdministrator#timeouts}
 
 ---
 
@@ -895,10 +895,10 @@ const postgresqlActiveDirectoryAdministratorTimeouts: postgresqlActiveDirectoryA
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministratorTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/postgresql_active_directory_administrator#create PostgresqlActiveDirectoryAdministrator#create}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministratorTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/postgresql_active_directory_administrator#delete PostgresqlActiveDirectoryAdministrator#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministratorTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/postgresql_active_directory_administrator#read PostgresqlActiveDirectoryAdministrator#read}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministratorTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/postgresql_active_directory_administrator#update PostgresqlActiveDirectoryAdministrator#update}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministratorTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_active_directory_administrator#create PostgresqlActiveDirectoryAdministrator#create}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministratorTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_active_directory_administrator#delete PostgresqlActiveDirectoryAdministrator#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministratorTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_active_directory_administrator#read PostgresqlActiveDirectoryAdministrator#read}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlActiveDirectoryAdministrator.PostgresqlActiveDirectoryAdministratorTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_active_directory_administrator#update PostgresqlActiveDirectoryAdministrator#update}. |
 
 ---
 
@@ -910,7 +910,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/postgresql_active_directory_administrator#create PostgresqlActiveDirectoryAdministrator#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_active_directory_administrator#create PostgresqlActiveDirectoryAdministrator#create}.
 
 ---
 
@@ -922,7 +922,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/postgresql_active_directory_administrator#delete PostgresqlActiveDirectoryAdministrator#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_active_directory_administrator#delete PostgresqlActiveDirectoryAdministrator#delete}.
 
 ---
 
@@ -934,7 +934,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/postgresql_active_directory_administrator#read PostgresqlActiveDirectoryAdministrator#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_active_directory_administrator#read PostgresqlActiveDirectoryAdministrator#read}.
 
 ---
 
@@ -946,7 +946,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/postgresql_active_directory_administrator#update PostgresqlActiveDirectoryAdministrator#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_active_directory_administrator#update PostgresqlActiveDirectoryAdministrator#update}.
 
 ---
 

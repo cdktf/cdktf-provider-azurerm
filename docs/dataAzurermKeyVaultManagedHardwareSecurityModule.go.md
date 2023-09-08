@@ -1,6 +1,6 @@
 # `data_azurerm_key_vault_managed_hardware_security_module`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_key_vault_managed_hardware_security_module`](https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/key_vault_managed_hardware_security_module).
+Refer to the Terraform Registory for docs: [`data_azurerm_key_vault_managed_hardware_security_module`](https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/key_vault_managed_hardware_security_module).
 
 # `dataAzurermKeyVaultManagedHardwareSecurityModule` Submodule <a name="`dataAzurermKeyVaultManagedHardwareSecurityModule` Submodule" id="@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModule"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_azurerm_key_vault_managed_hard
 
 ### DataAzurermKeyVaultManagedHardwareSecurityModule <a name="DataAzurermKeyVaultManagedHardwareSecurityModule" id="@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModule.DataAzurermKeyVaultManagedHardwareSecurityModule"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/key_vault_managed_hardware_security_module azurerm_key_vault_managed_hardware_security_module}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/key_vault_managed_hardware_security_module azurerm_key_vault_managed_hardware_security_module}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModule.DataAzurermKeyVaultManagedHardwareSecurityModule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultmanagedhardwaresecuritymodule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultmanagedhardwaresecuritymodule"
 
 dataazurermkeyvaultmanagedhardwaresecuritymodule.NewDataAzurermKeyVaultManagedHardwareSecurityModule(scope Construct, id *string, config DataAzurermKeyVaultManagedHardwareSecurityModuleConfig) DataAzurermKeyVaultManagedHardwareSecurityModule
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModule.DataAzurermKeyVaultManagedHardwareSecurityModule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultmanagedhardwaresecuritymodule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultmanagedhardwaresecuritymodule"
 
 dataazurermkeyvaultmanagedhardwaresecuritymodule.DataAzurermKeyVaultManagedHardwareSecurityModule_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModule.DataAzurermKeyVaultManagedHardwareSecurityModule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultmanagedhardwaresecuritymodule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultmanagedhardwaresecuritymodule"
 
 dataazurermkeyvaultmanagedhardwaresecuritymodule.DataAzurermKeyVaultManagedHardwareSecurityModule_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ dataazurermkeyvaultmanagedhardwaresecuritymodule.DataAzurermKeyVaultManagedHardw
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModule.DataAzurermKeyVaultManagedHardwareSecurityModule.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultmanagedhardwaresecuritymodule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultmanagedhardwaresecuritymodule"
 
 dataazurermkeyvaultmanagedhardwaresecuritymodule.DataAzurermKeyVaultManagedHardwareSecurityModule_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -696,7 +696,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModule.DataAzurermKeyVaultManagedHardwareSecurityModuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultmanagedhardwaresecuritymodule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultmanagedhardwaresecuritymodule"
 
 &dataazurermkeyvaultmanagedhardwaresecuritymodule.DataAzurermKeyVaultManagedHardwareSecurityModuleConfig {
 	Connection: interface{},
@@ -709,7 +709,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvau
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.dataAzurermKeyVaultManagedHardwareSecurityModule.DataAzurermKeyVaultManagedHardwareSecurityModuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermKeyVaultManagedHardwareSecurityModule.DataAzurermKeyVaultManagedHardwareSecurityModuleTimeouts,
 }
 ```
 
@@ -724,9 +724,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvau
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModule.DataAzurermKeyVaultManagedHardwareSecurityModuleConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModule.DataAzurermKeyVaultManagedHardwareSecurityModuleConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModule.DataAzurermKeyVaultManagedHardwareSecurityModuleConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModule.DataAzurermKeyVaultManagedHardwareSecurityModuleConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/key_vault_managed_hardware_security_module#name DataAzurermKeyVaultManagedHardwareSecurityModule#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModule.DataAzurermKeyVaultManagedHardwareSecurityModuleConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/key_vault_managed_hardware_security_module#resource_group_name DataAzurermKeyVaultManagedHardwareSecurityModule#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModule.DataAzurermKeyVaultManagedHardwareSecurityModuleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/key_vault_managed_hardware_security_module#id DataAzurermKeyVaultManagedHardwareSecurityModule#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModule.DataAzurermKeyVaultManagedHardwareSecurityModuleConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/key_vault_managed_hardware_security_module#name DataAzurermKeyVaultManagedHardwareSecurityModule#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModule.DataAzurermKeyVaultManagedHardwareSecurityModuleConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/key_vault_managed_hardware_security_module#resource_group_name DataAzurermKeyVaultManagedHardwareSecurityModule#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModule.DataAzurermKeyVaultManagedHardwareSecurityModuleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/key_vault_managed_hardware_security_module#id DataAzurermKeyVaultManagedHardwareSecurityModule#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModule.DataAzurermKeyVaultManagedHardwareSecurityModuleConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModule.DataAzurermKeyVaultManagedHardwareSecurityModuleTimeouts">DataAzurermKeyVaultManagedHardwareSecurityModuleTimeouts</a></code> | timeouts block. |
 
 ---
@@ -809,7 +809,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/key_vault_managed_hardware_security_module#name DataAzurermKeyVaultManagedHardwareSecurityModule#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/key_vault_managed_hardware_security_module#name DataAzurermKeyVaultManagedHardwareSecurityModule#name}.
 
 ---
 
@@ -821,7 +821,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/key_vault_managed_hardware_security_module#resource_group_name DataAzurermKeyVaultManagedHardwareSecurityModule#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/key_vault_managed_hardware_security_module#resource_group_name DataAzurermKeyVaultManagedHardwareSecurityModule#resource_group_name}.
 
 ---
 
@@ -833,7 +833,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/key_vault_managed_hardware_security_module#id DataAzurermKeyVaultManagedHardwareSecurityModule#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/key_vault_managed_hardware_security_module#id DataAzurermKeyVaultManagedHardwareSecurityModule#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -850,7 +850,7 @@ Timeouts DataAzurermKeyVaultManagedHardwareSecurityModuleTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/key_vault_managed_hardware_security_module#timeouts DataAzurermKeyVaultManagedHardwareSecurityModule#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/key_vault_managed_hardware_security_module#timeouts DataAzurermKeyVaultManagedHardwareSecurityModule#timeouts}
 
 ---
 
@@ -859,7 +859,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModule.DataAzurermKeyVaultManagedHardwareSecurityModuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultmanagedhardwaresecuritymodule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultmanagedhardwaresecuritymodule"
 
 &dataazurermkeyvaultmanagedhardwaresecuritymodule.DataAzurermKeyVaultManagedHardwareSecurityModuleTimeouts {
 	Read: *string,
@@ -870,7 +870,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvau
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModule.DataAzurermKeyVaultManagedHardwareSecurityModuleTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/key_vault_managed_hardware_security_module#read DataAzurermKeyVaultManagedHardwareSecurityModule#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModule.DataAzurermKeyVaultManagedHardwareSecurityModuleTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/key_vault_managed_hardware_security_module#read DataAzurermKeyVaultManagedHardwareSecurityModule#read}. |
 
 ---
 
@@ -882,7 +882,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/data-sources/key_vault_managed_hardware_security_module#read DataAzurermKeyVaultManagedHardwareSecurityModule#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/key_vault_managed_hardware_security_module#read DataAzurermKeyVaultManagedHardwareSecurityModule#read}.
 
 ---
 
@@ -893,7 +893,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultManagedHardwareSecurityModule.DataAzurermKeyVaultManagedHardwareSecurityModuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultmanagedhardwaresecuritymodule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultmanagedhardwaresecuritymodule"
 
 dataazurermkeyvaultmanagedhardwaresecuritymodule.NewDataAzurermKeyVaultManagedHardwareSecurityModuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermKeyVaultManagedHardwareSecurityModuleTimeoutsOutputReference
 ```
