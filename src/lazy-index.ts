@@ -111,6 +111,7 @@ Object.defineProperty(exports, 'automationHybridRunbookWorker', { get: function 
 Object.defineProperty(exports, 'automationHybridRunbookWorkerGroup', { get: function () { return require('./automation-hybrid-runbook-worker-group'); } });
 Object.defineProperty(exports, 'automationJobSchedule', { get: function () { return require('./automation-job-schedule'); } });
 Object.defineProperty(exports, 'automationModule', { get: function () { return require('./automation-module'); } });
+Object.defineProperty(exports, 'automationPython3Package', { get: function () { return require('./automation-python3-package'); } });
 Object.defineProperty(exports, 'automationRunbook', { get: function () { return require('./automation-runbook'); } });
 Object.defineProperty(exports, 'automationSchedule', { get: function () { return require('./automation-schedule'); } });
 Object.defineProperty(exports, 'automationSoftwareUpdateConfiguration', { get: function () { return require('./automation-software-update-configuration'); } });
@@ -631,6 +632,7 @@ Object.defineProperty(exports, 'netappSnapshot', { get: function () { return req
 Object.defineProperty(exports, 'netappSnapshotPolicy', { get: function () { return require('./netapp-snapshot-policy'); } });
 Object.defineProperty(exports, 'netappVolume', { get: function () { return require('./netapp-volume'); } });
 Object.defineProperty(exports, 'netappVolumeGroupSapHana', { get: function () { return require('./netapp-volume-group-sap-hana'); } });
+Object.defineProperty(exports, 'netappVolumeQuotaRule', { get: function () { return require('./netapp-volume-quota-rule'); } });
 Object.defineProperty(exports, 'networkConnectionMonitor', { get: function () { return require('./network-connection-monitor'); } });
 Object.defineProperty(exports, 'networkDdosProtectionPlan', { get: function () { return require('./network-ddos-protection-plan'); } });
 Object.defineProperty(exports, 'networkFunctionAzureTrafficCollector', { get: function () { return require('./network-function-azure-traffic-collector'); } });
@@ -1226,6 +1228,7 @@ Object.defineProperty(exports, 'dataAzurermNetappSnapshot', { get: function () {
 Object.defineProperty(exports, 'dataAzurermNetappSnapshotPolicy', { get: function () { return require('./data-azurerm-netapp-snapshot-policy'); } });
 Object.defineProperty(exports, 'dataAzurermNetappVolume', { get: function () { return require('./data-azurerm-netapp-volume'); } });
 Object.defineProperty(exports, 'dataAzurermNetappVolumeGroupSapHana', { get: function () { return require('./data-azurerm-netapp-volume-group-sap-hana'); } });
+Object.defineProperty(exports, 'dataAzurermNetappVolumeQuotaRule', { get: function () { return require('./data-azurerm-netapp-volume-quota-rule'); } });
 Object.defineProperty(exports, 'dataAzurermNetworkDdosProtectionPlan', { get: function () { return require('./data-azurerm-network-ddos-protection-plan'); } });
 Object.defineProperty(exports, 'dataAzurermNetworkInterface', { get: function () { return require('./data-azurerm-network-interface'); } });
 Object.defineProperty(exports, 'dataAzurermNetworkManagerNetworkGroup', { get: function () { return require('./data-azurerm-network-manager-network-group'); } });

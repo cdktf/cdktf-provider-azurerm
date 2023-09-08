@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/virtual_hub_connection
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/virtual_hub_connection
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,48 +13,48 @@ import * as cdktf from 'cdktf';
 
 export interface VirtualHubConnectionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/virtual_hub_connection#id VirtualHubConnection#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/virtual_hub_connection#id VirtualHubConnection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/virtual_hub_connection#internet_security_enabled VirtualHubConnection#internet_security_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/virtual_hub_connection#internet_security_enabled VirtualHubConnection#internet_security_enabled}
   */
   readonly internetSecurityEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/virtual_hub_connection#name VirtualHubConnection#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/virtual_hub_connection#name VirtualHubConnection#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/virtual_hub_connection#remote_virtual_network_id VirtualHubConnection#remote_virtual_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/virtual_hub_connection#remote_virtual_network_id VirtualHubConnection#remote_virtual_network_id}
   */
   readonly remoteVirtualNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/virtual_hub_connection#virtual_hub_id VirtualHubConnection#virtual_hub_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/virtual_hub_connection#virtual_hub_id VirtualHubConnection#virtual_hub_id}
   */
   readonly virtualHubId: string;
   /**
   * routing block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/virtual_hub_connection#routing VirtualHubConnection#routing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/virtual_hub_connection#routing VirtualHubConnection#routing}
   */
   readonly routing?: VirtualHubConnectionRouting;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/virtual_hub_connection#timeouts VirtualHubConnection#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/virtual_hub_connection#timeouts VirtualHubConnection#timeouts}
   */
   readonly timeouts?: VirtualHubConnectionTimeouts;
 }
 export interface VirtualHubConnectionRoutingPropagatedRouteTable {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/virtual_hub_connection#labels VirtualHubConnection#labels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/virtual_hub_connection#labels VirtualHubConnection#labels}
   */
   readonly labels?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/virtual_hub_connection#route_table_ids VirtualHubConnection#route_table_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/virtual_hub_connection#route_table_ids VirtualHubConnection#route_table_ids}
   */
   readonly routeTableIds?: string[];
 }
@@ -142,15 +142,15 @@ export class VirtualHubConnectionRoutingPropagatedRouteTableOutputReference exte
 }
 export interface VirtualHubConnectionRoutingStaticVnetRoute {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/virtual_hub_connection#address_prefixes VirtualHubConnection#address_prefixes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/virtual_hub_connection#address_prefixes VirtualHubConnection#address_prefixes}
   */
   readonly addressPrefixes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/virtual_hub_connection#name VirtualHubConnection#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/virtual_hub_connection#name VirtualHubConnection#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/virtual_hub_connection#next_hop_ip_address VirtualHubConnection#next_hop_ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/virtual_hub_connection#next_hop_ip_address VirtualHubConnection#next_hop_ip_address}
   */
   readonly nextHopIpAddress?: string;
 }
@@ -293,19 +293,31 @@ export class VirtualHubConnectionRoutingStaticVnetRouteList extends cdktf.Comple
 }
 export interface VirtualHubConnectionRouting {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/virtual_hub_connection#associated_route_table_id VirtualHubConnection#associated_route_table_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/virtual_hub_connection#associated_route_table_id VirtualHubConnection#associated_route_table_id}
   */
   readonly associatedRouteTableId?: string;
   /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/virtual_hub_connection#inbound_route_map_id VirtualHubConnection#inbound_route_map_id}
+  */
+  readonly inboundRouteMapId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/virtual_hub_connection#outbound_route_map_id VirtualHubConnection#outbound_route_map_id}
+  */
+  readonly outboundRouteMapId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/virtual_hub_connection#static_vnet_local_route_override_criteria VirtualHubConnection#static_vnet_local_route_override_criteria}
+  */
+  readonly staticVnetLocalRouteOverrideCriteria?: string;
+  /**
   * propagated_route_table block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/virtual_hub_connection#propagated_route_table VirtualHubConnection#propagated_route_table}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/virtual_hub_connection#propagated_route_table VirtualHubConnection#propagated_route_table}
   */
   readonly propagatedRouteTable?: VirtualHubConnectionRoutingPropagatedRouteTable;
   /**
   * static_vnet_route block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/virtual_hub_connection#static_vnet_route VirtualHubConnection#static_vnet_route}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/virtual_hub_connection#static_vnet_route VirtualHubConnection#static_vnet_route}
   */
   readonly staticVnetRoute?: VirtualHubConnectionRoutingStaticVnetRoute[] | cdktf.IResolvable;
 }
@@ -317,6 +329,9 @@ export function virtualHubConnectionRoutingToTerraform(struct?: VirtualHubConnec
   }
   return {
     associated_route_table_id: cdktf.stringToTerraform(struct!.associatedRouteTableId),
+    inbound_route_map_id: cdktf.stringToTerraform(struct!.inboundRouteMapId),
+    outbound_route_map_id: cdktf.stringToTerraform(struct!.outboundRouteMapId),
+    static_vnet_local_route_override_criteria: cdktf.stringToTerraform(struct!.staticVnetLocalRouteOverrideCriteria),
     propagated_route_table: virtualHubConnectionRoutingPropagatedRouteTableToTerraform(struct!.propagatedRouteTable),
     static_vnet_route: cdktf.listMapper(virtualHubConnectionRoutingStaticVnetRouteToTerraform, true)(struct!.staticVnetRoute),
   }
@@ -340,6 +355,18 @@ export class VirtualHubConnectionRoutingOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.associatedRouteTableId = this._associatedRouteTableId;
     }
+    if (this._inboundRouteMapId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.inboundRouteMapId = this._inboundRouteMapId;
+    }
+    if (this._outboundRouteMapId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.outboundRouteMapId = this._outboundRouteMapId;
+    }
+    if (this._staticVnetLocalRouteOverrideCriteria !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.staticVnetLocalRouteOverrideCriteria = this._staticVnetLocalRouteOverrideCriteria;
+    }
     if (this._propagatedRouteTable?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.propagatedRouteTable = this._propagatedRouteTable?.internalValue;
@@ -355,12 +382,18 @@ export class VirtualHubConnectionRoutingOutputReference extends cdktf.ComplexObj
     if (value === undefined) {
       this.isEmptyObject = false;
       this._associatedRouteTableId = undefined;
+      this._inboundRouteMapId = undefined;
+      this._outboundRouteMapId = undefined;
+      this._staticVnetLocalRouteOverrideCriteria = undefined;
       this._propagatedRouteTable.internalValue = undefined;
       this._staticVnetRoute.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
       this._associatedRouteTableId = value.associatedRouteTableId;
+      this._inboundRouteMapId = value.inboundRouteMapId;
+      this._outboundRouteMapId = value.outboundRouteMapId;
+      this._staticVnetLocalRouteOverrideCriteria = value.staticVnetLocalRouteOverrideCriteria;
       this._propagatedRouteTable.internalValue = value.propagatedRouteTable;
       this._staticVnetRoute.internalValue = value.staticVnetRoute;
     }
@@ -380,6 +413,54 @@ export class VirtualHubConnectionRoutingOutputReference extends cdktf.ComplexObj
   // Temporarily expose input value. Use with caution.
   public get associatedRouteTableIdInput() {
     return this._associatedRouteTableId;
+  }
+
+  // inbound_route_map_id - computed: false, optional: true, required: false
+  private _inboundRouteMapId?: string; 
+  public get inboundRouteMapId() {
+    return this.getStringAttribute('inbound_route_map_id');
+  }
+  public set inboundRouteMapId(value: string) {
+    this._inboundRouteMapId = value;
+  }
+  public resetInboundRouteMapId() {
+    this._inboundRouteMapId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get inboundRouteMapIdInput() {
+    return this._inboundRouteMapId;
+  }
+
+  // outbound_route_map_id - computed: false, optional: true, required: false
+  private _outboundRouteMapId?: string; 
+  public get outboundRouteMapId() {
+    return this.getStringAttribute('outbound_route_map_id');
+  }
+  public set outboundRouteMapId(value: string) {
+    this._outboundRouteMapId = value;
+  }
+  public resetOutboundRouteMapId() {
+    this._outboundRouteMapId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get outboundRouteMapIdInput() {
+    return this._outboundRouteMapId;
+  }
+
+  // static_vnet_local_route_override_criteria - computed: false, optional: true, required: false
+  private _staticVnetLocalRouteOverrideCriteria?: string; 
+  public get staticVnetLocalRouteOverrideCriteria() {
+    return this.getStringAttribute('static_vnet_local_route_override_criteria');
+  }
+  public set staticVnetLocalRouteOverrideCriteria(value: string) {
+    this._staticVnetLocalRouteOverrideCriteria = value;
+  }
+  public resetStaticVnetLocalRouteOverrideCriteria() {
+    this._staticVnetLocalRouteOverrideCriteria = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get staticVnetLocalRouteOverrideCriteriaInput() {
+    return this._staticVnetLocalRouteOverrideCriteria;
   }
 
   // propagated_route_table - computed: false, optional: true, required: false
@@ -416,19 +497,19 @@ export class VirtualHubConnectionRoutingOutputReference extends cdktf.ComplexObj
 }
 export interface VirtualHubConnectionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/virtual_hub_connection#create VirtualHubConnection#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/virtual_hub_connection#create VirtualHubConnection#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/virtual_hub_connection#delete VirtualHubConnection#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/virtual_hub_connection#delete VirtualHubConnection#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/virtual_hub_connection#read VirtualHubConnection#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/virtual_hub_connection#read VirtualHubConnection#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/virtual_hub_connection#update VirtualHubConnection#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/virtual_hub_connection#update VirtualHubConnection#update}
   */
   readonly update?: string;
 }
@@ -572,7 +653,7 @@ export class VirtualHubConnectionTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/virtual_hub_connection azurerm_virtual_hub_connection}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/virtual_hub_connection azurerm_virtual_hub_connection}
 */
 export class VirtualHubConnection extends cdktf.TerraformResource {
 
@@ -586,7 +667,7 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/virtual_hub_connection azurerm_virtual_hub_connection} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/virtual_hub_connection azurerm_virtual_hub_connection} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -597,7 +678,7 @@ export class VirtualHubConnection extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_virtual_hub_connection',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.71.0',
+        providerVersion: '3.72.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

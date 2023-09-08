@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,210 +13,210 @@ import * as cdktf from 'cdktf';
 
 export interface StorageAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#access_tier StorageAccount#access_tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#access_tier StorageAccount#access_tier}
   */
   readonly accessTier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#account_kind StorageAccount#account_kind}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#account_kind StorageAccount#account_kind}
   */
   readonly accountKind?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#account_replication_type StorageAccount#account_replication_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#account_replication_type StorageAccount#account_replication_type}
   */
   readonly accountReplicationType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#account_tier StorageAccount#account_tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#account_tier StorageAccount#account_tier}
   */
   readonly accountTier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#allow_nested_items_to_be_public StorageAccount#allow_nested_items_to_be_public}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#allow_nested_items_to_be_public StorageAccount#allow_nested_items_to_be_public}
   */
   readonly allowNestedItemsToBePublic?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#allowed_copy_scope StorageAccount#allowed_copy_scope}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#allowed_copy_scope StorageAccount#allowed_copy_scope}
   */
   readonly allowedCopyScope?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#cross_tenant_replication_enabled StorageAccount#cross_tenant_replication_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#cross_tenant_replication_enabled StorageAccount#cross_tenant_replication_enabled}
   */
   readonly crossTenantReplicationEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#default_to_oauth_authentication StorageAccount#default_to_oauth_authentication}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#default_to_oauth_authentication StorageAccount#default_to_oauth_authentication}
   */
   readonly defaultToOauthAuthentication?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#edge_zone StorageAccount#edge_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#edge_zone StorageAccount#edge_zone}
   */
   readonly edgeZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#enable_https_traffic_only StorageAccount#enable_https_traffic_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#enable_https_traffic_only StorageAccount#enable_https_traffic_only}
   */
   readonly enableHttpsTrafficOnly?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#id StorageAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#id StorageAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#infrastructure_encryption_enabled StorageAccount#infrastructure_encryption_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#infrastructure_encryption_enabled StorageAccount#infrastructure_encryption_enabled}
   */
   readonly infrastructureEncryptionEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#is_hns_enabled StorageAccount#is_hns_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#is_hns_enabled StorageAccount#is_hns_enabled}
   */
   readonly isHnsEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#large_file_share_enabled StorageAccount#large_file_share_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#large_file_share_enabled StorageAccount#large_file_share_enabled}
   */
   readonly largeFileShareEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#location StorageAccount#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#location StorageAccount#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#min_tls_version StorageAccount#min_tls_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#min_tls_version StorageAccount#min_tls_version}
   */
   readonly minTlsVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#name StorageAccount#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#name StorageAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#nfsv3_enabled StorageAccount#nfsv3_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#nfsv3_enabled StorageAccount#nfsv3_enabled}
   */
   readonly nfsv3Enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#public_network_access_enabled StorageAccount#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#public_network_access_enabled StorageAccount#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#queue_encryption_key_type StorageAccount#queue_encryption_key_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#queue_encryption_key_type StorageAccount#queue_encryption_key_type}
   */
   readonly queueEncryptionKeyType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#resource_group_name StorageAccount#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#resource_group_name StorageAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#sftp_enabled StorageAccount#sftp_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#sftp_enabled StorageAccount#sftp_enabled}
   */
   readonly sftpEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#shared_access_key_enabled StorageAccount#shared_access_key_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#shared_access_key_enabled StorageAccount#shared_access_key_enabled}
   */
   readonly sharedAccessKeyEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#table_encryption_key_type StorageAccount#table_encryption_key_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#table_encryption_key_type StorageAccount#table_encryption_key_type}
   */
   readonly tableEncryptionKeyType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#tags StorageAccount#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#tags StorageAccount#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * azure_files_authentication block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#azure_files_authentication StorageAccount#azure_files_authentication}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#azure_files_authentication StorageAccount#azure_files_authentication}
   */
   readonly azureFilesAuthentication?: StorageAccountAzureFilesAuthentication;
   /**
   * blob_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#blob_properties StorageAccount#blob_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#blob_properties StorageAccount#blob_properties}
   */
   readonly blobProperties?: StorageAccountBlobProperties;
   /**
   * custom_domain block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#custom_domain StorageAccount#custom_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#custom_domain StorageAccount#custom_domain}
   */
   readonly customDomain?: StorageAccountCustomDomain;
   /**
   * customer_managed_key block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#customer_managed_key StorageAccount#customer_managed_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#customer_managed_key StorageAccount#customer_managed_key}
   */
   readonly customerManagedKey?: StorageAccountCustomerManagedKey;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#identity StorageAccount#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#identity StorageAccount#identity}
   */
   readonly identity?: StorageAccountIdentity;
   /**
   * immutability_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#immutability_policy StorageAccount#immutability_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#immutability_policy StorageAccount#immutability_policy}
   */
   readonly immutabilityPolicy?: StorageAccountImmutabilityPolicy;
   /**
   * network_rules block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#network_rules StorageAccount#network_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#network_rules StorageAccount#network_rules}
   */
   readonly networkRules?: StorageAccountNetworkRules;
   /**
   * queue_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#queue_properties StorageAccount#queue_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#queue_properties StorageAccount#queue_properties}
   */
   readonly queueProperties?: StorageAccountQueueProperties;
   /**
   * routing block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#routing StorageAccount#routing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#routing StorageAccount#routing}
   */
   readonly routing?: StorageAccountRouting;
   /**
   * sas_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#sas_policy StorageAccount#sas_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#sas_policy StorageAccount#sas_policy}
   */
   readonly sasPolicy?: StorageAccountSasPolicy;
   /**
   * share_properties block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#share_properties StorageAccount#share_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#share_properties StorageAccount#share_properties}
   */
   readonly shareProperties?: StorageAccountShareProperties;
   /**
   * static_website block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#static_website StorageAccount#static_website}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#static_website StorageAccount#static_website}
   */
   readonly staticWebsite?: StorageAccountStaticWebsite;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#timeouts StorageAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#timeouts StorageAccount#timeouts}
   */
   readonly timeouts?: StorageAccountTimeouts;
 }
 export interface StorageAccountAzureFilesAuthenticationActiveDirectory {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#domain_guid StorageAccount#domain_guid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#domain_guid StorageAccount#domain_guid}
   */
   readonly domainGuid: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#domain_name StorageAccount#domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#domain_name StorageAccount#domain_name}
   */
   readonly domainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#domain_sid StorageAccount#domain_sid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#domain_sid StorageAccount#domain_sid}
   */
   readonly domainSid: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#forest_name StorageAccount#forest_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#forest_name StorageAccount#forest_name}
   */
   readonly forestName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#netbios_domain_name StorageAccount#netbios_domain_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#netbios_domain_name StorageAccount#netbios_domain_name}
   */
   readonly netbiosDomainName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#storage_sid StorageAccount#storage_sid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#storage_sid StorageAccount#storage_sid}
   */
   readonly storageSid: string;
 }
@@ -378,13 +378,13 @@ export class StorageAccountAzureFilesAuthenticationActiveDirectoryOutputReferenc
 }
 export interface StorageAccountAzureFilesAuthentication {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#directory_type StorageAccount#directory_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#directory_type StorageAccount#directory_type}
   */
   readonly directoryType: string;
   /**
   * active_directory block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#active_directory StorageAccount#active_directory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#active_directory StorageAccount#active_directory}
   */
   readonly activeDirectory?: StorageAccountAzureFilesAuthenticationActiveDirectory;
 }
@@ -469,7 +469,7 @@ export class StorageAccountAzureFilesAuthenticationOutputReference extends cdktf
 }
 export interface StorageAccountBlobPropertiesContainerDeleteRetentionPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#days StorageAccount#days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#days StorageAccount#days}
   */
   readonly days?: number;
 }
@@ -534,23 +534,23 @@ export class StorageAccountBlobPropertiesContainerDeleteRetentionPolicyOutputRef
 }
 export interface StorageAccountBlobPropertiesCorsRule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#allowed_headers StorageAccount#allowed_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#allowed_headers StorageAccount#allowed_headers}
   */
   readonly allowedHeaders: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#allowed_methods StorageAccount#allowed_methods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#allowed_methods StorageAccount#allowed_methods}
   */
   readonly allowedMethods: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#allowed_origins StorageAccount#allowed_origins}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#allowed_origins StorageAccount#allowed_origins}
   */
   readonly allowedOrigins: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#exposed_headers StorageAccount#exposed_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#exposed_headers StorageAccount#exposed_headers}
   */
   readonly exposedHeaders: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#max_age_in_seconds StorageAccount#max_age_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#max_age_in_seconds StorageAccount#max_age_in_seconds}
   */
   readonly maxAgeInSeconds: number;
 }
@@ -724,7 +724,7 @@ export class StorageAccountBlobPropertiesCorsRuleList extends cdktf.ComplexList 
 }
 export interface StorageAccountBlobPropertiesDeleteRetentionPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#days StorageAccount#days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#days StorageAccount#days}
   */
   readonly days?: number;
 }
@@ -789,7 +789,7 @@ export class StorageAccountBlobPropertiesDeleteRetentionPolicyOutputReference ex
 }
 export interface StorageAccountBlobPropertiesRestorePolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#days StorageAccount#days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#days StorageAccount#days}
   */
   readonly days: number;
 }
@@ -851,47 +851,47 @@ export class StorageAccountBlobPropertiesRestorePolicyOutputReference extends cd
 }
 export interface StorageAccountBlobProperties {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#change_feed_enabled StorageAccount#change_feed_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#change_feed_enabled StorageAccount#change_feed_enabled}
   */
   readonly changeFeedEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#change_feed_retention_in_days StorageAccount#change_feed_retention_in_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#change_feed_retention_in_days StorageAccount#change_feed_retention_in_days}
   */
   readonly changeFeedRetentionInDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#default_service_version StorageAccount#default_service_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#default_service_version StorageAccount#default_service_version}
   */
   readonly defaultServiceVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#last_access_time_enabled StorageAccount#last_access_time_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#last_access_time_enabled StorageAccount#last_access_time_enabled}
   */
   readonly lastAccessTimeEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#versioning_enabled StorageAccount#versioning_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#versioning_enabled StorageAccount#versioning_enabled}
   */
   readonly versioningEnabled?: boolean | cdktf.IResolvable;
   /**
   * container_delete_retention_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#container_delete_retention_policy StorageAccount#container_delete_retention_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#container_delete_retention_policy StorageAccount#container_delete_retention_policy}
   */
   readonly containerDeleteRetentionPolicy?: StorageAccountBlobPropertiesContainerDeleteRetentionPolicy;
   /**
   * cors_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#cors_rule StorageAccount#cors_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#cors_rule StorageAccount#cors_rule}
   */
   readonly corsRule?: StorageAccountBlobPropertiesCorsRule[] | cdktf.IResolvable;
   /**
   * delete_retention_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#delete_retention_policy StorageAccount#delete_retention_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#delete_retention_policy StorageAccount#delete_retention_policy}
   */
   readonly deleteRetentionPolicy?: StorageAccountBlobPropertiesDeleteRetentionPolicy;
   /**
   * restore_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#restore_policy StorageAccount#restore_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#restore_policy StorageAccount#restore_policy}
   */
   readonly restorePolicy?: StorageAccountBlobPropertiesRestorePolicy;
 }
@@ -1140,11 +1140,11 @@ export class StorageAccountBlobPropertiesOutputReference extends cdktf.ComplexOb
 }
 export interface StorageAccountCustomDomain {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#name StorageAccount#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#name StorageAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#use_subdomain StorageAccount#use_subdomain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#use_subdomain StorageAccount#use_subdomain}
   */
   readonly useSubdomain?: boolean | cdktf.IResolvable;
 }
@@ -1229,11 +1229,11 @@ export class StorageAccountCustomDomainOutputReference extends cdktf.ComplexObje
 }
 export interface StorageAccountCustomerManagedKey {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#key_vault_key_id StorageAccount#key_vault_key_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#key_vault_key_id StorageAccount#key_vault_key_id}
   */
   readonly keyVaultKeyId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#user_assigned_identity_id StorageAccount#user_assigned_identity_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#user_assigned_identity_id StorageAccount#user_assigned_identity_id}
   */
   readonly userAssignedIdentityId: string;
 }
@@ -1315,11 +1315,11 @@ export class StorageAccountCustomerManagedKeyOutputReference extends cdktf.Compl
 }
 export interface StorageAccountIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#identity_ids StorageAccount#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#identity_ids StorageAccount#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#type StorageAccount#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#type StorageAccount#type}
   */
   readonly type: string;
 }
@@ -1414,15 +1414,15 @@ export class StorageAccountIdentityOutputReference extends cdktf.ComplexObject {
 }
 export interface StorageAccountImmutabilityPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#allow_protected_append_writes StorageAccount#allow_protected_append_writes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#allow_protected_append_writes StorageAccount#allow_protected_append_writes}
   */
   readonly allowProtectedAppendWrites: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#period_since_creation_in_days StorageAccount#period_since_creation_in_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#period_since_creation_in_days StorageAccount#period_since_creation_in_days}
   */
   readonly periodSinceCreationInDays: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#state StorageAccount#state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#state StorageAccount#state}
   */
   readonly state: string;
 }
@@ -1524,11 +1524,11 @@ export class StorageAccountImmutabilityPolicyOutputReference extends cdktf.Compl
 }
 export interface StorageAccountNetworkRulesPrivateLinkAccess {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#endpoint_resource_id StorageAccount#endpoint_resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#endpoint_resource_id StorageAccount#endpoint_resource_id}
   */
   readonly endpointResourceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#endpoint_tenant_id StorageAccount#endpoint_tenant_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#endpoint_tenant_id StorageAccount#endpoint_tenant_id}
   */
   readonly endpointTenantId?: string;
 }
@@ -1645,25 +1645,25 @@ export class StorageAccountNetworkRulesPrivateLinkAccessList extends cdktf.Compl
 }
 export interface StorageAccountNetworkRules {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#bypass StorageAccount#bypass}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#bypass StorageAccount#bypass}
   */
   readonly bypass?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#default_action StorageAccount#default_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#default_action StorageAccount#default_action}
   */
   readonly defaultAction: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#ip_rules StorageAccount#ip_rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#ip_rules StorageAccount#ip_rules}
   */
   readonly ipRules?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#virtual_network_subnet_ids StorageAccount#virtual_network_subnet_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#virtual_network_subnet_ids StorageAccount#virtual_network_subnet_ids}
   */
   readonly virtualNetworkSubnetIds?: string[];
   /**
   * private_link_access block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#private_link_access StorageAccount#private_link_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#private_link_access StorageAccount#private_link_access}
   */
   readonly privateLinkAccess?: StorageAccountNetworkRulesPrivateLinkAccess[] | cdktf.IResolvable;
 }
@@ -1817,23 +1817,23 @@ export class StorageAccountNetworkRulesOutputReference extends cdktf.ComplexObje
 }
 export interface StorageAccountQueuePropertiesCorsRule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#allowed_headers StorageAccount#allowed_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#allowed_headers StorageAccount#allowed_headers}
   */
   readonly allowedHeaders: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#allowed_methods StorageAccount#allowed_methods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#allowed_methods StorageAccount#allowed_methods}
   */
   readonly allowedMethods: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#allowed_origins StorageAccount#allowed_origins}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#allowed_origins StorageAccount#allowed_origins}
   */
   readonly allowedOrigins: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#exposed_headers StorageAccount#exposed_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#exposed_headers StorageAccount#exposed_headers}
   */
   readonly exposedHeaders: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#max_age_in_seconds StorageAccount#max_age_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#max_age_in_seconds StorageAccount#max_age_in_seconds}
   */
   readonly maxAgeInSeconds: number;
 }
@@ -2007,19 +2007,19 @@ export class StorageAccountQueuePropertiesCorsRuleList extends cdktf.ComplexList
 }
 export interface StorageAccountQueuePropertiesHourMetrics {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#enabled StorageAccount#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#enabled StorageAccount#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#include_apis StorageAccount#include_apis}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#include_apis StorageAccount#include_apis}
   */
   readonly includeApis?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#retention_policy_days StorageAccount#retention_policy_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#retention_policy_days StorageAccount#retention_policy_days}
   */
   readonly retentionPolicyDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#version StorageAccount#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#version StorageAccount#version}
   */
   readonly version: string;
 }
@@ -2147,23 +2147,23 @@ export class StorageAccountQueuePropertiesHourMetricsOutputReference extends cdk
 }
 export interface StorageAccountQueuePropertiesLogging {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#delete StorageAccount#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#delete StorageAccount#delete}
   */
   readonly delete: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#read StorageAccount#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#read StorageAccount#read}
   */
   readonly read: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#retention_policy_days StorageAccount#retention_policy_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#retention_policy_days StorageAccount#retention_policy_days}
   */
   readonly retentionPolicyDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#version StorageAccount#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#version StorageAccount#version}
   */
   readonly version: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#write StorageAccount#write}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#write StorageAccount#write}
   */
   readonly write: boolean | cdktf.IResolvable;
 }
@@ -2308,19 +2308,19 @@ export class StorageAccountQueuePropertiesLoggingOutputReference extends cdktf.C
 }
 export interface StorageAccountQueuePropertiesMinuteMetrics {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#enabled StorageAccount#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#enabled StorageAccount#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#include_apis StorageAccount#include_apis}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#include_apis StorageAccount#include_apis}
   */
   readonly includeApis?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#retention_policy_days StorageAccount#retention_policy_days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#retention_policy_days StorageAccount#retention_policy_days}
   */
   readonly retentionPolicyDays?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#version StorageAccount#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#version StorageAccount#version}
   */
   readonly version: string;
 }
@@ -2450,25 +2450,25 @@ export interface StorageAccountQueueProperties {
   /**
   * cors_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#cors_rule StorageAccount#cors_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#cors_rule StorageAccount#cors_rule}
   */
   readonly corsRule?: StorageAccountQueuePropertiesCorsRule[] | cdktf.IResolvable;
   /**
   * hour_metrics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#hour_metrics StorageAccount#hour_metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#hour_metrics StorageAccount#hour_metrics}
   */
   readonly hourMetrics?: StorageAccountQueuePropertiesHourMetrics;
   /**
   * logging block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#logging StorageAccount#logging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#logging StorageAccount#logging}
   */
   readonly logging?: StorageAccountQueuePropertiesLogging;
   /**
   * minute_metrics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#minute_metrics StorageAccount#minute_metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#minute_metrics StorageAccount#minute_metrics}
   */
   readonly minuteMetrics?: StorageAccountQueuePropertiesMinuteMetrics;
 }
@@ -2602,15 +2602,15 @@ export class StorageAccountQueuePropertiesOutputReference extends cdktf.ComplexO
 }
 export interface StorageAccountRouting {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#choice StorageAccount#choice}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#choice StorageAccount#choice}
   */
   readonly choice?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#publish_internet_endpoints StorageAccount#publish_internet_endpoints}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#publish_internet_endpoints StorageAccount#publish_internet_endpoints}
   */
   readonly publishInternetEndpoints?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#publish_microsoft_endpoints StorageAccount#publish_microsoft_endpoints}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#publish_microsoft_endpoints StorageAccount#publish_microsoft_endpoints}
   */
   readonly publishMicrosoftEndpoints?: boolean | cdktf.IResolvable;
 }
@@ -2721,11 +2721,11 @@ export class StorageAccountRoutingOutputReference extends cdktf.ComplexObject {
 }
 export interface StorageAccountSasPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#expiration_action StorageAccount#expiration_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#expiration_action StorageAccount#expiration_action}
   */
   readonly expirationAction?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#expiration_period StorageAccount#expiration_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#expiration_period StorageAccount#expiration_period}
   */
   readonly expirationPeriod: string;
 }
@@ -2810,23 +2810,23 @@ export class StorageAccountSasPolicyOutputReference extends cdktf.ComplexObject 
 }
 export interface StorageAccountSharePropertiesCorsRule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#allowed_headers StorageAccount#allowed_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#allowed_headers StorageAccount#allowed_headers}
   */
   readonly allowedHeaders: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#allowed_methods StorageAccount#allowed_methods}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#allowed_methods StorageAccount#allowed_methods}
   */
   readonly allowedMethods: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#allowed_origins StorageAccount#allowed_origins}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#allowed_origins StorageAccount#allowed_origins}
   */
   readonly allowedOrigins: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#exposed_headers StorageAccount#exposed_headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#exposed_headers StorageAccount#exposed_headers}
   */
   readonly exposedHeaders: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#max_age_in_seconds StorageAccount#max_age_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#max_age_in_seconds StorageAccount#max_age_in_seconds}
   */
   readonly maxAgeInSeconds: number;
 }
@@ -3000,7 +3000,7 @@ export class StorageAccountSharePropertiesCorsRuleList extends cdktf.ComplexList
 }
 export interface StorageAccountSharePropertiesRetentionPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#days StorageAccount#days}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#days StorageAccount#days}
   */
   readonly days?: number;
 }
@@ -3065,23 +3065,23 @@ export class StorageAccountSharePropertiesRetentionPolicyOutputReference extends
 }
 export interface StorageAccountSharePropertiesSmb {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#authentication_types StorageAccount#authentication_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#authentication_types StorageAccount#authentication_types}
   */
   readonly authenticationTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#channel_encryption_type StorageAccount#channel_encryption_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#channel_encryption_type StorageAccount#channel_encryption_type}
   */
   readonly channelEncryptionType?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#kerberos_ticket_encryption_type StorageAccount#kerberos_ticket_encryption_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#kerberos_ticket_encryption_type StorageAccount#kerberos_ticket_encryption_type}
   */
   readonly kerberosTicketEncryptionType?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#multichannel_enabled StorageAccount#multichannel_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#multichannel_enabled StorageAccount#multichannel_enabled}
   */
   readonly multichannelEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#versions StorageAccount#versions}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#versions StorageAccount#versions}
   */
   readonly versions?: string[];
 }
@@ -3240,19 +3240,19 @@ export interface StorageAccountShareProperties {
   /**
   * cors_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#cors_rule StorageAccount#cors_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#cors_rule StorageAccount#cors_rule}
   */
   readonly corsRule?: StorageAccountSharePropertiesCorsRule[] | cdktf.IResolvable;
   /**
   * retention_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#retention_policy StorageAccount#retention_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#retention_policy StorageAccount#retention_policy}
   */
   readonly retentionPolicy?: StorageAccountSharePropertiesRetentionPolicy;
   /**
   * smb block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#smb StorageAccount#smb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#smb StorageAccount#smb}
   */
   readonly smb?: StorageAccountSharePropertiesSmb;
 }
@@ -3363,11 +3363,11 @@ export class StorageAccountSharePropertiesOutputReference extends cdktf.ComplexO
 }
 export interface StorageAccountStaticWebsite {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#error_404_document StorageAccount#error_404_document}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#error_404_document StorageAccount#error_404_document}
   */
   readonly error404Document?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#index_document StorageAccount#index_document}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#index_document StorageAccount#index_document}
   */
   readonly indexDocument?: string;
 }
@@ -3455,19 +3455,19 @@ export class StorageAccountStaticWebsiteOutputReference extends cdktf.ComplexObj
 }
 export interface StorageAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#create StorageAccount#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#create StorageAccount#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#delete StorageAccount#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#delete StorageAccount#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#read StorageAccount#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#read StorageAccount#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account#update StorageAccount#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account#update StorageAccount#update}
   */
   readonly update?: string;
 }
@@ -3611,7 +3611,7 @@ export class StorageAccountTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account azurerm_storage_account}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account azurerm_storage_account}
 */
 export class StorageAccount extends cdktf.TerraformResource {
 
@@ -3625,7 +3625,7 @@ export class StorageAccount extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/storage_account azurerm_storage_account} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_account azurerm_storage_account} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -3636,7 +3636,7 @@ export class StorageAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.71.0',
+        providerVersion: '3.72.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

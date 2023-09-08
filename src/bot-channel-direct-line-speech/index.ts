@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/bot_channel_direct_line_speech
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/bot_channel_direct_line_speech
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,62 +13,66 @@ import * as cdktf from 'cdktf';
 
 export interface BotChannelDirectLineSpeechConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/bot_channel_direct_line_speech#bot_name BotChannelDirectLineSpeech#bot_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/bot_channel_direct_line_speech#bot_name BotChannelDirectLineSpeech#bot_name}
   */
   readonly botName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/bot_channel_direct_line_speech#cognitive_service_access_key BotChannelDirectLineSpeech#cognitive_service_access_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/bot_channel_direct_line_speech#cognitive_account_id BotChannelDirectLineSpeech#cognitive_account_id}
+  */
+  readonly cognitiveAccountId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/bot_channel_direct_line_speech#cognitive_service_access_key BotChannelDirectLineSpeech#cognitive_service_access_key}
   */
   readonly cognitiveServiceAccessKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/bot_channel_direct_line_speech#cognitive_service_location BotChannelDirectLineSpeech#cognitive_service_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/bot_channel_direct_line_speech#cognitive_service_location BotChannelDirectLineSpeech#cognitive_service_location}
   */
   readonly cognitiveServiceLocation: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/bot_channel_direct_line_speech#custom_speech_model_id BotChannelDirectLineSpeech#custom_speech_model_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/bot_channel_direct_line_speech#custom_speech_model_id BotChannelDirectLineSpeech#custom_speech_model_id}
   */
   readonly customSpeechModelId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/bot_channel_direct_line_speech#custom_voice_deployment_id BotChannelDirectLineSpeech#custom_voice_deployment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/bot_channel_direct_line_speech#custom_voice_deployment_id BotChannelDirectLineSpeech#custom_voice_deployment_id}
   */
   readonly customVoiceDeploymentId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/bot_channel_direct_line_speech#id BotChannelDirectLineSpeech#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/bot_channel_direct_line_speech#id BotChannelDirectLineSpeech#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/bot_channel_direct_line_speech#location BotChannelDirectLineSpeech#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/bot_channel_direct_line_speech#location BotChannelDirectLineSpeech#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/bot_channel_direct_line_speech#resource_group_name BotChannelDirectLineSpeech#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/bot_channel_direct_line_speech#resource_group_name BotChannelDirectLineSpeech#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/bot_channel_direct_line_speech#timeouts BotChannelDirectLineSpeech#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/bot_channel_direct_line_speech#timeouts BotChannelDirectLineSpeech#timeouts}
   */
   readonly timeouts?: BotChannelDirectLineSpeechTimeouts;
 }
 export interface BotChannelDirectLineSpeechTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/bot_channel_direct_line_speech#create BotChannelDirectLineSpeech#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/bot_channel_direct_line_speech#create BotChannelDirectLineSpeech#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/bot_channel_direct_line_speech#delete BotChannelDirectLineSpeech#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/bot_channel_direct_line_speech#delete BotChannelDirectLineSpeech#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/bot_channel_direct_line_speech#read BotChannelDirectLineSpeech#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/bot_channel_direct_line_speech#read BotChannelDirectLineSpeech#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/bot_channel_direct_line_speech#update BotChannelDirectLineSpeech#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/bot_channel_direct_line_speech#update BotChannelDirectLineSpeech#update}
   */
   readonly update?: string;
 }
@@ -212,7 +216,7 @@ export class BotChannelDirectLineSpeechTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/bot_channel_direct_line_speech azurerm_bot_channel_direct_line_speech}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/bot_channel_direct_line_speech azurerm_bot_channel_direct_line_speech}
 */
 export class BotChannelDirectLineSpeech extends cdktf.TerraformResource {
 
@@ -226,7 +230,7 @@ export class BotChannelDirectLineSpeech extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/bot_channel_direct_line_speech azurerm_bot_channel_direct_line_speech} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/bot_channel_direct_line_speech azurerm_bot_channel_direct_line_speech} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -237,7 +241,7 @@ export class BotChannelDirectLineSpeech extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_bot_channel_direct_line_speech',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.71.0',
+        providerVersion: '3.72.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -249,6 +253,7 @@ export class BotChannelDirectLineSpeech extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._botName = config.botName;
+    this._cognitiveAccountId = config.cognitiveAccountId;
     this._cognitiveServiceAccessKey = config.cognitiveServiceAccessKey;
     this._cognitiveServiceLocation = config.cognitiveServiceLocation;
     this._customSpeechModelId = config.customSpeechModelId;
@@ -274,6 +279,22 @@ export class BotChannelDirectLineSpeech extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get botNameInput() {
     return this._botName;
+  }
+
+  // cognitive_account_id - computed: false, optional: true, required: false
+  private _cognitiveAccountId?: string; 
+  public get cognitiveAccountId() {
+    return this.getStringAttribute('cognitive_account_id');
+  }
+  public set cognitiveAccountId(value: string) {
+    this._cognitiveAccountId = value;
+  }
+  public resetCognitiveAccountId() {
+    this._cognitiveAccountId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get cognitiveAccountIdInput() {
+    return this._cognitiveAccountId;
   }
 
   // cognitive_service_access_key - computed: false, optional: false, required: true
@@ -399,6 +420,7 @@ export class BotChannelDirectLineSpeech extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       bot_name: cdktf.stringToTerraform(this._botName),
+      cognitive_account_id: cdktf.stringToTerraform(this._cognitiveAccountId),
       cognitive_service_access_key: cdktf.stringToTerraform(this._cognitiveServiceAccessKey),
       cognitive_service_location: cdktf.stringToTerraform(this._cognitiveServiceLocation),
       custom_speech_model_id: cdktf.stringToTerraform(this._customSpeechModelId),

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,96 +13,96 @@ import * as cdktf from 'cdktf';
 
 export interface MonitorDataCollectionRuleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#data_collection_endpoint_id MonitorDataCollectionRule#data_collection_endpoint_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#data_collection_endpoint_id MonitorDataCollectionRule#data_collection_endpoint_id}
   */
   readonly dataCollectionEndpointId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#description MonitorDataCollectionRule#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#description MonitorDataCollectionRule#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#id MonitorDataCollectionRule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#id MonitorDataCollectionRule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#kind MonitorDataCollectionRule#kind}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#kind MonitorDataCollectionRule#kind}
   */
   readonly kind?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#location MonitorDataCollectionRule#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#location MonitorDataCollectionRule#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#resource_group_name MonitorDataCollectionRule#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#resource_group_name MonitorDataCollectionRule#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#tags MonitorDataCollectionRule#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#tags MonitorDataCollectionRule#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * data_flow block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#data_flow MonitorDataCollectionRule#data_flow}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#data_flow MonitorDataCollectionRule#data_flow}
   */
   readonly dataFlow: MonitorDataCollectionRuleDataFlow[] | cdktf.IResolvable;
   /**
   * data_sources block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#data_sources MonitorDataCollectionRule#data_sources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#data_sources MonitorDataCollectionRule#data_sources}
   */
   readonly dataSources?: MonitorDataCollectionRuleDataSources;
   /**
   * destinations block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#destinations MonitorDataCollectionRule#destinations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#destinations MonitorDataCollectionRule#destinations}
   */
   readonly destinations: MonitorDataCollectionRuleDestinations;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#identity MonitorDataCollectionRule#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#identity MonitorDataCollectionRule#identity}
   */
   readonly identity?: MonitorDataCollectionRuleIdentity;
   /**
   * stream_declaration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#stream_declaration MonitorDataCollectionRule#stream_declaration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#stream_declaration MonitorDataCollectionRule#stream_declaration}
   */
   readonly streamDeclaration?: MonitorDataCollectionRuleStreamDeclaration[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#timeouts MonitorDataCollectionRule#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#timeouts MonitorDataCollectionRule#timeouts}
   */
   readonly timeouts?: MonitorDataCollectionRuleTimeouts;
 }
 export interface MonitorDataCollectionRuleDataFlow {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#built_in_transform MonitorDataCollectionRule#built_in_transform}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#built_in_transform MonitorDataCollectionRule#built_in_transform}
   */
   readonly builtInTransform?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#destinations MonitorDataCollectionRule#destinations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#destinations MonitorDataCollectionRule#destinations}
   */
   readonly destinations: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#output_stream MonitorDataCollectionRule#output_stream}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#output_stream MonitorDataCollectionRule#output_stream}
   */
   readonly outputStream?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#streams MonitorDataCollectionRule#streams}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#streams MonitorDataCollectionRule#streams}
   */
   readonly streams: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#transform_kql MonitorDataCollectionRule#transform_kql}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#transform_kql MonitorDataCollectionRule#transform_kql}
   */
   readonly transformKql?: string;
 }
@@ -285,15 +285,15 @@ export class MonitorDataCollectionRuleDataFlowList extends cdktf.ComplexList {
 }
 export interface MonitorDataCollectionRuleDataSourcesDataImportEventHubDataSource {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#consumer_group MonitorDataCollectionRule#consumer_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#consumer_group MonitorDataCollectionRule#consumer_group}
   */
   readonly consumerGroup?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#stream MonitorDataCollectionRule#stream}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#stream MonitorDataCollectionRule#stream}
   */
   readonly stream: string;
 }
@@ -432,7 +432,7 @@ export interface MonitorDataCollectionRuleDataSourcesDataImport {
   /**
   * event_hub_data_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#event_hub_data_source MonitorDataCollectionRule#event_hub_data_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#event_hub_data_source MonitorDataCollectionRule#event_hub_data_source}
   */
   readonly eventHubDataSource: MonitorDataCollectionRuleDataSourcesDataImportEventHubDataSource[] | cdktf.IResolvable;
 }
@@ -494,23 +494,23 @@ export class MonitorDataCollectionRuleDataSourcesDataImportOutputReference exten
 }
 export interface MonitorDataCollectionRuleDataSourcesExtension {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#extension_json MonitorDataCollectionRule#extension_json}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#extension_json MonitorDataCollectionRule#extension_json}
   */
   readonly extensionJson?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#extension_name MonitorDataCollectionRule#extension_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#extension_name MonitorDataCollectionRule#extension_name}
   */
   readonly extensionName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#input_data_sources MonitorDataCollectionRule#input_data_sources}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#input_data_sources MonitorDataCollectionRule#input_data_sources}
   */
   readonly inputDataSources?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#streams MonitorDataCollectionRule#streams}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#streams MonitorDataCollectionRule#streams}
   */
   readonly streams: string[];
 }
@@ -690,15 +690,15 @@ export class MonitorDataCollectionRuleDataSourcesExtensionList extends cdktf.Com
 }
 export interface MonitorDataCollectionRuleDataSourcesIisLog {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#log_directories MonitorDataCollectionRule#log_directories}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#log_directories MonitorDataCollectionRule#log_directories}
   */
   readonly logDirectories?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#streams MonitorDataCollectionRule#streams}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#streams MonitorDataCollectionRule#streams}
   */
   readonly streams: string[];
 }
@@ -835,7 +835,7 @@ export class MonitorDataCollectionRuleDataSourcesIisLogList extends cdktf.Comple
 }
 export interface MonitorDataCollectionRuleDataSourcesLogFileSettingsText {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#record_start_timestamp_format MonitorDataCollectionRule#record_start_timestamp_format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#record_start_timestamp_format MonitorDataCollectionRule#record_start_timestamp_format}
   */
   readonly recordStartTimestampFormat: string;
 }
@@ -899,7 +899,7 @@ export interface MonitorDataCollectionRuleDataSourcesLogFileSettings {
   /**
   * text block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#text MonitorDataCollectionRule#text}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#text MonitorDataCollectionRule#text}
   */
   readonly text: MonitorDataCollectionRuleDataSourcesLogFileSettingsText;
 }
@@ -961,25 +961,25 @@ export class MonitorDataCollectionRuleDataSourcesLogFileSettingsOutputReference 
 }
 export interface MonitorDataCollectionRuleDataSourcesLogFile {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#file_patterns MonitorDataCollectionRule#file_patterns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#file_patterns MonitorDataCollectionRule#file_patterns}
   */
   readonly filePatterns: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#format MonitorDataCollectionRule#format}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#format MonitorDataCollectionRule#format}
   */
   readonly format: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#streams MonitorDataCollectionRule#streams}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#streams MonitorDataCollectionRule#streams}
   */
   readonly streams: string[];
   /**
   * settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#settings MonitorDataCollectionRule#settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#settings MonitorDataCollectionRule#settings}
   */
   readonly settings?: MonitorDataCollectionRuleDataSourcesLogFileSettings;
 }
@@ -1156,19 +1156,19 @@ export class MonitorDataCollectionRuleDataSourcesLogFileList extends cdktf.Compl
 }
 export interface MonitorDataCollectionRuleDataSourcesPerformanceCounter {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#counter_specifiers MonitorDataCollectionRule#counter_specifiers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#counter_specifiers MonitorDataCollectionRule#counter_specifiers}
   */
   readonly counterSpecifiers: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#sampling_frequency_in_seconds MonitorDataCollectionRule#sampling_frequency_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#sampling_frequency_in_seconds MonitorDataCollectionRule#sampling_frequency_in_seconds}
   */
   readonly samplingFrequencyInSeconds: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#streams MonitorDataCollectionRule#streams}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#streams MonitorDataCollectionRule#streams}
   */
   readonly streams: string[];
 }
@@ -1322,11 +1322,11 @@ export class MonitorDataCollectionRuleDataSourcesPerformanceCounterList extends 
 }
 export interface MonitorDataCollectionRuleDataSourcesPlatformTelemetry {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#streams MonitorDataCollectionRule#streams}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#streams MonitorDataCollectionRule#streams}
   */
   readonly streams: string[];
 }
@@ -1440,11 +1440,11 @@ export class MonitorDataCollectionRuleDataSourcesPlatformTelemetryList extends c
 }
 export interface MonitorDataCollectionRuleDataSourcesPrometheusForwarderLabelIncludeFilter {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#label MonitorDataCollectionRule#label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#label MonitorDataCollectionRule#label}
   */
   readonly label: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#value MonitorDataCollectionRule#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#value MonitorDataCollectionRule#value}
   */
   readonly value: string;
 }
@@ -1558,17 +1558,17 @@ export class MonitorDataCollectionRuleDataSourcesPrometheusForwarderLabelInclude
 }
 export interface MonitorDataCollectionRuleDataSourcesPrometheusForwarder {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#streams MonitorDataCollectionRule#streams}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#streams MonitorDataCollectionRule#streams}
   */
   readonly streams: string[];
   /**
   * label_include_filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#label_include_filter MonitorDataCollectionRule#label_include_filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#label_include_filter MonitorDataCollectionRule#label_include_filter}
   */
   readonly labelIncludeFilter?: MonitorDataCollectionRuleDataSourcesPrometheusForwarderLabelIncludeFilter[] | cdktf.IResolvable;
 }
@@ -1705,19 +1705,19 @@ export class MonitorDataCollectionRuleDataSourcesPrometheusForwarderList extends
 }
 export interface MonitorDataCollectionRuleDataSourcesSyslog {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#facility_names MonitorDataCollectionRule#facility_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#facility_names MonitorDataCollectionRule#facility_names}
   */
   readonly facilityNames: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#log_levels MonitorDataCollectionRule#log_levels}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#log_levels MonitorDataCollectionRule#log_levels}
   */
   readonly logLevels: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#streams MonitorDataCollectionRule#streams}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#streams MonitorDataCollectionRule#streams}
   */
   readonly streams?: string[];
 }
@@ -1874,15 +1874,15 @@ export class MonitorDataCollectionRuleDataSourcesSyslogList extends cdktf.Comple
 }
 export interface MonitorDataCollectionRuleDataSourcesWindowsEventLog {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#streams MonitorDataCollectionRule#streams}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#streams MonitorDataCollectionRule#streams}
   */
   readonly streams: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#x_path_queries MonitorDataCollectionRule#x_path_queries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#x_path_queries MonitorDataCollectionRule#x_path_queries}
   */
   readonly xPathQueries: string[];
 }
@@ -2016,11 +2016,11 @@ export class MonitorDataCollectionRuleDataSourcesWindowsEventLogList extends cdk
 }
 export interface MonitorDataCollectionRuleDataSourcesWindowsFirewallLog {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#streams MonitorDataCollectionRule#streams}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#streams MonitorDataCollectionRule#streams}
   */
   readonly streams: string[];
 }
@@ -2136,61 +2136,61 @@ export interface MonitorDataCollectionRuleDataSources {
   /**
   * data_import block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#data_import MonitorDataCollectionRule#data_import}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#data_import MonitorDataCollectionRule#data_import}
   */
   readonly dataImport?: MonitorDataCollectionRuleDataSourcesDataImport;
   /**
   * extension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#extension MonitorDataCollectionRule#extension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#extension MonitorDataCollectionRule#extension}
   */
   readonly extension?: MonitorDataCollectionRuleDataSourcesExtension[] | cdktf.IResolvable;
   /**
   * iis_log block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#iis_log MonitorDataCollectionRule#iis_log}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#iis_log MonitorDataCollectionRule#iis_log}
   */
   readonly iisLog?: MonitorDataCollectionRuleDataSourcesIisLog[] | cdktf.IResolvable;
   /**
   * log_file block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#log_file MonitorDataCollectionRule#log_file}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#log_file MonitorDataCollectionRule#log_file}
   */
   readonly logFile?: MonitorDataCollectionRuleDataSourcesLogFile[] | cdktf.IResolvable;
   /**
   * performance_counter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#performance_counter MonitorDataCollectionRule#performance_counter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#performance_counter MonitorDataCollectionRule#performance_counter}
   */
   readonly performanceCounter?: MonitorDataCollectionRuleDataSourcesPerformanceCounter[] | cdktf.IResolvable;
   /**
   * platform_telemetry block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#platform_telemetry MonitorDataCollectionRule#platform_telemetry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#platform_telemetry MonitorDataCollectionRule#platform_telemetry}
   */
   readonly platformTelemetry?: MonitorDataCollectionRuleDataSourcesPlatformTelemetry[] | cdktf.IResolvable;
   /**
   * prometheus_forwarder block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#prometheus_forwarder MonitorDataCollectionRule#prometheus_forwarder}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#prometheus_forwarder MonitorDataCollectionRule#prometheus_forwarder}
   */
   readonly prometheusForwarder?: MonitorDataCollectionRuleDataSourcesPrometheusForwarder[] | cdktf.IResolvable;
   /**
   * syslog block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#syslog MonitorDataCollectionRule#syslog}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#syslog MonitorDataCollectionRule#syslog}
   */
   readonly syslog?: MonitorDataCollectionRuleDataSourcesSyslog[] | cdktf.IResolvable;
   /**
   * windows_event_log block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#windows_event_log MonitorDataCollectionRule#windows_event_log}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#windows_event_log MonitorDataCollectionRule#windows_event_log}
   */
   readonly windowsEventLog?: MonitorDataCollectionRuleDataSourcesWindowsEventLog[] | cdktf.IResolvable;
   /**
   * windows_firewall_log block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#windows_firewall_log MonitorDataCollectionRule#windows_firewall_log}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#windows_firewall_log MonitorDataCollectionRule#windows_firewall_log}
   */
   readonly windowsFirewallLog?: MonitorDataCollectionRuleDataSourcesWindowsFirewallLog[] | cdktf.IResolvable;
 }
@@ -2462,7 +2462,7 @@ export class MonitorDataCollectionRuleDataSourcesOutputReference extends cdktf.C
 }
 export interface MonitorDataCollectionRuleDestinationsAzureMonitorMetrics {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
   */
   readonly name: string;
 }
@@ -2524,11 +2524,11 @@ export class MonitorDataCollectionRuleDestinationsAzureMonitorMetricsOutputRefer
 }
 export interface MonitorDataCollectionRuleDestinationsEventHub {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#event_hub_id MonitorDataCollectionRule#event_hub_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#event_hub_id MonitorDataCollectionRule#event_hub_id}
   */
   readonly eventHubId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
   */
   readonly name: string;
 }
@@ -2610,11 +2610,11 @@ export class MonitorDataCollectionRuleDestinationsEventHubOutputReference extend
 }
 export interface MonitorDataCollectionRuleDestinationsEventHubDirect {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#event_hub_id MonitorDataCollectionRule#event_hub_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#event_hub_id MonitorDataCollectionRule#event_hub_id}
   */
   readonly eventHubId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
   */
   readonly name: string;
 }
@@ -2696,11 +2696,11 @@ export class MonitorDataCollectionRuleDestinationsEventHubDirectOutputReference 
 }
 export interface MonitorDataCollectionRuleDestinationsLogAnalytics {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#workspace_resource_id MonitorDataCollectionRule#workspace_resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#workspace_resource_id MonitorDataCollectionRule#workspace_resource_id}
   */
   readonly workspaceResourceId: string;
 }
@@ -2814,11 +2814,11 @@ export class MonitorDataCollectionRuleDestinationsLogAnalyticsList extends cdktf
 }
 export interface MonitorDataCollectionRuleDestinationsMonitorAccount {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#monitor_account_id MonitorDataCollectionRule#monitor_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#monitor_account_id MonitorDataCollectionRule#monitor_account_id}
   */
   readonly monitorAccountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
   */
   readonly name: string;
 }
@@ -2932,15 +2932,15 @@ export class MonitorDataCollectionRuleDestinationsMonitorAccountList extends cdk
 }
 export interface MonitorDataCollectionRuleDestinationsStorageBlob {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#container_name MonitorDataCollectionRule#container_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#container_name MonitorDataCollectionRule#container_name}
   */
   readonly containerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#storage_account_id MonitorDataCollectionRule#storage_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#storage_account_id MonitorDataCollectionRule#storage_account_id}
   */
   readonly storageAccountId: string;
 }
@@ -3074,15 +3074,15 @@ export class MonitorDataCollectionRuleDestinationsStorageBlobList extends cdktf.
 }
 export interface MonitorDataCollectionRuleDestinationsStorageBlobDirect {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#container_name MonitorDataCollectionRule#container_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#container_name MonitorDataCollectionRule#container_name}
   */
   readonly containerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#storage_account_id MonitorDataCollectionRule#storage_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#storage_account_id MonitorDataCollectionRule#storage_account_id}
   */
   readonly storageAccountId: string;
 }
@@ -3216,15 +3216,15 @@ export class MonitorDataCollectionRuleDestinationsStorageBlobDirectList extends 
 }
 export interface MonitorDataCollectionRuleDestinationsStorageTableDirect {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#storage_account_id MonitorDataCollectionRule#storage_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#storage_account_id MonitorDataCollectionRule#storage_account_id}
   */
   readonly storageAccountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#table_name MonitorDataCollectionRule#table_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#table_name MonitorDataCollectionRule#table_name}
   */
   readonly tableName: string;
 }
@@ -3360,49 +3360,49 @@ export interface MonitorDataCollectionRuleDestinations {
   /**
   * azure_monitor_metrics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#azure_monitor_metrics MonitorDataCollectionRule#azure_monitor_metrics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#azure_monitor_metrics MonitorDataCollectionRule#azure_monitor_metrics}
   */
   readonly azureMonitorMetrics?: MonitorDataCollectionRuleDestinationsAzureMonitorMetrics;
   /**
   * event_hub block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#event_hub MonitorDataCollectionRule#event_hub}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#event_hub MonitorDataCollectionRule#event_hub}
   */
   readonly eventHub?: MonitorDataCollectionRuleDestinationsEventHub;
   /**
   * event_hub_direct block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#event_hub_direct MonitorDataCollectionRule#event_hub_direct}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#event_hub_direct MonitorDataCollectionRule#event_hub_direct}
   */
   readonly eventHubDirect?: MonitorDataCollectionRuleDestinationsEventHubDirect;
   /**
   * log_analytics block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#log_analytics MonitorDataCollectionRule#log_analytics}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#log_analytics MonitorDataCollectionRule#log_analytics}
   */
   readonly logAnalytics?: MonitorDataCollectionRuleDestinationsLogAnalytics[] | cdktf.IResolvable;
   /**
   * monitor_account block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#monitor_account MonitorDataCollectionRule#monitor_account}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#monitor_account MonitorDataCollectionRule#monitor_account}
   */
   readonly monitorAccount?: MonitorDataCollectionRuleDestinationsMonitorAccount[] | cdktf.IResolvable;
   /**
   * storage_blob block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#storage_blob MonitorDataCollectionRule#storage_blob}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#storage_blob MonitorDataCollectionRule#storage_blob}
   */
   readonly storageBlob?: MonitorDataCollectionRuleDestinationsStorageBlob[] | cdktf.IResolvable;
   /**
   * storage_blob_direct block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#storage_blob_direct MonitorDataCollectionRule#storage_blob_direct}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#storage_blob_direct MonitorDataCollectionRule#storage_blob_direct}
   */
   readonly storageBlobDirect?: MonitorDataCollectionRuleDestinationsStorageBlobDirect[] | cdktf.IResolvable;
   /**
   * storage_table_direct block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#storage_table_direct MonitorDataCollectionRule#storage_table_direct}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#storage_table_direct MonitorDataCollectionRule#storage_table_direct}
   */
   readonly storageTableDirect?: MonitorDataCollectionRuleDestinationsStorageTableDirect[] | cdktf.IResolvable;
 }
@@ -3628,11 +3628,11 @@ export class MonitorDataCollectionRuleDestinationsOutputReference extends cdktf.
 }
 export interface MonitorDataCollectionRuleIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#identity_ids MonitorDataCollectionRule#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#identity_ids MonitorDataCollectionRule#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#type MonitorDataCollectionRule#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#type MonitorDataCollectionRule#type}
   */
   readonly type: string;
 }
@@ -3727,11 +3727,11 @@ export class MonitorDataCollectionRuleIdentityOutputReference extends cdktf.Comp
 }
 export interface MonitorDataCollectionRuleStreamDeclarationColumn {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#name MonitorDataCollectionRule#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#type MonitorDataCollectionRule#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#type MonitorDataCollectionRule#type}
   */
   readonly type: string;
 }
@@ -3845,13 +3845,13 @@ export class MonitorDataCollectionRuleStreamDeclarationColumnList extends cdktf.
 }
 export interface MonitorDataCollectionRuleStreamDeclaration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#stream_name MonitorDataCollectionRule#stream_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#stream_name MonitorDataCollectionRule#stream_name}
   */
   readonly streamName: string;
   /**
   * column block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#column MonitorDataCollectionRule#column}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#column MonitorDataCollectionRule#column}
   */
   readonly column: MonitorDataCollectionRuleStreamDeclarationColumn[] | cdktf.IResolvable;
 }
@@ -3965,19 +3965,19 @@ export class MonitorDataCollectionRuleStreamDeclarationList extends cdktf.Comple
 }
 export interface MonitorDataCollectionRuleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#create MonitorDataCollectionRule#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#create MonitorDataCollectionRule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#delete MonitorDataCollectionRule#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#delete MonitorDataCollectionRule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#read MonitorDataCollectionRule#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#read MonitorDataCollectionRule#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule#update MonitorDataCollectionRule#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule#update MonitorDataCollectionRule#update}
   */
   readonly update?: string;
 }
@@ -4121,7 +4121,7 @@ export class MonitorDataCollectionRuleTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule azurerm_monitor_data_collection_rule}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule azurerm_monitor_data_collection_rule}
 */
 export class MonitorDataCollectionRule extends cdktf.TerraformResource {
 
@@ -4135,7 +4135,7 @@ export class MonitorDataCollectionRule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.71.0/docs/resources/monitor_data_collection_rule azurerm_monitor_data_collection_rule} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_data_collection_rule azurerm_monitor_data_collection_rule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -4146,7 +4146,7 @@ export class MonitorDataCollectionRule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_monitor_data_collection_rule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.71.0',
+        providerVersion: '3.72.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
