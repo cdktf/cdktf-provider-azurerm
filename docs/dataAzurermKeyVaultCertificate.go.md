@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 dataazurermkeyvaultcertificate.NewDataAzurermKeyVaultCertificate(scope Construct, id *string, config DataAzurermKeyVaultCertificateConfig) DataAzurermKeyVaultCertificate
 ```
@@ -304,7 +304,7 @@ func ResetVersion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificate.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 dataazurermkeyvaultcertificate.DataAzurermKeyVaultCertificate_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificate.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 dataazurermkeyvaultcertificate.DataAzurermKeyVaultCertificate_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ dataazurermkeyvaultcertificate.DataAzurermKeyVaultCertificate_IsTerraformElement
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificate.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 dataazurermkeyvaultcertificate.DataAzurermKeyVaultCertificate_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -769,7 +769,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 &dataazurermkeyvaultcertificate.DataAzurermKeyVaultCertificateCertificatePolicy {
 
@@ -782,7 +782,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultce
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicyIssuerParameters.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 &dataazurermkeyvaultcertificate.DataAzurermKeyVaultCertificateCertificatePolicyIssuerParameters {
 
@@ -795,7 +795,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultce
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicyKeyProperties.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 &dataazurermkeyvaultcertificate.DataAzurermKeyVaultCertificateCertificatePolicyKeyProperties {
 
@@ -808,7 +808,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultce
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicyLifetimeAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 &dataazurermkeyvaultcertificate.DataAzurermKeyVaultCertificateCertificatePolicyLifetimeAction {
 
@@ -821,7 +821,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultce
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 &dataazurermkeyvaultcertificate.DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionAction {
 
@@ -834,7 +834,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultce
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionTrigger.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 &dataazurermkeyvaultcertificate.DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionTrigger {
 
@@ -847,7 +847,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultce
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicySecretProperties.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 &dataazurermkeyvaultcertificate.DataAzurermKeyVaultCertificateCertificatePolicySecretProperties {
 
@@ -860,7 +860,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultce
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicyX509CertificateProperties.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 &dataazurermkeyvaultcertificate.DataAzurermKeyVaultCertificateCertificatePolicyX509CertificateProperties {
 
@@ -873,7 +873,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultce
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 &dataazurermkeyvaultcertificate.DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames {
 
@@ -886,7 +886,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultce
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 &dataazurermkeyvaultcertificate.DataAzurermKeyVaultCertificateConfig {
 	Connection: interface{},
@@ -899,7 +899,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultce
 	KeyVaultId: *string,
 	Name: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateTimeouts,
 	Version: *string,
 }
 ```
@@ -1063,7 +1063,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 &dataazurermkeyvaultcertificate.DataAzurermKeyVaultCertificateTimeouts {
 	Read: *string,
@@ -1097,7 +1097,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicyIssuerParametersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 dataazurermkeyvaultcertificate.NewDataAzurermKeyVaultCertificateCertificatePolicyIssuerParametersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKeyVaultCertificateCertificatePolicyIssuerParametersList
 ```
@@ -1229,7 +1229,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicyIssuerParametersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 dataazurermkeyvaultcertificate.NewDataAzurermKeyVaultCertificateCertificatePolicyIssuerParametersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKeyVaultCertificateCertificatePolicyIssuerParametersOutputReference
 ```
@@ -1507,7 +1507,7 @@ func InternalValue() DataAzurermKeyVaultCertificateCertificatePolicyIssuerParame
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicyKeyPropertiesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 dataazurermkeyvaultcertificate.NewDataAzurermKeyVaultCertificateCertificatePolicyKeyPropertiesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKeyVaultCertificateCertificatePolicyKeyPropertiesList
 ```
@@ -1639,7 +1639,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicyKeyPropertiesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 dataazurermkeyvaultcertificate.NewDataAzurermKeyVaultCertificateCertificatePolicyKeyPropertiesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKeyVaultCertificateCertificatePolicyKeyPropertiesOutputReference
 ```
@@ -1961,7 +1961,7 @@ func InternalValue() DataAzurermKeyVaultCertificateCertificatePolicyKeyPropertie
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionActionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 dataazurermkeyvaultcertificate.NewDataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionActionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionActionList
 ```
@@ -2093,7 +2093,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 dataazurermkeyvaultcertificate.NewDataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionActionOutputReference
 ```
@@ -2371,7 +2371,7 @@ func InternalValue() DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 dataazurermkeyvaultcertificate.NewDataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionList
 ```
@@ -2503,7 +2503,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 dataazurermkeyvaultcertificate.NewDataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionOutputReference
 ```
@@ -2792,7 +2792,7 @@ func InternalValue() DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionTriggerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 dataazurermkeyvaultcertificate.NewDataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionTriggerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionTriggerList
 ```
@@ -2924,7 +2924,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionTriggerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 dataazurermkeyvaultcertificate.NewDataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionTriggerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActionTriggerOutputReference
 ```
@@ -3213,7 +3213,7 @@ func InternalValue() DataAzurermKeyVaultCertificateCertificatePolicyLifetimeActi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 dataazurermkeyvaultcertificate.NewDataAzurermKeyVaultCertificateCertificatePolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKeyVaultCertificateCertificatePolicyList
 ```
@@ -3345,7 +3345,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 dataazurermkeyvaultcertificate.NewDataAzurermKeyVaultCertificateCertificatePolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKeyVaultCertificateCertificatePolicyOutputReference
 ```
@@ -3667,7 +3667,7 @@ func InternalValue() DataAzurermKeyVaultCertificateCertificatePolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicySecretPropertiesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 dataazurermkeyvaultcertificate.NewDataAzurermKeyVaultCertificateCertificatePolicySecretPropertiesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKeyVaultCertificateCertificatePolicySecretPropertiesList
 ```
@@ -3799,7 +3799,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicySecretPropertiesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 dataazurermkeyvaultcertificate.NewDataAzurermKeyVaultCertificateCertificatePolicySecretPropertiesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKeyVaultCertificateCertificatePolicySecretPropertiesOutputReference
 ```
@@ -4077,7 +4077,7 @@ func InternalValue() DataAzurermKeyVaultCertificateCertificatePolicySecretProper
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 dataazurermkeyvaultcertificate.NewDataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesList
 ```
@@ -4209,7 +4209,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 dataazurermkeyvaultcertificate.NewDataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesOutputReference
 ```
@@ -4531,7 +4531,7 @@ func InternalValue() DataAzurermKeyVaultCertificateCertificatePolicyX509Certific
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 dataazurermkeyvaultcertificate.NewDataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesList
 ```
@@ -4663,7 +4663,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 dataazurermkeyvaultcertificate.NewDataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermKeyVaultCertificateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesOutputReference
 ```
@@ -4963,7 +4963,7 @@ func InternalValue() DataAzurermKeyVaultCertificateCertificatePolicyX509Certific
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificate.DataAzurermKeyVaultCertificateTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermkeyvaultcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermkeyvaultcertificate"
 
 dataazurermkeyvaultcertificate.NewDataAzurermKeyVaultCertificateTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermKeyVaultCertificateTimeoutsOutputReference
 ```
