@@ -1,3 +1,3 @@
 # `azurerm_iotcentral_application`
 
-Refer to the Terraform Registory for docs: [`azurerm_iotcentral_application`](https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/iotcentral_application).
+Refer to the Terraform Registory for docs: [`azurerm_iotcentral_application`](https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/iotcentral_application).

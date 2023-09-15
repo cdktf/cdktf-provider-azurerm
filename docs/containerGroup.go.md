@@ -1,6 +1,6 @@
 # `azurerm_container_group`
 
-Refer to the Terraform Registory for docs: [`azurerm_container_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group).
+Refer to the Terraform Registory for docs: [`azurerm_container_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group).
 
 # `containerGroup` Submodule <a name="`containerGroup` Submodule" id="@cdktf/provider-azurerm.containerGroup"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_container_group`](https://r
 
 ### ContainerGroup <a name="ContainerGroup" id="@cdktf/provider-azurerm.containerGroup.ContainerGroup"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group azurerm_container_group}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group azurerm_container_group}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroup(scope Construct, id *string, config ContainerGroupConfig) ContainerGroup
 ```
@@ -500,7 +500,7 @@ func ResetZones()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.containerGroup.ContainerGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.ContainerGroup_IsConstruct(x interface{}) *bool
 ```
@@ -532,7 +532,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.containerGroup.ContainerGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.ContainerGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -546,7 +546,7 @@ containergroup.ContainerGroup_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.containerGroup.ContainerGroup.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.ContainerGroup_IsTerraformResource(x interface{}) *bool
 ```
@@ -1273,7 +1273,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupConfig {
 	Connection: interface{},
@@ -1288,13 +1288,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
 	Name: *string,
 	OsType: *string,
 	ResourceGroupName: *string,
-	Diagnostics: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.containerGroup.ContainerGroupDiagnostics,
-	DnsConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.containerGroup.ContainerGroupDnsConfig,
+	Diagnostics: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerGroup.ContainerGroupDiagnostics,
+	DnsConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerGroup.ContainerGroupDnsConfig,
 	DnsNameLabel: *string,
 	DnsNameLabelReusePolicy: *string,
 	ExposedPort: interface{},
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.containerGroup.ContainerGroupIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerGroup.ContainerGroupIdentity,
 	ImageRegistryCredential: interface{},
 	InitContainer: interface{},
 	IpAddressType: *string,
@@ -1304,7 +1304,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
 	Sku: *string,
 	SubnetIds: *[]*string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.containerGroup.ContainerGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerGroup.ContainerGroupTimeouts,
 	Zones: *[]*string,
 }
 ```
@@ -1321,28 +1321,28 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
 | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.container">Container</a></code> | <code>interface{}</code> | container block. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#location ContainerGroup#location}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#name ContainerGroup#name}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.osType">OsType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#os_type ContainerGroup#os_type}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#resource_group_name ContainerGroup#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#location ContainerGroup#location}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#name ContainerGroup#name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.osType">OsType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#os_type ContainerGroup#os_type}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#resource_group_name ContainerGroup#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.diagnostics">Diagnostics</a></code> | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupDiagnostics">ContainerGroupDiagnostics</a></code> | diagnostics block. |
 | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.dnsConfig">DnsConfig</a></code> | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupDnsConfig">ContainerGroupDnsConfig</a></code> | dns_config block. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.dnsNameLabel">DnsNameLabel</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#dns_name_label ContainerGroup#dns_name_label}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.dnsNameLabelReusePolicy">DnsNameLabelReusePolicy</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#dns_name_label_reuse_policy ContainerGroup#dns_name_label_reuse_policy}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.exposedPort">ExposedPort</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#exposed_port ContainerGroup#exposed_port}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#id ContainerGroup#id}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.dnsNameLabel">DnsNameLabel</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#dns_name_label ContainerGroup#dns_name_label}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.dnsNameLabelReusePolicy">DnsNameLabelReusePolicy</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#dns_name_label_reuse_policy ContainerGroup#dns_name_label_reuse_policy}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.exposedPort">ExposedPort</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#exposed_port ContainerGroup#exposed_port}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#id ContainerGroup#id}. |
 | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.identity">Identity</a></code> | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupIdentity">ContainerGroupIdentity</a></code> | identity block. |
 | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.imageRegistryCredential">ImageRegistryCredential</a></code> | <code>interface{}</code> | image_registry_credential block. |
 | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.initContainer">InitContainer</a></code> | <code>interface{}</code> | init_container block. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.ipAddressType">IpAddressType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#ip_address_type ContainerGroup#ip_address_type}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.keyVaultKeyId">KeyVaultKeyId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#key_vault_key_id ContainerGroup#key_vault_key_id}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.networkProfileId">NetworkProfileId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#network_profile_id ContainerGroup#network_profile_id}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.restartPolicy">RestartPolicy</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#restart_policy ContainerGroup#restart_policy}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.sku">Sku</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#sku ContainerGroup#sku}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.subnetIds">SubnetIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#subnet_ids ContainerGroup#subnet_ids}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#tags ContainerGroup#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.ipAddressType">IpAddressType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#ip_address_type ContainerGroup#ip_address_type}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.keyVaultKeyId">KeyVaultKeyId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#key_vault_key_id ContainerGroup#key_vault_key_id}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.networkProfileId">NetworkProfileId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#network_profile_id ContainerGroup#network_profile_id}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.restartPolicy">RestartPolicy</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#restart_policy ContainerGroup#restart_policy}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.sku">Sku</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#sku ContainerGroup#sku}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.subnetIds">SubnetIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#subnet_ids ContainerGroup#subnet_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#tags ContainerGroup#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupTimeouts">ContainerGroupTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.zones">Zones</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#zones ContainerGroup#zones}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupConfig.property.zones">Zones</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#zones ContainerGroup#zones}. |
 
 ---
 
@@ -1426,7 +1426,7 @@ Container interface{}
 
 container block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#container ContainerGroup#container}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#container ContainerGroup#container}
 
 ---
 
@@ -1438,7 +1438,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#location ContainerGroup#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#location ContainerGroup#location}.
 
 ---
 
@@ -1450,7 +1450,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#name ContainerGroup#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#name ContainerGroup#name}.
 
 ---
 
@@ -1462,7 +1462,7 @@ OsType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#os_type ContainerGroup#os_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#os_type ContainerGroup#os_type}.
 
 ---
 
@@ -1474,7 +1474,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#resource_group_name ContainerGroup#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#resource_group_name ContainerGroup#resource_group_name}.
 
 ---
 
@@ -1488,7 +1488,7 @@ Diagnostics ContainerGroupDiagnostics
 
 diagnostics block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#diagnostics ContainerGroup#diagnostics}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#diagnostics ContainerGroup#diagnostics}
 
 ---
 
@@ -1502,7 +1502,7 @@ DnsConfig ContainerGroupDnsConfig
 
 dns_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#dns_config ContainerGroup#dns_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#dns_config ContainerGroup#dns_config}
 
 ---
 
@@ -1514,7 +1514,7 @@ DnsNameLabel *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#dns_name_label ContainerGroup#dns_name_label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#dns_name_label ContainerGroup#dns_name_label}.
 
 ---
 
@@ -1526,7 +1526,7 @@ DnsNameLabelReusePolicy *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#dns_name_label_reuse_policy ContainerGroup#dns_name_label_reuse_policy}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#dns_name_label_reuse_policy ContainerGroup#dns_name_label_reuse_policy}.
 
 ---
 
@@ -1538,7 +1538,7 @@ ExposedPort interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#exposed_port ContainerGroup#exposed_port}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#exposed_port ContainerGroup#exposed_port}.
 
 ---
 
@@ -1550,7 +1550,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#id ContainerGroup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#id ContainerGroup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1567,7 +1567,7 @@ Identity ContainerGroupIdentity
 
 identity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#identity ContainerGroup#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#identity ContainerGroup#identity}
 
 ---
 
@@ -1581,7 +1581,7 @@ ImageRegistryCredential interface{}
 
 image_registry_credential block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#image_registry_credential ContainerGroup#image_registry_credential}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#image_registry_credential ContainerGroup#image_registry_credential}
 
 ---
 
@@ -1595,7 +1595,7 @@ InitContainer interface{}
 
 init_container block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#init_container ContainerGroup#init_container}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#init_container ContainerGroup#init_container}
 
 ---
 
@@ -1607,7 +1607,7 @@ IpAddressType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#ip_address_type ContainerGroup#ip_address_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#ip_address_type ContainerGroup#ip_address_type}.
 
 ---
 
@@ -1619,7 +1619,7 @@ KeyVaultKeyId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#key_vault_key_id ContainerGroup#key_vault_key_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#key_vault_key_id ContainerGroup#key_vault_key_id}.
 
 ---
 
@@ -1631,7 +1631,7 @@ NetworkProfileId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#network_profile_id ContainerGroup#network_profile_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#network_profile_id ContainerGroup#network_profile_id}.
 
 ---
 
@@ -1643,7 +1643,7 @@ RestartPolicy *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#restart_policy ContainerGroup#restart_policy}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#restart_policy ContainerGroup#restart_policy}.
 
 ---
 
@@ -1655,7 +1655,7 @@ Sku *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#sku ContainerGroup#sku}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#sku ContainerGroup#sku}.
 
 ---
 
@@ -1667,7 +1667,7 @@ SubnetIds *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#subnet_ids ContainerGroup#subnet_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#subnet_ids ContainerGroup#subnet_ids}.
 
 ---
 
@@ -1679,7 +1679,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#tags ContainerGroup#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#tags ContainerGroup#tags}.
 
 ---
 
@@ -1693,7 +1693,7 @@ Timeouts ContainerGroupTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#timeouts ContainerGroup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#timeouts ContainerGroup#timeouts}
 
 ---
 
@@ -1705,7 +1705,7 @@ Zones *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#zones ContainerGroup#zones}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#zones ContainerGroup#zones}.
 
 ---
 
@@ -1714,7 +1714,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupContainer {
 	Cpu: *f64,
@@ -1724,12 +1724,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
 	Commands: *[]*string,
 	CpuLimit: *f64,
 	EnvironmentVariables: *map[string]*string,
-	Gpu: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.containerGroup.ContainerGroupContainerGpu,
-	GpuLimit: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.containerGroup.ContainerGroupContainerGpuLimit,
-	LivenessProbe: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.containerGroup.ContainerGroupContainerLivenessProbe,
+	Gpu: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerGroup.ContainerGroupContainerGpu,
+	GpuLimit: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerGroup.ContainerGroupContainerGpuLimit,
+	LivenessProbe: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerGroup.ContainerGroupContainerLivenessProbe,
 	MemoryLimit: *f64,
 	Ports: interface{},
-	ReadinessProbe: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.containerGroup.ContainerGroupContainerReadinessProbe,
+	ReadinessProbe: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerGroup.ContainerGroupContainerReadinessProbe,
 	SecureEnvironmentVariables: *map[string]*string,
 	Security: interface{},
 	Volume: interface{},
@@ -1740,20 +1740,20 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.property.cpu">Cpu</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#cpu ContainerGroup#cpu}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.property.image">Image</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#image ContainerGroup#image}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.property.memory">Memory</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#memory ContainerGroup#memory}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#name ContainerGroup#name}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.property.commands">Commands</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#commands ContainerGroup#commands}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.property.cpuLimit">CpuLimit</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#cpu_limit ContainerGroup#cpu_limit}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.property.environmentVariables">EnvironmentVariables</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#environment_variables ContainerGroup#environment_variables}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.property.cpu">Cpu</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#cpu ContainerGroup#cpu}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.property.image">Image</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#image ContainerGroup#image}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.property.memory">Memory</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#memory ContainerGroup#memory}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#name ContainerGroup#name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.property.commands">Commands</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#commands ContainerGroup#commands}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.property.cpuLimit">CpuLimit</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#cpu_limit ContainerGroup#cpu_limit}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.property.environmentVariables">EnvironmentVariables</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#environment_variables ContainerGroup#environment_variables}. |
 | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.property.gpu">Gpu</a></code> | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerGpu">ContainerGroupContainerGpu</a></code> | gpu block. |
 | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.property.gpuLimit">GpuLimit</a></code> | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerGpuLimit">ContainerGroupContainerGpuLimit</a></code> | gpu_limit block. |
 | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.property.livenessProbe">LivenessProbe</a></code> | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbe">ContainerGroupContainerLivenessProbe</a></code> | liveness_probe block. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.property.memoryLimit">MemoryLimit</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#memory_limit ContainerGroup#memory_limit}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.property.memoryLimit">MemoryLimit</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#memory_limit ContainerGroup#memory_limit}. |
 | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.property.ports">Ports</a></code> | <code>interface{}</code> | ports block. |
 | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.property.readinessProbe">ReadinessProbe</a></code> | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbe">ContainerGroupContainerReadinessProbe</a></code> | readiness_probe block. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.property.secureEnvironmentVariables">SecureEnvironmentVariables</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#secure_environment_variables ContainerGroup#secure_environment_variables}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.property.secureEnvironmentVariables">SecureEnvironmentVariables</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#secure_environment_variables ContainerGroup#secure_environment_variables}. |
 | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.property.security">Security</a></code> | <code>interface{}</code> | security block. |
 | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainer.property.volume">Volume</a></code> | <code>interface{}</code> | volume block. |
 
@@ -1767,7 +1767,7 @@ Cpu *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#cpu ContainerGroup#cpu}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#cpu ContainerGroup#cpu}.
 
 ---
 
@@ -1779,7 +1779,7 @@ Image *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#image ContainerGroup#image}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#image ContainerGroup#image}.
 
 ---
 
@@ -1791,7 +1791,7 @@ Memory *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#memory ContainerGroup#memory}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#memory ContainerGroup#memory}.
 
 ---
 
@@ -1803,7 +1803,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#name ContainerGroup#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#name ContainerGroup#name}.
 
 ---
 
@@ -1815,7 +1815,7 @@ Commands *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#commands ContainerGroup#commands}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#commands ContainerGroup#commands}.
 
 ---
 
@@ -1827,7 +1827,7 @@ CpuLimit *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#cpu_limit ContainerGroup#cpu_limit}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#cpu_limit ContainerGroup#cpu_limit}.
 
 ---
 
@@ -1839,7 +1839,7 @@ EnvironmentVariables *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#environment_variables ContainerGroup#environment_variables}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#environment_variables ContainerGroup#environment_variables}.
 
 ---
 
@@ -1853,7 +1853,7 @@ Gpu ContainerGroupContainerGpu
 
 gpu block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#gpu ContainerGroup#gpu}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#gpu ContainerGroup#gpu}
 
 ---
 
@@ -1867,7 +1867,7 @@ GpuLimit ContainerGroupContainerGpuLimit
 
 gpu_limit block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#gpu_limit ContainerGroup#gpu_limit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#gpu_limit ContainerGroup#gpu_limit}
 
 ---
 
@@ -1881,7 +1881,7 @@ LivenessProbe ContainerGroupContainerLivenessProbe
 
 liveness_probe block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#liveness_probe ContainerGroup#liveness_probe}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#liveness_probe ContainerGroup#liveness_probe}
 
 ---
 
@@ -1893,7 +1893,7 @@ MemoryLimit *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#memory_limit ContainerGroup#memory_limit}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#memory_limit ContainerGroup#memory_limit}.
 
 ---
 
@@ -1907,7 +1907,7 @@ Ports interface{}
 
 ports block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#ports ContainerGroup#ports}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#ports ContainerGroup#ports}
 
 ---
 
@@ -1921,7 +1921,7 @@ ReadinessProbe ContainerGroupContainerReadinessProbe
 
 readiness_probe block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#readiness_probe ContainerGroup#readiness_probe}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#readiness_probe ContainerGroup#readiness_probe}
 
 ---
 
@@ -1933,7 +1933,7 @@ SecureEnvironmentVariables *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#secure_environment_variables ContainerGroup#secure_environment_variables}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#secure_environment_variables ContainerGroup#secure_environment_variables}.
 
 ---
 
@@ -1947,7 +1947,7 @@ Security interface{}
 
 security block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#security ContainerGroup#security}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#security ContainerGroup#security}
 
 ---
 
@@ -1961,7 +1961,7 @@ Volume interface{}
 
 volume block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#volume ContainerGroup#volume}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#volume ContainerGroup#volume}
 
 ---
 
@@ -1970,7 +1970,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerGpu.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupContainerGpu {
 	Count: *f64,
@@ -1982,8 +1982,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerGpu.property.count">Count</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#count ContainerGroup#count}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerGpu.property.sku">Sku</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#sku ContainerGroup#sku}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerGpu.property.count">Count</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#count ContainerGroup#count}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerGpu.property.sku">Sku</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#sku ContainerGroup#sku}. |
 
 ---
 
@@ -1995,7 +1995,7 @@ Count *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#count ContainerGroup#count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#count ContainerGroup#count}.
 
 ---
 
@@ -2007,7 +2007,7 @@ Sku *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#sku ContainerGroup#sku}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#sku ContainerGroup#sku}.
 
 ---
 
@@ -2016,7 +2016,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerGpuLimit.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupContainerGpuLimit {
 	Count: *f64,
@@ -2028,8 +2028,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerGpuLimit.property.count">Count</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#count ContainerGroup#count}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerGpuLimit.property.sku">Sku</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#sku ContainerGroup#sku}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerGpuLimit.property.count">Count</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#count ContainerGroup#count}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerGpuLimit.property.sku">Sku</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#sku ContainerGroup#sku}. |
 
 ---
 
@@ -2041,7 +2041,7 @@ Count *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#count ContainerGroup#count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#count ContainerGroup#count}.
 
 ---
 
@@ -2053,7 +2053,7 @@ Sku *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#sku ContainerGroup#sku}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#sku ContainerGroup#sku}.
 
 ---
 
@@ -2062,7 +2062,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbe.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupContainerLivenessProbe {
 	Exec: *[]*string,
@@ -2079,13 +2079,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbe.property.exec">Exec</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#exec ContainerGroup#exec}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbe.property.failureThreshold">FailureThreshold</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#failure_threshold ContainerGroup#failure_threshold}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbe.property.exec">Exec</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#exec ContainerGroup#exec}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbe.property.failureThreshold">FailureThreshold</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#failure_threshold ContainerGroup#failure_threshold}. |
 | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbe.property.httpGet">HttpGet</a></code> | <code>interface{}</code> | http_get block. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbe.property.initialDelaySeconds">InitialDelaySeconds</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#initial_delay_seconds ContainerGroup#initial_delay_seconds}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbe.property.periodSeconds">PeriodSeconds</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#period_seconds ContainerGroup#period_seconds}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbe.property.successThreshold">SuccessThreshold</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#success_threshold ContainerGroup#success_threshold}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbe.property.timeoutSeconds">TimeoutSeconds</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#timeout_seconds ContainerGroup#timeout_seconds}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbe.property.initialDelaySeconds">InitialDelaySeconds</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#initial_delay_seconds ContainerGroup#initial_delay_seconds}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbe.property.periodSeconds">PeriodSeconds</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#period_seconds ContainerGroup#period_seconds}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbe.property.successThreshold">SuccessThreshold</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#success_threshold ContainerGroup#success_threshold}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbe.property.timeoutSeconds">TimeoutSeconds</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#timeout_seconds ContainerGroup#timeout_seconds}. |
 
 ---
 
@@ -2097,7 +2097,7 @@ Exec *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#exec ContainerGroup#exec}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#exec ContainerGroup#exec}.
 
 ---
 
@@ -2109,7 +2109,7 @@ FailureThreshold *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#failure_threshold ContainerGroup#failure_threshold}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#failure_threshold ContainerGroup#failure_threshold}.
 
 ---
 
@@ -2123,7 +2123,7 @@ HttpGet interface{}
 
 http_get block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#http_get ContainerGroup#http_get}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#http_get ContainerGroup#http_get}
 
 ---
 
@@ -2135,7 +2135,7 @@ InitialDelaySeconds *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#initial_delay_seconds ContainerGroup#initial_delay_seconds}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#initial_delay_seconds ContainerGroup#initial_delay_seconds}.
 
 ---
 
@@ -2147,7 +2147,7 @@ PeriodSeconds *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#period_seconds ContainerGroup#period_seconds}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#period_seconds ContainerGroup#period_seconds}.
 
 ---
 
@@ -2159,7 +2159,7 @@ SuccessThreshold *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#success_threshold ContainerGroup#success_threshold}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#success_threshold ContainerGroup#success_threshold}.
 
 ---
 
@@ -2171,7 +2171,7 @@ TimeoutSeconds *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#timeout_seconds ContainerGroup#timeout_seconds}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#timeout_seconds ContainerGroup#timeout_seconds}.
 
 ---
 
@@ -2180,7 +2180,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbeHttpGet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupContainerLivenessProbeHttpGet {
 	HttpHeaders: *map[string]*string,
@@ -2194,10 +2194,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbeHttpGet.property.httpHeaders">HttpHeaders</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#http_headers ContainerGroup#http_headers}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbeHttpGet.property.path">Path</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#path ContainerGroup#path}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbeHttpGet.property.port">Port</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#port ContainerGroup#port}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbeHttpGet.property.scheme">Scheme</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#scheme ContainerGroup#scheme}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbeHttpGet.property.httpHeaders">HttpHeaders</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#http_headers ContainerGroup#http_headers}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbeHttpGet.property.path">Path</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#path ContainerGroup#path}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbeHttpGet.property.port">Port</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#port ContainerGroup#port}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbeHttpGet.property.scheme">Scheme</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#scheme ContainerGroup#scheme}. |
 
 ---
 
@@ -2209,7 +2209,7 @@ HttpHeaders *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#http_headers ContainerGroup#http_headers}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#http_headers ContainerGroup#http_headers}.
 
 ---
 
@@ -2221,7 +2221,7 @@ Path *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#path ContainerGroup#path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#path ContainerGroup#path}.
 
 ---
 
@@ -2233,7 +2233,7 @@ Port *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#port ContainerGroup#port}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#port ContainerGroup#port}.
 
 ---
 
@@ -2245,7 +2245,7 @@ Scheme *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#scheme ContainerGroup#scheme}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#scheme ContainerGroup#scheme}.
 
 ---
 
@@ -2254,7 +2254,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerPorts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupContainerPorts {
 	Port: *f64,
@@ -2266,8 +2266,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerPorts.property.port">Port</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#port ContainerGroup#port}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerPorts.property.protocol">Protocol</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#protocol ContainerGroup#protocol}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerPorts.property.port">Port</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#port ContainerGroup#port}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerPorts.property.protocol">Protocol</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#protocol ContainerGroup#protocol}. |
 
 ---
 
@@ -2279,7 +2279,7 @@ Port *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#port ContainerGroup#port}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#port ContainerGroup#port}.
 
 ---
 
@@ -2291,7 +2291,7 @@ Protocol *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#protocol ContainerGroup#protocol}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#protocol ContainerGroup#protocol}.
 
 ---
 
@@ -2300,7 +2300,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbe.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupContainerReadinessProbe {
 	Exec: *[]*string,
@@ -2317,13 +2317,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbe.property.exec">Exec</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#exec ContainerGroup#exec}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbe.property.failureThreshold">FailureThreshold</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#failure_threshold ContainerGroup#failure_threshold}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbe.property.exec">Exec</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#exec ContainerGroup#exec}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbe.property.failureThreshold">FailureThreshold</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#failure_threshold ContainerGroup#failure_threshold}. |
 | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbe.property.httpGet">HttpGet</a></code> | <code>interface{}</code> | http_get block. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbe.property.initialDelaySeconds">InitialDelaySeconds</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#initial_delay_seconds ContainerGroup#initial_delay_seconds}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbe.property.periodSeconds">PeriodSeconds</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#period_seconds ContainerGroup#period_seconds}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbe.property.successThreshold">SuccessThreshold</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#success_threshold ContainerGroup#success_threshold}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbe.property.timeoutSeconds">TimeoutSeconds</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#timeout_seconds ContainerGroup#timeout_seconds}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbe.property.initialDelaySeconds">InitialDelaySeconds</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#initial_delay_seconds ContainerGroup#initial_delay_seconds}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbe.property.periodSeconds">PeriodSeconds</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#period_seconds ContainerGroup#period_seconds}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbe.property.successThreshold">SuccessThreshold</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#success_threshold ContainerGroup#success_threshold}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbe.property.timeoutSeconds">TimeoutSeconds</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#timeout_seconds ContainerGroup#timeout_seconds}. |
 
 ---
 
@@ -2335,7 +2335,7 @@ Exec *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#exec ContainerGroup#exec}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#exec ContainerGroup#exec}.
 
 ---
 
@@ -2347,7 +2347,7 @@ FailureThreshold *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#failure_threshold ContainerGroup#failure_threshold}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#failure_threshold ContainerGroup#failure_threshold}.
 
 ---
 
@@ -2361,7 +2361,7 @@ HttpGet interface{}
 
 http_get block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#http_get ContainerGroup#http_get}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#http_get ContainerGroup#http_get}
 
 ---
 
@@ -2373,7 +2373,7 @@ InitialDelaySeconds *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#initial_delay_seconds ContainerGroup#initial_delay_seconds}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#initial_delay_seconds ContainerGroup#initial_delay_seconds}.
 
 ---
 
@@ -2385,7 +2385,7 @@ PeriodSeconds *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#period_seconds ContainerGroup#period_seconds}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#period_seconds ContainerGroup#period_seconds}.
 
 ---
 
@@ -2397,7 +2397,7 @@ SuccessThreshold *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#success_threshold ContainerGroup#success_threshold}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#success_threshold ContainerGroup#success_threshold}.
 
 ---
 
@@ -2409,7 +2409,7 @@ TimeoutSeconds *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#timeout_seconds ContainerGroup#timeout_seconds}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#timeout_seconds ContainerGroup#timeout_seconds}.
 
 ---
 
@@ -2418,7 +2418,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbeHttpGet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupContainerReadinessProbeHttpGet {
 	HttpHeaders: *map[string]*string,
@@ -2432,10 +2432,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbeHttpGet.property.httpHeaders">HttpHeaders</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#http_headers ContainerGroup#http_headers}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbeHttpGet.property.path">Path</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#path ContainerGroup#path}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbeHttpGet.property.port">Port</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#port ContainerGroup#port}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbeHttpGet.property.scheme">Scheme</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#scheme ContainerGroup#scheme}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbeHttpGet.property.httpHeaders">HttpHeaders</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#http_headers ContainerGroup#http_headers}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbeHttpGet.property.path">Path</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#path ContainerGroup#path}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbeHttpGet.property.port">Port</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#port ContainerGroup#port}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbeHttpGet.property.scheme">Scheme</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#scheme ContainerGroup#scheme}. |
 
 ---
 
@@ -2447,7 +2447,7 @@ HttpHeaders *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#http_headers ContainerGroup#http_headers}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#http_headers ContainerGroup#http_headers}.
 
 ---
 
@@ -2459,7 +2459,7 @@ Path *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#path ContainerGroup#path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#path ContainerGroup#path}.
 
 ---
 
@@ -2471,7 +2471,7 @@ Port *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#port ContainerGroup#port}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#port ContainerGroup#port}.
 
 ---
 
@@ -2483,7 +2483,7 @@ Scheme *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#scheme ContainerGroup#scheme}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#scheme ContainerGroup#scheme}.
 
 ---
 
@@ -2492,7 +2492,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerSecurity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupContainerSecurity {
 	PrivilegeEnabled: interface{},
@@ -2503,7 +2503,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerSecurity.property.privilegeEnabled">PrivilegeEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#privilege_enabled ContainerGroup#privilege_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerSecurity.property.privilegeEnabled">PrivilegeEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#privilege_enabled ContainerGroup#privilege_enabled}. |
 
 ---
 
@@ -2515,7 +2515,7 @@ PrivilegeEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#privilege_enabled ContainerGroup#privilege_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#privilege_enabled ContainerGroup#privilege_enabled}.
 
 ---
 
@@ -2524,13 +2524,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolume.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupContainerVolume {
 	MountPath: *string,
 	Name: *string,
 	EmptyDir: interface{},
-	GitRepo: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.containerGroup.ContainerGroupContainerVolumeGitRepo,
+	GitRepo: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerGroup.ContainerGroupContainerVolumeGitRepo,
 	ReadOnly: interface{},
 	Secret: *map[string]*string,
 	ShareName: *string,
@@ -2543,15 +2543,15 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolume.property.mountPath">MountPath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#mount_path ContainerGroup#mount_path}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolume.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#name ContainerGroup#name}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolume.property.emptyDir">EmptyDir</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#empty_dir ContainerGroup#empty_dir}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolume.property.mountPath">MountPath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#mount_path ContainerGroup#mount_path}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolume.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#name ContainerGroup#name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolume.property.emptyDir">EmptyDir</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#empty_dir ContainerGroup#empty_dir}. |
 | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolume.property.gitRepo">GitRepo</a></code> | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolumeGitRepo">ContainerGroupContainerVolumeGitRepo</a></code> | git_repo block. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolume.property.readOnly">ReadOnly</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#read_only ContainerGroup#read_only}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolume.property.secret">Secret</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#secret ContainerGroup#secret}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolume.property.shareName">ShareName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#share_name ContainerGroup#share_name}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolume.property.storageAccountKey">StorageAccountKey</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#storage_account_key ContainerGroup#storage_account_key}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolume.property.storageAccountName">StorageAccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#storage_account_name ContainerGroup#storage_account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolume.property.readOnly">ReadOnly</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#read_only ContainerGroup#read_only}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolume.property.secret">Secret</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#secret ContainerGroup#secret}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolume.property.shareName">ShareName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#share_name ContainerGroup#share_name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolume.property.storageAccountKey">StorageAccountKey</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#storage_account_key ContainerGroup#storage_account_key}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolume.property.storageAccountName">StorageAccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#storage_account_name ContainerGroup#storage_account_name}. |
 
 ---
 
@@ -2563,7 +2563,7 @@ MountPath *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#mount_path ContainerGroup#mount_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#mount_path ContainerGroup#mount_path}.
 
 ---
 
@@ -2575,7 +2575,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#name ContainerGroup#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#name ContainerGroup#name}.
 
 ---
 
@@ -2587,7 +2587,7 @@ EmptyDir interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#empty_dir ContainerGroup#empty_dir}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#empty_dir ContainerGroup#empty_dir}.
 
 ---
 
@@ -2601,7 +2601,7 @@ GitRepo ContainerGroupContainerVolumeGitRepo
 
 git_repo block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#git_repo ContainerGroup#git_repo}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#git_repo ContainerGroup#git_repo}
 
 ---
 
@@ -2613,7 +2613,7 @@ ReadOnly interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#read_only ContainerGroup#read_only}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#read_only ContainerGroup#read_only}.
 
 ---
 
@@ -2625,7 +2625,7 @@ Secret *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#secret ContainerGroup#secret}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#secret ContainerGroup#secret}.
 
 ---
 
@@ -2637,7 +2637,7 @@ ShareName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#share_name ContainerGroup#share_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#share_name ContainerGroup#share_name}.
 
 ---
 
@@ -2649,7 +2649,7 @@ StorageAccountKey *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#storage_account_key ContainerGroup#storage_account_key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#storage_account_key ContainerGroup#storage_account_key}.
 
 ---
 
@@ -2661,7 +2661,7 @@ StorageAccountName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#storage_account_name ContainerGroup#storage_account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#storage_account_name ContainerGroup#storage_account_name}.
 
 ---
 
@@ -2670,7 +2670,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolumeGitRepo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupContainerVolumeGitRepo {
 	Url: *string,
@@ -2683,9 +2683,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolumeGitRepo.property.url">Url</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#url ContainerGroup#url}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolumeGitRepo.property.directory">Directory</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#directory ContainerGroup#directory}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolumeGitRepo.property.revision">Revision</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#revision ContainerGroup#revision}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolumeGitRepo.property.url">Url</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#url ContainerGroup#url}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolumeGitRepo.property.directory">Directory</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#directory ContainerGroup#directory}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolumeGitRepo.property.revision">Revision</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#revision ContainerGroup#revision}. |
 
 ---
 
@@ -2697,7 +2697,7 @@ Url *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#url ContainerGroup#url}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#url ContainerGroup#url}.
 
 ---
 
@@ -2709,7 +2709,7 @@ Directory *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#directory ContainerGroup#directory}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#directory ContainerGroup#directory}.
 
 ---
 
@@ -2721,7 +2721,7 @@ Revision *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#revision ContainerGroup#revision}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#revision ContainerGroup#revision}.
 
 ---
 
@@ -2730,10 +2730,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupDiagnostics.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupDiagnostics {
-	LogAnalytics: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.containerGroup.ContainerGroupDiagnosticsLogAnalytics,
+	LogAnalytics: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerGroup.ContainerGroupDiagnosticsLogAnalytics,
 }
 ```
 
@@ -2755,7 +2755,7 @@ LogAnalytics ContainerGroupDiagnosticsLogAnalytics
 
 log_analytics block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#log_analytics ContainerGroup#log_analytics}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#log_analytics ContainerGroup#log_analytics}
 
 ---
 
@@ -2764,7 +2764,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupDiagnosticsLogAnalytics.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupDiagnosticsLogAnalytics {
 	WorkspaceId: *string,
@@ -2778,10 +2778,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupDiagnosticsLogAnalytics.property.workspaceId">WorkspaceId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#workspace_id ContainerGroup#workspace_id}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupDiagnosticsLogAnalytics.property.workspaceKey">WorkspaceKey</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#workspace_key ContainerGroup#workspace_key}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupDiagnosticsLogAnalytics.property.logType">LogType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#log_type ContainerGroup#log_type}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupDiagnosticsLogAnalytics.property.metadata">Metadata</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#metadata ContainerGroup#metadata}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupDiagnosticsLogAnalytics.property.workspaceId">WorkspaceId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#workspace_id ContainerGroup#workspace_id}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupDiagnosticsLogAnalytics.property.workspaceKey">WorkspaceKey</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#workspace_key ContainerGroup#workspace_key}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupDiagnosticsLogAnalytics.property.logType">LogType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#log_type ContainerGroup#log_type}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupDiagnosticsLogAnalytics.property.metadata">Metadata</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#metadata ContainerGroup#metadata}. |
 
 ---
 
@@ -2793,7 +2793,7 @@ WorkspaceId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#workspace_id ContainerGroup#workspace_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#workspace_id ContainerGroup#workspace_id}.
 
 ---
 
@@ -2805,7 +2805,7 @@ WorkspaceKey *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#workspace_key ContainerGroup#workspace_key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#workspace_key ContainerGroup#workspace_key}.
 
 ---
 
@@ -2817,7 +2817,7 @@ LogType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#log_type ContainerGroup#log_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#log_type ContainerGroup#log_type}.
 
 ---
 
@@ -2829,7 +2829,7 @@ Metadata *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#metadata ContainerGroup#metadata}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#metadata ContainerGroup#metadata}.
 
 ---
 
@@ -2838,7 +2838,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupDnsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupDnsConfig {
 	Nameservers: *[]*string,
@@ -2851,9 +2851,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupDnsConfig.property.nameservers">Nameservers</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#nameservers ContainerGroup#nameservers}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupDnsConfig.property.options">Options</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#options ContainerGroup#options}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupDnsConfig.property.searchDomains">SearchDomains</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#search_domains ContainerGroup#search_domains}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupDnsConfig.property.nameservers">Nameservers</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#nameservers ContainerGroup#nameservers}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupDnsConfig.property.options">Options</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#options ContainerGroup#options}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupDnsConfig.property.searchDomains">SearchDomains</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#search_domains ContainerGroup#search_domains}. |
 
 ---
 
@@ -2865,7 +2865,7 @@ Nameservers *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#nameservers ContainerGroup#nameservers}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#nameservers ContainerGroup#nameservers}.
 
 ---
 
@@ -2877,7 +2877,7 @@ Options *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#options ContainerGroup#options}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#options ContainerGroup#options}.
 
 ---
 
@@ -2889,7 +2889,7 @@ SearchDomains *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#search_domains ContainerGroup#search_domains}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#search_domains ContainerGroup#search_domains}.
 
 ---
 
@@ -2898,7 +2898,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupExposedPort.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupExposedPort {
 	Port: *f64,
@@ -2910,8 +2910,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupExposedPort.property.port">Port</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#port ContainerGroup#port}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupExposedPort.property.protocol">Protocol</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#protocol ContainerGroup#protocol}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupExposedPort.property.port">Port</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#port ContainerGroup#port}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupExposedPort.property.protocol">Protocol</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#protocol ContainerGroup#protocol}. |
 
 ---
 
@@ -2923,7 +2923,7 @@ Port *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#port ContainerGroup#port}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#port ContainerGroup#port}.
 
 ---
 
@@ -2935,7 +2935,7 @@ Protocol *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#protocol ContainerGroup#protocol}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#protocol ContainerGroup#protocol}.
 
 ---
 
@@ -2944,7 +2944,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupIdentity {
 	Type: *string,
@@ -2956,8 +2956,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupIdentity.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#type ContainerGroup#type}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupIdentity.property.identityIds">IdentityIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#identity_ids ContainerGroup#identity_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupIdentity.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#type ContainerGroup#type}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupIdentity.property.identityIds">IdentityIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#identity_ids ContainerGroup#identity_ids}. |
 
 ---
 
@@ -2969,7 +2969,7 @@ Type *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#type ContainerGroup#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#type ContainerGroup#type}.
 
 ---
 
@@ -2981,7 +2981,7 @@ IdentityIds *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#identity_ids ContainerGroup#identity_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#identity_ids ContainerGroup#identity_ids}.
 
 ---
 
@@ -2990,7 +2990,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupImageRegistryCredential.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupImageRegistryCredential {
 	Server: *string,
@@ -3004,10 +3004,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupImageRegistryCredential.property.server">Server</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#server ContainerGroup#server}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupImageRegistryCredential.property.password">Password</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#password ContainerGroup#password}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupImageRegistryCredential.property.server">Server</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#server ContainerGroup#server}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupImageRegistryCredential.property.password">Password</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#password ContainerGroup#password}. |
 | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupImageRegistryCredential.property.userAssignedIdentityId">UserAssignedIdentityId</a></code> | <code>*string</code> | The User Assigned Identity to use for Container Registry access. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupImageRegistryCredential.property.username">Username</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#username ContainerGroup#username}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupImageRegistryCredential.property.username">Username</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#username ContainerGroup#username}. |
 
 ---
 
@@ -3019,7 +3019,7 @@ Server *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#server ContainerGroup#server}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#server ContainerGroup#server}.
 
 ---
 
@@ -3031,7 +3031,7 @@ Password *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#password ContainerGroup#password}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#password ContainerGroup#password}.
 
 ---
 
@@ -3045,7 +3045,7 @@ UserAssignedIdentityId *string
 
 The User Assigned Identity to use for Container Registry access.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#user_assigned_identity_id ContainerGroup#user_assigned_identity_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#user_assigned_identity_id ContainerGroup#user_assigned_identity_id}
 
 ---
 
@@ -3057,7 +3057,7 @@ Username *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#username ContainerGroup#username}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#username ContainerGroup#username}.
 
 ---
 
@@ -3066,7 +3066,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupInitContainer {
 	Image: *string,
@@ -3083,11 +3083,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainer.property.image">Image</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#image ContainerGroup#image}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainer.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#name ContainerGroup#name}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainer.property.commands">Commands</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#commands ContainerGroup#commands}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainer.property.environmentVariables">EnvironmentVariables</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#environment_variables ContainerGroup#environment_variables}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainer.property.secureEnvironmentVariables">SecureEnvironmentVariables</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#secure_environment_variables ContainerGroup#secure_environment_variables}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainer.property.image">Image</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#image ContainerGroup#image}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainer.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#name ContainerGroup#name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainer.property.commands">Commands</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#commands ContainerGroup#commands}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainer.property.environmentVariables">EnvironmentVariables</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#environment_variables ContainerGroup#environment_variables}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainer.property.secureEnvironmentVariables">SecureEnvironmentVariables</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#secure_environment_variables ContainerGroup#secure_environment_variables}. |
 | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainer.property.security">Security</a></code> | <code>interface{}</code> | security block. |
 | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainer.property.volume">Volume</a></code> | <code>interface{}</code> | volume block. |
 
@@ -3101,7 +3101,7 @@ Image *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#image ContainerGroup#image}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#image ContainerGroup#image}.
 
 ---
 
@@ -3113,7 +3113,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#name ContainerGroup#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#name ContainerGroup#name}.
 
 ---
 
@@ -3125,7 +3125,7 @@ Commands *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#commands ContainerGroup#commands}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#commands ContainerGroup#commands}.
 
 ---
 
@@ -3137,7 +3137,7 @@ EnvironmentVariables *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#environment_variables ContainerGroup#environment_variables}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#environment_variables ContainerGroup#environment_variables}.
 
 ---
 
@@ -3149,7 +3149,7 @@ SecureEnvironmentVariables *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#secure_environment_variables ContainerGroup#secure_environment_variables}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#secure_environment_variables ContainerGroup#secure_environment_variables}.
 
 ---
 
@@ -3163,7 +3163,7 @@ Security interface{}
 
 security block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#security ContainerGroup#security}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#security ContainerGroup#security}
 
 ---
 
@@ -3177,7 +3177,7 @@ Volume interface{}
 
 volume block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#volume ContainerGroup#volume}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#volume ContainerGroup#volume}
 
 ---
 
@@ -3186,7 +3186,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerSecurity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupInitContainerSecurity {
 	PrivilegeEnabled: interface{},
@@ -3197,7 +3197,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerSecurity.property.privilegeEnabled">PrivilegeEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#privilege_enabled ContainerGroup#privilege_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerSecurity.property.privilegeEnabled">PrivilegeEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#privilege_enabled ContainerGroup#privilege_enabled}. |
 
 ---
 
@@ -3209,7 +3209,7 @@ PrivilegeEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#privilege_enabled ContainerGroup#privilege_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#privilege_enabled ContainerGroup#privilege_enabled}.
 
 ---
 
@@ -3218,13 +3218,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolume.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupInitContainerVolume {
 	MountPath: *string,
 	Name: *string,
 	EmptyDir: interface{},
-	GitRepo: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.containerGroup.ContainerGroupInitContainerVolumeGitRepo,
+	GitRepo: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerGroup.ContainerGroupInitContainerVolumeGitRepo,
 	ReadOnly: interface{},
 	Secret: *map[string]*string,
 	ShareName: *string,
@@ -3237,15 +3237,15 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolume.property.mountPath">MountPath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#mount_path ContainerGroup#mount_path}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolume.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#name ContainerGroup#name}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolume.property.emptyDir">EmptyDir</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#empty_dir ContainerGroup#empty_dir}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolume.property.mountPath">MountPath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#mount_path ContainerGroup#mount_path}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolume.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#name ContainerGroup#name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolume.property.emptyDir">EmptyDir</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#empty_dir ContainerGroup#empty_dir}. |
 | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolume.property.gitRepo">GitRepo</a></code> | <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolumeGitRepo">ContainerGroupInitContainerVolumeGitRepo</a></code> | git_repo block. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolume.property.readOnly">ReadOnly</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#read_only ContainerGroup#read_only}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolume.property.secret">Secret</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#secret ContainerGroup#secret}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolume.property.shareName">ShareName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#share_name ContainerGroup#share_name}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolume.property.storageAccountKey">StorageAccountKey</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#storage_account_key ContainerGroup#storage_account_key}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolume.property.storageAccountName">StorageAccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#storage_account_name ContainerGroup#storage_account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolume.property.readOnly">ReadOnly</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#read_only ContainerGroup#read_only}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolume.property.secret">Secret</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#secret ContainerGroup#secret}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolume.property.shareName">ShareName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#share_name ContainerGroup#share_name}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolume.property.storageAccountKey">StorageAccountKey</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#storage_account_key ContainerGroup#storage_account_key}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolume.property.storageAccountName">StorageAccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#storage_account_name ContainerGroup#storage_account_name}. |
 
 ---
 
@@ -3257,7 +3257,7 @@ MountPath *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#mount_path ContainerGroup#mount_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#mount_path ContainerGroup#mount_path}.
 
 ---
 
@@ -3269,7 +3269,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#name ContainerGroup#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#name ContainerGroup#name}.
 
 ---
 
@@ -3281,7 +3281,7 @@ EmptyDir interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#empty_dir ContainerGroup#empty_dir}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#empty_dir ContainerGroup#empty_dir}.
 
 ---
 
@@ -3295,7 +3295,7 @@ GitRepo ContainerGroupInitContainerVolumeGitRepo
 
 git_repo block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#git_repo ContainerGroup#git_repo}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#git_repo ContainerGroup#git_repo}
 
 ---
 
@@ -3307,7 +3307,7 @@ ReadOnly interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#read_only ContainerGroup#read_only}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#read_only ContainerGroup#read_only}.
 
 ---
 
@@ -3319,7 +3319,7 @@ Secret *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#secret ContainerGroup#secret}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#secret ContainerGroup#secret}.
 
 ---
 
@@ -3331,7 +3331,7 @@ ShareName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#share_name ContainerGroup#share_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#share_name ContainerGroup#share_name}.
 
 ---
 
@@ -3343,7 +3343,7 @@ StorageAccountKey *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#storage_account_key ContainerGroup#storage_account_key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#storage_account_key ContainerGroup#storage_account_key}.
 
 ---
 
@@ -3355,7 +3355,7 @@ StorageAccountName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#storage_account_name ContainerGroup#storage_account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#storage_account_name ContainerGroup#storage_account_name}.
 
 ---
 
@@ -3364,7 +3364,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolumeGitRepo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupInitContainerVolumeGitRepo {
 	Url: *string,
@@ -3377,9 +3377,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolumeGitRepo.property.url">Url</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#url ContainerGroup#url}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolumeGitRepo.property.directory">Directory</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#directory ContainerGroup#directory}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolumeGitRepo.property.revision">Revision</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#revision ContainerGroup#revision}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolumeGitRepo.property.url">Url</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#url ContainerGroup#url}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolumeGitRepo.property.directory">Directory</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#directory ContainerGroup#directory}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolumeGitRepo.property.revision">Revision</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#revision ContainerGroup#revision}. |
 
 ---
 
@@ -3391,7 +3391,7 @@ Url *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#url ContainerGroup#url}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#url ContainerGroup#url}.
 
 ---
 
@@ -3403,7 +3403,7 @@ Directory *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#directory ContainerGroup#directory}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#directory ContainerGroup#directory}.
 
 ---
 
@@ -3415,7 +3415,7 @@ Revision *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#revision ContainerGroup#revision}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#revision ContainerGroup#revision}.
 
 ---
 
@@ -3424,7 +3424,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 &containergroup.ContainerGroupTimeouts {
 	Create: *string,
@@ -3438,10 +3438,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#create ContainerGroup#create}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#delete ContainerGroup#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#read ContainerGroup#read}. |
-| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#update ContainerGroup#update}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#create ContainerGroup#create}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#delete ContainerGroup#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#read ContainerGroup#read}. |
+| <code><a href="#@cdktf/provider-azurerm.containerGroup.ContainerGroupTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#update ContainerGroup#update}. |
 
 ---
 
@@ -3453,7 +3453,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#create ContainerGroup#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#create ContainerGroup#create}.
 
 ---
 
@@ -3465,7 +3465,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#delete ContainerGroup#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#delete ContainerGroup#delete}.
 
 ---
 
@@ -3477,7 +3477,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#read ContainerGroup#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#read ContainerGroup#read}.
 
 ---
 
@@ -3489,7 +3489,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/container_group#update ContainerGroup#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_group#update ContainerGroup#update}.
 
 ---
 
@@ -3500,7 +3500,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerGpuLimitOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerGpuLimitOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerGroupContainerGpuLimitOutputReference
 ```
@@ -3807,7 +3807,7 @@ func InternalValue() ContainerGroupContainerGpuLimit
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerGpuOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerGpuOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerGroupContainerGpuOutputReference
 ```
@@ -4114,7 +4114,7 @@ func InternalValue() ContainerGroupContainerGpu
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerGroupContainerList
 ```
@@ -4257,7 +4257,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbeHttpGetList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerLivenessProbeHttpGetList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerGroupContainerLivenessProbeHttpGetList
 ```
@@ -4400,7 +4400,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbeHttpGetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerLivenessProbeHttpGetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerGroupContainerLivenessProbeHttpGetOutputReference
 ```
@@ -4783,7 +4783,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerLivenessProbeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerLivenessProbeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerGroupContainerLivenessProbeOutputReference
 ```
@@ -5248,7 +5248,7 @@ func InternalValue() ContainerGroupContainerLivenessProbe
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerGroupContainerOutputReference
 ```
@@ -6042,7 +6042,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerPortsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerPortsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerGroupContainerPortsList
 ```
@@ -6185,7 +6185,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerPortsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerPortsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerGroupContainerPortsOutputReference
 ```
@@ -6510,7 +6510,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbeHttpGetList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerReadinessProbeHttpGetList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerGroupContainerReadinessProbeHttpGetList
 ```
@@ -6653,7 +6653,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbeHttpGetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerReadinessProbeHttpGetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerGroupContainerReadinessProbeHttpGetOutputReference
 ```
@@ -7036,7 +7036,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerReadinessProbeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerReadinessProbeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerGroupContainerReadinessProbeOutputReference
 ```
@@ -7501,7 +7501,7 @@ func InternalValue() ContainerGroupContainerReadinessProbe
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerSecurityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerSecurityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerGroupContainerSecurityList
 ```
@@ -7644,7 +7644,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerSecurityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerSecurityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerGroupContainerSecurityOutputReference
 ```
@@ -7933,7 +7933,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolumeGitRepoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerVolumeGitRepoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerGroupContainerVolumeGitRepoOutputReference
 ```
@@ -8262,7 +8262,7 @@ func InternalValue() ContainerGroupContainerVolumeGitRepo
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolumeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerVolumeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerGroupContainerVolumeList
 ```
@@ -8405,7 +8405,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupContainerVolumeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupContainerVolumeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerGroupContainerVolumeOutputReference
 ```
@@ -8932,7 +8932,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupDiagnosticsLogAnalyticsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupDiagnosticsLogAnalyticsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerGroupDiagnosticsLogAnalyticsOutputReference
 ```
@@ -9283,7 +9283,7 @@ func InternalValue() ContainerGroupDiagnosticsLogAnalytics
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupDiagnosticsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupDiagnosticsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerGroupDiagnosticsOutputReference
 ```
@@ -9567,7 +9567,7 @@ func InternalValue() ContainerGroupDiagnostics
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupDnsConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupDnsConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerGroupDnsConfigOutputReference
 ```
@@ -9896,7 +9896,7 @@ func InternalValue() ContainerGroupDnsConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupExposedPortList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupExposedPortList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerGroupExposedPortList
 ```
@@ -10039,7 +10039,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupExposedPortOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupExposedPortOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerGroupExposedPortOutputReference
 ```
@@ -10364,7 +10364,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerGroupIdentityOutputReference
 ```
@@ -10686,7 +10686,7 @@ func InternalValue() ContainerGroupIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupImageRegistryCredentialList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupImageRegistryCredentialList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerGroupImageRegistryCredentialList
 ```
@@ -10829,7 +10829,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupImageRegistryCredentialOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupImageRegistryCredentialOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerGroupImageRegistryCredentialOutputReference
 ```
@@ -11205,7 +11205,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupInitContainerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerGroupInitContainerList
 ```
@@ -11348,7 +11348,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupInitContainerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerGroupInitContainerOutputReference
 ```
@@ -11830,7 +11830,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerSecurityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupInitContainerSecurityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerGroupInitContainerSecurityList
 ```
@@ -11973,7 +11973,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerSecurityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupInitContainerSecurityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerGroupInitContainerSecurityOutputReference
 ```
@@ -12262,7 +12262,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolumeGitRepoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupInitContainerVolumeGitRepoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerGroupInitContainerVolumeGitRepoOutputReference
 ```
@@ -12591,7 +12591,7 @@ func InternalValue() ContainerGroupInitContainerVolumeGitRepo
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolumeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupInitContainerVolumeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerGroupInitContainerVolumeList
 ```
@@ -12734,7 +12734,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupInitContainerVolumeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupInitContainerVolumeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerGroupInitContainerVolumeOutputReference
 ```
@@ -13261,7 +13261,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerGroup.ContainerGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/containergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containergroup"
 
 containergroup.NewContainerGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerGroupTimeoutsOutputReference
 ```

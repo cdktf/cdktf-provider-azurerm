@@ -1,6 +1,6 @@
 # `azurerm_key_vault_key`
 
-Refer to the Terraform Registory for docs: [`azurerm_key_vault_key`](https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key).
+Refer to the Terraform Registory for docs: [`azurerm_key_vault_key`](https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key).
 
 # `keyVaultKey` Submodule <a name="`keyVaultKey` Submodule" id="@cdktf/provider-azurerm.keyVaultKey"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_key_vault_key`](https://reg
 
 ### KeyVaultKey <a name="KeyVaultKey" id="@cdktf/provider-azurerm.keyVaultKey.KeyVaultKey"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key azurerm_key_vault_key}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key azurerm_key_vault_key}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.keyVaultKey.KeyVaultKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/keyvaultkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultkey"
 
 keyvaultkey.NewKeyVaultKey(scope Construct, id *string, config KeyVaultKeyConfig) KeyVaultKey
 ```
@@ -352,7 +352,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.keyVaultKey.KeyVaultKey.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/keyvaultkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultkey"
 
 keyvaultkey.KeyVaultKey_IsConstruct(x interface{}) *bool
 ```
@@ -384,7 +384,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.keyVaultKey.KeyVaultKey.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/keyvaultkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultkey"
 
 keyvaultkey.KeyVaultKey_IsTerraformElement(x interface{}) *bool
 ```
@@ -398,7 +398,7 @@ keyvaultkey.KeyVaultKey_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.keyVaultKey.KeyVaultKey.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/keyvaultkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultkey"
 
 keyvaultkey.KeyVaultKey_IsTerraformResource(x interface{}) *bool
 ```
@@ -971,7 +971,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/keyvaultkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultkey"
 
 &keyvaultkey.KeyVaultKeyConfig {
 	Connection: interface{},
@@ -990,9 +990,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/keyvaultkey"
 	Id: *string,
 	KeySize: *f64,
 	NotBeforeDate: *string,
-	RotationPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.keyVaultKey.KeyVaultKeyRotationPolicy,
+	RotationPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.keyVaultKey.KeyVaultKeyRotationPolicy,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.keyVaultKey.KeyVaultKeyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.keyVaultKey.KeyVaultKeyTimeouts,
 }
 ```
 
@@ -1007,17 +1007,17 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/keyvaultkey"
 | <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyConfig.property.keyOpts">KeyOpts</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#key_opts KeyVaultKey#key_opts}. |
-| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyConfig.property.keyType">KeyType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#key_type KeyVaultKey#key_type}. |
-| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyConfig.property.keyVaultId">KeyVaultId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#key_vault_id KeyVaultKey#key_vault_id}. |
-| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#name KeyVaultKey#name}. |
-| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyConfig.property.curve">Curve</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#curve KeyVaultKey#curve}. |
-| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyConfig.property.expirationDate">ExpirationDate</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#expiration_date KeyVaultKey#expiration_date}. |
-| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#id KeyVaultKey#id}. |
-| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyConfig.property.keySize">KeySize</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#key_size KeyVaultKey#key_size}. |
-| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyConfig.property.notBeforeDate">NotBeforeDate</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#not_before_date KeyVaultKey#not_before_date}. |
+| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyConfig.property.keyOpts">KeyOpts</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#key_opts KeyVaultKey#key_opts}. |
+| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyConfig.property.keyType">KeyType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#key_type KeyVaultKey#key_type}. |
+| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyConfig.property.keyVaultId">KeyVaultId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#key_vault_id KeyVaultKey#key_vault_id}. |
+| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#name KeyVaultKey#name}. |
+| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyConfig.property.curve">Curve</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#curve KeyVaultKey#curve}. |
+| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyConfig.property.expirationDate">ExpirationDate</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#expiration_date KeyVaultKey#expiration_date}. |
+| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#id KeyVaultKey#id}. |
+| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyConfig.property.keySize">KeySize</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#key_size KeyVaultKey#key_size}. |
+| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyConfig.property.notBeforeDate">NotBeforeDate</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#not_before_date KeyVaultKey#not_before_date}. |
 | <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyConfig.property.rotationPolicy">RotationPolicy</a></code> | <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyRotationPolicy">KeyVaultKeyRotationPolicy</a></code> | rotation_policy block. |
-| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#tags KeyVaultKey#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#tags KeyVaultKey#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyTimeouts">KeyVaultKeyTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1100,7 +1100,7 @@ KeyOpts *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#key_opts KeyVaultKey#key_opts}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#key_opts KeyVaultKey#key_opts}.
 
 ---
 
@@ -1112,7 +1112,7 @@ KeyType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#key_type KeyVaultKey#key_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#key_type KeyVaultKey#key_type}.
 
 ---
 
@@ -1124,7 +1124,7 @@ KeyVaultId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#key_vault_id KeyVaultKey#key_vault_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#key_vault_id KeyVaultKey#key_vault_id}.
 
 ---
 
@@ -1136,7 +1136,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#name KeyVaultKey#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#name KeyVaultKey#name}.
 
 ---
 
@@ -1148,7 +1148,7 @@ Curve *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#curve KeyVaultKey#curve}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#curve KeyVaultKey#curve}.
 
 ---
 
@@ -1160,7 +1160,7 @@ ExpirationDate *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#expiration_date KeyVaultKey#expiration_date}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#expiration_date KeyVaultKey#expiration_date}.
 
 ---
 
@@ -1172,7 +1172,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#id KeyVaultKey#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#id KeyVaultKey#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1187,7 +1187,7 @@ KeySize *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#key_size KeyVaultKey#key_size}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#key_size KeyVaultKey#key_size}.
 
 ---
 
@@ -1199,7 +1199,7 @@ NotBeforeDate *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#not_before_date KeyVaultKey#not_before_date}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#not_before_date KeyVaultKey#not_before_date}.
 
 ---
 
@@ -1213,7 +1213,7 @@ RotationPolicy KeyVaultKeyRotationPolicy
 
 rotation_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#rotation_policy KeyVaultKey#rotation_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#rotation_policy KeyVaultKey#rotation_policy}
 
 ---
 
@@ -1225,7 +1225,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#tags KeyVaultKey#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#tags KeyVaultKey#tags}.
 
 ---
 
@@ -1239,7 +1239,7 @@ Timeouts KeyVaultKeyTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#timeouts KeyVaultKey#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#timeouts KeyVaultKey#timeouts}
 
 ---
 
@@ -1248,10 +1248,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyRotationPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/keyvaultkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultkey"
 
 &keyvaultkey.KeyVaultKeyRotationPolicy {
-	Automatic: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.keyVaultKey.KeyVaultKeyRotationPolicyAutomatic,
+	Automatic: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.keyVaultKey.KeyVaultKeyRotationPolicyAutomatic,
 	ExpireAfter: *string,
 	NotifyBeforeExpiry: *string,
 }
@@ -1262,8 +1262,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/keyvaultkey"
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyRotationPolicy.property.automatic">Automatic</a></code> | <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyRotationPolicyAutomatic">KeyVaultKeyRotationPolicyAutomatic</a></code> | automatic block. |
-| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyRotationPolicy.property.expireAfter">ExpireAfter</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#expire_after KeyVaultKey#expire_after}. |
-| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyRotationPolicy.property.notifyBeforeExpiry">NotifyBeforeExpiry</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#notify_before_expiry KeyVaultKey#notify_before_expiry}. |
+| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyRotationPolicy.property.expireAfter">ExpireAfter</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#expire_after KeyVaultKey#expire_after}. |
+| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyRotationPolicy.property.notifyBeforeExpiry">NotifyBeforeExpiry</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#notify_before_expiry KeyVaultKey#notify_before_expiry}. |
 
 ---
 
@@ -1277,7 +1277,7 @@ Automatic KeyVaultKeyRotationPolicyAutomatic
 
 automatic block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#automatic KeyVaultKey#automatic}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#automatic KeyVaultKey#automatic}
 
 ---
 
@@ -1289,7 +1289,7 @@ ExpireAfter *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#expire_after KeyVaultKey#expire_after}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#expire_after KeyVaultKey#expire_after}.
 
 ---
 
@@ -1301,7 +1301,7 @@ NotifyBeforeExpiry *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#notify_before_expiry KeyVaultKey#notify_before_expiry}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#notify_before_expiry KeyVaultKey#notify_before_expiry}.
 
 ---
 
@@ -1310,7 +1310,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyRotationPolicyAutomatic.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/keyvaultkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultkey"
 
 &keyvaultkey.KeyVaultKeyRotationPolicyAutomatic {
 	TimeAfterCreation: *string,
@@ -1322,8 +1322,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/keyvaultkey"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyRotationPolicyAutomatic.property.timeAfterCreation">TimeAfterCreation</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#time_after_creation KeyVaultKey#time_after_creation}. |
-| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyRotationPolicyAutomatic.property.timeBeforeExpiry">TimeBeforeExpiry</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#time_before_expiry KeyVaultKey#time_before_expiry}. |
+| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyRotationPolicyAutomatic.property.timeAfterCreation">TimeAfterCreation</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#time_after_creation KeyVaultKey#time_after_creation}. |
+| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyRotationPolicyAutomatic.property.timeBeforeExpiry">TimeBeforeExpiry</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#time_before_expiry KeyVaultKey#time_before_expiry}. |
 
 ---
 
@@ -1335,7 +1335,7 @@ TimeAfterCreation *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#time_after_creation KeyVaultKey#time_after_creation}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#time_after_creation KeyVaultKey#time_after_creation}.
 
 ---
 
@@ -1347,7 +1347,7 @@ TimeBeforeExpiry *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#time_before_expiry KeyVaultKey#time_before_expiry}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#time_before_expiry KeyVaultKey#time_before_expiry}.
 
 ---
 
@@ -1356,7 +1356,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/keyvaultkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultkey"
 
 &keyvaultkey.KeyVaultKeyTimeouts {
 	Create: *string,
@@ -1370,10 +1370,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/keyvaultkey"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#create KeyVaultKey#create}. |
-| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#delete KeyVaultKey#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#read KeyVaultKey#read}. |
-| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#update KeyVaultKey#update}. |
+| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#create KeyVaultKey#create}. |
+| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#delete KeyVaultKey#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#read KeyVaultKey#read}. |
+| <code><a href="#@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#update KeyVaultKey#update}. |
 
 ---
 
@@ -1385,7 +1385,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#create KeyVaultKey#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#create KeyVaultKey#create}.
 
 ---
 
@@ -1397,7 +1397,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#delete KeyVaultKey#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#delete KeyVaultKey#delete}.
 
 ---
 
@@ -1409,7 +1409,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#read KeyVaultKey#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#read KeyVaultKey#read}.
 
 ---
 
@@ -1421,7 +1421,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/key_vault_key#update KeyVaultKey#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/key_vault_key#update KeyVaultKey#update}.
 
 ---
 
@@ -1432,7 +1432,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyRotationPolicyAutomaticOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/keyvaultkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultkey"
 
 keyvaultkey.NewKeyVaultKeyRotationPolicyAutomaticOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KeyVaultKeyRotationPolicyAutomaticOutputReference
 ```
@@ -1739,7 +1739,7 @@ func InternalValue() KeyVaultKeyRotationPolicyAutomatic
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyRotationPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/keyvaultkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultkey"
 
 keyvaultkey.NewKeyVaultKeyRotationPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KeyVaultKeyRotationPolicyOutputReference
 ```
@@ -2088,7 +2088,7 @@ func InternalValue() KeyVaultKeyRotationPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.keyVaultKey.KeyVaultKeyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/keyvaultkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/keyvaultkey"
 
 keyvaultkey.NewKeyVaultKeyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KeyVaultKeyTimeoutsOutputReference
 ```

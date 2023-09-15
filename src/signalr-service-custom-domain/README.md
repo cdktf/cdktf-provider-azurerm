@@ -1,3 +1,3 @@
 # `azurerm_signalr_service_custom_domain`
 
-Refer to the Terraform Registory for docs: [`azurerm_signalr_service_custom_domain`](https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/signalr_service_custom_domain).
+Refer to the Terraform Registory for docs: [`azurerm_signalr_service_custom_domain`](https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/signalr_service_custom_domain).

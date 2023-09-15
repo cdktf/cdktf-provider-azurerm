@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/windows_function_app
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/windows_function_app
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermWindowsFunctionAppConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/windows_function_app#id DataAzurermWindowsFunctionApp#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/windows_function_app#id DataAzurermWindowsFunctionApp#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/windows_function_app#name DataAzurermWindowsFunctionApp#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/windows_function_app#name DataAzurermWindowsFunctionApp#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/windows_function_app#resource_group_name DataAzurermWindowsFunctionApp#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/windows_function_app#resource_group_name DataAzurermWindowsFunctionApp#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/windows_function_app#timeouts DataAzurermWindowsFunctionApp#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/windows_function_app#timeouts DataAzurermWindowsFunctionApp#timeouts}
   */
   readonly timeouts?: DataAzurermWindowsFunctionAppTimeouts;
 }
@@ -2960,7 +2955,7 @@ export class DataAzurermWindowsFunctionAppStickySettingsList extends cdktf.Compl
 }
 export interface DataAzurermWindowsFunctionAppTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/windows_function_app#read DataAzurermWindowsFunctionApp#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/windows_function_app#read DataAzurermWindowsFunctionApp#read}
   */
   readonly read?: string;
 }
@@ -3035,7 +3030,7 @@ export class DataAzurermWindowsFunctionAppTimeoutsOutputReference extends cdktf.
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/windows_function_app azurerm_windows_function_app}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/windows_function_app azurerm_windows_function_app}
 */
 export class DataAzurermWindowsFunctionApp extends cdktf.TerraformDataSource {
 
@@ -3049,7 +3044,7 @@ export class DataAzurermWindowsFunctionApp extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/windows_function_app azurerm_windows_function_app} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/windows_function_app azurerm_windows_function_app} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -3060,7 +3055,7 @@ export class DataAzurermWindowsFunctionApp extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_windows_function_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.72.0',
+        providerVersion: '3.73.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

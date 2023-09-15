@@ -1,6 +1,6 @@
 # `data_azurerm_storage_sync_group`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_storage_sync_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/storage_sync_group).
+Refer to the Terraform Registory for docs: [`data_azurerm_storage_sync_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/storage_sync_group).
 
 # `dataAzurermStorageSyncGroup` Submodule <a name="`dataAzurermStorageSyncGroup` Submodule" id="@cdktf/provider-azurerm.dataAzurermStorageSyncGroup"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_azurerm_storage_sync_group`](h
 
 ### DataAzurermStorageSyncGroup <a name="DataAzurermStorageSyncGroup" id="@cdktf/provider-azurerm.dataAzurermStorageSyncGroup.DataAzurermStorageSyncGroup"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/storage_sync_group azurerm_storage_sync_group}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/storage_sync_group azurerm_storage_sync_group}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStorageSyncGroup.DataAzurermStorageSyncGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermstoragesyncgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstoragesyncgroup"
 
 dataazurermstoragesyncgroup.NewDataAzurermStorageSyncGroup(scope Construct, id *string, config DataAzurermStorageSyncGroupConfig) DataAzurermStorageSyncGroup
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermStorageSyncGroup.DataAzurermStorageSyncGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermstoragesyncgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstoragesyncgroup"
 
 dataazurermstoragesyncgroup.DataAzurermStorageSyncGroup_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermStorageSyncGroup.DataAzurermStorageSyncGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermstoragesyncgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstoragesyncgroup"
 
 dataazurermstoragesyncgroup.DataAzurermStorageSyncGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ dataazurermstoragesyncgroup.DataAzurermStorageSyncGroup_IsTerraformElement(x int
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermStorageSyncGroup.DataAzurermStorageSyncGroup.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermstoragesyncgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstoragesyncgroup"
 
 dataazurermstoragesyncgroup.DataAzurermStorageSyncGroup_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -608,7 +608,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermStorageSyncGroup.DataAzurermStorageSyncGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermstoragesyncgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstoragesyncgroup"
 
 &dataazurermstoragesyncgroup.DataAzurermStorageSyncGroupConfig {
 	Connection: interface{},
@@ -621,7 +621,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermstorag
 	Name: *string,
 	StorageSyncId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.dataAzurermStorageSyncGroup.DataAzurermStorageSyncGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermStorageSyncGroup.DataAzurermStorageSyncGroupTimeouts,
 }
 ```
 
@@ -636,9 +636,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermstorag
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSyncGroup.DataAzurermStorageSyncGroupConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSyncGroup.DataAzurermStorageSyncGroupConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSyncGroup.DataAzurermStorageSyncGroupConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSyncGroup.DataAzurermStorageSyncGroupConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/storage_sync_group#name DataAzurermStorageSyncGroup#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSyncGroup.DataAzurermStorageSyncGroupConfig.property.storageSyncId">StorageSyncId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/storage_sync_group#storage_sync_id DataAzurermStorageSyncGroup#storage_sync_id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSyncGroup.DataAzurermStorageSyncGroupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/storage_sync_group#id DataAzurermStorageSyncGroup#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSyncGroup.DataAzurermStorageSyncGroupConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/storage_sync_group#name DataAzurermStorageSyncGroup#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSyncGroup.DataAzurermStorageSyncGroupConfig.property.storageSyncId">StorageSyncId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/storage_sync_group#storage_sync_id DataAzurermStorageSyncGroup#storage_sync_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSyncGroup.DataAzurermStorageSyncGroupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/storage_sync_group#id DataAzurermStorageSyncGroup#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSyncGroup.DataAzurermStorageSyncGroupConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSyncGroup.DataAzurermStorageSyncGroupTimeouts">DataAzurermStorageSyncGroupTimeouts</a></code> | timeouts block. |
 
 ---
@@ -721,7 +721,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/storage_sync_group#name DataAzurermStorageSyncGroup#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/storage_sync_group#name DataAzurermStorageSyncGroup#name}.
 
 ---
 
@@ -733,7 +733,7 @@ StorageSyncId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/storage_sync_group#storage_sync_id DataAzurermStorageSyncGroup#storage_sync_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/storage_sync_group#storage_sync_id DataAzurermStorageSyncGroup#storage_sync_id}.
 
 ---
 
@@ -745,7 +745,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/storage_sync_group#id DataAzurermStorageSyncGroup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/storage_sync_group#id DataAzurermStorageSyncGroup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -762,7 +762,7 @@ Timeouts DataAzurermStorageSyncGroupTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/storage_sync_group#timeouts DataAzurermStorageSyncGroup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/storage_sync_group#timeouts DataAzurermStorageSyncGroup#timeouts}
 
 ---
 
@@ -771,7 +771,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermStorageSyncGroup.DataAzurermStorageSyncGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermstoragesyncgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstoragesyncgroup"
 
 &dataazurermstoragesyncgroup.DataAzurermStorageSyncGroupTimeouts {
 	Read: *string,
@@ -782,7 +782,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermstorag
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSyncGroup.DataAzurermStorageSyncGroupTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/storage_sync_group#read DataAzurermStorageSyncGroup#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageSyncGroup.DataAzurermStorageSyncGroupTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/storage_sync_group#read DataAzurermStorageSyncGroup#read}. |
 
 ---
 
@@ -794,7 +794,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/storage_sync_group#read DataAzurermStorageSyncGroup#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/storage_sync_group#read DataAzurermStorageSyncGroup#read}.
 
 ---
 
@@ -805,7 +805,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStorageSyncGroup.DataAzurermStorageSyncGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermstoragesyncgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstoragesyncgroup"
 
 dataazurermstoragesyncgroup.NewDataAzurermStorageSyncGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermStorageSyncGroupTimeoutsOutputReference
 ```

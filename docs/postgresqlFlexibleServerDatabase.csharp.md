@@ -1,6 +1,6 @@
 # `azurerm_postgresql_flexible_server_database`
 
-Refer to the Terraform Registory for docs: [`azurerm_postgresql_flexible_server_database`](https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_flexible_server_database).
+Refer to the Terraform Registory for docs: [`azurerm_postgresql_flexible_server_database`](https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/postgresql_flexible_server_database).
 
 # `postgresqlFlexibleServerDatabase` Submodule <a name="`postgresqlFlexibleServerDatabase` Submodule" id="@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_postgresql_flexible_server_
 
 ### PostgresqlFlexibleServerDatabase <a name="PostgresqlFlexibleServerDatabase" id="@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabase"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_flexible_server_database azurerm_postgresql_flexible_server_database}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/postgresql_flexible_server_database azurerm_postgresql_flexible_server_database}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabase.Initializer"></a>
 
@@ -718,11 +718,11 @@ new PostgresqlFlexibleServerDatabaseConfig {
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabaseConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabaseConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabaseConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabaseConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_flexible_server_database#name PostgresqlFlexibleServerDatabase#name}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabaseConfig.property.serverId">ServerId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_flexible_server_database#server_id PostgresqlFlexibleServerDatabase#server_id}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabaseConfig.property.charset">Charset</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_flexible_server_database#charset PostgresqlFlexibleServerDatabase#charset}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabaseConfig.property.collation">Collation</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_flexible_server_database#collation PostgresqlFlexibleServerDatabase#collation}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabaseConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_flexible_server_database#id PostgresqlFlexibleServerDatabase#id}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabaseConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/postgresql_flexible_server_database#name PostgresqlFlexibleServerDatabase#name}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabaseConfig.property.serverId">ServerId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/postgresql_flexible_server_database#server_id PostgresqlFlexibleServerDatabase#server_id}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabaseConfig.property.charset">Charset</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/postgresql_flexible_server_database#charset PostgresqlFlexibleServerDatabase#charset}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabaseConfig.property.collation">Collation</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/postgresql_flexible_server_database#collation PostgresqlFlexibleServerDatabase#collation}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabaseConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/postgresql_flexible_server_database#id PostgresqlFlexibleServerDatabase#id}. |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabaseConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabaseTimeouts">PostgresqlFlexibleServerDatabaseTimeouts</a></code> | timeouts block. |
 
 ---
@@ -805,7 +805,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_flexible_server_database#name PostgresqlFlexibleServerDatabase#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/postgresql_flexible_server_database#name PostgresqlFlexibleServerDatabase#name}.
 
 ---
 
@@ -817,7 +817,7 @@ public string ServerId { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_flexible_server_database#server_id PostgresqlFlexibleServerDatabase#server_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/postgresql_flexible_server_database#server_id PostgresqlFlexibleServerDatabase#server_id}.
 
 ---
 
@@ -829,7 +829,7 @@ public string Charset { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_flexible_server_database#charset PostgresqlFlexibleServerDatabase#charset}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/postgresql_flexible_server_database#charset PostgresqlFlexibleServerDatabase#charset}.
 
 ---
 
@@ -841,7 +841,7 @@ public string Collation { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_flexible_server_database#collation PostgresqlFlexibleServerDatabase#collation}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/postgresql_flexible_server_database#collation PostgresqlFlexibleServerDatabase#collation}.
 
 ---
 
@@ -853,7 +853,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_flexible_server_database#id PostgresqlFlexibleServerDatabase#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/postgresql_flexible_server_database#id PostgresqlFlexibleServerDatabase#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -870,7 +870,7 @@ public PostgresqlFlexibleServerDatabaseTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_flexible_server_database#timeouts PostgresqlFlexibleServerDatabase#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/postgresql_flexible_server_database#timeouts PostgresqlFlexibleServerDatabase#timeouts}
 
 ---
 
@@ -892,9 +892,9 @@ new PostgresqlFlexibleServerDatabaseTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabaseTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_flexible_server_database#create PostgresqlFlexibleServerDatabase#create}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabaseTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_flexible_server_database#delete PostgresqlFlexibleServerDatabase#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabaseTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_flexible_server_database#read PostgresqlFlexibleServerDatabase#read}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabaseTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/postgresql_flexible_server_database#create PostgresqlFlexibleServerDatabase#create}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabaseTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/postgresql_flexible_server_database#delete PostgresqlFlexibleServerDatabase#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlFlexibleServerDatabase.PostgresqlFlexibleServerDatabaseTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/postgresql_flexible_server_database#read PostgresqlFlexibleServerDatabase#read}. |
 
 ---
 
@@ -906,7 +906,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_flexible_server_database#create PostgresqlFlexibleServerDatabase#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/postgresql_flexible_server_database#create PostgresqlFlexibleServerDatabase#create}.
 
 ---
 
@@ -918,7 +918,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_flexible_server_database#delete PostgresqlFlexibleServerDatabase#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/postgresql_flexible_server_database#delete PostgresqlFlexibleServerDatabase#delete}.
 
 ---
 
@@ -930,7 +930,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/postgresql_flexible_server_database#read PostgresqlFlexibleServerDatabase#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/postgresql_flexible_server_database#read PostgresqlFlexibleServerDatabase#read}.
 
 ---
 

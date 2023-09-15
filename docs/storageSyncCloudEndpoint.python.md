@@ -1,6 +1,6 @@
 # `azurerm_storage_sync_cloud_endpoint`
 
-Refer to the Terraform Registory for docs: [`azurerm_storage_sync_cloud_endpoint`](https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint).
+Refer to the Terraform Registory for docs: [`azurerm_storage_sync_cloud_endpoint`](https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint).
 
 # `storageSyncCloudEndpoint` Submodule <a name="`storageSyncCloudEndpoint` Submodule" id="@cdktf/provider-azurerm.storageSyncCloudEndpoint"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_storage_sync_cloud_endpoint
 
 ### StorageSyncCloudEndpoint <a name="StorageSyncCloudEndpoint" id="@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpoint"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint azurerm_storage_sync_cloud_endpoint}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint azurerm_storage_sync_cloud_endpoint}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpoint.Initializer"></a>
 
@@ -46,12 +46,12 @@ storageSyncCloudEndpoint.StorageSyncCloudEndpoint(
 | <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpoint.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpoint.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpoint.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpoint.Initializer.parameter.fileShareName">file_share_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#file_share_name StorageSyncCloudEndpoint#file_share_name}. |
-| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpoint.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#name StorageSyncCloudEndpoint#name}. |
-| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpoint.Initializer.parameter.storageAccountId">storage_account_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#storage_account_id StorageSyncCloudEndpoint#storage_account_id}. |
-| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpoint.Initializer.parameter.storageSyncGroupId">storage_sync_group_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#storage_sync_group_id StorageSyncCloudEndpoint#storage_sync_group_id}. |
-| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpoint.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#id StorageSyncCloudEndpoint#id}. |
-| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpoint.Initializer.parameter.storageAccountTenantId">storage_account_tenant_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#storage_account_tenant_id StorageSyncCloudEndpoint#storage_account_tenant_id}. |
+| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpoint.Initializer.parameter.fileShareName">file_share_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#file_share_name StorageSyncCloudEndpoint#file_share_name}. |
+| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpoint.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#name StorageSyncCloudEndpoint#name}. |
+| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpoint.Initializer.parameter.storageAccountId">storage_account_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#storage_account_id StorageSyncCloudEndpoint#storage_account_id}. |
+| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpoint.Initializer.parameter.storageSyncGroupId">storage_sync_group_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#storage_sync_group_id StorageSyncCloudEndpoint#storage_sync_group_id}. |
+| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpoint.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#id StorageSyncCloudEndpoint#id}. |
+| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpoint.Initializer.parameter.storageAccountTenantId">storage_account_tenant_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#storage_account_tenant_id StorageSyncCloudEndpoint#storage_account_tenant_id}. |
 | <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpoint.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointTimeouts">StorageSyncCloudEndpointTimeouts</a></code> | timeouts block. |
 
 ---
@@ -120,7 +120,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#file_share_name StorageSyncCloudEndpoint#file_share_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#file_share_name StorageSyncCloudEndpoint#file_share_name}.
 
 ---
 
@@ -128,7 +128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#name StorageSyncCloudEndpoint#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#name StorageSyncCloudEndpoint#name}.
 
 ---
 
@@ -136,7 +136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#storage_account_id StorageSyncCloudEndpoint#storage_account_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#storage_account_id StorageSyncCloudEndpoint#storage_account_id}.
 
 ---
 
@@ -144,7 +144,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#storage_sync_group_id StorageSyncCloudEndpoint#storage_sync_group_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#storage_sync_group_id StorageSyncCloudEndpoint#storage_sync_group_id}.
 
 ---
 
@@ -152,7 +152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#id StorageSyncCloudEndpoint#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#id StorageSyncCloudEndpoint#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -163,7 +163,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#storage_account_tenant_id StorageSyncCloudEndpoint#storage_account_tenant_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#storage_account_tenant_id StorageSyncCloudEndpoint#storage_account_tenant_id}.
 
 ---
 
@@ -173,7 +173,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#timeouts StorageSyncCloudEndpoint#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#timeouts StorageSyncCloudEndpoint#timeouts}
 
 ---
 
@@ -427,7 +427,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#create StorageSyncCloudEndpoint#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#create StorageSyncCloudEndpoint#create}.
 
 ---
 
@@ -435,7 +435,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#delete StorageSyncCloudEndpoint#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#delete StorageSyncCloudEndpoint#delete}.
 
 ---
 
@@ -443,7 +443,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#read StorageSyncCloudEndpoint#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#read StorageSyncCloudEndpoint#read}.
 
 ---
 
@@ -914,12 +914,12 @@ storageSyncCloudEndpoint.StorageSyncCloudEndpointConfig(
 | <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointConfig.property.fileShareName">file_share_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#file_share_name StorageSyncCloudEndpoint#file_share_name}. |
-| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#name StorageSyncCloudEndpoint#name}. |
-| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointConfig.property.storageAccountId">storage_account_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#storage_account_id StorageSyncCloudEndpoint#storage_account_id}. |
-| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointConfig.property.storageSyncGroupId">storage_sync_group_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#storage_sync_group_id StorageSyncCloudEndpoint#storage_sync_group_id}. |
-| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#id StorageSyncCloudEndpoint#id}. |
-| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointConfig.property.storageAccountTenantId">storage_account_tenant_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#storage_account_tenant_id StorageSyncCloudEndpoint#storage_account_tenant_id}. |
+| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointConfig.property.fileShareName">file_share_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#file_share_name StorageSyncCloudEndpoint#file_share_name}. |
+| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#name StorageSyncCloudEndpoint#name}. |
+| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointConfig.property.storageAccountId">storage_account_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#storage_account_id StorageSyncCloudEndpoint#storage_account_id}. |
+| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointConfig.property.storageSyncGroupId">storage_sync_group_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#storage_sync_group_id StorageSyncCloudEndpoint#storage_sync_group_id}. |
+| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#id StorageSyncCloudEndpoint#id}. |
+| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointConfig.property.storageAccountTenantId">storage_account_tenant_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#storage_account_tenant_id StorageSyncCloudEndpoint#storage_account_tenant_id}. |
 | <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointTimeouts">StorageSyncCloudEndpointTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1002,7 +1002,7 @@ file_share_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#file_share_name StorageSyncCloudEndpoint#file_share_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#file_share_name StorageSyncCloudEndpoint#file_share_name}.
 
 ---
 
@@ -1014,7 +1014,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#name StorageSyncCloudEndpoint#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#name StorageSyncCloudEndpoint#name}.
 
 ---
 
@@ -1026,7 +1026,7 @@ storage_account_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#storage_account_id StorageSyncCloudEndpoint#storage_account_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#storage_account_id StorageSyncCloudEndpoint#storage_account_id}.
 
 ---
 
@@ -1038,7 +1038,7 @@ storage_sync_group_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#storage_sync_group_id StorageSyncCloudEndpoint#storage_sync_group_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#storage_sync_group_id StorageSyncCloudEndpoint#storage_sync_group_id}.
 
 ---
 
@@ -1050,7 +1050,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#id StorageSyncCloudEndpoint#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#id StorageSyncCloudEndpoint#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1065,7 +1065,7 @@ storage_account_tenant_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#storage_account_tenant_id StorageSyncCloudEndpoint#storage_account_tenant_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#storage_account_tenant_id StorageSyncCloudEndpoint#storage_account_tenant_id}.
 
 ---
 
@@ -1079,7 +1079,7 @@ timeouts: StorageSyncCloudEndpointTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#timeouts StorageSyncCloudEndpoint#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#timeouts StorageSyncCloudEndpoint#timeouts}
 
 ---
 
@@ -1101,9 +1101,9 @@ storageSyncCloudEndpoint.StorageSyncCloudEndpointTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#create StorageSyncCloudEndpoint#create}. |
-| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#delete StorageSyncCloudEndpoint#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#read StorageSyncCloudEndpoint#read}. |
+| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#create StorageSyncCloudEndpoint#create}. |
+| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#delete StorageSyncCloudEndpoint#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.storageSyncCloudEndpoint.StorageSyncCloudEndpointTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#read StorageSyncCloudEndpoint#read}. |
 
 ---
 
@@ -1115,7 +1115,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#create StorageSyncCloudEndpoint#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#create StorageSyncCloudEndpoint#create}.
 
 ---
 
@@ -1127,7 +1127,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#delete StorageSyncCloudEndpoint#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#delete StorageSyncCloudEndpoint#delete}.
 
 ---
 
@@ -1139,7 +1139,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_sync_cloud_endpoint#read StorageSyncCloudEndpoint#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_sync_cloud_endpoint#read StorageSyncCloudEndpoint#read}.
 
 ---
 
