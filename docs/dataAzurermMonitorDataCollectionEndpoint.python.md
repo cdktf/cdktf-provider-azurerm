@@ -1,6 +1,6 @@
 # `data_azurerm_monitor_data_collection_endpoint`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_monitor_data_collection_endpoint`](https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/monitor_data_collection_endpoint).
+Refer to the Terraform Registory for docs: [`data_azurerm_monitor_data_collection_endpoint`](https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/monitor_data_collection_endpoint).
 
 # `dataAzurermMonitorDataCollectionEndpoint` Submodule <a name="`dataAzurermMonitorDataCollectionEndpoint` Submodule" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_monitor_data_collectio
 
 ### DataAzurermMonitorDataCollectionEndpoint <a name="DataAzurermMonitorDataCollectionEndpoint" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpoint"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/monitor_data_collection_endpoint azurerm_monitor_data_collection_endpoint}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/monitor_data_collection_endpoint azurerm_monitor_data_collection_endpoint}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpoint.Initializer"></a>
 
@@ -43,9 +43,9 @@ dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpoin
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpoint.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpoint.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpoint.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpoint.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/monitor_data_collection_endpoint#name DataAzurermMonitorDataCollectionEndpoint#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpoint.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/monitor_data_collection_endpoint#resource_group_name DataAzurermMonitorDataCollectionEndpoint#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpoint.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/monitor_data_collection_endpoint#id DataAzurermMonitorDataCollectionEndpoint#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpoint.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/monitor_data_collection_endpoint#name DataAzurermMonitorDataCollectionEndpoint#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpoint.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/monitor_data_collection_endpoint#resource_group_name DataAzurermMonitorDataCollectionEndpoint#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpoint.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/monitor_data_collection_endpoint#id DataAzurermMonitorDataCollectionEndpoint#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpoint.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpointTimeouts">DataAzurermMonitorDataCollectionEndpointTimeouts</a></code> | timeouts block. |
 
 ---
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/monitor_data_collection_endpoint#name DataAzurermMonitorDataCollectionEndpoint#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/monitor_data_collection_endpoint#name DataAzurermMonitorDataCollectionEndpoint#name}.
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/monitor_data_collection_endpoint#resource_group_name DataAzurermMonitorDataCollectionEndpoint#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/monitor_data_collection_endpoint#resource_group_name DataAzurermMonitorDataCollectionEndpoint#resource_group_name}.
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/monitor_data_collection_endpoint#id DataAzurermMonitorDataCollectionEndpoint#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/monitor_data_collection_endpoint#id DataAzurermMonitorDataCollectionEndpoint#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -143,7 +143,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/monitor_data_collection_endpoint#timeouts DataAzurermMonitorDataCollectionEndpoint#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/monitor_data_collection_endpoint#timeouts DataAzurermMonitorDataCollectionEndpoint#timeouts}
 
 ---
 
@@ -394,7 +394,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/monitor_data_collection_endpoint#read DataAzurermMonitorDataCollectionEndpoint#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/monitor_data_collection_endpoint#read DataAzurermMonitorDataCollectionEndpoint#read}.
 
 ---
 
@@ -845,9 +845,9 @@ dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpoin
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpointConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpointConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpointConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpointConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/monitor_data_collection_endpoint#name DataAzurermMonitorDataCollectionEndpoint#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpointConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/monitor_data_collection_endpoint#resource_group_name DataAzurermMonitorDataCollectionEndpoint#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpointConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/monitor_data_collection_endpoint#id DataAzurermMonitorDataCollectionEndpoint#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpointConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/monitor_data_collection_endpoint#name DataAzurermMonitorDataCollectionEndpoint#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpointConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/monitor_data_collection_endpoint#resource_group_name DataAzurermMonitorDataCollectionEndpoint#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpointConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/monitor_data_collection_endpoint#id DataAzurermMonitorDataCollectionEndpoint#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpointConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpointTimeouts">DataAzurermMonitorDataCollectionEndpointTimeouts</a></code> | timeouts block. |
 
 ---
@@ -930,7 +930,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/monitor_data_collection_endpoint#name DataAzurermMonitorDataCollectionEndpoint#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/monitor_data_collection_endpoint#name DataAzurermMonitorDataCollectionEndpoint#name}.
 
 ---
 
@@ -942,7 +942,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/monitor_data_collection_endpoint#resource_group_name DataAzurermMonitorDataCollectionEndpoint#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/monitor_data_collection_endpoint#resource_group_name DataAzurermMonitorDataCollectionEndpoint#resource_group_name}.
 
 ---
 
@@ -954,7 +954,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/monitor_data_collection_endpoint#id DataAzurermMonitorDataCollectionEndpoint#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/monitor_data_collection_endpoint#id DataAzurermMonitorDataCollectionEndpoint#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -971,7 +971,7 @@ timeouts: DataAzurermMonitorDataCollectionEndpointTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/monitor_data_collection_endpoint#timeouts DataAzurermMonitorDataCollectionEndpoint#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/monitor_data_collection_endpoint#timeouts DataAzurermMonitorDataCollectionEndpoint#timeouts}
 
 ---
 
@@ -991,7 +991,7 @@ dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpoin
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpointTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/monitor_data_collection_endpoint#read DataAzurermMonitorDataCollectionEndpoint#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionEndpoint.DataAzurermMonitorDataCollectionEndpointTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/monitor_data_collection_endpoint#read DataAzurermMonitorDataCollectionEndpoint#read}. |
 
 ---
 
@@ -1003,7 +1003,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/monitor_data_collection_endpoint#read DataAzurermMonitorDataCollectionEndpoint#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/monitor_data_collection_endpoint#read DataAzurermMonitorDataCollectionEndpoint#read}.
 
 ---
 

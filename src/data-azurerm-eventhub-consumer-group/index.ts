@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/eventhub_consumer_group
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/eventhub_consumer_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,38 +13,38 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermEventhubConsumerGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/eventhub_consumer_group#eventhub_name DataAzurermEventhubConsumerGroup#eventhub_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/eventhub_consumer_group#eventhub_name DataAzurermEventhubConsumerGroup#eventhub_name}
   */
   readonly eventhubName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/eventhub_consumer_group#id DataAzurermEventhubConsumerGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/eventhub_consumer_group#id DataAzurermEventhubConsumerGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/eventhub_consumer_group#name DataAzurermEventhubConsumerGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/eventhub_consumer_group#name DataAzurermEventhubConsumerGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/eventhub_consumer_group#namespace_name DataAzurermEventhubConsumerGroup#namespace_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/eventhub_consumer_group#namespace_name DataAzurermEventhubConsumerGroup#namespace_name}
   */
   readonly namespaceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/eventhub_consumer_group#resource_group_name DataAzurermEventhubConsumerGroup#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/eventhub_consumer_group#resource_group_name DataAzurermEventhubConsumerGroup#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/eventhub_consumer_group#timeouts DataAzurermEventhubConsumerGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/eventhub_consumer_group#timeouts DataAzurermEventhubConsumerGroup#timeouts}
   */
   readonly timeouts?: DataAzurermEventhubConsumerGroupTimeouts;
 }
 export interface DataAzurermEventhubConsumerGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/eventhub_consumer_group#read DataAzurermEventhubConsumerGroup#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/eventhub_consumer_group#read DataAzurermEventhubConsumerGroup#read}
   */
   readonly read?: string;
 }
@@ -119,7 +119,7 @@ export class DataAzurermEventhubConsumerGroupTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/eventhub_consumer_group azurerm_eventhub_consumer_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/eventhub_consumer_group azurerm_eventhub_consumer_group}
 */
 export class DataAzurermEventhubConsumerGroup extends cdktf.TerraformDataSource {
 
@@ -133,7 +133,7 @@ export class DataAzurermEventhubConsumerGroup extends cdktf.TerraformDataSource 
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/eventhub_consumer_group azurerm_eventhub_consumer_group} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/eventhub_consumer_group azurerm_eventhub_consumer_group} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -144,7 +144,7 @@ export class DataAzurermEventhubConsumerGroup extends cdktf.TerraformDataSource 
       terraformResourceType: 'azurerm_eventhub_consumer_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.72.0',
+        providerVersion: '3.73.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -1,3 +1,3 @@
 # `azurerm_storage_blob_inventory_policy`
 
-Refer to the Terraform Registory for docs: [`azurerm_storage_blob_inventory_policy`](https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/storage_blob_inventory_policy).
+Refer to the Terraform Registory for docs: [`azurerm_storage_blob_inventory_policy`](https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_blob_inventory_policy).

@@ -1,6 +1,6 @@
 # `azurerm_monitor_workspace`
 
-Refer to the Terraform Registory for docs: [`azurerm_monitor_workspace`](https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_workspace).
+Refer to the Terraform Registory for docs: [`azurerm_monitor_workspace`](https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/monitor_workspace).
 
 # `monitorWorkspace` Submodule <a name="`monitorWorkspace` Submodule" id="@cdktf/provider-azurerm.monitorWorkspace"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_monitor_workspace`](https:/
 
 ### MonitorWorkspace <a name="MonitorWorkspace" id="@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspace"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_workspace azurerm_monitor_workspace}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/monitor_workspace azurerm_monitor_workspace}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspace.Initializer"></a>
 
@@ -741,12 +741,12 @@ new MonitorWorkspaceConfig {
 | <code><a href="#@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspaceConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspaceConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspaceConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspaceConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_workspace#location MonitorWorkspace#location}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspaceConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_workspace#name MonitorWorkspace#name}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspaceConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_workspace#resource_group_name MonitorWorkspace#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspaceConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_workspace#id MonitorWorkspace#id}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspaceConfig.property.publicNetworkAccessEnabled">PublicNetworkAccessEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_workspace#public_network_access_enabled MonitorWorkspace#public_network_access_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspaceConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_workspace#tags MonitorWorkspace#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspaceConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/monitor_workspace#location MonitorWorkspace#location}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspaceConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/monitor_workspace#name MonitorWorkspace#name}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspaceConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/monitor_workspace#resource_group_name MonitorWorkspace#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspaceConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/monitor_workspace#id MonitorWorkspace#id}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspaceConfig.property.publicNetworkAccessEnabled">PublicNetworkAccessEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/monitor_workspace#public_network_access_enabled MonitorWorkspace#public_network_access_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspaceConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/monitor_workspace#tags MonitorWorkspace#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspaceConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspaceTimeouts">MonitorWorkspaceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -829,7 +829,7 @@ public string Location { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_workspace#location MonitorWorkspace#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/monitor_workspace#location MonitorWorkspace#location}.
 
 ---
 
@@ -841,7 +841,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_workspace#name MonitorWorkspace#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/monitor_workspace#name MonitorWorkspace#name}.
 
 ---
 
@@ -853,7 +853,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_workspace#resource_group_name MonitorWorkspace#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/monitor_workspace#resource_group_name MonitorWorkspace#resource_group_name}.
 
 ---
 
@@ -865,7 +865,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_workspace#id MonitorWorkspace#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/monitor_workspace#id MonitorWorkspace#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -880,7 +880,7 @@ public object PublicNetworkAccessEnabled { get; set; }
 
 - *Type:* object
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_workspace#public_network_access_enabled MonitorWorkspace#public_network_access_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/monitor_workspace#public_network_access_enabled MonitorWorkspace#public_network_access_enabled}.
 
 ---
 
@@ -892,7 +892,7 @@ public System.Collections.Generic.IDictionary<string, string> Tags { get; set; }
 
 - *Type:* System.Collections.Generic.IDictionary<string, string>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_workspace#tags MonitorWorkspace#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/monitor_workspace#tags MonitorWorkspace#tags}.
 
 ---
 
@@ -906,7 +906,7 @@ public MonitorWorkspaceTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_workspace#timeouts MonitorWorkspace#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/monitor_workspace#timeouts MonitorWorkspace#timeouts}
 
 ---
 
@@ -929,10 +929,10 @@ new MonitorWorkspaceTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspaceTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_workspace#create MonitorWorkspace#create}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspaceTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_workspace#delete MonitorWorkspace#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspaceTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_workspace#read MonitorWorkspace#read}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspaceTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_workspace#update MonitorWorkspace#update}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspaceTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/monitor_workspace#create MonitorWorkspace#create}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspaceTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/monitor_workspace#delete MonitorWorkspace#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspaceTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/monitor_workspace#read MonitorWorkspace#read}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorWorkspace.MonitorWorkspaceTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/monitor_workspace#update MonitorWorkspace#update}. |
 
 ---
 
@@ -944,7 +944,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_workspace#create MonitorWorkspace#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/monitor_workspace#create MonitorWorkspace#create}.
 
 ---
 
@@ -956,7 +956,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_workspace#delete MonitorWorkspace#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/monitor_workspace#delete MonitorWorkspace#delete}.
 
 ---
 
@@ -968,7 +968,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_workspace#read MonitorWorkspace#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/monitor_workspace#read MonitorWorkspace#read}.
 
 ---
 
@@ -980,7 +980,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/monitor_workspace#update MonitorWorkspace#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/monitor_workspace#update MonitorWorkspace#update}.
 
 ---
 

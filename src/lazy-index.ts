@@ -412,6 +412,7 @@ Object.defineProperty(exports, 'iothubDeviceUpdateInstance', { get: function () 
 Object.defineProperty(exports, 'iothubDps', { get: function () { return require('./iothub-dps'); } });
 Object.defineProperty(exports, 'iothubDpsCertificate', { get: function () { return require('./iothub-dps-certificate'); } });
 Object.defineProperty(exports, 'iothubDpsSharedAccessPolicy', { get: function () { return require('./iothub-dps-shared-access-policy'); } });
+Object.defineProperty(exports, 'iothubEndpointCosmosdbAccount', { get: function () { return require('./iothub-endpoint-cosmosdb-account'); } });
 Object.defineProperty(exports, 'iothubEndpointEventhub', { get: function () { return require('./iothub-endpoint-eventhub'); } });
 Object.defineProperty(exports, 'iothubEndpointServicebusQueue', { get: function () { return require('./iothub-endpoint-servicebus-queue'); } });
 Object.defineProperty(exports, 'iothubEndpointServicebusTopic', { get: function () { return require('./iothub-endpoint-servicebus-topic'); } });
@@ -983,6 +984,7 @@ Object.defineProperty(exports, 'virtualHubConnection', { get: function () { retu
 Object.defineProperty(exports, 'virtualHubIp', { get: function () { return require('./virtual-hub-ip'); } });
 Object.defineProperty(exports, 'virtualHubRouteTable', { get: function () { return require('./virtual-hub-route-table'); } });
 Object.defineProperty(exports, 'virtualHubRouteTableRoute', { get: function () { return require('./virtual-hub-route-table-route'); } });
+Object.defineProperty(exports, 'virtualHubRoutingIntent', { get: function () { return require('./virtual-hub-routing-intent'); } });
 Object.defineProperty(exports, 'virtualHubSecurityPartnerProvider', { get: function () { return require('./virtual-hub-security-partner-provider'); } });
 Object.defineProperty(exports, 'virtualMachine', { get: function () { return require('./virtual-machine'); } });
 Object.defineProperty(exports, 'virtualMachineDataDiskAttachment', { get: function () { return require('./virtual-machine-data-disk-attachment'); } });

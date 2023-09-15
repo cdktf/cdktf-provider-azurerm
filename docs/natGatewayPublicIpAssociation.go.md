@@ -1,6 +1,6 @@
 # `azurerm_nat_gateway_public_ip_association`
 
-Refer to the Terraform Registory for docs: [`azurerm_nat_gateway_public_ip_association`](https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/nat_gateway_public_ip_association).
+Refer to the Terraform Registory for docs: [`azurerm_nat_gateway_public_ip_association`](https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/nat_gateway_public_ip_association).
 
 # `natGatewayPublicIpAssociation` Submodule <a name="`natGatewayPublicIpAssociation` Submodule" id="@cdktf/provider-azurerm.natGatewayPublicIpAssociation"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_nat_gateway_public_ip_assoc
 
 ### NatGatewayPublicIpAssociation <a name="NatGatewayPublicIpAssociation" id="@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociation"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/nat_gateway_public_ip_association azurerm_nat_gateway_public_ip_association}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/nat_gateway_public_ip_association azurerm_nat_gateway_public_ip_association}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociation.Initializer"></a>
 
@@ -658,9 +658,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/natgatewaypublici
 | <code><a href="#@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationConfig.property.natGatewayId">NatGatewayId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/nat_gateway_public_ip_association#nat_gateway_id NatGatewayPublicIpAssociation#nat_gateway_id}. |
-| <code><a href="#@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationConfig.property.publicIpAddressId">PublicIpAddressId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/nat_gateway_public_ip_association#public_ip_address_id NatGatewayPublicIpAssociation#public_ip_address_id}. |
-| <code><a href="#@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/nat_gateway_public_ip_association#id NatGatewayPublicIpAssociation#id}. |
+| <code><a href="#@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationConfig.property.natGatewayId">NatGatewayId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/nat_gateway_public_ip_association#nat_gateway_id NatGatewayPublicIpAssociation#nat_gateway_id}. |
+| <code><a href="#@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationConfig.property.publicIpAddressId">PublicIpAddressId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/nat_gateway_public_ip_association#public_ip_address_id NatGatewayPublicIpAssociation#public_ip_address_id}. |
+| <code><a href="#@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/nat_gateway_public_ip_association#id NatGatewayPublicIpAssociation#id}. |
 | <code><a href="#@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationTimeouts">NatGatewayPublicIpAssociationTimeouts</a></code> | timeouts block. |
 
 ---
@@ -743,7 +743,7 @@ NatGatewayId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/nat_gateway_public_ip_association#nat_gateway_id NatGatewayPublicIpAssociation#nat_gateway_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/nat_gateway_public_ip_association#nat_gateway_id NatGatewayPublicIpAssociation#nat_gateway_id}.
 
 ---
 
@@ -755,7 +755,7 @@ PublicIpAddressId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/nat_gateway_public_ip_association#public_ip_address_id NatGatewayPublicIpAssociation#public_ip_address_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/nat_gateway_public_ip_association#public_ip_address_id NatGatewayPublicIpAssociation#public_ip_address_id}.
 
 ---
 
@@ -767,7 +767,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/nat_gateway_public_ip_association#id NatGatewayPublicIpAssociation#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/nat_gateway_public_ip_association#id NatGatewayPublicIpAssociation#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -784,7 +784,7 @@ Timeouts NatGatewayPublicIpAssociationTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/nat_gateway_public_ip_association#timeouts NatGatewayPublicIpAssociation#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/nat_gateway_public_ip_association#timeouts NatGatewayPublicIpAssociation#timeouts}
 
 ---
 
@@ -806,9 +806,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/natgatewaypublici
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/nat_gateway_public_ip_association#create NatGatewayPublicIpAssociation#create}. |
-| <code><a href="#@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/nat_gateway_public_ip_association#delete NatGatewayPublicIpAssociation#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/nat_gateway_public_ip_association#read NatGatewayPublicIpAssociation#read}. |
+| <code><a href="#@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/nat_gateway_public_ip_association#create NatGatewayPublicIpAssociation#create}. |
+| <code><a href="#@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/nat_gateway_public_ip_association#delete NatGatewayPublicIpAssociation#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/nat_gateway_public_ip_association#read NatGatewayPublicIpAssociation#read}. |
 
 ---
 
@@ -820,7 +820,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/nat_gateway_public_ip_association#create NatGatewayPublicIpAssociation#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/nat_gateway_public_ip_association#create NatGatewayPublicIpAssociation#create}.
 
 ---
 
@@ -832,7 +832,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/nat_gateway_public_ip_association#delete NatGatewayPublicIpAssociation#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/nat_gateway_public_ip_association#delete NatGatewayPublicIpAssociation#delete}.
 
 ---
 
@@ -844,7 +844,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/nat_gateway_public_ip_association#read NatGatewayPublicIpAssociation#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/nat_gateway_public_ip_association#read NatGatewayPublicIpAssociation#read}.
 
 ---
 

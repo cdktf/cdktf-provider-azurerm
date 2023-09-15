@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/policy_definition_built_in
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/policy_definition_built_in
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,34 +13,34 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermPolicyDefinitionBuiltInConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/policy_definition_built_in#display_name DataAzurermPolicyDefinitionBuiltIn#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/policy_definition_built_in#display_name DataAzurermPolicyDefinitionBuiltIn#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/policy_definition_built_in#id DataAzurermPolicyDefinitionBuiltIn#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/policy_definition_built_in#id DataAzurermPolicyDefinitionBuiltIn#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/policy_definition_built_in#management_group_name DataAzurermPolicyDefinitionBuiltIn#management_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/policy_definition_built_in#management_group_name DataAzurermPolicyDefinitionBuiltIn#management_group_name}
   */
   readonly managementGroupName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/policy_definition_built_in#name DataAzurermPolicyDefinitionBuiltIn#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/policy_definition_built_in#name DataAzurermPolicyDefinitionBuiltIn#name}
   */
   readonly name?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/policy_definition_built_in#timeouts DataAzurermPolicyDefinitionBuiltIn#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/policy_definition_built_in#timeouts DataAzurermPolicyDefinitionBuiltIn#timeouts}
   */
   readonly timeouts?: DataAzurermPolicyDefinitionBuiltInTimeouts;
 }
 export interface DataAzurermPolicyDefinitionBuiltInTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/policy_definition_built_in#read DataAzurermPolicyDefinitionBuiltIn#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/policy_definition_built_in#read DataAzurermPolicyDefinitionBuiltIn#read}
   */
   readonly read?: string;
 }
@@ -115,7 +115,7 @@ export class DataAzurermPolicyDefinitionBuiltInTimeoutsOutputReference extends c
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/policy_definition_built_in azurerm_policy_definition_built_in}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/policy_definition_built_in azurerm_policy_definition_built_in}
 */
 export class DataAzurermPolicyDefinitionBuiltIn extends cdktf.TerraformDataSource {
 
@@ -129,7 +129,7 @@ export class DataAzurermPolicyDefinitionBuiltIn extends cdktf.TerraformDataSourc
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/data-sources/policy_definition_built_in azurerm_policy_definition_built_in} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/policy_definition_built_in azurerm_policy_definition_built_in} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -140,7 +140,7 @@ export class DataAzurermPolicyDefinitionBuiltIn extends cdktf.TerraformDataSourc
       terraformResourceType: 'azurerm_policy_definition_built_in',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.72.0',
+        providerVersion: '3.73.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_interface_nat_rule_association
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_interface_nat_rule_association
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +13,46 @@ import * as cdktf from 'cdktf';
 
 export interface NetworkInterfaceNatRuleAssociationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_interface_nat_rule_association#id NetworkInterfaceNatRuleAssociation#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_interface_nat_rule_association#id NetworkInterfaceNatRuleAssociation#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_interface_nat_rule_association#ip_configuration_name NetworkInterfaceNatRuleAssociation#ip_configuration_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_interface_nat_rule_association#ip_configuration_name NetworkInterfaceNatRuleAssociation#ip_configuration_name}
   */
   readonly ipConfigurationName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_interface_nat_rule_association#nat_rule_id NetworkInterfaceNatRuleAssociation#nat_rule_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_interface_nat_rule_association#nat_rule_id NetworkInterfaceNatRuleAssociation#nat_rule_id}
   */
   readonly natRuleId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_interface_nat_rule_association#network_interface_id NetworkInterfaceNatRuleAssociation#network_interface_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_interface_nat_rule_association#network_interface_id NetworkInterfaceNatRuleAssociation#network_interface_id}
   */
   readonly networkInterfaceId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_interface_nat_rule_association#timeouts NetworkInterfaceNatRuleAssociation#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_interface_nat_rule_association#timeouts NetworkInterfaceNatRuleAssociation#timeouts}
   */
   readonly timeouts?: NetworkInterfaceNatRuleAssociationTimeouts;
 }
 export interface NetworkInterfaceNatRuleAssociationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_interface_nat_rule_association#create NetworkInterfaceNatRuleAssociation#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_interface_nat_rule_association#create NetworkInterfaceNatRuleAssociation#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_interface_nat_rule_association#delete NetworkInterfaceNatRuleAssociation#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_interface_nat_rule_association#delete NetworkInterfaceNatRuleAssociation#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_interface_nat_rule_association#read NetworkInterfaceNatRuleAssociation#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_interface_nat_rule_association#read NetworkInterfaceNatRuleAssociation#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_interface_nat_rule_association#update NetworkInterfaceNatRuleAssociation#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_interface_nat_rule_association#update NetworkInterfaceNatRuleAssociation#update}
   */
   readonly update?: string;
 }
@@ -196,7 +196,7 @@ export class NetworkInterfaceNatRuleAssociationTimeoutsOutputReference extends c
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_interface_nat_rule_association azurerm_network_interface_nat_rule_association}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_interface_nat_rule_association azurerm_network_interface_nat_rule_association}
 */
 export class NetworkInterfaceNatRuleAssociation extends cdktf.TerraformResource {
 
@@ -210,7 +210,7 @@ export class NetworkInterfaceNatRuleAssociation extends cdktf.TerraformResource 
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_interface_nat_rule_association azurerm_network_interface_nat_rule_association} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_interface_nat_rule_association azurerm_network_interface_nat_rule_association} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -221,7 +221,7 @@ export class NetworkInterfaceNatRuleAssociation extends cdktf.TerraformResource 
       terraformResourceType: 'azurerm_network_interface_nat_rule_association',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.72.0',
+        providerVersion: '3.73.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

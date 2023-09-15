@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,68 +13,68 @@ import * as cdktf from 'cdktf';
 
 export interface NetworkConnectionMonitorConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#id NetworkConnectionMonitor#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#id NetworkConnectionMonitor#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#location NetworkConnectionMonitor#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#location NetworkConnectionMonitor#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#name NetworkConnectionMonitor#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#name NetworkConnectionMonitor#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#network_watcher_id NetworkConnectionMonitor#network_watcher_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#network_watcher_id NetworkConnectionMonitor#network_watcher_id}
   */
   readonly networkWatcherId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#notes NetworkConnectionMonitor#notes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#notes NetworkConnectionMonitor#notes}
   */
   readonly notes?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#output_workspace_resource_ids NetworkConnectionMonitor#output_workspace_resource_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#output_workspace_resource_ids NetworkConnectionMonitor#output_workspace_resource_ids}
   */
   readonly outputWorkspaceResourceIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#tags NetworkConnectionMonitor#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#tags NetworkConnectionMonitor#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * endpoint block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#endpoint NetworkConnectionMonitor#endpoint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#endpoint NetworkConnectionMonitor#endpoint}
   */
   readonly endpoint: NetworkConnectionMonitorEndpoint[] | cdktf.IResolvable;
   /**
   * test_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#test_configuration NetworkConnectionMonitor#test_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#test_configuration NetworkConnectionMonitor#test_configuration}
   */
   readonly testConfiguration: NetworkConnectionMonitorTestConfiguration[] | cdktf.IResolvable;
   /**
   * test_group block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#test_group NetworkConnectionMonitor#test_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#test_group NetworkConnectionMonitor#test_group}
   */
   readonly testGroup: NetworkConnectionMonitorTestGroup[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#timeouts NetworkConnectionMonitor#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#timeouts NetworkConnectionMonitor#timeouts}
   */
   readonly timeouts?: NetworkConnectionMonitorTimeouts;
 }
 export interface NetworkConnectionMonitorEndpointFilterItem {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#address NetworkConnectionMonitor#address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#address NetworkConnectionMonitor#address}
   */
   readonly address?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#type NetworkConnectionMonitor#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#type NetworkConnectionMonitor#type}
   */
   readonly type?: string;
 }
@@ -194,13 +194,13 @@ export class NetworkConnectionMonitorEndpointFilterItemList extends cdktf.Comple
 }
 export interface NetworkConnectionMonitorEndpointFilter {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#type NetworkConnectionMonitor#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#type NetworkConnectionMonitor#type}
   */
   readonly type?: string;
   /**
   * item block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#item NetworkConnectionMonitor#item}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#item NetworkConnectionMonitor#item}
   */
   readonly item?: NetworkConnectionMonitorEndpointFilterItem[] | cdktf.IResolvable;
 }
@@ -288,37 +288,37 @@ export class NetworkConnectionMonitorEndpointFilterOutputReference extends cdktf
 }
 export interface NetworkConnectionMonitorEndpoint {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#address NetworkConnectionMonitor#address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#address NetworkConnectionMonitor#address}
   */
   readonly address?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#coverage_level NetworkConnectionMonitor#coverage_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#coverage_level NetworkConnectionMonitor#coverage_level}
   */
   readonly coverageLevel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#excluded_ip_addresses NetworkConnectionMonitor#excluded_ip_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#excluded_ip_addresses NetworkConnectionMonitor#excluded_ip_addresses}
   */
   readonly excludedIpAddresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#included_ip_addresses NetworkConnectionMonitor#included_ip_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#included_ip_addresses NetworkConnectionMonitor#included_ip_addresses}
   */
   readonly includedIpAddresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#name NetworkConnectionMonitor#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#name NetworkConnectionMonitor#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#target_resource_id NetworkConnectionMonitor#target_resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#target_resource_id NetworkConnectionMonitor#target_resource_id}
   */
   readonly targetResourceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#target_resource_type NetworkConnectionMonitor#target_resource_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#target_resource_type NetworkConnectionMonitor#target_resource_type}
   */
   readonly targetResourceType?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#filter NetworkConnectionMonitor#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#filter NetworkConnectionMonitor#filter}
   */
   readonly filter?: NetworkConnectionMonitorEndpointFilter;
 }
@@ -573,11 +573,11 @@ export class NetworkConnectionMonitorEndpointList extends cdktf.ComplexList {
 }
 export interface NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeader {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#name NetworkConnectionMonitor#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#name NetworkConnectionMonitor#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#value NetworkConnectionMonitor#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#value NetworkConnectionMonitor#value}
   */
   readonly value: string;
 }
@@ -691,29 +691,29 @@ export class NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHe
 }
 export interface NetworkConnectionMonitorTestConfigurationHttpConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#method NetworkConnectionMonitor#method}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#method NetworkConnectionMonitor#method}
   */
   readonly method?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#path NetworkConnectionMonitor#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#path NetworkConnectionMonitor#path}
   */
   readonly path?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#port NetworkConnectionMonitor#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#port NetworkConnectionMonitor#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#prefer_https NetworkConnectionMonitor#prefer_https}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#prefer_https NetworkConnectionMonitor#prefer_https}
   */
   readonly preferHttps?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#valid_status_code_ranges NetworkConnectionMonitor#valid_status_code_ranges}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#valid_status_code_ranges NetworkConnectionMonitor#valid_status_code_ranges}
   */
   readonly validStatusCodeRanges?: string[];
   /**
   * request_header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#request_header NetworkConnectionMonitor#request_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#request_header NetworkConnectionMonitor#request_header}
   */
   readonly requestHeader?: NetworkConnectionMonitorTestConfigurationHttpConfigurationRequestHeader[] | cdktf.IResolvable;
 }
@@ -893,7 +893,7 @@ export class NetworkConnectionMonitorTestConfigurationHttpConfigurationOutputRef
 }
 export interface NetworkConnectionMonitorTestConfigurationIcmpConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#trace_route_enabled NetworkConnectionMonitor#trace_route_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#trace_route_enabled NetworkConnectionMonitor#trace_route_enabled}
   */
   readonly traceRouteEnabled?: boolean | cdktf.IResolvable;
 }
@@ -958,11 +958,11 @@ export class NetworkConnectionMonitorTestConfigurationIcmpConfigurationOutputRef
 }
 export interface NetworkConnectionMonitorTestConfigurationSuccessThreshold {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#checks_failed_percent NetworkConnectionMonitor#checks_failed_percent}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#checks_failed_percent NetworkConnectionMonitor#checks_failed_percent}
   */
   readonly checksFailedPercent?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#round_trip_time_ms NetworkConnectionMonitor#round_trip_time_ms}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#round_trip_time_ms NetworkConnectionMonitor#round_trip_time_ms}
   */
   readonly roundTripTimeMs?: number;
 }
@@ -1050,15 +1050,15 @@ export class NetworkConnectionMonitorTestConfigurationSuccessThresholdOutputRefe
 }
 export interface NetworkConnectionMonitorTestConfigurationTcpConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#destination_port_behavior NetworkConnectionMonitor#destination_port_behavior}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#destination_port_behavior NetworkConnectionMonitor#destination_port_behavior}
   */
   readonly destinationPortBehavior?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#port NetworkConnectionMonitor#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#port NetworkConnectionMonitor#port}
   */
   readonly port: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#trace_route_enabled NetworkConnectionMonitor#trace_route_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#trace_route_enabled NetworkConnectionMonitor#trace_route_enabled}
   */
   readonly traceRouteEnabled?: boolean | cdktf.IResolvable;
 }
@@ -1166,43 +1166,43 @@ export class NetworkConnectionMonitorTestConfigurationTcpConfigurationOutputRefe
 }
 export interface NetworkConnectionMonitorTestConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#name NetworkConnectionMonitor#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#name NetworkConnectionMonitor#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#preferred_ip_version NetworkConnectionMonitor#preferred_ip_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#preferred_ip_version NetworkConnectionMonitor#preferred_ip_version}
   */
   readonly preferredIpVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#protocol NetworkConnectionMonitor#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#protocol NetworkConnectionMonitor#protocol}
   */
   readonly protocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#test_frequency_in_seconds NetworkConnectionMonitor#test_frequency_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#test_frequency_in_seconds NetworkConnectionMonitor#test_frequency_in_seconds}
   */
   readonly testFrequencyInSeconds?: number;
   /**
   * http_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#http_configuration NetworkConnectionMonitor#http_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#http_configuration NetworkConnectionMonitor#http_configuration}
   */
   readonly httpConfiguration?: NetworkConnectionMonitorTestConfigurationHttpConfiguration;
   /**
   * icmp_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#icmp_configuration NetworkConnectionMonitor#icmp_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#icmp_configuration NetworkConnectionMonitor#icmp_configuration}
   */
   readonly icmpConfiguration?: NetworkConnectionMonitorTestConfigurationIcmpConfiguration;
   /**
   * success_threshold block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#success_threshold NetworkConnectionMonitor#success_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#success_threshold NetworkConnectionMonitor#success_threshold}
   */
   readonly successThreshold?: NetworkConnectionMonitorTestConfigurationSuccessThreshold;
   /**
   * tcp_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#tcp_configuration NetworkConnectionMonitor#tcp_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#tcp_configuration NetworkConnectionMonitor#tcp_configuration}
   */
   readonly tcpConfiguration?: NetworkConnectionMonitorTestConfigurationTcpConfiguration;
 }
@@ -1454,23 +1454,23 @@ export class NetworkConnectionMonitorTestConfigurationList extends cdktf.Complex
 }
 export interface NetworkConnectionMonitorTestGroup {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#destination_endpoints NetworkConnectionMonitor#destination_endpoints}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#destination_endpoints NetworkConnectionMonitor#destination_endpoints}
   */
   readonly destinationEndpoints: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#enabled NetworkConnectionMonitor#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#enabled NetworkConnectionMonitor#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#name NetworkConnectionMonitor#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#name NetworkConnectionMonitor#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#source_endpoints NetworkConnectionMonitor#source_endpoints}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#source_endpoints NetworkConnectionMonitor#source_endpoints}
   */
   readonly sourceEndpoints: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#test_configuration_names NetworkConnectionMonitor#test_configuration_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#test_configuration_names NetworkConnectionMonitor#test_configuration_names}
   */
   readonly testConfigurationNames: string[];
 }
@@ -1647,19 +1647,19 @@ export class NetworkConnectionMonitorTestGroupList extends cdktf.ComplexList {
 }
 export interface NetworkConnectionMonitorTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#create NetworkConnectionMonitor#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#create NetworkConnectionMonitor#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#delete NetworkConnectionMonitor#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#delete NetworkConnectionMonitor#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#read NetworkConnectionMonitor#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#read NetworkConnectionMonitor#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor#update NetworkConnectionMonitor#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor#update NetworkConnectionMonitor#update}
   */
   readonly update?: string;
 }
@@ -1803,7 +1803,7 @@ export class NetworkConnectionMonitorTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor azurerm_network_connection_monitor}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor azurerm_network_connection_monitor}
 */
 export class NetworkConnectionMonitor extends cdktf.TerraformResource {
 
@@ -1817,7 +1817,7 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/network_connection_monitor azurerm_network_connection_monitor} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/network_connection_monitor azurerm_network_connection_monitor} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1828,7 +1828,7 @@ export class NetworkConnectionMonitor extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_network_connection_monitor',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.72.0',
+        providerVersion: '3.73.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

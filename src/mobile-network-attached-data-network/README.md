@@ -1,3 +1,3 @@
 # `azurerm_mobile_network_attached_data_network`
 
-Refer to the Terraform Registory for docs: [`azurerm_mobile_network_attached_data_network`](https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/mobile_network_attached_data_network).
+Refer to the Terraform Registory for docs: [`azurerm_mobile_network_attached_data_network`](https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/mobile_network_attached_data_network).

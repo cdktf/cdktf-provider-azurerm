@@ -1,3 +1,3 @@
 # `azurerm_servicebus_subscription_rule`
 
-Refer to the Terraform Registory for docs: [`azurerm_servicebus_subscription_rule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/servicebus_subscription_rule).
+Refer to the Terraform Registory for docs: [`azurerm_servicebus_subscription_rule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/servicebus_subscription_rule).

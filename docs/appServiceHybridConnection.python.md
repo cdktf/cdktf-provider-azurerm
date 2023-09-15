@@ -1,6 +1,6 @@
 # `azurerm_app_service_hybrid_connection`
 
-Refer to the Terraform Registory for docs: [`azurerm_app_service_hybrid_connection`](https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection).
+Refer to the Terraform Registory for docs: [`azurerm_app_service_hybrid_connection`](https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection).
 
 # `appServiceHybridConnection` Submodule <a name="`appServiceHybridConnection` Submodule" id="@cdktf/provider-azurerm.appServiceHybridConnection"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_app_service_hybrid_connecti
 
 ### AppServiceHybridConnection <a name="AppServiceHybridConnection" id="@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnection"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection azurerm_app_service_hybrid_connection}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection azurerm_app_service_hybrid_connection}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnection.Initializer"></a>
 
@@ -47,13 +47,13 @@ appServiceHybridConnection.AppServiceHybridConnection(
 | <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnection.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnection.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnection.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnection.Initializer.parameter.appServiceName">app_service_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#app_service_name AppServiceHybridConnection#app_service_name}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnection.Initializer.parameter.hostname">hostname</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#hostname AppServiceHybridConnection#hostname}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnection.Initializer.parameter.port">port</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#port AppServiceHybridConnection#port}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnection.Initializer.parameter.relayId">relay_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#relay_id AppServiceHybridConnection#relay_id}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnection.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#resource_group_name AppServiceHybridConnection#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnection.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#id AppServiceHybridConnection#id}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnection.Initializer.parameter.sendKeyName">send_key_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#send_key_name AppServiceHybridConnection#send_key_name}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnection.Initializer.parameter.appServiceName">app_service_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#app_service_name AppServiceHybridConnection#app_service_name}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnection.Initializer.parameter.hostname">hostname</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#hostname AppServiceHybridConnection#hostname}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnection.Initializer.parameter.port">port</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#port AppServiceHybridConnection#port}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnection.Initializer.parameter.relayId">relay_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#relay_id AppServiceHybridConnection#relay_id}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnection.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#resource_group_name AppServiceHybridConnection#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnection.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#id AppServiceHybridConnection#id}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnection.Initializer.parameter.sendKeyName">send_key_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#send_key_name AppServiceHybridConnection#send_key_name}. |
 | <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnection.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionTimeouts">AppServiceHybridConnectionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -122,7 +122,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#app_service_name AppServiceHybridConnection#app_service_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#app_service_name AppServiceHybridConnection#app_service_name}.
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#hostname AppServiceHybridConnection#hostname}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#hostname AppServiceHybridConnection#hostname}.
 
 ---
 
@@ -138,7 +138,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#port AppServiceHybridConnection#port}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#port AppServiceHybridConnection#port}.
 
 ---
 
@@ -146,7 +146,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#relay_id AppServiceHybridConnection#relay_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#relay_id AppServiceHybridConnection#relay_id}.
 
 ---
 
@@ -154,7 +154,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#resource_group_name AppServiceHybridConnection#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#resource_group_name AppServiceHybridConnection#resource_group_name}.
 
 ---
 
@@ -162,7 +162,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#id AppServiceHybridConnection#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#id AppServiceHybridConnection#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -173,7 +173,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#send_key_name AppServiceHybridConnection#send_key_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#send_key_name AppServiceHybridConnection#send_key_name}.
 
 ---
 
@@ -183,7 +183,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#timeouts AppServiceHybridConnection#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#timeouts AppServiceHybridConnection#timeouts}
 
 ---
 
@@ -438,7 +438,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#create AppServiceHybridConnection#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#create AppServiceHybridConnection#create}.
 
 ---
 
@@ -446,7 +446,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#delete AppServiceHybridConnection#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#delete AppServiceHybridConnection#delete}.
 
 ---
 
@@ -454,7 +454,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#read AppServiceHybridConnection#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#read AppServiceHybridConnection#read}.
 
 ---
 
@@ -462,7 +462,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#update AppServiceHybridConnection#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#update AppServiceHybridConnection#update}.
 
 ---
 
@@ -1011,13 +1011,13 @@ appServiceHybridConnection.AppServiceHybridConnectionConfig(
 | <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionConfig.property.appServiceName">app_service_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#app_service_name AppServiceHybridConnection#app_service_name}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionConfig.property.hostname">hostname</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#hostname AppServiceHybridConnection#hostname}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionConfig.property.port">port</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#port AppServiceHybridConnection#port}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionConfig.property.relayId">relay_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#relay_id AppServiceHybridConnection#relay_id}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#resource_group_name AppServiceHybridConnection#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#id AppServiceHybridConnection#id}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionConfig.property.sendKeyName">send_key_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#send_key_name AppServiceHybridConnection#send_key_name}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionConfig.property.appServiceName">app_service_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#app_service_name AppServiceHybridConnection#app_service_name}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionConfig.property.hostname">hostname</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#hostname AppServiceHybridConnection#hostname}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionConfig.property.port">port</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#port AppServiceHybridConnection#port}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionConfig.property.relayId">relay_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#relay_id AppServiceHybridConnection#relay_id}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#resource_group_name AppServiceHybridConnection#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#id AppServiceHybridConnection#id}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionConfig.property.sendKeyName">send_key_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#send_key_name AppServiceHybridConnection#send_key_name}. |
 | <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionTimeouts">AppServiceHybridConnectionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1100,7 +1100,7 @@ app_service_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#app_service_name AppServiceHybridConnection#app_service_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#app_service_name AppServiceHybridConnection#app_service_name}.
 
 ---
 
@@ -1112,7 +1112,7 @@ hostname: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#hostname AppServiceHybridConnection#hostname}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#hostname AppServiceHybridConnection#hostname}.
 
 ---
 
@@ -1124,7 +1124,7 @@ port: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#port AppServiceHybridConnection#port}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#port AppServiceHybridConnection#port}.
 
 ---
 
@@ -1136,7 +1136,7 @@ relay_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#relay_id AppServiceHybridConnection#relay_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#relay_id AppServiceHybridConnection#relay_id}.
 
 ---
 
@@ -1148,7 +1148,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#resource_group_name AppServiceHybridConnection#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#resource_group_name AppServiceHybridConnection#resource_group_name}.
 
 ---
 
@@ -1160,7 +1160,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#id AppServiceHybridConnection#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#id AppServiceHybridConnection#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1175,7 +1175,7 @@ send_key_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#send_key_name AppServiceHybridConnection#send_key_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#send_key_name AppServiceHybridConnection#send_key_name}.
 
 ---
 
@@ -1189,7 +1189,7 @@ timeouts: AppServiceHybridConnectionTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#timeouts AppServiceHybridConnection#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#timeouts AppServiceHybridConnection#timeouts}
 
 ---
 
@@ -1212,10 +1212,10 @@ appServiceHybridConnection.AppServiceHybridConnectionTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#create AppServiceHybridConnection#create}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#delete AppServiceHybridConnection#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#read AppServiceHybridConnection#read}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#update AppServiceHybridConnection#update}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#create AppServiceHybridConnection#create}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#delete AppServiceHybridConnection#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#read AppServiceHybridConnection#read}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceHybridConnection.AppServiceHybridConnectionTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#update AppServiceHybridConnection#update}. |
 
 ---
 
@@ -1227,7 +1227,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#create AppServiceHybridConnection#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#create AppServiceHybridConnection#create}.
 
 ---
 
@@ -1239,7 +1239,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#delete AppServiceHybridConnection#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#delete AppServiceHybridConnection#delete}.
 
 ---
 
@@ -1251,7 +1251,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#read AppServiceHybridConnection#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#read AppServiceHybridConnection#read}.
 
 ---
 
@@ -1263,7 +1263,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.72.0/docs/resources/app_service_hybrid_connection#update AppServiceHybridConnection#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/app_service_hybrid_connection#update AppServiceHybridConnection#update}.
 
 ---
 
