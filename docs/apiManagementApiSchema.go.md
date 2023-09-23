@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiSchema.ApiManagementApiSchema.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapischema"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementapischema"
 
 apimanagementapischema.NewApiManagementApiSchema(scope Construct, id *string, config ApiManagementApiSchemaConfig) ApiManagementApiSchema
 ```
@@ -318,7 +318,7 @@ func ResetValue()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.apiManagementApiSchema.ApiManagementApiSchema.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapischema"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementapischema"
 
 apimanagementapischema.ApiManagementApiSchema_IsConstruct(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.apiManagementApiSchema.ApiManagementApiSchema.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapischema"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementapischema"
 
 apimanagementapischema.ApiManagementApiSchema_IsTerraformElement(x interface{}) *bool
 ```
@@ -364,7 +364,7 @@ apimanagementapischema.ApiManagementApiSchema_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.apiManagementApiSchema.ApiManagementApiSchema.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapischema"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementapischema"
 
 apimanagementapischema.ApiManagementApiSchema_IsTerraformResource(x interface{}) *bool
 ```
@@ -783,7 +783,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApiSchema.ApiManagementApiSchemaConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapischema"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementapischema"
 
 &apimanagementapischema.ApiManagementApiSchemaConfig {
 	Connection: interface{},
@@ -801,7 +801,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapischem
 	Components: *string,
 	Definitions: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementApiSchema.ApiManagementApiSchemaTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.apiManagementApiSchema.ApiManagementApiSchemaTimeouts,
 	Value: *string,
 }
 ```
@@ -1030,7 +1030,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApiSchema.ApiManagementApiSchemaTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapischema"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementapischema"
 
 &apimanagementapischema.ApiManagementApiSchemaTimeouts {
 	Create: *string,
@@ -1106,7 +1106,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiSchema.ApiManagementApiSchemaTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapischema"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementapischema"
 
 apimanagementapischema.NewApiManagementApiSchemaTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementApiSchemaTimeoutsOutputReference
 ```
