@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,68 +13,68 @@ import * as cdktf from 'cdktf';
 
 export interface ConsumptionBudgetManagementGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#amount ConsumptionBudgetManagementGroup#amount}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#amount ConsumptionBudgetManagementGroup#amount}
   */
   readonly amount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#etag ConsumptionBudgetManagementGroup#etag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#etag ConsumptionBudgetManagementGroup#etag}
   */
   readonly etag?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#id ConsumptionBudgetManagementGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#id ConsumptionBudgetManagementGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#management_group_id ConsumptionBudgetManagementGroup#management_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#management_group_id ConsumptionBudgetManagementGroup#management_group_id}
   */
   readonly managementGroupId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#name ConsumptionBudgetManagementGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#name ConsumptionBudgetManagementGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#time_grain ConsumptionBudgetManagementGroup#time_grain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#time_grain ConsumptionBudgetManagementGroup#time_grain}
   */
   readonly timeGrain?: string;
   /**
   * filter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#filter ConsumptionBudgetManagementGroup#filter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#filter ConsumptionBudgetManagementGroup#filter}
   */
   readonly filter?: ConsumptionBudgetManagementGroupFilter;
   /**
   * notification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#notification ConsumptionBudgetManagementGroup#notification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#notification ConsumptionBudgetManagementGroup#notification}
   */
   readonly notification: ConsumptionBudgetManagementGroupNotification[] | cdktf.IResolvable;
   /**
   * time_period block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#time_period ConsumptionBudgetManagementGroup#time_period}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#time_period ConsumptionBudgetManagementGroup#time_period}
   */
   readonly timePeriod: ConsumptionBudgetManagementGroupTimePeriod;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#timeouts ConsumptionBudgetManagementGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#timeouts ConsumptionBudgetManagementGroup#timeouts}
   */
   readonly timeouts?: ConsumptionBudgetManagementGroupTimeouts;
 }
 export interface ConsumptionBudgetManagementGroupFilterDimension {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#name ConsumptionBudgetManagementGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#name ConsumptionBudgetManagementGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#operator ConsumptionBudgetManagementGroup#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#operator ConsumptionBudgetManagementGroup#operator}
   */
   readonly operator?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#values ConsumptionBudgetManagementGroup#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#values ConsumptionBudgetManagementGroup#values}
   */
   readonly values: string[];
 }
@@ -211,15 +211,15 @@ export class ConsumptionBudgetManagementGroupFilterDimensionList extends cdktf.C
 }
 export interface ConsumptionBudgetManagementGroupFilterNotDimension {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#name ConsumptionBudgetManagementGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#name ConsumptionBudgetManagementGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#operator ConsumptionBudgetManagementGroup#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#operator ConsumptionBudgetManagementGroup#operator}
   */
   readonly operator?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#values ConsumptionBudgetManagementGroup#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#values ConsumptionBudgetManagementGroup#values}
   */
   readonly values: string[];
 }
@@ -324,15 +324,15 @@ export class ConsumptionBudgetManagementGroupFilterNotDimensionOutputReference e
 }
 export interface ConsumptionBudgetManagementGroupFilterNotTag {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#name ConsumptionBudgetManagementGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#name ConsumptionBudgetManagementGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#operator ConsumptionBudgetManagementGroup#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#operator ConsumptionBudgetManagementGroup#operator}
   */
   readonly operator?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#values ConsumptionBudgetManagementGroup#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#values ConsumptionBudgetManagementGroup#values}
   */
   readonly values: string[];
 }
@@ -439,13 +439,13 @@ export interface ConsumptionBudgetManagementGroupFilterNot {
   /**
   * dimension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#dimension ConsumptionBudgetManagementGroup#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#dimension ConsumptionBudgetManagementGroup#dimension}
   */
   readonly dimension?: ConsumptionBudgetManagementGroupFilterNotDimension;
   /**
   * tag block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#tag ConsumptionBudgetManagementGroup#tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#tag ConsumptionBudgetManagementGroup#tag}
   */
   readonly tag?: ConsumptionBudgetManagementGroupFilterNotTag;
 }
@@ -533,15 +533,15 @@ export class ConsumptionBudgetManagementGroupFilterNotOutputReference extends cd
 }
 export interface ConsumptionBudgetManagementGroupFilterTag {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#name ConsumptionBudgetManagementGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#name ConsumptionBudgetManagementGroup#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#operator ConsumptionBudgetManagementGroup#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#operator ConsumptionBudgetManagementGroup#operator}
   */
   readonly operator?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#values ConsumptionBudgetManagementGroup#values}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#values ConsumptionBudgetManagementGroup#values}
   */
   readonly values: string[];
 }
@@ -680,19 +680,19 @@ export interface ConsumptionBudgetManagementGroupFilter {
   /**
   * dimension block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#dimension ConsumptionBudgetManagementGroup#dimension}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#dimension ConsumptionBudgetManagementGroup#dimension}
   */
   readonly dimension?: ConsumptionBudgetManagementGroupFilterDimension[] | cdktf.IResolvable;
   /**
   * not block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#not ConsumptionBudgetManagementGroup#not}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#not ConsumptionBudgetManagementGroup#not}
   */
   readonly not?: ConsumptionBudgetManagementGroupFilterNot;
   /**
   * tag block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#tag ConsumptionBudgetManagementGroup#tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#tag ConsumptionBudgetManagementGroup#tag}
   */
   readonly tag?: ConsumptionBudgetManagementGroupFilterTag[] | cdktf.IResolvable;
 }
@@ -803,23 +803,23 @@ export class ConsumptionBudgetManagementGroupFilterOutputReference extends cdktf
 }
 export interface ConsumptionBudgetManagementGroupNotification {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#contact_emails ConsumptionBudgetManagementGroup#contact_emails}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#contact_emails ConsumptionBudgetManagementGroup#contact_emails}
   */
   readonly contactEmails: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#enabled ConsumptionBudgetManagementGroup#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#enabled ConsumptionBudgetManagementGroup#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#operator ConsumptionBudgetManagementGroup#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#operator ConsumptionBudgetManagementGroup#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#threshold ConsumptionBudgetManagementGroup#threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#threshold ConsumptionBudgetManagementGroup#threshold}
   */
   readonly threshold: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#threshold_type ConsumptionBudgetManagementGroup#threshold_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#threshold_type ConsumptionBudgetManagementGroup#threshold_type}
   */
   readonly thresholdType?: string;
 }
@@ -999,11 +999,11 @@ export class ConsumptionBudgetManagementGroupNotificationList extends cdktf.Comp
 }
 export interface ConsumptionBudgetManagementGroupTimePeriod {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#end_date ConsumptionBudgetManagementGroup#end_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#end_date ConsumptionBudgetManagementGroup#end_date}
   */
   readonly endDate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#start_date ConsumptionBudgetManagementGroup#start_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#start_date ConsumptionBudgetManagementGroup#start_date}
   */
   readonly startDate: string;
 }
@@ -1088,19 +1088,19 @@ export class ConsumptionBudgetManagementGroupTimePeriodOutputReference extends c
 }
 export interface ConsumptionBudgetManagementGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#create ConsumptionBudgetManagementGroup#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#create ConsumptionBudgetManagementGroup#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#delete ConsumptionBudgetManagementGroup#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#delete ConsumptionBudgetManagementGroup#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#read ConsumptionBudgetManagementGroup#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#read ConsumptionBudgetManagementGroup#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group#update ConsumptionBudgetManagementGroup#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group#update ConsumptionBudgetManagementGroup#update}
   */
   readonly update?: string;
 }
@@ -1244,7 +1244,7 @@ export class ConsumptionBudgetManagementGroupTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group azurerm_consumption_budget_management_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group azurerm_consumption_budget_management_group}
 */
 export class ConsumptionBudgetManagementGroup extends cdktf.TerraformResource {
 
@@ -1258,7 +1258,7 @@ export class ConsumptionBudgetManagementGroup extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/consumption_budget_management_group azurerm_consumption_budget_management_group} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/consumption_budget_management_group azurerm_consumption_budget_management_group} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1269,7 +1269,7 @@ export class ConsumptionBudgetManagementGroup extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_consumption_budget_management_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.73.0',
+        providerVersion: '3.74.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -1,3 +1,3 @@
 # `data_azurerm_monitor_scheduled_query_rules_log`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_monitor_scheduled_query_rules_log`](https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/monitor_scheduled_query_rules_log).
+Refer to the Terraform Registory for docs: [`data_azurerm_monitor_scheduled_query_rules_log`](https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/monitor_scheduled_query_rules_log).

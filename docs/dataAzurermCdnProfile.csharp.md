@@ -1,6 +1,6 @@
 # `data_azurerm_cdn_profile`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_cdn_profile`](https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/cdn_profile).
+Refer to the Terraform Registory for docs: [`data_azurerm_cdn_profile`](https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/cdn_profile).
 
 # `dataAzurermCdnProfile` Submodule <a name="`dataAzurermCdnProfile` Submodule" id="@cdktf/provider-azurerm.dataAzurermCdnProfile"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_cdn_profile`](https://
 
 ### DataAzurermCdnProfile <a name="DataAzurermCdnProfile" id="@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfile"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/cdn_profile azurerm_cdn_profile}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/cdn_profile azurerm_cdn_profile}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfile.Initializer"></a>
 
@@ -669,9 +669,9 @@ new DataAzurermCdnProfileConfig {
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/cdn_profile#name DataAzurermCdnProfile#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/cdn_profile#resource_group_name DataAzurermCdnProfile#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/cdn_profile#id DataAzurermCdnProfile#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/cdn_profile#name DataAzurermCdnProfile#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/cdn_profile#resource_group_name DataAzurermCdnProfile#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/cdn_profile#id DataAzurermCdnProfile#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileTimeouts">DataAzurermCdnProfileTimeouts</a></code> | timeouts block. |
 
 ---
@@ -754,7 +754,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/cdn_profile#name DataAzurermCdnProfile#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/cdn_profile#name DataAzurermCdnProfile#name}.
 
 ---
 
@@ -766,7 +766,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/cdn_profile#resource_group_name DataAzurermCdnProfile#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/cdn_profile#resource_group_name DataAzurermCdnProfile#resource_group_name}.
 
 ---
 
@@ -778,7 +778,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/cdn_profile#id DataAzurermCdnProfile#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/cdn_profile#id DataAzurermCdnProfile#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -795,7 +795,7 @@ public DataAzurermCdnProfileTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/cdn_profile#timeouts DataAzurermCdnProfile#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/cdn_profile#timeouts DataAzurermCdnProfile#timeouts}
 
 ---
 
@@ -815,7 +815,7 @@ new DataAzurermCdnProfileTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/cdn_profile#read DataAzurermCdnProfile#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnProfile.DataAzurermCdnProfileTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/cdn_profile#read DataAzurermCdnProfile#read}. |
 
 ---
 
@@ -827,7 +827,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/cdn_profile#read DataAzurermCdnProfile#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/cdn_profile#read DataAzurermCdnProfile#read}.
 
 ---
 

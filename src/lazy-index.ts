@@ -95,6 +95,7 @@ Object.defineProperty(exports, 'arcKubernetesClusterExtension', { get: function 
 Object.defineProperty(exports, 'arcKubernetesFluxConfiguration', { get: function () { return require('./arc-kubernetes-flux-configuration'); } });
 Object.defineProperty(exports, 'arcMachineExtension', { get: function () { return require('./arc-machine-extension'); } });
 Object.defineProperty(exports, 'arcPrivateLinkScope', { get: function () { return require('./arc-private-link-scope'); } });
+Object.defineProperty(exports, 'arcResourceBridgeAppliance', { get: function () { return require('./arc-resource-bridge-appliance'); } });
 Object.defineProperty(exports, 'attestationProvider', { get: function () { return require('./attestation-provider'); } });
 Object.defineProperty(exports, 'automanageConfiguration', { get: function () { return require('./automanage-configuration'); } });
 Object.defineProperty(exports, 'automationAccount', { get: function () { return require('./automation-account'); } });
@@ -229,6 +230,7 @@ Object.defineProperty(exports, 'dataFactory', { get: function () { return requir
 Object.defineProperty(exports, 'dataFactoryCustomDataset', { get: function () { return require('./data-factory-custom-dataset'); } });
 Object.defineProperty(exports, 'dataFactoryDataFlow', { get: function () { return require('./data-factory-data-flow'); } });
 Object.defineProperty(exports, 'dataFactoryDatasetAzureBlob', { get: function () { return require('./data-factory-dataset-azure-blob'); } });
+Object.defineProperty(exports, 'dataFactoryDatasetAzureSqlTable', { get: function () { return require('./data-factory-dataset-azure-sql-table'); } });
 Object.defineProperty(exports, 'dataFactoryDatasetBinary', { get: function () { return require('./data-factory-dataset-binary'); } });
 Object.defineProperty(exports, 'dataFactoryDatasetCosmosdbSqlapi', { get: function () { return require('./data-factory-dataset-cosmosdb-sqlapi'); } });
 Object.defineProperty(exports, 'dataFactoryDatasetDelimitedText', { get: function () { return require('./data-factory-dataset-delimited-text'); } });
@@ -368,6 +370,7 @@ Object.defineProperty(exports, 'frontdoorFirewallPolicy', { get: function () { r
 Object.defineProperty(exports, 'frontdoorRulesEngine', { get: function () { return require('./frontdoor-rules-engine'); } });
 Object.defineProperty(exports, 'functionApp', { get: function () { return require('./function-app'); } });
 Object.defineProperty(exports, 'functionAppActiveSlot', { get: function () { return require('./function-app-active-slot'); } });
+Object.defineProperty(exports, 'functionAppConnection', { get: function () { return require('./function-app-connection'); } });
 Object.defineProperty(exports, 'functionAppFunction', { get: function () { return require('./function-app-function'); } });
 Object.defineProperty(exports, 'functionAppHybridConnection', { get: function () { return require('./function-app-hybrid-connection'); } });
 Object.defineProperty(exports, 'functionAppSlot', { get: function () { return require('./function-app-slot'); } });
@@ -661,6 +664,7 @@ Object.defineProperty(exports, 'networkSecurityRule', { get: function () { retur
 Object.defineProperty(exports, 'networkWatcher', { get: function () { return require('./network-watcher'); } });
 Object.defineProperty(exports, 'networkWatcherFlowLog', { get: function () { return require('./network-watcher-flow-log'); } });
 Object.defineProperty(exports, 'newRelicMonitor', { get: function () { return require('./new-relic-monitor'); } });
+Object.defineProperty(exports, 'newRelicTagRule', { get: function () { return require('./new-relic-tag-rule'); } });
 Object.defineProperty(exports, 'nginxCertificate', { get: function () { return require('./nginx-certificate'); } });
 Object.defineProperty(exports, 'nginxConfiguration', { get: function () { return require('./nginx-configuration'); } });
 Object.defineProperty(exports, 'nginxDeployment', { get: function () { return require('./nginx-deployment'); } });

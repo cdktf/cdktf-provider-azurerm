@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,92 +13,100 @@ import * as cdktf from 'cdktf';
 
 export interface SharedImageVersionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version#blob_uri SharedImageVersion#blob_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version#blob_uri SharedImageVersion#blob_uri}
   */
   readonly blobUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version#end_of_life_date SharedImageVersion#end_of_life_date}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version#deletion_of_replicated_locations_enabled SharedImageVersion#deletion_of_replicated_locations_enabled}
+  */
+  readonly deletionOfReplicatedLocationsEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version#end_of_life_date SharedImageVersion#end_of_life_date}
   */
   readonly endOfLifeDate?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version#exclude_from_latest SharedImageVersion#exclude_from_latest}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version#exclude_from_latest SharedImageVersion#exclude_from_latest}
   */
   readonly excludeFromLatest?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version#gallery_name SharedImageVersion#gallery_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version#gallery_name SharedImageVersion#gallery_name}
   */
   readonly galleryName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version#id SharedImageVersion#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version#id SharedImageVersion#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version#image_name SharedImageVersion#image_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version#image_name SharedImageVersion#image_name}
   */
   readonly imageName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version#location SharedImageVersion#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version#location SharedImageVersion#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version#managed_image_id SharedImageVersion#managed_image_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version#managed_image_id SharedImageVersion#managed_image_id}
   */
   readonly managedImageId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version#name SharedImageVersion#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version#name SharedImageVersion#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version#os_disk_snapshot_id SharedImageVersion#os_disk_snapshot_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version#os_disk_snapshot_id SharedImageVersion#os_disk_snapshot_id}
   */
   readonly osDiskSnapshotId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version#replication_mode SharedImageVersion#replication_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version#replication_mode SharedImageVersion#replication_mode}
   */
   readonly replicationMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version#resource_group_name SharedImageVersion#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version#resource_group_name SharedImageVersion#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version#storage_account_id SharedImageVersion#storage_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version#storage_account_id SharedImageVersion#storage_account_id}
   */
   readonly storageAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version#tags SharedImageVersion#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version#tags SharedImageVersion#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * target_region block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version#target_region SharedImageVersion#target_region}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version#target_region SharedImageVersion#target_region}
   */
   readonly targetRegion: SharedImageVersionTargetRegion[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version#timeouts SharedImageVersion#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version#timeouts SharedImageVersion#timeouts}
   */
   readonly timeouts?: SharedImageVersionTimeouts;
 }
 export interface SharedImageVersionTargetRegion {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version#disk_encryption_set_id SharedImageVersion#disk_encryption_set_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version#disk_encryption_set_id SharedImageVersion#disk_encryption_set_id}
   */
   readonly diskEncryptionSetId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version#name SharedImageVersion#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version#exclude_from_latest_enabled SharedImageVersion#exclude_from_latest_enabled}
+  */
+  readonly excludeFromLatestEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version#name SharedImageVersion#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version#regional_replica_count SharedImageVersion#regional_replica_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version#regional_replica_count SharedImageVersion#regional_replica_count}
   */
   readonly regionalReplicaCount: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version#storage_account_type SharedImageVersion#storage_account_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version#storage_account_type SharedImageVersion#storage_account_type}
   */
   readonly storageAccountType?: string;
 }
@@ -110,6 +118,7 @@ export function sharedImageVersionTargetRegionToTerraform(struct?: SharedImageVe
   }
   return {
     disk_encryption_set_id: cdktf.stringToTerraform(struct!.diskEncryptionSetId),
+    exclude_from_latest_enabled: cdktf.booleanToTerraform(struct!.excludeFromLatestEnabled),
     name: cdktf.stringToTerraform(struct!.name),
     regional_replica_count: cdktf.numberToTerraform(struct!.regionalReplicaCount),
     storage_account_type: cdktf.stringToTerraform(struct!.storageAccountType),
@@ -140,6 +149,10 @@ export class SharedImageVersionTargetRegionOutputReference extends cdktf.Complex
       hasAnyValues = true;
       internalValueResult.diskEncryptionSetId = this._diskEncryptionSetId;
     }
+    if (this._excludeFromLatestEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.excludeFromLatestEnabled = this._excludeFromLatestEnabled;
+    }
     if (this._name !== undefined) {
       hasAnyValues = true;
       internalValueResult.name = this._name;
@@ -160,6 +173,7 @@ export class SharedImageVersionTargetRegionOutputReference extends cdktf.Complex
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
       this._diskEncryptionSetId = undefined;
+      this._excludeFromLatestEnabled = undefined;
       this._name = undefined;
       this._regionalReplicaCount = undefined;
       this._storageAccountType = undefined;
@@ -172,6 +186,7 @@ export class SharedImageVersionTargetRegionOutputReference extends cdktf.Complex
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
       this._diskEncryptionSetId = value.diskEncryptionSetId;
+      this._excludeFromLatestEnabled = value.excludeFromLatestEnabled;
       this._name = value.name;
       this._regionalReplicaCount = value.regionalReplicaCount;
       this._storageAccountType = value.storageAccountType;
@@ -192,6 +207,22 @@ export class SharedImageVersionTargetRegionOutputReference extends cdktf.Complex
   // Temporarily expose input value. Use with caution.
   public get diskEncryptionSetIdInput() {
     return this._diskEncryptionSetId;
+  }
+
+  // exclude_from_latest_enabled - computed: false, optional: true, required: false
+  private _excludeFromLatestEnabled?: boolean | cdktf.IResolvable; 
+  public get excludeFromLatestEnabled() {
+    return this.getBooleanAttribute('exclude_from_latest_enabled');
+  }
+  public set excludeFromLatestEnabled(value: boolean | cdktf.IResolvable) {
+    this._excludeFromLatestEnabled = value;
+  }
+  public resetExcludeFromLatestEnabled() {
+    this._excludeFromLatestEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get excludeFromLatestEnabledInput() {
+    return this._excludeFromLatestEnabled;
   }
 
   // name - computed: false, optional: false, required: true
@@ -258,19 +289,19 @@ export class SharedImageVersionTargetRegionList extends cdktf.ComplexList {
 }
 export interface SharedImageVersionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version#create SharedImageVersion#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version#create SharedImageVersion#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version#delete SharedImageVersion#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version#delete SharedImageVersion#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version#read SharedImageVersion#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version#read SharedImageVersion#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version#update SharedImageVersion#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version#update SharedImageVersion#update}
   */
   readonly update?: string;
 }
@@ -414,7 +445,7 @@ export class SharedImageVersionTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version azurerm_shared_image_version}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version azurerm_shared_image_version}
 */
 export class SharedImageVersion extends cdktf.TerraformResource {
 
@@ -428,7 +459,7 @@ export class SharedImageVersion extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/shared_image_version azurerm_shared_image_version} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/shared_image_version azurerm_shared_image_version} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -439,7 +470,7 @@ export class SharedImageVersion extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_shared_image_version',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.73.0',
+        providerVersion: '3.74.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -451,6 +482,7 @@ export class SharedImageVersion extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._blobUri = config.blobUri;
+    this._deletionOfReplicatedLocationsEnabled = config.deletionOfReplicatedLocationsEnabled;
     this._endOfLifeDate = config.endOfLifeDate;
     this._excludeFromLatest = config.excludeFromLatest;
     this._galleryName = config.galleryName;
@@ -486,6 +518,22 @@ export class SharedImageVersion extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get blobUriInput() {
     return this._blobUri;
+  }
+
+  // deletion_of_replicated_locations_enabled - computed: false, optional: true, required: false
+  private _deletionOfReplicatedLocationsEnabled?: boolean | cdktf.IResolvable; 
+  public get deletionOfReplicatedLocationsEnabled() {
+    return this.getBooleanAttribute('deletion_of_replicated_locations_enabled');
+  }
+  public set deletionOfReplicatedLocationsEnabled(value: boolean | cdktf.IResolvable) {
+    this._deletionOfReplicatedLocationsEnabled = value;
+  }
+  public resetDeletionOfReplicatedLocationsEnabled() {
+    this._deletionOfReplicatedLocationsEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get deletionOfReplicatedLocationsEnabledInput() {
+    return this._deletionOfReplicatedLocationsEnabled;
   }
 
   // end_of_life_date - computed: false, optional: true, required: false
@@ -717,6 +765,7 @@ export class SharedImageVersion extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       blob_uri: cdktf.stringToTerraform(this._blobUri),
+      deletion_of_replicated_locations_enabled: cdktf.booleanToTerraform(this._deletionOfReplicatedLocationsEnabled),
       end_of_life_date: cdktf.stringToTerraform(this._endOfLifeDate),
       exclude_from_latest: cdktf.booleanToTerraform(this._excludeFromLatest),
       gallery_name: cdktf.stringToTerraform(this._galleryName),

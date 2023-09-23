@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/automation_variables
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/automation_variables
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,11 +13,11 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermAutomationVariablesConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/automation_variables#automation_account_id DataAzurermAutomationVariables#automation_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/automation_variables#automation_account_id DataAzurermAutomationVariables#automation_account_id}
   */
   readonly automationAccountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/automation_variables#id DataAzurermAutomationVariables#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/automation_variables#id DataAzurermAutomationVariables#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -26,7 +26,7 @@ export interface DataAzurermAutomationVariablesConfig extends cdktf.TerraformMet
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/automation_variables#timeouts DataAzurermAutomationVariables#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/automation_variables#timeouts DataAzurermAutomationVariables#timeouts}
   */
   readonly timeouts?: DataAzurermAutomationVariablesTimeouts;
 }
@@ -620,7 +620,7 @@ export class DataAzurermAutomationVariablesStringList extends cdktf.ComplexList 
 }
 export interface DataAzurermAutomationVariablesTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/automation_variables#read DataAzurermAutomationVariables#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/automation_variables#read DataAzurermAutomationVariables#read}
   */
   readonly read?: string;
 }
@@ -695,7 +695,7 @@ export class DataAzurermAutomationVariablesTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/automation_variables azurerm_automation_variables}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/automation_variables azurerm_automation_variables}
 */
 export class DataAzurermAutomationVariables extends cdktf.TerraformDataSource {
 
@@ -709,7 +709,7 @@ export class DataAzurermAutomationVariables extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/data-sources/automation_variables azurerm_automation_variables} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/automation_variables azurerm_automation_variables} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -720,7 +720,7 @@ export class DataAzurermAutomationVariables extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_automation_variables',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.73.0',
+        providerVersion: '3.74.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

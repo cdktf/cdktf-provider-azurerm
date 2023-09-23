@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -15,11 +15,11 @@ export interface ContainerAppConfig extends cdktf.TerraformMetaArguments {
   /**
   * The ID of the Container App Environment to host this Container App.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#container_app_environment_id ContainerApp#container_app_environment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#container_app_environment_id ContainerApp#container_app_environment_id}
   */
   readonly containerAppEnvironmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#id ContainerApp#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#id ContainerApp#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -28,61 +28,61 @@ export interface ContainerAppConfig extends cdktf.TerraformMetaArguments {
   /**
   * The name for this Container App.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#name ContainerApp#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#name ContainerApp#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#resource_group_name ContainerApp#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#resource_group_name ContainerApp#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#revision_mode ContainerApp#revision_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#revision_mode ContainerApp#revision_mode}
   */
   readonly revisionMode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#tags ContainerApp#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#tags ContainerApp#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * dapr block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#dapr ContainerApp#dapr}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#dapr ContainerApp#dapr}
   */
   readonly dapr?: ContainerAppDapr;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#identity ContainerApp#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#identity ContainerApp#identity}
   */
   readonly identity?: ContainerAppIdentity;
   /**
   * ingress block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#ingress ContainerApp#ingress}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#ingress ContainerApp#ingress}
   */
   readonly ingress?: ContainerAppIngress;
   /**
   * registry block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#registry ContainerApp#registry}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#registry ContainerApp#registry}
   */
   readonly registry?: ContainerAppRegistry[] | cdktf.IResolvable;
   /**
   * secret block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#secret ContainerApp#secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#secret ContainerApp#secret}
   */
   readonly secret?: ContainerAppSecret[] | cdktf.IResolvable;
   /**
   * template block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#template ContainerApp#template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#template ContainerApp#template}
   */
   readonly template: ContainerAppTemplate;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#timeouts ContainerApp#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#timeouts ContainerApp#timeouts}
   */
   readonly timeouts?: ContainerAppTimeouts;
 }
@@ -90,19 +90,19 @@ export interface ContainerAppDapr {
   /**
   * The Dapr Application Identifier.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#app_id ContainerApp#app_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#app_id ContainerApp#app_id}
   */
   readonly appId: string;
   /**
   * The port which the application is listening on. This is the same as the `ingress` port.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#app_port ContainerApp#app_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#app_port ContainerApp#app_port}
   */
   readonly appPort?: number;
   /**
   * The protocol for the app. Possible values include `http` and `grpc`. Defaults to `http`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#app_protocol ContainerApp#app_protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#app_protocol ContainerApp#app_protocol}
   */
   readonly appProtocol?: string;
 }
@@ -210,11 +210,11 @@ export class ContainerAppDaprOutputReference extends cdktf.ComplexObject {
 }
 export interface ContainerAppIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#identity_ids ContainerApp#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#identity_ids ContainerApp#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#type ContainerApp#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#type ContainerApp#type}
   */
   readonly type: string;
 }
@@ -311,17 +311,17 @@ export interface ContainerAppIngressCustomDomain {
   /**
   * The Binding type. Possible values include `Disabled` and `SniEnabled`. Defaults to `Disabled`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#certificate_binding_type ContainerApp#certificate_binding_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#certificate_binding_type ContainerApp#certificate_binding_type}
   */
   readonly certificateBindingType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#certificate_id ContainerApp#certificate_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#certificate_id ContainerApp#certificate_id}
   */
   readonly certificateId: string;
   /**
   * The hostname of the Certificate. Must be the CN or a named SAN in the certificate.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#name ContainerApp#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#name ContainerApp#name}
   */
   readonly name: string;
 }
@@ -428,25 +428,25 @@ export interface ContainerAppIngressTrafficWeight {
   /**
   * The label to apply to the revision as a name prefix for routing traffic.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#label ContainerApp#label}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#label ContainerApp#label}
   */
   readonly label?: string;
   /**
   * This traffic Weight relates to the latest stable Container Revision.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#latest_revision ContainerApp#latest_revision}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#latest_revision ContainerApp#latest_revision}
   */
   readonly latestRevision?: boolean | cdktf.IResolvable;
   /**
   * The percentage of traffic to send to this revision.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#percentage ContainerApp#percentage}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#percentage ContainerApp#percentage}
   */
   readonly percentage: number;
   /**
   * The suffix string to append to the revision. This must be unique for the Container App's lifetime. A default hash created by the service will be used if this value is omitted.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#revision_suffix ContainerApp#revision_suffix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#revision_suffix ContainerApp#revision_suffix}
   */
   readonly revisionSuffix?: string;
 }
@@ -611,37 +611,37 @@ export interface ContainerAppIngress {
   /**
   * Should this ingress allow insecure connections?
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#allow_insecure_connections ContainerApp#allow_insecure_connections}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#allow_insecure_connections ContainerApp#allow_insecure_connections}
   */
   readonly allowInsecureConnections?: boolean | cdktf.IResolvable;
   /**
   * Is this an external Ingress.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#external_enabled ContainerApp#external_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#external_enabled ContainerApp#external_enabled}
   */
   readonly externalEnabled?: boolean | cdktf.IResolvable;
   /**
   * The target port on the container for the Ingress traffic.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#target_port ContainerApp#target_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#target_port ContainerApp#target_port}
   */
   readonly targetPort: number;
   /**
   * The transport method for the Ingress. Possible values include `auto`, `http`, and `http2`. Defaults to `auto`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#transport ContainerApp#transport}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#transport ContainerApp#transport}
   */
   readonly transport?: string;
   /**
   * custom_domain block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#custom_domain ContainerApp#custom_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#custom_domain ContainerApp#custom_domain}
   */
   readonly customDomain?: ContainerAppIngressCustomDomain;
   /**
   * traffic_weight block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#traffic_weight ContainerApp#traffic_weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#traffic_weight ContainerApp#traffic_weight}
   */
   readonly trafficWeight: ContainerAppIngressTrafficWeight[] | cdktf.IResolvable;
 }
@@ -822,25 +822,25 @@ export interface ContainerAppRegistry {
   /**
   * ID of the System or User Managed Identity used to pull images from the Container Registry
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#identity ContainerApp#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#identity ContainerApp#identity}
   */
   readonly identity?: string;
   /**
   * The name of the Secret Reference containing the password value for this user on the Container Registry.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#password_secret_name ContainerApp#password_secret_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#password_secret_name ContainerApp#password_secret_name}
   */
   readonly passwordSecretName?: string;
   /**
   * The hostname for the Container Registry.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#server ContainerApp#server}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#server ContainerApp#server}
   */
   readonly server: string;
   /**
   * The username to use for this Container Registry.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#username ContainerApp#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#username ContainerApp#username}
   */
   readonly username?: string;
 }
@@ -1005,13 +1005,13 @@ export interface ContainerAppSecret {
   /**
   * The Secret name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#name ContainerApp#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#name ContainerApp#name}
   */
   readonly name: string;
   /**
   * The value for this secret.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#value ContainerApp#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#value ContainerApp#value}
   */
   readonly value: string;
 }
@@ -1123,23 +1123,309 @@ export class ContainerAppSecretList extends cdktf.ComplexList {
     return new ContainerAppSecretOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface ContainerAppTemplateAzureQueueScaleRuleAuthentication {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#secret_name ContainerApp#secret_name}
+  */
+  readonly secretName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#trigger_parameter ContainerApp#trigger_parameter}
+  */
+  readonly triggerParameter: string;
+}
+
+export function containerAppTemplateAzureQueueScaleRuleAuthenticationToTerraform(struct?: ContainerAppTemplateAzureQueueScaleRuleAuthentication | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    secret_name: cdktf.stringToTerraform(struct!.secretName),
+    trigger_parameter: cdktf.stringToTerraform(struct!.triggerParameter),
+  }
+}
+
+export class ContainerAppTemplateAzureQueueScaleRuleAuthenticationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerAppTemplateAzureQueueScaleRuleAuthentication | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._secretName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretName = this._secretName;
+    }
+    if (this._triggerParameter !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.triggerParameter = this._triggerParameter;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerAppTemplateAzureQueueScaleRuleAuthentication | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._secretName = undefined;
+      this._triggerParameter = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._secretName = value.secretName;
+      this._triggerParameter = value.triggerParameter;
+    }
+  }
+
+  // secret_name - computed: false, optional: false, required: true
+  private _secretName?: string; 
+  public get secretName() {
+    return this.getStringAttribute('secret_name');
+  }
+  public set secretName(value: string) {
+    this._secretName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretNameInput() {
+    return this._secretName;
+  }
+
+  // trigger_parameter - computed: false, optional: false, required: true
+  private _triggerParameter?: string; 
+  public get triggerParameter() {
+    return this.getStringAttribute('trigger_parameter');
+  }
+  public set triggerParameter(value: string) {
+    this._triggerParameter = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get triggerParameterInput() {
+    return this._triggerParameter;
+  }
+}
+
+export class ContainerAppTemplateAzureQueueScaleRuleAuthenticationList extends cdktf.ComplexList {
+  public internalValue? : ContainerAppTemplateAzureQueueScaleRuleAuthentication[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerAppTemplateAzureQueueScaleRuleAuthenticationOutputReference {
+    return new ContainerAppTemplateAzureQueueScaleRuleAuthenticationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ContainerAppTemplateAzureQueueScaleRule {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#name ContainerApp#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#queue_length ContainerApp#queue_length}
+  */
+  readonly queueLength: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#queue_name ContainerApp#queue_name}
+  */
+  readonly queueName: string;
+  /**
+  * authentication block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#authentication ContainerApp#authentication}
+  */
+  readonly authentication: ContainerAppTemplateAzureQueueScaleRuleAuthentication[] | cdktf.IResolvable;
+}
+
+export function containerAppTemplateAzureQueueScaleRuleToTerraform(struct?: ContainerAppTemplateAzureQueueScaleRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    queue_length: cdktf.numberToTerraform(struct!.queueLength),
+    queue_name: cdktf.stringToTerraform(struct!.queueName),
+    authentication: cdktf.listMapper(containerAppTemplateAzureQueueScaleRuleAuthenticationToTerraform, true)(struct!.authentication),
+  }
+}
+
+export class ContainerAppTemplateAzureQueueScaleRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerAppTemplateAzureQueueScaleRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._queueLength !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.queueLength = this._queueLength;
+    }
+    if (this._queueName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.queueName = this._queueName;
+    }
+    if (this._authentication?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.authentication = this._authentication?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerAppTemplateAzureQueueScaleRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._queueLength = undefined;
+      this._queueName = undefined;
+      this._authentication.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._queueLength = value.queueLength;
+      this._queueName = value.queueName;
+      this._authentication.internalValue = value.authentication;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // queue_length - computed: false, optional: false, required: true
+  private _queueLength?: number; 
+  public get queueLength() {
+    return this.getNumberAttribute('queue_length');
+  }
+  public set queueLength(value: number) {
+    this._queueLength = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queueLengthInput() {
+    return this._queueLength;
+  }
+
+  // queue_name - computed: false, optional: false, required: true
+  private _queueName?: string; 
+  public get queueName() {
+    return this.getStringAttribute('queue_name');
+  }
+  public set queueName(value: string) {
+    this._queueName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get queueNameInput() {
+    return this._queueName;
+  }
+
+  // authentication - computed: false, optional: false, required: true
+  private _authentication = new ContainerAppTemplateAzureQueueScaleRuleAuthenticationList(this, "authentication", false);
+  public get authentication() {
+    return this._authentication;
+  }
+  public putAuthentication(value: ContainerAppTemplateAzureQueueScaleRuleAuthentication[] | cdktf.IResolvable) {
+    this._authentication.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authenticationInput() {
+    return this._authentication.internalValue;
+  }
+}
+
+export class ContainerAppTemplateAzureQueueScaleRuleList extends cdktf.ComplexList {
+  public internalValue? : ContainerAppTemplateAzureQueueScaleRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerAppTemplateAzureQueueScaleRuleOutputReference {
+    return new ContainerAppTemplateAzureQueueScaleRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerAppTemplateContainerEnv {
   /**
   * The name of the environment variable for the container.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#name ContainerApp#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#name ContainerApp#name}
   */
   readonly name: string;
   /**
   * The name of the secret that contains the value for this environment variable.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#secret_name ContainerApp#secret_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#secret_name ContainerApp#secret_name}
   */
   readonly secretName?: string;
   /**
   * The value for this environment variable. **NOTE:** This value is ignored if `secret_name` is used
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#value ContainerApp#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#value ContainerApp#value}
   */
   readonly value?: string;
 }
@@ -1281,13 +1567,13 @@ export interface ContainerAppTemplateContainerLivenessProbeHeader {
   /**
   * The HTTP Header Name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#name ContainerApp#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#name ContainerApp#name}
   */
   readonly name: string;
   /**
   * The HTTP Header value.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#value ContainerApp#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#value ContainerApp#value}
   */
   readonly value: string;
 }
@@ -1403,55 +1689,55 @@ export interface ContainerAppTemplateContainerLivenessProbe {
   /**
   * The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#failure_count_threshold ContainerApp#failure_count_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#failure_count_threshold ContainerApp#failure_count_threshold}
   */
   readonly failureCountThreshold?: number;
   /**
   * The probe hostname. Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#host ContainerApp#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#host ContainerApp#host}
   */
   readonly host?: string;
   /**
   * The time in seconds to wait after the container has started before the probe is started.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#initial_delay ContainerApp#initial_delay}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#initial_delay ContainerApp#initial_delay}
   */
   readonly initialDelay?: number;
   /**
   * How often, in seconds, the probe should run. Possible values are between `1` and `240`. Defaults to `10`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#interval_seconds ContainerApp#interval_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#interval_seconds ContainerApp#interval_seconds}
   */
   readonly intervalSeconds?: number;
   /**
   * The URI to use with the `host` for http type probes. Not valid for `TCP` type probes. Defaults to `/`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#path ContainerApp#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#path ContainerApp#path}
   */
   readonly path?: string;
   /**
   * The port number on which to connect. Possible values are between `1` and `65535`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#port ContainerApp#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#port ContainerApp#port}
   */
   readonly port: number;
   /**
   * Time in seconds after which the probe times out. Possible values are between `1` an `240`. Defaults to `1`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#timeout ContainerApp#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#timeout ContainerApp#timeout}
   */
   readonly timeout?: number;
   /**
   * Type of probe. Possible values are `TCP`, `HTTP`, and `HTTPS`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#transport ContainerApp#transport}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#transport ContainerApp#transport}
   */
   readonly transport: string;
   /**
   * header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#header ContainerApp#header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#header ContainerApp#header}
   */
   readonly header?: ContainerAppTemplateContainerLivenessProbeHeader[] | cdktf.IResolvable;
 }
@@ -1733,13 +2019,13 @@ export interface ContainerAppTemplateContainerReadinessProbeHeader {
   /**
   * The HTTP Header Name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#name ContainerApp#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#name ContainerApp#name}
   */
   readonly name: string;
   /**
   * The HTTP Header value.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#value ContainerApp#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#value ContainerApp#value}
   */
   readonly value: string;
 }
@@ -1855,55 +2141,55 @@ export interface ContainerAppTemplateContainerReadinessProbe {
   /**
   * The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#failure_count_threshold ContainerApp#failure_count_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#failure_count_threshold ContainerApp#failure_count_threshold}
   */
   readonly failureCountThreshold?: number;
   /**
   * The probe hostname. Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#host ContainerApp#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#host ContainerApp#host}
   */
   readonly host?: string;
   /**
   * How often, in seconds, the probe should run. Possible values are between `1` and `240`. Defaults to `10`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#interval_seconds ContainerApp#interval_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#interval_seconds ContainerApp#interval_seconds}
   */
   readonly intervalSeconds?: number;
   /**
   * The URI to use for http type probes. Not valid for `TCP` type probes. Defaults to `/`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#path ContainerApp#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#path ContainerApp#path}
   */
   readonly path?: string;
   /**
   * The port number on which to connect. Possible values are between `1` and `65535`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#port ContainerApp#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#port ContainerApp#port}
   */
   readonly port: number;
   /**
   * The number of consecutive successful responses required to consider this probe as successful. Possible values are between `1` and `10`. Defaults to `3`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#success_count_threshold ContainerApp#success_count_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#success_count_threshold ContainerApp#success_count_threshold}
   */
   readonly successCountThreshold?: number;
   /**
   * Time in seconds after which the probe times out. Possible values are between `1` an `240`. Defaults to `1`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#timeout ContainerApp#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#timeout ContainerApp#timeout}
   */
   readonly timeout?: number;
   /**
   * Type of probe. Possible values are `TCP`, `HTTP`, and `HTTPS`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#transport ContainerApp#transport}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#transport ContainerApp#transport}
   */
   readonly transport: string;
   /**
   * header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#header ContainerApp#header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#header ContainerApp#header}
   */
   readonly header?: ContainerAppTemplateContainerReadinessProbeHeader[] | cdktf.IResolvable;
 }
@@ -2180,13 +2466,13 @@ export interface ContainerAppTemplateContainerStartupProbeHeader {
   /**
   * The HTTP Header Name.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#name ContainerApp#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#name ContainerApp#name}
   */
   readonly name: string;
   /**
   * The HTTP Header value.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#value ContainerApp#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#value ContainerApp#value}
   */
   readonly value: string;
 }
@@ -2302,49 +2588,49 @@ export interface ContainerAppTemplateContainerStartupProbe {
   /**
   * The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#failure_count_threshold ContainerApp#failure_count_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#failure_count_threshold ContainerApp#failure_count_threshold}
   */
   readonly failureCountThreshold?: number;
   /**
   * The probe hostname. Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#host ContainerApp#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#host ContainerApp#host}
   */
   readonly host?: string;
   /**
   * How often, in seconds, the probe should run. Possible values are between `1` and `240`. Defaults to `10`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#interval_seconds ContainerApp#interval_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#interval_seconds ContainerApp#interval_seconds}
   */
   readonly intervalSeconds?: number;
   /**
   * The URI to use with the `host` for http type probes. Not valid for `TCP` type probes. Defaults to `/`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#path ContainerApp#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#path ContainerApp#path}
   */
   readonly path?: string;
   /**
   * The port number on which to connect. Possible values are between `1` and `65535`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#port ContainerApp#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#port ContainerApp#port}
   */
   readonly port: number;
   /**
   * Time in seconds after which the probe times out. Possible values are between `1` an `240`. Defaults to `1`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#timeout ContainerApp#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#timeout ContainerApp#timeout}
   */
   readonly timeout?: number;
   /**
   * Type of probe. Possible values are `TCP`, `HTTP`, and `HTTPS`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#transport ContainerApp#transport}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#transport ContainerApp#transport}
   */
   readonly transport: string;
   /**
   * header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#header ContainerApp#header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#header ContainerApp#header}
   */
   readonly header?: ContainerAppTemplateContainerStartupProbeHeader[] | cdktf.IResolvable;
 }
@@ -2603,13 +2889,13 @@ export interface ContainerAppTemplateContainerVolumeMounts {
   /**
   * The name of the Volume to be mounted in the container.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#name ContainerApp#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#name ContainerApp#name}
   */
   readonly name: string;
   /**
   * The path in the container at which to mount this volume.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#path ContainerApp#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#path ContainerApp#path}
   */
   readonly path: string;
 }
@@ -2725,67 +3011,67 @@ export interface ContainerAppTemplateContainer {
   /**
   * A list of args to pass to the container.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#args ContainerApp#args}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#args ContainerApp#args}
   */
   readonly args?: string[];
   /**
   * A command to pass to the container to override the default. This is provided as a list of command line elements without spaces.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#command ContainerApp#command}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#command ContainerApp#command}
   */
   readonly command?: string[];
   /**
   * The amount of vCPU to allocate to the container. Possible values include `0.25`, `0.5`, `0.75`, `1.0`, `1.25`, `1.5`, `1.75`, and `2.0`. **NOTE:** `cpu` and `memory` must be specified in `0.25'/'0.5Gi` combination increments. e.g. `1.0` / `2.0` or `0.5` / `1.0`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#cpu ContainerApp#cpu}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#cpu ContainerApp#cpu}
   */
   readonly cpu: number;
   /**
   * The image to use to create the container.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#image ContainerApp#image}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#image ContainerApp#image}
   */
   readonly image: string;
   /**
   * The amount of memory to allocate to the container. Possible values include `0.5Gi`, `1.0Gi`, `1.5Gi`, `2.0Gi`, `2.5Gi`, `3.0Gi`, `3.5Gi`, and `4.0Gi`. **NOTE:** `cpu` and `memory` must be specified in `0.25'/'0.5Gi` combination increments. e.g. `1.25` / `2.5Gi` or `0.75` / `1.5Gi`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#memory ContainerApp#memory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#memory ContainerApp#memory}
   */
   readonly memory: string;
   /**
   * The name of the container.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#name ContainerApp#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#name ContainerApp#name}
   */
   readonly name: string;
   /**
   * env block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#env ContainerApp#env}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#env ContainerApp#env}
   */
   readonly env?: ContainerAppTemplateContainerEnv[] | cdktf.IResolvable;
   /**
   * liveness_probe block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#liveness_probe ContainerApp#liveness_probe}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#liveness_probe ContainerApp#liveness_probe}
   */
   readonly livenessProbe?: ContainerAppTemplateContainerLivenessProbe[] | cdktf.IResolvable;
   /**
   * readiness_probe block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#readiness_probe ContainerApp#readiness_probe}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#readiness_probe ContainerApp#readiness_probe}
   */
   readonly readinessProbe?: ContainerAppTemplateContainerReadinessProbe[] | cdktf.IResolvable;
   /**
   * startup_probe block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#startup_probe ContainerApp#startup_probe}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#startup_probe ContainerApp#startup_probe}
   */
   readonly startupProbe?: ContainerAppTemplateContainerStartupProbe[] | cdktf.IResolvable;
   /**
   * volume_mounts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#volume_mounts ContainerApp#volume_mounts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#volume_mounts ContainerApp#volume_mounts}
   */
   readonly volumeMounts?: ContainerAppTemplateContainerVolumeMounts[] | cdktf.IResolvable;
 }
@@ -3103,23 +3389,848 @@ export class ContainerAppTemplateContainerList extends cdktf.ComplexList {
     return new ContainerAppTemplateContainerOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface ContainerAppTemplateCustomScaleRuleAuthentication {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#secret_name ContainerApp#secret_name}
+  */
+  readonly secretName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#trigger_parameter ContainerApp#trigger_parameter}
+  */
+  readonly triggerParameter: string;
+}
+
+export function containerAppTemplateCustomScaleRuleAuthenticationToTerraform(struct?: ContainerAppTemplateCustomScaleRuleAuthentication | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    secret_name: cdktf.stringToTerraform(struct!.secretName),
+    trigger_parameter: cdktf.stringToTerraform(struct!.triggerParameter),
+  }
+}
+
+export class ContainerAppTemplateCustomScaleRuleAuthenticationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerAppTemplateCustomScaleRuleAuthentication | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._secretName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretName = this._secretName;
+    }
+    if (this._triggerParameter !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.triggerParameter = this._triggerParameter;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerAppTemplateCustomScaleRuleAuthentication | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._secretName = undefined;
+      this._triggerParameter = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._secretName = value.secretName;
+      this._triggerParameter = value.triggerParameter;
+    }
+  }
+
+  // secret_name - computed: false, optional: false, required: true
+  private _secretName?: string; 
+  public get secretName() {
+    return this.getStringAttribute('secret_name');
+  }
+  public set secretName(value: string) {
+    this._secretName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretNameInput() {
+    return this._secretName;
+  }
+
+  // trigger_parameter - computed: false, optional: false, required: true
+  private _triggerParameter?: string; 
+  public get triggerParameter() {
+    return this.getStringAttribute('trigger_parameter');
+  }
+  public set triggerParameter(value: string) {
+    this._triggerParameter = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get triggerParameterInput() {
+    return this._triggerParameter;
+  }
+}
+
+export class ContainerAppTemplateCustomScaleRuleAuthenticationList extends cdktf.ComplexList {
+  public internalValue? : ContainerAppTemplateCustomScaleRuleAuthentication[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerAppTemplateCustomScaleRuleAuthenticationOutputReference {
+    return new ContainerAppTemplateCustomScaleRuleAuthenticationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ContainerAppTemplateCustomScaleRule {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#custom_rule_type ContainerApp#custom_rule_type}
+  */
+  readonly customRuleType: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#metadata ContainerApp#metadata}
+  */
+  readonly metadata: { [key: string]: string };
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#name ContainerApp#name}
+  */
+  readonly name: string;
+  /**
+  * authentication block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#authentication ContainerApp#authentication}
+  */
+  readonly authentication?: ContainerAppTemplateCustomScaleRuleAuthentication[] | cdktf.IResolvable;
+}
+
+export function containerAppTemplateCustomScaleRuleToTerraform(struct?: ContainerAppTemplateCustomScaleRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    custom_rule_type: cdktf.stringToTerraform(struct!.customRuleType),
+    metadata: cdktf.hashMapper(cdktf.stringToTerraform)(struct!.metadata),
+    name: cdktf.stringToTerraform(struct!.name),
+    authentication: cdktf.listMapper(containerAppTemplateCustomScaleRuleAuthenticationToTerraform, true)(struct!.authentication),
+  }
+}
+
+export class ContainerAppTemplateCustomScaleRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerAppTemplateCustomScaleRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._customRuleType !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.customRuleType = this._customRuleType;
+    }
+    if (this._metadata !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.metadata = this._metadata;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._authentication?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.authentication = this._authentication?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerAppTemplateCustomScaleRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._customRuleType = undefined;
+      this._metadata = undefined;
+      this._name = undefined;
+      this._authentication.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._customRuleType = value.customRuleType;
+      this._metadata = value.metadata;
+      this._name = value.name;
+      this._authentication.internalValue = value.authentication;
+    }
+  }
+
+  // custom_rule_type - computed: false, optional: false, required: true
+  private _customRuleType?: string; 
+  public get customRuleType() {
+    return this.getStringAttribute('custom_rule_type');
+  }
+  public set customRuleType(value: string) {
+    this._customRuleType = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customRuleTypeInput() {
+    return this._customRuleType;
+  }
+
+  // metadata - computed: false, optional: false, required: true
+  private _metadata?: { [key: string]: string }; 
+  public get metadata() {
+    return this.getStringMapAttribute('metadata');
+  }
+  public set metadata(value: { [key: string]: string }) {
+    this._metadata = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get metadataInput() {
+    return this._metadata;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // authentication - computed: false, optional: true, required: false
+  private _authentication = new ContainerAppTemplateCustomScaleRuleAuthenticationList(this, "authentication", false);
+  public get authentication() {
+    return this._authentication;
+  }
+  public putAuthentication(value: ContainerAppTemplateCustomScaleRuleAuthentication[] | cdktf.IResolvable) {
+    this._authentication.internalValue = value;
+  }
+  public resetAuthentication() {
+    this._authentication.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authenticationInput() {
+    return this._authentication.internalValue;
+  }
+}
+
+export class ContainerAppTemplateCustomScaleRuleList extends cdktf.ComplexList {
+  public internalValue? : ContainerAppTemplateCustomScaleRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerAppTemplateCustomScaleRuleOutputReference {
+    return new ContainerAppTemplateCustomScaleRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ContainerAppTemplateHttpScaleRuleAuthentication {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#secret_name ContainerApp#secret_name}
+  */
+  readonly secretName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#trigger_parameter ContainerApp#trigger_parameter}
+  */
+  readonly triggerParameter?: string;
+}
+
+export function containerAppTemplateHttpScaleRuleAuthenticationToTerraform(struct?: ContainerAppTemplateHttpScaleRuleAuthentication | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    secret_name: cdktf.stringToTerraform(struct!.secretName),
+    trigger_parameter: cdktf.stringToTerraform(struct!.triggerParameter),
+  }
+}
+
+export class ContainerAppTemplateHttpScaleRuleAuthenticationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerAppTemplateHttpScaleRuleAuthentication | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._secretName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretName = this._secretName;
+    }
+    if (this._triggerParameter !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.triggerParameter = this._triggerParameter;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerAppTemplateHttpScaleRuleAuthentication | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._secretName = undefined;
+      this._triggerParameter = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._secretName = value.secretName;
+      this._triggerParameter = value.triggerParameter;
+    }
+  }
+
+  // secret_name - computed: false, optional: false, required: true
+  private _secretName?: string; 
+  public get secretName() {
+    return this.getStringAttribute('secret_name');
+  }
+  public set secretName(value: string) {
+    this._secretName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretNameInput() {
+    return this._secretName;
+  }
+
+  // trigger_parameter - computed: false, optional: true, required: false
+  private _triggerParameter?: string; 
+  public get triggerParameter() {
+    return this.getStringAttribute('trigger_parameter');
+  }
+  public set triggerParameter(value: string) {
+    this._triggerParameter = value;
+  }
+  public resetTriggerParameter() {
+    this._triggerParameter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get triggerParameterInput() {
+    return this._triggerParameter;
+  }
+}
+
+export class ContainerAppTemplateHttpScaleRuleAuthenticationList extends cdktf.ComplexList {
+  public internalValue? : ContainerAppTemplateHttpScaleRuleAuthentication[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerAppTemplateHttpScaleRuleAuthenticationOutputReference {
+    return new ContainerAppTemplateHttpScaleRuleAuthenticationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ContainerAppTemplateHttpScaleRule {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#concurrent_requests ContainerApp#concurrent_requests}
+  */
+  readonly concurrentRequests: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#name ContainerApp#name}
+  */
+  readonly name: string;
+  /**
+  * authentication block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#authentication ContainerApp#authentication}
+  */
+  readonly authentication?: ContainerAppTemplateHttpScaleRuleAuthentication[] | cdktf.IResolvable;
+}
+
+export function containerAppTemplateHttpScaleRuleToTerraform(struct?: ContainerAppTemplateHttpScaleRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    concurrent_requests: cdktf.stringToTerraform(struct!.concurrentRequests),
+    name: cdktf.stringToTerraform(struct!.name),
+    authentication: cdktf.listMapper(containerAppTemplateHttpScaleRuleAuthenticationToTerraform, true)(struct!.authentication),
+  }
+}
+
+export class ContainerAppTemplateHttpScaleRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerAppTemplateHttpScaleRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._concurrentRequests !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.concurrentRequests = this._concurrentRequests;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._authentication?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.authentication = this._authentication?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerAppTemplateHttpScaleRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._concurrentRequests = undefined;
+      this._name = undefined;
+      this._authentication.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._concurrentRequests = value.concurrentRequests;
+      this._name = value.name;
+      this._authentication.internalValue = value.authentication;
+    }
+  }
+
+  // concurrent_requests - computed: false, optional: false, required: true
+  private _concurrentRequests?: string; 
+  public get concurrentRequests() {
+    return this.getStringAttribute('concurrent_requests');
+  }
+  public set concurrentRequests(value: string) {
+    this._concurrentRequests = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get concurrentRequestsInput() {
+    return this._concurrentRequests;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // authentication - computed: false, optional: true, required: false
+  private _authentication = new ContainerAppTemplateHttpScaleRuleAuthenticationList(this, "authentication", false);
+  public get authentication() {
+    return this._authentication;
+  }
+  public putAuthentication(value: ContainerAppTemplateHttpScaleRuleAuthentication[] | cdktf.IResolvable) {
+    this._authentication.internalValue = value;
+  }
+  public resetAuthentication() {
+    this._authentication.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authenticationInput() {
+    return this._authentication.internalValue;
+  }
+}
+
+export class ContainerAppTemplateHttpScaleRuleList extends cdktf.ComplexList {
+  public internalValue? : ContainerAppTemplateHttpScaleRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerAppTemplateHttpScaleRuleOutputReference {
+    return new ContainerAppTemplateHttpScaleRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ContainerAppTemplateTcpScaleRuleAuthentication {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#secret_name ContainerApp#secret_name}
+  */
+  readonly secretName: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#trigger_parameter ContainerApp#trigger_parameter}
+  */
+  readonly triggerParameter?: string;
+}
+
+export function containerAppTemplateTcpScaleRuleAuthenticationToTerraform(struct?: ContainerAppTemplateTcpScaleRuleAuthentication | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    secret_name: cdktf.stringToTerraform(struct!.secretName),
+    trigger_parameter: cdktf.stringToTerraform(struct!.triggerParameter),
+  }
+}
+
+export class ContainerAppTemplateTcpScaleRuleAuthenticationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerAppTemplateTcpScaleRuleAuthentication | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._secretName !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secretName = this._secretName;
+    }
+    if (this._triggerParameter !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.triggerParameter = this._triggerParameter;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerAppTemplateTcpScaleRuleAuthentication | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._secretName = undefined;
+      this._triggerParameter = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._secretName = value.secretName;
+      this._triggerParameter = value.triggerParameter;
+    }
+  }
+
+  // secret_name - computed: false, optional: false, required: true
+  private _secretName?: string; 
+  public get secretName() {
+    return this.getStringAttribute('secret_name');
+  }
+  public set secretName(value: string) {
+    this._secretName = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretNameInput() {
+    return this._secretName;
+  }
+
+  // trigger_parameter - computed: false, optional: true, required: false
+  private _triggerParameter?: string; 
+  public get triggerParameter() {
+    return this.getStringAttribute('trigger_parameter');
+  }
+  public set triggerParameter(value: string) {
+    this._triggerParameter = value;
+  }
+  public resetTriggerParameter() {
+    this._triggerParameter = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get triggerParameterInput() {
+    return this._triggerParameter;
+  }
+}
+
+export class ContainerAppTemplateTcpScaleRuleAuthenticationList extends cdktf.ComplexList {
+  public internalValue? : ContainerAppTemplateTcpScaleRuleAuthentication[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerAppTemplateTcpScaleRuleAuthenticationOutputReference {
+    return new ContainerAppTemplateTcpScaleRuleAuthenticationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ContainerAppTemplateTcpScaleRule {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#concurrent_requests ContainerApp#concurrent_requests}
+  */
+  readonly concurrentRequests: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#name ContainerApp#name}
+  */
+  readonly name: string;
+  /**
+  * authentication block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#authentication ContainerApp#authentication}
+  */
+  readonly authentication?: ContainerAppTemplateTcpScaleRuleAuthentication[] | cdktf.IResolvable;
+}
+
+export function containerAppTemplateTcpScaleRuleToTerraform(struct?: ContainerAppTemplateTcpScaleRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    concurrent_requests: cdktf.stringToTerraform(struct!.concurrentRequests),
+    name: cdktf.stringToTerraform(struct!.name),
+    authentication: cdktf.listMapper(containerAppTemplateTcpScaleRuleAuthenticationToTerraform, true)(struct!.authentication),
+  }
+}
+
+export class ContainerAppTemplateTcpScaleRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ContainerAppTemplateTcpScaleRule | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._concurrentRequests !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.concurrentRequests = this._concurrentRequests;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._authentication?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.authentication = this._authentication?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerAppTemplateTcpScaleRule | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._concurrentRequests = undefined;
+      this._name = undefined;
+      this._authentication.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._concurrentRequests = value.concurrentRequests;
+      this._name = value.name;
+      this._authentication.internalValue = value.authentication;
+    }
+  }
+
+  // concurrent_requests - computed: false, optional: false, required: true
+  private _concurrentRequests?: string; 
+  public get concurrentRequests() {
+    return this.getStringAttribute('concurrent_requests');
+  }
+  public set concurrentRequests(value: string) {
+    this._concurrentRequests = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get concurrentRequestsInput() {
+    return this._concurrentRequests;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // authentication - computed: false, optional: true, required: false
+  private _authentication = new ContainerAppTemplateTcpScaleRuleAuthenticationList(this, "authentication", false);
+  public get authentication() {
+    return this._authentication;
+  }
+  public putAuthentication(value: ContainerAppTemplateTcpScaleRuleAuthentication[] | cdktf.IResolvable) {
+    this._authentication.internalValue = value;
+  }
+  public resetAuthentication() {
+    this._authentication.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authenticationInput() {
+    return this._authentication.internalValue;
+  }
+}
+
+export class ContainerAppTemplateTcpScaleRuleList extends cdktf.ComplexList {
+  public internalValue? : ContainerAppTemplateTcpScaleRule[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ContainerAppTemplateTcpScaleRuleOutputReference {
+    return new ContainerAppTemplateTcpScaleRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface ContainerAppTemplateVolume {
   /**
   * The name of the volume.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#name ContainerApp#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#name ContainerApp#name}
   */
   readonly name: string;
   /**
   * The name of the `AzureFile` storage. Required when `storage_type` is `AzureFile`
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#storage_name ContainerApp#storage_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#storage_name ContainerApp#storage_name}
   */
   readonly storageName?: string;
   /**
   * The type of storage volume. Possible values include `AzureFile` and `EmptyDir`. Defaults to `EmptyDir`.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#storage_type ContainerApp#storage_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#storage_type ContainerApp#storage_type}
   */
   readonly storageType?: string;
 }
@@ -3261,31 +4372,55 @@ export interface ContainerAppTemplate {
   /**
   * The maximum number of replicas for this container.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#max_replicas ContainerApp#max_replicas}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#max_replicas ContainerApp#max_replicas}
   */
   readonly maxReplicas?: number;
   /**
   * The minimum number of replicas for this container.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#min_replicas ContainerApp#min_replicas}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#min_replicas ContainerApp#min_replicas}
   */
   readonly minReplicas?: number;
   /**
   * The suffix for the revision. This value must be unique for the lifetime of the Resource. If omitted the service will use a hash function to create one.
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#revision_suffix ContainerApp#revision_suffix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#revision_suffix ContainerApp#revision_suffix}
   */
   readonly revisionSuffix?: string;
   /**
+  * azure_queue_scale_rule block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#azure_queue_scale_rule ContainerApp#azure_queue_scale_rule}
+  */
+  readonly azureQueueScaleRule?: ContainerAppTemplateAzureQueueScaleRule[] | cdktf.IResolvable;
+  /**
   * container block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#container ContainerApp#container}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#container ContainerApp#container}
   */
   readonly container: ContainerAppTemplateContainer[] | cdktf.IResolvable;
   /**
+  * custom_scale_rule block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#custom_scale_rule ContainerApp#custom_scale_rule}
+  */
+  readonly customScaleRule?: ContainerAppTemplateCustomScaleRule[] | cdktf.IResolvable;
+  /**
+  * http_scale_rule block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#http_scale_rule ContainerApp#http_scale_rule}
+  */
+  readonly httpScaleRule?: ContainerAppTemplateHttpScaleRule[] | cdktf.IResolvable;
+  /**
+  * tcp_scale_rule block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#tcp_scale_rule ContainerApp#tcp_scale_rule}
+  */
+  readonly tcpScaleRule?: ContainerAppTemplateTcpScaleRule[] | cdktf.IResolvable;
+  /**
   * volume block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#volume ContainerApp#volume}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#volume ContainerApp#volume}
   */
   readonly volume?: ContainerAppTemplateVolume[] | cdktf.IResolvable;
 }
@@ -3299,7 +4434,11 @@ export function containerAppTemplateToTerraform(struct?: ContainerAppTemplateOut
     max_replicas: cdktf.numberToTerraform(struct!.maxReplicas),
     min_replicas: cdktf.numberToTerraform(struct!.minReplicas),
     revision_suffix: cdktf.stringToTerraform(struct!.revisionSuffix),
+    azure_queue_scale_rule: cdktf.listMapper(containerAppTemplateAzureQueueScaleRuleToTerraform, true)(struct!.azureQueueScaleRule),
     container: cdktf.listMapper(containerAppTemplateContainerToTerraform, true)(struct!.container),
+    custom_scale_rule: cdktf.listMapper(containerAppTemplateCustomScaleRuleToTerraform, true)(struct!.customScaleRule),
+    http_scale_rule: cdktf.listMapper(containerAppTemplateHttpScaleRuleToTerraform, true)(struct!.httpScaleRule),
+    tcp_scale_rule: cdktf.listMapper(containerAppTemplateTcpScaleRuleToTerraform, true)(struct!.tcpScaleRule),
     volume: cdktf.listMapper(containerAppTemplateVolumeToTerraform, true)(struct!.volume),
   }
 }
@@ -3330,9 +4469,25 @@ export class ContainerAppTemplateOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.revisionSuffix = this._revisionSuffix;
     }
+    if (this._azureQueueScaleRule?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.azureQueueScaleRule = this._azureQueueScaleRule?.internalValue;
+    }
     if (this._container?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.container = this._container?.internalValue;
+    }
+    if (this._customScaleRule?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.customScaleRule = this._customScaleRule?.internalValue;
+    }
+    if (this._httpScaleRule?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.httpScaleRule = this._httpScaleRule?.internalValue;
+    }
+    if (this._tcpScaleRule?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tcpScaleRule = this._tcpScaleRule?.internalValue;
     }
     if (this._volume?.internalValue !== undefined) {
       hasAnyValues = true;
@@ -3347,7 +4502,11 @@ export class ContainerAppTemplateOutputReference extends cdktf.ComplexObject {
       this._maxReplicas = undefined;
       this._minReplicas = undefined;
       this._revisionSuffix = undefined;
+      this._azureQueueScaleRule.internalValue = undefined;
       this._container.internalValue = undefined;
+      this._customScaleRule.internalValue = undefined;
+      this._httpScaleRule.internalValue = undefined;
+      this._tcpScaleRule.internalValue = undefined;
       this._volume.internalValue = undefined;
     }
     else {
@@ -3355,7 +4514,11 @@ export class ContainerAppTemplateOutputReference extends cdktf.ComplexObject {
       this._maxReplicas = value.maxReplicas;
       this._minReplicas = value.minReplicas;
       this._revisionSuffix = value.revisionSuffix;
+      this._azureQueueScaleRule.internalValue = value.azureQueueScaleRule;
       this._container.internalValue = value.container;
+      this._customScaleRule.internalValue = value.customScaleRule;
+      this._httpScaleRule.internalValue = value.httpScaleRule;
+      this._tcpScaleRule.internalValue = value.tcpScaleRule;
       this._volume.internalValue = value.volume;
     }
   }
@@ -3408,6 +4571,22 @@ export class ContainerAppTemplateOutputReference extends cdktf.ComplexObject {
     return this._revisionSuffix;
   }
 
+  // azure_queue_scale_rule - computed: false, optional: true, required: false
+  private _azureQueueScaleRule = new ContainerAppTemplateAzureQueueScaleRuleList(this, "azure_queue_scale_rule", false);
+  public get azureQueueScaleRule() {
+    return this._azureQueueScaleRule;
+  }
+  public putAzureQueueScaleRule(value: ContainerAppTemplateAzureQueueScaleRule[] | cdktf.IResolvable) {
+    this._azureQueueScaleRule.internalValue = value;
+  }
+  public resetAzureQueueScaleRule() {
+    this._azureQueueScaleRule.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureQueueScaleRuleInput() {
+    return this._azureQueueScaleRule.internalValue;
+  }
+
   // container - computed: false, optional: false, required: true
   private _container = new ContainerAppTemplateContainerList(this, "container", false);
   public get container() {
@@ -3419,6 +4598,54 @@ export class ContainerAppTemplateOutputReference extends cdktf.ComplexObject {
   // Temporarily expose input value. Use with caution.
   public get containerInput() {
     return this._container.internalValue;
+  }
+
+  // custom_scale_rule - computed: false, optional: true, required: false
+  private _customScaleRule = new ContainerAppTemplateCustomScaleRuleList(this, "custom_scale_rule", false);
+  public get customScaleRule() {
+    return this._customScaleRule;
+  }
+  public putCustomScaleRule(value: ContainerAppTemplateCustomScaleRule[] | cdktf.IResolvable) {
+    this._customScaleRule.internalValue = value;
+  }
+  public resetCustomScaleRule() {
+    this._customScaleRule.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customScaleRuleInput() {
+    return this._customScaleRule.internalValue;
+  }
+
+  // http_scale_rule - computed: false, optional: true, required: false
+  private _httpScaleRule = new ContainerAppTemplateHttpScaleRuleList(this, "http_scale_rule", false);
+  public get httpScaleRule() {
+    return this._httpScaleRule;
+  }
+  public putHttpScaleRule(value: ContainerAppTemplateHttpScaleRule[] | cdktf.IResolvable) {
+    this._httpScaleRule.internalValue = value;
+  }
+  public resetHttpScaleRule() {
+    this._httpScaleRule.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get httpScaleRuleInput() {
+    return this._httpScaleRule.internalValue;
+  }
+
+  // tcp_scale_rule - computed: false, optional: true, required: false
+  private _tcpScaleRule = new ContainerAppTemplateTcpScaleRuleList(this, "tcp_scale_rule", false);
+  public get tcpScaleRule() {
+    return this._tcpScaleRule;
+  }
+  public putTcpScaleRule(value: ContainerAppTemplateTcpScaleRule[] | cdktf.IResolvable) {
+    this._tcpScaleRule.internalValue = value;
+  }
+  public resetTcpScaleRule() {
+    this._tcpScaleRule.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tcpScaleRuleInput() {
+    return this._tcpScaleRule.internalValue;
   }
 
   // volume - computed: false, optional: true, required: false
@@ -3439,19 +4666,19 @@ export class ContainerAppTemplateOutputReference extends cdktf.ComplexObject {
 }
 export interface ContainerAppTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#create ContainerApp#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#create ContainerApp#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#delete ContainerApp#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#delete ContainerApp#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#read ContainerApp#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#read ContainerApp#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app#update ContainerApp#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app#update ContainerApp#update}
   */
   readonly update?: string;
 }
@@ -3595,7 +4822,7 @@ export class ContainerAppTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app azurerm_container_app}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app azurerm_container_app}
 */
 export class ContainerApp extends cdktf.TerraformResource {
 
@@ -3609,7 +4836,7 @@ export class ContainerApp extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/container_app azurerm_container_app} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/container_app azurerm_container_app} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -3620,7 +4847,7 @@ export class ContainerApp extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_container_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.73.0',
+        providerVersion: '3.74.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
