@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_account_customer_managed_key
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/storage_account_customer_managed_key
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,54 +8,62 @@ import * as cdktf from 'cdktf';
 
 export interface StorageAccountCustomerManagedKeyAConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_account_customer_managed_key#id StorageAccountCustomerManagedKeyA#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/storage_account_customer_managed_key#federated_identity_client_id StorageAccountCustomerManagedKeyA#federated_identity_client_id}
+  */
+  readonly federatedIdentityClientId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/storage_account_customer_managed_key#id StorageAccountCustomerManagedKeyA#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_account_customer_managed_key#key_name StorageAccountCustomerManagedKeyA#key_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/storage_account_customer_managed_key#key_name StorageAccountCustomerManagedKeyA#key_name}
   */
   readonly keyName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_account_customer_managed_key#key_vault_id StorageAccountCustomerManagedKeyA#key_vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/storage_account_customer_managed_key#key_vault_id StorageAccountCustomerManagedKeyA#key_vault_id}
   */
-  readonly keyVaultId: string;
+  readonly keyVaultId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_account_customer_managed_key#key_version StorageAccountCustomerManagedKeyA#key_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/storage_account_customer_managed_key#key_vault_uri StorageAccountCustomerManagedKeyA#key_vault_uri}
+  */
+  readonly keyVaultUri?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/storage_account_customer_managed_key#key_version StorageAccountCustomerManagedKeyA#key_version}
   */
   readonly keyVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_account_customer_managed_key#storage_account_id StorageAccountCustomerManagedKeyA#storage_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/storage_account_customer_managed_key#storage_account_id StorageAccountCustomerManagedKeyA#storage_account_id}
   */
   readonly storageAccountId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_account_customer_managed_key#user_assigned_identity_id StorageAccountCustomerManagedKeyA#user_assigned_identity_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/storage_account_customer_managed_key#user_assigned_identity_id StorageAccountCustomerManagedKeyA#user_assigned_identity_id}
   */
   readonly userAssignedIdentityId?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_account_customer_managed_key#timeouts StorageAccountCustomerManagedKeyA#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/storage_account_customer_managed_key#timeouts StorageAccountCustomerManagedKeyA#timeouts}
   */
   readonly timeouts?: StorageAccountCustomerManagedKeyTimeouts;
 }
 export interface StorageAccountCustomerManagedKeyTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_account_customer_managed_key#create StorageAccountCustomerManagedKeyA#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/storage_account_customer_managed_key#create StorageAccountCustomerManagedKeyA#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_account_customer_managed_key#delete StorageAccountCustomerManagedKeyA#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/storage_account_customer_managed_key#delete StorageAccountCustomerManagedKeyA#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_account_customer_managed_key#read StorageAccountCustomerManagedKeyA#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/storage_account_customer_managed_key#read StorageAccountCustomerManagedKeyA#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_account_customer_managed_key#update StorageAccountCustomerManagedKeyA#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/storage_account_customer_managed_key#update StorageAccountCustomerManagedKeyA#update}
   */
   readonly update?: string;
 }
@@ -204,7 +207,7 @@ export class StorageAccountCustomerManagedKeyTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_account_customer_managed_key azurerm_storage_account_customer_managed_key}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/storage_account_customer_managed_key azurerm_storage_account_customer_managed_key}
 */
 export class StorageAccountCustomerManagedKeyA extends cdktf.TerraformResource {
 
@@ -218,7 +221,7 @@ export class StorageAccountCustomerManagedKeyA extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/storage_account_customer_managed_key azurerm_storage_account_customer_managed_key} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/storage_account_customer_managed_key azurerm_storage_account_customer_managed_key} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -229,7 +232,7 @@ export class StorageAccountCustomerManagedKeyA extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_account_customer_managed_key',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.73.0',
+        providerVersion: '3.74.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -240,9 +243,11 @@ export class StorageAccountCustomerManagedKeyA extends cdktf.TerraformResource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._federatedIdentityClientId = config.federatedIdentityClientId;
     this._id = config.id;
     this._keyName = config.keyName;
     this._keyVaultId = config.keyVaultId;
+    this._keyVaultUri = config.keyVaultUri;
     this._keyVersion = config.keyVersion;
     this._storageAccountId = config.storageAccountId;
     this._userAssignedIdentityId = config.userAssignedIdentityId;
@@ -252,6 +257,22 @@ export class StorageAccountCustomerManagedKeyA extends cdktf.TerraformResource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // federated_identity_client_id - computed: false, optional: true, required: false
+  private _federatedIdentityClientId?: string; 
+  public get federatedIdentityClientId() {
+    return this.getStringAttribute('federated_identity_client_id');
+  }
+  public set federatedIdentityClientId(value: string) {
+    this._federatedIdentityClientId = value;
+  }
+  public resetFederatedIdentityClientId() {
+    this._federatedIdentityClientId = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get federatedIdentityClientIdInput() {
+    return this._federatedIdentityClientId;
+  }
 
   // id - computed: true, optional: true, required: false
   private _id?: string; 
@@ -282,7 +303,7 @@ export class StorageAccountCustomerManagedKeyA extends cdktf.TerraformResource {
     return this._keyName;
   }
 
-  // key_vault_id - computed: false, optional: false, required: true
+  // key_vault_id - computed: false, optional: true, required: false
   private _keyVaultId?: string; 
   public get keyVaultId() {
     return this.getStringAttribute('key_vault_id');
@@ -290,9 +311,28 @@ export class StorageAccountCustomerManagedKeyA extends cdktf.TerraformResource {
   public set keyVaultId(value: string) {
     this._keyVaultId = value;
   }
+  public resetKeyVaultId() {
+    this._keyVaultId = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get keyVaultIdInput() {
     return this._keyVaultId;
+  }
+
+  // key_vault_uri - computed: true, optional: true, required: false
+  private _keyVaultUri?: string; 
+  public get keyVaultUri() {
+    return this.getStringAttribute('key_vault_uri');
+  }
+  public set keyVaultUri(value: string) {
+    this._keyVaultUri = value;
+  }
+  public resetKeyVaultUri() {
+    this._keyVaultUri = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultUriInput() {
+    return this._keyVaultUri;
   }
 
   // key_version - computed: false, optional: true, required: false
@@ -362,9 +402,11 @@ export class StorageAccountCustomerManagedKeyA extends cdktf.TerraformResource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      federated_identity_client_id: cdktf.stringToTerraform(this._federatedIdentityClientId),
       id: cdktf.stringToTerraform(this._id),
       key_name: cdktf.stringToTerraform(this._keyName),
       key_vault_id: cdktf.stringToTerraform(this._keyVaultId),
+      key_vault_uri: cdktf.stringToTerraform(this._keyVaultUri),
       key_version: cdktf.stringToTerraform(this._keyVersion),
       storage_account_id: cdktf.stringToTerraform(this._storageAccountId),
       user_assigned_identity_id: cdktf.stringToTerraform(this._userAssignedIdentityId),

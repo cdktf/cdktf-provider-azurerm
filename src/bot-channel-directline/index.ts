@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_directline
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_directline
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,60 +8,72 @@ import * as cdktf from 'cdktf';
 
 export interface BotChannelDirectlineConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_directline#bot_name BotChannelDirectline#bot_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_directline#bot_name BotChannelDirectline#bot_name}
   */
   readonly botName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_directline#id BotChannelDirectline#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_directline#id BotChannelDirectline#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_directline#location BotChannelDirectline#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_directline#location BotChannelDirectline#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_directline#resource_group_name BotChannelDirectline#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_directline#resource_group_name BotChannelDirectline#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * site block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_directline#site BotChannelDirectline#site}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_directline#site BotChannelDirectline#site}
   */
   readonly site: BotChannelDirectlineSite[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_directline#timeouts BotChannelDirectline#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_directline#timeouts BotChannelDirectline#timeouts}
   */
   readonly timeouts?: BotChannelDirectlineTimeouts;
 }
 export interface BotChannelDirectlineSite {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_directline#enabled BotChannelDirectline#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_directline#enabled BotChannelDirectline#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_directline#enhanced_authentication_enabled BotChannelDirectline#enhanced_authentication_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_directline#endpoint_parameters_enabled BotChannelDirectline#endpoint_parameters_enabled}
+  */
+  readonly endpointParametersEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_directline#enhanced_authentication_enabled BotChannelDirectline#enhanced_authentication_enabled}
   */
   readonly enhancedAuthenticationEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_directline#name BotChannelDirectline#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_directline#name BotChannelDirectline#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_directline#trusted_origins BotChannelDirectline#trusted_origins}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_directline#storage_enabled BotChannelDirectline#storage_enabled}
+  */
+  readonly storageEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_directline#trusted_origins BotChannelDirectline#trusted_origins}
   */
   readonly trustedOrigins?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_directline#v1_allowed BotChannelDirectline#v1_allowed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_directline#user_upload_enabled BotChannelDirectline#user_upload_enabled}
+  */
+  readonly userUploadEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_directline#v1_allowed BotChannelDirectline#v1_allowed}
   */
   readonly v1Allowed?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_directline#v3_allowed BotChannelDirectline#v3_allowed}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_directline#v3_allowed BotChannelDirectline#v3_allowed}
   */
   readonly v3Allowed?: boolean | cdktf.IResolvable;
 }
@@ -78,9 +85,12 @@ export function botChannelDirectlineSiteToTerraform(struct?: BotChannelDirectlin
   }
   return {
     enabled: cdktf.booleanToTerraform(struct!.enabled),
+    endpoint_parameters_enabled: cdktf.booleanToTerraform(struct!.endpointParametersEnabled),
     enhanced_authentication_enabled: cdktf.booleanToTerraform(struct!.enhancedAuthenticationEnabled),
     name: cdktf.stringToTerraform(struct!.name),
+    storage_enabled: cdktf.booleanToTerraform(struct!.storageEnabled),
     trusted_origins: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.trustedOrigins),
+    user_upload_enabled: cdktf.booleanToTerraform(struct!.userUploadEnabled),
     v1_allowed: cdktf.booleanToTerraform(struct!.v1Allowed),
     v3_allowed: cdktf.booleanToTerraform(struct!.v3Allowed),
   }
@@ -110,6 +120,10 @@ export class BotChannelDirectlineSiteOutputReference extends cdktf.ComplexObject
       hasAnyValues = true;
       internalValueResult.enabled = this._enabled;
     }
+    if (this._endpointParametersEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.endpointParametersEnabled = this._endpointParametersEnabled;
+    }
     if (this._enhancedAuthenticationEnabled !== undefined) {
       hasAnyValues = true;
       internalValueResult.enhancedAuthenticationEnabled = this._enhancedAuthenticationEnabled;
@@ -118,9 +132,17 @@ export class BotChannelDirectlineSiteOutputReference extends cdktf.ComplexObject
       hasAnyValues = true;
       internalValueResult.name = this._name;
     }
+    if (this._storageEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.storageEnabled = this._storageEnabled;
+    }
     if (this._trustedOrigins !== undefined) {
       hasAnyValues = true;
       internalValueResult.trustedOrigins = this._trustedOrigins;
+    }
+    if (this._userUploadEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userUploadEnabled = this._userUploadEnabled;
     }
     if (this._v1Allowed !== undefined) {
       hasAnyValues = true;
@@ -138,9 +160,12 @@ export class BotChannelDirectlineSiteOutputReference extends cdktf.ComplexObject
       this.isEmptyObject = false;
       this.resolvableValue = undefined;
       this._enabled = undefined;
+      this._endpointParametersEnabled = undefined;
       this._enhancedAuthenticationEnabled = undefined;
       this._name = undefined;
+      this._storageEnabled = undefined;
       this._trustedOrigins = undefined;
+      this._userUploadEnabled = undefined;
       this._v1Allowed = undefined;
       this._v3Allowed = undefined;
     }
@@ -152,9 +177,12 @@ export class BotChannelDirectlineSiteOutputReference extends cdktf.ComplexObject
       this.isEmptyObject = Object.keys(value).length === 0;
       this.resolvableValue = undefined;
       this._enabled = value.enabled;
+      this._endpointParametersEnabled = value.endpointParametersEnabled;
       this._enhancedAuthenticationEnabled = value.enhancedAuthenticationEnabled;
       this._name = value.name;
+      this._storageEnabled = value.storageEnabled;
       this._trustedOrigins = value.trustedOrigins;
+      this._userUploadEnabled = value.userUploadEnabled;
       this._v1Allowed = value.v1Allowed;
       this._v3Allowed = value.v3Allowed;
     }
@@ -174,6 +202,22 @@ export class BotChannelDirectlineSiteOutputReference extends cdktf.ComplexObject
   // Temporarily expose input value. Use with caution.
   public get enabledInput() {
     return this._enabled;
+  }
+
+  // endpoint_parameters_enabled - computed: false, optional: true, required: false
+  private _endpointParametersEnabled?: boolean | cdktf.IResolvable; 
+  public get endpointParametersEnabled() {
+    return this.getBooleanAttribute('endpoint_parameters_enabled');
+  }
+  public set endpointParametersEnabled(value: boolean | cdktf.IResolvable) {
+    this._endpointParametersEnabled = value;
+  }
+  public resetEndpointParametersEnabled() {
+    this._endpointParametersEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endpointParametersEnabledInput() {
+    return this._endpointParametersEnabled;
   }
 
   // enhanced_authentication_enabled - computed: false, optional: true, required: false
@@ -220,6 +264,22 @@ export class BotChannelDirectlineSiteOutputReference extends cdktf.ComplexObject
     return this._name;
   }
 
+  // storage_enabled - computed: false, optional: true, required: false
+  private _storageEnabled?: boolean | cdktf.IResolvable; 
+  public get storageEnabled() {
+    return this.getBooleanAttribute('storage_enabled');
+  }
+  public set storageEnabled(value: boolean | cdktf.IResolvable) {
+    this._storageEnabled = value;
+  }
+  public resetStorageEnabled() {
+    this._storageEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageEnabledInput() {
+    return this._storageEnabled;
+  }
+
   // trusted_origins - computed: false, optional: true, required: false
   private _trustedOrigins?: string[]; 
   public get trustedOrigins() {
@@ -234,6 +294,22 @@ export class BotChannelDirectlineSiteOutputReference extends cdktf.ComplexObject
   // Temporarily expose input value. Use with caution.
   public get trustedOriginsInput() {
     return this._trustedOrigins;
+  }
+
+  // user_upload_enabled - computed: false, optional: true, required: false
+  private _userUploadEnabled?: boolean | cdktf.IResolvable; 
+  public get userUploadEnabled() {
+    return this.getBooleanAttribute('user_upload_enabled');
+  }
+  public set userUploadEnabled(value: boolean | cdktf.IResolvable) {
+    this._userUploadEnabled = value;
+  }
+  public resetUserUploadEnabled() {
+    this._userUploadEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userUploadEnabledInput() {
+    return this._userUploadEnabled;
   }
 
   // v1_allowed - computed: false, optional: true, required: false
@@ -290,19 +366,19 @@ export class BotChannelDirectlineSiteList extends cdktf.ComplexList {
 }
 export interface BotChannelDirectlineTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_directline#create BotChannelDirectline#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_directline#create BotChannelDirectline#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_directline#delete BotChannelDirectline#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_directline#delete BotChannelDirectline#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_directline#read BotChannelDirectline#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_directline#read BotChannelDirectline#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_directline#update BotChannelDirectline#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_directline#update BotChannelDirectline#update}
   */
   readonly update?: string;
 }
@@ -446,7 +522,7 @@ export class BotChannelDirectlineTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_directline azurerm_bot_channel_directline}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_directline azurerm_bot_channel_directline}
 */
 export class BotChannelDirectline extends cdktf.TerraformResource {
 
@@ -460,7 +536,7 @@ export class BotChannelDirectline extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_directline azurerm_bot_channel_directline} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_directline azurerm_bot_channel_directline} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -471,7 +547,7 @@ export class BotChannelDirectline extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_bot_channel_directline',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.73.0',
+        providerVersion: '3.74.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

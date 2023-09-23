@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,100 +8,306 @@ import * as cdktf from 'cdktf';
 
 export interface DataFactoryDatasetParquetConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#additional_properties DataFactoryDatasetParquet#additional_properties}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#additional_properties DataFactoryDatasetParquet#additional_properties}
   */
   readonly additionalProperties?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#annotations DataFactoryDatasetParquet#annotations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#annotations DataFactoryDatasetParquet#annotations}
   */
   readonly annotations?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#compression_codec DataFactoryDatasetParquet#compression_codec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#compression_codec DataFactoryDatasetParquet#compression_codec}
   */
   readonly compressionCodec?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#compression_level DataFactoryDatasetParquet#compression_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#compression_level DataFactoryDatasetParquet#compression_level}
   */
   readonly compressionLevel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#data_factory_id DataFactoryDatasetParquet#data_factory_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#data_factory_id DataFactoryDatasetParquet#data_factory_id}
   */
   readonly dataFactoryId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#description DataFactoryDatasetParquet#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#description DataFactoryDatasetParquet#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#folder DataFactoryDatasetParquet#folder}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#folder DataFactoryDatasetParquet#folder}
   */
   readonly folder?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#id DataFactoryDatasetParquet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#id DataFactoryDatasetParquet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#linked_service_name DataFactoryDatasetParquet#linked_service_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#linked_service_name DataFactoryDatasetParquet#linked_service_name}
   */
   readonly linkedServiceName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#name DataFactoryDatasetParquet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#name DataFactoryDatasetParquet#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#parameters DataFactoryDatasetParquet#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#parameters DataFactoryDatasetParquet#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
+  * azure_blob_fs_location block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#azure_blob_fs_location DataFactoryDatasetParquet#azure_blob_fs_location}
+  */
+  readonly azureBlobFsLocation?: DataFactoryDatasetParquetAzureBlobFsLocation;
+  /**
   * azure_blob_storage_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#azure_blob_storage_location DataFactoryDatasetParquet#azure_blob_storage_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#azure_blob_storage_location DataFactoryDatasetParquet#azure_blob_storage_location}
   */
   readonly azureBlobStorageLocation?: DataFactoryDatasetParquetAzureBlobStorageLocation;
   /**
   * http_server_location block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#http_server_location DataFactoryDatasetParquet#http_server_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#http_server_location DataFactoryDatasetParquet#http_server_location}
   */
   readonly httpServerLocation?: DataFactoryDatasetParquetHttpServerLocation;
   /**
   * schema_column block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#schema_column DataFactoryDatasetParquet#schema_column}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#schema_column DataFactoryDatasetParquet#schema_column}
   */
   readonly schemaColumn?: DataFactoryDatasetParquetSchemaColumn[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#timeouts DataFactoryDatasetParquet#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#timeouts DataFactoryDatasetParquet#timeouts}
   */
   readonly timeouts?: DataFactoryDatasetParquetTimeouts;
 }
-export interface DataFactoryDatasetParquetAzureBlobStorageLocation {
+export interface DataFactoryDatasetParquetAzureBlobFsLocation {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#container DataFactoryDatasetParquet#container}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#dynamic_file_system_enabled DataFactoryDatasetParquet#dynamic_file_system_enabled}
   */
-  readonly container: string;
+  readonly dynamicFileSystemEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#dynamic_container_enabled DataFactoryDatasetParquet#dynamic_container_enabled}
-  */
-  readonly dynamicContainerEnabled?: boolean | cdktf.IResolvable;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#dynamic_filename_enabled DataFactoryDatasetParquet#dynamic_filename_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#dynamic_filename_enabled DataFactoryDatasetParquet#dynamic_filename_enabled}
   */
   readonly dynamicFilenameEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#dynamic_path_enabled DataFactoryDatasetParquet#dynamic_path_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#dynamic_path_enabled DataFactoryDatasetParquet#dynamic_path_enabled}
   */
   readonly dynamicPathEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#filename DataFactoryDatasetParquet#filename}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#file_system DataFactoryDatasetParquet#file_system}
+  */
+  readonly fileSystem?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#filename DataFactoryDatasetParquet#filename}
   */
   readonly filename?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#path DataFactoryDatasetParquet#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#path DataFactoryDatasetParquet#path}
+  */
+  readonly path?: string;
+}
+
+export function dataFactoryDatasetParquetAzureBlobFsLocationToTerraform(struct?: DataFactoryDatasetParquetAzureBlobFsLocationOutputReference | DataFactoryDatasetParquetAzureBlobFsLocation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    dynamic_file_system_enabled: cdktf.booleanToTerraform(struct!.dynamicFileSystemEnabled),
+    dynamic_filename_enabled: cdktf.booleanToTerraform(struct!.dynamicFilenameEnabled),
+    dynamic_path_enabled: cdktf.booleanToTerraform(struct!.dynamicPathEnabled),
+    file_system: cdktf.stringToTerraform(struct!.fileSystem),
+    filename: cdktf.stringToTerraform(struct!.filename),
+    path: cdktf.stringToTerraform(struct!.path),
+  }
+}
+
+export class DataFactoryDatasetParquetAzureBlobFsLocationOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): DataFactoryDatasetParquetAzureBlobFsLocation | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._dynamicFileSystemEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dynamicFileSystemEnabled = this._dynamicFileSystemEnabled;
+    }
+    if (this._dynamicFilenameEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dynamicFilenameEnabled = this._dynamicFilenameEnabled;
+    }
+    if (this._dynamicPathEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dynamicPathEnabled = this._dynamicPathEnabled;
+    }
+    if (this._fileSystem !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.fileSystem = this._fileSystem;
+    }
+    if (this._filename !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.filename = this._filename;
+    }
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataFactoryDatasetParquetAzureBlobFsLocation | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._dynamicFileSystemEnabled = undefined;
+      this._dynamicFilenameEnabled = undefined;
+      this._dynamicPathEnabled = undefined;
+      this._fileSystem = undefined;
+      this._filename = undefined;
+      this._path = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._dynamicFileSystemEnabled = value.dynamicFileSystemEnabled;
+      this._dynamicFilenameEnabled = value.dynamicFilenameEnabled;
+      this._dynamicPathEnabled = value.dynamicPathEnabled;
+      this._fileSystem = value.fileSystem;
+      this._filename = value.filename;
+      this._path = value.path;
+    }
+  }
+
+  // dynamic_file_system_enabled - computed: false, optional: true, required: false
+  private _dynamicFileSystemEnabled?: boolean | cdktf.IResolvable; 
+  public get dynamicFileSystemEnabled() {
+    return this.getBooleanAttribute('dynamic_file_system_enabled');
+  }
+  public set dynamicFileSystemEnabled(value: boolean | cdktf.IResolvable) {
+    this._dynamicFileSystemEnabled = value;
+  }
+  public resetDynamicFileSystemEnabled() {
+    this._dynamicFileSystemEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dynamicFileSystemEnabledInput() {
+    return this._dynamicFileSystemEnabled;
+  }
+
+  // dynamic_filename_enabled - computed: false, optional: true, required: false
+  private _dynamicFilenameEnabled?: boolean | cdktf.IResolvable; 
+  public get dynamicFilenameEnabled() {
+    return this.getBooleanAttribute('dynamic_filename_enabled');
+  }
+  public set dynamicFilenameEnabled(value: boolean | cdktf.IResolvable) {
+    this._dynamicFilenameEnabled = value;
+  }
+  public resetDynamicFilenameEnabled() {
+    this._dynamicFilenameEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dynamicFilenameEnabledInput() {
+    return this._dynamicFilenameEnabled;
+  }
+
+  // dynamic_path_enabled - computed: false, optional: true, required: false
+  private _dynamicPathEnabled?: boolean | cdktf.IResolvable; 
+  public get dynamicPathEnabled() {
+    return this.getBooleanAttribute('dynamic_path_enabled');
+  }
+  public set dynamicPathEnabled(value: boolean | cdktf.IResolvable) {
+    this._dynamicPathEnabled = value;
+  }
+  public resetDynamicPathEnabled() {
+    this._dynamicPathEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dynamicPathEnabledInput() {
+    return this._dynamicPathEnabled;
+  }
+
+  // file_system - computed: false, optional: true, required: false
+  private _fileSystem?: string; 
+  public get fileSystem() {
+    return this.getStringAttribute('file_system');
+  }
+  public set fileSystem(value: string) {
+    this._fileSystem = value;
+  }
+  public resetFileSystem() {
+    this._fileSystem = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get fileSystemInput() {
+    return this._fileSystem;
+  }
+
+  // filename - computed: false, optional: true, required: false
+  private _filename?: string; 
+  public get filename() {
+    return this.getStringAttribute('filename');
+  }
+  public set filename(value: string) {
+    this._filename = value;
+  }
+  public resetFilename() {
+    this._filename = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get filenameInput() {
+    return this._filename;
+  }
+
+  // path - computed: false, optional: true, required: false
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  public resetPath() {
+    this._path = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+}
+export interface DataFactoryDatasetParquetAzureBlobStorageLocation {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#container DataFactoryDatasetParquet#container}
+  */
+  readonly container: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#dynamic_container_enabled DataFactoryDatasetParquet#dynamic_container_enabled}
+  */
+  readonly dynamicContainerEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#dynamic_filename_enabled DataFactoryDatasetParquet#dynamic_filename_enabled}
+  */
+  readonly dynamicFilenameEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#dynamic_path_enabled DataFactoryDatasetParquet#dynamic_path_enabled}
+  */
+  readonly dynamicPathEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#filename DataFactoryDatasetParquet#filename}
+  */
+  readonly filename?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#path DataFactoryDatasetParquet#path}
   */
   readonly path?: string;
 }
@@ -283,23 +484,23 @@ export class DataFactoryDatasetParquetAzureBlobStorageLocationOutputReference ex
 }
 export interface DataFactoryDatasetParquetHttpServerLocation {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#dynamic_filename_enabled DataFactoryDatasetParquet#dynamic_filename_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#dynamic_filename_enabled DataFactoryDatasetParquet#dynamic_filename_enabled}
   */
   readonly dynamicFilenameEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#dynamic_path_enabled DataFactoryDatasetParquet#dynamic_path_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#dynamic_path_enabled DataFactoryDatasetParquet#dynamic_path_enabled}
   */
   readonly dynamicPathEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#filename DataFactoryDatasetParquet#filename}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#filename DataFactoryDatasetParquet#filename}
   */
   readonly filename: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#path DataFactoryDatasetParquet#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#path DataFactoryDatasetParquet#path}
   */
   readonly path?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#relative_url DataFactoryDatasetParquet#relative_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#relative_url DataFactoryDatasetParquet#relative_url}
   */
   readonly relativeUrl: string;
 }
@@ -450,15 +651,15 @@ export class DataFactoryDatasetParquetHttpServerLocationOutputReference extends 
 }
 export interface DataFactoryDatasetParquetSchemaColumn {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#description DataFactoryDatasetParquet#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#description DataFactoryDatasetParquet#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#name DataFactoryDatasetParquet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#name DataFactoryDatasetParquet#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#type DataFactoryDatasetParquet#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#type DataFactoryDatasetParquet#type}
   */
   readonly type?: string;
 }
@@ -598,19 +799,19 @@ export class DataFactoryDatasetParquetSchemaColumnList extends cdktf.ComplexList
 }
 export interface DataFactoryDatasetParquetTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#create DataFactoryDatasetParquet#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#create DataFactoryDatasetParquet#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#delete DataFactoryDatasetParquet#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#delete DataFactoryDatasetParquet#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#read DataFactoryDatasetParquet#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#read DataFactoryDatasetParquet#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet#update DataFactoryDatasetParquet#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet#update DataFactoryDatasetParquet#update}
   */
   readonly update?: string;
 }
@@ -754,7 +955,7 @@ export class DataFactoryDatasetParquetTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet azurerm_data_factory_dataset_parquet}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet azurerm_data_factory_dataset_parquet}
 */
 export class DataFactoryDatasetParquet extends cdktf.TerraformResource {
 
@@ -768,7 +969,7 @@ export class DataFactoryDatasetParquet extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/data_factory_dataset_parquet azurerm_data_factory_dataset_parquet} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/data_factory_dataset_parquet azurerm_data_factory_dataset_parquet} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -779,7 +980,7 @@ export class DataFactoryDatasetParquet extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_factory_dataset_parquet',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.73.0',
+        providerVersion: '3.74.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -801,6 +1002,7 @@ export class DataFactoryDatasetParquet extends cdktf.TerraformResource {
     this._linkedServiceName = config.linkedServiceName;
     this._name = config.name;
     this._parameters = config.parameters;
+    this._azureBlobFsLocation.internalValue = config.azureBlobFsLocation;
     this._azureBlobStorageLocation.internalValue = config.azureBlobStorageLocation;
     this._httpServerLocation.internalValue = config.httpServerLocation;
     this._schemaColumn.internalValue = config.schemaColumn;
@@ -978,6 +1180,22 @@ export class DataFactoryDatasetParquet extends cdktf.TerraformResource {
     return this._parameters;
   }
 
+  // azure_blob_fs_location - computed: false, optional: true, required: false
+  private _azureBlobFsLocation = new DataFactoryDatasetParquetAzureBlobFsLocationOutputReference(this, "azure_blob_fs_location");
+  public get azureBlobFsLocation() {
+    return this._azureBlobFsLocation;
+  }
+  public putAzureBlobFsLocation(value: DataFactoryDatasetParquetAzureBlobFsLocation) {
+    this._azureBlobFsLocation.internalValue = value;
+  }
+  public resetAzureBlobFsLocation() {
+    this._azureBlobFsLocation.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get azureBlobFsLocationInput() {
+    return this._azureBlobFsLocation.internalValue;
+  }
+
   // azure_blob_storage_location - computed: false, optional: true, required: false
   private _azureBlobStorageLocation = new DataFactoryDatasetParquetAzureBlobStorageLocationOutputReference(this, "azure_blob_storage_location");
   public get azureBlobStorageLocation() {
@@ -1059,6 +1277,7 @@ export class DataFactoryDatasetParquet extends cdktf.TerraformResource {
       linked_service_name: cdktf.stringToTerraform(this._linkedServiceName),
       name: cdktf.stringToTerraform(this._name),
       parameters: cdktf.hashMapper(cdktf.stringToTerraform)(this._parameters),
+      azure_blob_fs_location: dataFactoryDatasetParquetAzureBlobFsLocationToTerraform(this._azureBlobFsLocation.internalValue),
       azure_blob_storage_location: dataFactoryDatasetParquetAzureBlobStorageLocationToTerraform(this._azureBlobStorageLocation.internalValue),
       http_server_location: dataFactoryDatasetParquetHttpServerLocationToTerraform(this._httpServerLocation.internalValue),
       schema_column: cdktf.listMapper(dataFactoryDatasetParquetSchemaColumnToTerraform, true)(this._schemaColumn.internalValue),

@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_web_chat
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_web_chat
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +8,231 @@ import * as cdktf from 'cdktf';
 
 export interface BotChannelWebChatConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_web_chat#bot_name BotChannelWebChat#bot_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_web_chat#bot_name BotChannelWebChat#bot_name}
   */
   readonly botName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_web_chat#id BotChannelWebChat#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_web_chat#id BotChannelWebChat#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_web_chat#location BotChannelWebChat#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_web_chat#location BotChannelWebChat#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_web_chat#resource_group_name BotChannelWebChat#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_web_chat#resource_group_name BotChannelWebChat#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_web_chat#site_names BotChannelWebChat#site_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_web_chat#site_names BotChannelWebChat#site_names}
   */
-  readonly siteNames: string[];
+  readonly siteNames?: string[];
+  /**
+  * site block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_web_chat#site BotChannelWebChat#site}
+  */
+  readonly site?: BotChannelWebChatSite[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_web_chat#timeouts BotChannelWebChat#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_web_chat#timeouts BotChannelWebChat#timeouts}
   */
   readonly timeouts?: BotChannelWebChatTimeouts;
 }
+export interface BotChannelWebChatSite {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_web_chat#endpoint_parameters_enabled BotChannelWebChat#endpoint_parameters_enabled}
+  */
+  readonly endpointParametersEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_web_chat#name BotChannelWebChat#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_web_chat#storage_enabled BotChannelWebChat#storage_enabled}
+  */
+  readonly storageEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_web_chat#user_upload_enabled BotChannelWebChat#user_upload_enabled}
+  */
+  readonly userUploadEnabled?: boolean | cdktf.IResolvable;
+}
+
+export function botChannelWebChatSiteToTerraform(struct?: BotChannelWebChatSite | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    endpoint_parameters_enabled: cdktf.booleanToTerraform(struct!.endpointParametersEnabled),
+    name: cdktf.stringToTerraform(struct!.name),
+    storage_enabled: cdktf.booleanToTerraform(struct!.storageEnabled),
+    user_upload_enabled: cdktf.booleanToTerraform(struct!.userUploadEnabled),
+  }
+}
+
+export class BotChannelWebChatSiteOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): BotChannelWebChatSite | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._endpointParametersEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.endpointParametersEnabled = this._endpointParametersEnabled;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._storageEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.storageEnabled = this._storageEnabled;
+    }
+    if (this._userUploadEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userUploadEnabled = this._userUploadEnabled;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: BotChannelWebChatSite | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._endpointParametersEnabled = undefined;
+      this._name = undefined;
+      this._storageEnabled = undefined;
+      this._userUploadEnabled = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._endpointParametersEnabled = value.endpointParametersEnabled;
+      this._name = value.name;
+      this._storageEnabled = value.storageEnabled;
+      this._userUploadEnabled = value.userUploadEnabled;
+    }
+  }
+
+  // endpoint_parameters_enabled - computed: false, optional: true, required: false
+  private _endpointParametersEnabled?: boolean | cdktf.IResolvable; 
+  public get endpointParametersEnabled() {
+    return this.getBooleanAttribute('endpoint_parameters_enabled');
+  }
+  public set endpointParametersEnabled(value: boolean | cdktf.IResolvable) {
+    this._endpointParametersEnabled = value;
+  }
+  public resetEndpointParametersEnabled() {
+    this._endpointParametersEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get endpointParametersEnabledInput() {
+    return this._endpointParametersEnabled;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // storage_enabled - computed: false, optional: true, required: false
+  private _storageEnabled?: boolean | cdktf.IResolvable; 
+  public get storageEnabled() {
+    return this.getBooleanAttribute('storage_enabled');
+  }
+  public set storageEnabled(value: boolean | cdktf.IResolvable) {
+    this._storageEnabled = value;
+  }
+  public resetStorageEnabled() {
+    this._storageEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageEnabledInput() {
+    return this._storageEnabled;
+  }
+
+  // user_upload_enabled - computed: false, optional: true, required: false
+  private _userUploadEnabled?: boolean | cdktf.IResolvable; 
+  public get userUploadEnabled() {
+    return this.getBooleanAttribute('user_upload_enabled');
+  }
+  public set userUploadEnabled(value: boolean | cdktf.IResolvable) {
+    this._userUploadEnabled = value;
+  }
+  public resetUserUploadEnabled() {
+    this._userUploadEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userUploadEnabledInput() {
+    return this._userUploadEnabled;
+  }
+}
+
+export class BotChannelWebChatSiteList extends cdktf.ComplexList {
+  public internalValue? : BotChannelWebChatSite[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): BotChannelWebChatSiteOutputReference {
+    return new BotChannelWebChatSiteOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface BotChannelWebChatTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_web_chat#create BotChannelWebChat#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_web_chat#create BotChannelWebChat#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_web_chat#delete BotChannelWebChat#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_web_chat#delete BotChannelWebChat#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_web_chat#read BotChannelWebChat#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_web_chat#read BotChannelWebChat#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_web_chat#update BotChannelWebChat#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_web_chat#update BotChannelWebChat#update}
   */
   readonly update?: string;
 }
@@ -200,7 +376,7 @@ export class BotChannelWebChatTimeoutsOutputReference extends cdktf.ComplexObjec
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_web_chat azurerm_bot_channel_web_chat}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_web_chat azurerm_bot_channel_web_chat}
 */
 export class BotChannelWebChat extends cdktf.TerraformResource {
 
@@ -214,7 +390,7 @@ export class BotChannelWebChat extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.73.0/docs/resources/bot_channel_web_chat azurerm_bot_channel_web_chat} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/bot_channel_web_chat azurerm_bot_channel_web_chat} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -225,7 +401,7 @@ export class BotChannelWebChat extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_bot_channel_web_chat',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.73.0',
+        providerVersion: '3.74.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -241,6 +417,7 @@ export class BotChannelWebChat extends cdktf.TerraformResource {
     this._location = config.location;
     this._resourceGroupName = config.resourceGroupName;
     this._siteNames = config.siteNames;
+    this._site.internalValue = config.site;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -303,7 +480,7 @@ export class BotChannelWebChat extends cdktf.TerraformResource {
     return this._resourceGroupName;
   }
 
-  // site_names - computed: false, optional: false, required: true
+  // site_names - computed: true, optional: true, required: false
   private _siteNames?: string[]; 
   public get siteNames() {
     return cdktf.Fn.tolist(this.getListAttribute('site_names'));
@@ -311,9 +488,28 @@ export class BotChannelWebChat extends cdktf.TerraformResource {
   public set siteNames(value: string[]) {
     this._siteNames = value;
   }
+  public resetSiteNames() {
+    this._siteNames = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get siteNamesInput() {
     return this._siteNames;
+  }
+
+  // site - computed: false, optional: true, required: false
+  private _site = new BotChannelWebChatSiteList(this, "site", true);
+  public get site() {
+    return this._site;
+  }
+  public putSite(value: BotChannelWebChatSite[] | cdktf.IResolvable) {
+    this._site.internalValue = value;
+  }
+  public resetSite() {
+    this._site.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get siteInput() {
+    return this._site.internalValue;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -343,6 +539,7 @@ export class BotChannelWebChat extends cdktf.TerraformResource {
       location: cdktf.stringToTerraform(this._location),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       site_names: cdktf.listMapper(cdktf.stringToTerraform, false)(this._siteNames),
+      site: cdktf.listMapper(botChannelWebChatSiteToTerraform, true)(this._site.internalValue),
       timeouts: botChannelWebChatTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
