@@ -89,6 +89,7 @@ export * as applicationInsightsStandardWebTest from './application-insights-stan
 export * as applicationInsightsWebTest from './application-insights-web-test';
 export * as applicationInsightsWorkbook from './application-insights-workbook';
 export * as applicationInsightsWorkbookTemplate from './application-insights-workbook-template';
+export * as applicationLoadBalancer from './application-load-balancer';
 export * as applicationSecurityGroup from './application-security-group';
 export * as arcKubernetesCluster from './arc-kubernetes-cluster';
 export * as arcKubernetesClusterExtension from './arc-kubernetes-cluster-extension';
@@ -750,6 +751,7 @@ export * as resourceGroupPolicyAssignment from './resource-group-policy-assignme
 export * as resourceGroupPolicyExemption from './resource-group-policy-exemption';
 export * as resourceGroupPolicyRemediation from './resource-group-policy-remediation';
 export * as resourceGroupTemplateDeployment from './resource-group-template-deployment';
+export * as resourceManagementPrivateLink from './resource-management-private-link';
 export * as resourcePolicyAssignment from './resource-policy-assignment';
 export * as resourcePolicyExemption from './resource-policy-exemption';
 export * as resourcePolicyRemediation from './resource-policy-remediation';

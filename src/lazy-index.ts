@@ -89,6 +89,7 @@ Object.defineProperty(exports, 'applicationInsightsStandardWebTest', { get: func
 Object.defineProperty(exports, 'applicationInsightsWebTest', { get: function () { return require('./application-insights-web-test'); } });
 Object.defineProperty(exports, 'applicationInsightsWorkbook', { get: function () { return require('./application-insights-workbook'); } });
 Object.defineProperty(exports, 'applicationInsightsWorkbookTemplate', { get: function () { return require('./application-insights-workbook-template'); } });
+Object.defineProperty(exports, 'applicationLoadBalancer', { get: function () { return require('./application-load-balancer'); } });
 Object.defineProperty(exports, 'applicationSecurityGroup', { get: function () { return require('./application-security-group'); } });
 Object.defineProperty(exports, 'arcKubernetesCluster', { get: function () { return require('./arc-kubernetes-cluster'); } });
 Object.defineProperty(exports, 'arcKubernetesClusterExtension', { get: function () { return require('./arc-kubernetes-cluster-extension'); } });
@@ -750,6 +751,7 @@ Object.defineProperty(exports, 'resourceGroupPolicyAssignment', { get: function 
 Object.defineProperty(exports, 'resourceGroupPolicyExemption', { get: function () { return require('./resource-group-policy-exemption'); } });
 Object.defineProperty(exports, 'resourceGroupPolicyRemediation', { get: function () { return require('./resource-group-policy-remediation'); } });
 Object.defineProperty(exports, 'resourceGroupTemplateDeployment', { get: function () { return require('./resource-group-template-deployment'); } });
+Object.defineProperty(exports, 'resourceManagementPrivateLink', { get: function () { return require('./resource-management-private-link'); } });
 Object.defineProperty(exports, 'resourcePolicyAssignment', { get: function () { return require('./resource-policy-assignment'); } });
 Object.defineProperty(exports, 'resourcePolicyExemption', { get: function () { return require('./resource-policy-exemption'); } });
 Object.defineProperty(exports, 'resourcePolicyRemediation', { get: function () { return require('./resource-policy-remediation'); } });
