@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/spring_cloud_builder
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/spring_cloud_builder
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +8,46 @@ import * as cdktf from 'cdktf';
 
 export interface SpringCloudBuilderConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/spring_cloud_builder#id SpringCloudBuilder#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/spring_cloud_builder#id SpringCloudBuilder#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/spring_cloud_builder#name SpringCloudBuilder#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/spring_cloud_builder#name SpringCloudBuilder#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/spring_cloud_builder#spring_cloud_service_id SpringCloudBuilder#spring_cloud_service_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/spring_cloud_builder#spring_cloud_service_id SpringCloudBuilder#spring_cloud_service_id}
   */
   readonly springCloudServiceId: string;
   /**
   * build_pack_group block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/spring_cloud_builder#build_pack_group SpringCloudBuilder#build_pack_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/spring_cloud_builder#build_pack_group SpringCloudBuilder#build_pack_group}
   */
   readonly buildPackGroup: SpringCloudBuilderBuildPackGroup[] | cdktf.IResolvable;
   /**
   * stack block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/spring_cloud_builder#stack SpringCloudBuilder#stack}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/spring_cloud_builder#stack SpringCloudBuilder#stack}
   */
   readonly stack: SpringCloudBuilderStack;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/spring_cloud_builder#timeouts SpringCloudBuilder#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/spring_cloud_builder#timeouts SpringCloudBuilder#timeouts}
   */
   readonly timeouts?: SpringCloudBuilderTimeouts;
 }
 export interface SpringCloudBuilderBuildPackGroup {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/spring_cloud_builder#build_pack_ids SpringCloudBuilder#build_pack_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/spring_cloud_builder#build_pack_ids SpringCloudBuilder#build_pack_ids}
   */
   readonly buildPackIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/spring_cloud_builder#name SpringCloudBuilder#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/spring_cloud_builder#name SpringCloudBuilder#name}
   */
   readonly name: string;
 }
@@ -169,14 +164,14 @@ export class SpringCloudBuilderBuildPackGroupList extends cdktf.ComplexList {
 }
 export interface SpringCloudBuilderStack {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/spring_cloud_builder#id SpringCloudBuilder#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/spring_cloud_builder#id SpringCloudBuilder#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/spring_cloud_builder#version SpringCloudBuilder#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/spring_cloud_builder#version SpringCloudBuilder#version}
   */
   readonly version: string;
 }
@@ -258,19 +253,19 @@ export class SpringCloudBuilderStackOutputReference extends cdktf.ComplexObject 
 }
 export interface SpringCloudBuilderTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/spring_cloud_builder#create SpringCloudBuilder#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/spring_cloud_builder#create SpringCloudBuilder#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/spring_cloud_builder#delete SpringCloudBuilder#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/spring_cloud_builder#delete SpringCloudBuilder#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/spring_cloud_builder#read SpringCloudBuilder#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/spring_cloud_builder#read SpringCloudBuilder#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/spring_cloud_builder#update SpringCloudBuilder#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/spring_cloud_builder#update SpringCloudBuilder#update}
   */
   readonly update?: string;
 }
@@ -414,7 +409,7 @@ export class SpringCloudBuilderTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/spring_cloud_builder azurerm_spring_cloud_builder}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/spring_cloud_builder azurerm_spring_cloud_builder}
 */
 export class SpringCloudBuilder extends cdktf.TerraformResource {
 
@@ -428,7 +423,7 @@ export class SpringCloudBuilder extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/spring_cloud_builder azurerm_spring_cloud_builder} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/spring_cloud_builder azurerm_spring_cloud_builder} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -439,7 +434,7 @@ export class SpringCloudBuilder extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_spring_cloud_builder',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.74.0',
+        providerVersion: '3.75.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

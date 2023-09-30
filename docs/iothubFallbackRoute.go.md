@@ -1,6 +1,6 @@
 # `azurerm_iothub_fallback_route`
 
-Refer to the Terraform Registory for docs: [`azurerm_iothub_fallback_route`](https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/iothub_fallback_route).
+Refer to the Terraform Registory for docs: [`azurerm_iothub_fallback_route`](https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/iothub_fallback_route).
 
 # `iothubFallbackRoute` Submodule <a name="`iothubFallbackRoute` Submodule" id="@cdktf/provider-azurerm.iothubFallbackRoute"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_iothub_fallback_route`](htt
 
 ### IothubFallbackRouteA <a name="IothubFallbackRouteA" id="@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteA"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/iothub_fallback_route azurerm_iothub_fallback_route}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/iothub_fallback_route azurerm_iothub_fallback_route}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iothubfallbackroute"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubfallbackroute"
 
 iothubfallbackroute.NewIothubFallbackRouteA(scope Construct, id *string, config IothubFallbackRouteAConfig) IothubFallbackRouteA
 ```
@@ -311,7 +311,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteA.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iothubfallbackroute"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubfallbackroute"
 
 iothubfallbackroute.IothubFallbackRouteA_IsConstruct(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteA.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iothubfallbackroute"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubfallbackroute"
 
 iothubfallbackroute.IothubFallbackRouteA_IsTerraformElement(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ iothubfallbackroute.IothubFallbackRouteA_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteA.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iothubfallbackroute"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubfallbackroute"
 
 iothubfallbackroute.IothubFallbackRouteA_IsTerraformResource(x interface{}) *bool
 ```
@@ -732,7 +732,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteAConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iothubfallbackroute"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubfallbackroute"
 
 &iothubfallbackroute.IothubFallbackRouteAConfig {
 	Connection: interface{},
@@ -749,7 +749,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iothubfallbackrou
 	Condition: *string,
 	Id: *string,
 	Source: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.iothubFallbackRoute.IothubFallbackRouteTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.iothubFallbackRoute.IothubFallbackRouteTimeouts,
 }
 ```
 
@@ -764,13 +764,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iothubfallbackrou
 | <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteAConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteAConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteAConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteAConfig.property.enabled">Enabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/iothub_fallback_route#enabled IothubFallbackRouteA#enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteAConfig.property.endpointNames">EndpointNames</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/iothub_fallback_route#endpoint_names IothubFallbackRouteA#endpoint_names}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteAConfig.property.iothubName">IothubName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/iothub_fallback_route#iothub_name IothubFallbackRouteA#iothub_name}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteAConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/iothub_fallback_route#resource_group_name IothubFallbackRouteA#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteAConfig.property.condition">Condition</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/iothub_fallback_route#condition IothubFallbackRouteA#condition}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteAConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/iothub_fallback_route#id IothubFallbackRouteA#id}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteAConfig.property.source">Source</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/iothub_fallback_route#source IothubFallbackRouteA#source}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteAConfig.property.enabled">Enabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/iothub_fallback_route#enabled IothubFallbackRouteA#enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteAConfig.property.endpointNames">EndpointNames</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/iothub_fallback_route#endpoint_names IothubFallbackRouteA#endpoint_names}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteAConfig.property.iothubName">IothubName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/iothub_fallback_route#iothub_name IothubFallbackRouteA#iothub_name}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteAConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/iothub_fallback_route#resource_group_name IothubFallbackRouteA#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteAConfig.property.condition">Condition</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/iothub_fallback_route#condition IothubFallbackRouteA#condition}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteAConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/iothub_fallback_route#id IothubFallbackRouteA#id}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteAConfig.property.source">Source</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/iothub_fallback_route#source IothubFallbackRouteA#source}. |
 | <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteAConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteTimeouts">IothubFallbackRouteTimeouts</a></code> | timeouts block. |
 
 ---
@@ -853,7 +853,7 @@ Enabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/iothub_fallback_route#enabled IothubFallbackRouteA#enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/iothub_fallback_route#enabled IothubFallbackRouteA#enabled}.
 
 ---
 
@@ -865,7 +865,7 @@ EndpointNames *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/iothub_fallback_route#endpoint_names IothubFallbackRouteA#endpoint_names}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/iothub_fallback_route#endpoint_names IothubFallbackRouteA#endpoint_names}.
 
 ---
 
@@ -877,7 +877,7 @@ IothubName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/iothub_fallback_route#iothub_name IothubFallbackRouteA#iothub_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/iothub_fallback_route#iothub_name IothubFallbackRouteA#iothub_name}.
 
 ---
 
@@ -889,7 +889,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/iothub_fallback_route#resource_group_name IothubFallbackRouteA#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/iothub_fallback_route#resource_group_name IothubFallbackRouteA#resource_group_name}.
 
 ---
 
@@ -901,7 +901,7 @@ Condition *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/iothub_fallback_route#condition IothubFallbackRouteA#condition}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/iothub_fallback_route#condition IothubFallbackRouteA#condition}.
 
 ---
 
@@ -913,7 +913,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/iothub_fallback_route#id IothubFallbackRouteA#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/iothub_fallback_route#id IothubFallbackRouteA#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -928,7 +928,7 @@ Source *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/iothub_fallback_route#source IothubFallbackRouteA#source}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/iothub_fallback_route#source IothubFallbackRouteA#source}.
 
 ---
 
@@ -942,7 +942,7 @@ Timeouts IothubFallbackRouteTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/iothub_fallback_route#timeouts IothubFallbackRouteA#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/iothub_fallback_route#timeouts IothubFallbackRouteA#timeouts}
 
 ---
 
@@ -951,7 +951,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iothubfallbackroute"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubfallbackroute"
 
 &iothubfallbackroute.IothubFallbackRouteTimeouts {
 	Create: *string,
@@ -965,10 +965,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iothubfallbackrou
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/iothub_fallback_route#create IothubFallbackRouteA#create}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/iothub_fallback_route#delete IothubFallbackRouteA#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/iothub_fallback_route#read IothubFallbackRouteA#read}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/iothub_fallback_route#update IothubFallbackRouteA#update}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/iothub_fallback_route#create IothubFallbackRouteA#create}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/iothub_fallback_route#delete IothubFallbackRouteA#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/iothub_fallback_route#read IothubFallbackRouteA#read}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/iothub_fallback_route#update IothubFallbackRouteA#update}. |
 
 ---
 
@@ -980,7 +980,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/iothub_fallback_route#create IothubFallbackRouteA#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/iothub_fallback_route#create IothubFallbackRouteA#create}.
 
 ---
 
@@ -992,7 +992,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/iothub_fallback_route#delete IothubFallbackRouteA#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/iothub_fallback_route#delete IothubFallbackRouteA#delete}.
 
 ---
 
@@ -1004,7 +1004,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/iothub_fallback_route#read IothubFallbackRouteA#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/iothub_fallback_route#read IothubFallbackRouteA#read}.
 
 ---
 
@@ -1016,7 +1016,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/iothub_fallback_route#update IothubFallbackRouteA#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/iothub_fallback_route#update IothubFallbackRouteA#update}.
 
 ---
 
@@ -1027,7 +1027,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothubFallbackRoute.IothubFallbackRouteTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iothubfallbackroute"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubfallbackroute"
 
 iothubfallbackroute.NewIothubFallbackRouteTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IothubFallbackRouteTimeoutsOutputReference
 ```

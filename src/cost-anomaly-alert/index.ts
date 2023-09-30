@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/cost_anomaly_alert
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/cost_anomaly_alert
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,54 +8,54 @@ import * as cdktf from 'cdktf';
 
 export interface CostAnomalyAlertConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/cost_anomaly_alert#display_name CostAnomalyAlert#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/cost_anomaly_alert#display_name CostAnomalyAlert#display_name}
   */
   readonly displayName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/cost_anomaly_alert#email_addresses CostAnomalyAlert#email_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/cost_anomaly_alert#email_addresses CostAnomalyAlert#email_addresses}
   */
   readonly emailAddresses: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/cost_anomaly_alert#email_subject CostAnomalyAlert#email_subject}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/cost_anomaly_alert#email_subject CostAnomalyAlert#email_subject}
   */
   readonly emailSubject: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/cost_anomaly_alert#id CostAnomalyAlert#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/cost_anomaly_alert#id CostAnomalyAlert#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/cost_anomaly_alert#message CostAnomalyAlert#message}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/cost_anomaly_alert#message CostAnomalyAlert#message}
   */
   readonly message?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/cost_anomaly_alert#name CostAnomalyAlert#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/cost_anomaly_alert#name CostAnomalyAlert#name}
   */
   readonly name: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/cost_anomaly_alert#timeouts CostAnomalyAlert#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/cost_anomaly_alert#timeouts CostAnomalyAlert#timeouts}
   */
   readonly timeouts?: CostAnomalyAlertTimeouts;
 }
 export interface CostAnomalyAlertTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/cost_anomaly_alert#create CostAnomalyAlert#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/cost_anomaly_alert#create CostAnomalyAlert#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/cost_anomaly_alert#delete CostAnomalyAlert#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/cost_anomaly_alert#delete CostAnomalyAlert#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/cost_anomaly_alert#read CostAnomalyAlert#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/cost_anomaly_alert#read CostAnomalyAlert#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/cost_anomaly_alert#update CostAnomalyAlert#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/cost_anomaly_alert#update CostAnomalyAlert#update}
   */
   readonly update?: string;
 }
@@ -204,7 +199,7 @@ export class CostAnomalyAlertTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/cost_anomaly_alert azurerm_cost_anomaly_alert}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/cost_anomaly_alert azurerm_cost_anomaly_alert}
 */
 export class CostAnomalyAlert extends cdktf.TerraformResource {
 
@@ -218,7 +213,7 @@ export class CostAnomalyAlert extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/cost_anomaly_alert azurerm_cost_anomaly_alert} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/cost_anomaly_alert azurerm_cost_anomaly_alert} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -229,7 +224,7 @@ export class CostAnomalyAlert extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cost_anomaly_alert',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.74.0',
+        providerVersion: '3.75.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

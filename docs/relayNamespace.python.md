@@ -1,6 +1,6 @@
 # `azurerm_relay_namespace`
 
-Refer to the Terraform Registory for docs: [`azurerm_relay_namespace`](https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace).
+Refer to the Terraform Registory for docs: [`azurerm_relay_namespace`](https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace).
 
 # `relayNamespace` Submodule <a name="`relayNamespace` Submodule" id="@cdktf/provider-azurerm.relayNamespace"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_relay_namespace`](https://r
 
 ### RelayNamespace <a name="RelayNamespace" id="@cdktf/provider-azurerm.relayNamespace.RelayNamespace"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace azurerm_relay_namespace}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace azurerm_relay_namespace}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.relayNamespace.RelayNamespace.Initializer"></a>
 
@@ -46,12 +46,12 @@ relayNamespace.RelayNamespace(
 | <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespace.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespace.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespace.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespace.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#location RelayNamespace#location}. |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespace.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#name RelayNamespace#name}. |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespace.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#resource_group_name RelayNamespace#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespace.Initializer.parameter.skuName">sku_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#sku_name RelayNamespace#sku_name}. |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespace.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#id RelayNamespace#id}. |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespace.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#tags RelayNamespace#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespace.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#location RelayNamespace#location}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespace.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#name RelayNamespace#name}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespace.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#resource_group_name RelayNamespace#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespace.Initializer.parameter.skuName">sku_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#sku_name RelayNamespace#sku_name}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespace.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#id RelayNamespace#id}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespace.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#tags RelayNamespace#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespace.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespaceTimeouts">RelayNamespaceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -120,7 +120,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#location RelayNamespace#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#location RelayNamespace#location}.
 
 ---
 
@@ -128,7 +128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#name RelayNamespace#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#name RelayNamespace#name}.
 
 ---
 
@@ -136,7 +136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#resource_group_name RelayNamespace#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#resource_group_name RelayNamespace#resource_group_name}.
 
 ---
 
@@ -144,7 +144,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#sku_name RelayNamespace#sku_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#sku_name RelayNamespace#sku_name}.
 
 ---
 
@@ -152,7 +152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#id RelayNamespace#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#id RelayNamespace#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -163,7 +163,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#tags RelayNamespace#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#tags RelayNamespace#tags}.
 
 ---
 
@@ -173,7 +173,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#timeouts RelayNamespace#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#timeouts RelayNamespace#timeouts}
 
 ---
 
@@ -428,7 +428,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#create RelayNamespace#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#create RelayNamespace#create}.
 
 ---
 
@@ -436,7 +436,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#delete RelayNamespace#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#delete RelayNamespace#delete}.
 
 ---
 
@@ -444,7 +444,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#read RelayNamespace#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#read RelayNamespace#read}.
 
 ---
 
@@ -452,7 +452,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#update RelayNamespace#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#update RelayNamespace#update}.
 
 ---
 
@@ -978,12 +978,12 @@ relayNamespace.RelayNamespaceConfig(
 | <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespaceConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespaceConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespaceConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespaceConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#location RelayNamespace#location}. |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespaceConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#name RelayNamespace#name}. |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespaceConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#resource_group_name RelayNamespace#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespaceConfig.property.skuName">sku_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#sku_name RelayNamespace#sku_name}. |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespaceConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#id RelayNamespace#id}. |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespaceConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#tags RelayNamespace#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespaceConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#location RelayNamespace#location}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespaceConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#name RelayNamespace#name}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespaceConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#resource_group_name RelayNamespace#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespaceConfig.property.skuName">sku_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#sku_name RelayNamespace#sku_name}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespaceConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#id RelayNamespace#id}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespaceConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#tags RelayNamespace#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespaceConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespaceTimeouts">RelayNamespaceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1066,7 +1066,7 @@ location: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#location RelayNamespace#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#location RelayNamespace#location}.
 
 ---
 
@@ -1078,7 +1078,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#name RelayNamespace#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#name RelayNamespace#name}.
 
 ---
 
@@ -1090,7 +1090,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#resource_group_name RelayNamespace#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#resource_group_name RelayNamespace#resource_group_name}.
 
 ---
 
@@ -1102,7 +1102,7 @@ sku_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#sku_name RelayNamespace#sku_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#sku_name RelayNamespace#sku_name}.
 
 ---
 
@@ -1114,7 +1114,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#id RelayNamespace#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#id RelayNamespace#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1129,7 +1129,7 @@ tags: typing.Mapping[str]
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#tags RelayNamespace#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#tags RelayNamespace#tags}.
 
 ---
 
@@ -1143,7 +1143,7 @@ timeouts: RelayNamespaceTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#timeouts RelayNamespace#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#timeouts RelayNamespace#timeouts}
 
 ---
 
@@ -1166,10 +1166,10 @@ relayNamespace.RelayNamespaceTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespaceTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#create RelayNamespace#create}. |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespaceTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#delete RelayNamespace#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespaceTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#read RelayNamespace#read}. |
-| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespaceTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#update RelayNamespace#update}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespaceTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#create RelayNamespace#create}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespaceTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#delete RelayNamespace#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespaceTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#read RelayNamespace#read}. |
+| <code><a href="#@cdktf/provider-azurerm.relayNamespace.RelayNamespaceTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#update RelayNamespace#update}. |
 
 ---
 
@@ -1181,7 +1181,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#create RelayNamespace#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#create RelayNamespace#create}.
 
 ---
 
@@ -1193,7 +1193,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#delete RelayNamespace#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#delete RelayNamespace#delete}.
 
 ---
 
@@ -1205,7 +1205,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#read RelayNamespace#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#read RelayNamespace#read}.
 
 ---
 
@@ -1217,7 +1217,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/relay_namespace#update RelayNamespace#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/relay_namespace#update RelayNamespace#update}.
 
 ---
 

@@ -1,6 +1,6 @@
 # `azurerm_sql_failover_group`
 
-Refer to the Terraform Registory for docs: [`azurerm_sql_failover_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group).
+Refer to the Terraform Registory for docs: [`azurerm_sql_failover_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group).
 
 # `sqlFailoverGroup` Submodule <a name="`sqlFailoverGroup` Submodule" id="@cdktf/provider-azurerm.sqlFailoverGroup"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_sql_failover_group`](https:
 
 ### SqlFailoverGroup <a name="SqlFailoverGroup" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroup"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group azurerm_sql_failover_group}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group azurerm_sql_failover_group}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 sqlfailovergroup.NewSqlFailoverGroup(scope Construct, id *string, config SqlFailoverGroupConfig) SqlFailoverGroup
 ```
@@ -357,7 +357,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 sqlfailovergroup.SqlFailoverGroup_IsConstruct(x interface{}) *bool
 ```
@@ -389,7 +389,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 sqlfailovergroup.SqlFailoverGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -403,7 +403,7 @@ sqlfailovergroup.SqlFailoverGroup_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroup.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 sqlfailovergroup.SqlFailoverGroup_IsTerraformResource(x interface{}) *bool
 ```
@@ -844,7 +844,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 &sqlfailovergroup.SqlFailoverGroupConfig {
 	Connection: interface{},
@@ -856,14 +856,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/sqlfailovergroup"
 	Provisioners: *[]interface{},
 	Name: *string,
 	PartnerServers: interface{},
-	ReadWriteEndpointFailoverPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.sqlFailoverGroup.SqlFailoverGroupReadWriteEndpointFailoverPolicy,
+	ReadWriteEndpointFailoverPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sqlFailoverGroup.SqlFailoverGroupReadWriteEndpointFailoverPolicy,
 	ResourceGroupName: *string,
 	ServerName: *string,
 	Databases: *[]*string,
 	Id: *string,
-	ReadonlyEndpointFailoverPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.sqlFailoverGroup.SqlFailoverGroupReadonlyEndpointFailoverPolicy,
+	ReadonlyEndpointFailoverPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sqlFailoverGroup.SqlFailoverGroupReadonlyEndpointFailoverPolicy,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.sqlFailoverGroup.SqlFailoverGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sqlFailoverGroup.SqlFailoverGroupTimeouts,
 }
 ```
 
@@ -878,15 +878,15 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/sqlfailovergroup"
 | <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#name SqlFailoverGroup#name}. |
+| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#name SqlFailoverGroup#name}. |
 | <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupConfig.property.partnerServers">PartnerServers</a></code> | <code>interface{}</code> | partner_servers block. |
 | <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupConfig.property.readWriteEndpointFailoverPolicy">ReadWriteEndpointFailoverPolicy</a></code> | <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupReadWriteEndpointFailoverPolicy">SqlFailoverGroupReadWriteEndpointFailoverPolicy</a></code> | read_write_endpoint_failover_policy block. |
-| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#resource_group_name SqlFailoverGroup#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupConfig.property.serverName">ServerName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#server_name SqlFailoverGroup#server_name}. |
-| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupConfig.property.databases">Databases</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#databases SqlFailoverGroup#databases}. |
-| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#id SqlFailoverGroup#id}. |
+| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#resource_group_name SqlFailoverGroup#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupConfig.property.serverName">ServerName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#server_name SqlFailoverGroup#server_name}. |
+| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupConfig.property.databases">Databases</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#databases SqlFailoverGroup#databases}. |
+| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#id SqlFailoverGroup#id}. |
 | <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupConfig.property.readonlyEndpointFailoverPolicy">ReadonlyEndpointFailoverPolicy</a></code> | <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupReadonlyEndpointFailoverPolicy">SqlFailoverGroupReadonlyEndpointFailoverPolicy</a></code> | readonly_endpoint_failover_policy block. |
-| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#tags SqlFailoverGroup#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#tags SqlFailoverGroup#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupTimeouts">SqlFailoverGroupTimeouts</a></code> | timeouts block. |
 
 ---
@@ -969,7 +969,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#name SqlFailoverGroup#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#name SqlFailoverGroup#name}.
 
 ---
 
@@ -983,7 +983,7 @@ PartnerServers interface{}
 
 partner_servers block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#partner_servers SqlFailoverGroup#partner_servers}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#partner_servers SqlFailoverGroup#partner_servers}
 
 ---
 
@@ -997,7 +997,7 @@ ReadWriteEndpointFailoverPolicy SqlFailoverGroupReadWriteEndpointFailoverPolicy
 
 read_write_endpoint_failover_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#read_write_endpoint_failover_policy SqlFailoverGroup#read_write_endpoint_failover_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#read_write_endpoint_failover_policy SqlFailoverGroup#read_write_endpoint_failover_policy}
 
 ---
 
@@ -1009,7 +1009,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#resource_group_name SqlFailoverGroup#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#resource_group_name SqlFailoverGroup#resource_group_name}.
 
 ---
 
@@ -1021,7 +1021,7 @@ ServerName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#server_name SqlFailoverGroup#server_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#server_name SqlFailoverGroup#server_name}.
 
 ---
 
@@ -1033,7 +1033,7 @@ Databases *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#databases SqlFailoverGroup#databases}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#databases SqlFailoverGroup#databases}.
 
 ---
 
@@ -1045,7 +1045,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#id SqlFailoverGroup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#id SqlFailoverGroup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1062,7 +1062,7 @@ ReadonlyEndpointFailoverPolicy SqlFailoverGroupReadonlyEndpointFailoverPolicy
 
 readonly_endpoint_failover_policy block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#readonly_endpoint_failover_policy SqlFailoverGroup#readonly_endpoint_failover_policy}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#readonly_endpoint_failover_policy SqlFailoverGroup#readonly_endpoint_failover_policy}
 
 ---
 
@@ -1074,7 +1074,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#tags SqlFailoverGroup#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#tags SqlFailoverGroup#tags}.
 
 ---
 
@@ -1088,7 +1088,7 @@ Timeouts SqlFailoverGroupTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#timeouts SqlFailoverGroup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#timeouts SqlFailoverGroup#timeouts}
 
 ---
 
@@ -1097,7 +1097,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupPartnerServers.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 &sqlfailovergroup.SqlFailoverGroupPartnerServers {
 	Id: *string,
@@ -1108,7 +1108,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/sqlfailovergroup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupPartnerServers.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#id SqlFailoverGroup#id}. |
+| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupPartnerServers.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#id SqlFailoverGroup#id}. |
 
 ---
 
@@ -1120,7 +1120,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#id SqlFailoverGroup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#id SqlFailoverGroup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1132,7 +1132,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupReadonlyEndpointFailoverPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 &sqlfailovergroup.SqlFailoverGroupReadonlyEndpointFailoverPolicy {
 	Mode: *string,
@@ -1143,7 +1143,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/sqlfailovergroup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupReadonlyEndpointFailoverPolicy.property.mode">Mode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#mode SqlFailoverGroup#mode}. |
+| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupReadonlyEndpointFailoverPolicy.property.mode">Mode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#mode SqlFailoverGroup#mode}. |
 
 ---
 
@@ -1155,7 +1155,7 @@ Mode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#mode SqlFailoverGroup#mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#mode SqlFailoverGroup#mode}.
 
 ---
 
@@ -1164,7 +1164,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupReadWriteEndpointFailoverPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 &sqlfailovergroup.SqlFailoverGroupReadWriteEndpointFailoverPolicy {
 	Mode: *string,
@@ -1176,8 +1176,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/sqlfailovergroup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupReadWriteEndpointFailoverPolicy.property.mode">Mode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#mode SqlFailoverGroup#mode}. |
-| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupReadWriteEndpointFailoverPolicy.property.graceMinutes">GraceMinutes</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#grace_minutes SqlFailoverGroup#grace_minutes}. |
+| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupReadWriteEndpointFailoverPolicy.property.mode">Mode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#mode SqlFailoverGroup#mode}. |
+| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupReadWriteEndpointFailoverPolicy.property.graceMinutes">GraceMinutes</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#grace_minutes SqlFailoverGroup#grace_minutes}. |
 
 ---
 
@@ -1189,7 +1189,7 @@ Mode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#mode SqlFailoverGroup#mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#mode SqlFailoverGroup#mode}.
 
 ---
 
@@ -1201,7 +1201,7 @@ GraceMinutes *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#grace_minutes SqlFailoverGroup#grace_minutes}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#grace_minutes SqlFailoverGroup#grace_minutes}.
 
 ---
 
@@ -1210,7 +1210,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 &sqlfailovergroup.SqlFailoverGroupTimeouts {
 	Create: *string,
@@ -1224,10 +1224,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/sqlfailovergroup"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#create SqlFailoverGroup#create}. |
-| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#delete SqlFailoverGroup#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#read SqlFailoverGroup#read}. |
-| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#update SqlFailoverGroup#update}. |
+| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#create SqlFailoverGroup#create}. |
+| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#delete SqlFailoverGroup#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#read SqlFailoverGroup#read}. |
+| <code><a href="#@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#update SqlFailoverGroup#update}. |
 
 ---
 
@@ -1239,7 +1239,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#create SqlFailoverGroup#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#create SqlFailoverGroup#create}.
 
 ---
 
@@ -1251,7 +1251,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#delete SqlFailoverGroup#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#delete SqlFailoverGroup#delete}.
 
 ---
 
@@ -1263,7 +1263,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#read SqlFailoverGroup#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#read SqlFailoverGroup#read}.
 
 ---
 
@@ -1275,7 +1275,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sql_failover_group#update SqlFailoverGroup#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sql_failover_group#update SqlFailoverGroup#update}.
 
 ---
 
@@ -1286,7 +1286,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupPartnerServersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 sqlfailovergroup.NewSqlFailoverGroupPartnerServersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SqlFailoverGroupPartnerServersList
 ```
@@ -1429,7 +1429,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupPartnerServersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 sqlfailovergroup.NewSqlFailoverGroupPartnerServersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SqlFailoverGroupPartnerServersOutputReference
 ```
@@ -1740,7 +1740,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupReadonlyEndpointFailoverPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 sqlfailovergroup.NewSqlFailoverGroupReadonlyEndpointFailoverPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlFailoverGroupReadonlyEndpointFailoverPolicyOutputReference
 ```
@@ -2011,7 +2011,7 @@ func InternalValue() SqlFailoverGroupReadonlyEndpointFailoverPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupReadWriteEndpointFailoverPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 sqlfailovergroup.NewSqlFailoverGroupReadWriteEndpointFailoverPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlFailoverGroupReadWriteEndpointFailoverPolicyOutputReference
 ```
@@ -2311,7 +2311,7 @@ func InternalValue() SqlFailoverGroupReadWriteEndpointFailoverPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 sqlfailovergroup.NewSqlFailoverGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlFailoverGroupTimeoutsOutputReference
 ```

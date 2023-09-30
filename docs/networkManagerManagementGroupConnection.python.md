@@ -1,6 +1,6 @@
 # `azurerm_network_manager_management_group_connection`
 
-Refer to the Terraform Registory for docs: [`azurerm_network_manager_management_group_connection`](https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection).
+Refer to the Terraform Registory for docs: [`azurerm_network_manager_management_group_connection`](https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection).
 
 # `networkManagerManagementGroupConnection` Submodule <a name="`networkManagerManagementGroupConnection` Submodule" id="@cdktf/provider-azurerm.networkManagerManagementGroupConnection"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_network_manager_management_
 
 ### NetworkManagerManagementGroupConnection <a name="NetworkManagerManagementGroupConnection" id="@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnection"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection azurerm_network_manager_management_group_connection}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection azurerm_network_manager_management_group_connection}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnection.Initializer"></a>
 
@@ -45,11 +45,11 @@ networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnection(
 | <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnection.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnection.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnection.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnection.Initializer.parameter.managementGroupId">management_group_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#management_group_id NetworkManagerManagementGroupConnection#management_group_id}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnection.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#name NetworkManagerManagementGroupConnection#name}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnection.Initializer.parameter.networkManagerId">network_manager_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#network_manager_id NetworkManagerManagementGroupConnection#network_manager_id}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnection.Initializer.parameter.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#description NetworkManagerManagementGroupConnection#description}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnection.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#id NetworkManagerManagementGroupConnection#id}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnection.Initializer.parameter.managementGroupId">management_group_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#management_group_id NetworkManagerManagementGroupConnection#management_group_id}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnection.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#name NetworkManagerManagementGroupConnection#name}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnection.Initializer.parameter.networkManagerId">network_manager_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#network_manager_id NetworkManagerManagementGroupConnection#network_manager_id}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnection.Initializer.parameter.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#description NetworkManagerManagementGroupConnection#description}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnection.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#id NetworkManagerManagementGroupConnection#id}. |
 | <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnection.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnectionTimeouts">NetworkManagerManagementGroupConnectionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -118,7 +118,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#management_group_id NetworkManagerManagementGroupConnection#management_group_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#management_group_id NetworkManagerManagementGroupConnection#management_group_id}.
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#name NetworkManagerManagementGroupConnection#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#name NetworkManagerManagementGroupConnection#name}.
 
 ---
 
@@ -134,7 +134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#network_manager_id NetworkManagerManagementGroupConnection#network_manager_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#network_manager_id NetworkManagerManagementGroupConnection#network_manager_id}.
 
 ---
 
@@ -142,7 +142,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#description NetworkManagerManagementGroupConnection#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#description NetworkManagerManagementGroupConnection#description}.
 
 ---
 
@@ -150,7 +150,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#id NetworkManagerManagementGroupConnection#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#id NetworkManagerManagementGroupConnection#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -163,7 +163,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#timeouts NetworkManagerManagementGroupConnection#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#timeouts NetworkManagerManagementGroupConnection#timeouts}
 
 ---
 
@@ -418,7 +418,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#create NetworkManagerManagementGroupConnection#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#create NetworkManagerManagementGroupConnection#create}.
 
 ---
 
@@ -426,7 +426,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#delete NetworkManagerManagementGroupConnection#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#delete NetworkManagerManagementGroupConnection#delete}.
 
 ---
 
@@ -434,7 +434,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#read NetworkManagerManagementGroupConnection#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#read NetworkManagerManagementGroupConnection#read}.
 
 ---
 
@@ -442,7 +442,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#update NetworkManagerManagementGroupConnection#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#update NetworkManagerManagementGroupConnection#update}.
 
 ---
 
@@ -901,11 +901,11 @@ networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnectionC
 | <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnectionConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnectionConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnectionConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnectionConfig.property.managementGroupId">management_group_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#management_group_id NetworkManagerManagementGroupConnection#management_group_id}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnectionConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#name NetworkManagerManagementGroupConnection#name}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnectionConfig.property.networkManagerId">network_manager_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#network_manager_id NetworkManagerManagementGroupConnection#network_manager_id}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnectionConfig.property.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#description NetworkManagerManagementGroupConnection#description}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnectionConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#id NetworkManagerManagementGroupConnection#id}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnectionConfig.property.managementGroupId">management_group_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#management_group_id NetworkManagerManagementGroupConnection#management_group_id}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnectionConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#name NetworkManagerManagementGroupConnection#name}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnectionConfig.property.networkManagerId">network_manager_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#network_manager_id NetworkManagerManagementGroupConnection#network_manager_id}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnectionConfig.property.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#description NetworkManagerManagementGroupConnection#description}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnectionConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#id NetworkManagerManagementGroupConnection#id}. |
 | <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnectionConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnectionTimeouts">NetworkManagerManagementGroupConnectionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -988,7 +988,7 @@ management_group_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#management_group_id NetworkManagerManagementGroupConnection#management_group_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#management_group_id NetworkManagerManagementGroupConnection#management_group_id}.
 
 ---
 
@@ -1000,7 +1000,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#name NetworkManagerManagementGroupConnection#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#name NetworkManagerManagementGroupConnection#name}.
 
 ---
 
@@ -1012,7 +1012,7 @@ network_manager_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#network_manager_id NetworkManagerManagementGroupConnection#network_manager_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#network_manager_id NetworkManagerManagementGroupConnection#network_manager_id}.
 
 ---
 
@@ -1024,7 +1024,7 @@ description: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#description NetworkManagerManagementGroupConnection#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#description NetworkManagerManagementGroupConnection#description}.
 
 ---
 
@@ -1036,7 +1036,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#id NetworkManagerManagementGroupConnection#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#id NetworkManagerManagementGroupConnection#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1053,7 +1053,7 @@ timeouts: NetworkManagerManagementGroupConnectionTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#timeouts NetworkManagerManagementGroupConnection#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#timeouts NetworkManagerManagementGroupConnection#timeouts}
 
 ---
 
@@ -1076,10 +1076,10 @@ networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnectionT
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnectionTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#create NetworkManagerManagementGroupConnection#create}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnectionTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#delete NetworkManagerManagementGroupConnection#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnectionTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#read NetworkManagerManagementGroupConnection#read}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnectionTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#update NetworkManagerManagementGroupConnection#update}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnectionTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#create NetworkManagerManagementGroupConnection#create}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnectionTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#delete NetworkManagerManagementGroupConnection#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnectionTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#read NetworkManagerManagementGroupConnection#read}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManagerManagementGroupConnection.NetworkManagerManagementGroupConnectionTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#update NetworkManagerManagementGroupConnection#update}. |
 
 ---
 
@@ -1091,7 +1091,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#create NetworkManagerManagementGroupConnection#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#create NetworkManagerManagementGroupConnection#create}.
 
 ---
 
@@ -1103,7 +1103,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#delete NetworkManagerManagementGroupConnection#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#delete NetworkManagerManagementGroupConnection#delete}.
 
 ---
 
@@ -1115,7 +1115,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#read NetworkManagerManagementGroupConnection#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#read NetworkManagerManagementGroupConnection#read}.
 
 ---
 
@@ -1127,7 +1127,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_manager_management_group_connection#update NetworkManagerManagementGroupConnection#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_manager_management_group_connection#update NetworkManagerManagementGroupConnection#update}.
 
 ---
 

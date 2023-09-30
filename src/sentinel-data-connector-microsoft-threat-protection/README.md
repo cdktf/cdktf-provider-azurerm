@@ -1,3 +1,3 @@
 # `azurerm_sentinel_data_connector_microsoft_threat_protection`
 
-Refer to the Terraform Registory for docs: [`azurerm_sentinel_data_connector_microsoft_threat_protection`](https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/sentinel_data_connector_microsoft_threat_protection).
+Refer to the Terraform Registory for docs: [`azurerm_sentinel_data_connector_microsoft_threat_protection`](https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/sentinel_data_connector_microsoft_threat_protection).

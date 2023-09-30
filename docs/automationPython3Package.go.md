@@ -1,6 +1,6 @@
 # `azurerm_automation_python3_package`
 
-Refer to the Terraform Registory for docs: [`azurerm_automation_python3_package`](https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package).
+Refer to the Terraform Registory for docs: [`azurerm_automation_python3_package`](https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package).
 
 # `automationPython3Package` Submodule <a name="`automationPython3Package` Submodule" id="@cdktf/provider-azurerm.automationPython3Package"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_automation_python3_package`
 
 ### AutomationPython3Package <a name="AutomationPython3Package" id="@cdktf/provider-azurerm.automationPython3Package.AutomationPython3Package"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package azurerm_automation_python3_package}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package azurerm_automation_python3_package}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationPython3Package.AutomationPython3Package.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/automationpython3package"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationpython3package"
 
 automationpython3package.NewAutomationPython3Package(scope Construct, id *string, config AutomationPython3PackageConfig) AutomationPython3Package
 ```
@@ -325,7 +325,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.automationPython3Package.AutomationPython3Package.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/automationpython3package"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationpython3package"
 
 automationpython3package.AutomationPython3Package_IsConstruct(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.automationPython3Package.AutomationPython3Package.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/automationpython3package"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationpython3package"
 
 automationpython3package.AutomationPython3Package_IsTerraformElement(x interface{}) *bool
 ```
@@ -371,7 +371,7 @@ automationpython3package.AutomationPython3Package_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.automationPython3Package.AutomationPython3Package.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/automationpython3package"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationpython3package"
 
 automationpython3package.AutomationPython3Package_IsTerraformResource(x interface{}) *bool
 ```
@@ -790,7 +790,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/automationpython3package"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationpython3package"
 
 &automationpython3package.AutomationPython3PackageConfig {
 	Connection: interface{},
@@ -809,7 +809,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/automationpython3
 	HashValue: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.automationPython3Package.AutomationPython3PackageTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automationPython3Package.AutomationPython3PackageTimeouts,
 }
 ```
 
@@ -824,15 +824,15 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/automationpython3
 | <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageConfig.property.automationAccountName">AutomationAccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#automation_account_name AutomationPython3Package#automation_account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageConfig.property.contentUri">ContentUri</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#content_uri AutomationPython3Package#content_uri}. |
-| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#name AutomationPython3Package#name}. |
-| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#resource_group_name AutomationPython3Package#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageConfig.property.contentVersion">ContentVersion</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#content_version AutomationPython3Package#content_version}. |
-| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageConfig.property.hashAlgorithm">HashAlgorithm</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#hash_algorithm AutomationPython3Package#hash_algorithm}. |
-| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageConfig.property.hashValue">HashValue</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#hash_value AutomationPython3Package#hash_value}. |
-| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#id AutomationPython3Package#id}. |
-| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#tags AutomationPython3Package#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageConfig.property.automationAccountName">AutomationAccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#automation_account_name AutomationPython3Package#automation_account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageConfig.property.contentUri">ContentUri</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#content_uri AutomationPython3Package#content_uri}. |
+| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#name AutomationPython3Package#name}. |
+| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#resource_group_name AutomationPython3Package#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageConfig.property.contentVersion">ContentVersion</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#content_version AutomationPython3Package#content_version}. |
+| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageConfig.property.hashAlgorithm">HashAlgorithm</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#hash_algorithm AutomationPython3Package#hash_algorithm}. |
+| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageConfig.property.hashValue">HashValue</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#hash_value AutomationPython3Package#hash_value}. |
+| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#id AutomationPython3Package#id}. |
+| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#tags AutomationPython3Package#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageTimeouts">AutomationPython3PackageTimeouts</a></code> | timeouts block. |
 
 ---
@@ -915,7 +915,7 @@ AutomationAccountName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#automation_account_name AutomationPython3Package#automation_account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#automation_account_name AutomationPython3Package#automation_account_name}.
 
 ---
 
@@ -927,7 +927,7 @@ ContentUri *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#content_uri AutomationPython3Package#content_uri}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#content_uri AutomationPython3Package#content_uri}.
 
 ---
 
@@ -939,7 +939,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#name AutomationPython3Package#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#name AutomationPython3Package#name}.
 
 ---
 
@@ -951,7 +951,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#resource_group_name AutomationPython3Package#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#resource_group_name AutomationPython3Package#resource_group_name}.
 
 ---
 
@@ -963,7 +963,7 @@ ContentVersion *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#content_version AutomationPython3Package#content_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#content_version AutomationPython3Package#content_version}.
 
 ---
 
@@ -975,7 +975,7 @@ HashAlgorithm *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#hash_algorithm AutomationPython3Package#hash_algorithm}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#hash_algorithm AutomationPython3Package#hash_algorithm}.
 
 ---
 
@@ -987,7 +987,7 @@ HashValue *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#hash_value AutomationPython3Package#hash_value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#hash_value AutomationPython3Package#hash_value}.
 
 ---
 
@@ -999,7 +999,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#id AutomationPython3Package#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#id AutomationPython3Package#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1014,7 +1014,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#tags AutomationPython3Package#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#tags AutomationPython3Package#tags}.
 
 ---
 
@@ -1028,7 +1028,7 @@ Timeouts AutomationPython3PackageTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#timeouts AutomationPython3Package#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#timeouts AutomationPython3Package#timeouts}
 
 ---
 
@@ -1037,7 +1037,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/automationpython3package"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationpython3package"
 
 &automationpython3package.AutomationPython3PackageTimeouts {
 	Create: *string,
@@ -1051,10 +1051,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/automationpython3
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#create AutomationPython3Package#create}. |
-| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#delete AutomationPython3Package#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#read AutomationPython3Package#read}. |
-| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#update AutomationPython3Package#update}. |
+| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#create AutomationPython3Package#create}. |
+| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#delete AutomationPython3Package#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#read AutomationPython3Package#read}. |
+| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#update AutomationPython3Package#update}. |
 
 ---
 
@@ -1066,7 +1066,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#create AutomationPython3Package#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#create AutomationPython3Package#create}.
 
 ---
 
@@ -1078,7 +1078,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#delete AutomationPython3Package#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#delete AutomationPython3Package#delete}.
 
 ---
 
@@ -1090,7 +1090,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#read AutomationPython3Package#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#read AutomationPython3Package#read}.
 
 ---
 
@@ -1102,7 +1102,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/automation_python3_package#update AutomationPython3Package#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/automation_python3_package#update AutomationPython3Package#update}.
 
 ---
 
@@ -1113,7 +1113,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/automationpython3package"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationpython3package"
 
 automationpython3package.NewAutomationPython3PackageTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationPython3PackageTimeoutsOutputReference
 ```

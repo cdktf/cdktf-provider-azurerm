@@ -1,6 +1,6 @@
 # `azurerm_network_security_rule`
 
-Refer to the Terraform Registory for docs: [`azurerm_network_security_rule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule).
+Refer to the Terraform Registory for docs: [`azurerm_network_security_rule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule).
 
 # `networkSecurityRule` Submodule <a name="`networkSecurityRule` Submodule" id="@cdktf/provider-azurerm.networkSecurityRule"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_network_security_rule`](htt
 
 ### NetworkSecurityRule <a name="NetworkSecurityRule" id="@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRule"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule azurerm_network_security_rule}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule azurerm_network_security_rule}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRule.Initializer"></a>
 
@@ -1103,25 +1103,25 @@ new NetworkSecurityRuleConfig {
 | <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.access">Access</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#access NetworkSecurityRule#access}. |
-| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.direction">Direction</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#direction NetworkSecurityRule#direction}. |
-| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#name NetworkSecurityRule#name}. |
-| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.networkSecurityGroupName">NetworkSecurityGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#network_security_group_name NetworkSecurityRule#network_security_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.priority">Priority</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#priority NetworkSecurityRule#priority}. |
-| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.protocol">Protocol</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#protocol NetworkSecurityRule#protocol}. |
-| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#resource_group_name NetworkSecurityRule#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#description NetworkSecurityRule#description}. |
-| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.destinationAddressPrefix">DestinationAddressPrefix</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#destination_address_prefix NetworkSecurityRule#destination_address_prefix}. |
-| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.destinationAddressPrefixes">DestinationAddressPrefixes</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#destination_address_prefixes NetworkSecurityRule#destination_address_prefixes}. |
-| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.destinationApplicationSecurityGroupIds">DestinationApplicationSecurityGroupIds</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#destination_application_security_group_ids NetworkSecurityRule#destination_application_security_group_ids}. |
-| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.destinationPortRange">DestinationPortRange</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#destination_port_range NetworkSecurityRule#destination_port_range}. |
-| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.destinationPortRanges">DestinationPortRanges</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#destination_port_ranges NetworkSecurityRule#destination_port_ranges}. |
-| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#id NetworkSecurityRule#id}. |
-| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.sourceAddressPrefix">SourceAddressPrefix</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#source_address_prefix NetworkSecurityRule#source_address_prefix}. |
-| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.sourceAddressPrefixes">SourceAddressPrefixes</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#source_address_prefixes NetworkSecurityRule#source_address_prefixes}. |
-| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.sourceApplicationSecurityGroupIds">SourceApplicationSecurityGroupIds</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#source_application_security_group_ids NetworkSecurityRule#source_application_security_group_ids}. |
-| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.sourcePortRange">SourcePortRange</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#source_port_range NetworkSecurityRule#source_port_range}. |
-| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.sourcePortRanges">SourcePortRanges</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#source_port_ranges NetworkSecurityRule#source_port_ranges}. |
+| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.access">Access</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#access NetworkSecurityRule#access}. |
+| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.direction">Direction</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#direction NetworkSecurityRule#direction}. |
+| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#name NetworkSecurityRule#name}. |
+| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.networkSecurityGroupName">NetworkSecurityGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#network_security_group_name NetworkSecurityRule#network_security_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.priority">Priority</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#priority NetworkSecurityRule#priority}. |
+| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.protocol">Protocol</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#protocol NetworkSecurityRule#protocol}. |
+| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#resource_group_name NetworkSecurityRule#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#description NetworkSecurityRule#description}. |
+| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.destinationAddressPrefix">DestinationAddressPrefix</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#destination_address_prefix NetworkSecurityRule#destination_address_prefix}. |
+| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.destinationAddressPrefixes">DestinationAddressPrefixes</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#destination_address_prefixes NetworkSecurityRule#destination_address_prefixes}. |
+| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.destinationApplicationSecurityGroupIds">DestinationApplicationSecurityGroupIds</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#destination_application_security_group_ids NetworkSecurityRule#destination_application_security_group_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.destinationPortRange">DestinationPortRange</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#destination_port_range NetworkSecurityRule#destination_port_range}. |
+| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.destinationPortRanges">DestinationPortRanges</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#destination_port_ranges NetworkSecurityRule#destination_port_ranges}. |
+| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#id NetworkSecurityRule#id}. |
+| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.sourceAddressPrefix">SourceAddressPrefix</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#source_address_prefix NetworkSecurityRule#source_address_prefix}. |
+| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.sourceAddressPrefixes">SourceAddressPrefixes</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#source_address_prefixes NetworkSecurityRule#source_address_prefixes}. |
+| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.sourceApplicationSecurityGroupIds">SourceApplicationSecurityGroupIds</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#source_application_security_group_ids NetworkSecurityRule#source_application_security_group_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.sourcePortRange">SourcePortRange</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#source_port_range NetworkSecurityRule#source_port_range}. |
+| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.sourcePortRanges">SourcePortRanges</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#source_port_ranges NetworkSecurityRule#source_port_ranges}. |
 | <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleTimeouts">NetworkSecurityRuleTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1204,7 +1204,7 @@ public string Access { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#access NetworkSecurityRule#access}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#access NetworkSecurityRule#access}.
 
 ---
 
@@ -1216,7 +1216,7 @@ public string Direction { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#direction NetworkSecurityRule#direction}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#direction NetworkSecurityRule#direction}.
 
 ---
 
@@ -1228,7 +1228,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#name NetworkSecurityRule#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#name NetworkSecurityRule#name}.
 
 ---
 
@@ -1240,7 +1240,7 @@ public string NetworkSecurityGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#network_security_group_name NetworkSecurityRule#network_security_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#network_security_group_name NetworkSecurityRule#network_security_group_name}.
 
 ---
 
@@ -1252,7 +1252,7 @@ public double Priority { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#priority NetworkSecurityRule#priority}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#priority NetworkSecurityRule#priority}.
 
 ---
 
@@ -1264,7 +1264,7 @@ public string Protocol { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#protocol NetworkSecurityRule#protocol}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#protocol NetworkSecurityRule#protocol}.
 
 ---
 
@@ -1276,7 +1276,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#resource_group_name NetworkSecurityRule#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#resource_group_name NetworkSecurityRule#resource_group_name}.
 
 ---
 
@@ -1288,7 +1288,7 @@ public string Description { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#description NetworkSecurityRule#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#description NetworkSecurityRule#description}.
 
 ---
 
@@ -1300,7 +1300,7 @@ public string DestinationAddressPrefix { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#destination_address_prefix NetworkSecurityRule#destination_address_prefix}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#destination_address_prefix NetworkSecurityRule#destination_address_prefix}.
 
 ---
 
@@ -1312,7 +1312,7 @@ public string[] DestinationAddressPrefixes { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#destination_address_prefixes NetworkSecurityRule#destination_address_prefixes}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#destination_address_prefixes NetworkSecurityRule#destination_address_prefixes}.
 
 ---
 
@@ -1324,7 +1324,7 @@ public string[] DestinationApplicationSecurityGroupIds { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#destination_application_security_group_ids NetworkSecurityRule#destination_application_security_group_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#destination_application_security_group_ids NetworkSecurityRule#destination_application_security_group_ids}.
 
 ---
 
@@ -1336,7 +1336,7 @@ public string DestinationPortRange { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#destination_port_range NetworkSecurityRule#destination_port_range}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#destination_port_range NetworkSecurityRule#destination_port_range}.
 
 ---
 
@@ -1348,7 +1348,7 @@ public string[] DestinationPortRanges { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#destination_port_ranges NetworkSecurityRule#destination_port_ranges}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#destination_port_ranges NetworkSecurityRule#destination_port_ranges}.
 
 ---
 
@@ -1360,7 +1360,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#id NetworkSecurityRule#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#id NetworkSecurityRule#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1375,7 +1375,7 @@ public string SourceAddressPrefix { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#source_address_prefix NetworkSecurityRule#source_address_prefix}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#source_address_prefix NetworkSecurityRule#source_address_prefix}.
 
 ---
 
@@ -1387,7 +1387,7 @@ public string[] SourceAddressPrefixes { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#source_address_prefixes NetworkSecurityRule#source_address_prefixes}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#source_address_prefixes NetworkSecurityRule#source_address_prefixes}.
 
 ---
 
@@ -1399,7 +1399,7 @@ public string[] SourceApplicationSecurityGroupIds { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#source_application_security_group_ids NetworkSecurityRule#source_application_security_group_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#source_application_security_group_ids NetworkSecurityRule#source_application_security_group_ids}.
 
 ---
 
@@ -1411,7 +1411,7 @@ public string SourcePortRange { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#source_port_range NetworkSecurityRule#source_port_range}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#source_port_range NetworkSecurityRule#source_port_range}.
 
 ---
 
@@ -1423,7 +1423,7 @@ public string[] SourcePortRanges { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#source_port_ranges NetworkSecurityRule#source_port_ranges}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#source_port_ranges NetworkSecurityRule#source_port_ranges}.
 
 ---
 
@@ -1437,7 +1437,7 @@ public NetworkSecurityRuleTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#timeouts NetworkSecurityRule#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#timeouts NetworkSecurityRule#timeouts}
 
 ---
 
@@ -1460,10 +1460,10 @@ new NetworkSecurityRuleTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#create NetworkSecurityRule#create}. |
-| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#delete NetworkSecurityRule#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#read NetworkSecurityRule#read}. |
-| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#update NetworkSecurityRule#update}. |
+| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#create NetworkSecurityRule#create}. |
+| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#delete NetworkSecurityRule#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#read NetworkSecurityRule#read}. |
+| <code><a href="#@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#update NetworkSecurityRule#update}. |
 
 ---
 
@@ -1475,7 +1475,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#create NetworkSecurityRule#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#create NetworkSecurityRule#create}.
 
 ---
 
@@ -1487,7 +1487,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#delete NetworkSecurityRule#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#delete NetworkSecurityRule#delete}.
 
 ---
 
@@ -1499,7 +1499,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#read NetworkSecurityRule#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#read NetworkSecurityRule#read}.
 
 ---
 
@@ -1511,7 +1511,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/network_security_rule#update NetworkSecurityRule#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/network_security_rule#update NetworkSecurityRule#update}.
 
 ---
 

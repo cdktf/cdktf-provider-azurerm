@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,52 +8,52 @@ import * as cdktf from 'cdktf';
 
 export interface FrontdoorRulesEngineConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#enabled FrontdoorRulesEngine#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#enabled FrontdoorRulesEngine#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#frontdoor_name FrontdoorRulesEngine#frontdoor_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#frontdoor_name FrontdoorRulesEngine#frontdoor_name}
   */
   readonly frontdoorName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#id FrontdoorRulesEngine#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#id FrontdoorRulesEngine#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#name FrontdoorRulesEngine#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#name FrontdoorRulesEngine#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#resource_group_name FrontdoorRulesEngine#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#resource_group_name FrontdoorRulesEngine#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#rule FrontdoorRulesEngine#rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#rule FrontdoorRulesEngine#rule}
   */
   readonly rule?: FrontdoorRulesEngineRule[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#timeouts FrontdoorRulesEngine#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#timeouts FrontdoorRulesEngine#timeouts}
   */
   readonly timeouts?: FrontdoorRulesEngineTimeouts;
 }
 export interface FrontdoorRulesEngineRuleActionRequestHeader {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#header_action_type FrontdoorRulesEngine#header_action_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#header_action_type FrontdoorRulesEngine#header_action_type}
   */
   readonly headerActionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#header_name FrontdoorRulesEngine#header_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#header_name FrontdoorRulesEngine#header_name}
   */
   readonly headerName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#value FrontdoorRulesEngine#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#value FrontdoorRulesEngine#value}
   */
   readonly value?: string;
 }
@@ -201,15 +196,15 @@ export class FrontdoorRulesEngineRuleActionRequestHeaderList extends cdktf.Compl
 }
 export interface FrontdoorRulesEngineRuleActionResponseHeader {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#header_action_type FrontdoorRulesEngine#header_action_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#header_action_type FrontdoorRulesEngine#header_action_type}
   */
   readonly headerActionType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#header_name FrontdoorRulesEngine#header_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#header_name FrontdoorRulesEngine#header_name}
   */
   readonly headerName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#value FrontdoorRulesEngine#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#value FrontdoorRulesEngine#value}
   */
   readonly value?: string;
 }
@@ -354,13 +349,13 @@ export interface FrontdoorRulesEngineRuleAction {
   /**
   * request_header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#request_header FrontdoorRulesEngine#request_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#request_header FrontdoorRulesEngine#request_header}
   */
   readonly requestHeader?: FrontdoorRulesEngineRuleActionRequestHeader[] | cdktf.IResolvable;
   /**
   * response_header block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#response_header FrontdoorRulesEngine#response_header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#response_header FrontdoorRulesEngine#response_header}
   */
   readonly responseHeader?: FrontdoorRulesEngineRuleActionResponseHeader[] | cdktf.IResolvable;
 }
@@ -448,27 +443,27 @@ export class FrontdoorRulesEngineRuleActionOutputReference extends cdktf.Complex
 }
 export interface FrontdoorRulesEngineRuleMatchCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#negate_condition FrontdoorRulesEngine#negate_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#negate_condition FrontdoorRulesEngine#negate_condition}
   */
   readonly negateCondition?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#operator FrontdoorRulesEngine#operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#operator FrontdoorRulesEngine#operator}
   */
   readonly operator: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#selector FrontdoorRulesEngine#selector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#selector FrontdoorRulesEngine#selector}
   */
   readonly selector?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#transform FrontdoorRulesEngine#transform}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#transform FrontdoorRulesEngine#transform}
   */
   readonly transform?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#value FrontdoorRulesEngine#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#value FrontdoorRulesEngine#value}
   */
   readonly value?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#variable FrontdoorRulesEngine#variable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#variable FrontdoorRulesEngine#variable}
   */
   readonly variable?: string;
 }
@@ -677,23 +672,23 @@ export class FrontdoorRulesEngineRuleMatchConditionList extends cdktf.ComplexLis
 }
 export interface FrontdoorRulesEngineRule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#name FrontdoorRulesEngine#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#name FrontdoorRulesEngine#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#priority FrontdoorRulesEngine#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#priority FrontdoorRulesEngine#priority}
   */
   readonly priority: number;
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#action FrontdoorRulesEngine#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#action FrontdoorRulesEngine#action}
   */
   readonly action?: FrontdoorRulesEngineRuleAction;
   /**
   * match_condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#match_condition FrontdoorRulesEngine#match_condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#match_condition FrontdoorRulesEngine#match_condition}
   */
   readonly matchCondition?: FrontdoorRulesEngineRuleMatchCondition[] | cdktf.IResolvable;
 }
@@ -853,19 +848,19 @@ export class FrontdoorRulesEngineRuleList extends cdktf.ComplexList {
 }
 export interface FrontdoorRulesEngineTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#create FrontdoorRulesEngine#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#create FrontdoorRulesEngine#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#delete FrontdoorRulesEngine#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#delete FrontdoorRulesEngine#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#read FrontdoorRulesEngine#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#read FrontdoorRulesEngine#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine#update FrontdoorRulesEngine#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine#update FrontdoorRulesEngine#update}
   */
   readonly update?: string;
 }
@@ -1009,7 +1004,7 @@ export class FrontdoorRulesEngineTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine azurerm_frontdoor_rules_engine}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine azurerm_frontdoor_rules_engine}
 */
 export class FrontdoorRulesEngine extends cdktf.TerraformResource {
 
@@ -1023,7 +1018,7 @@ export class FrontdoorRulesEngine extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/frontdoor_rules_engine azurerm_frontdoor_rules_engine} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/frontdoor_rules_engine azurerm_frontdoor_rules_engine} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1034,7 +1029,7 @@ export class FrontdoorRulesEngine extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_frontdoor_rules_engine',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.74.0',
+        providerVersion: '3.75.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

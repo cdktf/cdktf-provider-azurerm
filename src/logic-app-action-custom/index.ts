@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/logic_app_action_custom
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/logic_app_action_custom
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +8,46 @@ import * as cdktf from 'cdktf';
 
 export interface LogicAppActionCustomConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/logic_app_action_custom#body LogicAppActionCustom#body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/logic_app_action_custom#body LogicAppActionCustom#body}
   */
   readonly body: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/logic_app_action_custom#id LogicAppActionCustom#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/logic_app_action_custom#id LogicAppActionCustom#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/logic_app_action_custom#logic_app_id LogicAppActionCustom#logic_app_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/logic_app_action_custom#logic_app_id LogicAppActionCustom#logic_app_id}
   */
   readonly logicAppId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/logic_app_action_custom#name LogicAppActionCustom#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/logic_app_action_custom#name LogicAppActionCustom#name}
   */
   readonly name: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/logic_app_action_custom#timeouts LogicAppActionCustom#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/logic_app_action_custom#timeouts LogicAppActionCustom#timeouts}
   */
   readonly timeouts?: LogicAppActionCustomTimeouts;
 }
 export interface LogicAppActionCustomTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/logic_app_action_custom#create LogicAppActionCustom#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/logic_app_action_custom#create LogicAppActionCustom#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/logic_app_action_custom#delete LogicAppActionCustom#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/logic_app_action_custom#delete LogicAppActionCustom#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/logic_app_action_custom#read LogicAppActionCustom#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/logic_app_action_custom#read LogicAppActionCustom#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/logic_app_action_custom#update LogicAppActionCustom#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/logic_app_action_custom#update LogicAppActionCustom#update}
   */
   readonly update?: string;
 }
@@ -196,7 +191,7 @@ export class LogicAppActionCustomTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/logic_app_action_custom azurerm_logic_app_action_custom}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/logic_app_action_custom azurerm_logic_app_action_custom}
 */
 export class LogicAppActionCustom extends cdktf.TerraformResource {
 
@@ -210,7 +205,7 @@ export class LogicAppActionCustom extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/logic_app_action_custom azurerm_logic_app_action_custom} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/logic_app_action_custom azurerm_logic_app_action_custom} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -221,7 +216,7 @@ export class LogicAppActionCustom extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_logic_app_action_custom',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.74.0',
+        providerVersion: '3.75.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

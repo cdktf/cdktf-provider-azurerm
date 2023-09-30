@@ -1,6 +1,6 @@
 # `azurerm_app_configuration`
 
-Refer to the Terraform Registory for docs: [`azurerm_app_configuration`](https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration).
+Refer to the Terraform Registory for docs: [`azurerm_app_configuration`](https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration).
 
 # `appConfiguration` Submodule <a name="`appConfiguration` Submodule" id="@cdktf/provider-azurerm.appConfiguration"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_app_configuration`](https:/
 
 ### AppConfiguration <a name="AppConfiguration" id="@cdktf/provider-azurerm.appConfiguration.AppConfiguration"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration azurerm_app_configuration}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration azurerm_app_configuration}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appConfiguration.AppConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appconfiguration"
 
 appconfiguration.NewAppConfiguration(scope Construct, id *string, config AppConfigurationConfig) AppConfiguration
 ```
@@ -399,7 +399,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.appConfiguration.AppConfiguration.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appconfiguration"
 
 appconfiguration.AppConfiguration_IsConstruct(x interface{}) *bool
 ```
@@ -431,7 +431,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.appConfiguration.AppConfiguration.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appconfiguration"
 
 appconfiguration.AppConfiguration_IsTerraformElement(x interface{}) *bool
 ```
@@ -445,7 +445,7 @@ appconfiguration.AppConfiguration_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.appConfiguration.AppConfiguration.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appconfiguration"
 
 appconfiguration.AppConfiguration_IsTerraformResource(x interface{}) *bool
 ```
@@ -1007,7 +1007,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appconfiguration"
 
 &appconfiguration.AppConfigurationConfig {
 	Connection: interface{},
@@ -1020,9 +1020,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
 	Location: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	Encryption: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.appConfiguration.AppConfigurationEncryption,
+	Encryption: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appConfiguration.AppConfigurationEncryption,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.appConfiguration.AppConfigurationIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appConfiguration.AppConfigurationIdentity,
 	LocalAuthEnabled: interface{},
 	PublicNetworkAccess: *string,
 	PurgeProtectionEnabled: interface{},
@@ -1030,7 +1030,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
 	Sku: *string,
 	SoftDeleteRetentionDays: *f64,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.appConfiguration.AppConfigurationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appConfiguration.AppConfigurationTimeouts,
 }
 ```
 
@@ -1045,19 +1045,19 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
 | <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#location AppConfiguration#location}. |
-| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#name AppConfiguration#name}. |
-| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#resource_group_name AppConfiguration#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#location AppConfiguration#location}. |
+| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#name AppConfiguration#name}. |
+| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#resource_group_name AppConfiguration#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.encryption">Encryption</a></code> | <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationEncryption">AppConfigurationEncryption</a></code> | encryption block. |
-| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#id AppConfiguration#id}. |
+| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#id AppConfiguration#id}. |
 | <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.identity">Identity</a></code> | <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationIdentity">AppConfigurationIdentity</a></code> | identity block. |
-| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.localAuthEnabled">LocalAuthEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#local_auth_enabled AppConfiguration#local_auth_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.publicNetworkAccess">PublicNetworkAccess</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#public_network_access AppConfiguration#public_network_access}. |
-| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.purgeProtectionEnabled">PurgeProtectionEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#purge_protection_enabled AppConfiguration#purge_protection_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.localAuthEnabled">LocalAuthEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#local_auth_enabled AppConfiguration#local_auth_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.publicNetworkAccess">PublicNetworkAccess</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#public_network_access AppConfiguration#public_network_access}. |
+| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.purgeProtectionEnabled">PurgeProtectionEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#purge_protection_enabled AppConfiguration#purge_protection_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.replica">Replica</a></code> | <code>interface{}</code> | replica block. |
-| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.sku">Sku</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#sku AppConfiguration#sku}. |
-| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.softDeleteRetentionDays">SoftDeleteRetentionDays</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#soft_delete_retention_days AppConfiguration#soft_delete_retention_days}. |
-| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#tags AppConfiguration#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.sku">Sku</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#sku AppConfiguration#sku}. |
+| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.softDeleteRetentionDays">SoftDeleteRetentionDays</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#soft_delete_retention_days AppConfiguration#soft_delete_retention_days}. |
+| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#tags AppConfiguration#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationTimeouts">AppConfigurationTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1140,7 +1140,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#location AppConfiguration#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#location AppConfiguration#location}.
 
 ---
 
@@ -1152,7 +1152,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#name AppConfiguration#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#name AppConfiguration#name}.
 
 ---
 
@@ -1164,7 +1164,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#resource_group_name AppConfiguration#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#resource_group_name AppConfiguration#resource_group_name}.
 
 ---
 
@@ -1178,7 +1178,7 @@ Encryption AppConfigurationEncryption
 
 encryption block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#encryption AppConfiguration#encryption}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#encryption AppConfiguration#encryption}
 
 ---
 
@@ -1190,7 +1190,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#id AppConfiguration#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#id AppConfiguration#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1207,7 +1207,7 @@ Identity AppConfigurationIdentity
 
 identity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#identity AppConfiguration#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#identity AppConfiguration#identity}
 
 ---
 
@@ -1219,7 +1219,7 @@ LocalAuthEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#local_auth_enabled AppConfiguration#local_auth_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#local_auth_enabled AppConfiguration#local_auth_enabled}.
 
 ---
 
@@ -1231,7 +1231,7 @@ PublicNetworkAccess *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#public_network_access AppConfiguration#public_network_access}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#public_network_access AppConfiguration#public_network_access}.
 
 ---
 
@@ -1243,7 +1243,7 @@ PurgeProtectionEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#purge_protection_enabled AppConfiguration#purge_protection_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#purge_protection_enabled AppConfiguration#purge_protection_enabled}.
 
 ---
 
@@ -1257,7 +1257,7 @@ Replica interface{}
 
 replica block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#replica AppConfiguration#replica}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#replica AppConfiguration#replica}
 
 ---
 
@@ -1269,7 +1269,7 @@ Sku *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#sku AppConfiguration#sku}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#sku AppConfiguration#sku}.
 
 ---
 
@@ -1281,7 +1281,7 @@ SoftDeleteRetentionDays *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#soft_delete_retention_days AppConfiguration#soft_delete_retention_days}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#soft_delete_retention_days AppConfiguration#soft_delete_retention_days}.
 
 ---
 
@@ -1293,7 +1293,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#tags AppConfiguration#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#tags AppConfiguration#tags}.
 
 ---
 
@@ -1307,7 +1307,7 @@ Timeouts AppConfigurationTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#timeouts AppConfiguration#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#timeouts AppConfiguration#timeouts}
 
 ---
 
@@ -1316,7 +1316,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appConfiguration.AppConfigurationEncryption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appconfiguration"
 
 &appconfiguration.AppConfigurationEncryption {
 	IdentityClientId: *string,
@@ -1328,8 +1328,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationEncryption.property.identityClientId">IdentityClientId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#identity_client_id AppConfiguration#identity_client_id}. |
-| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationEncryption.property.keyVaultKeyIdentifier">KeyVaultKeyIdentifier</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#key_vault_key_identifier AppConfiguration#key_vault_key_identifier}. |
+| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationEncryption.property.identityClientId">IdentityClientId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#identity_client_id AppConfiguration#identity_client_id}. |
+| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationEncryption.property.keyVaultKeyIdentifier">KeyVaultKeyIdentifier</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#key_vault_key_identifier AppConfiguration#key_vault_key_identifier}. |
 
 ---
 
@@ -1341,7 +1341,7 @@ IdentityClientId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#identity_client_id AppConfiguration#identity_client_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#identity_client_id AppConfiguration#identity_client_id}.
 
 ---
 
@@ -1353,7 +1353,7 @@ KeyVaultKeyIdentifier *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#key_vault_key_identifier AppConfiguration#key_vault_key_identifier}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#key_vault_key_identifier AppConfiguration#key_vault_key_identifier}.
 
 ---
 
@@ -1362,7 +1362,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appConfiguration.AppConfigurationIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appconfiguration"
 
 &appconfiguration.AppConfigurationIdentity {
 	Type: *string,
@@ -1374,8 +1374,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationIdentity.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#type AppConfiguration#type}. |
-| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationIdentity.property.identityIds">IdentityIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#identity_ids AppConfiguration#identity_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationIdentity.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#type AppConfiguration#type}. |
+| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationIdentity.property.identityIds">IdentityIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#identity_ids AppConfiguration#identity_ids}. |
 
 ---
 
@@ -1387,7 +1387,7 @@ Type *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#type AppConfiguration#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#type AppConfiguration#type}.
 
 ---
 
@@ -1399,7 +1399,7 @@ IdentityIds *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#identity_ids AppConfiguration#identity_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#identity_ids AppConfiguration#identity_ids}.
 
 ---
 
@@ -1408,7 +1408,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appConfiguration.AppConfigurationPrimaryReadKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appconfiguration"
 
 &appconfiguration.AppConfigurationPrimaryReadKey {
 
@@ -1421,7 +1421,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appConfiguration.AppConfigurationPrimaryWriteKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appconfiguration"
 
 &appconfiguration.AppConfigurationPrimaryWriteKey {
 
@@ -1434,7 +1434,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appConfiguration.AppConfigurationReplica.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appconfiguration"
 
 &appconfiguration.AppConfigurationReplica {
 	Location: *string,
@@ -1446,8 +1446,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationReplica.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#location AppConfiguration#location}. |
-| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationReplica.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#name AppConfiguration#name}. |
+| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationReplica.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#location AppConfiguration#location}. |
+| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationReplica.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#name AppConfiguration#name}. |
 
 ---
 
@@ -1459,7 +1459,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#location AppConfiguration#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#location AppConfiguration#location}.
 
 ---
 
@@ -1471,7 +1471,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#name AppConfiguration#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#name AppConfiguration#name}.
 
 ---
 
@@ -1480,7 +1480,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appConfiguration.AppConfigurationSecondaryReadKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appconfiguration"
 
 &appconfiguration.AppConfigurationSecondaryReadKey {
 
@@ -1493,7 +1493,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appConfiguration.AppConfigurationSecondaryWriteKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appconfiguration"
 
 &appconfiguration.AppConfigurationSecondaryWriteKey {
 
@@ -1506,7 +1506,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appConfiguration.AppConfigurationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appconfiguration"
 
 &appconfiguration.AppConfigurationTimeouts {
 	Create: *string,
@@ -1520,10 +1520,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#create AppConfiguration#create}. |
-| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#delete AppConfiguration#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#read AppConfiguration#read}. |
-| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#update AppConfiguration#update}. |
+| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#create AppConfiguration#create}. |
+| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#delete AppConfiguration#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#read AppConfiguration#read}. |
+| <code><a href="#@cdktf/provider-azurerm.appConfiguration.AppConfigurationTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#update AppConfiguration#update}. |
 
 ---
 
@@ -1535,7 +1535,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#create AppConfiguration#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#create AppConfiguration#create}.
 
 ---
 
@@ -1547,7 +1547,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#delete AppConfiguration#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#delete AppConfiguration#delete}.
 
 ---
 
@@ -1559,7 +1559,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#read AppConfiguration#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#read AppConfiguration#read}.
 
 ---
 
@@ -1571,7 +1571,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/app_configuration#update AppConfiguration#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/app_configuration#update AppConfiguration#update}.
 
 ---
 
@@ -1582,7 +1582,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appConfiguration.AppConfigurationEncryptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appconfiguration"
 
 appconfiguration.NewAppConfigurationEncryptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppConfigurationEncryptionOutputReference
 ```
@@ -1889,7 +1889,7 @@ func InternalValue() AppConfigurationEncryption
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appConfiguration.AppConfigurationIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appconfiguration"
 
 appconfiguration.NewAppConfigurationIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppConfigurationIdentityOutputReference
 ```
@@ -2211,7 +2211,7 @@ func InternalValue() AppConfigurationIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appConfiguration.AppConfigurationPrimaryReadKeyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appconfiguration"
 
 appconfiguration.NewAppConfigurationPrimaryReadKeyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AppConfigurationPrimaryReadKeyList
 ```
@@ -2343,7 +2343,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appConfiguration.AppConfigurationPrimaryReadKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appconfiguration"
 
 appconfiguration.NewAppConfigurationPrimaryReadKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AppConfigurationPrimaryReadKeyOutputReference
 ```
@@ -2643,7 +2643,7 @@ func InternalValue() AppConfigurationPrimaryReadKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appConfiguration.AppConfigurationPrimaryWriteKeyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appconfiguration"
 
 appconfiguration.NewAppConfigurationPrimaryWriteKeyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AppConfigurationPrimaryWriteKeyList
 ```
@@ -2775,7 +2775,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appConfiguration.AppConfigurationPrimaryWriteKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appconfiguration"
 
 appconfiguration.NewAppConfigurationPrimaryWriteKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AppConfigurationPrimaryWriteKeyOutputReference
 ```
@@ -3075,7 +3075,7 @@ func InternalValue() AppConfigurationPrimaryWriteKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appConfiguration.AppConfigurationReplicaList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appconfiguration"
 
 appconfiguration.NewAppConfigurationReplicaList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AppConfigurationReplicaList
 ```
@@ -3218,7 +3218,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appConfiguration.AppConfigurationReplicaOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appconfiguration"
 
 appconfiguration.NewAppConfigurationReplicaOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AppConfigurationReplicaOutputReference
 ```
@@ -3551,7 +3551,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appConfiguration.AppConfigurationSecondaryReadKeyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appconfiguration"
 
 appconfiguration.NewAppConfigurationSecondaryReadKeyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AppConfigurationSecondaryReadKeyList
 ```
@@ -3683,7 +3683,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appConfiguration.AppConfigurationSecondaryReadKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appconfiguration"
 
 appconfiguration.NewAppConfigurationSecondaryReadKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AppConfigurationSecondaryReadKeyOutputReference
 ```
@@ -3983,7 +3983,7 @@ func InternalValue() AppConfigurationSecondaryReadKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appConfiguration.AppConfigurationSecondaryWriteKeyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appconfiguration"
 
 appconfiguration.NewAppConfigurationSecondaryWriteKeyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AppConfigurationSecondaryWriteKeyList
 ```
@@ -4115,7 +4115,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appConfiguration.AppConfigurationSecondaryWriteKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appconfiguration"
 
 appconfiguration.NewAppConfigurationSecondaryWriteKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AppConfigurationSecondaryWriteKeyOutputReference
 ```
@@ -4415,7 +4415,7 @@ func InternalValue() AppConfigurationSecondaryWriteKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appConfiguration.AppConfigurationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/appconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appconfiguration"
 
 appconfiguration.NewAppConfigurationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppConfigurationTimeoutsOutputReference
 ```

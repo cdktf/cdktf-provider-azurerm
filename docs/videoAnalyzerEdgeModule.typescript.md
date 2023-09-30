@@ -1,6 +1,6 @@
 # `azurerm_video_analyzer_edge_module`
 
-Refer to the Terraform Registory for docs: [`azurerm_video_analyzer_edge_module`](https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/video_analyzer_edge_module).
+Refer to the Terraform Registory for docs: [`azurerm_video_analyzer_edge_module`](https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/video_analyzer_edge_module).
 
 # `videoAnalyzerEdgeModule` Submodule <a name="`videoAnalyzerEdgeModule` Submodule" id="@cdktf/provider-azurerm.videoAnalyzerEdgeModule"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_video_analyzer_edge_module`
 
 ### VideoAnalyzerEdgeModule <a name="VideoAnalyzerEdgeModule" id="@cdktf/provider-azurerm.videoAnalyzerEdgeModule.VideoAnalyzerEdgeModule"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/video_analyzer_edge_module azurerm_video_analyzer_edge_module}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/video_analyzer_edge_module azurerm_video_analyzer_edge_module}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.videoAnalyzerEdgeModule.VideoAnalyzerEdgeModule.Initializer"></a>
 
@@ -668,10 +668,10 @@ const videoAnalyzerEdgeModuleConfig: videoAnalyzerEdgeModule.VideoAnalyzerEdgeMo
 | <code><a href="#@cdktf/provider-azurerm.videoAnalyzerEdgeModule.VideoAnalyzerEdgeModuleConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.videoAnalyzerEdgeModule.VideoAnalyzerEdgeModuleConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.videoAnalyzerEdgeModule.VideoAnalyzerEdgeModuleConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.videoAnalyzerEdgeModule.VideoAnalyzerEdgeModuleConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/video_analyzer_edge_module#name VideoAnalyzerEdgeModule#name}. |
-| <code><a href="#@cdktf/provider-azurerm.videoAnalyzerEdgeModule.VideoAnalyzerEdgeModuleConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/video_analyzer_edge_module#resource_group_name VideoAnalyzerEdgeModule#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.videoAnalyzerEdgeModule.VideoAnalyzerEdgeModuleConfig.property.videoAnalyzerName">videoAnalyzerName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/video_analyzer_edge_module#video_analyzer_name VideoAnalyzerEdgeModule#video_analyzer_name}. |
-| <code><a href="#@cdktf/provider-azurerm.videoAnalyzerEdgeModule.VideoAnalyzerEdgeModuleConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/video_analyzer_edge_module#id VideoAnalyzerEdgeModule#id}. |
+| <code><a href="#@cdktf/provider-azurerm.videoAnalyzerEdgeModule.VideoAnalyzerEdgeModuleConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/video_analyzer_edge_module#name VideoAnalyzerEdgeModule#name}. |
+| <code><a href="#@cdktf/provider-azurerm.videoAnalyzerEdgeModule.VideoAnalyzerEdgeModuleConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/video_analyzer_edge_module#resource_group_name VideoAnalyzerEdgeModule#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.videoAnalyzerEdgeModule.VideoAnalyzerEdgeModuleConfig.property.videoAnalyzerName">videoAnalyzerName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/video_analyzer_edge_module#video_analyzer_name VideoAnalyzerEdgeModule#video_analyzer_name}. |
+| <code><a href="#@cdktf/provider-azurerm.videoAnalyzerEdgeModule.VideoAnalyzerEdgeModuleConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/video_analyzer_edge_module#id VideoAnalyzerEdgeModule#id}. |
 | <code><a href="#@cdktf/provider-azurerm.videoAnalyzerEdgeModule.VideoAnalyzerEdgeModuleConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.videoAnalyzerEdgeModule.VideoAnalyzerEdgeModuleTimeouts">VideoAnalyzerEdgeModuleTimeouts</a></code> | timeouts block. |
 
 ---
@@ -754,7 +754,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/video_analyzer_edge_module#name VideoAnalyzerEdgeModule#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/video_analyzer_edge_module#name VideoAnalyzerEdgeModule#name}.
 
 ---
 
@@ -766,7 +766,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/video_analyzer_edge_module#resource_group_name VideoAnalyzerEdgeModule#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/video_analyzer_edge_module#resource_group_name VideoAnalyzerEdgeModule#resource_group_name}.
 
 ---
 
@@ -778,7 +778,7 @@ public readonly videoAnalyzerName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/video_analyzer_edge_module#video_analyzer_name VideoAnalyzerEdgeModule#video_analyzer_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/video_analyzer_edge_module#video_analyzer_name VideoAnalyzerEdgeModule#video_analyzer_name}.
 
 ---
 
@@ -790,7 +790,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/video_analyzer_edge_module#id VideoAnalyzerEdgeModule#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/video_analyzer_edge_module#id VideoAnalyzerEdgeModule#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -807,7 +807,7 @@ public readonly timeouts: VideoAnalyzerEdgeModuleTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/video_analyzer_edge_module#timeouts VideoAnalyzerEdgeModule#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/video_analyzer_edge_module#timeouts VideoAnalyzerEdgeModule#timeouts}
 
 ---
 
@@ -825,9 +825,9 @@ const videoAnalyzerEdgeModuleTimeouts: videoAnalyzerEdgeModule.VideoAnalyzerEdge
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.videoAnalyzerEdgeModule.VideoAnalyzerEdgeModuleTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/video_analyzer_edge_module#create VideoAnalyzerEdgeModule#create}. |
-| <code><a href="#@cdktf/provider-azurerm.videoAnalyzerEdgeModule.VideoAnalyzerEdgeModuleTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/video_analyzer_edge_module#delete VideoAnalyzerEdgeModule#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.videoAnalyzerEdgeModule.VideoAnalyzerEdgeModuleTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/video_analyzer_edge_module#read VideoAnalyzerEdgeModule#read}. |
+| <code><a href="#@cdktf/provider-azurerm.videoAnalyzerEdgeModule.VideoAnalyzerEdgeModuleTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/video_analyzer_edge_module#create VideoAnalyzerEdgeModule#create}. |
+| <code><a href="#@cdktf/provider-azurerm.videoAnalyzerEdgeModule.VideoAnalyzerEdgeModuleTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/video_analyzer_edge_module#delete VideoAnalyzerEdgeModule#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.videoAnalyzerEdgeModule.VideoAnalyzerEdgeModuleTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/video_analyzer_edge_module#read VideoAnalyzerEdgeModule#read}. |
 
 ---
 
@@ -839,7 +839,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/video_analyzer_edge_module#create VideoAnalyzerEdgeModule#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/video_analyzer_edge_module#create VideoAnalyzerEdgeModule#create}.
 
 ---
 
@@ -851,7 +851,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/video_analyzer_edge_module#delete VideoAnalyzerEdgeModule#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/video_analyzer_edge_module#delete VideoAnalyzerEdgeModule#delete}.
 
 ---
 
@@ -863,7 +863,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/video_analyzer_edge_module#read VideoAnalyzerEdgeModule#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/video_analyzer_edge_module#read VideoAnalyzerEdgeModule#read}.
 
 ---
 

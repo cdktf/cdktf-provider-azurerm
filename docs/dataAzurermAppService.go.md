@@ -1,6 +1,6 @@
 # `data_azurerm_app_service`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_app_service`](https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/app_service).
+Refer to the Terraform Registory for docs: [`data_azurerm_app_service`](https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/data-sources/app_service).
 
 # `dataAzurermAppService` Submodule <a name="`dataAzurermAppService` Submodule" id="@cdktf/provider-azurerm.dataAzurermAppService"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_azurerm_app_service`](https://
 
 ### DataAzurermAppService <a name="DataAzurermAppService" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppService"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/app_service azurerm_app_service}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/data-sources/app_service azurerm_app_service}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 dataazurermappservice.NewDataAzurermAppService(scope Construct, id *string, config DataAzurermAppServiceConfig) DataAzurermAppService
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 dataazurermappservice.DataAzurermAppService_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 dataazurermappservice.DataAzurermAppService_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ dataazurermappservice.DataAzurermAppService_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppService.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 dataazurermappservice.DataAzurermAppService_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -806,7 +806,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 &dataazurermappservice.DataAzurermAppServiceConfig {
 	Connection: interface{},
@@ -819,7 +819,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappser
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.dataAzurermAppService.DataAzurermAppServiceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermAppService.DataAzurermAppServiceTimeouts,
 }
 ```
 
@@ -834,9 +834,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappser
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/app_service#name DataAzurermAppService#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/app_service#resource_group_name DataAzurermAppService#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/app_service#id DataAzurermAppService#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/data-sources/app_service#name DataAzurermAppService#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/data-sources/app_service#resource_group_name DataAzurermAppService#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/data-sources/app_service#id DataAzurermAppService#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceTimeouts">DataAzurermAppServiceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -919,7 +919,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/app_service#name DataAzurermAppService#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/data-sources/app_service#name DataAzurermAppService#name}.
 
 ---
 
@@ -931,7 +931,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/app_service#resource_group_name DataAzurermAppService#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/data-sources/app_service#resource_group_name DataAzurermAppService#resource_group_name}.
 
 ---
 
@@ -943,7 +943,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/app_service#id DataAzurermAppService#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/data-sources/app_service#id DataAzurermAppService#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -960,7 +960,7 @@ Timeouts DataAzurermAppServiceTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/app_service#timeouts DataAzurermAppService#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/data-sources/app_service#timeouts DataAzurermAppService#timeouts}
 
 ---
 
@@ -969,7 +969,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceConnectionString.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 &dataazurermappservice.DataAzurermAppServiceConnectionString {
 
@@ -982,7 +982,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappser
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceSiteConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 &dataazurermappservice.DataAzurermAppServiceSiteConfig {
 
@@ -995,7 +995,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappser
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceSiteConfigCors.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 &dataazurermappservice.DataAzurermAppServiceSiteConfigCors {
 
@@ -1008,7 +1008,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappser
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceSiteConfigIpRestriction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 &dataazurermappservice.DataAzurermAppServiceSiteConfigIpRestriction {
 
@@ -1021,7 +1021,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappser
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceSiteConfigIpRestrictionHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 &dataazurermappservice.DataAzurermAppServiceSiteConfigIpRestrictionHeaders {
 
@@ -1034,7 +1034,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappser
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceSiteConfigScmIpRestriction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 &dataazurermappservice.DataAzurermAppServiceSiteConfigScmIpRestriction {
 
@@ -1047,7 +1047,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappser
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceSiteConfigScmIpRestrictionHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 &dataazurermappservice.DataAzurermAppServiceSiteConfigScmIpRestrictionHeaders {
 
@@ -1060,7 +1060,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappser
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceSiteCredential.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 &dataazurermappservice.DataAzurermAppServiceSiteCredential {
 
@@ -1073,7 +1073,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappser
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceSourceControl.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 &dataazurermappservice.DataAzurermAppServiceSourceControl {
 
@@ -1086,7 +1086,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappser
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 &dataazurermappservice.DataAzurermAppServiceTimeouts {
 	Read: *string,
@@ -1097,7 +1097,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappser
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/app_service#read DataAzurermAppService#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/data-sources/app_service#read DataAzurermAppService#read}. |
 
 ---
 
@@ -1109,7 +1109,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/data-sources/app_service#read DataAzurermAppService#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/data-sources/app_service#read DataAzurermAppService#read}.
 
 ---
 
@@ -1120,7 +1120,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceConnectionStringList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 dataazurermappservice.NewDataAzurermAppServiceConnectionStringList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermAppServiceConnectionStringList
 ```
@@ -1252,7 +1252,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceConnectionStringOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 dataazurermappservice.NewDataAzurermAppServiceConnectionStringOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermAppServiceConnectionStringOutputReference
 ```
@@ -1552,7 +1552,7 @@ func InternalValue() DataAzurermAppServiceConnectionString
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceSiteConfigCorsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 dataazurermappservice.NewDataAzurermAppServiceSiteConfigCorsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermAppServiceSiteConfigCorsList
 ```
@@ -1684,7 +1684,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceSiteConfigCorsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 dataazurermappservice.NewDataAzurermAppServiceSiteConfigCorsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermAppServiceSiteConfigCorsOutputReference
 ```
@@ -1973,7 +1973,7 @@ func InternalValue() DataAzurermAppServiceSiteConfigCors
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceSiteConfigIpRestrictionHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 dataazurermappservice.NewDataAzurermAppServiceSiteConfigIpRestrictionHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermAppServiceSiteConfigIpRestrictionHeadersList
 ```
@@ -2105,7 +2105,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceSiteConfigIpRestrictionHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 dataazurermappservice.NewDataAzurermAppServiceSiteConfigIpRestrictionHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermAppServiceSiteConfigIpRestrictionHeadersOutputReference
 ```
@@ -2416,7 +2416,7 @@ func InternalValue() DataAzurermAppServiceSiteConfigIpRestrictionHeaders
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceSiteConfigIpRestrictionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 dataazurermappservice.NewDataAzurermAppServiceSiteConfigIpRestrictionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermAppServiceSiteConfigIpRestrictionList
 ```
@@ -2548,7 +2548,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceSiteConfigIpRestrictionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 dataazurermappservice.NewDataAzurermAppServiceSiteConfigIpRestrictionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermAppServiceSiteConfigIpRestrictionOutputReference
 ```
@@ -2892,7 +2892,7 @@ func InternalValue() DataAzurermAppServiceSiteConfigIpRestriction
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceSiteConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 dataazurermappservice.NewDataAzurermAppServiceSiteConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermAppServiceSiteConfigList
 ```
@@ -3024,7 +3024,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceSiteConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 dataazurermappservice.NewDataAzurermAppServiceSiteConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermAppServiceSiteConfigOutputReference
 ```
@@ -3621,7 +3621,7 @@ func InternalValue() DataAzurermAppServiceSiteConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceSiteConfigScmIpRestrictionHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 dataazurermappservice.NewDataAzurermAppServiceSiteConfigScmIpRestrictionHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermAppServiceSiteConfigScmIpRestrictionHeadersList
 ```
@@ -3753,7 +3753,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceSiteConfigScmIpRestrictionHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 dataazurermappservice.NewDataAzurermAppServiceSiteConfigScmIpRestrictionHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermAppServiceSiteConfigScmIpRestrictionHeadersOutputReference
 ```
@@ -4064,7 +4064,7 @@ func InternalValue() DataAzurermAppServiceSiteConfigScmIpRestrictionHeaders
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceSiteConfigScmIpRestrictionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 dataazurermappservice.NewDataAzurermAppServiceSiteConfigScmIpRestrictionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermAppServiceSiteConfigScmIpRestrictionList
 ```
@@ -4196,7 +4196,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceSiteConfigScmIpRestrictionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 dataazurermappservice.NewDataAzurermAppServiceSiteConfigScmIpRestrictionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermAppServiceSiteConfigScmIpRestrictionOutputReference
 ```
@@ -4540,7 +4540,7 @@ func InternalValue() DataAzurermAppServiceSiteConfigScmIpRestriction
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceSiteCredentialList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 dataazurermappservice.NewDataAzurermAppServiceSiteCredentialList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermAppServiceSiteCredentialList
 ```
@@ -4672,7 +4672,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceSiteCredentialOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 dataazurermappservice.NewDataAzurermAppServiceSiteCredentialOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermAppServiceSiteCredentialOutputReference
 ```
@@ -4961,7 +4961,7 @@ func InternalValue() DataAzurermAppServiceSiteCredential
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceSourceControlList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 dataazurermappservice.NewDataAzurermAppServiceSourceControlList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermAppServiceSourceControlList
 ```
@@ -5093,7 +5093,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceSourceControlOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 dataazurermappservice.NewDataAzurermAppServiceSourceControlOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermAppServiceSourceControlOutputReference
 ```
@@ -5415,7 +5415,7 @@ func InternalValue() DataAzurermAppServiceSourceControl
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAppService.DataAzurermAppServiceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermappservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermappservice"
 
 dataazurermappservice.NewDataAzurermAppServiceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermAppServiceTimeoutsOutputReference
 ```

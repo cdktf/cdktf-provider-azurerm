@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/virtual_hub_routing_intent
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/virtual_hub_routing_intent
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,44 +8,44 @@ import * as cdktf from 'cdktf';
 
 export interface VirtualHubRoutingIntentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/virtual_hub_routing_intent#id VirtualHubRoutingIntent#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/virtual_hub_routing_intent#id VirtualHubRoutingIntent#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/virtual_hub_routing_intent#name VirtualHubRoutingIntent#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/virtual_hub_routing_intent#name VirtualHubRoutingIntent#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/virtual_hub_routing_intent#virtual_hub_id VirtualHubRoutingIntent#virtual_hub_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/virtual_hub_routing_intent#virtual_hub_id VirtualHubRoutingIntent#virtual_hub_id}
   */
   readonly virtualHubId: string;
   /**
   * routing_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/virtual_hub_routing_intent#routing_policy VirtualHubRoutingIntent#routing_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/virtual_hub_routing_intent#routing_policy VirtualHubRoutingIntent#routing_policy}
   */
   readonly routingPolicy: VirtualHubRoutingIntentRoutingPolicy[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/virtual_hub_routing_intent#timeouts VirtualHubRoutingIntent#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/virtual_hub_routing_intent#timeouts VirtualHubRoutingIntent#timeouts}
   */
   readonly timeouts?: VirtualHubRoutingIntentTimeouts;
 }
 export interface VirtualHubRoutingIntentRoutingPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/virtual_hub_routing_intent#destinations VirtualHubRoutingIntent#destinations}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/virtual_hub_routing_intent#destinations VirtualHubRoutingIntent#destinations}
   */
   readonly destinations: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/virtual_hub_routing_intent#name VirtualHubRoutingIntent#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/virtual_hub_routing_intent#name VirtualHubRoutingIntent#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/virtual_hub_routing_intent#next_hop VirtualHubRoutingIntent#next_hop}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/virtual_hub_routing_intent#next_hop VirtualHubRoutingIntent#next_hop}
   */
   readonly nextHop: string;
 }
@@ -184,19 +179,19 @@ export class VirtualHubRoutingIntentRoutingPolicyList extends cdktf.ComplexList 
 }
 export interface VirtualHubRoutingIntentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/virtual_hub_routing_intent#create VirtualHubRoutingIntent#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/virtual_hub_routing_intent#create VirtualHubRoutingIntent#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/virtual_hub_routing_intent#delete VirtualHubRoutingIntent#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/virtual_hub_routing_intent#delete VirtualHubRoutingIntent#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/virtual_hub_routing_intent#read VirtualHubRoutingIntent#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/virtual_hub_routing_intent#read VirtualHubRoutingIntent#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/virtual_hub_routing_intent#update VirtualHubRoutingIntent#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/virtual_hub_routing_intent#update VirtualHubRoutingIntent#update}
   */
   readonly update?: string;
 }
@@ -340,7 +335,7 @@ export class VirtualHubRoutingIntentTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/virtual_hub_routing_intent azurerm_virtual_hub_routing_intent}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/virtual_hub_routing_intent azurerm_virtual_hub_routing_intent}
 */
 export class VirtualHubRoutingIntent extends cdktf.TerraformResource {
 
@@ -354,7 +349,7 @@ export class VirtualHubRoutingIntent extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.74.0/docs/resources/virtual_hub_routing_intent azurerm_virtual_hub_routing_intent} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/virtual_hub_routing_intent azurerm_virtual_hub_routing_intent} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -365,7 +360,7 @@ export class VirtualHubRoutingIntent extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_virtual_hub_routing_intent',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.74.0',
+        providerVersion: '3.75.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
