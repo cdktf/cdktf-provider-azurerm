@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnostic.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.NewApiManagementDiagnostic(scope Construct, id *string, config ApiManagementDiagnosticConfig) ApiManagementDiagnostic
 ```
@@ -419,7 +419,7 @@ func ResetVerbosity()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnostic.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.ApiManagementDiagnostic_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnostic.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.ApiManagementDiagnostic_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ apimanagementdiagnostic.ApiManagementDiagnostic_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnostic.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.ApiManagementDiagnostic_IsTerraformResource(x interface{}) *bool
 ```
@@ -1016,11 +1016,11 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticBackendRequest.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 &apimanagementdiagnostic.ApiManagementDiagnosticBackendRequest {
 	BodyBytes: *f64,
-	DataMasking: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.apiManagementDiagnostic.ApiManagementDiagnosticBackendRequestDataMasking,
+	DataMasking: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementDiagnostic.ApiManagementDiagnosticBackendRequestDataMasking,
 	HeadersToLog: *[]*string,
 }
 ```
@@ -1078,7 +1078,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticBackendRequestDataMasking.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 &apimanagementdiagnostic.ApiManagementDiagnosticBackendRequestDataMasking {
 	Headers: interface{},
@@ -1128,7 +1128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticBackendRequestDataMaskingHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 &apimanagementdiagnostic.ApiManagementDiagnosticBackendRequestDataMaskingHeaders {
 	Mode: *string,
@@ -1174,7 +1174,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticBackendRequestDataMaskingQueryParams.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 &apimanagementdiagnostic.ApiManagementDiagnosticBackendRequestDataMaskingQueryParams {
 	Mode: *string,
@@ -1220,11 +1220,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticBackendResponse.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 &apimanagementdiagnostic.ApiManagementDiagnosticBackendResponse {
 	BodyBytes: *f64,
-	DataMasking: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.apiManagementDiagnostic.ApiManagementDiagnosticBackendResponseDataMasking,
+	DataMasking: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementDiagnostic.ApiManagementDiagnosticBackendResponseDataMasking,
 	HeadersToLog: *[]*string,
 }
 ```
@@ -1282,7 +1282,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticBackendResponseDataMasking.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 &apimanagementdiagnostic.ApiManagementDiagnosticBackendResponseDataMasking {
 	Headers: interface{},
@@ -1332,7 +1332,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticBackendResponseDataMaskingHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 &apimanagementdiagnostic.ApiManagementDiagnosticBackendResponseDataMaskingHeaders {
 	Mode: *string,
@@ -1378,7 +1378,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticBackendResponseDataMaskingQueryParams.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 &apimanagementdiagnostic.ApiManagementDiagnosticBackendResponseDataMaskingQueryParams {
 	Mode: *string,
@@ -1424,7 +1424,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 &apimanagementdiagnostic.ApiManagementDiagnosticConfig {
 	Connection: interface{},
@@ -1439,16 +1439,16 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiag
 	Identifier: *string,
 	ResourceGroupName: *string,
 	AlwaysLogErrors: interface{},
-	BackendRequest: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.apiManagementDiagnostic.ApiManagementDiagnosticBackendRequest,
-	BackendResponse: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.apiManagementDiagnostic.ApiManagementDiagnosticBackendResponse,
-	FrontendRequest: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.apiManagementDiagnostic.ApiManagementDiagnosticFrontendRequest,
-	FrontendResponse: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.apiManagementDiagnostic.ApiManagementDiagnosticFrontendResponse,
+	BackendRequest: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementDiagnostic.ApiManagementDiagnosticBackendRequest,
+	BackendResponse: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementDiagnostic.ApiManagementDiagnosticBackendResponse,
+	FrontendRequest: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementDiagnostic.ApiManagementDiagnosticFrontendRequest,
+	FrontendResponse: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementDiagnostic.ApiManagementDiagnosticFrontendResponse,
 	HttpCorrelationProtocol: *string,
 	Id: *string,
 	LogClientIp: interface{},
 	OperationNameFormat: *string,
 	SamplingPercentage: *f64,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.apiManagementDiagnostic.ApiManagementDiagnosticTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementDiagnostic.ApiManagementDiagnosticTimeouts,
 	Verbosity: *string,
 }
 ```
@@ -1763,11 +1763,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticFrontendRequest.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 &apimanagementdiagnostic.ApiManagementDiagnosticFrontendRequest {
 	BodyBytes: *f64,
-	DataMasking: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.apiManagementDiagnostic.ApiManagementDiagnosticFrontendRequestDataMasking,
+	DataMasking: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementDiagnostic.ApiManagementDiagnosticFrontendRequestDataMasking,
 	HeadersToLog: *[]*string,
 }
 ```
@@ -1825,7 +1825,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticFrontendRequestDataMasking.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 &apimanagementdiagnostic.ApiManagementDiagnosticFrontendRequestDataMasking {
 	Headers: interface{},
@@ -1875,7 +1875,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticFrontendRequestDataMaskingHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 &apimanagementdiagnostic.ApiManagementDiagnosticFrontendRequestDataMaskingHeaders {
 	Mode: *string,
@@ -1921,7 +1921,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticFrontendRequestDataMaskingQueryParams.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 &apimanagementdiagnostic.ApiManagementDiagnosticFrontendRequestDataMaskingQueryParams {
 	Mode: *string,
@@ -1967,11 +1967,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticFrontendResponse.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 &apimanagementdiagnostic.ApiManagementDiagnosticFrontendResponse {
 	BodyBytes: *f64,
-	DataMasking: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.apiManagementDiagnostic.ApiManagementDiagnosticFrontendResponseDataMasking,
+	DataMasking: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementDiagnostic.ApiManagementDiagnosticFrontendResponseDataMasking,
 	HeadersToLog: *[]*string,
 }
 ```
@@ -2029,7 +2029,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticFrontendResponseDataMasking.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 &apimanagementdiagnostic.ApiManagementDiagnosticFrontendResponseDataMasking {
 	Headers: interface{},
@@ -2079,7 +2079,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticFrontendResponseDataMaskingHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 &apimanagementdiagnostic.ApiManagementDiagnosticFrontendResponseDataMaskingHeaders {
 	Mode: *string,
@@ -2125,7 +2125,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticFrontendResponseDataMaskingQueryParams.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 &apimanagementdiagnostic.ApiManagementDiagnosticFrontendResponseDataMaskingQueryParams {
 	Mode: *string,
@@ -2171,7 +2171,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 &apimanagementdiagnostic.ApiManagementDiagnosticTimeouts {
 	Create: *string,
@@ -2247,7 +2247,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticBackendRequestDataMaskingHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.NewApiManagementDiagnosticBackendRequestDataMaskingHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementDiagnosticBackendRequestDataMaskingHeadersList
 ```
@@ -2390,7 +2390,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticBackendRequestDataMaskingHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.NewApiManagementDiagnosticBackendRequestDataMaskingHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementDiagnosticBackendRequestDataMaskingHeadersOutputReference
 ```
@@ -2701,7 +2701,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticBackendRequestDataMaskingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.NewApiManagementDiagnosticBackendRequestDataMaskingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementDiagnosticBackendRequestDataMaskingOutputReference
 ```
@@ -3034,7 +3034,7 @@ func InternalValue() ApiManagementDiagnosticBackendRequestDataMasking
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticBackendRequestDataMaskingQueryParamsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.NewApiManagementDiagnosticBackendRequestDataMaskingQueryParamsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementDiagnosticBackendRequestDataMaskingQueryParamsList
 ```
@@ -3177,7 +3177,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticBackendRequestDataMaskingQueryParamsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.NewApiManagementDiagnosticBackendRequestDataMaskingQueryParamsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementDiagnosticBackendRequestDataMaskingQueryParamsOutputReference
 ```
@@ -3488,7 +3488,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticBackendRequestOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.NewApiManagementDiagnosticBackendRequestOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementDiagnosticBackendRequestOutputReference
 ```
@@ -3837,7 +3837,7 @@ func InternalValue() ApiManagementDiagnosticBackendRequest
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticBackendResponseDataMaskingHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.NewApiManagementDiagnosticBackendResponseDataMaskingHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementDiagnosticBackendResponseDataMaskingHeadersList
 ```
@@ -3980,7 +3980,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticBackendResponseDataMaskingHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.NewApiManagementDiagnosticBackendResponseDataMaskingHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementDiagnosticBackendResponseDataMaskingHeadersOutputReference
 ```
@@ -4291,7 +4291,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticBackendResponseDataMaskingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.NewApiManagementDiagnosticBackendResponseDataMaskingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementDiagnosticBackendResponseDataMaskingOutputReference
 ```
@@ -4624,7 +4624,7 @@ func InternalValue() ApiManagementDiagnosticBackendResponseDataMasking
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticBackendResponseDataMaskingQueryParamsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.NewApiManagementDiagnosticBackendResponseDataMaskingQueryParamsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementDiagnosticBackendResponseDataMaskingQueryParamsList
 ```
@@ -4767,7 +4767,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticBackendResponseDataMaskingQueryParamsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.NewApiManagementDiagnosticBackendResponseDataMaskingQueryParamsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementDiagnosticBackendResponseDataMaskingQueryParamsOutputReference
 ```
@@ -5078,7 +5078,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticBackendResponseOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.NewApiManagementDiagnosticBackendResponseOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementDiagnosticBackendResponseOutputReference
 ```
@@ -5427,7 +5427,7 @@ func InternalValue() ApiManagementDiagnosticBackendResponse
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticFrontendRequestDataMaskingHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.NewApiManagementDiagnosticFrontendRequestDataMaskingHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementDiagnosticFrontendRequestDataMaskingHeadersList
 ```
@@ -5570,7 +5570,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticFrontendRequestDataMaskingHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.NewApiManagementDiagnosticFrontendRequestDataMaskingHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementDiagnosticFrontendRequestDataMaskingHeadersOutputReference
 ```
@@ -5881,7 +5881,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticFrontendRequestDataMaskingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.NewApiManagementDiagnosticFrontendRequestDataMaskingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementDiagnosticFrontendRequestDataMaskingOutputReference
 ```
@@ -6214,7 +6214,7 @@ func InternalValue() ApiManagementDiagnosticFrontendRequestDataMasking
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticFrontendRequestDataMaskingQueryParamsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.NewApiManagementDiagnosticFrontendRequestDataMaskingQueryParamsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementDiagnosticFrontendRequestDataMaskingQueryParamsList
 ```
@@ -6357,7 +6357,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticFrontendRequestDataMaskingQueryParamsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.NewApiManagementDiagnosticFrontendRequestDataMaskingQueryParamsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementDiagnosticFrontendRequestDataMaskingQueryParamsOutputReference
 ```
@@ -6668,7 +6668,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticFrontendRequestOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.NewApiManagementDiagnosticFrontendRequestOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementDiagnosticFrontendRequestOutputReference
 ```
@@ -7017,7 +7017,7 @@ func InternalValue() ApiManagementDiagnosticFrontendRequest
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticFrontendResponseDataMaskingHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.NewApiManagementDiagnosticFrontendResponseDataMaskingHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementDiagnosticFrontendResponseDataMaskingHeadersList
 ```
@@ -7160,7 +7160,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticFrontendResponseDataMaskingHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.NewApiManagementDiagnosticFrontendResponseDataMaskingHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementDiagnosticFrontendResponseDataMaskingHeadersOutputReference
 ```
@@ -7471,7 +7471,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticFrontendResponseDataMaskingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.NewApiManagementDiagnosticFrontendResponseDataMaskingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementDiagnosticFrontendResponseDataMaskingOutputReference
 ```
@@ -7804,7 +7804,7 @@ func InternalValue() ApiManagementDiagnosticFrontendResponseDataMasking
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticFrontendResponseDataMaskingQueryParamsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.NewApiManagementDiagnosticFrontendResponseDataMaskingQueryParamsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementDiagnosticFrontendResponseDataMaskingQueryParamsList
 ```
@@ -7947,7 +7947,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticFrontendResponseDataMaskingQueryParamsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.NewApiManagementDiagnosticFrontendResponseDataMaskingQueryParamsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementDiagnosticFrontendResponseDataMaskingQueryParamsOutputReference
 ```
@@ -8258,7 +8258,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticFrontendResponseOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.NewApiManagementDiagnosticFrontendResponseOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementDiagnosticFrontendResponseOutputReference
 ```
@@ -8607,7 +8607,7 @@ func InternalValue() ApiManagementDiagnosticFrontendResponse
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementDiagnostic.ApiManagementDiagnosticTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/apimanagementdiagnostic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementdiagnostic"
 
 apimanagementdiagnostic.NewApiManagementDiagnosticTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementDiagnosticTimeoutsOutputReference
 ```
