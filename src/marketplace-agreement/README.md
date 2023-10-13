@@ -1,3 +1,3 @@
 # `azurerm_marketplace_agreement`
 
-Refer to the Terraform Registory for docs: [`azurerm_marketplace_agreement`](https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/marketplace_agreement).
+Refer to the Terraform Registory for docs: [`azurerm_marketplace_agreement`](https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/marketplace_agreement).
