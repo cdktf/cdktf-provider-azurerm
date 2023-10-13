@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,196 +13,196 @@ import * as cdktf from 'cdktf';
 
 export interface ApplicationGatewayConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#enable_http2 ApplicationGateway#enable_http2}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#enable_http2 ApplicationGateway#enable_http2}
   */
   readonly enableHttp2?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#fips_enabled ApplicationGateway#fips_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#fips_enabled ApplicationGateway#fips_enabled}
   */
   readonly fipsEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#firewall_policy_id ApplicationGateway#firewall_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#firewall_policy_id ApplicationGateway#firewall_policy_id}
   */
   readonly firewallPolicyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#force_firewall_policy_association ApplicationGateway#force_firewall_policy_association}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#force_firewall_policy_association ApplicationGateway#force_firewall_policy_association}
   */
   readonly forceFirewallPolicyAssociation?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#id ApplicationGateway#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#id ApplicationGateway#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#location ApplicationGateway#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#location ApplicationGateway#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#name ApplicationGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#name ApplicationGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#resource_group_name ApplicationGateway#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#resource_group_name ApplicationGateway#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#tags ApplicationGateway#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#tags ApplicationGateway#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#zones ApplicationGateway#zones}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#zones ApplicationGateway#zones}
   */
   readonly zones?: string[];
   /**
   * authentication_certificate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#authentication_certificate ApplicationGateway#authentication_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#authentication_certificate ApplicationGateway#authentication_certificate}
   */
   readonly authenticationCertificate?: ApplicationGatewayAuthenticationCertificate[] | cdktf.IResolvable;
   /**
   * autoscale_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#autoscale_configuration ApplicationGateway#autoscale_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#autoscale_configuration ApplicationGateway#autoscale_configuration}
   */
   readonly autoscaleConfiguration?: ApplicationGatewayAutoscaleConfiguration;
   /**
   * backend_address_pool block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#backend_address_pool ApplicationGateway#backend_address_pool}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#backend_address_pool ApplicationGateway#backend_address_pool}
   */
   readonly backendAddressPool: ApplicationGatewayBackendAddressPool[] | cdktf.IResolvable;
   /**
   * backend_http_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#backend_http_settings ApplicationGateway#backend_http_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#backend_http_settings ApplicationGateway#backend_http_settings}
   */
   readonly backendHttpSettings: ApplicationGatewayBackendHttpSettings[] | cdktf.IResolvable;
   /**
   * custom_error_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#custom_error_configuration ApplicationGateway#custom_error_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#custom_error_configuration ApplicationGateway#custom_error_configuration}
   */
   readonly customErrorConfiguration?: ApplicationGatewayCustomErrorConfiguration[] | cdktf.IResolvable;
   /**
   * frontend_ip_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#frontend_ip_configuration ApplicationGateway#frontend_ip_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#frontend_ip_configuration ApplicationGateway#frontend_ip_configuration}
   */
   readonly frontendIpConfiguration: ApplicationGatewayFrontendIpConfiguration[] | cdktf.IResolvable;
   /**
   * frontend_port block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#frontend_port ApplicationGateway#frontend_port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#frontend_port ApplicationGateway#frontend_port}
   */
   readonly frontendPort: ApplicationGatewayFrontendPort[] | cdktf.IResolvable;
   /**
   * gateway_ip_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#gateway_ip_configuration ApplicationGateway#gateway_ip_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#gateway_ip_configuration ApplicationGateway#gateway_ip_configuration}
   */
   readonly gatewayIpConfiguration: ApplicationGatewayGatewayIpConfiguration[] | cdktf.IResolvable;
   /**
   * global block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#global ApplicationGateway#global}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#global ApplicationGateway#global}
   */
   readonly global?: ApplicationGatewayGlobal;
   /**
   * http_listener block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#http_listener ApplicationGateway#http_listener}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#http_listener ApplicationGateway#http_listener}
   */
   readonly httpListener: ApplicationGatewayHttpListener[] | cdktf.IResolvable;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#identity ApplicationGateway#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#identity ApplicationGateway#identity}
   */
   readonly identity?: ApplicationGatewayIdentity;
   /**
   * private_link_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#private_link_configuration ApplicationGateway#private_link_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#private_link_configuration ApplicationGateway#private_link_configuration}
   */
   readonly privateLinkConfiguration?: ApplicationGatewayPrivateLinkConfiguration[] | cdktf.IResolvable;
   /**
   * probe block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#probe ApplicationGateway#probe}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#probe ApplicationGateway#probe}
   */
   readonly probe?: ApplicationGatewayProbe[] | cdktf.IResolvable;
   /**
   * redirect_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#redirect_configuration ApplicationGateway#redirect_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#redirect_configuration ApplicationGateway#redirect_configuration}
   */
   readonly redirectConfiguration?: ApplicationGatewayRedirectConfiguration[] | cdktf.IResolvable;
   /**
   * request_routing_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#request_routing_rule ApplicationGateway#request_routing_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#request_routing_rule ApplicationGateway#request_routing_rule}
   */
   readonly requestRoutingRule: ApplicationGatewayRequestRoutingRule[] | cdktf.IResolvable;
   /**
   * rewrite_rule_set block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#rewrite_rule_set ApplicationGateway#rewrite_rule_set}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#rewrite_rule_set ApplicationGateway#rewrite_rule_set}
   */
   readonly rewriteRuleSet?: ApplicationGatewayRewriteRuleSet[] | cdktf.IResolvable;
   /**
   * sku block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#sku ApplicationGateway#sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#sku ApplicationGateway#sku}
   */
   readonly sku: ApplicationGatewaySku;
   /**
   * ssl_certificate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#ssl_certificate ApplicationGateway#ssl_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#ssl_certificate ApplicationGateway#ssl_certificate}
   */
   readonly sslCertificate?: ApplicationGatewaySslCertificate[] | cdktf.IResolvable;
   /**
   * ssl_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#ssl_policy ApplicationGateway#ssl_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#ssl_policy ApplicationGateway#ssl_policy}
   */
   readonly sslPolicy?: ApplicationGatewaySslPolicy;
   /**
   * ssl_profile block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#ssl_profile ApplicationGateway#ssl_profile}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#ssl_profile ApplicationGateway#ssl_profile}
   */
   readonly sslProfile?: ApplicationGatewaySslProfile[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#timeouts ApplicationGateway#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#timeouts ApplicationGateway#timeouts}
   */
   readonly timeouts?: ApplicationGatewayTimeouts;
   /**
   * trusted_client_certificate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#trusted_client_certificate ApplicationGateway#trusted_client_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#trusted_client_certificate ApplicationGateway#trusted_client_certificate}
   */
   readonly trustedClientCertificate?: ApplicationGatewayTrustedClientCertificate[] | cdktf.IResolvable;
   /**
   * trusted_root_certificate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#trusted_root_certificate ApplicationGateway#trusted_root_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#trusted_root_certificate ApplicationGateway#trusted_root_certificate}
   */
   readonly trustedRootCertificate?: ApplicationGatewayTrustedRootCertificate[] | cdktf.IResolvable;
   /**
   * url_path_map block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#url_path_map ApplicationGateway#url_path_map}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#url_path_map ApplicationGateway#url_path_map}
   */
   readonly urlPathMap?: ApplicationGatewayUrlPathMap[] | cdktf.IResolvable;
   /**
   * waf_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#waf_configuration ApplicationGateway#waf_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#waf_configuration ApplicationGateway#waf_configuration}
   */
   readonly wafConfiguration?: ApplicationGatewayWafConfiguration;
 }
@@ -277,11 +277,11 @@ export class ApplicationGatewayPrivateEndpointConnectionList extends cdktf.Compl
 }
 export interface ApplicationGatewayAuthenticationCertificate {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#data ApplicationGateway#data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#data ApplicationGateway#data}
   */
   readonly data: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#name ApplicationGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#name ApplicationGateway#name}
   */
   readonly name: string;
 }
@@ -400,11 +400,11 @@ export class ApplicationGatewayAuthenticationCertificateList extends cdktf.Compl
 }
 export interface ApplicationGatewayAutoscaleConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#max_capacity ApplicationGateway#max_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#max_capacity ApplicationGateway#max_capacity}
   */
   readonly maxCapacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#min_capacity ApplicationGateway#min_capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#min_capacity ApplicationGateway#min_capacity}
   */
   readonly minCapacity: number;
 }
@@ -489,15 +489,15 @@ export class ApplicationGatewayAutoscaleConfigurationOutputReference extends cdk
 }
 export interface ApplicationGatewayBackendAddressPool {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#fqdns ApplicationGateway#fqdns}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#fqdns ApplicationGateway#fqdns}
   */
   readonly fqdns?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#ip_addresses ApplicationGateway#ip_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#ip_addresses ApplicationGateway#ip_addresses}
   */
   readonly ipAddresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#name ApplicationGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#name ApplicationGateway#name}
   */
   readonly name: string;
 }
@@ -642,7 +642,7 @@ export class ApplicationGatewayBackendAddressPoolList extends cdktf.ComplexList 
 }
 export interface ApplicationGatewayBackendHttpSettingsAuthenticationCertificate {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#name ApplicationGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#name ApplicationGateway#name}
   */
   readonly name: string;
 }
@@ -741,11 +741,11 @@ export class ApplicationGatewayBackendHttpSettingsAuthenticationCertificateList 
 }
 export interface ApplicationGatewayBackendHttpSettingsConnectionDraining {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#drain_timeout_sec ApplicationGateway#drain_timeout_sec}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#drain_timeout_sec ApplicationGateway#drain_timeout_sec}
   */
   readonly drainTimeoutSec: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#enabled ApplicationGateway#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#enabled ApplicationGateway#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
 }
@@ -827,59 +827,59 @@ export class ApplicationGatewayBackendHttpSettingsConnectionDrainingOutputRefere
 }
 export interface ApplicationGatewayBackendHttpSettings {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#affinity_cookie_name ApplicationGateway#affinity_cookie_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#affinity_cookie_name ApplicationGateway#affinity_cookie_name}
   */
   readonly affinityCookieName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#cookie_based_affinity ApplicationGateway#cookie_based_affinity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#cookie_based_affinity ApplicationGateway#cookie_based_affinity}
   */
   readonly cookieBasedAffinity: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#host_name ApplicationGateway#host_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#host_name ApplicationGateway#host_name}
   */
   readonly hostName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#name ApplicationGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#name ApplicationGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#path ApplicationGateway#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#path ApplicationGateway#path}
   */
   readonly path?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#pick_host_name_from_backend_address ApplicationGateway#pick_host_name_from_backend_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#pick_host_name_from_backend_address ApplicationGateway#pick_host_name_from_backend_address}
   */
   readonly pickHostNameFromBackendAddress?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#port ApplicationGateway#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#port ApplicationGateway#port}
   */
   readonly port: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#probe_name ApplicationGateway#probe_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#probe_name ApplicationGateway#probe_name}
   */
   readonly probeName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#protocol ApplicationGateway#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#protocol ApplicationGateway#protocol}
   */
   readonly protocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#request_timeout ApplicationGateway#request_timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#request_timeout ApplicationGateway#request_timeout}
   */
   readonly requestTimeout?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#trusted_root_certificate_names ApplicationGateway#trusted_root_certificate_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#trusted_root_certificate_names ApplicationGateway#trusted_root_certificate_names}
   */
   readonly trustedRootCertificateNames?: string[];
   /**
   * authentication_certificate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#authentication_certificate ApplicationGateway#authentication_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#authentication_certificate ApplicationGateway#authentication_certificate}
   */
   readonly authenticationCertificate?: ApplicationGatewayBackendHttpSettingsAuthenticationCertificate[] | cdktf.IResolvable;
   /**
   * connection_draining block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#connection_draining ApplicationGateway#connection_draining}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#connection_draining ApplicationGateway#connection_draining}
   */
   readonly connectionDraining?: ApplicationGatewayBackendHttpSettingsConnectionDraining;
 }
@@ -1250,11 +1250,11 @@ export class ApplicationGatewayBackendHttpSettingsList extends cdktf.ComplexList
 }
 export interface ApplicationGatewayCustomErrorConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#custom_error_page_url ApplicationGateway#custom_error_page_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#custom_error_page_url ApplicationGateway#custom_error_page_url}
   */
   readonly customErrorPageUrl: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#status_code ApplicationGateway#status_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#status_code ApplicationGateway#status_code}
   */
   readonly statusCode: string;
 }
@@ -1373,27 +1373,27 @@ export class ApplicationGatewayCustomErrorConfigurationList extends cdktf.Comple
 }
 export interface ApplicationGatewayFrontendIpConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#name ApplicationGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#name ApplicationGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#private_ip_address ApplicationGateway#private_ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#private_ip_address ApplicationGateway#private_ip_address}
   */
   readonly privateIpAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#private_ip_address_allocation ApplicationGateway#private_ip_address_allocation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#private_ip_address_allocation ApplicationGateway#private_ip_address_allocation}
   */
   readonly privateIpAddressAllocation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#private_link_configuration_name ApplicationGateway#private_link_configuration_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#private_link_configuration_name ApplicationGateway#private_link_configuration_name}
   */
   readonly privateLinkConfigurationName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#public_ip_address_id ApplicationGateway#public_ip_address_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#public_ip_address_id ApplicationGateway#public_ip_address_id}
   */
   readonly publicIpAddressId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#subnet_id ApplicationGateway#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#subnet_id ApplicationGateway#subnet_id}
   */
   readonly subnetId?: string;
 }
@@ -1612,11 +1612,11 @@ export class ApplicationGatewayFrontendIpConfigurationList extends cdktf.Complex
 }
 export interface ApplicationGatewayFrontendPort {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#name ApplicationGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#name ApplicationGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#port ApplicationGateway#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#port ApplicationGateway#port}
   */
   readonly port: number;
 }
@@ -1735,11 +1735,11 @@ export class ApplicationGatewayFrontendPortList extends cdktf.ComplexList {
 }
 export interface ApplicationGatewayGatewayIpConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#name ApplicationGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#name ApplicationGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#subnet_id ApplicationGateway#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#subnet_id ApplicationGateway#subnet_id}
   */
   readonly subnetId: string;
 }
@@ -1858,11 +1858,11 @@ export class ApplicationGatewayGatewayIpConfigurationList extends cdktf.ComplexL
 }
 export interface ApplicationGatewayGlobal {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#request_buffering_enabled ApplicationGateway#request_buffering_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#request_buffering_enabled ApplicationGateway#request_buffering_enabled}
   */
   readonly requestBufferingEnabled: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#response_buffering_enabled ApplicationGateway#response_buffering_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#response_buffering_enabled ApplicationGateway#response_buffering_enabled}
   */
   readonly responseBufferingEnabled: boolean | cdktf.IResolvable;
 }
@@ -1944,11 +1944,11 @@ export class ApplicationGatewayGlobalOutputReference extends cdktf.ComplexObject
 }
 export interface ApplicationGatewayHttpListenerCustomErrorConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#custom_error_page_url ApplicationGateway#custom_error_page_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#custom_error_page_url ApplicationGateway#custom_error_page_url}
   */
   readonly customErrorPageUrl: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#status_code ApplicationGateway#status_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#status_code ApplicationGateway#status_code}
   */
   readonly statusCode: string;
 }
@@ -2067,49 +2067,49 @@ export class ApplicationGatewayHttpListenerCustomErrorConfigurationList extends 
 }
 export interface ApplicationGatewayHttpListener {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#firewall_policy_id ApplicationGateway#firewall_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#firewall_policy_id ApplicationGateway#firewall_policy_id}
   */
   readonly firewallPolicyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#frontend_ip_configuration_name ApplicationGateway#frontend_ip_configuration_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#frontend_ip_configuration_name ApplicationGateway#frontend_ip_configuration_name}
   */
   readonly frontendIpConfigurationName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#frontend_port_name ApplicationGateway#frontend_port_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#frontend_port_name ApplicationGateway#frontend_port_name}
   */
   readonly frontendPortName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#host_name ApplicationGateway#host_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#host_name ApplicationGateway#host_name}
   */
   readonly hostName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#host_names ApplicationGateway#host_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#host_names ApplicationGateway#host_names}
   */
   readonly hostNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#name ApplicationGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#name ApplicationGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#protocol ApplicationGateway#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#protocol ApplicationGateway#protocol}
   */
   readonly protocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#require_sni ApplicationGateway#require_sni}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#require_sni ApplicationGateway#require_sni}
   */
   readonly requireSni?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#ssl_certificate_name ApplicationGateway#ssl_certificate_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#ssl_certificate_name ApplicationGateway#ssl_certificate_name}
   */
   readonly sslCertificateName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#ssl_profile_name ApplicationGateway#ssl_profile_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#ssl_profile_name ApplicationGateway#ssl_profile_name}
   */
   readonly sslProfileName?: string;
   /**
   * custom_error_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#custom_error_configuration ApplicationGateway#custom_error_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#custom_error_configuration ApplicationGateway#custom_error_configuration}
   */
   readonly customErrorConfiguration?: ApplicationGatewayHttpListenerCustomErrorConfiguration[] | cdktf.IResolvable;
 }
@@ -2449,11 +2449,11 @@ export class ApplicationGatewayHttpListenerList extends cdktf.ComplexList {
 }
 export interface ApplicationGatewayIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#identity_ids ApplicationGateway#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#identity_ids ApplicationGateway#identity_ids}
   */
   readonly identityIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#type ApplicationGateway#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#type ApplicationGateway#type}
   */
   readonly type: string;
 }
@@ -2535,23 +2535,23 @@ export class ApplicationGatewayIdentityOutputReference extends cdktf.ComplexObje
 }
 export interface ApplicationGatewayPrivateLinkConfigurationIpConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#name ApplicationGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#name ApplicationGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#primary ApplicationGateway#primary}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#primary ApplicationGateway#primary}
   */
   readonly primary: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#private_ip_address ApplicationGateway#private_ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#private_ip_address ApplicationGateway#private_ip_address}
   */
   readonly privateIpAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#private_ip_address_allocation ApplicationGateway#private_ip_address_allocation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#private_ip_address_allocation ApplicationGateway#private_ip_address_allocation}
   */
   readonly privateIpAddressAllocation: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#subnet_id ApplicationGateway#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#subnet_id ApplicationGateway#subnet_id}
   */
   readonly subnetId: string;
 }
@@ -2728,13 +2728,13 @@ export class ApplicationGatewayPrivateLinkConfigurationIpConfigurationList exten
 }
 export interface ApplicationGatewayPrivateLinkConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#name ApplicationGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#name ApplicationGateway#name}
   */
   readonly name: string;
   /**
   * ip_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#ip_configuration ApplicationGateway#ip_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#ip_configuration ApplicationGateway#ip_configuration}
   */
   readonly ipConfiguration: ApplicationGatewayPrivateLinkConfigurationIpConfiguration[] | cdktf.IResolvable;
 }
@@ -2853,11 +2853,11 @@ export class ApplicationGatewayPrivateLinkConfigurationList extends cdktf.Comple
 }
 export interface ApplicationGatewayProbeMatch {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#body ApplicationGateway#body}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#body ApplicationGateway#body}
   */
   readonly body?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#status_code ApplicationGateway#status_code}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#status_code ApplicationGateway#status_code}
   */
   readonly statusCode: string[];
 }
@@ -2942,49 +2942,49 @@ export class ApplicationGatewayProbeMatchOutputReference extends cdktf.ComplexOb
 }
 export interface ApplicationGatewayProbe {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#host ApplicationGateway#host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#host ApplicationGateway#host}
   */
   readonly host?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#interval ApplicationGateway#interval}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#interval ApplicationGateway#interval}
   */
   readonly interval: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#minimum_servers ApplicationGateway#minimum_servers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#minimum_servers ApplicationGateway#minimum_servers}
   */
   readonly minimumServers?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#name ApplicationGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#name ApplicationGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#path ApplicationGateway#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#path ApplicationGateway#path}
   */
   readonly path: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#pick_host_name_from_backend_http_settings ApplicationGateway#pick_host_name_from_backend_http_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#pick_host_name_from_backend_http_settings ApplicationGateway#pick_host_name_from_backend_http_settings}
   */
   readonly pickHostNameFromBackendHttpSettings?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#port ApplicationGateway#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#port ApplicationGateway#port}
   */
   readonly port?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#protocol ApplicationGateway#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#protocol ApplicationGateway#protocol}
   */
   readonly protocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#timeout ApplicationGateway#timeout}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#timeout ApplicationGateway#timeout}
   */
   readonly timeout: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#unhealthy_threshold ApplicationGateway#unhealthy_threshold}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#unhealthy_threshold ApplicationGateway#unhealthy_threshold}
   */
   readonly unhealthyThreshold: number;
   /**
   * match block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#match ApplicationGateway#match}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#match ApplicationGateway#match}
   */
   readonly match?: ApplicationGatewayProbeMatch;
 }
@@ -3298,27 +3298,27 @@ export class ApplicationGatewayProbeList extends cdktf.ComplexList {
 }
 export interface ApplicationGatewayRedirectConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#include_path ApplicationGateway#include_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#include_path ApplicationGateway#include_path}
   */
   readonly includePath?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#include_query_string ApplicationGateway#include_query_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#include_query_string ApplicationGateway#include_query_string}
   */
   readonly includeQueryString?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#name ApplicationGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#name ApplicationGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#redirect_type ApplicationGateway#redirect_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#redirect_type ApplicationGateway#redirect_type}
   */
   readonly redirectType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#target_listener_name ApplicationGateway#target_listener_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#target_listener_name ApplicationGateway#target_listener_name}
   */
   readonly targetListenerName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#target_url ApplicationGateway#target_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#target_url ApplicationGateway#target_url}
   */
   readonly targetUrl?: string;
 }
@@ -3534,39 +3534,39 @@ export class ApplicationGatewayRedirectConfigurationList extends cdktf.ComplexLi
 }
 export interface ApplicationGatewayRequestRoutingRule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#backend_address_pool_name ApplicationGateway#backend_address_pool_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#backend_address_pool_name ApplicationGateway#backend_address_pool_name}
   */
   readonly backendAddressPoolName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#backend_http_settings_name ApplicationGateway#backend_http_settings_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#backend_http_settings_name ApplicationGateway#backend_http_settings_name}
   */
   readonly backendHttpSettingsName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#http_listener_name ApplicationGateway#http_listener_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#http_listener_name ApplicationGateway#http_listener_name}
   */
   readonly httpListenerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#name ApplicationGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#name ApplicationGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#priority ApplicationGateway#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#priority ApplicationGateway#priority}
   */
   readonly priority?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#redirect_configuration_name ApplicationGateway#redirect_configuration_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#redirect_configuration_name ApplicationGateway#redirect_configuration_name}
   */
   readonly redirectConfigurationName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#rewrite_rule_set_name ApplicationGateway#rewrite_rule_set_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#rewrite_rule_set_name ApplicationGateway#rewrite_rule_set_name}
   */
   readonly rewriteRuleSetName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#rule_type ApplicationGateway#rule_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#rule_type ApplicationGateway#rule_type}
   */
   readonly ruleType: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#url_path_map_name ApplicationGateway#url_path_map_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#url_path_map_name ApplicationGateway#url_path_map_name}
   */
   readonly urlPathMapName?: string;
 }
@@ -3873,19 +3873,19 @@ export class ApplicationGatewayRequestRoutingRuleList extends cdktf.ComplexList 
 }
 export interface ApplicationGatewayRewriteRuleSetRewriteRuleCondition {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#ignore_case ApplicationGateway#ignore_case}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#ignore_case ApplicationGateway#ignore_case}
   */
   readonly ignoreCase?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#negate ApplicationGateway#negate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#negate ApplicationGateway#negate}
   */
   readonly negate?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#pattern ApplicationGateway#pattern}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#pattern ApplicationGateway#pattern}
   */
   readonly pattern: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#variable ApplicationGateway#variable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#variable ApplicationGateway#variable}
   */
   readonly variable: string;
 }
@@ -4045,11 +4045,11 @@ export class ApplicationGatewayRewriteRuleSetRewriteRuleConditionList extends cd
 }
 export interface ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#header_name ApplicationGateway#header_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#header_name ApplicationGateway#header_name}
   */
   readonly headerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#header_value ApplicationGateway#header_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#header_value ApplicationGateway#header_value}
   */
   readonly headerValue: string;
 }
@@ -4163,11 +4163,11 @@ export class ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurati
 }
 export interface ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#header_name ApplicationGateway#header_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#header_name ApplicationGateway#header_name}
   */
   readonly headerName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#header_value ApplicationGateway#header_value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#header_value ApplicationGateway#header_value}
   */
   readonly headerValue: string;
 }
@@ -4281,19 +4281,19 @@ export class ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurat
 }
 export interface ApplicationGatewayRewriteRuleSetRewriteRuleUrl {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#components ApplicationGateway#components}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#components ApplicationGateway#components}
   */
   readonly components?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#path ApplicationGateway#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#path ApplicationGateway#path}
   */
   readonly path?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#query_string ApplicationGateway#query_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#query_string ApplicationGateway#query_string}
   */
   readonly queryString?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#reroute ApplicationGateway#reroute}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#reroute ApplicationGateway#reroute}
   */
   readonly reroute?: boolean | cdktf.IResolvable;
 }
@@ -4427,35 +4427,35 @@ export class ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference exten
 }
 export interface ApplicationGatewayRewriteRuleSetRewriteRule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#name ApplicationGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#name ApplicationGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#rule_sequence ApplicationGateway#rule_sequence}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#rule_sequence ApplicationGateway#rule_sequence}
   */
   readonly ruleSequence: number;
   /**
   * condition block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#condition ApplicationGateway#condition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#condition ApplicationGateway#condition}
   */
   readonly condition?: ApplicationGatewayRewriteRuleSetRewriteRuleCondition[] | cdktf.IResolvable;
   /**
   * request_header_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#request_header_configuration ApplicationGateway#request_header_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#request_header_configuration ApplicationGateway#request_header_configuration}
   */
   readonly requestHeaderConfiguration?: ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration[] | cdktf.IResolvable;
   /**
   * response_header_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#response_header_configuration ApplicationGateway#response_header_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#response_header_configuration ApplicationGateway#response_header_configuration}
   */
   readonly responseHeaderConfiguration?: ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration[] | cdktf.IResolvable;
   /**
   * url block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#url ApplicationGateway#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#url ApplicationGateway#url}
   */
   readonly url?: ApplicationGatewayRewriteRuleSetRewriteRuleUrl;
 }
@@ -4661,13 +4661,13 @@ export class ApplicationGatewayRewriteRuleSetRewriteRuleList extends cdktf.Compl
 }
 export interface ApplicationGatewayRewriteRuleSet {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#name ApplicationGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#name ApplicationGateway#name}
   */
   readonly name: string;
   /**
   * rewrite_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#rewrite_rule ApplicationGateway#rewrite_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#rewrite_rule ApplicationGateway#rewrite_rule}
   */
   readonly rewriteRule?: ApplicationGatewayRewriteRuleSetRewriteRule[] | cdktf.IResolvable;
 }
@@ -4789,15 +4789,15 @@ export class ApplicationGatewayRewriteRuleSetList extends cdktf.ComplexList {
 }
 export interface ApplicationGatewaySku {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#capacity ApplicationGateway#capacity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#capacity ApplicationGateway#capacity}
   */
   readonly capacity?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#name ApplicationGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#name ApplicationGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#tier ApplicationGateway#tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#tier ApplicationGateway#tier}
   */
   readonly tier: string;
 }
@@ -4902,19 +4902,19 @@ export class ApplicationGatewaySkuOutputReference extends cdktf.ComplexObject {
 }
 export interface ApplicationGatewaySslCertificate {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#data ApplicationGateway#data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#data ApplicationGateway#data}
   */
   readonly data?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#key_vault_secret_id ApplicationGateway#key_vault_secret_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#key_vault_secret_id ApplicationGateway#key_vault_secret_id}
   */
   readonly keyVaultSecretId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#name ApplicationGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#name ApplicationGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#password ApplicationGateway#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#password ApplicationGateway#password}
   */
   readonly password?: string;
 }
@@ -5087,23 +5087,23 @@ export class ApplicationGatewaySslCertificateList extends cdktf.ComplexList {
 }
 export interface ApplicationGatewaySslPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#cipher_suites ApplicationGateway#cipher_suites}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#cipher_suites ApplicationGateway#cipher_suites}
   */
   readonly cipherSuites?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#disabled_protocols ApplicationGateway#disabled_protocols}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#disabled_protocols ApplicationGateway#disabled_protocols}
   */
   readonly disabledProtocols?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#min_protocol_version ApplicationGateway#min_protocol_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#min_protocol_version ApplicationGateway#min_protocol_version}
   */
   readonly minProtocolVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#policy_name ApplicationGateway#policy_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#policy_name ApplicationGateway#policy_name}
   */
   readonly policyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#policy_type ApplicationGateway#policy_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#policy_type ApplicationGateway#policy_type}
   */
   readonly policyType?: string;
 }
@@ -5260,23 +5260,23 @@ export class ApplicationGatewaySslPolicyOutputReference extends cdktf.ComplexObj
 }
 export interface ApplicationGatewaySslProfileSslPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#cipher_suites ApplicationGateway#cipher_suites}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#cipher_suites ApplicationGateway#cipher_suites}
   */
   readonly cipherSuites?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#disabled_protocols ApplicationGateway#disabled_protocols}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#disabled_protocols ApplicationGateway#disabled_protocols}
   */
   readonly disabledProtocols?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#min_protocol_version ApplicationGateway#min_protocol_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#min_protocol_version ApplicationGateway#min_protocol_version}
   */
   readonly minProtocolVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#policy_name ApplicationGateway#policy_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#policy_name ApplicationGateway#policy_name}
   */
   readonly policyName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#policy_type ApplicationGateway#policy_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#policy_type ApplicationGateway#policy_type}
   */
   readonly policyType?: string;
 }
@@ -5433,25 +5433,25 @@ export class ApplicationGatewaySslProfileSslPolicyOutputReference extends cdktf.
 }
 export interface ApplicationGatewaySslProfile {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#name ApplicationGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#name ApplicationGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#trusted_client_certificate_names ApplicationGateway#trusted_client_certificate_names}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#trusted_client_certificate_names ApplicationGateway#trusted_client_certificate_names}
   */
   readonly trustedClientCertificateNames?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#verify_client_cert_issuer_dn ApplicationGateway#verify_client_cert_issuer_dn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#verify_client_cert_issuer_dn ApplicationGateway#verify_client_cert_issuer_dn}
   */
   readonly verifyClientCertIssuerDn?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#verify_client_certificate_revocation ApplicationGateway#verify_client_certificate_revocation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#verify_client_certificate_revocation ApplicationGateway#verify_client_certificate_revocation}
   */
   readonly verifyClientCertificateRevocation?: string;
   /**
   * ssl_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#ssl_policy ApplicationGateway#ssl_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#ssl_policy ApplicationGateway#ssl_policy}
   */
   readonly sslPolicy?: ApplicationGatewaySslProfileSslPolicy;
 }
@@ -5642,19 +5642,19 @@ export class ApplicationGatewaySslProfileList extends cdktf.ComplexList {
 }
 export interface ApplicationGatewayTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#create ApplicationGateway#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#create ApplicationGateway#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#delete ApplicationGateway#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#delete ApplicationGateway#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#read ApplicationGateway#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#read ApplicationGateway#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#update ApplicationGateway#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#update ApplicationGateway#update}
   */
   readonly update?: string;
 }
@@ -5798,11 +5798,11 @@ export class ApplicationGatewayTimeoutsOutputReference extends cdktf.ComplexObje
 }
 export interface ApplicationGatewayTrustedClientCertificate {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#data ApplicationGateway#data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#data ApplicationGateway#data}
   */
   readonly data: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#name ApplicationGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#name ApplicationGateway#name}
   */
   readonly name: string;
 }
@@ -5921,15 +5921,15 @@ export class ApplicationGatewayTrustedClientCertificateList extends cdktf.Comple
 }
 export interface ApplicationGatewayTrustedRootCertificate {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#data ApplicationGateway#data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#data ApplicationGateway#data}
   */
   readonly data?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#key_vault_secret_id ApplicationGateway#key_vault_secret_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#key_vault_secret_id ApplicationGateway#key_vault_secret_id}
   */
   readonly keyVaultSecretId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#name ApplicationGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#name ApplicationGateway#name}
   */
   readonly name: string;
 }
@@ -6074,31 +6074,31 @@ export class ApplicationGatewayTrustedRootCertificateList extends cdktf.ComplexL
 }
 export interface ApplicationGatewayUrlPathMapPathRule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#backend_address_pool_name ApplicationGateway#backend_address_pool_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#backend_address_pool_name ApplicationGateway#backend_address_pool_name}
   */
   readonly backendAddressPoolName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#backend_http_settings_name ApplicationGateway#backend_http_settings_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#backend_http_settings_name ApplicationGateway#backend_http_settings_name}
   */
   readonly backendHttpSettingsName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#firewall_policy_id ApplicationGateway#firewall_policy_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#firewall_policy_id ApplicationGateway#firewall_policy_id}
   */
   readonly firewallPolicyId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#name ApplicationGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#name ApplicationGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#paths ApplicationGateway#paths}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#paths ApplicationGateway#paths}
   */
   readonly paths: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#redirect_configuration_name ApplicationGateway#redirect_configuration_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#redirect_configuration_name ApplicationGateway#redirect_configuration_name}
   */
   readonly redirectConfigurationName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#rewrite_rule_set_name ApplicationGateway#rewrite_rule_set_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#rewrite_rule_set_name ApplicationGateway#rewrite_rule_set_name}
   */
   readonly rewriteRuleSetName?: string;
 }
@@ -6352,29 +6352,29 @@ export class ApplicationGatewayUrlPathMapPathRuleList extends cdktf.ComplexList 
 }
 export interface ApplicationGatewayUrlPathMap {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#default_backend_address_pool_name ApplicationGateway#default_backend_address_pool_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#default_backend_address_pool_name ApplicationGateway#default_backend_address_pool_name}
   */
   readonly defaultBackendAddressPoolName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#default_backend_http_settings_name ApplicationGateway#default_backend_http_settings_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#default_backend_http_settings_name ApplicationGateway#default_backend_http_settings_name}
   */
   readonly defaultBackendHttpSettingsName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#default_redirect_configuration_name ApplicationGateway#default_redirect_configuration_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#default_redirect_configuration_name ApplicationGateway#default_redirect_configuration_name}
   */
   readonly defaultRedirectConfigurationName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#default_rewrite_rule_set_name ApplicationGateway#default_rewrite_rule_set_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#default_rewrite_rule_set_name ApplicationGateway#default_rewrite_rule_set_name}
   */
   readonly defaultRewriteRuleSetName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#name ApplicationGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#name ApplicationGateway#name}
   */
   readonly name: string;
   /**
   * path_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#path_rule ApplicationGateway#path_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#path_rule ApplicationGateway#path_rule}
   */
   readonly pathRule: ApplicationGatewayUrlPathMapPathRule[] | cdktf.IResolvable;
 }
@@ -6605,11 +6605,11 @@ export class ApplicationGatewayUrlPathMapList extends cdktf.ComplexList {
 }
 export interface ApplicationGatewayWafConfigurationDisabledRuleGroup {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#rule_group_name ApplicationGateway#rule_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#rule_group_name ApplicationGateway#rule_group_name}
   */
   readonly ruleGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#rules ApplicationGateway#rules}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#rules ApplicationGateway#rules}
   */
   readonly rules?: number[];
 }
@@ -6726,15 +6726,15 @@ export class ApplicationGatewayWafConfigurationDisabledRuleGroupList extends cdk
 }
 export interface ApplicationGatewayWafConfigurationExclusion {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#match_variable ApplicationGateway#match_variable}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#match_variable ApplicationGateway#match_variable}
   */
   readonly matchVariable: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#selector ApplicationGateway#selector}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#selector ApplicationGateway#selector}
   */
   readonly selector?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#selector_match_operator ApplicationGateway#selector_match_operator}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#selector_match_operator ApplicationGateway#selector_match_operator}
   */
   readonly selectorMatchOperator?: string;
 }
@@ -6874,43 +6874,43 @@ export class ApplicationGatewayWafConfigurationExclusionList extends cdktf.Compl
 }
 export interface ApplicationGatewayWafConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#enabled ApplicationGateway#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#enabled ApplicationGateway#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#file_upload_limit_mb ApplicationGateway#file_upload_limit_mb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#file_upload_limit_mb ApplicationGateway#file_upload_limit_mb}
   */
   readonly fileUploadLimitMb?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#firewall_mode ApplicationGateway#firewall_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#firewall_mode ApplicationGateway#firewall_mode}
   */
   readonly firewallMode: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#max_request_body_size_kb ApplicationGateway#max_request_body_size_kb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#max_request_body_size_kb ApplicationGateway#max_request_body_size_kb}
   */
   readonly maxRequestBodySizeKb?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#request_body_check ApplicationGateway#request_body_check}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#request_body_check ApplicationGateway#request_body_check}
   */
   readonly requestBodyCheck?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#rule_set_type ApplicationGateway#rule_set_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#rule_set_type ApplicationGateway#rule_set_type}
   */
   readonly ruleSetType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#rule_set_version ApplicationGateway#rule_set_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#rule_set_version ApplicationGateway#rule_set_version}
   */
   readonly ruleSetVersion: string;
   /**
   * disabled_rule_group block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#disabled_rule_group ApplicationGateway#disabled_rule_group}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#disabled_rule_group ApplicationGateway#disabled_rule_group}
   */
   readonly disabledRuleGroup?: ApplicationGatewayWafConfigurationDisabledRuleGroup[] | cdktf.IResolvable;
   /**
   * exclusion block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway#exclusion ApplicationGateway#exclusion}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway#exclusion ApplicationGateway#exclusion}
   */
   readonly exclusion?: ApplicationGatewayWafConfigurationExclusion[] | cdktf.IResolvable;
 }
@@ -7150,7 +7150,7 @@ export class ApplicationGatewayWafConfigurationOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway azurerm_application_gateway}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway azurerm_application_gateway}
 */
 export class ApplicationGateway extends cdktf.TerraformResource {
 
@@ -7164,7 +7164,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/resources/application_gateway azurerm_application_gateway} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_gateway azurerm_application_gateway} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -7175,7 +7175,7 @@ export class ApplicationGateway extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_application_gateway',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.75.0',
+        providerVersion: '3.76.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

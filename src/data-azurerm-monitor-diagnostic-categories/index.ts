@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/data-sources/monitor_diagnostic_categories
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/monitor_diagnostic_categories
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,26 +13,26 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermMonitorDiagnosticCategoriesConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/data-sources/monitor_diagnostic_categories#id DataAzurermMonitorDiagnosticCategories#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/monitor_diagnostic_categories#id DataAzurermMonitorDiagnosticCategories#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/data-sources/monitor_diagnostic_categories#resource_id DataAzurermMonitorDiagnosticCategories#resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/monitor_diagnostic_categories#resource_id DataAzurermMonitorDiagnosticCategories#resource_id}
   */
   readonly resourceId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/data-sources/monitor_diagnostic_categories#timeouts DataAzurermMonitorDiagnosticCategories#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/monitor_diagnostic_categories#timeouts DataAzurermMonitorDiagnosticCategories#timeouts}
   */
   readonly timeouts?: DataAzurermMonitorDiagnosticCategoriesTimeouts;
 }
 export interface DataAzurermMonitorDiagnosticCategoriesTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/data-sources/monitor_diagnostic_categories#read DataAzurermMonitorDiagnosticCategories#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/monitor_diagnostic_categories#read DataAzurermMonitorDiagnosticCategories#read}
   */
   readonly read?: string;
 }
@@ -107,7 +107,7 @@ export class DataAzurermMonitorDiagnosticCategoriesTimeoutsOutputReference exten
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/data-sources/monitor_diagnostic_categories azurerm_monitor_diagnostic_categories}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/monitor_diagnostic_categories azurerm_monitor_diagnostic_categories}
 */
 export class DataAzurermMonitorDiagnosticCategories extends cdktf.TerraformDataSource {
 
@@ -121,7 +121,7 @@ export class DataAzurermMonitorDiagnosticCategories extends cdktf.TerraformDataS
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.75.0/docs/data-sources/monitor_diagnostic_categories azurerm_monitor_diagnostic_categories} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/monitor_diagnostic_categories azurerm_monitor_diagnostic_categories} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -132,7 +132,7 @@ export class DataAzurermMonitorDiagnosticCategories extends cdktf.TerraformDataS
       terraformResourceType: 'azurerm_monitor_diagnostic_categories',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.75.0',
+        providerVersion: '3.76.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

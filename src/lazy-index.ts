@@ -774,6 +774,7 @@ Object.defineProperty(exports, 'securityCenterContact', { get: function () { ret
 Object.defineProperty(exports, 'securityCenterServerVulnerabilityAssessment', { get: function () { return require('./security-center-server-vulnerability-assessment'); } });
 Object.defineProperty(exports, 'securityCenterServerVulnerabilityAssessmentVirtualMachine', { get: function () { return require('./security-center-server-vulnerability-assessment-virtual-machine'); } });
 Object.defineProperty(exports, 'securityCenterSetting', { get: function () { return require('./security-center-setting'); } });
+Object.defineProperty(exports, 'securityCenterStorageDefender', { get: function () { return require('./security-center-storage-defender'); } });
 Object.defineProperty(exports, 'securityCenterSubscriptionPricing', { get: function () { return require('./security-center-subscription-pricing'); } });
 Object.defineProperty(exports, 'securityCenterWorkspace', { get: function () { return require('./security-center-workspace'); } });
 Object.defineProperty(exports, 'sentinelAlertRuleAnomalyBuiltIn', { get: function () { return require('./sentinel-alert-rule-anomaly-built-in'); } });
@@ -853,6 +854,7 @@ Object.defineProperty(exports, 'springCloudApp', { get: function () { return req
 Object.defineProperty(exports, 'springCloudAppCosmosdbAssociation', { get: function () { return require('./spring-cloud-app-cosmosdb-association'); } });
 Object.defineProperty(exports, 'springCloudAppMysqlAssociation', { get: function () { return require('./spring-cloud-app-mysql-association'); } });
 Object.defineProperty(exports, 'springCloudAppRedisAssociation', { get: function () { return require('./spring-cloud-app-redis-association'); } });
+Object.defineProperty(exports, 'springCloudApplicationInsightsApplicationPerformanceMonitoring', { get: function () { return require('./spring-cloud-application-insights-application-performance-monitoring'); } });
 Object.defineProperty(exports, 'springCloudApplicationLiveView', { get: function () { return require('./spring-cloud-application-live-view'); } });
 Object.defineProperty(exports, 'springCloudBuildDeployment', { get: function () { return require('./spring-cloud-build-deployment'); } });
 Object.defineProperty(exports, 'springCloudBuildPackBinding', { get: function () { return require('./spring-cloud-build-pack-binding'); } });
