@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mobileNetworkPacketCoreDataPlane.MobileNetworkPacketCoreDataPlane.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mobilenetworkpacketcoredataplane"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworkpacketcoredataplane"
 
 mobilenetworkpacketcoredataplane.NewMobileNetworkPacketCoreDataPlane(scope Construct, id *string, config MobileNetworkPacketCoreDataPlaneConfig) MobileNetworkPacketCoreDataPlane
 ```
@@ -332,7 +332,7 @@ func ResetUserPlaneAccessName()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mobileNetworkPacketCoreDataPlane.MobileNetworkPacketCoreDataPlane.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mobilenetworkpacketcoredataplane"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworkpacketcoredataplane"
 
 mobilenetworkpacketcoredataplane.MobileNetworkPacketCoreDataPlane_IsConstruct(x interface{}) *bool
 ```
@@ -364,7 +364,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mobileNetworkPacketCoreDataPlane.MobileNetworkPacketCoreDataPlane.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mobilenetworkpacketcoredataplane"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworkpacketcoredataplane"
 
 mobilenetworkpacketcoredataplane.MobileNetworkPacketCoreDataPlane_IsTerraformElement(x interface{}) *bool
 ```
@@ -378,7 +378,7 @@ mobilenetworkpacketcoredataplane.MobileNetworkPacketCoreDataPlane_IsTerraformEle
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mobileNetworkPacketCoreDataPlane.MobileNetworkPacketCoreDataPlane.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mobilenetworkpacketcoredataplane"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworkpacketcoredataplane"
 
 mobilenetworkpacketcoredataplane.MobileNetworkPacketCoreDataPlane_IsTerraformResource(x interface{}) *bool
 ```
@@ -797,7 +797,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mobileNetworkPacketCoreDataPlane.MobileNetworkPacketCoreDataPlaneConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mobilenetworkpacketcoredataplane"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworkpacketcoredataplane"
 
 &mobilenetworkpacketcoredataplane.MobileNetworkPacketCoreDataPlaneConfig {
 	Connection: interface{},
@@ -812,7 +812,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mobilenetworkpack
 	Name: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.mobileNetworkPacketCoreDataPlane.MobileNetworkPacketCoreDataPlaneTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mobileNetworkPacketCoreDataPlane.MobileNetworkPacketCoreDataPlaneTimeouts,
 	UserPlaneAccessIpv4Address: *string,
 	UserPlaneAccessIpv4Gateway: *string,
 	UserPlaneAccessIpv4Subnet: *string,
@@ -1044,7 +1044,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mobileNetworkPacketCoreDataPlane.MobileNetworkPacketCoreDataPlaneTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mobilenetworkpacketcoredataplane"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworkpacketcoredataplane"
 
 &mobilenetworkpacketcoredataplane.MobileNetworkPacketCoreDataPlaneTimeouts {
 	Create: *string,
@@ -1120,7 +1120,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mobileNetworkPacketCoreDataPlane.MobileNetworkPacketCoreDataPlaneTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mobilenetworkpacketcoredataplane"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworkpacketcoredataplane"
 
 mobilenetworkpacketcoredataplane.NewMobileNetworkPacketCoreDataPlaneTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MobileNetworkPacketCoreDataPlaneTimeoutsOutputReference
 ```

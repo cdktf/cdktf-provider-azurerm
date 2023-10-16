@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeSelfHosted.DataFactoryIntegrationRuntimeSelfHosted.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/datafactoryintegrationruntimeselfhosted"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeselfhosted"
 
 datafactoryintegrationruntimeselfhosted.NewDataFactoryIntegrationRuntimeSelfHosted(scope Construct, id *string, config DataFactoryIntegrationRuntimeSelfHostedConfig) DataFactoryIntegrationRuntimeSelfHosted
 ```
@@ -324,7 +324,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeSelfHosted.DataFactoryIntegrationRuntimeSelfHosted.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/datafactoryintegrationruntimeselfhosted"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeselfhosted"
 
 datafactoryintegrationruntimeselfhosted.DataFactoryIntegrationRuntimeSelfHosted_IsConstruct(x interface{}) *bool
 ```
@@ -356,7 +356,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeSelfHosted.DataFactoryIntegrationRuntimeSelfHosted.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/datafactoryintegrationruntimeselfhosted"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeselfhosted"
 
 datafactoryintegrationruntimeselfhosted.DataFactoryIntegrationRuntimeSelfHosted_IsTerraformElement(x interface{}) *bool
 ```
@@ -370,7 +370,7 @@ datafactoryintegrationruntimeselfhosted.DataFactoryIntegrationRuntimeSelfHosted_
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeSelfHosted.DataFactoryIntegrationRuntimeSelfHosted.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/datafactoryintegrationruntimeselfhosted"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeselfhosted"
 
 datafactoryintegrationruntimeselfhosted.DataFactoryIntegrationRuntimeSelfHosted_IsTerraformResource(x interface{}) *bool
 ```
@@ -723,7 +723,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeSelfHosted.DataFactoryIntegrationRuntimeSelfHostedConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/datafactoryintegrationruntimeselfhosted"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeselfhosted"
 
 &datafactoryintegrationruntimeselfhosted.DataFactoryIntegrationRuntimeSelfHostedConfig {
 	Connection: interface{},
@@ -738,7 +738,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/datafactoryintegr
 	Description: *string,
 	Id: *string,
 	RbacAuthorization: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.dataFactoryIntegrationRuntimeSelfHosted.DataFactoryIntegrationRuntimeSelfHostedTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataFactoryIntegrationRuntimeSelfHosted.DataFactoryIntegrationRuntimeSelfHostedTimeouts,
 }
 ```
 
@@ -916,7 +916,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeSelfHosted.DataFactoryIntegrationRuntimeSelfHostedRbacAuthorization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/datafactoryintegrationruntimeselfhosted"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeselfhosted"
 
 &datafactoryintegrationruntimeselfhosted.DataFactoryIntegrationRuntimeSelfHostedRbacAuthorization {
 	ResourceId: *string,
@@ -948,7 +948,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeSelfHosted.DataFactoryIntegrationRuntimeSelfHostedTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/datafactoryintegrationruntimeselfhosted"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeselfhosted"
 
 &datafactoryintegrationruntimeselfhosted.DataFactoryIntegrationRuntimeSelfHostedTimeouts {
 	Create: *string,
@@ -1024,7 +1024,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeSelfHosted.DataFactoryIntegrationRuntimeSelfHostedRbacAuthorizationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/datafactoryintegrationruntimeselfhosted"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeselfhosted"
 
 datafactoryintegrationruntimeselfhosted.NewDataFactoryIntegrationRuntimeSelfHostedRbacAuthorizationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataFactoryIntegrationRuntimeSelfHostedRbacAuthorizationList
 ```
@@ -1167,7 +1167,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeSelfHosted.DataFactoryIntegrationRuntimeSelfHostedRbacAuthorizationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/datafactoryintegrationruntimeselfhosted"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeselfhosted"
 
 datafactoryintegrationruntimeselfhosted.NewDataFactoryIntegrationRuntimeSelfHostedRbacAuthorizationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataFactoryIntegrationRuntimeSelfHostedRbacAuthorizationOutputReference
 ```
@@ -1456,7 +1456,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeSelfHosted.DataFactoryIntegrationRuntimeSelfHostedTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/datafactoryintegrationruntimeselfhosted"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeselfhosted"
 
 datafactoryintegrationruntimeselfhosted.NewDataFactoryIntegrationRuntimeSelfHostedTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryIntegrationRuntimeSelfHostedTimeoutsOutputReference
 ```

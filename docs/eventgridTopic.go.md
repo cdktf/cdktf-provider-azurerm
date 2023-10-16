@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridTopic.EventgridTopic.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/eventgridtopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventgridtopic"
 
 eventgridtopic.NewEventgridTopic(scope Construct, id *string, config EventgridTopicConfig) EventgridTopic
 ```
@@ -405,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.eventgridTopic.EventgridTopic.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/eventgridtopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventgridtopic"
 
 eventgridtopic.EventgridTopic_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.eventgridTopic.EventgridTopic.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/eventgridtopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventgridtopic"
 
 eventgridtopic.EventgridTopic_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ eventgridtopic.EventgridTopic_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.eventgridTopic.EventgridTopic.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/eventgridtopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventgridtopic"
 
 eventgridtopic.EventgridTopic_IsTerraformResource(x interface{}) *bool
 ```
@@ -969,7 +969,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridTopic.EventgridTopicConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/eventgridtopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventgridtopic"
 
 &eventgridtopic.EventgridTopicConfig {
 	Connection: interface{},
@@ -983,15 +983,15 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/eventgridtopic"
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.eventgridTopic.EventgridTopicIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.eventgridTopic.EventgridTopicIdentity,
 	InboundIpRule: interface{},
-	InputMappingDefaultValues: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.eventgridTopic.EventgridTopicInputMappingDefaultValues,
-	InputMappingFields: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.eventgridTopic.EventgridTopicInputMappingFields,
+	InputMappingDefaultValues: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.eventgridTopic.EventgridTopicInputMappingDefaultValues,
+	InputMappingFields: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.eventgridTopic.EventgridTopicInputMappingFields,
 	InputSchema: *string,
 	LocalAuthEnabled: interface{},
 	PublicNetworkAccessEnabled: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.eventgridTopic.EventgridTopicTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.eventgridTopic.EventgridTopicTimeouts,
 }
 ```
 
@@ -1264,7 +1264,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridTopic.EventgridTopicIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/eventgridtopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventgridtopic"
 
 &eventgridtopic.EventgridTopicIdentity {
 	Type: *string,
@@ -1310,7 +1310,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridTopic.EventgridTopicInboundIpRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/eventgridtopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventgridtopic"
 
 &eventgridtopic.EventgridTopicInboundIpRule {
 	Action: *string,
@@ -1356,7 +1356,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridTopic.EventgridTopicInputMappingDefaultValues.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/eventgridtopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventgridtopic"
 
 &eventgridtopic.EventgridTopicInputMappingDefaultValues {
 	DataVersion: *string,
@@ -1416,7 +1416,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridTopic.EventgridTopicInputMappingFields.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/eventgridtopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventgridtopic"
 
 &eventgridtopic.EventgridTopicInputMappingFields {
 	DataVersion: *string,
@@ -1521,7 +1521,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventgridTopic.EventgridTopicTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/eventgridtopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventgridtopic"
 
 &eventgridtopic.EventgridTopicTimeouts {
 	Create: *string,
@@ -1597,7 +1597,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridTopic.EventgridTopicIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/eventgridtopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventgridtopic"
 
 eventgridtopic.NewEventgridTopicIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventgridTopicIdentityOutputReference
 ```
@@ -1919,7 +1919,7 @@ func InternalValue() EventgridTopicIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridTopic.EventgridTopicInboundIpRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/eventgridtopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventgridtopic"
 
 eventgridtopic.NewEventgridTopicInboundIpRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) EventgridTopicInboundIpRuleList
 ```
@@ -2062,7 +2062,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridTopic.EventgridTopicInboundIpRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/eventgridtopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventgridtopic"
 
 eventgridtopic.NewEventgridTopicInboundIpRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) EventgridTopicInboundIpRuleOutputReference
 ```
@@ -2387,7 +2387,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridTopic.EventgridTopicInputMappingDefaultValuesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/eventgridtopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventgridtopic"
 
 eventgridtopic.NewEventgridTopicInputMappingDefaultValuesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventgridTopicInputMappingDefaultValuesOutputReference
 ```
@@ -2723,7 +2723,7 @@ func InternalValue() EventgridTopicInputMappingDefaultValues
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridTopic.EventgridTopicInputMappingFieldsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/eventgridtopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventgridtopic"
 
 eventgridtopic.NewEventgridTopicInputMappingFieldsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventgridTopicInputMappingFieldsOutputReference
 ```
@@ -3146,7 +3146,7 @@ func InternalValue() EventgridTopicInputMappingFields
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridTopic.EventgridTopicTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/eventgridtopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventgridtopic"
 
 eventgridtopic.NewEventgridTopicTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventgridTopicTimeoutsOutputReference
 ```

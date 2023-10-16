@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWebPubsubPrivateLinkResource.DataAzurermWebPubsubPrivateLinkResource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermwebpubsubprivatelinkresource"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermwebpubsubprivatelinkresource"
 
 dataazurermwebpubsubprivatelinkresource.NewDataAzurermWebPubsubPrivateLinkResource(scope Construct, id *string, config DataAzurermWebPubsubPrivateLinkResourceConfig) DataAzurermWebPubsubPrivateLinkResource
 ```
@@ -297,7 +297,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermWebPubsubPrivateLinkResource.DataAzurermWebPubsubPrivateLinkResource.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermwebpubsubprivatelinkresource"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermwebpubsubprivatelinkresource"
 
 dataazurermwebpubsubprivatelinkresource.DataAzurermWebPubsubPrivateLinkResource_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +329,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermWebPubsubPrivateLinkResource.DataAzurermWebPubsubPrivateLinkResource.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermwebpubsubprivatelinkresource"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermwebpubsubprivatelinkresource"
 
 dataazurermwebpubsubprivatelinkresource.DataAzurermWebPubsubPrivateLinkResource_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ dataazurermwebpubsubprivatelinkresource.DataAzurermWebPubsubPrivateLinkResource_
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermWebPubsubPrivateLinkResource.DataAzurermWebPubsubPrivateLinkResource.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermwebpubsubprivatelinkresource"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermwebpubsubprivatelinkresource"
 
 dataazurermwebpubsubprivatelinkresource.DataAzurermWebPubsubPrivateLinkResource_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -597,7 +597,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWebPubsubPrivateLinkResource.DataAzurermWebPubsubPrivateLinkResourceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermwebpubsubprivatelinkresource"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermwebpubsubprivatelinkresource"
 
 &dataazurermwebpubsubprivatelinkresource.DataAzurermWebPubsubPrivateLinkResourceConfig {
 	Connection: interface{},
@@ -609,7 +609,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermwebpub
 	Provisioners: *[]interface{},
 	WebPubsubId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.dataAzurermWebPubsubPrivateLinkResource.DataAzurermWebPubsubPrivateLinkResourceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermWebPubsubPrivateLinkResource.DataAzurermWebPubsubPrivateLinkResourceTimeouts,
 }
 ```
 
@@ -746,7 +746,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWebPubsubPrivateLinkResource.DataAzurermWebPubsubPrivateLinkResourceSharedPrivateLinkResourceTypes.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermwebpubsubprivatelinkresource"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermwebpubsubprivatelinkresource"
 
 &dataazurermwebpubsubprivatelinkresource.DataAzurermWebPubsubPrivateLinkResourceSharedPrivateLinkResourceTypes {
 
@@ -759,7 +759,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermwebpub
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermWebPubsubPrivateLinkResource.DataAzurermWebPubsubPrivateLinkResourceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermwebpubsubprivatelinkresource"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermwebpubsubprivatelinkresource"
 
 &dataazurermwebpubsubprivatelinkresource.DataAzurermWebPubsubPrivateLinkResourceTimeouts {
 	Read: *string,
@@ -793,7 +793,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWebPubsubPrivateLinkResource.DataAzurermWebPubsubPrivateLinkResourceSharedPrivateLinkResourceTypesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermwebpubsubprivatelinkresource"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermwebpubsubprivatelinkresource"
 
 dataazurermwebpubsubprivatelinkresource.NewDataAzurermWebPubsubPrivateLinkResourceSharedPrivateLinkResourceTypesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermWebPubsubPrivateLinkResourceSharedPrivateLinkResourceTypesList
 ```
@@ -925,7 +925,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWebPubsubPrivateLinkResource.DataAzurermWebPubsubPrivateLinkResourceSharedPrivateLinkResourceTypesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermwebpubsubprivatelinkresource"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermwebpubsubprivatelinkresource"
 
 dataazurermwebpubsubprivatelinkresource.NewDataAzurermWebPubsubPrivateLinkResourceSharedPrivateLinkResourceTypesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermWebPubsubPrivateLinkResourceSharedPrivateLinkResourceTypesOutputReference
 ```
@@ -1214,7 +1214,7 @@ func InternalValue() DataAzurermWebPubsubPrivateLinkResourceSharedPrivateLinkRes
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermWebPubsubPrivateLinkResource.DataAzurermWebPubsubPrivateLinkResourceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermwebpubsubprivatelinkresource"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermwebpubsubprivatelinkresource"
 
 dataazurermwebpubsubprivatelinkresource.NewDataAzurermWebPubsubPrivateLinkResourceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermWebPubsubPrivateLinkResourceTimeoutsOutputReference
 ```

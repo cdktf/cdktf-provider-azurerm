@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsEventSourceIothub.IotTimeSeriesInsightsEventSourceIothub.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iottimeseriesinsightseventsourceiothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iottimeseriesinsightseventsourceiothub"
 
 iottimeseriesinsightseventsourceiothub.NewIotTimeSeriesInsightsEventSourceIothub(scope Construct, id *string, config IotTimeSeriesInsightsEventSourceIothubConfig) IotTimeSeriesInsightsEventSourceIothub
 ```
@@ -311,7 +311,7 @@ func ResetTimestampPropertyName()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsEventSourceIothub.IotTimeSeriesInsightsEventSourceIothub.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iottimeseriesinsightseventsourceiothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iottimeseriesinsightseventsourceiothub"
 
 iottimeseriesinsightseventsourceiothub.IotTimeSeriesInsightsEventSourceIothub_IsConstruct(x interface{}) *bool
 ```
@@ -343,7 +343,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsEventSourceIothub.IotTimeSeriesInsightsEventSourceIothub.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iottimeseriesinsightseventsourceiothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iottimeseriesinsightseventsourceiothub"
 
 iottimeseriesinsightseventsourceiothub.IotTimeSeriesInsightsEventSourceIothub_IsTerraformElement(x interface{}) *bool
 ```
@@ -357,7 +357,7 @@ iottimeseriesinsightseventsourceiothub.IotTimeSeriesInsightsEventSourceIothub_Is
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsEventSourceIothub.IotTimeSeriesInsightsEventSourceIothub.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iottimeseriesinsightseventsourceiothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iottimeseriesinsightseventsourceiothub"
 
 iottimeseriesinsightseventsourceiothub.IotTimeSeriesInsightsEventSourceIothub_IsTerraformResource(x interface{}) *bool
 ```
@@ -820,7 +820,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsEventSourceIothub.IotTimeSeriesInsightsEventSourceIothubConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iottimeseriesinsightseventsourceiothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iottimeseriesinsightseventsourceiothub"
 
 &iottimeseriesinsightseventsourceiothub.IotTimeSeriesInsightsEventSourceIothubConfig {
 	Connection: interface{},
@@ -840,7 +840,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iottimeseriesinsi
 	SharedAccessKeyName: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.iotTimeSeriesInsightsEventSourceIothub.IotTimeSeriesInsightsEventSourceIothubTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.iotTimeSeriesInsightsEventSourceIothub.IotTimeSeriesInsightsEventSourceIothubTimeouts,
 	TimestampPropertyName: *string,
 }
 ```
@@ -1095,7 +1095,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsEventSourceIothub.IotTimeSeriesInsightsEventSourceIothubTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iottimeseriesinsightseventsourceiothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iottimeseriesinsightseventsourceiothub"
 
 &iottimeseriesinsightseventsourceiothub.IotTimeSeriesInsightsEventSourceIothubTimeouts {
 	Create: *string,
@@ -1171,7 +1171,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsEventSourceIothub.IotTimeSeriesInsightsEventSourceIothubTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/iottimeseriesinsightseventsourceiothub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iottimeseriesinsightseventsourceiothub"
 
 iottimeseriesinsightseventsourceiothub.NewIotTimeSeriesInsightsEventSourceIothubTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IotTimeSeriesInsightsEventSourceIothubTimeoutsOutputReference
 ```

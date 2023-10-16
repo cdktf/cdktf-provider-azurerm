@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceGroupCostManagementView.ResourceGroupCostManagementView.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/resourcegroupcostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcegroupcostmanagementview"
 
 resourcegroupcostmanagementview.NewResourceGroupCostManagementView(scope Construct, id *string, config ResourceGroupCostManagementViewConfig) ResourceGroupCostManagementView
 ```
@@ -350,7 +350,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.resourceGroupCostManagementView.ResourceGroupCostManagementView.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/resourcegroupcostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcegroupcostmanagementview"
 
 resourcegroupcostmanagementview.ResourceGroupCostManagementView_IsConstruct(x interface{}) *bool
 ```
@@ -382,7 +382,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.resourceGroupCostManagementView.ResourceGroupCostManagementView.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/resourcegroupcostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcegroupcostmanagementview"
 
 resourcegroupcostmanagementview.ResourceGroupCostManagementView_IsTerraformElement(x interface{}) *bool
 ```
@@ -396,7 +396,7 @@ resourcegroupcostmanagementview.ResourceGroupCostManagementView_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.resourceGroupCostManagementView.ResourceGroupCostManagementView.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/resourcegroupcostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcegroupcostmanagementview"
 
 resourcegroupcostmanagementview.ResourceGroupCostManagementView_IsTerraformResource(x interface{}) *bool
 ```
@@ -859,7 +859,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourceGroupCostManagementView.ResourceGroupCostManagementViewConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/resourcegroupcostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcegroupcostmanagementview"
 
 &resourcegroupcostmanagementview.ResourceGroupCostManagementViewConfig {
 	Connection: interface{},
@@ -871,7 +871,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/resourcegroupcost
 	Provisioners: *[]interface{},
 	Accumulated: interface{},
 	ChartType: *string,
-	Dataset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.resourceGroupCostManagementView.ResourceGroupCostManagementViewDataset,
+	Dataset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.resourceGroupCostManagementView.ResourceGroupCostManagementViewDataset,
 	DisplayName: *string,
 	Name: *string,
 	ReportType: *string,
@@ -880,7 +880,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/resourcegroupcost
 	Id: *string,
 	Kpi: interface{},
 	Pivot: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.resourceGroupCostManagementView.ResourceGroupCostManagementViewTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.resourceGroupCostManagementView.ResourceGroupCostManagementViewTimeouts,
 }
 ```
 
@@ -1140,7 +1140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourceGroupCostManagementView.ResourceGroupCostManagementViewDataset.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/resourcegroupcostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcegroupcostmanagementview"
 
 &resourcegroupcostmanagementview.ResourceGroupCostManagementViewDataset {
 	Aggregation: interface{},
@@ -1220,7 +1220,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourceGroupCostManagementView.ResourceGroupCostManagementViewDatasetAggregation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/resourcegroupcostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcegroupcostmanagementview"
 
 &resourcegroupcostmanagementview.ResourceGroupCostManagementViewDatasetAggregation {
 	ColumnName: *string,
@@ -1266,7 +1266,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourceGroupCostManagementView.ResourceGroupCostManagementViewDatasetGrouping.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/resourcegroupcostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcegroupcostmanagementview"
 
 &resourcegroupcostmanagementview.ResourceGroupCostManagementViewDatasetGrouping {
 	Name: *string,
@@ -1312,7 +1312,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourceGroupCostManagementView.ResourceGroupCostManagementViewDatasetSorting.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/resourcegroupcostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcegroupcostmanagementview"
 
 &resourcegroupcostmanagementview.ResourceGroupCostManagementViewDatasetSorting {
 	Direction: *string,
@@ -1358,7 +1358,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourceGroupCostManagementView.ResourceGroupCostManagementViewKpi.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/resourcegroupcostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcegroupcostmanagementview"
 
 &resourcegroupcostmanagementview.ResourceGroupCostManagementViewKpi {
 	Type: *string,
@@ -1390,7 +1390,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourceGroupCostManagementView.ResourceGroupCostManagementViewPivot.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/resourcegroupcostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcegroupcostmanagementview"
 
 &resourcegroupcostmanagementview.ResourceGroupCostManagementViewPivot {
 	Name: *string,
@@ -1436,7 +1436,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourceGroupCostManagementView.ResourceGroupCostManagementViewTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/resourcegroupcostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcegroupcostmanagementview"
 
 &resourcegroupcostmanagementview.ResourceGroupCostManagementViewTimeouts {
 	Create: *string,
@@ -1512,7 +1512,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceGroupCostManagementView.ResourceGroupCostManagementViewDatasetAggregationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/resourcegroupcostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcegroupcostmanagementview"
 
 resourcegroupcostmanagementview.NewResourceGroupCostManagementViewDatasetAggregationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ResourceGroupCostManagementViewDatasetAggregationList
 ```
@@ -1655,7 +1655,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceGroupCostManagementView.ResourceGroupCostManagementViewDatasetAggregationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/resourcegroupcostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcegroupcostmanagementview"
 
 resourcegroupcostmanagementview.NewResourceGroupCostManagementViewDatasetAggregationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ResourceGroupCostManagementViewDatasetAggregationOutputReference
 ```
@@ -1966,7 +1966,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceGroupCostManagementView.ResourceGroupCostManagementViewDatasetGroupingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/resourcegroupcostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcegroupcostmanagementview"
 
 resourcegroupcostmanagementview.NewResourceGroupCostManagementViewDatasetGroupingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ResourceGroupCostManagementViewDatasetGroupingList
 ```
@@ -2109,7 +2109,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceGroupCostManagementView.ResourceGroupCostManagementViewDatasetGroupingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/resourcegroupcostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcegroupcostmanagementview"
 
 resourcegroupcostmanagementview.NewResourceGroupCostManagementViewDatasetGroupingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ResourceGroupCostManagementViewDatasetGroupingOutputReference
 ```
@@ -2420,7 +2420,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceGroupCostManagementView.ResourceGroupCostManagementViewDatasetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/resourcegroupcostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcegroupcostmanagementview"
 
 resourcegroupcostmanagementview.NewResourceGroupCostManagementViewDatasetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ResourceGroupCostManagementViewDatasetOutputReference
 ```
@@ -2810,7 +2810,7 @@ func InternalValue() ResourceGroupCostManagementViewDataset
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceGroupCostManagementView.ResourceGroupCostManagementViewDatasetSortingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/resourcegroupcostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcegroupcostmanagementview"
 
 resourcegroupcostmanagementview.NewResourceGroupCostManagementViewDatasetSortingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ResourceGroupCostManagementViewDatasetSortingList
 ```
@@ -2953,7 +2953,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceGroupCostManagementView.ResourceGroupCostManagementViewDatasetSortingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/resourcegroupcostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcegroupcostmanagementview"
 
 resourcegroupcostmanagementview.NewResourceGroupCostManagementViewDatasetSortingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ResourceGroupCostManagementViewDatasetSortingOutputReference
 ```
@@ -3264,7 +3264,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceGroupCostManagementView.ResourceGroupCostManagementViewKpiList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/resourcegroupcostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcegroupcostmanagementview"
 
 resourcegroupcostmanagementview.NewResourceGroupCostManagementViewKpiList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ResourceGroupCostManagementViewKpiList
 ```
@@ -3407,7 +3407,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceGroupCostManagementView.ResourceGroupCostManagementViewKpiOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/resourcegroupcostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcegroupcostmanagementview"
 
 resourcegroupcostmanagementview.NewResourceGroupCostManagementViewKpiOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ResourceGroupCostManagementViewKpiOutputReference
 ```
@@ -3696,7 +3696,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceGroupCostManagementView.ResourceGroupCostManagementViewPivotList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/resourcegroupcostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcegroupcostmanagementview"
 
 resourcegroupcostmanagementview.NewResourceGroupCostManagementViewPivotList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ResourceGroupCostManagementViewPivotList
 ```
@@ -3839,7 +3839,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceGroupCostManagementView.ResourceGroupCostManagementViewPivotOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/resourcegroupcostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcegroupcostmanagementview"
 
 resourcegroupcostmanagementview.NewResourceGroupCostManagementViewPivotOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ResourceGroupCostManagementViewPivotOutputReference
 ```
@@ -4150,7 +4150,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceGroupCostManagementView.ResourceGroupCostManagementViewTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/resourcegroupcostmanagementview"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcegroupcostmanagementview"
 
 resourcegroupcostmanagementview.NewResourceGroupCostManagementViewTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ResourceGroupCostManagementViewTimeoutsOutputReference
 ```
