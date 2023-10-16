@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.botChannelFacebook.BotChannelFacebook.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelfacebook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelfacebook"
 
 botchannelfacebook.NewBotChannelFacebook(scope Construct, id *string, config BotChannelFacebookConfig) BotChannelFacebook
 ```
@@ -310,7 +310,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.botChannelFacebook.BotChannelFacebook.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelfacebook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelfacebook"
 
 botchannelfacebook.BotChannelFacebook_IsConstruct(x interface{}) *bool
 ```
@@ -342,7 +342,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.botChannelFacebook.BotChannelFacebook.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelfacebook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelfacebook"
 
 botchannelfacebook.BotChannelFacebook_IsTerraformElement(x interface{}) *bool
 ```
@@ -356,7 +356,7 @@ botchannelfacebook.BotChannelFacebook_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.botChannelFacebook.BotChannelFacebook.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelfacebook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelfacebook"
 
 botchannelfacebook.BotChannelFacebook_IsTerraformResource(x interface{}) *bool
 ```
@@ -731,7 +731,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.botChannelFacebook.BotChannelFacebookConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelfacebook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelfacebook"
 
 &botchannelfacebook.BotChannelFacebookConfig {
 	Connection: interface{},
@@ -748,7 +748,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelfacebook"
 	Page: interface{},
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.botChannelFacebook.BotChannelFacebookTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.botChannelFacebook.BotChannelFacebookTimeouts,
 }
 ```
 
@@ -952,7 +952,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.botChannelFacebook.BotChannelFacebookPage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelfacebook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelfacebook"
 
 &botchannelfacebook.BotChannelFacebookPage {
 	AccessToken: *string,
@@ -1001,7 +1001,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.botChannelFacebook.BotChannelFacebookTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelfacebook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelfacebook"
 
 &botchannelfacebook.BotChannelFacebookTimeouts {
 	Create: *string,
@@ -1077,7 +1077,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.botChannelFacebook.BotChannelFacebookPageList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelfacebook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelfacebook"
 
 botchannelfacebook.NewBotChannelFacebookPageList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BotChannelFacebookPageList
 ```
@@ -1220,7 +1220,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.botChannelFacebook.BotChannelFacebookPageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelfacebook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelfacebook"
 
 botchannelfacebook.NewBotChannelFacebookPageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BotChannelFacebookPageOutputReference
 ```
@@ -1531,7 +1531,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.botChannelFacebook.BotChannelFacebookTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelfacebook"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelfacebook"
 
 botchannelfacebook.NewBotChannelFacebookTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BotChannelFacebookTimeoutsOutputReference
 ```

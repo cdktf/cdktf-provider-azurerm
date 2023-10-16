@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationConnectionType.AutomationConnectionType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationconnectiontype"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationconnectiontype"
 
 automationconnectiontype.NewAutomationConnectionType(scope Construct, id *string, config AutomationConnectionTypeConfig) AutomationConnectionType
 ```
@@ -317,7 +317,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.automationConnectionType.AutomationConnectionType.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationconnectiontype"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationconnectiontype"
 
 automationconnectiontype.AutomationConnectionType_IsConstruct(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.automationConnectionType.AutomationConnectionType.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationconnectiontype"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationconnectiontype"
 
 automationconnectiontype.AutomationConnectionType_IsTerraformElement(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ automationconnectiontype.AutomationConnectionType_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.automationConnectionType.AutomationConnectionType.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationconnectiontype"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationconnectiontype"
 
 automationconnectiontype.AutomationConnectionType_IsTerraformResource(x interface{}) *bool
 ```
@@ -716,7 +716,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationConnectionType.AutomationConnectionTypeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationconnectiontype"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationconnectiontype"
 
 &automationconnectiontype.AutomationConnectionTypeConfig {
 	Connection: interface{},
@@ -732,7 +732,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationconnectiont
 	ResourceGroupName: *string,
 	Id: *string,
 	IsGlobal: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automationConnectionType.AutomationConnectionTypeTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.automationConnectionType.AutomationConnectionTypeTimeouts,
 }
 ```
 
@@ -923,7 +923,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationConnectionType.AutomationConnectionTypeField.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationconnectiontype"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationconnectiontype"
 
 &automationconnectiontype.AutomationConnectionTypeField {
 	Name: *string,
@@ -997,7 +997,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationConnectionType.AutomationConnectionTypeTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationconnectiontype"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationconnectiontype"
 
 &automationconnectiontype.AutomationConnectionTypeTimeouts {
 	Create: *string,
@@ -1059,7 +1059,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationConnectionType.AutomationConnectionTypeFieldList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationconnectiontype"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationconnectiontype"
 
 automationconnectiontype.NewAutomationConnectionTypeFieldList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AutomationConnectionTypeFieldList
 ```
@@ -1202,7 +1202,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationConnectionType.AutomationConnectionTypeFieldOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationconnectiontype"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationconnectiontype"
 
 automationconnectiontype.NewAutomationConnectionTypeFieldOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AutomationConnectionTypeFieldOutputReference
 ```
@@ -1571,7 +1571,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationConnectionType.AutomationConnectionTypeTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationconnectiontype"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationconnectiontype"
 
 automationconnectiontype.NewAutomationConnectionTypeTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationConnectionTypeTimeoutsOutputReference
 ```

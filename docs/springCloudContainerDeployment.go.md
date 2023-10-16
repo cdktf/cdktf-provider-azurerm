@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudContainerDeployment.SpringCloudContainerDeployment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcontainerdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcontainerdeployment"
 
 springcloudcontainerdeployment.NewSpringCloudContainerDeployment(scope Construct, id *string, config SpringCloudContainerDeploymentConfig) SpringCloudContainerDeployment
 ```
@@ -359,7 +359,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.springCloudContainerDeployment.SpringCloudContainerDeployment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcontainerdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcontainerdeployment"
 
 springcloudcontainerdeployment.SpringCloudContainerDeployment_IsConstruct(x interface{}) *bool
 ```
@@ -391,7 +391,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.springCloudContainerDeployment.SpringCloudContainerDeployment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcontainerdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcontainerdeployment"
 
 springcloudcontainerdeployment.SpringCloudContainerDeployment_IsTerraformElement(x interface{}) *bool
 ```
@@ -405,7 +405,7 @@ springcloudcontainerdeployment.SpringCloudContainerDeployment_IsTerraformElement
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.springCloudContainerDeployment.SpringCloudContainerDeployment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcontainerdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcontainerdeployment"
 
 springcloudcontainerdeployment.SpringCloudContainerDeployment_IsTerraformResource(x interface{}) *bool
 ```
@@ -890,7 +890,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudContainerDeployment.SpringCloudContainerDeploymentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcontainerdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcontainerdeployment"
 
 &springcloudcontainerdeployment.SpringCloudContainerDeploymentConfig {
 	Connection: interface{},
@@ -911,8 +911,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcontainerd
 	Id: *string,
 	InstanceCount: *f64,
 	LanguageFramework: *string,
-	Quota: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.springCloudContainerDeployment.SpringCloudContainerDeploymentQuota,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.springCloudContainerDeployment.SpringCloudContainerDeploymentTimeouts,
+	Quota: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.springCloudContainerDeployment.SpringCloudContainerDeploymentQuota,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.springCloudContainerDeployment.SpringCloudContainerDeploymentTimeouts,
 }
 ```
 
@@ -1181,7 +1181,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudContainerDeployment.SpringCloudContainerDeploymentQuota.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcontainerdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcontainerdeployment"
 
 &springcloudcontainerdeployment.SpringCloudContainerDeploymentQuota {
 	Cpu: *string,
@@ -1227,7 +1227,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudContainerDeployment.SpringCloudContainerDeploymentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcontainerdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcontainerdeployment"
 
 &springcloudcontainerdeployment.SpringCloudContainerDeploymentTimeouts {
 	Create: *string,
@@ -1303,7 +1303,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudContainerDeployment.SpringCloudContainerDeploymentQuotaOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcontainerdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcontainerdeployment"
 
 springcloudcontainerdeployment.NewSpringCloudContainerDeploymentQuotaOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudContainerDeploymentQuotaOutputReference
 ```
@@ -1610,7 +1610,7 @@ func InternalValue() SpringCloudContainerDeploymentQuota
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudContainerDeployment.SpringCloudContainerDeploymentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcontainerdeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcontainerdeployment"
 
 springcloudcontainerdeployment.NewSpringCloudContainerDeploymentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudContainerDeploymentTimeoutsOutputReference
 ```

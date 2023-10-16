@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomain.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudapiportalcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudapiportalcustomdomain"
 
 springcloudapiportalcustomdomain.NewSpringCloudApiPortalCustomDomain(scope Construct, id *string, config SpringCloudApiPortalCustomDomainConfig) SpringCloudApiPortalCustomDomain
 ```
@@ -304,7 +304,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomain.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudapiportalcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudapiportalcustomdomain"
 
 springcloudapiportalcustomdomain.SpringCloudApiPortalCustomDomain_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomain.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudapiportalcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudapiportalcustomdomain"
 
 springcloudapiportalcustomdomain.SpringCloudApiPortalCustomDomain_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ springcloudapiportalcustomdomain.SpringCloudApiPortalCustomDomain_IsTerraformEle
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomain.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudapiportalcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudapiportalcustomdomain"
 
 springcloudapiportalcustomdomain.SpringCloudApiPortalCustomDomain_IsTerraformResource(x interface{}) *bool
 ```
@@ -659,7 +659,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomainConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudapiportalcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudapiportalcustomdomain"
 
 &springcloudapiportalcustomdomain.SpringCloudApiPortalCustomDomainConfig {
 	Connection: interface{},
@@ -673,7 +673,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudapiportalc
 	SpringCloudApiPortalId: *string,
 	Id: *string,
 	Thumbprint: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomainTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomainTimeouts,
 }
 ```
 
@@ -836,7 +836,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomainTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudapiportalcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudapiportalcustomdomain"
 
 &springcloudapiportalcustomdomain.SpringCloudApiPortalCustomDomainTimeouts {
 	Create: *string,
@@ -912,7 +912,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudApiPortalCustomDomain.SpringCloudApiPortalCustomDomainTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudapiportalcustomdomain"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudapiportalcustomdomain"
 
 springcloudapiportalcustomdomain.NewSpringCloudApiPortalCustomDomainTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudApiPortalCustomDomainTimeoutsOutputReference
 ```
