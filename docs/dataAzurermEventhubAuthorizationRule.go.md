@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermEventhubAuthorizationRule.DataAzurermEventhubAuthorizationRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermeventhubauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventhubauthorizationrule"
 
 dataazurermeventhubauthorizationrule.NewDataAzurermEventhubAuthorizationRule(scope Construct, id *string, config DataAzurermEventhubAuthorizationRuleConfig) DataAzurermEventhubAuthorizationRule
 ```
@@ -318,7 +318,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermEventhubAuthorizationRule.DataAzurermEventhubAuthorizationRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermeventhubauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventhubauthorizationrule"
 
 dataazurermeventhubauthorizationrule.DataAzurermEventhubAuthorizationRule_IsConstruct(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermEventhubAuthorizationRule.DataAzurermEventhubAuthorizationRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermeventhubauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventhubauthorizationrule"
 
 dataazurermeventhubauthorizationrule.DataAzurermEventhubAuthorizationRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -364,7 +364,7 @@ dataazurermeventhubauthorizationrule.DataAzurermEventhubAuthorizationRule_IsTerr
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermEventhubAuthorizationRule.DataAzurermEventhubAuthorizationRule.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermeventhubauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventhubauthorizationrule"
 
 dataazurermeventhubauthorizationrule.DataAzurermEventhubAuthorizationRule_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -805,7 +805,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermEventhubAuthorizationRule.DataAzurermEventhubAuthorizationRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermeventhubauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventhubauthorizationrule"
 
 &dataazurermeventhubauthorizationrule.DataAzurermEventhubAuthorizationRuleConfig {
 	Connection: interface{},
@@ -823,7 +823,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermeventh
 	Listen: interface{},
 	Manage: interface{},
 	Send: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.dataAzurermEventhubAuthorizationRule.DataAzurermEventhubAuthorizationRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermEventhubAuthorizationRule.DataAzurermEventhubAuthorizationRuleTimeouts,
 }
 ```
 
@@ -1038,7 +1038,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermEventhubAuthorizationRule.DataAzurermEventhubAuthorizationRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermeventhubauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventhubauthorizationrule"
 
 &dataazurermeventhubauthorizationrule.DataAzurermEventhubAuthorizationRuleTimeouts {
 	Read: *string,
@@ -1072,7 +1072,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermEventhubAuthorizationRule.DataAzurermEventhubAuthorizationRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/dataazurermeventhubauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventhubauthorizationrule"
 
 dataazurermeventhubauthorizationrule.NewDataAzurermEventhubAuthorizationRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermEventhubAuthorizationRuleTimeoutsOutputReference
 ```

@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaServicesAccount.MediaServicesAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mediaservicesaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccount"
 
 mediaservicesaccount.NewMediaServicesAccount(scope Construct, id *string, config MediaServicesAccountConfig) MediaServicesAccount
 ```
@@ -391,7 +391,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mediaServicesAccount.MediaServicesAccount.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mediaservicesaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccount"
 
 mediaservicesaccount.MediaServicesAccount_IsConstruct(x interface{}) *bool
 ```
@@ -423,7 +423,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mediaServicesAccount.MediaServicesAccount.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mediaservicesaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccount"
 
 mediaservicesaccount.MediaServicesAccount_IsTerraformElement(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ mediaservicesaccount.MediaServicesAccount_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mediaServicesAccount.MediaServicesAccount.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mediaservicesaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccount"
 
 mediaservicesaccount.MediaServicesAccount_IsTerraformResource(x interface{}) *bool
 ```
@@ -900,7 +900,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaServicesAccount.MediaServicesAccountConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mediaservicesaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccount"
 
 &mediaservicesaccount.MediaServicesAccountConfig {
 	Connection: interface{},
@@ -914,14 +914,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mediaservicesacco
 	Name: *string,
 	ResourceGroupName: *string,
 	StorageAccount: interface{},
-	Encryption: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.mediaServicesAccount.MediaServicesAccountEncryption,
+	Encryption: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaServicesAccount.MediaServicesAccountEncryption,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.mediaServicesAccount.MediaServicesAccountIdentity,
-	KeyDeliveryAccessControl: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.mediaServicesAccount.MediaServicesAccountKeyDeliveryAccessControl,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaServicesAccount.MediaServicesAccountIdentity,
+	KeyDeliveryAccessControl: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaServicesAccount.MediaServicesAccountKeyDeliveryAccessControl,
 	PublicNetworkAccessEnabled: interface{},
 	StorageAuthenticationType: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.mediaServicesAccount.MediaServicesAccountTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaServicesAccount.MediaServicesAccountTimeouts,
 }
 ```
 
@@ -1183,11 +1183,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaServicesAccount.MediaServicesAccountEncryption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mediaservicesaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccount"
 
 &mediaservicesaccount.MediaServicesAccountEncryption {
 	KeyVaultKeyIdentifier: *string,
-	ManagedIdentity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.mediaServicesAccount.MediaServicesAccountEncryptionManagedIdentity,
+	ManagedIdentity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaServicesAccount.MediaServicesAccountEncryptionManagedIdentity,
 	Type: *string,
 }
 ```
@@ -1245,7 +1245,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaServicesAccount.MediaServicesAccountEncryptionManagedIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mediaservicesaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccount"
 
 &mediaservicesaccount.MediaServicesAccountEncryptionManagedIdentity {
 	UserAssignedIdentityId: *string,
@@ -1291,7 +1291,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaServicesAccount.MediaServicesAccountIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mediaservicesaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccount"
 
 &mediaservicesaccount.MediaServicesAccountIdentity {
 	Type: *string,
@@ -1337,7 +1337,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaServicesAccount.MediaServicesAccountKeyDeliveryAccessControl.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mediaservicesaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccount"
 
 &mediaservicesaccount.MediaServicesAccountKeyDeliveryAccessControl {
 	DefaultAction: *string,
@@ -1383,12 +1383,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaServicesAccount.MediaServicesAccountStorageAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mediaservicesaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccount"
 
 &mediaservicesaccount.MediaServicesAccountStorageAccount {
 	Id: *string,
 	IsPrimary: interface{},
-	ManagedIdentity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10.mediaServicesAccount.MediaServicesAccountStorageAccountManagedIdentity,
+	ManagedIdentity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaServicesAccount.MediaServicesAccountStorageAccountManagedIdentity,
 }
 ```
 
@@ -1448,7 +1448,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaServicesAccount.MediaServicesAccountStorageAccountManagedIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mediaservicesaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccount"
 
 &mediaservicesaccount.MediaServicesAccountStorageAccountManagedIdentity {
 	UserAssignedIdentityId: *string,
@@ -1494,7 +1494,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaServicesAccount.MediaServicesAccountTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mediaservicesaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccount"
 
 &mediaservicesaccount.MediaServicesAccountTimeouts {
 	Create: *string,
@@ -1570,7 +1570,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaServicesAccount.MediaServicesAccountEncryptionManagedIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mediaservicesaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccount"
 
 mediaservicesaccount.NewMediaServicesAccountEncryptionManagedIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaServicesAccountEncryptionManagedIdentityOutputReference
 ```
@@ -1877,7 +1877,7 @@ func InternalValue() MediaServicesAccountEncryptionManagedIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaServicesAccount.MediaServicesAccountEncryptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mediaservicesaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccount"
 
 mediaservicesaccount.NewMediaServicesAccountEncryptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaServicesAccountEncryptionOutputReference
 ```
@@ -2237,7 +2237,7 @@ func InternalValue() MediaServicesAccountEncryption
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaServicesAccount.MediaServicesAccountIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mediaservicesaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccount"
 
 mediaservicesaccount.NewMediaServicesAccountIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaServicesAccountIdentityOutputReference
 ```
@@ -2559,7 +2559,7 @@ func InternalValue() MediaServicesAccountIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaServicesAccount.MediaServicesAccountKeyDeliveryAccessControlOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mediaservicesaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccount"
 
 mediaservicesaccount.NewMediaServicesAccountKeyDeliveryAccessControlOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaServicesAccountKeyDeliveryAccessControlOutputReference
 ```
@@ -2866,7 +2866,7 @@ func InternalValue() MediaServicesAccountKeyDeliveryAccessControl
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaServicesAccount.MediaServicesAccountStorageAccountList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mediaservicesaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccount"
 
 mediaservicesaccount.NewMediaServicesAccountStorageAccountList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaServicesAccountStorageAccountList
 ```
@@ -3009,7 +3009,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaServicesAccount.MediaServicesAccountStorageAccountManagedIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mediaservicesaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccount"
 
 mediaservicesaccount.NewMediaServicesAccountStorageAccountManagedIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaServicesAccountStorageAccountManagedIdentityOutputReference
 ```
@@ -3316,7 +3316,7 @@ func InternalValue() MediaServicesAccountStorageAccountManagedIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaServicesAccount.MediaServicesAccountStorageAccountOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mediaservicesaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccount"
 
 mediaservicesaccount.NewMediaServicesAccountStorageAccountOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaServicesAccountStorageAccountOutputReference
 ```
@@ -3676,7 +3676,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaServicesAccount.MediaServicesAccountTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v10/mediaservicesaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccount"
 
 mediaservicesaccount.NewMediaServicesAccountTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaServicesAccountTimeoutsOutputReference
 ```
