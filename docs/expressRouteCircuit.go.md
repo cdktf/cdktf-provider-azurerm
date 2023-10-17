@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.expressRouteCircuit.ExpressRouteCircuit.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutecircuit"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuit"
 
 expressroutecircuit.NewExpressRouteCircuit(scope Construct, id *string, config ExpressRouteCircuitConfig) ExpressRouteCircuit
 ```
@@ -428,7 +428,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.expressRouteCircuit.ExpressRouteCircuit.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutecircuit"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuit"
 
 expressroutecircuit.ExpressRouteCircuit_IsConstruct(x interface{}) *bool
 ```
@@ -460,7 +460,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.expressRouteCircuit.ExpressRouteCircuit.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutecircuit"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuit"
 
 expressroutecircuit.ExpressRouteCircuit_IsTerraformElement(x interface{}) *bool
 ```
@@ -474,7 +474,7 @@ expressroutecircuit.ExpressRouteCircuit_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.expressRouteCircuit.ExpressRouteCircuit.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutecircuit"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuit"
 
 expressroutecircuit.ExpressRouteCircuit_IsTerraformResource(x interface{}) *bool
 ```
@@ -488,7 +488,7 @@ expressroutecircuit.ExpressRouteCircuit_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.expressRouteCircuit.ExpressRouteCircuit.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutecircuit"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuit"
 
 expressroutecircuit.ExpressRouteCircuit_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1047,7 +1047,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.expressRouteCircuit.ExpressRouteCircuitConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutecircuit"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuit"
 
 &expressroutecircuit.ExpressRouteCircuitConfig {
 	Connection: interface{},
@@ -1060,7 +1060,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutecircu
 	Location: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	Sku: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.expressRouteCircuit.ExpressRouteCircuitSku,
+	Sku: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.expressRouteCircuit.ExpressRouteCircuitSku,
 	AllowClassicOperations: interface{},
 	AuthorizationKey: *string,
 	BandwidthInGbps: *f64,
@@ -1070,7 +1070,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutecircu
 	PeeringLocation: *string,
 	ServiceProviderName: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.expressRouteCircuit.ExpressRouteCircuitTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.expressRouteCircuit.ExpressRouteCircuitTimeouts,
 }
 ```
 
@@ -1352,7 +1352,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.expressRouteCircuit.ExpressRouteCircuitSku.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutecircuit"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuit"
 
 &expressroutecircuit.ExpressRouteCircuitSku {
 	Family: *string,
@@ -1398,7 +1398,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.expressRouteCircuit.ExpressRouteCircuitTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutecircuit"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuit"
 
 &expressroutecircuit.ExpressRouteCircuitTimeouts {
 	Create: *string,
@@ -1474,7 +1474,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.expressRouteCircuit.ExpressRouteCircuitSkuOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutecircuit"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuit"
 
 expressroutecircuit.NewExpressRouteCircuitSkuOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ExpressRouteCircuitSkuOutputReference
 ```
@@ -1767,7 +1767,7 @@ func InternalValue() ExpressRouteCircuitSku
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.expressRouteCircuit.ExpressRouteCircuitTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutecircuit"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuit"
 
 expressroutecircuit.NewExpressRouteCircuitTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ExpressRouteCircuitTimeoutsOutputReference
 ```
