@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermIothubDpsSharedAccessPolicy.DataAzurermIothubDpsSharedAccessPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermiothubdpssharedaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermiothubdpssharedaccesspolicy"
 
 dataazurermiothubdpssharedaccesspolicy.NewDataAzurermIothubDpsSharedAccessPolicy(scope Construct, id *string, config DataAzurermIothubDpsSharedAccessPolicyConfig) DataAzurermIothubDpsSharedAccessPolicy
 ```
@@ -298,7 +298,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermIothubDpsSharedAccessPolicy.DataAzurermIothubDpsSharedAccessPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermiothubdpssharedaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermiothubdpssharedaccesspolicy"
 
 dataazurermiothubdpssharedaccesspolicy.DataAzurermIothubDpsSharedAccessPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermIothubDpsSharedAccessPolicy.DataAzurermIothubDpsSharedAccessPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermiothubdpssharedaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermiothubdpssharedaccesspolicy"
 
 dataazurermiothubdpssharedaccesspolicy.DataAzurermIothubDpsSharedAccessPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -344,7 +344,7 @@ dataazurermiothubdpssharedaccesspolicy.DataAzurermIothubDpsSharedAccessPolicy_Is
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermIothubDpsSharedAccessPolicy.DataAzurermIothubDpsSharedAccessPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermiothubdpssharedaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermiothubdpssharedaccesspolicy"
 
 dataazurermiothubdpssharedaccesspolicy.DataAzurermIothubDpsSharedAccessPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -358,7 +358,7 @@ dataazurermiothubdpssharedaccesspolicy.DataAzurermIothubDpsSharedAccessPolicy_Is
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermIothubDpsSharedAccessPolicy.DataAzurermIothubDpsSharedAccessPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermiothubdpssharedaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermiothubdpssharedaccesspolicy"
 
 dataazurermiothubdpssharedaccesspolicy.DataAzurermIothubDpsSharedAccessPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -719,7 +719,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermIothubDpsSharedAccessPolicy.DataAzurermIothubDpsSharedAccessPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermiothubdpssharedaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermiothubdpssharedaccesspolicy"
 
 &dataazurermiothubdpssharedaccesspolicy.DataAzurermIothubDpsSharedAccessPolicyConfig {
 	Connection: interface{},
@@ -733,7 +733,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermiothub
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermIothubDpsSharedAccessPolicy.DataAzurermIothubDpsSharedAccessPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermIothubDpsSharedAccessPolicy.DataAzurermIothubDpsSharedAccessPolicyTimeouts,
 }
 ```
 
@@ -896,7 +896,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermIothubDpsSharedAccessPolicy.DataAzurermIothubDpsSharedAccessPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermiothubdpssharedaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermiothubdpssharedaccesspolicy"
 
 &dataazurermiothubdpssharedaccesspolicy.DataAzurermIothubDpsSharedAccessPolicyTimeouts {
 	Read: *string,
@@ -930,7 +930,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermIothubDpsSharedAccessPolicy.DataAzurermIothubDpsSharedAccessPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermiothubdpssharedaccesspolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermiothubdpssharedaccesspolicy"
 
 dataazurermiothubdpssharedaccesspolicy.NewDataAzurermIothubDpsSharedAccessPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermIothubDpsSharedAccessPolicyTimeoutsOutputReference
 ```

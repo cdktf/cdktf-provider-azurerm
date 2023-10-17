@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustoattacheddatabaseconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoattacheddatabaseconfiguration"
 
 kustoattacheddatabaseconfiguration.NewKustoAttachedDatabaseConfiguration(scope Construct, id *string, config KustoAttachedDatabaseConfigurationConfig) KustoAttachedDatabaseConfiguration
 ```
@@ -386,7 +386,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfiguration.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustoattacheddatabaseconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoattacheddatabaseconfiguration"
 
 kustoattacheddatabaseconfiguration.KustoAttachedDatabaseConfiguration_IsConstruct(x interface{}) *bool
 ```
@@ -418,7 +418,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfiguration.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustoattacheddatabaseconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoattacheddatabaseconfiguration"
 
 kustoattacheddatabaseconfiguration.KustoAttachedDatabaseConfiguration_IsTerraformElement(x interface{}) *bool
 ```
@@ -432,7 +432,7 @@ kustoattacheddatabaseconfiguration.KustoAttachedDatabaseConfiguration_IsTerrafor
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfiguration.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustoattacheddatabaseconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoattacheddatabaseconfiguration"
 
 kustoattacheddatabaseconfiguration.KustoAttachedDatabaseConfiguration_IsTerraformResource(x interface{}) *bool
 ```
@@ -446,7 +446,7 @@ kustoattacheddatabaseconfiguration.KustoAttachedDatabaseConfiguration_IsTerrafor
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfiguration.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustoattacheddatabaseconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoattacheddatabaseconfiguration"
 
 kustoattacheddatabaseconfiguration.KustoAttachedDatabaseConfiguration_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -906,7 +906,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfigurationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustoattacheddatabaseconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoattacheddatabaseconfiguration"
 
 &kustoattacheddatabaseconfiguration.KustoAttachedDatabaseConfigurationConfig {
 	Connection: interface{},
@@ -924,8 +924,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustoattacheddata
 	ResourceGroupName: *string,
 	DefaultPrincipalModificationKind: *string,
 	Id: *string,
-	Sharing: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfigurationSharing,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfigurationTimeouts,
+	Sharing: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfigurationSharing,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfigurationTimeouts,
 }
 ```
 
@@ -1155,7 +1155,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfigurationSharing.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustoattacheddatabaseconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoattacheddatabaseconfiguration"
 
 &kustoattacheddatabaseconfiguration.KustoAttachedDatabaseConfigurationSharing {
 	ExternalTablesToExclude: *[]*string,
@@ -1257,7 +1257,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfigurationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustoattacheddatabaseconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoattacheddatabaseconfiguration"
 
 &kustoattacheddatabaseconfiguration.KustoAttachedDatabaseConfigurationTimeouts {
 	Create: *string,
@@ -1333,7 +1333,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfigurationSharingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustoattacheddatabaseconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoattacheddatabaseconfiguration"
 
 kustoattacheddatabaseconfiguration.NewKustoAttachedDatabaseConfigurationSharingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KustoAttachedDatabaseConfigurationSharingOutputReference
 ```
@@ -1756,7 +1756,7 @@ func InternalValue() KustoAttachedDatabaseConfigurationSharing
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kustoAttachedDatabaseConfiguration.KustoAttachedDatabaseConfigurationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustoattacheddatabaseconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustoattacheddatabaseconfiguration"
 
 kustoattacheddatabaseconfiguration.NewKustoAttachedDatabaseConfigurationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KustoAttachedDatabaseConfigurationTimeoutsOutputReference
 ```
