@@ -217,6 +217,20 @@ export class PostgresqlFlexibleServerActiveDirectoryAdministrator extends cdktf.
   // =================
   public static readonly tfResourceType = "azurerm_postgresql_flexible_server_active_directory_administrator";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a PostgresqlFlexibleServerActiveDirectoryAdministrator resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the PostgresqlFlexibleServerActiveDirectoryAdministrator to import
+  * @param importFromId The id of the existing PostgresqlFlexibleServerActiveDirectoryAdministrator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/postgresql_flexible_server_active_directory_administrator#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the PostgresqlFlexibleServerActiveDirectoryAdministrator to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_postgresql_flexible_server_active_directory_administrator", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========

@@ -485,6 +485,20 @@ export class MachineLearningWorkspace extends cdktf.TerraformResource {
   // =================
   public static readonly tfResourceType = "azurerm_machine_learning_workspace";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a MachineLearningWorkspace resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the MachineLearningWorkspace to import
+  * @param importFromId The id of the existing MachineLearningWorkspace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/machine_learning_workspace#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the MachineLearningWorkspace to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_machine_learning_workspace", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========

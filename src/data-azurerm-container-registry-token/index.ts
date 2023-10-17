@@ -124,6 +124,20 @@ export class DataAzurermContainerRegistryToken extends cdktf.TerraformDataSource
   // =================
   public static readonly tfResourceType = "azurerm_container_registry_token";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a DataAzurermContainerRegistryToken resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataAzurermContainerRegistryToken to import
+  * @param importFromId The id of the existing DataAzurermContainerRegistryToken that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/container_registry_token#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAzurermContainerRegistryToken to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_container_registry_token", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========

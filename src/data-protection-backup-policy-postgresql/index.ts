@@ -560,6 +560,20 @@ export class DataProtectionBackupPolicyPostgresql extends cdktf.TerraformResourc
   // =================
   public static readonly tfResourceType = "azurerm_data_protection_backup_policy_postgresql";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a DataProtectionBackupPolicyPostgresql resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataProtectionBackupPolicyPostgresql to import
+  * @param importFromId The id of the existing DataProtectionBackupPolicyPostgresql that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/data_protection_backup_policy_postgresql#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataProtectionBackupPolicyPostgresql to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_data_protection_backup_policy_postgresql", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========

@@ -249,6 +249,20 @@ export class CostManagementScheduledAction extends cdktf.TerraformResource {
   // =================
   public static readonly tfResourceType = "azurerm_cost_management_scheduled_action";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a CostManagementScheduledAction resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the CostManagementScheduledAction to import
+  * @param importFromId The id of the existing CostManagementScheduledAction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/cost_management_scheduled_action#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the CostManagementScheduledAction to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_cost_management_scheduled_action", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========

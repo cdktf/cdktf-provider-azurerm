@@ -654,6 +654,20 @@ export class ResourceDeploymentScriptAzurePowerShell extends cdktf.TerraformReso
   // =================
   public static readonly tfResourceType = "azurerm_resource_deployment_script_azure_power_shell";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a ResourceDeploymentScriptAzurePowerShell resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the ResourceDeploymentScriptAzurePowerShell to import
+  * @param importFromId The id of the existing ResourceDeploymentScriptAzurePowerShell that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/resource_deployment_script_azure_power_shell#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the ResourceDeploymentScriptAzurePowerShell to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_resource_deployment_script_azure_power_shell", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========

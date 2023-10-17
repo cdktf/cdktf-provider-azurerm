@@ -170,6 +170,20 @@ export class ContainerRegistryTaskScheduleRunNow extends cdktf.TerraformResource
   // =================
   public static readonly tfResourceType = "azurerm_container_registry_task_schedule_run_now";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a ContainerRegistryTaskScheduleRunNow resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the ContainerRegistryTaskScheduleRunNow to import
+  * @param importFromId The id of the existing ContainerRegistryTaskScheduleRunNow that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/container_registry_task_schedule_run_now#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the ContainerRegistryTaskScheduleRunNow to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_container_registry_task_schedule_run_now", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========

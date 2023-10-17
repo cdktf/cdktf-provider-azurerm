@@ -225,6 +225,20 @@ export class StreamAnalyticsOutputFunction extends cdktf.TerraformResource {
   // =================
   public static readonly tfResourceType = "azurerm_stream_analytics_output_function";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a StreamAnalyticsOutputFunction resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the StreamAnalyticsOutputFunction to import
+  * @param importFromId The id of the existing StreamAnalyticsOutputFunction that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/stream_analytics_output_function#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the StreamAnalyticsOutputFunction to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_stream_analytics_output_function", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========

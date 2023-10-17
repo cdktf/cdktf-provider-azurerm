@@ -683,6 +683,20 @@ export class PaloAltoLocalRulestackRule extends cdktf.TerraformResource {
   // =================
   public static readonly tfResourceType = "azurerm_palo_alto_local_rulestack_rule";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a PaloAltoLocalRulestackRule resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the PaloAltoLocalRulestackRule to import
+  * @param importFromId The id of the existing PaloAltoLocalRulestackRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/palo_alto_local_rulestack_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the PaloAltoLocalRulestackRule to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_palo_alto_local_rulestack_rule", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========

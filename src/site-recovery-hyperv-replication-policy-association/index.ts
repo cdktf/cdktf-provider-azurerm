@@ -178,6 +178,20 @@ export class SiteRecoveryHypervReplicationPolicyAssociation extends cdktf.Terraf
   // =================
   public static readonly tfResourceType = "azurerm_site_recovery_hyperv_replication_policy_association";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a SiteRecoveryHypervReplicationPolicyAssociation resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the SiteRecoveryHypervReplicationPolicyAssociation to import
+  * @param importFromId The id of the existing SiteRecoveryHypervReplicationPolicyAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/site_recovery_hyperv_replication_policy_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the SiteRecoveryHypervReplicationPolicyAssociation to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_site_recovery_hyperv_replication_policy_association", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========

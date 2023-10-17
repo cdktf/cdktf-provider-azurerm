@@ -360,6 +360,20 @@ export class AutomationConnectionType extends cdktf.TerraformResource {
   // =================
   public static readonly tfResourceType = "azurerm_automation_connection_type";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a AutomationConnectionType resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the AutomationConnectionType to import
+  * @param importFromId The id of the existing AutomationConnectionType that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/automation_connection_type#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the AutomationConnectionType to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_automation_connection_type", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========

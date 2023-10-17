@@ -201,6 +201,20 @@ export class NetworkInterfaceSecurityGroupAssociation extends cdktf.TerraformRes
   // =================
   public static readonly tfResourceType = "azurerm_network_interface_security_group_association";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a NetworkInterfaceSecurityGroupAssociation resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the NetworkInterfaceSecurityGroupAssociation to import
+  * @param importFromId The id of the existing NetworkInterfaceSecurityGroupAssociation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/network_interface_security_group_association#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the NetworkInterfaceSecurityGroupAssociation to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_network_interface_security_group_association", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========

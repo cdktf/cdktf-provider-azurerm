@@ -213,6 +213,20 @@ export class ApplicationInsightsSmartDetectionRule extends cdktf.TerraformResour
   // =================
   public static readonly tfResourceType = "azurerm_application_insights_smart_detection_rule";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a ApplicationInsightsSmartDetectionRule resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the ApplicationInsightsSmartDetectionRule to import
+  * @param importFromId The id of the existing ApplicationInsightsSmartDetectionRule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_insights_smart_detection_rule#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the ApplicationInsightsSmartDetectionRule to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_application_insights_smart_detection_rule", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========

@@ -205,6 +205,20 @@ export class CognitiveAccountCustomerManagedKeyA extends cdktf.TerraformResource
   // =================
   public static readonly tfResourceType = "azurerm_cognitive_account_customer_managed_key";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a CognitiveAccountCustomerManagedKeyA resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the CognitiveAccountCustomerManagedKeyA to import
+  * @param importFromId The id of the existing CognitiveAccountCustomerManagedKeyA that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/cognitive_account_customer_managed_key#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the CognitiveAccountCustomerManagedKeyA to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_cognitive_account_customer_managed_key", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========

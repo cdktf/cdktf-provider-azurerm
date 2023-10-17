@@ -209,6 +209,20 @@ export class LogAnalyticsLinkedService extends cdktf.TerraformResource {
   // =================
   public static readonly tfResourceType = "azurerm_log_analytics_linked_service";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a LogAnalyticsLinkedService resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the LogAnalyticsLinkedService to import
+  * @param importFromId The id of the existing LogAnalyticsLinkedService that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/log_analytics_linked_service#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the LogAnalyticsLinkedService to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_log_analytics_linked_service", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========

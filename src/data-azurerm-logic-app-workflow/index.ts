@@ -199,6 +199,20 @@ export class DataAzurermLogicAppWorkflow extends cdktf.TerraformDataSource {
   // =================
   public static readonly tfResourceType = "azurerm_logic_app_workflow";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a DataAzurermLogicAppWorkflow resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataAzurermLogicAppWorkflow to import
+  * @param importFromId The id of the existing DataAzurermLogicAppWorkflow that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/logic_app_workflow#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAzurermLogicAppWorkflow to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_logic_app_workflow", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========

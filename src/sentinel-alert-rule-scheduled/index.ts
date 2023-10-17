@@ -1329,6 +1329,20 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
   // =================
   public static readonly tfResourceType = "azurerm_sentinel_alert_rule_scheduled";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a SentinelAlertRuleScheduled resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the SentinelAlertRuleScheduled to import
+  * @param importFromId The id of the existing SentinelAlertRuleScheduled that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/sentinel_alert_rule_scheduled#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the SentinelAlertRuleScheduled to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_sentinel_alert_rule_scheduled", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========

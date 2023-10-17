@@ -1273,6 +1273,20 @@ export class DataAzurermHybridComputeMachine extends cdktf.TerraformDataSource {
   // =================
   public static readonly tfResourceType = "azurerm_hybrid_compute_machine";
 
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a DataAzurermHybridComputeMachine resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataAzurermHybridComputeMachine to import
+  * @param importFromId The id of the existing DataAzurermHybridComputeMachine that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/hybrid_compute_machine#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAzurermHybridComputeMachine to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_hybrid_compute_machine", importId: importFromId, provider });
+      }
+
   // ===========
   // INITIALIZER
   // ===========
