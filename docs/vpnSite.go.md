@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnSite.VpnSite.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
 
 vpnsite.NewVpnSite(scope Construct, id *string, config VpnSiteConfig) VpnSite
 ```
@@ -60,6 +60,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.vpnSite.VpnSite.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
 | <code><a href="#@cdktf/provider-azurerm.vpnSite.VpnSite.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.vpnSite.VpnSite.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktf/provider-azurerm.vpnSite.VpnSite.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#@cdktf/provider-azurerm.vpnSite.VpnSite.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.vpnSite.VpnSite.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.vpnSite.VpnSite.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
@@ -69,7 +70,9 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.vpnSite.VpnSite.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.vpnSite.VpnSite.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.vpnSite.VpnSite.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.vpnSite.VpnSite.importFrom">ImportFrom</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.vpnSite.VpnSite.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.vpnSite.VpnSite.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-azurerm.vpnSite.VpnSite.putLink">PutLink</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.vpnSite.VpnSite.putO365Policy">PutO365Policy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.vpnSite.VpnSite.putTimeouts">PutTimeouts</a></code> | *No description.* |
@@ -147,6 +150,22 @@ func ToTerraform() interface{}
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `AddMoveTarget` <a name="AddMoveTarget" id="@cdktf/provider-azurerm.vpnSite.VpnSite.addMoveTarget"></a>
+
+```go
+func AddMoveTarget(moveTarget *string)
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.vpnSite.VpnSite.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.vpnSite.VpnSite.getAnyMapAttribute"></a>
 
@@ -256,6 +275,24 @@ func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 
 ---
 
+##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-azurerm.vpnSite.VpnSite.importFrom"></a>
+
+```go
+func ImportFrom(id *string, provider TerraformProvider)
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.vpnSite.VpnSite.importFrom.parameter.id"></a>
+
+- *Type:* *string
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.vpnSite.VpnSite.importFrom.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+---
+
 ##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.vpnSite.VpnSite.interpolationForAttribute"></a>
 
 ```go
@@ -265,6 +302,30 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.vpnSite.VpnSite.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
+
+---
+
+##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-azurerm.vpnSite.VpnSite.moveTo"></a>
+
+```go
+func MoveTo(moveTarget *string, index interface{})
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.vpnSite.VpnSite.moveTo.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.vpnSite.VpnSite.moveTo.parameter.index"></a>
+
+- *Type:* interface{}
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
 ---
 
@@ -359,13 +420,14 @@ func ResetTimeouts()
 | <code><a href="#@cdktf/provider-azurerm.vpnSite.VpnSite.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-azurerm.vpnSite.VpnSite.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.vpnSite.VpnSite.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.vpnSite.VpnSite.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a VpnSite resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.vpnSite.VpnSite.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
 
 vpnsite.VpnSite_IsConstruct(x interface{}) *bool
 ```
@@ -397,7 +459,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.vpnSite.VpnSite.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
 
 vpnsite.VpnSite_IsTerraformElement(x interface{}) *bool
 ```
@@ -411,7 +473,7 @@ vpnsite.VpnSite_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.vpnSite.VpnSite.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
 
 vpnsite.VpnSite_IsTerraformResource(x interface{}) *bool
 ```
@@ -419,6 +481,50 @@ vpnsite.VpnSite_IsTerraformResource(x interface{}) *bool
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-azurerm.vpnSite.VpnSite.isTerraformResource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.vpnSite.VpnSite.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
+
+vpnsite.VpnSite_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a VpnSite resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-azurerm.vpnSite.VpnSite.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-azurerm.vpnSite.VpnSite.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the VpnSite to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-azurerm.vpnSite.VpnSite.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing VpnSite that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/vpn_site#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.vpnSite.VpnSite.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the VpnSite to import is found.
 
 ---
 
@@ -874,7 +980,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnSite.VpnSiteConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
 
 &vpnsite.VpnSiteConfig {
 	Connection: interface{},
@@ -893,9 +999,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
 	DeviceVendor: *string,
 	Id: *string,
 	Link: interface{},
-	O365Policy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.vpnSite.VpnSiteO365Policy,
+	O365Policy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.vpnSite.VpnSiteO365Policy,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.vpnSite.VpnSiteTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.vpnSite.VpnSiteTimeouts,
 }
 ```
 
@@ -1153,11 +1259,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnSite.VpnSiteLink.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
 
 &vpnsite.VpnSiteLink {
 	Name: *string,
-	Bgp: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.vpnSite.VpnSiteLinkBgp,
+	Bgp: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.vpnSite.VpnSiteLinkBgp,
 	Fqdn: *string,
 	IpAddress: *string,
 	ProviderName: *string,
@@ -1257,7 +1363,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnSite.VpnSiteLinkBgp.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
 
 &vpnsite.VpnSiteLinkBgp {
 	Asn: *f64,
@@ -1303,10 +1409,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnSite.VpnSiteO365Policy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
 
 &vpnsite.VpnSiteO365Policy {
-	TrafficCategory: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.vpnSite.VpnSiteO365PolicyTrafficCategory,
+	TrafficCategory: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.vpnSite.VpnSiteO365PolicyTrafficCategory,
 }
 ```
 
@@ -1337,7 +1443,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnSite.VpnSiteO365PolicyTrafficCategory.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
 
 &vpnsite.VpnSiteO365PolicyTrafficCategory {
 	AllowEndpointEnabled: interface{},
@@ -1397,7 +1503,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnSite.VpnSiteTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
 
 &vpnsite.VpnSiteTimeouts {
 	Create: *string,
@@ -1473,7 +1579,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnSite.VpnSiteLinkBgpOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
 
 vpnsite.NewVpnSiteLinkBgpOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VpnSiteLinkBgpOutputReference
 ```
@@ -1766,7 +1872,7 @@ func InternalValue() VpnSiteLinkBgp
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnSite.VpnSiteLinkList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
 
 vpnsite.NewVpnSiteLinkList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VpnSiteLinkList
 ```
@@ -1909,7 +2015,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnSite.VpnSiteLinkOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
 
 vpnsite.NewVpnSiteLinkOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VpnSiteLinkOutputReference
 ```
@@ -2367,7 +2473,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnSite.VpnSiteO365PolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
 
 vpnsite.NewVpnSiteO365PolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VpnSiteO365PolicyOutputReference
 ```
@@ -2658,7 +2764,7 @@ func InternalValue() VpnSiteO365Policy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnSite.VpnSiteO365PolicyTrafficCategoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
 
 vpnsite.NewVpnSiteO365PolicyTrafficCategoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VpnSiteO365PolicyTrafficCategoryOutputReference
 ```
@@ -2994,7 +3100,7 @@ func InternalValue() VpnSiteO365PolicyTrafficCategory
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnSite.VpnSiteTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
 
 vpnsite.NewVpnSiteTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VpnSiteTimeoutsOutputReference
 ```

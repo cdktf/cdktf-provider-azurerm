@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltonextgenerationfirewallvirtualhubpanorama"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltonextgenerationfirewallvirtualhubpanorama"
 
 paloaltonextgenerationfirewallvirtualhubpanorama.NewPaloAltoNextGenerationFirewallVirtualHubPanorama(scope Construct, id *string, config PaloAltoNextGenerationFirewallVirtualHubPanoramaConfig) PaloAltoNextGenerationFirewallVirtualHubPanorama
 ```
@@ -60,6 +60,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
 | <code><a href="#@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
@@ -69,7 +70,9 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.importFrom">ImportFrom</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.putDestinationNat">PutDestinationNat</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.putDnsSettings">PutDnsSettings</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.putNetworkProfile">PutNetworkProfile</a></code> | *No description.* |
@@ -145,6 +148,22 @@ func ToTerraform() interface{}
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `AddMoveTarget` <a name="AddMoveTarget" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.addMoveTarget"></a>
+
+```go
+func AddMoveTarget(moveTarget *string)
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.getAnyMapAttribute"></a>
 
@@ -254,6 +273,24 @@ func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 
 ---
 
+##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.importFrom"></a>
+
+```go
+func ImportFrom(id *string, provider TerraformProvider)
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.importFrom.parameter.id"></a>
+
+- *Type:* *string
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.importFrom.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+---
+
 ##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.interpolationForAttribute"></a>
 
 ```go
@@ -263,6 +300,30 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
+
+---
+
+##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.moveTo"></a>
+
+```go
+func MoveTo(moveTarget *string, index interface{})
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.moveTo.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.moveTo.parameter.index"></a>
+
+- *Type:* interface{}
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
 ---
 
@@ -351,13 +412,14 @@ func ResetTimeouts()
 | <code><a href="#@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a PaloAltoNextGenerationFirewallVirtualHubPanorama resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltonextgenerationfirewallvirtualhubpanorama"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltonextgenerationfirewallvirtualhubpanorama"
 
 paloaltonextgenerationfirewallvirtualhubpanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama_IsConstruct(x interface{}) *bool
 ```
@@ -389,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltonextgenerationfirewallvirtualhubpanorama"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltonextgenerationfirewallvirtualhubpanorama"
 
 paloaltonextgenerationfirewallvirtualhubpanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama_IsTerraformElement(x interface{}) *bool
 ```
@@ -403,7 +465,7 @@ paloaltonextgenerationfirewallvirtualhubpanorama.PaloAltoNextGenerationFirewallV
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltonextgenerationfirewallvirtualhubpanorama"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltonextgenerationfirewallvirtualhubpanorama"
 
 paloaltonextgenerationfirewallvirtualhubpanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama_IsTerraformResource(x interface{}) *bool
 ```
@@ -411,6 +473,50 @@ paloaltonextgenerationfirewallvirtualhubpanorama.PaloAltoNextGenerationFirewallV
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.isTerraformResource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltonextgenerationfirewallvirtualhubpanorama"
+
+paloaltonextgenerationfirewallvirtualhubpanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a PaloAltoNextGenerationFirewallVirtualHubPanorama resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the PaloAltoNextGenerationFirewallVirtualHubPanorama to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing PaloAltoNextGenerationFirewallVirtualHubPanorama that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/palo_alto_next_generation_firewall_virtual_hub_panorama#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanorama.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the PaloAltoNextGenerationFirewallVirtualHubPanorama to import is found.
 
 ---
 
@@ -833,7 +939,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltonextgenerationfirewallvirtualhubpanorama"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltonextgenerationfirewallvirtualhubpanorama"
 
 &paloaltonextgenerationfirewallvirtualhubpanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaConfig {
 	Connection: interface{},
@@ -845,14 +951,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltonextgener
 	Provisioners: *[]interface{},
 	Location: *string,
 	Name: *string,
-	NetworkProfile: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaNetworkProfile,
+	NetworkProfile: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaNetworkProfile,
 	PanoramaBase64Config: *string,
 	ResourceGroupName: *string,
 	DestinationNat: interface{},
-	DnsSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaDnsSettings,
+	DnsSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaDnsSettings,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaTimeouts,
 }
 ```
 
@@ -1086,13 +1192,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaDestinationNat.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltonextgenerationfirewallvirtualhubpanorama"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltonextgenerationfirewallvirtualhubpanorama"
 
 &paloaltonextgenerationfirewallvirtualhubpanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaDestinationNat {
 	Name: *string,
 	Protocol: *string,
-	BackendConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaDestinationNatBackendConfig,
-	FrontendConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaDestinationNatFrontendConfig,
+	BackendConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaDestinationNatBackendConfig,
+	FrontendConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaDestinationNatFrontendConfig,
 }
 ```
 
@@ -1164,7 +1270,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaDestinationNatBackendConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltonextgenerationfirewallvirtualhubpanorama"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltonextgenerationfirewallvirtualhubpanorama"
 
 &paloaltonextgenerationfirewallvirtualhubpanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaDestinationNatBackendConfig {
 	Port: *f64,
@@ -1210,7 +1316,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaDestinationNatFrontendConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltonextgenerationfirewallvirtualhubpanorama"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltonextgenerationfirewallvirtualhubpanorama"
 
 &paloaltonextgenerationfirewallvirtualhubpanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaDestinationNatFrontendConfig {
 	Port: *f64,
@@ -1256,7 +1362,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaDnsSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltonextgenerationfirewallvirtualhubpanorama"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltonextgenerationfirewallvirtualhubpanorama"
 
 &paloaltonextgenerationfirewallvirtualhubpanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaDnsSettings {
 	DnsServers: *[]*string,
@@ -1302,7 +1408,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaNetworkProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltonextgenerationfirewallvirtualhubpanorama"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltonextgenerationfirewallvirtualhubpanorama"
 
 &paloaltonextgenerationfirewallvirtualhubpanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaNetworkProfile {
 	NetworkVirtualApplianceId: *string,
@@ -1376,7 +1482,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaPanorama.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltonextgenerationfirewallvirtualhubpanorama"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltonextgenerationfirewallvirtualhubpanorama"
 
 &paloaltonextgenerationfirewallvirtualhubpanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaPanorama {
 
@@ -1389,7 +1495,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltonextgener
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltonextgenerationfirewallvirtualhubpanorama"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltonextgenerationfirewallvirtualhubpanorama"
 
 &paloaltonextgenerationfirewallvirtualhubpanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaTimeouts {
 	Create: *string,
@@ -1465,7 +1571,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaDestinationNatBackendConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltonextgenerationfirewallvirtualhubpanorama"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltonextgenerationfirewallvirtualhubpanorama"
 
 paloaltonextgenerationfirewallvirtualhubpanorama.NewPaloAltoNextGenerationFirewallVirtualHubPanoramaDestinationNatBackendConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PaloAltoNextGenerationFirewallVirtualHubPanoramaDestinationNatBackendConfigOutputReference
 ```
@@ -1758,7 +1864,7 @@ func InternalValue() PaloAltoNextGenerationFirewallVirtualHubPanoramaDestination
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaDestinationNatFrontendConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltonextgenerationfirewallvirtualhubpanorama"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltonextgenerationfirewallvirtualhubpanorama"
 
 paloaltonextgenerationfirewallvirtualhubpanorama.NewPaloAltoNextGenerationFirewallVirtualHubPanoramaDestinationNatFrontendConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PaloAltoNextGenerationFirewallVirtualHubPanoramaDestinationNatFrontendConfigOutputReference
 ```
@@ -2051,7 +2157,7 @@ func InternalValue() PaloAltoNextGenerationFirewallVirtualHubPanoramaDestination
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaDestinationNatList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltonextgenerationfirewallvirtualhubpanorama"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltonextgenerationfirewallvirtualhubpanorama"
 
 paloaltonextgenerationfirewallvirtualhubpanorama.NewPaloAltoNextGenerationFirewallVirtualHubPanoramaDestinationNatList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) PaloAltoNextGenerationFirewallVirtualHubPanoramaDestinationNatList
 ```
@@ -2194,7 +2300,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaDestinationNatOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltonextgenerationfirewallvirtualhubpanorama"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltonextgenerationfirewallvirtualhubpanorama"
 
 paloaltonextgenerationfirewallvirtualhubpanorama.NewPaloAltoNextGenerationFirewallVirtualHubPanoramaDestinationNatOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) PaloAltoNextGenerationFirewallVirtualHubPanoramaDestinationNatOutputReference
 ```
@@ -2589,7 +2695,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaDnsSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltonextgenerationfirewallvirtualhubpanorama"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltonextgenerationfirewallvirtualhubpanorama"
 
 paloaltonextgenerationfirewallvirtualhubpanorama.NewPaloAltoNextGenerationFirewallVirtualHubPanoramaDnsSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PaloAltoNextGenerationFirewallVirtualHubPanoramaDnsSettingsOutputReference
 ```
@@ -2907,7 +3013,7 @@ func InternalValue() PaloAltoNextGenerationFirewallVirtualHubPanoramaDnsSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaNetworkProfileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltonextgenerationfirewallvirtualhubpanorama"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltonextgenerationfirewallvirtualhubpanorama"
 
 paloaltonextgenerationfirewallvirtualhubpanorama.NewPaloAltoNextGenerationFirewallVirtualHubPanoramaNetworkProfileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PaloAltoNextGenerationFirewallVirtualHubPanoramaNetworkProfileOutputReference
 ```
@@ -3306,7 +3412,7 @@ func InternalValue() PaloAltoNextGenerationFirewallVirtualHubPanoramaNetworkProf
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaPanoramaList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltonextgenerationfirewallvirtualhubpanorama"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltonextgenerationfirewallvirtualhubpanorama"
 
 paloaltonextgenerationfirewallvirtualhubpanorama.NewPaloAltoNextGenerationFirewallVirtualHubPanoramaPanoramaList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) PaloAltoNextGenerationFirewallVirtualHubPanoramaPanoramaList
 ```
@@ -3438,7 +3544,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaPanoramaOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltonextgenerationfirewallvirtualhubpanorama"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltonextgenerationfirewallvirtualhubpanorama"
 
 paloaltonextgenerationfirewallvirtualhubpanorama.NewPaloAltoNextGenerationFirewallVirtualHubPanoramaPanoramaOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) PaloAltoNextGenerationFirewallVirtualHubPanoramaPanoramaOutputReference
 ```
@@ -3782,7 +3888,7 @@ func InternalValue() PaloAltoNextGenerationFirewallVirtualHubPanoramaPanorama
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualHubPanorama.PaloAltoNextGenerationFirewallVirtualHubPanoramaTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltonextgenerationfirewallvirtualhubpanorama"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltonextgenerationfirewallvirtualhubpanorama"
 
 paloaltonextgenerationfirewallvirtualhubpanorama.NewPaloAltoNextGenerationFirewallVirtualHubPanoramaTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PaloAltoNextGenerationFirewallVirtualHubPanoramaTimeoutsOutputReference
 ```

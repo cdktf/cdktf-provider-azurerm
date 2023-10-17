@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPrivateEndpointConnection.DataAzurermPrivateEndpointConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermprivateendpointconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermprivateendpointconnection"
 
 dataazurermprivateendpointconnection.NewDataAzurermPrivateEndpointConnection(scope Construct, id *string, config DataAzurermPrivateEndpointConnectionConfig) DataAzurermPrivateEndpointConnection
 ```
@@ -291,13 +291,14 @@ func ResetTimeouts()
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateEndpointConnection.DataAzurermPrivateEndpointConnection.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateEndpointConnection.DataAzurermPrivateEndpointConnection.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateEndpointConnection.DataAzurermPrivateEndpointConnection.isTerraformDataSource">IsTerraformDataSource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPrivateEndpointConnection.DataAzurermPrivateEndpointConnection.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a DataAzurermPrivateEndpointConnection resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermPrivateEndpointConnection.DataAzurermPrivateEndpointConnection.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermprivateendpointconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermprivateendpointconnection"
 
 dataazurermprivateendpointconnection.DataAzurermPrivateEndpointConnection_IsConstruct(x interface{}) *bool
 ```
@@ -329,7 +330,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermPrivateEndpointConnection.DataAzurermPrivateEndpointConnection.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermprivateendpointconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermprivateendpointconnection"
 
 dataazurermprivateendpointconnection.DataAzurermPrivateEndpointConnection_IsTerraformElement(x interface{}) *bool
 ```
@@ -343,7 +344,7 @@ dataazurermprivateendpointconnection.DataAzurermPrivateEndpointConnection_IsTerr
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermPrivateEndpointConnection.DataAzurermPrivateEndpointConnection.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermprivateendpointconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermprivateendpointconnection"
 
 dataazurermprivateendpointconnection.DataAzurermPrivateEndpointConnection_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -351,6 +352,50 @@ dataazurermprivateendpointconnection.DataAzurermPrivateEndpointConnection_IsTerr
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-azurerm.dataAzurermPrivateEndpointConnection.DataAzurermPrivateEndpointConnection.isTerraformDataSource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermPrivateEndpointConnection.DataAzurermPrivateEndpointConnection.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermprivateendpointconnection"
+
+dataazurermprivateendpointconnection.DataAzurermPrivateEndpointConnection_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a DataAzurermPrivateEndpointConnection resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-azurerm.dataAzurermPrivateEndpointConnection.DataAzurermPrivateEndpointConnection.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-azurerm.dataAzurermPrivateEndpointConnection.DataAzurermPrivateEndpointConnection.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the DataAzurermPrivateEndpointConnection to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-azurerm.dataAzurermPrivateEndpointConnection.DataAzurermPrivateEndpointConnection.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing DataAzurermPrivateEndpointConnection that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/private_endpoint_connection#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.dataAzurermPrivateEndpointConnection.DataAzurermPrivateEndpointConnection.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the DataAzurermPrivateEndpointConnection to import is found.
 
 ---
 
@@ -641,7 +686,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermPrivateEndpointConnection.DataAzurermPrivateEndpointConnectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermprivateendpointconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermprivateendpointconnection"
 
 &dataazurermprivateendpointconnection.DataAzurermPrivateEndpointConnectionConfig {
 	Connection: interface{},
@@ -654,7 +699,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermprivat
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermPrivateEndpointConnection.DataAzurermPrivateEndpointConnectionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermPrivateEndpointConnection.DataAzurermPrivateEndpointConnectionTimeouts,
 }
 ```
 
@@ -804,7 +849,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermPrivateEndpointConnection.DataAzurermPrivateEndpointConnectionNetworkInterface.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermprivateendpointconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermprivateendpointconnection"
 
 &dataazurermprivateendpointconnection.DataAzurermPrivateEndpointConnectionNetworkInterface {
 
@@ -817,7 +862,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermprivat
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermPrivateEndpointConnection.DataAzurermPrivateEndpointConnectionPrivateServiceConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermprivateendpointconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermprivateendpointconnection"
 
 &dataazurermprivateendpointconnection.DataAzurermPrivateEndpointConnectionPrivateServiceConnection {
 
@@ -830,7 +875,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermprivat
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermPrivateEndpointConnection.DataAzurermPrivateEndpointConnectionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermprivateendpointconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermprivateendpointconnection"
 
 &dataazurermprivateendpointconnection.DataAzurermPrivateEndpointConnectionTimeouts {
 	Read: *string,
@@ -864,7 +909,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPrivateEndpointConnection.DataAzurermPrivateEndpointConnectionNetworkInterfaceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermprivateendpointconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermprivateendpointconnection"
 
 dataazurermprivateendpointconnection.NewDataAzurermPrivateEndpointConnectionNetworkInterfaceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermPrivateEndpointConnectionNetworkInterfaceList
 ```
@@ -996,7 +1041,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPrivateEndpointConnection.DataAzurermPrivateEndpointConnectionNetworkInterfaceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermprivateendpointconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermprivateendpointconnection"
 
 dataazurermprivateendpointconnection.NewDataAzurermPrivateEndpointConnectionNetworkInterfaceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermPrivateEndpointConnectionNetworkInterfaceOutputReference
 ```
@@ -1285,7 +1330,7 @@ func InternalValue() DataAzurermPrivateEndpointConnectionNetworkInterface
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPrivateEndpointConnection.DataAzurermPrivateEndpointConnectionPrivateServiceConnectionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermprivateendpointconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermprivateendpointconnection"
 
 dataazurermprivateendpointconnection.NewDataAzurermPrivateEndpointConnectionPrivateServiceConnectionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermPrivateEndpointConnectionPrivateServiceConnectionList
 ```
@@ -1417,7 +1462,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPrivateEndpointConnection.DataAzurermPrivateEndpointConnectionPrivateServiceConnectionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermprivateendpointconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermprivateendpointconnection"
 
 dataazurermprivateendpointconnection.NewDataAzurermPrivateEndpointConnectionPrivateServiceConnectionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermPrivateEndpointConnectionPrivateServiceConnectionOutputReference
 ```
@@ -1728,7 +1773,7 @@ func InternalValue() DataAzurermPrivateEndpointConnectionPrivateServiceConnectio
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPrivateEndpointConnection.DataAzurermPrivateEndpointConnectionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermprivateendpointconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermprivateendpointconnection"
 
 dataazurermprivateendpointconnection.NewDataAzurermPrivateEndpointConnectionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermPrivateEndpointConnectionTimeoutsOutputReference
 ```

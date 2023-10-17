@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/sentinel_data_connector_microsoft_threat_intelligence
 // generated from terraform resource schema
 
@@ -185,6 +180,20 @@ export class SentinelDataConnectorMicrosoftThreatIntelligence extends cdktf.Terr
   // STATIC PROPERTIES
   // =================
   public static readonly tfResourceType = "azurerm_sentinel_data_connector_microsoft_threat_intelligence";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a SentinelDataConnectorMicrosoftThreatIntelligence resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the SentinelDataConnectorMicrosoftThreatIntelligence to import
+  * @param importFromId The id of the existing SentinelDataConnectorMicrosoftThreatIntelligence that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/sentinel_data_connector_microsoft_threat_intelligence#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the SentinelDataConnectorMicrosoftThreatIntelligence to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_sentinel_data_connector_microsoft_threat_intelligence", importId: importFromId, provider });
+      }
 
   // ===========
   // INITIALIZER

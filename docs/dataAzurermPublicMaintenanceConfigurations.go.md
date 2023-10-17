@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPublicMaintenanceConfigurations.DataAzurermPublicMaintenanceConfigurations.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermpublicmaintenanceconfigurations"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicmaintenanceconfigurations"
 
 dataazurermpublicmaintenanceconfigurations.NewDataAzurermPublicMaintenanceConfigurations(scope Construct, id *string, config DataAzurermPublicMaintenanceConfigurationsConfig) DataAzurermPublicMaintenanceConfigurations
 ```
@@ -312,13 +312,14 @@ func ResetTimeouts()
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPublicMaintenanceConfigurations.DataAzurermPublicMaintenanceConfigurations.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPublicMaintenanceConfigurations.DataAzurermPublicMaintenanceConfigurations.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermPublicMaintenanceConfigurations.DataAzurermPublicMaintenanceConfigurations.isTerraformDataSource">IsTerraformDataSource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermPublicMaintenanceConfigurations.DataAzurermPublicMaintenanceConfigurations.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a DataAzurermPublicMaintenanceConfigurations resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermPublicMaintenanceConfigurations.DataAzurermPublicMaintenanceConfigurations.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermpublicmaintenanceconfigurations"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicmaintenanceconfigurations"
 
 dataazurermpublicmaintenanceconfigurations.DataAzurermPublicMaintenanceConfigurations_IsConstruct(x interface{}) *bool
 ```
@@ -350,7 +351,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermPublicMaintenanceConfigurations.DataAzurermPublicMaintenanceConfigurations.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermpublicmaintenanceconfigurations"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicmaintenanceconfigurations"
 
 dataazurermpublicmaintenanceconfigurations.DataAzurermPublicMaintenanceConfigurations_IsTerraformElement(x interface{}) *bool
 ```
@@ -364,7 +365,7 @@ dataazurermpublicmaintenanceconfigurations.DataAzurermPublicMaintenanceConfigura
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermPublicMaintenanceConfigurations.DataAzurermPublicMaintenanceConfigurations.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermpublicmaintenanceconfigurations"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicmaintenanceconfigurations"
 
 dataazurermpublicmaintenanceconfigurations.DataAzurermPublicMaintenanceConfigurations_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -372,6 +373,50 @@ dataazurermpublicmaintenanceconfigurations.DataAzurermPublicMaintenanceConfigura
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-azurerm.dataAzurermPublicMaintenanceConfigurations.DataAzurermPublicMaintenanceConfigurations.isTerraformDataSource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermPublicMaintenanceConfigurations.DataAzurermPublicMaintenanceConfigurations.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicmaintenanceconfigurations"
+
+dataazurermpublicmaintenanceconfigurations.DataAzurermPublicMaintenanceConfigurations_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a DataAzurermPublicMaintenanceConfigurations resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-azurerm.dataAzurermPublicMaintenanceConfigurations.DataAzurermPublicMaintenanceConfigurations.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-azurerm.dataAzurermPublicMaintenanceConfigurations.DataAzurermPublicMaintenanceConfigurations.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the DataAzurermPublicMaintenanceConfigurations to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-azurerm.dataAzurermPublicMaintenanceConfigurations.DataAzurermPublicMaintenanceConfigurations.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing DataAzurermPublicMaintenanceConfigurations that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/public_maintenance_configurations#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.dataAzurermPublicMaintenanceConfigurations.DataAzurermPublicMaintenanceConfigurations.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the DataAzurermPublicMaintenanceConfigurations to import is found.
 
 ---
 
@@ -662,7 +707,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermPublicMaintenanceConfigurations.DataAzurermPublicMaintenanceConfigurationsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermpublicmaintenanceconfigurations"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicmaintenanceconfigurations"
 
 &dataazurermpublicmaintenanceconfigurations.DataAzurermPublicMaintenanceConfigurationsConfig {
 	Connection: interface{},
@@ -676,7 +721,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermpublic
 	Location: *string,
 	RecurEvery: *string,
 	Scope: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermPublicMaintenanceConfigurations.DataAzurermPublicMaintenanceConfigurationsTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermPublicMaintenanceConfigurations.DataAzurermPublicMaintenanceConfigurationsTimeouts,
 }
 ```
 
@@ -839,7 +884,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermPublicMaintenanceConfigurations.DataAzurermPublicMaintenanceConfigurationsConfigs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermpublicmaintenanceconfigurations"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicmaintenanceconfigurations"
 
 &dataazurermpublicmaintenanceconfigurations.DataAzurermPublicMaintenanceConfigurationsConfigs {
 
@@ -852,7 +897,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermpublic
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermPublicMaintenanceConfigurations.DataAzurermPublicMaintenanceConfigurationsTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermpublicmaintenanceconfigurations"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicmaintenanceconfigurations"
 
 &dataazurermpublicmaintenanceconfigurations.DataAzurermPublicMaintenanceConfigurationsTimeouts {
 	Read: *string,
@@ -886,7 +931,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPublicMaintenanceConfigurations.DataAzurermPublicMaintenanceConfigurationsConfigsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermpublicmaintenanceconfigurations"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicmaintenanceconfigurations"
 
 dataazurermpublicmaintenanceconfigurations.NewDataAzurermPublicMaintenanceConfigurationsConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermPublicMaintenanceConfigurationsConfigsList
 ```
@@ -1018,7 +1063,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPublicMaintenanceConfigurations.DataAzurermPublicMaintenanceConfigurationsConfigsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermpublicmaintenanceconfigurations"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicmaintenanceconfigurations"
 
 dataazurermpublicmaintenanceconfigurations.NewDataAzurermPublicMaintenanceConfigurationsConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermPublicMaintenanceConfigurationsConfigsOutputReference
 ```
@@ -1373,7 +1418,7 @@ func InternalValue() DataAzurermPublicMaintenanceConfigurationsConfigs
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPublicMaintenanceConfigurations.DataAzurermPublicMaintenanceConfigurationsTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermpublicmaintenanceconfigurations"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermpublicmaintenanceconfigurations"
 
 dataazurermpublicmaintenanceconfigurations.NewDataAzurermPublicMaintenanceConfigurationsTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermPublicMaintenanceConfigurationsTimeoutsOutputReference
 ```

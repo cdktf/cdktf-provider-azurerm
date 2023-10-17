@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/security_center_automation
 // generated from terraform resource schema
 
@@ -789,6 +784,20 @@ export class SecurityCenterAutomation extends cdktf.TerraformResource {
   // STATIC PROPERTIES
   // =================
   public static readonly tfResourceType = "azurerm_security_center_automation";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a SecurityCenterAutomation resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the SecurityCenterAutomation to import
+  * @param importFromId The id of the existing SecurityCenterAutomation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/security_center_automation#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the SecurityCenterAutomation to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_security_center_automation", importId: importFromId, provider });
+      }
 
   // ===========
   // INITIALIZER

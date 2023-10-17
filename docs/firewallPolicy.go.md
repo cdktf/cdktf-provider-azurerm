@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 firewallpolicy.NewFirewallPolicy(scope Construct, id *string, config FirewallPolicyConfig) FirewallPolicy
 ```
@@ -60,6 +60,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
 | <code><a href="#@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
@@ -69,7 +70,9 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.importFrom">ImportFrom</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.putDns">PutDns</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.putExplicitProxy">PutExplicitProxy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.putIdentity">PutIdentity</a></code> | *No description.* |
@@ -160,6 +163,22 @@ func ToTerraform() interface{}
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `AddMoveTarget` <a name="AddMoveTarget" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.addMoveTarget"></a>
+
+```go
+func AddMoveTarget(moveTarget *string)
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.getAnyMapAttribute"></a>
 
@@ -269,6 +288,24 @@ func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 
 ---
 
+##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.importFrom"></a>
+
+```go
+func ImportFrom(id *string, provider TerraformProvider)
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.importFrom.parameter.id"></a>
+
+- *Type:* *string
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.importFrom.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+---
+
 ##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.interpolationForAttribute"></a>
 
 ```go
@@ -278,6 +315,30 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
+
+---
+
+##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.moveTo"></a>
+
+```go
+func MoveTo(moveTarget *string, index interface{})
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.moveTo.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.moveTo.parameter.index"></a>
+
+- *Type:* interface{}
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
 ---
 
@@ -480,13 +541,14 @@ func ResetTlsCertificate()
 | <code><a href="#@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a FirewallPolicy resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 firewallpolicy.FirewallPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -518,7 +580,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 firewallpolicy.FirewallPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -532,7 +594,7 @@ firewallpolicy.FirewallPolicy_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 firewallpolicy.FirewallPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -540,6 +602,50 @@ firewallpolicy.FirewallPolicy_IsTerraformResource(x interface{}) *bool
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.isTerraformResource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
+
+firewallpolicy.FirewallPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a FirewallPolicy resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the FirewallPolicy to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing FirewallPolicy that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/firewall_policy#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicy.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the FirewallPolicy to import is found.
 
 ---
 
@@ -1182,7 +1288,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 &firewallpolicy.FirewallPolicyConfig {
 	Connection: interface{},
@@ -1197,20 +1303,20 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
 	ResourceGroupName: *string,
 	AutoLearnPrivateRangesEnabled: interface{},
 	BasePolicyId: *string,
-	Dns: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.firewallPolicy.FirewallPolicyDns,
-	ExplicitProxy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.firewallPolicy.FirewallPolicyExplicitProxy,
+	Dns: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.firewallPolicy.FirewallPolicyDns,
+	ExplicitProxy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.firewallPolicy.FirewallPolicyExplicitProxy,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.firewallPolicy.FirewallPolicyIdentity,
-	Insights: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.firewallPolicy.FirewallPolicyInsights,
-	IntrusionDetection: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.firewallPolicy.FirewallPolicyIntrusionDetection,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.firewallPolicy.FirewallPolicyIdentity,
+	Insights: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.firewallPolicy.FirewallPolicyInsights,
+	IntrusionDetection: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.firewallPolicy.FirewallPolicyIntrusionDetection,
 	PrivateIpRanges: *[]*string,
 	Sku: *string,
 	SqlRedirectAllowed: interface{},
 	Tags: *map[string]*string,
-	ThreatIntelligenceAllowlist: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.firewallPolicy.FirewallPolicyThreatIntelligenceAllowlistStruct,
+	ThreatIntelligenceAllowlist: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.firewallPolicy.FirewallPolicyThreatIntelligenceAllowlistStruct,
 	ThreatIntelligenceMode: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.firewallPolicy.FirewallPolicyTimeouts,
-	TlsCertificate: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.firewallPolicy.FirewallPolicyTlsCertificate,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.firewallPolicy.FirewallPolicyTimeouts,
+	TlsCertificate: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.firewallPolicy.FirewallPolicyTlsCertificate,
 }
 ```
 
@@ -1569,7 +1675,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicyDns.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 &firewallpolicy.FirewallPolicyDns {
 	ProxyEnabled: interface{},
@@ -1615,7 +1721,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicyExplicitProxy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 &firewallpolicy.FirewallPolicyExplicitProxy {
 	Enabled: interface{},
@@ -1717,7 +1823,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicyIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 &firewallpolicy.FirewallPolicyIdentity {
 	Type: *string,
@@ -1763,7 +1869,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicyInsights.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 &firewallpolicy.FirewallPolicyInsights {
 	DefaultLogAnalyticsWorkspaceId: *string,
@@ -1839,7 +1945,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicyInsightsLogAnalyticsWorkspace.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 &firewallpolicy.FirewallPolicyInsightsLogAnalyticsWorkspace {
 	FirewallLocation: *string,
@@ -1888,7 +1994,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicyIntrusionDetection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 &firewallpolicy.FirewallPolicyIntrusionDetection {
 	Mode: *string,
@@ -1966,7 +2072,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicyIntrusionDetectionSignatureOverrides.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 &firewallpolicy.FirewallPolicyIntrusionDetectionSignatureOverrides {
 	Id: *string,
@@ -2015,7 +2121,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicyIntrusionDetectionTrafficBypass.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 &firewallpolicy.FirewallPolicyIntrusionDetectionTrafficBypass {
 	Name: *string,
@@ -2145,7 +2251,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicyThreatIntelligenceAllowlistStruct.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 &firewallpolicy.FirewallPolicyThreatIntelligenceAllowlistStruct {
 	Fqdns: *[]*string,
@@ -2191,7 +2297,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 &firewallpolicy.FirewallPolicyTimeouts {
 	Create: *string,
@@ -2265,7 +2371,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicyTlsCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 &firewallpolicy.FirewallPolicyTlsCertificate {
 	KeyVaultSecretId: *string,
@@ -2313,7 +2419,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicyDnsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 firewallpolicy.NewFirewallPolicyDnsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirewallPolicyDnsOutputReference
 ```
@@ -2620,7 +2726,7 @@ func InternalValue() FirewallPolicyDns
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicyExplicitProxyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 firewallpolicy.NewFirewallPolicyExplicitProxyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirewallPolicyExplicitProxyOutputReference
 ```
@@ -3043,7 +3149,7 @@ func InternalValue() FirewallPolicyExplicitProxy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicyIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 firewallpolicy.NewFirewallPolicyIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirewallPolicyIdentityOutputReference
 ```
@@ -3365,7 +3471,7 @@ func InternalValue() FirewallPolicyIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicyInsightsLogAnalyticsWorkspaceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 firewallpolicy.NewFirewallPolicyInsightsLogAnalyticsWorkspaceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FirewallPolicyInsightsLogAnalyticsWorkspaceList
 ```
@@ -3508,7 +3614,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicyInsightsLogAnalyticsWorkspaceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 firewallpolicy.NewFirewallPolicyInsightsLogAnalyticsWorkspaceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FirewallPolicyInsightsLogAnalyticsWorkspaceOutputReference
 ```
@@ -3819,7 +3925,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicyInsightsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 firewallpolicy.NewFirewallPolicyInsightsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirewallPolicyInsightsOutputReference
 ```
@@ -4183,7 +4289,7 @@ func InternalValue() FirewallPolicyInsights
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicyIntrusionDetectionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 firewallpolicy.NewFirewallPolicyIntrusionDetectionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirewallPolicyIntrusionDetectionOutputReference
 ```
@@ -4574,7 +4680,7 @@ func InternalValue() FirewallPolicyIntrusionDetection
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicyIntrusionDetectionSignatureOverridesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 firewallpolicy.NewFirewallPolicyIntrusionDetectionSignatureOverridesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FirewallPolicyIntrusionDetectionSignatureOverridesList
 ```
@@ -4717,7 +4823,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicyIntrusionDetectionSignatureOverridesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 firewallpolicy.NewFirewallPolicyIntrusionDetectionSignatureOverridesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FirewallPolicyIntrusionDetectionSignatureOverridesOutputReference
 ```
@@ -5042,7 +5148,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicyIntrusionDetectionTrafficBypassList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 firewallpolicy.NewFirewallPolicyIntrusionDetectionTrafficBypassList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FirewallPolicyIntrusionDetectionTrafficBypassList
 ```
@@ -5185,7 +5291,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicyIntrusionDetectionTrafficBypassOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 firewallpolicy.NewFirewallPolicyIntrusionDetectionTrafficBypassOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FirewallPolicyIntrusionDetectionTrafficBypassOutputReference
 ```
@@ -5670,7 +5776,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicyThreatIntelligenceAllowlistStructOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 firewallpolicy.NewFirewallPolicyThreatIntelligenceAllowlistStructOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirewallPolicyThreatIntelligenceAllowlistStructOutputReference
 ```
@@ -5977,7 +6083,7 @@ func InternalValue() FirewallPolicyThreatIntelligenceAllowlistStruct
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 firewallpolicy.NewFirewallPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirewallPolicyTimeoutsOutputReference
 ```
@@ -6342,7 +6448,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicy.FirewallPolicyTlsCertificateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicy"
 
 firewallpolicy.NewFirewallPolicyTlsCertificateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirewallPolicyTlsCertificateOutputReference
 ```

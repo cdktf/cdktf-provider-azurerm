@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgateway"
 
 springcloudgateway.NewSpringCloudGateway(scope Construct, id *string, config SpringCloudGatewayConfig) SpringCloudGateway
 ```
@@ -60,6 +60,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
 | <code><a href="#@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
@@ -69,7 +70,9 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.importFrom">ImportFrom</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.putApiMetadata">PutApiMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.putClientAuthorization">PutClientAuthorization</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.putCors">PutCors</a></code> | *No description.* |
@@ -155,6 +158,22 @@ func ToTerraform() interface{}
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `AddMoveTarget` <a name="AddMoveTarget" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.addMoveTarget"></a>
+
+```go
+func AddMoveTarget(moveTarget *string)
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.getAnyMapAttribute"></a>
 
@@ -264,6 +283,24 @@ func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 
 ---
 
+##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.importFrom"></a>
+
+```go
+func ImportFrom(id *string, provider TerraformProvider)
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.importFrom.parameter.id"></a>
+
+- *Type:* *string
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.importFrom.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+---
+
 ##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.interpolationForAttribute"></a>
 
 ```go
@@ -273,6 +310,30 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
+
+---
+
+##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.moveTo"></a>
+
+```go
+func MoveTo(moveTarget *string, index interface{})
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.moveTo.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.moveTo.parameter.index"></a>
+
+- *Type:* interface{}
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
 ---
 
@@ -433,13 +494,14 @@ func ResetTimeouts()
 | <code><a href="#@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a SpringCloudGateway resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgateway"
 
 springcloudgateway.SpringCloudGateway_IsConstruct(x interface{}) *bool
 ```
@@ -471,7 +533,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgateway"
 
 springcloudgateway.SpringCloudGateway_IsTerraformElement(x interface{}) *bool
 ```
@@ -485,7 +547,7 @@ springcloudgateway.SpringCloudGateway_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgateway"
 
 springcloudgateway.SpringCloudGateway_IsTerraformResource(x interface{}) *bool
 ```
@@ -493,6 +555,50 @@ springcloudgateway.SpringCloudGateway_IsTerraformResource(x interface{}) *bool
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.isTerraformResource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgateway"
+
+springcloudgateway.SpringCloudGateway_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a SpringCloudGateway resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the SpringCloudGateway to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing SpringCloudGateway that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/spring_cloud_gateway#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGateway.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the SpringCloudGateway to import is found.
 
 ---
 
@@ -1025,7 +1131,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGatewayApiMetadata.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgateway"
 
 &springcloudgateway.SpringCloudGatewayApiMetadata {
 	Description: *string,
@@ -1113,7 +1219,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGatewayClientAuthorization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgateway"
 
 &springcloudgateway.SpringCloudGatewayClientAuthorization {
 	CertificateIds: *[]*string,
@@ -1159,7 +1265,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGatewayConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgateway"
 
 &springcloudgateway.SpringCloudGatewayConfig {
 	Connection: interface{},
@@ -1171,19 +1277,19 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgatewa
 	Provisioners: *[]interface{},
 	Name: *string,
 	SpringCloudServiceId: *string,
-	ApiMetadata: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.springCloudGateway.SpringCloudGatewayApiMetadata,
+	ApiMetadata: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.springCloudGateway.SpringCloudGatewayApiMetadata,
 	ApplicationPerformanceMonitoringTypes: *[]*string,
-	ClientAuthorization: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.springCloudGateway.SpringCloudGatewayClientAuthorization,
-	Cors: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.springCloudGateway.SpringCloudGatewayCors,
+	ClientAuthorization: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.springCloudGateway.SpringCloudGatewayClientAuthorization,
+	Cors: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.springCloudGateway.SpringCloudGatewayCors,
 	EnvironmentVariables: *map[string]*string,
 	HttpsOnly: interface{},
 	Id: *string,
 	InstanceCount: *f64,
 	PublicNetworkAccessEnabled: interface{},
-	Quota: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.springCloudGateway.SpringCloudGatewayQuota,
+	Quota: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.springCloudGateway.SpringCloudGatewayQuota,
 	SensitiveEnvironmentVariables: *map[string]*string,
-	Sso: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.springCloudGateway.SpringCloudGatewaySso,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.springCloudGateway.SpringCloudGatewayTimeouts,
+	Sso: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.springCloudGateway.SpringCloudGatewaySso,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.springCloudGateway.SpringCloudGatewayTimeouts,
 }
 ```
 
@@ -1486,7 +1592,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGatewayCors.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgateway"
 
 &springcloudgateway.SpringCloudGatewayCors {
 	AllowedHeaders: *[]*string,
@@ -1602,7 +1708,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGatewayQuota.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgateway"
 
 &springcloudgateway.SpringCloudGatewayQuota {
 	Cpu: *string,
@@ -1648,7 +1754,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGatewaySso.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgateway"
 
 &springcloudgateway.SpringCloudGatewaySso {
 	ClientId: *string,
@@ -1722,7 +1828,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGatewayTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgateway"
 
 &springcloudgateway.SpringCloudGatewayTimeouts {
 	Create: *string,
@@ -1798,7 +1904,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGatewayApiMetadataOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgateway"
 
 springcloudgateway.NewSpringCloudGatewayApiMetadataOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudGatewayApiMetadataOutputReference
 ```
@@ -2192,7 +2298,7 @@ func InternalValue() SpringCloudGatewayApiMetadata
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGatewayClientAuthorizationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgateway"
 
 springcloudgateway.NewSpringCloudGatewayClientAuthorizationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudGatewayClientAuthorizationOutputReference
 ```
@@ -2499,7 +2605,7 @@ func InternalValue() SpringCloudGatewayClientAuthorization
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGatewayCorsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgateway"
 
 springcloudgateway.NewSpringCloudGatewayCorsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudGatewayCorsOutputReference
 ```
@@ -2951,7 +3057,7 @@ func InternalValue() SpringCloudGatewayCors
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGatewayQuotaOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgateway"
 
 springcloudgateway.NewSpringCloudGatewayQuotaOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudGatewayQuotaOutputReference
 ```
@@ -3258,7 +3364,7 @@ func InternalValue() SpringCloudGatewayQuota
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGatewaySsoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgateway"
 
 springcloudgateway.NewSpringCloudGatewaySsoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudGatewaySsoOutputReference
 ```
@@ -3623,7 +3729,7 @@ func InternalValue() SpringCloudGatewaySso
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudGateway.SpringCloudGatewayTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgateway"
 
 springcloudgateway.NewSpringCloudGatewayTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudGatewayTimeoutsOutputReference
 ```

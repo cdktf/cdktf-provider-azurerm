@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/container_app_environment
 // generated from terraform resource schema
 
@@ -238,6 +233,20 @@ export class ContainerAppEnvironment extends cdktf.TerraformResource {
   // STATIC PROPERTIES
   // =================
   public static readonly tfResourceType = "azurerm_container_app_environment";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a ContainerAppEnvironment resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the ContainerAppEnvironment to import
+  * @param importFromId The id of the existing ContainerAppEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/container_app_environment#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the ContainerAppEnvironment to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_container_app_environment", importId: importFromId, provider });
+      }
 
   // ===========
   // INITIALIZER

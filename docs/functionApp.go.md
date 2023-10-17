@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionApp.FunctionApp.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.NewFunctionApp(scope Construct, id *string, config FunctionAppConfig) FunctionApp
 ```
@@ -60,6 +60,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.functionApp.FunctionApp.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
 | <code><a href="#@cdktf/provider-azurerm.functionApp.FunctionApp.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionApp.FunctionApp.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktf/provider-azurerm.functionApp.FunctionApp.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#@cdktf/provider-azurerm.functionApp.FunctionApp.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionApp.FunctionApp.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionApp.FunctionApp.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
@@ -69,7 +70,9 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.functionApp.FunctionApp.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionApp.FunctionApp.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionApp.FunctionApp.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionApp.FunctionApp.importFrom">ImportFrom</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionApp.FunctionApp.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionApp.FunctionApp.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-azurerm.functionApp.FunctionApp.putAuthSettings">PutAuthSettings</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionApp.FunctionApp.putConnectionString">PutConnectionString</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionApp.FunctionApp.putIdentity">PutIdentity</a></code> | *No description.* |
@@ -159,6 +162,22 @@ func ToTerraform() interface{}
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `AddMoveTarget` <a name="AddMoveTarget" id="@cdktf/provider-azurerm.functionApp.FunctionApp.addMoveTarget"></a>
+
+```go
+func AddMoveTarget(moveTarget *string)
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.functionApp.FunctionApp.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.functionApp.FunctionApp.getAnyMapAttribute"></a>
 
@@ -268,6 +287,24 @@ func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 
 ---
 
+##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-azurerm.functionApp.FunctionApp.importFrom"></a>
+
+```go
+func ImportFrom(id *string, provider TerraformProvider)
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.functionApp.FunctionApp.importFrom.parameter.id"></a>
+
+- *Type:* *string
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.functionApp.FunctionApp.importFrom.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+---
+
 ##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.functionApp.FunctionApp.interpolationForAttribute"></a>
 
 ```go
@@ -277,6 +314,30 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.functionApp.FunctionApp.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
+
+---
+
+##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-azurerm.functionApp.FunctionApp.moveTo"></a>
+
+```go
+func MoveTo(moveTarget *string, index interface{})
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.functionApp.FunctionApp.moveTo.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.functionApp.FunctionApp.moveTo.parameter.index"></a>
+
+- *Type:* interface{}
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
 ---
 
@@ -461,13 +522,14 @@ func ResetVersion()
 | <code><a href="#@cdktf/provider-azurerm.functionApp.FunctionApp.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-azurerm.functionApp.FunctionApp.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionApp.FunctionApp.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionApp.FunctionApp.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a FunctionApp resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.functionApp.FunctionApp.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.FunctionApp_IsConstruct(x interface{}) *bool
 ```
@@ -499,7 +561,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.functionApp.FunctionApp.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.FunctionApp_IsTerraformElement(x interface{}) *bool
 ```
@@ -513,7 +575,7 @@ functionapp.FunctionApp_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.functionApp.FunctionApp.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.FunctionApp_IsTerraformResource(x interface{}) *bool
 ```
@@ -521,6 +583,50 @@ functionapp.FunctionApp_IsTerraformResource(x interface{}) *bool
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-azurerm.functionApp.FunctionApp.isTerraformResource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.functionApp.FunctionApp.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
+
+functionapp.FunctionApp_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a FunctionApp resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-azurerm.functionApp.FunctionApp.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-azurerm.functionApp.FunctionApp.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the FunctionApp to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-azurerm.functionApp.FunctionApp.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing FunctionApp that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/function_app#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.functionApp.FunctionApp.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the FunctionApp to import is found.
 
 ---
 
@@ -1284,22 +1390,22 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionApp.FunctionAppAuthSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 &functionapp.FunctionAppAuthSettings {
 	Enabled: interface{},
-	ActiveDirectory: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.functionApp.FunctionAppAuthSettingsActiveDirectory,
+	ActiveDirectory: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.functionApp.FunctionAppAuthSettingsActiveDirectory,
 	AdditionalLoginParams: *map[string]*string,
 	AllowedExternalRedirectUrls: *[]*string,
 	DefaultProvider: *string,
-	Facebook: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.functionApp.FunctionAppAuthSettingsFacebook,
-	Google: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.functionApp.FunctionAppAuthSettingsGoogle,
+	Facebook: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.functionApp.FunctionAppAuthSettingsFacebook,
+	Google: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.functionApp.FunctionAppAuthSettingsGoogle,
 	Issuer: *string,
-	Microsoft: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.functionApp.FunctionAppAuthSettingsMicrosoft,
+	Microsoft: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.functionApp.FunctionAppAuthSettingsMicrosoft,
 	RuntimeVersion: *string,
 	TokenRefreshExtensionHours: *f64,
 	TokenStoreEnabled: interface{},
-	Twitter: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.functionApp.FunctionAppAuthSettingsTwitter,
+	Twitter: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.functionApp.FunctionAppAuthSettingsTwitter,
 	UnauthenticatedClientAction: *string,
 }
 ```
@@ -1508,7 +1614,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionApp.FunctionAppAuthSettingsActiveDirectory.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 &functionapp.FunctionAppAuthSettingsActiveDirectory {
 	ClientId: *string,
@@ -1568,7 +1674,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionApp.FunctionAppAuthSettingsFacebook.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 &functionapp.FunctionAppAuthSettingsFacebook {
 	AppId: *string,
@@ -1628,7 +1734,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionApp.FunctionAppAuthSettingsGoogle.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 &functionapp.FunctionAppAuthSettingsGoogle {
 	ClientId: *string,
@@ -1688,7 +1794,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionApp.FunctionAppAuthSettingsMicrosoft.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 &functionapp.FunctionAppAuthSettingsMicrosoft {
 	ClientId: *string,
@@ -1748,7 +1854,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionApp.FunctionAppAuthSettingsTwitter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 &functionapp.FunctionAppAuthSettingsTwitter {
 	ConsumerKey: *string,
@@ -1794,7 +1900,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionApp.FunctionAppConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 &functionapp.FunctionAppConfig {
 	Connection: interface{},
@@ -1811,7 +1917,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
 	StorageAccountAccessKey: *string,
 	StorageAccountName: *string,
 	AppSettings: *map[string]*string,
-	AuthSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.functionApp.FunctionAppAuthSettings,
+	AuthSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.functionApp.FunctionAppAuthSettings,
 	ClientCertMode: *string,
 	ConnectionString: interface{},
 	DailyMemoryTimeQuota: *f64,
@@ -1819,13 +1925,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
 	Enabled: interface{},
 	HttpsOnly: interface{},
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.functionApp.FunctionAppIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.functionApp.FunctionAppIdentity,
 	KeyVaultReferenceIdentityId: *string,
 	OsType: *string,
-	SiteConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.functionApp.FunctionAppSiteConfig,
-	SourceControl: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.functionApp.FunctionAppSourceControl,
+	SiteConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.functionApp.FunctionAppSiteConfig,
+	SourceControl: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.functionApp.FunctionAppSourceControl,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.functionApp.FunctionAppTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.functionApp.FunctionAppTimeouts,
 	Version: *string,
 }
 ```
@@ -2233,7 +2339,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionApp.FunctionAppConnectionString.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 &functionapp.FunctionAppConnectionString {
 	Name: *string,
@@ -2293,7 +2399,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionApp.FunctionAppIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 &functionapp.FunctionAppIdentity {
 	Type: *string,
@@ -2339,13 +2445,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionApp.FunctionAppSiteConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 &functionapp.FunctionAppSiteConfig {
 	AlwaysOn: interface{},
 	AppScaleLimit: *f64,
 	AutoSwapSlotName: *string,
-	Cors: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.functionApp.FunctionAppSiteConfigCors,
+	Cors: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.functionApp.FunctionAppSiteConfigCors,
 	DotnetFrameworkVersion: *string,
 	ElasticInstanceMinimum: *f64,
 	FtpsState: *string,
@@ -2653,7 +2759,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionApp.FunctionAppSiteConfigCors.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 &functionapp.FunctionAppSiteConfigCors {
 	AllowedOrigins: *[]*string,
@@ -2699,7 +2805,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionApp.FunctionAppSiteConfigIpRestriction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 &functionapp.FunctionAppSiteConfigIpRestriction {
 	Action: *string,
@@ -2815,7 +2921,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionApp.FunctionAppSiteConfigIpRestrictionHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 &functionapp.FunctionAppSiteConfigIpRestrictionHeaders {
 	XAzureFdid: *[]*string,
@@ -2889,7 +2995,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionApp.FunctionAppSiteConfigScmIpRestriction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 &functionapp.FunctionAppSiteConfigScmIpRestriction {
 	Action: *string,
@@ -3005,7 +3111,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionApp.FunctionAppSiteConfigScmIpRestrictionHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 &functionapp.FunctionAppSiteConfigScmIpRestrictionHeaders {
 	XAzureFdid: *[]*string,
@@ -3079,7 +3185,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionApp.FunctionAppSiteCredential.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 &functionapp.FunctionAppSiteCredential {
 
@@ -3092,7 +3198,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionApp.FunctionAppSourceControl.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 &functionapp.FunctionAppSourceControl {
 	Branch: *string,
@@ -3180,7 +3286,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionApp.FunctionAppTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 &functionapp.FunctionAppTimeouts {
 	Create: *string,
@@ -3256,7 +3362,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionApp.FunctionAppAuthSettingsActiveDirectoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.NewFunctionAppAuthSettingsActiveDirectoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FunctionAppAuthSettingsActiveDirectoryOutputReference
 ```
@@ -3585,7 +3691,7 @@ func InternalValue() FunctionAppAuthSettingsActiveDirectory
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionApp.FunctionAppAuthSettingsFacebookOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.NewFunctionAppAuthSettingsFacebookOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FunctionAppAuthSettingsFacebookOutputReference
 ```
@@ -3907,7 +4013,7 @@ func InternalValue() FunctionAppAuthSettingsFacebook
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionApp.FunctionAppAuthSettingsGoogleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.NewFunctionAppAuthSettingsGoogleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FunctionAppAuthSettingsGoogleOutputReference
 ```
@@ -4229,7 +4335,7 @@ func InternalValue() FunctionAppAuthSettingsGoogle
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionApp.FunctionAppAuthSettingsMicrosoftOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.NewFunctionAppAuthSettingsMicrosoftOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FunctionAppAuthSettingsMicrosoftOutputReference
 ```
@@ -4551,7 +4657,7 @@ func InternalValue() FunctionAppAuthSettingsMicrosoft
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionApp.FunctionAppAuthSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.NewFunctionAppAuthSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FunctionAppAuthSettingsOutputReference
 ```
@@ -5264,7 +5370,7 @@ func InternalValue() FunctionAppAuthSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionApp.FunctionAppAuthSettingsTwitterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.NewFunctionAppAuthSettingsTwitterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FunctionAppAuthSettingsTwitterOutputReference
 ```
@@ -5557,7 +5663,7 @@ func InternalValue() FunctionAppAuthSettingsTwitter
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionApp.FunctionAppConnectionStringList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.NewFunctionAppConnectionStringList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FunctionAppConnectionStringList
 ```
@@ -5700,7 +5806,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionApp.FunctionAppConnectionStringOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.NewFunctionAppConnectionStringOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FunctionAppConnectionStringOutputReference
 ```
@@ -6033,7 +6139,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionApp.FunctionAppIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.NewFunctionAppIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FunctionAppIdentityOutputReference
 ```
@@ -6355,7 +6461,7 @@ func InternalValue() FunctionAppIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionApp.FunctionAppSiteConfigCorsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.NewFunctionAppSiteConfigCorsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FunctionAppSiteConfigCorsOutputReference
 ```
@@ -6655,7 +6761,7 @@ func InternalValue() FunctionAppSiteConfigCors
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionApp.FunctionAppSiteConfigIpRestrictionHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.NewFunctionAppSiteConfigIpRestrictionHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FunctionAppSiteConfigIpRestrictionHeadersList
 ```
@@ -6798,7 +6904,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionApp.FunctionAppSiteConfigIpRestrictionHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.NewFunctionAppSiteConfigIpRestrictionHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FunctionAppSiteConfigIpRestrictionHeadersOutputReference
 ```
@@ -7181,7 +7287,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionApp.FunctionAppSiteConfigIpRestrictionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.NewFunctionAppSiteConfigIpRestrictionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FunctionAppSiteConfigIpRestrictionList
 ```
@@ -7324,7 +7430,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionApp.FunctionAppSiteConfigIpRestrictionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.NewFunctionAppSiteConfigIpRestrictionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FunctionAppSiteConfigIpRestrictionOutputReference
 ```
@@ -7807,7 +7913,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionApp.FunctionAppSiteConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.NewFunctionAppSiteConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FunctionAppSiteConfigOutputReference
 ```
@@ -8704,7 +8810,7 @@ func InternalValue() FunctionAppSiteConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionApp.FunctionAppSiteConfigScmIpRestrictionHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.NewFunctionAppSiteConfigScmIpRestrictionHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FunctionAppSiteConfigScmIpRestrictionHeadersList
 ```
@@ -8847,7 +8953,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionApp.FunctionAppSiteConfigScmIpRestrictionHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.NewFunctionAppSiteConfigScmIpRestrictionHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FunctionAppSiteConfigScmIpRestrictionHeadersOutputReference
 ```
@@ -9230,7 +9336,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionApp.FunctionAppSiteConfigScmIpRestrictionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.NewFunctionAppSiteConfigScmIpRestrictionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FunctionAppSiteConfigScmIpRestrictionList
 ```
@@ -9373,7 +9479,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionApp.FunctionAppSiteConfigScmIpRestrictionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.NewFunctionAppSiteConfigScmIpRestrictionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FunctionAppSiteConfigScmIpRestrictionOutputReference
 ```
@@ -9856,7 +9962,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionApp.FunctionAppSiteCredentialList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.NewFunctionAppSiteCredentialList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FunctionAppSiteCredentialList
 ```
@@ -9988,7 +10094,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionApp.FunctionAppSiteCredentialOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.NewFunctionAppSiteCredentialOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FunctionAppSiteCredentialOutputReference
 ```
@@ -10277,7 +10383,7 @@ func InternalValue() FunctionAppSiteCredential
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionApp.FunctionAppSourceControlOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.NewFunctionAppSourceControlOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FunctionAppSourceControlOutputReference
 ```
@@ -10671,7 +10777,7 @@ func InternalValue() FunctionAppSourceControl
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionApp.FunctionAppTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionapp"
 
 functionapp.NewFunctionAppTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FunctionAppTimeoutsOutputReference
 ```

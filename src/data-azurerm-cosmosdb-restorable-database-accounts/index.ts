@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/cosmosdb_restorable_database_accounts
 // generated from terraform resource schema
 
@@ -283,6 +278,20 @@ export class DataAzurermCosmosdbRestorableDatabaseAccounts extends cdktf.Terrafo
   // STATIC PROPERTIES
   // =================
   public static readonly tfResourceType = "azurerm_cosmosdb_restorable_database_accounts";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a DataAzurermCosmosdbRestorableDatabaseAccounts resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataAzurermCosmosdbRestorableDatabaseAccounts to import
+  * @param importFromId The id of the existing DataAzurermCosmosdbRestorableDatabaseAccounts that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/cosmosdb_restorable_database_accounts#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAzurermCosmosdbRestorableDatabaseAccounts to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_cosmosdb_restorable_database_accounts", importId: importFromId, provider });
+      }
 
   // ===========
   // INITIALIZER

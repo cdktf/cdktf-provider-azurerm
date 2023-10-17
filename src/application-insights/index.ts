@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_insights
 // generated from terraform resource schema
 
@@ -252,6 +247,20 @@ export class ApplicationInsights extends cdktf.TerraformResource {
   // STATIC PROPERTIES
   // =================
   public static readonly tfResourceType = "azurerm_application_insights";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a ApplicationInsights resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the ApplicationInsights to import
+  * @param importFromId The id of the existing ApplicationInsights that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/application_insights#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the ApplicationInsights to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_application_insights", importId: importFromId, provider });
+      }
 
   // ===========
   // INITIALIZER

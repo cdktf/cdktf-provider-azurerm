@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/app_service_environment_v3
 // generated from terraform resource schema
 
@@ -262,6 +257,20 @@ export class DataAzurermAppServiceEnvironmentV3 extends cdktf.TerraformDataSourc
   // STATIC PROPERTIES
   // =================
   public static readonly tfResourceType = "azurerm_app_service_environment_v3";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a DataAzurermAppServiceEnvironmentV3 resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataAzurermAppServiceEnvironmentV3 to import
+  * @param importFromId The id of the existing DataAzurermAppServiceEnvironmentV3 that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/app_service_environment_v3#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAzurermAppServiceEnvironmentV3 to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_app_service_environment_v3", importId: importFromId, provider });
+      }
 
   // ===========
   // INITIALIZER

@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/vpn_server_configuration_policy_group
 // generated from terraform resource schema
 
@@ -356,6 +351,20 @@ export class VpnServerConfigurationPolicyGroup extends cdktf.TerraformResource {
   // STATIC PROPERTIES
   // =================
   public static readonly tfResourceType = "azurerm_vpn_server_configuration_policy_group";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a VpnServerConfigurationPolicyGroup resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the VpnServerConfigurationPolicyGroup to import
+  * @param importFromId The id of the existing VpnServerConfigurationPolicyGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/vpn_server_configuration_policy_group#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the VpnServerConfigurationPolicyGroup to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_vpn_server_configuration_policy_group", importId: importFromId, provider });
+      }
 
   // ===========
   // INITIALIZER

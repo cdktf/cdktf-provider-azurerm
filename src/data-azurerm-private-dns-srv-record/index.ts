@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/private_dns_srv_record
 // generated from terraform resource schema
 
@@ -202,6 +197,20 @@ export class DataAzurermPrivateDnsSrvRecord extends cdktf.TerraformDataSource {
   // STATIC PROPERTIES
   // =================
   public static readonly tfResourceType = "azurerm_private_dns_srv_record";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a DataAzurermPrivateDnsSrvRecord resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataAzurermPrivateDnsSrvRecord to import
+  * @param importFromId The id of the existing DataAzurermPrivateDnsSrvRecord that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/private_dns_srv_record#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAzurermPrivateDnsSrvRecord to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_private_dns_srv_record", importId: importFromId, provider });
+      }
 
   // ===========
   // INITIALIZER

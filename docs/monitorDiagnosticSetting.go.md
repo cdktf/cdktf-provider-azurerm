@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordiagnosticsetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordiagnosticsetting"
 
 monitordiagnosticsetting.NewMonitorDiagnosticSetting(scope Construct, id *string, config MonitorDiagnosticSettingConfig) MonitorDiagnosticSetting
 ```
@@ -60,6 +60,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
 | <code><a href="#@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
@@ -69,7 +70,9 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.importFrom">ImportFrom</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.putEnabledLog">PutEnabledLog</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.putLog">PutLog</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.putMetric">PutMetric</a></code> | *No description.* |
@@ -151,6 +154,22 @@ func ToTerraform() interface{}
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `AddMoveTarget` <a name="AddMoveTarget" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.addMoveTarget"></a>
+
+```go
+func AddMoveTarget(moveTarget *string)
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.getAnyMapAttribute"></a>
 
@@ -260,6 +279,24 @@ func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 
 ---
 
+##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.importFrom"></a>
+
+```go
+func ImportFrom(id *string, provider TerraformProvider)
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.importFrom.parameter.id"></a>
+
+- *Type:* *string
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.importFrom.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+---
+
 ##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.interpolationForAttribute"></a>
 
 ```go
@@ -269,6 +306,30 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
+
+---
+
+##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.moveTo"></a>
+
+```go
+func MoveTo(moveTarget *string, index interface{})
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.moveTo.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.moveTo.parameter.index"></a>
+
+- *Type:* interface{}
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
 ---
 
@@ -393,13 +454,14 @@ func ResetTimeouts()
 | <code><a href="#@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a MonitorDiagnosticSetting resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordiagnosticsetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordiagnosticsetting"
 
 monitordiagnosticsetting.MonitorDiagnosticSetting_IsConstruct(x interface{}) *bool
 ```
@@ -431,7 +493,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordiagnosticsetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordiagnosticsetting"
 
 monitordiagnosticsetting.MonitorDiagnosticSetting_IsTerraformElement(x interface{}) *bool
 ```
@@ -445,7 +507,7 @@ monitordiagnosticsetting.MonitorDiagnosticSetting_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordiagnosticsetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordiagnosticsetting"
 
 monitordiagnosticsetting.MonitorDiagnosticSetting_IsTerraformResource(x interface{}) *bool
 ```
@@ -453,6 +515,50 @@ monitordiagnosticsetting.MonitorDiagnosticSetting_IsTerraformResource(x interfac
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.isTerraformResource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordiagnosticsetting"
+
+monitordiagnosticsetting.MonitorDiagnosticSetting_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a MonitorDiagnosticSetting resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the MonitorDiagnosticSetting to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing MonitorDiagnosticSetting that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/monitor_diagnostic_setting#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSetting.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the MonitorDiagnosticSetting to import is found.
 
 ---
 
@@ -930,7 +1036,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSettingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordiagnosticsetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordiagnosticsetting"
 
 &monitordiagnosticsetting.MonitorDiagnosticSettingConfig {
 	Connection: interface{},
@@ -952,7 +1058,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordiagnostic
 	Metric: interface{},
 	PartnerSolutionId: *string,
 	StorageAccountId: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorDiagnosticSetting.MonitorDiagnosticSettingTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorDiagnosticSetting.MonitorDiagnosticSettingTimeouts,
 }
 ```
 
@@ -1225,12 +1331,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSettingEnabledLog.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordiagnosticsetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordiagnosticsetting"
 
 &monitordiagnosticsetting.MonitorDiagnosticSettingEnabledLog {
 	Category: *string,
 	CategoryGroup: *string,
-	RetentionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorDiagnosticSetting.MonitorDiagnosticSettingEnabledLogRetentionPolicy,
+	RetentionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorDiagnosticSetting.MonitorDiagnosticSettingEnabledLogRetentionPolicy,
 }
 ```
 
@@ -1287,7 +1393,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSettingEnabledLogRetentionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordiagnosticsetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordiagnosticsetting"
 
 &monitordiagnosticsetting.MonitorDiagnosticSettingEnabledLogRetentionPolicy {
 	Enabled: interface{},
@@ -1333,13 +1439,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSettingLog.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordiagnosticsetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordiagnosticsetting"
 
 &monitordiagnosticsetting.MonitorDiagnosticSettingLog {
 	Category: *string,
 	CategoryGroup: *string,
 	Enabled: interface{},
-	RetentionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorDiagnosticSetting.MonitorDiagnosticSettingLogRetentionPolicy,
+	RetentionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorDiagnosticSetting.MonitorDiagnosticSettingLogRetentionPolicy,
 }
 ```
 
@@ -1409,7 +1515,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSettingLogRetentionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordiagnosticsetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordiagnosticsetting"
 
 &monitordiagnosticsetting.MonitorDiagnosticSettingLogRetentionPolicy {
 	Enabled: interface{},
@@ -1455,12 +1561,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSettingMetric.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordiagnosticsetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordiagnosticsetting"
 
 &monitordiagnosticsetting.MonitorDiagnosticSettingMetric {
 	Category: *string,
 	Enabled: interface{},
-	RetentionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorDiagnosticSetting.MonitorDiagnosticSettingMetricRetentionPolicy,
+	RetentionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorDiagnosticSetting.MonitorDiagnosticSettingMetricRetentionPolicy,
 }
 ```
 
@@ -1517,7 +1623,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSettingMetricRetentionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordiagnosticsetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordiagnosticsetting"
 
 &monitordiagnosticsetting.MonitorDiagnosticSettingMetricRetentionPolicy {
 	Enabled: interface{},
@@ -1563,7 +1669,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSettingTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordiagnosticsetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordiagnosticsetting"
 
 &monitordiagnosticsetting.MonitorDiagnosticSettingTimeouts {
 	Create: *string,
@@ -1639,7 +1745,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSettingEnabledLogList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordiagnosticsetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordiagnosticsetting"
 
 monitordiagnosticsetting.NewMonitorDiagnosticSettingEnabledLogList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MonitorDiagnosticSettingEnabledLogList
 ```
@@ -1782,7 +1888,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSettingEnabledLogOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordiagnosticsetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordiagnosticsetting"
 
 monitordiagnosticsetting.NewMonitorDiagnosticSettingEnabledLogOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MonitorDiagnosticSettingEnabledLogOutputReference
 ```
@@ -2149,7 +2255,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSettingEnabledLogRetentionPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordiagnosticsetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordiagnosticsetting"
 
 monitordiagnosticsetting.NewMonitorDiagnosticSettingEnabledLogRetentionPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorDiagnosticSettingEnabledLogRetentionPolicyOutputReference
 ```
@@ -2449,7 +2555,7 @@ func InternalValue() MonitorDiagnosticSettingEnabledLogRetentionPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSettingLogList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordiagnosticsetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordiagnosticsetting"
 
 monitordiagnosticsetting.NewMonitorDiagnosticSettingLogList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MonitorDiagnosticSettingLogList
 ```
@@ -2592,7 +2698,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSettingLogOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordiagnosticsetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordiagnosticsetting"
 
 monitordiagnosticsetting.NewMonitorDiagnosticSettingLogOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MonitorDiagnosticSettingLogOutputReference
 ```
@@ -2988,7 +3094,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSettingLogRetentionPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordiagnosticsetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordiagnosticsetting"
 
 monitordiagnosticsetting.NewMonitorDiagnosticSettingLogRetentionPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorDiagnosticSettingLogRetentionPolicyOutputReference
 ```
@@ -3288,7 +3394,7 @@ func InternalValue() MonitorDiagnosticSettingLogRetentionPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSettingMetricList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordiagnosticsetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordiagnosticsetting"
 
 monitordiagnosticsetting.NewMonitorDiagnosticSettingMetricList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MonitorDiagnosticSettingMetricList
 ```
@@ -3431,7 +3537,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSettingMetricOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordiagnosticsetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordiagnosticsetting"
 
 monitordiagnosticsetting.NewMonitorDiagnosticSettingMetricOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MonitorDiagnosticSettingMetricOutputReference
 ```
@@ -3791,7 +3897,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSettingMetricRetentionPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordiagnosticsetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordiagnosticsetting"
 
 monitordiagnosticsetting.NewMonitorDiagnosticSettingMetricRetentionPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorDiagnosticSettingMetricRetentionPolicyOutputReference
 ```
@@ -4091,7 +4197,7 @@ func InternalValue() MonitorDiagnosticSettingMetricRetentionPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorDiagnosticSetting.MonitorDiagnosticSettingTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordiagnosticsetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordiagnosticsetting"
 
 monitordiagnosticsetting.NewMonitorDiagnosticSettingTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorDiagnosticSettingTimeoutsOutputReference
 ```

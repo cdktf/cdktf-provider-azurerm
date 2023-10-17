@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/key_vault_certificate_issuer
 // generated from terraform resource schema
 
@@ -198,6 +193,20 @@ export class DataAzurermKeyVaultCertificateIssuer extends cdktf.TerraformDataSou
   // STATIC PROPERTIES
   // =================
   public static readonly tfResourceType = "azurerm_key_vault_certificate_issuer";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a DataAzurermKeyVaultCertificateIssuer resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataAzurermKeyVaultCertificateIssuer to import
+  * @param importFromId The id of the existing DataAzurermKeyVaultCertificateIssuer that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/key_vault_certificate_issuer#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAzurermKeyVaultCertificateIssuer to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_key_vault_certificate_issuer", importId: importFromId, provider });
+      }
 
   // ===========
   // INITIALIZER

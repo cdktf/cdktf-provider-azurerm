@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 mssqlvirtualmachine.NewMssqlVirtualMachine(scope Construct, id *string, config MssqlVirtualMachineConfig) MssqlVirtualMachine
 ```
@@ -60,6 +60,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
 | <code><a href="#@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
@@ -69,7 +70,9 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.importFrom">ImportFrom</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.putAssessment">PutAssessment</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.putAutoBackup">PutAutoBackup</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.putAutoPatching">PutAutoPatching</a></code> | *No description.* |
@@ -161,6 +164,22 @@ func ToTerraform() interface{}
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `AddMoveTarget` <a name="AddMoveTarget" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.addMoveTarget"></a>
+
+```go
+func AddMoveTarget(moveTarget *string)
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.getAnyMapAttribute"></a>
 
@@ -270,6 +289,24 @@ func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 
 ---
 
+##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.importFrom"></a>
+
+```go
+func ImportFrom(id *string, provider TerraformProvider)
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.importFrom.parameter.id"></a>
+
+- *Type:* *string
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.importFrom.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+---
+
 ##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.interpolationForAttribute"></a>
 
 ```go
@@ -279,6 +316,30 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
+
+---
+
+##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.moveTo"></a>
+
+```go
+func MoveTo(moveTarget *string, index interface{})
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.moveTo.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.moveTo.parameter.index"></a>
+
+- *Type:* interface{}
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
 ---
 
@@ -487,13 +548,14 @@ func ResetWsfcDomainCredential()
 | <code><a href="#@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a MssqlVirtualMachine resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 mssqlvirtualmachine.MssqlVirtualMachine_IsConstruct(x interface{}) *bool
 ```
@@ -525,7 +587,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 mssqlvirtualmachine.MssqlVirtualMachine_IsTerraformElement(x interface{}) *bool
 ```
@@ -539,7 +601,7 @@ mssqlvirtualmachine.MssqlVirtualMachine_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 mssqlvirtualmachine.MssqlVirtualMachine_IsTerraformResource(x interface{}) *bool
 ```
@@ -547,6 +609,50 @@ mssqlvirtualmachine.MssqlVirtualMachine_IsTerraformResource(x interface{}) *bool
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.isTerraformResource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
+
+mssqlvirtualmachine.MssqlVirtualMachine_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a MssqlVirtualMachine resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the MssqlVirtualMachine to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing MssqlVirtualMachine that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mssql_virtual_machine#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachine.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the MssqlVirtualMachine to import is found.
 
 ---
 
@@ -1134,12 +1240,12 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineAssessment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 &mssqlvirtualmachine.MssqlVirtualMachineAssessment {
 	Enabled: interface{},
 	RunImmediately: interface{},
-	Schedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mssqlVirtualMachine.MssqlVirtualMachineAssessmentSchedule,
+	Schedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mssqlVirtualMachine.MssqlVirtualMachineAssessmentSchedule,
 }
 ```
 
@@ -1196,7 +1302,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineAssessmentSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 &mssqlvirtualmachine.MssqlVirtualMachineAssessmentSchedule {
 	DayOfWeek: *string,
@@ -1270,7 +1376,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineAutoBackup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 &mssqlvirtualmachine.MssqlVirtualMachineAutoBackup {
 	RetentionPeriodInDays: *f64,
@@ -1278,7 +1384,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachi
 	StorageBlobEndpoint: *string,
 	EncryptionEnabled: interface{},
 	EncryptionPassword: *string,
-	ManualSchedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mssqlVirtualMachine.MssqlVirtualMachineAutoBackupManualSchedule,
+	ManualSchedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mssqlVirtualMachine.MssqlVirtualMachineAutoBackupManualSchedule,
 	SystemDatabasesBackupEnabled: interface{},
 }
 ```
@@ -1388,7 +1494,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineAutoBackupManualSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 &mssqlvirtualmachine.MssqlVirtualMachineAutoBackupManualSchedule {
 	FullBackupFrequency: *string,
@@ -1476,7 +1582,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineAutoPatching.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 &mssqlvirtualmachine.MssqlVirtualMachineAutoPatching {
 	DayOfWeek: *string,
@@ -1536,7 +1642,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 &mssqlvirtualmachine.MssqlVirtualMachineConfig {
 	Connection: interface{},
@@ -1547,23 +1653,23 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachi
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	VirtualMachineId: *string,
-	Assessment: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mssqlVirtualMachine.MssqlVirtualMachineAssessment,
-	AutoBackup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mssqlVirtualMachine.MssqlVirtualMachineAutoBackup,
-	AutoPatching: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mssqlVirtualMachine.MssqlVirtualMachineAutoPatching,
+	Assessment: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mssqlVirtualMachine.MssqlVirtualMachineAssessment,
+	AutoBackup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mssqlVirtualMachine.MssqlVirtualMachineAutoBackup,
+	AutoPatching: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mssqlVirtualMachine.MssqlVirtualMachineAutoPatching,
 	Id: *string,
-	KeyVaultCredential: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mssqlVirtualMachine.MssqlVirtualMachineKeyVaultCredential,
+	KeyVaultCredential: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mssqlVirtualMachine.MssqlVirtualMachineKeyVaultCredential,
 	RServicesEnabled: interface{},
 	SqlConnectivityPort: *f64,
 	SqlConnectivityType: *string,
 	SqlConnectivityUpdatePassword: *string,
 	SqlConnectivityUpdateUsername: *string,
-	SqlInstance: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mssqlVirtualMachine.MssqlVirtualMachineSqlInstance,
+	SqlInstance: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mssqlVirtualMachine.MssqlVirtualMachineSqlInstance,
 	SqlLicenseType: *string,
 	SqlVirtualMachineGroupId: *string,
-	StorageConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mssqlVirtualMachine.MssqlVirtualMachineStorageConfiguration,
+	StorageConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mssqlVirtualMachine.MssqlVirtualMachineStorageConfiguration,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mssqlVirtualMachine.MssqlVirtualMachineTimeouts,
-	WsfcDomainCredential: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mssqlVirtualMachine.MssqlVirtualMachineWsfcDomainCredential,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mssqlVirtualMachine.MssqlVirtualMachineTimeouts,
+	WsfcDomainCredential: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mssqlVirtualMachine.MssqlVirtualMachineWsfcDomainCredential,
 }
 ```
 
@@ -1909,7 +2015,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineKeyVaultCredential.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 &mssqlvirtualmachine.MssqlVirtualMachineKeyVaultCredential {
 	KeyVaultUrl: *string,
@@ -1983,7 +2089,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineSqlInstance.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 &mssqlvirtualmachine.MssqlVirtualMachineSqlInstance {
 	AdhocWorkloadsOptimizationEnabled: interface{},
@@ -2099,15 +2205,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineStorageConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 &mssqlvirtualmachine.MssqlVirtualMachineStorageConfiguration {
 	DiskType: *string,
 	StorageWorkloadType: *string,
-	DataSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mssqlVirtualMachine.MssqlVirtualMachineStorageConfigurationDataSettings,
-	LogSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mssqlVirtualMachine.MssqlVirtualMachineStorageConfigurationLogSettings,
+	DataSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mssqlVirtualMachine.MssqlVirtualMachineStorageConfigurationDataSettings,
+	LogSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mssqlVirtualMachine.MssqlVirtualMachineStorageConfigurationLogSettings,
 	SystemDbOnDataDiskEnabled: interface{},
-	TempDbSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mssqlVirtualMachine.MssqlVirtualMachineStorageConfigurationTempDbSettings,
+	TempDbSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mssqlVirtualMachine.MssqlVirtualMachineStorageConfigurationTempDbSettings,
 }
 ```
 
@@ -2207,7 +2313,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineStorageConfigurationDataSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 &mssqlvirtualmachine.MssqlVirtualMachineStorageConfigurationDataSettings {
 	DefaultFilePath: *string,
@@ -2253,7 +2359,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineStorageConfigurationLogSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 &mssqlvirtualmachine.MssqlVirtualMachineStorageConfigurationLogSettings {
 	DefaultFilePath: *string,
@@ -2299,7 +2405,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineStorageConfigurationTempDbSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 &mssqlvirtualmachine.MssqlVirtualMachineStorageConfigurationTempDbSettings {
 	DefaultFilePath: *string,
@@ -2415,7 +2521,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 &mssqlvirtualmachine.MssqlVirtualMachineTimeouts {
 	Create: *string,
@@ -2489,7 +2595,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineWsfcDomainCredential.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 &mssqlvirtualmachine.MssqlVirtualMachineWsfcDomainCredential {
 	ClusterBootstrapAccountPassword: *string,
@@ -2551,7 +2657,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineAssessmentOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 mssqlvirtualmachine.NewMssqlVirtualMachineAssessmentOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlVirtualMachineAssessmentOutputReference
 ```
@@ -2900,7 +3006,7 @@ func InternalValue() MssqlVirtualMachineAssessment
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineAssessmentScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 mssqlvirtualmachine.NewMssqlVirtualMachineAssessmentScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlVirtualMachineAssessmentScheduleOutputReference
 ```
@@ -3251,7 +3357,7 @@ func InternalValue() MssqlVirtualMachineAssessmentSchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineAutoBackupManualScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 mssqlvirtualmachine.NewMssqlVirtualMachineAutoBackupManualScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlVirtualMachineAutoBackupManualScheduleOutputReference
 ```
@@ -3617,7 +3723,7 @@ func InternalValue() MssqlVirtualMachineAutoBackupManualSchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineAutoBackupOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 mssqlvirtualmachine.NewMssqlVirtualMachineAutoBackupOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlVirtualMachineAutoBackupOutputReference
 ```
@@ -4061,7 +4167,7 @@ func InternalValue() MssqlVirtualMachineAutoBackup
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineAutoPatchingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 mssqlvirtualmachine.NewMssqlVirtualMachineAutoPatchingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlVirtualMachineAutoPatchingOutputReference
 ```
@@ -4376,7 +4482,7 @@ func InternalValue() MssqlVirtualMachineAutoPatching
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineKeyVaultCredentialOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 mssqlvirtualmachine.NewMssqlVirtualMachineKeyVaultCredentialOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlVirtualMachineKeyVaultCredentialOutputReference
 ```
@@ -4713,7 +4819,7 @@ func InternalValue() MssqlVirtualMachineKeyVaultCredential
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineSqlInstanceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 mssqlvirtualmachine.NewMssqlVirtualMachineSqlInstanceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlVirtualMachineSqlInstanceOutputReference
 ```
@@ -5165,7 +5271,7 @@ func InternalValue() MssqlVirtualMachineSqlInstance
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineStorageConfigurationDataSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 mssqlvirtualmachine.NewMssqlVirtualMachineStorageConfigurationDataSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlVirtualMachineStorageConfigurationDataSettingsOutputReference
 ```
@@ -5458,7 +5564,7 @@ func InternalValue() MssqlVirtualMachineStorageConfigurationDataSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineStorageConfigurationLogSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 mssqlvirtualmachine.NewMssqlVirtualMachineStorageConfigurationLogSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlVirtualMachineStorageConfigurationLogSettingsOutputReference
 ```
@@ -5751,7 +5857,7 @@ func InternalValue() MssqlVirtualMachineStorageConfigurationLogSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineStorageConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 mssqlvirtualmachine.NewMssqlVirtualMachineStorageConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlVirtualMachineStorageConfigurationOutputReference
 ```
@@ -6199,7 +6305,7 @@ func InternalValue() MssqlVirtualMachineStorageConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 mssqlvirtualmachine.NewMssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlVirtualMachineStorageConfigurationTempDbSettingsOutputReference
 ```
@@ -6637,7 +6743,7 @@ func InternalValue() MssqlVirtualMachineStorageConfigurationTempDbSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 mssqlvirtualmachine.NewMssqlVirtualMachineTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlVirtualMachineTimeoutsOutputReference
 ```
@@ -7002,7 +7108,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlVirtualMachine.MssqlVirtualMachineWsfcDomainCredentialOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqlvirtualmachine"
 
 mssqlvirtualmachine.NewMssqlVirtualMachineWsfcDomainCredentialOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlVirtualMachineWsfcDomainCredentialOutputReference
 ```

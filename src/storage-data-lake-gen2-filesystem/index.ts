@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/storage_data_lake_gen2_filesystem
 // generated from terraform resource schema
 
@@ -393,6 +388,20 @@ export class StorageDataLakeGen2Filesystem extends cdktf.TerraformResource {
   // STATIC PROPERTIES
   // =================
   public static readonly tfResourceType = "azurerm_storage_data_lake_gen2_filesystem";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a StorageDataLakeGen2Filesystem resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the StorageDataLakeGen2Filesystem to import
+  * @param importFromId The id of the existing StorageDataLakeGen2Filesystem that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/storage_data_lake_gen2_filesystem#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the StorageDataLakeGen2Filesystem to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_storage_data_lake_gen2_filesystem", importId: importFromId, provider });
+      }
 
   // ===========
   // INITIALIZER

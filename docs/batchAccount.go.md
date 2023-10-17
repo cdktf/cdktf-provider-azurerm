@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchAccount.BatchAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
 
 batchaccount.NewBatchAccount(scope Construct, id *string, config BatchAccountConfig) BatchAccount
 ```
@@ -60,6 +60,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.batchAccount.BatchAccount.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
 | <code><a href="#@cdktf/provider-azurerm.batchAccount.BatchAccount.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchAccount.BatchAccount.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktf/provider-azurerm.batchAccount.BatchAccount.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#@cdktf/provider-azurerm.batchAccount.BatchAccount.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchAccount.BatchAccount.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchAccount.BatchAccount.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
@@ -69,7 +70,9 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.batchAccount.BatchAccount.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchAccount.BatchAccount.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchAccount.BatchAccount.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchAccount.BatchAccount.importFrom">ImportFrom</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchAccount.BatchAccount.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchAccount.BatchAccount.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-azurerm.batchAccount.BatchAccount.putEncryption">PutEncryption</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchAccount.BatchAccount.putIdentity">PutIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchAccount.BatchAccount.putKeyVaultReference">PutKeyVaultReference</a></code> | *No description.* |
@@ -154,6 +157,22 @@ func ToTerraform() interface{}
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `AddMoveTarget` <a name="AddMoveTarget" id="@cdktf/provider-azurerm.batchAccount.BatchAccount.addMoveTarget"></a>
+
+```go
+func AddMoveTarget(moveTarget *string)
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.batchAccount.BatchAccount.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.batchAccount.BatchAccount.getAnyMapAttribute"></a>
 
@@ -263,6 +282,24 @@ func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 
 ---
 
+##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-azurerm.batchAccount.BatchAccount.importFrom"></a>
+
+```go
+func ImportFrom(id *string, provider TerraformProvider)
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.batchAccount.BatchAccount.importFrom.parameter.id"></a>
+
+- *Type:* *string
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.batchAccount.BatchAccount.importFrom.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+---
+
 ##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.batchAccount.BatchAccount.interpolationForAttribute"></a>
 
 ```go
@@ -272,6 +309,30 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.batchAccount.BatchAccount.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
+
+---
+
+##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-azurerm.batchAccount.BatchAccount.moveTo"></a>
+
+```go
+func MoveTo(moveTarget *string, index interface{})
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.batchAccount.BatchAccount.moveTo.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.batchAccount.BatchAccount.moveTo.parameter.index"></a>
+
+- *Type:* interface{}
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
 ---
 
@@ -420,13 +481,14 @@ func ResetTimeouts()
 | <code><a href="#@cdktf/provider-azurerm.batchAccount.BatchAccount.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-azurerm.batchAccount.BatchAccount.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchAccount.BatchAccount.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchAccount.BatchAccount.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a BatchAccount resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.batchAccount.BatchAccount.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
 
 batchaccount.BatchAccount_IsConstruct(x interface{}) *bool
 ```
@@ -458,7 +520,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.batchAccount.BatchAccount.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
 
 batchaccount.BatchAccount_IsTerraformElement(x interface{}) *bool
 ```
@@ -472,7 +534,7 @@ batchaccount.BatchAccount_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.batchAccount.BatchAccount.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
 
 batchaccount.BatchAccount_IsTerraformResource(x interface{}) *bool
 ```
@@ -480,6 +542,50 @@ batchaccount.BatchAccount_IsTerraformResource(x interface{}) *bool
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-azurerm.batchAccount.BatchAccount.isTerraformResource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.batchAccount.BatchAccount.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
+
+batchaccount.BatchAccount_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a BatchAccount resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-azurerm.batchAccount.BatchAccount.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-azurerm.batchAccount.BatchAccount.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the BatchAccount to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-azurerm.batchAccount.BatchAccount.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing BatchAccount that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/batch_account#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.batchAccount.BatchAccount.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the BatchAccount to import is found.
 
 ---
 
@@ -1056,7 +1162,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchAccount.BatchAccountConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
 
 &batchaccount.BatchAccountConfig {
 	Connection: interface{},
@@ -1072,16 +1178,16 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
 	AllowedAuthenticationModes: *[]*string,
 	Encryption: interface{},
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.batchAccount.BatchAccountIdentity,
-	KeyVaultReference: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.batchAccount.BatchAccountKeyVaultReference,
-	NetworkProfile: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.batchAccount.BatchAccountNetworkProfile,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.batchAccount.BatchAccountIdentity,
+	KeyVaultReference: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.batchAccount.BatchAccountKeyVaultReference,
+	NetworkProfile: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.batchAccount.BatchAccountNetworkProfile,
 	PoolAllocationMode: *string,
 	PublicNetworkAccessEnabled: interface{},
 	StorageAccountAuthenticationMode: *string,
 	StorageAccountId: *string,
 	StorageAccountNodeIdentity: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.batchAccount.BatchAccountTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.batchAccount.BatchAccountTimeouts,
 }
 ```
 
@@ -1393,7 +1499,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchAccount.BatchAccountEncryption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
 
 &batchaccount.BatchAccountEncryption {
 	KeyVaultKeyId: *string,
@@ -1425,7 +1531,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchAccount.BatchAccountIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
 
 &batchaccount.BatchAccountIdentity {
 	Type: *string,
@@ -1471,7 +1577,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchAccount.BatchAccountKeyVaultReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
 
 &batchaccount.BatchAccountKeyVaultReference {
 	Id: *string,
@@ -1520,11 +1626,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchAccount.BatchAccountNetworkProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
 
 &batchaccount.BatchAccountNetworkProfile {
-	AccountAccess: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.batchAccount.BatchAccountNetworkProfileAccountAccess,
-	NodeManagementAccess: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.batchAccount.BatchAccountNetworkProfileNodeManagementAccess,
+	AccountAccess: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.batchAccount.BatchAccountNetworkProfileAccountAccess,
+	NodeManagementAccess: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.batchAccount.BatchAccountNetworkProfileNodeManagementAccess,
 }
 ```
 
@@ -1570,7 +1676,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchAccount.BatchAccountNetworkProfileAccountAccess.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
 
 &batchaccount.BatchAccountNetworkProfileAccountAccess {
 	DefaultAction: *string,
@@ -1618,7 +1724,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchAccount.BatchAccountNetworkProfileAccountAccessIpRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
 
 &batchaccount.BatchAccountNetworkProfileAccountAccessIpRule {
 	IpRange: *string,
@@ -1664,7 +1770,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchAccount.BatchAccountNetworkProfileNodeManagementAccess.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
 
 &batchaccount.BatchAccountNetworkProfileNodeManagementAccess {
 	DefaultAction: *string,
@@ -1712,7 +1818,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchAccount.BatchAccountNetworkProfileNodeManagementAccessIpRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
 
 &batchaccount.BatchAccountNetworkProfileNodeManagementAccessIpRule {
 	IpRange: *string,
@@ -1758,7 +1864,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.batchAccount.BatchAccountTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
 
 &batchaccount.BatchAccountTimeouts {
 	Create: *string,
@@ -1834,7 +1940,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchAccount.BatchAccountEncryptionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
 
 batchaccount.NewBatchAccountEncryptionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BatchAccountEncryptionList
 ```
@@ -1977,7 +2083,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchAccount.BatchAccountEncryptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
 
 batchaccount.NewBatchAccountEncryptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BatchAccountEncryptionOutputReference
 ```
@@ -2273,7 +2379,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchAccount.BatchAccountIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
 
 batchaccount.NewBatchAccountIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BatchAccountIdentityOutputReference
 ```
@@ -2595,7 +2701,7 @@ func InternalValue() BatchAccountIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchAccount.BatchAccountKeyVaultReferenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
 
 batchaccount.NewBatchAccountKeyVaultReferenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BatchAccountKeyVaultReferenceOutputReference
 ```
@@ -2888,7 +2994,7 @@ func InternalValue() BatchAccountKeyVaultReference
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchAccount.BatchAccountNetworkProfileAccountAccessIpRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
 
 batchaccount.NewBatchAccountNetworkProfileAccountAccessIpRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BatchAccountNetworkProfileAccountAccessIpRuleList
 ```
@@ -3031,7 +3137,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchAccount.BatchAccountNetworkProfileAccountAccessIpRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
 
 batchaccount.NewBatchAccountNetworkProfileAccountAccessIpRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BatchAccountNetworkProfileAccountAccessIpRuleOutputReference
 ```
@@ -3349,7 +3455,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchAccount.BatchAccountNetworkProfileAccountAccessOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
 
 batchaccount.NewBatchAccountNetworkProfileAccountAccessOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BatchAccountNetworkProfileAccountAccessOutputReference
 ```
@@ -3669,7 +3775,7 @@ func InternalValue() BatchAccountNetworkProfileAccountAccess
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchAccount.BatchAccountNetworkProfileNodeManagementAccessIpRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
 
 batchaccount.NewBatchAccountNetworkProfileNodeManagementAccessIpRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) BatchAccountNetworkProfileNodeManagementAccessIpRuleList
 ```
@@ -3812,7 +3918,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchAccount.BatchAccountNetworkProfileNodeManagementAccessIpRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
 
 batchaccount.NewBatchAccountNetworkProfileNodeManagementAccessIpRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) BatchAccountNetworkProfileNodeManagementAccessIpRuleOutputReference
 ```
@@ -4130,7 +4236,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchAccount.BatchAccountNetworkProfileNodeManagementAccessOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
 
 batchaccount.NewBatchAccountNetworkProfileNodeManagementAccessOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BatchAccountNetworkProfileNodeManagementAccessOutputReference
 ```
@@ -4450,7 +4556,7 @@ func InternalValue() BatchAccountNetworkProfileNodeManagementAccess
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchAccount.BatchAccountNetworkProfileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
 
 batchaccount.NewBatchAccountNetworkProfileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BatchAccountNetworkProfileOutputReference
 ```
@@ -4783,7 +4889,7 @@ func InternalValue() BatchAccountNetworkProfile
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.batchAccount.BatchAccountTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/batchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/batchaccount"
 
 batchaccount.NewBatchAccountTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BatchAccountTimeoutsOutputReference
 ```

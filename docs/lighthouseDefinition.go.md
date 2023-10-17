@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.NewLighthouseDefinition(scope Construct, id *string, config LighthouseDefinitionConfig) LighthouseDefinition
 ```
@@ -60,6 +60,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
@@ -69,7 +70,9 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.importFrom">ImportFrom</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.putAuthorization">PutAuthorization</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.putEligibleAuthorization">PutEligibleAuthorization</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.putPlan">PutPlan</a></code> | *No description.* |
@@ -146,6 +149,22 @@ func ToTerraform() interface{}
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `AddMoveTarget` <a name="AddMoveTarget" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.addMoveTarget"></a>
+
+```go
+func AddMoveTarget(moveTarget *string)
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.getAnyMapAttribute"></a>
 
@@ -255,6 +274,24 @@ func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 
 ---
 
+##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.importFrom"></a>
+
+```go
+func ImportFrom(id *string, provider TerraformProvider)
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.importFrom.parameter.id"></a>
+
+- *Type:* *string
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.importFrom.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+---
+
 ##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.interpolationForAttribute"></a>
 
 ```go
@@ -264,6 +301,30 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
+
+---
+
+##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.moveTo"></a>
+
+```go
+func MoveTo(moveTarget *string, index interface{})
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.moveTo.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.moveTo.parameter.index"></a>
+
+- *Type:* interface{}
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
 ---
 
@@ -358,13 +419,14 @@ func ResetTimeouts()
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a LighthouseDefinition resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.LighthouseDefinition_IsConstruct(x interface{}) *bool
 ```
@@ -396,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.LighthouseDefinition_IsTerraformElement(x interface{}) *bool
 ```
@@ -410,7 +472,7 @@ lighthousedefinition.LighthouseDefinition_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.LighthouseDefinition_IsTerraformResource(x interface{}) *bool
 ```
@@ -418,6 +480,50 @@ lighthousedefinition.LighthouseDefinition_IsTerraformResource(x interface{}) *bo
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.isTerraformResource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
+
+lighthousedefinition.LighthouseDefinition_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a LighthouseDefinition resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the LighthouseDefinition to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing LighthouseDefinition that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/lighthouse_definition#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinition.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the LighthouseDefinition to import is found.
 
 ---
 
@@ -829,7 +935,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionAuthorization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 &lighthousedefinition.LighthouseDefinitionAuthorization {
 	PrincipalId: *string,
@@ -903,7 +1009,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 &lighthousedefinition.LighthouseDefinitionConfig {
 	Connection: interface{},
@@ -921,8 +1027,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinit
 	EligibleAuthorization: interface{},
 	Id: *string,
 	LighthouseDefinitionId: *string,
-	Plan: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.lighthouseDefinition.LighthouseDefinitionPlan,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.lighthouseDefinition.LighthouseDefinitionTimeouts,
+	Plan: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.lighthouseDefinition.LighthouseDefinitionPlan,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.lighthouseDefinition.LighthouseDefinitionTimeouts,
 }
 ```
 
@@ -1156,12 +1262,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 &lighthousedefinition.LighthouseDefinitionEligibleAuthorization {
 	PrincipalId: *string,
 	RoleDefinitionId: *string,
-	JustInTimeAccessPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicy,
+	JustInTimeAccessPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicy,
 	PrincipalDisplayName: *string,
 }
 ```
@@ -1232,7 +1338,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 &lighthousedefinition.LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicy {
 	Approver: interface{},
@@ -1294,7 +1400,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApprover.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 &lighthousedefinition.LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApprover {
 	PrincipalId: *string,
@@ -1340,7 +1446,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionPlan.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 &lighthousedefinition.LighthouseDefinitionPlan {
 	Name: *string,
@@ -1414,7 +1520,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 &lighthousedefinition.LighthouseDefinitionTimeouts {
 	Create: *string,
@@ -1490,7 +1596,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionAuthorizationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.NewLighthouseDefinitionAuthorizationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LighthouseDefinitionAuthorizationList
 ```
@@ -1633,7 +1739,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionAuthorizationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.NewLighthouseDefinitionAuthorizationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LighthouseDefinitionAuthorizationOutputReference
 ```
@@ -2002,7 +2108,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.NewLighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverList
 ```
@@ -2145,7 +2251,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.NewLighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyApproverOutputReference
 ```
@@ -2463,7 +2569,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.NewLighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPolicyOutputReference
 ```
@@ -2812,7 +2918,7 @@ func InternalValue() LighthouseDefinitionEligibleAuthorizationJustInTimeAccessPo
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.NewLighthouseDefinitionEligibleAuthorizationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LighthouseDefinitionEligibleAuthorizationList
 ```
@@ -2955,7 +3061,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionEligibleAuthorizationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.NewLighthouseDefinitionEligibleAuthorizationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LighthouseDefinitionEligibleAuthorizationOutputReference
 ```
@@ -3337,7 +3443,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionPlanOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.NewLighthouseDefinitionPlanOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LighthouseDefinitionPlanOutputReference
 ```
@@ -3674,7 +3780,7 @@ func InternalValue() LighthouseDefinitionPlan
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.lighthouseDefinition.LighthouseDefinitionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/lighthousedefinition"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/lighthousedefinition"
 
 lighthousedefinition.NewLighthouseDefinitionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LighthouseDefinitionTimeoutsOutputReference
 ```

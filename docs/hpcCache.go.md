@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hpcCache.HpcCache.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hpccache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccache"
 
 hpccache.NewHpcCache(scope Construct, id *string, config HpcCacheConfig) HpcCache
 ```
@@ -60,6 +60,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.hpcCache.HpcCache.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
 | <code><a href="#@cdktf/provider-azurerm.hpcCache.HpcCache.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.hpcCache.HpcCache.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktf/provider-azurerm.hpcCache.HpcCache.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#@cdktf/provider-azurerm.hpcCache.HpcCache.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.hpcCache.HpcCache.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.hpcCache.HpcCache.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
@@ -69,7 +70,9 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.hpcCache.HpcCache.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.hpcCache.HpcCache.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.hpcCache.HpcCache.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.hpcCache.HpcCache.importFrom">ImportFrom</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.hpcCache.HpcCache.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.hpcCache.HpcCache.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-azurerm.hpcCache.HpcCache.putDefaultAccessPolicy">PutDefaultAccessPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.hpcCache.HpcCache.putDirectoryActiveDirectory">PutDirectoryActiveDirectory</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.hpcCache.HpcCache.putDirectoryFlatFile">PutDirectoryFlatFile</a></code> | *No description.* |
@@ -156,6 +159,22 @@ func ToTerraform() interface{}
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `AddMoveTarget` <a name="AddMoveTarget" id="@cdktf/provider-azurerm.hpcCache.HpcCache.addMoveTarget"></a>
+
+```go
+func AddMoveTarget(moveTarget *string)
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.hpcCache.HpcCache.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.hpcCache.HpcCache.getAnyMapAttribute"></a>
 
@@ -265,6 +284,24 @@ func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 
 ---
 
+##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-azurerm.hpcCache.HpcCache.importFrom"></a>
+
+```go
+func ImportFrom(id *string, provider TerraformProvider)
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.hpcCache.HpcCache.importFrom.parameter.id"></a>
+
+- *Type:* *string
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.hpcCache.HpcCache.importFrom.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+---
+
 ##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.hpcCache.HpcCache.interpolationForAttribute"></a>
 
 ```go
@@ -274,6 +311,30 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.hpcCache.HpcCache.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
+
+---
+
+##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-azurerm.hpcCache.HpcCache.moveTo"></a>
+
+```go
+func MoveTo(moveTarget *string, index interface{})
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.hpcCache.HpcCache.moveTo.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.hpcCache.HpcCache.moveTo.parameter.index"></a>
+
+- *Type:* interface{}
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
 ---
 
@@ -446,13 +507,14 @@ func ResetTimeouts()
 | <code><a href="#@cdktf/provider-azurerm.hpcCache.HpcCache.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-azurerm.hpcCache.HpcCache.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.hpcCache.HpcCache.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.hpcCache.HpcCache.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a HpcCache resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.hpcCache.HpcCache.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hpccache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccache"
 
 hpccache.HpcCache_IsConstruct(x interface{}) *bool
 ```
@@ -484,7 +546,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.hpcCache.HpcCache.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hpccache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccache"
 
 hpccache.HpcCache_IsTerraformElement(x interface{}) *bool
 ```
@@ -498,7 +560,7 @@ hpccache.HpcCache_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.hpcCache.HpcCache.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hpccache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccache"
 
 hpccache.HpcCache_IsTerraformResource(x interface{}) *bool
 ```
@@ -506,6 +568,50 @@ hpccache.HpcCache_IsTerraformResource(x interface{}) *bool
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-azurerm.hpcCache.HpcCache.isTerraformResource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.hpcCache.HpcCache.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccache"
+
+hpccache.HpcCache_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a HpcCache resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-azurerm.hpcCache.HpcCache.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-azurerm.hpcCache.HpcCache.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the HpcCache to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-azurerm.hpcCache.HpcCache.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing HpcCache that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/hpc_cache#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.hpcCache.HpcCache.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the HpcCache to import is found.
 
 ---
 
@@ -1126,7 +1232,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hpcCache.HpcCacheConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hpccache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccache"
 
 &hpccache.HpcCacheConfig {
 	Connection: interface{},
@@ -1143,18 +1249,18 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hpccache"
 	SkuName: *string,
 	SubnetId: *string,
 	AutomaticallyRotateKeyToLatestEnabled: interface{},
-	DefaultAccessPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hpcCache.HpcCacheDefaultAccessPolicy,
-	DirectoryActiveDirectory: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hpcCache.HpcCacheDirectoryActiveDirectory,
-	DirectoryFlatFile: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hpcCache.HpcCacheDirectoryFlatFile,
-	DirectoryLdap: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hpcCache.HpcCacheDirectoryLdap,
-	Dns: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hpcCache.HpcCacheDns,
+	DefaultAccessPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hpcCache.HpcCacheDefaultAccessPolicy,
+	DirectoryActiveDirectory: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hpcCache.HpcCacheDirectoryActiveDirectory,
+	DirectoryFlatFile: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hpcCache.HpcCacheDirectoryFlatFile,
+	DirectoryLdap: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hpcCache.HpcCacheDirectoryLdap,
+	Dns: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hpcCache.HpcCacheDns,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hpcCache.HpcCacheIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hpcCache.HpcCacheIdentity,
 	KeyVaultKeyId: *string,
 	Mtu: *f64,
 	NtpServer: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hpcCache.HpcCacheTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hpcCache.HpcCacheTimeouts,
 }
 ```
 
@@ -1511,7 +1617,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hpcCache.HpcCacheDefaultAccessPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hpccache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccache"
 
 &hpccache.HpcCacheDefaultAccessPolicy {
 	AccessRule: interface{},
@@ -1545,7 +1651,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hpcCache.HpcCacheDefaultAccessPolicyAccessRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hpccache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccache"
 
 &hpccache.HpcCacheDefaultAccessPolicyAccessRule {
 	Access: *string,
@@ -1675,7 +1781,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hpcCache.HpcCacheDirectoryActiveDirectory.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hpccache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccache"
 
 &hpccache.HpcCacheDirectoryActiveDirectory {
 	CacheNetbiosName: *string,
@@ -1791,7 +1897,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hpcCache.HpcCacheDirectoryFlatFile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hpccache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccache"
 
 &hpccache.HpcCacheDirectoryFlatFile {
 	GroupFileUri: *string,
@@ -1837,12 +1943,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hpcCache.HpcCacheDirectoryLdap.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hpccache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccache"
 
 &hpccache.HpcCacheDirectoryLdap {
 	BaseDn: *string,
 	Server: *string,
-	Bind: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hpcCache.HpcCacheDirectoryLdapBind,
+	Bind: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.hpcCache.HpcCacheDirectoryLdapBind,
 	CertificateValidationUri: *string,
 	DownloadCertificateAutomatically: interface{},
 	Encrypted: interface{},
@@ -1941,7 +2047,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hpcCache.HpcCacheDirectoryLdapBind.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hpccache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccache"
 
 &hpccache.HpcCacheDirectoryLdapBind {
 	Dn: *string,
@@ -1987,7 +2093,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hpcCache.HpcCacheDns.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hpccache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccache"
 
 &hpccache.HpcCacheDns {
 	Servers: *[]*string,
@@ -2033,7 +2139,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hpcCache.HpcCacheIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hpccache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccache"
 
 &hpccache.HpcCacheIdentity {
 	Type: *string,
@@ -2079,7 +2185,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hpcCache.HpcCacheTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hpccache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccache"
 
 &hpccache.HpcCacheTimeouts {
 	Create: *string,
@@ -2155,7 +2261,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hpcCache.HpcCacheDefaultAccessPolicyAccessRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hpccache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccache"
 
 hpccache.NewHpcCacheDefaultAccessPolicyAccessRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) HpcCacheDefaultAccessPolicyAccessRuleList
 ```
@@ -2298,7 +2404,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hpcCache.HpcCacheDefaultAccessPolicyAccessRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hpccache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccache"
 
 hpccache.NewHpcCacheDefaultAccessPolicyAccessRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) HpcCacheDefaultAccessPolicyAccessRuleOutputReference
 ```
@@ -2783,7 +2889,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hpcCache.HpcCacheDefaultAccessPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hpccache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccache"
 
 hpccache.NewHpcCacheDefaultAccessPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HpcCacheDefaultAccessPolicyOutputReference
 ```
@@ -3067,7 +3173,7 @@ func InternalValue() HpcCacheDefaultAccessPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hpcCache.HpcCacheDirectoryActiveDirectoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hpccache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccache"
 
 hpccache.NewHpcCacheDirectoryActiveDirectoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HpcCacheDirectoryActiveDirectoryOutputReference
 ```
@@ -3477,7 +3583,7 @@ func InternalValue() HpcCacheDirectoryActiveDirectory
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hpcCache.HpcCacheDirectoryFlatFileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hpccache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccache"
 
 hpccache.NewHpcCacheDirectoryFlatFileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HpcCacheDirectoryFlatFileOutputReference
 ```
@@ -3770,7 +3876,7 @@ func InternalValue() HpcCacheDirectoryFlatFile
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hpcCache.HpcCacheDirectoryLdapBindOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hpccache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccache"
 
 hpccache.NewHpcCacheDirectoryLdapBindOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HpcCacheDirectoryLdapBindOutputReference
 ```
@@ -4063,7 +4169,7 @@ func InternalValue() HpcCacheDirectoryLdapBind
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hpcCache.HpcCacheDirectoryLdapOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hpccache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccache"
 
 hpccache.NewHpcCacheDirectoryLdapOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HpcCacheDirectoryLdapOutputReference
 ```
@@ -4485,7 +4591,7 @@ func InternalValue() HpcCacheDirectoryLdap
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hpcCache.HpcCacheDnsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hpccache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccache"
 
 hpccache.NewHpcCacheDnsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HpcCacheDnsOutputReference
 ```
@@ -4785,7 +4891,7 @@ func InternalValue() HpcCacheDns
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hpcCache.HpcCacheIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hpccache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccache"
 
 hpccache.NewHpcCacheIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HpcCacheIdentityOutputReference
 ```
@@ -5107,7 +5213,7 @@ func InternalValue() HpcCacheIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hpcCache.HpcCacheTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hpccache"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/hpccache"
 
 hpccache.NewHpcCacheTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HpcCacheTimeoutsOutputReference
 ```

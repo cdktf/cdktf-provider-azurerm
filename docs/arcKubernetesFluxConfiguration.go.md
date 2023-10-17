@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesfluxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesfluxconfiguration"
 
 arckubernetesfluxconfiguration.NewArcKubernetesFluxConfiguration(scope Construct, id *string, config ArcKubernetesFluxConfigurationConfig) ArcKubernetesFluxConfiguration
 ```
@@ -60,6 +60,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
 | <code><a href="#@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
@@ -69,7 +70,9 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.importFrom">ImportFrom</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.putBlobStorage">PutBlobStorage</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.putBucket">PutBucket</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.putGitRepository">PutGitRepository</a></code> | *No description.* |
@@ -148,6 +151,22 @@ func ToTerraform() interface{}
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `AddMoveTarget` <a name="AddMoveTarget" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.addMoveTarget"></a>
+
+```go
+func AddMoveTarget(moveTarget *string)
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.getAnyMapAttribute"></a>
 
@@ -257,6 +276,24 @@ func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 
 ---
 
+##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.importFrom"></a>
+
+```go
+func ImportFrom(id *string, provider TerraformProvider)
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.importFrom.parameter.id"></a>
+
+- *Type:* *string
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.importFrom.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+---
+
 ##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.interpolationForAttribute"></a>
 
 ```go
@@ -266,6 +303,30 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
+
+---
+
+##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.moveTo"></a>
+
+```go
+func MoveTo(moveTarget *string, index interface{})
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.moveTo.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.moveTo.parameter.index"></a>
+
+- *Type:* interface{}
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
 ---
 
@@ -378,13 +439,14 @@ func ResetTimeouts()
 | <code><a href="#@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a ArcKubernetesFluxConfiguration resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesfluxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesfluxconfiguration"
 
 arckubernetesfluxconfiguration.ArcKubernetesFluxConfiguration_IsConstruct(x interface{}) *bool
 ```
@@ -416,7 +478,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesfluxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesfluxconfiguration"
 
 arckubernetesfluxconfiguration.ArcKubernetesFluxConfiguration_IsTerraformElement(x interface{}) *bool
 ```
@@ -430,7 +492,7 @@ arckubernetesfluxconfiguration.ArcKubernetesFluxConfiguration_IsTerraformElement
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesfluxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesfluxconfiguration"
 
 arckubernetesfluxconfiguration.ArcKubernetesFluxConfiguration_IsTerraformResource(x interface{}) *bool
 ```
@@ -438,6 +500,50 @@ arckubernetesfluxconfiguration.ArcKubernetesFluxConfiguration_IsTerraformResourc
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.isTerraformResource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesfluxconfiguration"
+
+arckubernetesfluxconfiguration.ArcKubernetesFluxConfiguration_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a ArcKubernetesFluxConfiguration resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the ArcKubernetesFluxConfiguration to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing ArcKubernetesFluxConfiguration that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/arc_kubernetes_flux_configuration#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfiguration.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the ArcKubernetesFluxConfiguration to import is found.
 
 ---
 
@@ -871,14 +977,14 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfigurationBlobStorage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesfluxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesfluxconfiguration"
 
 &arckubernetesfluxconfiguration.ArcKubernetesFluxConfigurationBlobStorage {
 	ContainerId: *string,
 	AccountKey: *string,
 	LocalAuthReference: *string,
 	SasToken: *string,
-	ServicePrincipal: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfigurationBlobStorageServicePrincipal,
+	ServicePrincipal: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfigurationBlobStorageServicePrincipal,
 	SyncIntervalInSeconds: *f64,
 	TimeoutInSeconds: *f64,
 }
@@ -989,7 +1095,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfigurationBlobStorageServicePrincipal.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesfluxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesfluxconfiguration"
 
 &arckubernetesfluxconfiguration.ArcKubernetesFluxConfigurationBlobStorageServicePrincipal {
 	ClientId: *string,
@@ -1091,7 +1197,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfigurationBucket.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesfluxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesfluxconfiguration"
 
 &arckubernetesfluxconfiguration.ArcKubernetesFluxConfigurationBucket {
 	BucketName: *string,
@@ -1221,7 +1327,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfigurationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesfluxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesfluxconfiguration"
 
 &arckubernetesfluxconfiguration.ArcKubernetesFluxConfigurationConfig {
 	Connection: interface{},
@@ -1235,13 +1341,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesflux
 	Kustomizations: interface{},
 	Name: *string,
 	Namespace: *string,
-	BlobStorage: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfigurationBlobStorage,
-	Bucket: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfigurationBucket,
+	BlobStorage: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfigurationBlobStorage,
+	Bucket: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfigurationBucket,
 	ContinuousReconciliationEnabled: interface{},
-	GitRepository: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfigurationGitRepository,
+	GitRepository: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfigurationGitRepository,
 	Id: *string,
 	Scope: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfigurationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfigurationTimeouts,
 }
 ```
 
@@ -1490,7 +1596,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfigurationGitRepository.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesfluxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesfluxconfiguration"
 
 &arckubernetesfluxconfiguration.ArcKubernetesFluxConfigurationGitRepository {
 	ReferenceType: *string,
@@ -1662,7 +1768,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfigurationKustomizations.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesfluxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesfluxconfiguration"
 
 &arckubernetesfluxconfiguration.ArcKubernetesFluxConfigurationKustomizations {
 	Name: *string,
@@ -1792,7 +1898,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfigurationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesfluxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesfluxconfiguration"
 
 &arckubernetesfluxconfiguration.ArcKubernetesFluxConfigurationTimeouts {
 	Create: *string,
@@ -1868,7 +1974,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfigurationBlobStorageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesfluxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesfluxconfiguration"
 
 arckubernetesfluxconfiguration.NewArcKubernetesFluxConfigurationBlobStorageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ArcKubernetesFluxConfigurationBlobStorageOutputReference
 ```
@@ -2326,7 +2432,7 @@ func InternalValue() ArcKubernetesFluxConfigurationBlobStorage
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfigurationBlobStorageServicePrincipalOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesfluxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesfluxconfiguration"
 
 arckubernetesfluxconfiguration.NewArcKubernetesFluxConfigurationBlobStorageServicePrincipalOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ArcKubernetesFluxConfigurationBlobStorageServicePrincipalOutputReference
 ```
@@ -2735,7 +2841,7 @@ func InternalValue() ArcKubernetesFluxConfigurationBlobStorageServicePrincipal
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfigurationBucketOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesfluxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesfluxconfiguration"
 
 arckubernetesfluxconfiguration.NewArcKubernetesFluxConfigurationBucketOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ArcKubernetesFluxConfigurationBucketOutputReference
 ```
@@ -3202,7 +3308,7 @@ func InternalValue() ArcKubernetesFluxConfigurationBucket
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfigurationGitRepositoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesfluxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesfluxconfiguration"
 
 arckubernetesfluxconfiguration.NewArcKubernetesFluxConfigurationGitRepositoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ArcKubernetesFluxConfigurationGitRepositoryOutputReference
 ```
@@ -3749,7 +3855,7 @@ func InternalValue() ArcKubernetesFluxConfigurationGitRepository
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfigurationKustomizationsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesfluxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesfluxconfiguration"
 
 arckubernetesfluxconfiguration.NewArcKubernetesFluxConfigurationKustomizationsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ArcKubernetesFluxConfigurationKustomizationsList
 ```
@@ -3892,7 +3998,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfigurationKustomizationsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesfluxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesfluxconfiguration"
 
 arckubernetesfluxconfiguration.NewArcKubernetesFluxConfigurationKustomizationsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ArcKubernetesFluxConfigurationKustomizationsOutputReference
 ```
@@ -4384,7 +4490,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration.ArcKubernetesFluxConfigurationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/arckubernetesfluxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/arckubernetesfluxconfiguration"
 
 arckubernetesfluxconfiguration.NewArcKubernetesFluxConfigurationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ArcKubernetesFluxConfigurationTimeoutsOutputReference
 ```

@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 medialiveevent.NewMediaLiveEvent(scope Construct, id *string, config MediaLiveEventConfig) MediaLiveEvent
 ```
@@ -60,6 +60,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
@@ -69,7 +70,9 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.importFrom">ImportFrom</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.putCrossSiteAccessPolicy">PutCrossSiteAccessPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.putEncoding">PutEncoding</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.putInput">PutInput</a></code> | *No description.* |
@@ -153,6 +156,22 @@ func ToTerraform() interface{}
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `AddMoveTarget` <a name="AddMoveTarget" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.addMoveTarget"></a>
+
+```go
+func AddMoveTarget(moveTarget *string)
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.getAnyMapAttribute"></a>
 
@@ -262,6 +281,24 @@ func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 
 ---
 
+##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.importFrom"></a>
+
+```go
+func ImportFrom(id *string, provider TerraformProvider)
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.importFrom.parameter.id"></a>
+
+- *Type:* *string
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.importFrom.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+---
+
 ##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.interpolationForAttribute"></a>
 
 ```go
@@ -271,6 +308,30 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
+
+---
+
+##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.moveTo"></a>
+
+```go
+func MoveTo(moveTarget *string, index interface{})
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.moveTo.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.moveTo.parameter.index"></a>
+
+- *Type:* interface{}
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
 ---
 
@@ -413,13 +474,14 @@ func ResetUseStaticHostname()
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a MediaLiveEvent resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 medialiveevent.MediaLiveEvent_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +513,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 medialiveevent.MediaLiveEvent_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +527,7 @@ medialiveevent.MediaLiveEvent_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 medialiveevent.MediaLiveEvent_IsTerraformResource(x interface{}) *bool
 ```
@@ -473,6 +535,50 @@ medialiveevent.MediaLiveEvent_IsTerraformResource(x interface{}) *bool
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.isTerraformResource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
+
+medialiveevent.MediaLiveEvent_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a MediaLiveEvent resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the MediaLiveEvent to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing MediaLiveEvent that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/media_live_event#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEvent.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the MediaLiveEvent to import is found.
 
 ---
 
@@ -1038,7 +1144,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEventConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 &medialiveevent.MediaLiveEventConfig {
 	Connection: interface{},
@@ -1048,21 +1154,21 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Input: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaLiveEvent.MediaLiveEventInput,
+	Input: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaLiveEvent.MediaLiveEventInput,
 	Location: *string,
 	MediaServicesAccountName: *string,
 	Name: *string,
 	ResourceGroupName: *string,
 	AutoStartEnabled: interface{},
-	CrossSiteAccessPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaLiveEvent.MediaLiveEventCrossSiteAccessPolicy,
+	CrossSiteAccessPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaLiveEvent.MediaLiveEventCrossSiteAccessPolicy,
 	Description: *string,
-	Encoding: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaLiveEvent.MediaLiveEventEncoding,
+	Encoding: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaLiveEvent.MediaLiveEventEncoding,
 	HostnamePrefix: *string,
 	Id: *string,
-	Preview: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaLiveEvent.MediaLiveEventPreview,
+	Preview: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaLiveEvent.MediaLiveEventPreview,
 	StreamOptions: *[]*string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaLiveEvent.MediaLiveEventTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaLiveEvent.MediaLiveEventTimeouts,
 	TranscriptionLanguages: *[]*string,
 	UseStaticHostname: interface{},
 }
@@ -1391,7 +1497,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEventCrossSiteAccessPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 &medialiveevent.MediaLiveEventCrossSiteAccessPolicy {
 	ClientAccessPolicy: *string,
@@ -1437,7 +1543,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEventEncoding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 &medialiveevent.MediaLiveEventEncoding {
 	KeyFrameInterval: *string,
@@ -1511,7 +1617,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEventInput.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 &medialiveevent.MediaLiveEventInput {
 	AccessToken: *string,
@@ -1587,7 +1693,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEventInputEndpoint.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 &medialiveevent.MediaLiveEventInputEndpoint {
 
@@ -1600,7 +1706,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEventInputIpAccessControlAllow.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 &medialiveevent.MediaLiveEventInputIpAccessControlAllow {
 	Address: *string,
@@ -1660,7 +1766,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEventPreview.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 &medialiveevent.MediaLiveEventPreview {
 	AlternativeMediaId: *string,
@@ -1736,7 +1842,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEventPreviewEndpoint.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 &medialiveevent.MediaLiveEventPreviewEndpoint {
 
@@ -1749,7 +1855,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEventPreviewIpAccessControlAllow.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 &medialiveevent.MediaLiveEventPreviewIpAccessControlAllow {
 	Address: *string,
@@ -1809,7 +1915,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEventTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 &medialiveevent.MediaLiveEventTimeouts {
 	Create: *string,
@@ -1885,7 +1991,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEventCrossSiteAccessPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 medialiveevent.NewMediaLiveEventCrossSiteAccessPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaLiveEventCrossSiteAccessPolicyOutputReference
 ```
@@ -2192,7 +2298,7 @@ func InternalValue() MediaLiveEventCrossSiteAccessPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEventEncodingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 medialiveevent.NewMediaLiveEventEncodingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaLiveEventEncodingOutputReference
 ```
@@ -2557,7 +2663,7 @@ func InternalValue() MediaLiveEventEncoding
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEventInputEndpointList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 medialiveevent.NewMediaLiveEventInputEndpointList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaLiveEventInputEndpointList
 ```
@@ -2689,7 +2795,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEventInputEndpointOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 medialiveevent.NewMediaLiveEventInputEndpointOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaLiveEventInputEndpointOutputReference
 ```
@@ -2978,7 +3084,7 @@ func InternalValue() MediaLiveEventInputEndpoint
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEventInputIpAccessControlAllowList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 medialiveevent.NewMediaLiveEventInputIpAccessControlAllowList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaLiveEventInputIpAccessControlAllowList
 ```
@@ -3121,7 +3227,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEventInputIpAccessControlAllowOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 medialiveevent.NewMediaLiveEventInputIpAccessControlAllowOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaLiveEventInputIpAccessControlAllowOutputReference
 ```
@@ -3475,7 +3581,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEventInputOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 medialiveevent.NewMediaLiveEventInputOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaLiveEventInputOutputReference
 ```
@@ -3864,7 +3970,7 @@ func InternalValue() MediaLiveEventInput
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEventPreviewEndpointList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 medialiveevent.NewMediaLiveEventPreviewEndpointList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaLiveEventPreviewEndpointList
 ```
@@ -3996,7 +4102,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEventPreviewEndpointOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 medialiveevent.NewMediaLiveEventPreviewEndpointOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaLiveEventPreviewEndpointOutputReference
 ```
@@ -4285,7 +4391,7 @@ func InternalValue() MediaLiveEventPreviewEndpoint
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEventPreviewIpAccessControlAllowList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 medialiveevent.NewMediaLiveEventPreviewIpAccessControlAllowList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaLiveEventPreviewIpAccessControlAllowList
 ```
@@ -4428,7 +4534,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEventPreviewIpAccessControlAllowOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 medialiveevent.NewMediaLiveEventPreviewIpAccessControlAllowOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaLiveEventPreviewIpAccessControlAllowOutputReference
 ```
@@ -4782,7 +4888,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEventPreviewOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 medialiveevent.NewMediaLiveEventPreviewOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaLiveEventPreviewOutputReference
 ```
@@ -5171,7 +5277,7 @@ func InternalValue() MediaLiveEventPreview
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaLiveEvent.MediaLiveEventTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/medialiveevent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/medialiveevent"
 
 medialiveevent.NewMediaLiveEventTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaLiveEventTimeoutsOutputReference
 ```

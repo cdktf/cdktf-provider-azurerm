@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/virtual_hub_ip
 // generated from terraform resource schema
 
@@ -216,6 +211,20 @@ export class VirtualHubIp extends cdktf.TerraformResource {
   // STATIC PROPERTIES
   // =================
   public static readonly tfResourceType = "azurerm_virtual_hub_ip";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a VirtualHubIp resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the VirtualHubIp to import
+  * @param importFromId The id of the existing VirtualHubIp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/virtual_hub_ip#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the VirtualHubIp to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_virtual_hub_ip", importId: importFromId, provider });
+      }
 
   // ===========
   // INITIALIZER

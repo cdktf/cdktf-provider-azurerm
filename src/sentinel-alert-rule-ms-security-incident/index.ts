@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/sentinel_alert_rule_ms_security_incident
 // generated from terraform resource schema
 
@@ -232,6 +227,20 @@ export class SentinelAlertRuleMsSecurityIncident extends cdktf.TerraformResource
   // STATIC PROPERTIES
   // =================
   public static readonly tfResourceType = "azurerm_sentinel_alert_rule_ms_security_incident";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a SentinelAlertRuleMsSecurityIncident resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the SentinelAlertRuleMsSecurityIncident to import
+  * @param importFromId The id of the existing SentinelAlertRuleMsSecurityIncident that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/sentinel_alert_rule_ms_security_incident#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the SentinelAlertRuleMsSecurityIncident to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_sentinel_alert_rule_ms_security_incident", importId: importFromId, provider });
+      }
 
   // ===========
   // INITIALIZER

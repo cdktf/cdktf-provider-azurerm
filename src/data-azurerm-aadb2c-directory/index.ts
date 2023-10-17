@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/aadb2c_directory
 // generated from terraform resource schema
 
@@ -121,6 +116,20 @@ export class DataAzurermAadb2CDirectory extends cdktf.TerraformDataSource {
   // STATIC PROPERTIES
   // =================
   public static readonly tfResourceType = "azurerm_aadb2c_directory";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a DataAzurermAadb2CDirectory resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataAzurermAadb2CDirectory to import
+  * @param importFromId The id of the existing DataAzurermAadb2CDirectory that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/aadb2c_directory#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAzurermAadb2CDirectory to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_aadb2c_directory", importId: importFromId, provider });
+      }
 
   // ===========
   // INITIALIZER

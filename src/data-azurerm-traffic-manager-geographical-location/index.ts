@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/traffic_manager_geographical_location
 // generated from terraform resource schema
 
@@ -115,6 +110,20 @@ export class DataAzurermTrafficManagerGeographicalLocation extends cdktf.Terrafo
   // STATIC PROPERTIES
   // =================
   public static readonly tfResourceType = "azurerm_traffic_manager_geographical_location";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a DataAzurermTrafficManagerGeographicalLocation resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the DataAzurermTrafficManagerGeographicalLocation to import
+  * @param importFromId The id of the existing DataAzurermTrafficManagerGeographicalLocation that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/traffic_manager_geographical_location#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the DataAzurermTrafficManagerGeographicalLocation to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_traffic_manager_geographical_location", importId: importFromId, provider });
+      }
 
   // ===========
   // INITIALIZER

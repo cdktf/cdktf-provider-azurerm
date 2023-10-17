@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 containerregistrytask.NewContainerRegistryTask(scope Construct, id *string, config ContainerRegistryTaskConfig) ContainerRegistryTask
 ```
@@ -60,6 +60,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
 | <code><a href="#@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
@@ -69,7 +70,9 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.importFrom">ImportFrom</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.putAgentSetting">PutAgentSetting</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.putBaseImageTrigger">PutBaseImageTrigger</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.putDockerStep">PutDockerStep</a></code> | *No description.* |
@@ -165,6 +168,22 @@ func ToTerraform() interface{}
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `AddMoveTarget` <a name="AddMoveTarget" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.addMoveTarget"></a>
+
+```go
+func AddMoveTarget(moveTarget *string)
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.getAnyMapAttribute"></a>
 
@@ -274,6 +293,24 @@ func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 
 ---
 
+##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.importFrom"></a>
+
+```go
+func ImportFrom(id *string, provider TerraformProvider)
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.importFrom.parameter.id"></a>
+
+- *Type:* *string
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.importFrom.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+---
+
 ##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.interpolationForAttribute"></a>
 
 ```go
@@ -283,6 +320,30 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
+
+---
+
+##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.moveTo"></a>
+
+```go
+func MoveTo(moveTarget *string, index interface{})
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.moveTo.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.moveTo.parameter.index"></a>
+
+- *Type:* interface{}
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
 ---
 
@@ -533,13 +594,14 @@ func ResetTimerTrigger()
 | <code><a href="#@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a ContainerRegistryTask resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 containerregistrytask.ContainerRegistryTask_IsConstruct(x interface{}) *bool
 ```
@@ -571,7 +633,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 containerregistrytask.ContainerRegistryTask_IsTerraformElement(x interface{}) *bool
 ```
@@ -585,7 +647,7 @@ containerregistrytask.ContainerRegistryTask_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 containerregistrytask.ContainerRegistryTask_IsTerraformResource(x interface{}) *bool
 ```
@@ -593,6 +655,50 @@ containerregistrytask.ContainerRegistryTask_IsTerraformResource(x interface{}) *
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.isTerraformResource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
+
+containerregistrytask.ContainerRegistryTask_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a ContainerRegistryTask resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the ContainerRegistryTask to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing ContainerRegistryTask that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/container_registry_task#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTask.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the ContainerRegistryTask to import is found.
 
 ---
 
@@ -1224,7 +1330,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskAgentSetting.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 &containerregistrytask.ContainerRegistryTaskAgentSetting {
 	Cpu: *f64,
@@ -1256,7 +1362,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskBaseImageTrigger.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 &containerregistrytask.ContainerRegistryTaskBaseImageTrigger {
 	Name: *string,
@@ -1344,7 +1450,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 &containerregistrytask.ContainerRegistryTaskConfig {
 	Connection: interface{},
@@ -1357,22 +1463,22 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistry
 	ContainerRegistryId: *string,
 	Name: *string,
 	AgentPoolName: *string,
-	AgentSetting: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.containerRegistryTask.ContainerRegistryTaskAgentSetting,
-	BaseImageTrigger: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.containerRegistryTask.ContainerRegistryTaskBaseImageTrigger,
-	DockerStep: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.containerRegistryTask.ContainerRegistryTaskDockerStep,
+	AgentSetting: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerRegistryTask.ContainerRegistryTaskAgentSetting,
+	BaseImageTrigger: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerRegistryTask.ContainerRegistryTaskBaseImageTrigger,
+	DockerStep: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerRegistryTask.ContainerRegistryTaskDockerStep,
 	Enabled: interface{},
-	EncodedStep: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.containerRegistryTask.ContainerRegistryTaskEncodedStep,
-	FileStep: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.containerRegistryTask.ContainerRegistryTaskFileStep,
+	EncodedStep: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerRegistryTask.ContainerRegistryTaskEncodedStep,
+	FileStep: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerRegistryTask.ContainerRegistryTaskFileStep,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.containerRegistryTask.ContainerRegistryTaskIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerRegistryTask.ContainerRegistryTaskIdentity,
 	IsSystemTask: interface{},
 	LogTemplate: *string,
-	Platform: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.containerRegistryTask.ContainerRegistryTaskPlatform,
-	RegistryCredential: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.containerRegistryTask.ContainerRegistryTaskRegistryCredential,
+	Platform: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerRegistryTask.ContainerRegistryTaskPlatform,
+	RegistryCredential: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerRegistryTask.ContainerRegistryTaskRegistryCredential,
 	SourceTrigger: interface{},
 	Tags: *map[string]*string,
 	TimeoutInSeconds: *f64,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.containerRegistryTask.ContainerRegistryTaskTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerRegistryTask.ContainerRegistryTaskTimeouts,
 	TimerTrigger: interface{},
 }
 ```
@@ -1751,7 +1857,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskDockerStep.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 &containerregistrytask.ContainerRegistryTaskDockerStep {
 	ContextAccessToken: *string,
@@ -1895,7 +2001,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskEncodedStep.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 &containerregistrytask.ContainerRegistryTaskEncodedStep {
 	TaskContent: *string,
@@ -1997,7 +2103,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskFileStep.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 &containerregistrytask.ContainerRegistryTaskFileStep {
 	TaskFilePath: *string,
@@ -2099,7 +2205,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 &containerregistrytask.ContainerRegistryTaskIdentity {
 	Type: *string,
@@ -2145,7 +2251,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskPlatform.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 &containerregistrytask.ContainerRegistryTaskPlatform {
 	Os: *string,
@@ -2205,11 +2311,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskRegistryCredential.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 &containerregistrytask.ContainerRegistryTaskRegistryCredential {
 	Custom: interface{},
-	Source: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.containerRegistryTask.ContainerRegistryTaskRegistryCredentialSource,
+	Source: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerRegistryTask.ContainerRegistryTaskRegistryCredentialSource,
 }
 ```
 
@@ -2255,7 +2361,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskRegistryCredentialCustom.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 &containerregistrytask.ContainerRegistryTaskRegistryCredentialCustom {
 	LoginServer: *string,
@@ -2329,7 +2435,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskRegistryCredentialSource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 &containerregistrytask.ContainerRegistryTaskRegistryCredentialSource {
 	LoginMode: *string,
@@ -2361,14 +2467,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskSourceTrigger.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 &containerregistrytask.ContainerRegistryTaskSourceTrigger {
 	Events: *[]*string,
 	Name: *string,
 	RepositoryUrl: *string,
 	SourceType: *string,
-	Authentication: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.containerRegistryTask.ContainerRegistryTaskSourceTriggerAuthentication,
+	Authentication: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerRegistryTask.ContainerRegistryTaskSourceTriggerAuthentication,
 	Branch: *string,
 	Enabled: interface{},
 }
@@ -2479,7 +2585,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskSourceTriggerAuthentication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 &containerregistrytask.ContainerRegistryTaskSourceTriggerAuthentication {
 	Token: *string,
@@ -2567,7 +2673,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 &containerregistrytask.ContainerRegistryTaskTimeouts {
 	Create: *string,
@@ -2641,7 +2747,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskTimerTrigger.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 &containerregistrytask.ContainerRegistryTaskTimerTrigger {
 	Name: *string,
@@ -2703,7 +2809,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskAgentSettingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 containerregistrytask.NewContainerRegistryTaskAgentSettingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerRegistryTaskAgentSettingOutputReference
 ```
@@ -2974,7 +3080,7 @@ func InternalValue() ContainerRegistryTaskAgentSetting
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskBaseImageTriggerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 containerregistrytask.NewContainerRegistryTaskBaseImageTriggerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerRegistryTaskBaseImageTriggerOutputReference
 ```
@@ -3354,7 +3460,7 @@ func InternalValue() ContainerRegistryTaskBaseImageTrigger
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskDockerStepOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 containerregistrytask.NewContainerRegistryTaskDockerStepOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerRegistryTaskDockerStepOutputReference
 ```
@@ -3843,7 +3949,7 @@ func InternalValue() ContainerRegistryTaskDockerStep
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskEncodedStepOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 containerregistrytask.NewContainerRegistryTaskEncodedStepOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerRegistryTaskEncodedStepOutputReference
 ```
@@ -4259,7 +4365,7 @@ func InternalValue() ContainerRegistryTaskEncodedStep
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskFileStepOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 containerregistrytask.NewContainerRegistryTaskFileStepOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerRegistryTaskFileStepOutputReference
 ```
@@ -4675,7 +4781,7 @@ func InternalValue() ContainerRegistryTaskFileStep
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 containerregistrytask.NewContainerRegistryTaskIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerRegistryTaskIdentityOutputReference
 ```
@@ -4997,7 +5103,7 @@ func InternalValue() ContainerRegistryTaskIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskPlatformOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 containerregistrytask.NewContainerRegistryTaskPlatformOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerRegistryTaskPlatformOutputReference
 ```
@@ -5326,7 +5432,7 @@ func InternalValue() ContainerRegistryTaskPlatform
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskRegistryCredentialCustomList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 containerregistrytask.NewContainerRegistryTaskRegistryCredentialCustomList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerRegistryTaskRegistryCredentialCustomList
 ```
@@ -5469,7 +5575,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskRegistryCredentialCustomOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 containerregistrytask.NewContainerRegistryTaskRegistryCredentialCustomOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerRegistryTaskRegistryCredentialCustomOutputReference
 ```
@@ -5845,7 +5951,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskRegistryCredentialOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 containerregistrytask.NewContainerRegistryTaskRegistryCredentialOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerRegistryTaskRegistryCredentialOutputReference
 ```
@@ -6178,7 +6284,7 @@ func InternalValue() ContainerRegistryTaskRegistryCredential
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskRegistryCredentialSourceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 containerregistrytask.NewContainerRegistryTaskRegistryCredentialSourceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerRegistryTaskRegistryCredentialSourceOutputReference
 ```
@@ -6449,7 +6555,7 @@ func InternalValue() ContainerRegistryTaskRegistryCredentialSource
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskSourceTriggerAuthenticationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 containerregistrytask.NewContainerRegistryTaskSourceTriggerAuthenticationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerRegistryTaskSourceTriggerAuthenticationOutputReference
 ```
@@ -6829,7 +6935,7 @@ func InternalValue() ContainerRegistryTaskSourceTriggerAuthentication
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskSourceTriggerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 containerregistrytask.NewContainerRegistryTaskSourceTriggerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerRegistryTaskSourceTriggerList
 ```
@@ -6972,7 +7078,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskSourceTriggerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 containerregistrytask.NewContainerRegistryTaskSourceTriggerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerRegistryTaskSourceTriggerOutputReference
 ```
@@ -7427,7 +7533,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 containerregistrytask.NewContainerRegistryTaskTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerRegistryTaskTimeoutsOutputReference
 ```
@@ -7792,7 +7898,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskTimerTriggerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 containerregistrytask.NewContainerRegistryTaskTimerTriggerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerRegistryTaskTimerTriggerList
 ```
@@ -7935,7 +8041,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryTask.ContainerRegistryTaskTimerTriggerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistrytask"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistrytask"
 
 containerregistrytask.NewContainerRegistryTaskTimerTriggerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerRegistryTaskTimerTriggerOutputReference
 ```

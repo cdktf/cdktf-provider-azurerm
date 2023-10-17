@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/stream_analytics_output_eventhub
 // generated from terraform resource schema
 
@@ -381,6 +376,20 @@ export class StreamAnalyticsOutputEventhub extends cdktf.TerraformResource {
   // STATIC PROPERTIES
   // =================
   public static readonly tfResourceType = "azurerm_stream_analytics_output_eventhub";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a StreamAnalyticsOutputEventhub resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the StreamAnalyticsOutputEventhub to import
+  * @param importFromId The id of the existing StreamAnalyticsOutputEventhub that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/stream_analytics_output_eventhub#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the StreamAnalyticsOutputEventhub to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_stream_analytics_output_eventhub", importId: importFromId, provider });
+      }
 
   // ===========
   // INITIALIZER

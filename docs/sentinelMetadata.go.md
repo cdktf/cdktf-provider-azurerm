@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelmetadata"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelmetadata"
 
 sentinelmetadata.NewSentinelMetadata(scope Construct, id *string, config SentinelMetadataConfig) SentinelMetadata
 ```
@@ -60,6 +60,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
 | <code><a href="#@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
@@ -69,7 +70,9 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.importFrom">ImportFrom</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.putAuthor">PutAuthor</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.putCategory">PutCategory</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.putSource">PutSource</a></code> | *No description.* |
@@ -159,6 +162,22 @@ func ToTerraform() interface{}
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `AddMoveTarget` <a name="AddMoveTarget" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.addMoveTarget"></a>
+
+```go
+func AddMoveTarget(moveTarget *string)
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.getAnyMapAttribute"></a>
 
@@ -268,6 +287,24 @@ func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 
 ---
 
+##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.importFrom"></a>
+
+```go
+func ImportFrom(id *string, provider TerraformProvider)
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.importFrom.parameter.id"></a>
+
+- *Type:* *string
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.importFrom.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+---
+
 ##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.interpolationForAttribute"></a>
 
 ```go
@@ -277,6 +314,30 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
+
+---
+
+##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.moveTo"></a>
+
+```go
+func MoveTo(moveTarget *string, index interface{})
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.moveTo.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.moveTo.parameter.index"></a>
+
+- *Type:* interface{}
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
 ---
 
@@ -455,13 +516,14 @@ func ResetVersion()
 | <code><a href="#@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a SentinelMetadata resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelmetadata"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelmetadata"
 
 sentinelmetadata.SentinelMetadata_IsConstruct(x interface{}) *bool
 ```
@@ -493,7 +555,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelmetadata"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelmetadata"
 
 sentinelmetadata.SentinelMetadata_IsTerraformElement(x interface{}) *bool
 ```
@@ -507,7 +569,7 @@ sentinelmetadata.SentinelMetadata_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelmetadata"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelmetadata"
 
 sentinelmetadata.SentinelMetadata_IsTerraformResource(x interface{}) *bool
 ```
@@ -515,6 +577,50 @@ sentinelmetadata.SentinelMetadata_IsTerraformResource(x interface{}) *bool
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.isTerraformResource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelmetadata"
+
+sentinelmetadata.SentinelMetadata_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a SentinelMetadata resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the SentinelMetadata to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing SentinelMetadata that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/sentinel_metadata#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadata.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the SentinelMetadata to import is found.
 
 ---
 
@@ -1212,7 +1318,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadataAuthor.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelmetadata"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelmetadata"
 
 &sentinelmetadata.SentinelMetadataAuthor {
 	Email: *string,
@@ -1272,7 +1378,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadataCategory.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelmetadata"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelmetadata"
 
 &sentinelmetadata.SentinelMetadataCategory {
 	Domains: *[]*string,
@@ -1318,7 +1424,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadataConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelmetadata"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelmetadata"
 
 &sentinelmetadata.SentinelMetadataConfig {
 	Connection: interface{},
@@ -1333,8 +1439,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelmetadata"
 	Name: *string,
 	ParentId: *string,
 	WorkspaceId: *string,
-	Author: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.sentinelMetadata.SentinelMetadataAuthor,
-	Category: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.sentinelMetadata.SentinelMetadataCategory,
+	Author: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sentinelMetadata.SentinelMetadataAuthor,
+	Category: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sentinelMetadata.SentinelMetadataCategory,
 	ContentSchemaVersion: *string,
 	CustomVersion: *string,
 	Dependency: *string,
@@ -1345,11 +1451,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelmetadata"
 	PreviewImages: *[]*string,
 	PreviewImagesDark: *[]*string,
 	Providers: *[]*string,
-	Source: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.sentinelMetadata.SentinelMetadataSource,
-	Support: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.sentinelMetadata.SentinelMetadataSupport,
+	Source: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sentinelMetadata.SentinelMetadataSource,
+	Support: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sentinelMetadata.SentinelMetadataSupport,
 	ThreatAnalysisTactics: *[]*string,
 	ThreatAnalysisTechniques: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.sentinelMetadata.SentinelMetadataTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sentinelMetadata.SentinelMetadataTimeouts,
 	Version: *string,
 }
 ```
@@ -1755,7 +1861,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadataSource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelmetadata"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelmetadata"
 
 &sentinelmetadata.SentinelMetadataSource {
 	Kind: *string,
@@ -1818,7 +1924,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadataSupport.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelmetadata"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelmetadata"
 
 &sentinelmetadata.SentinelMetadataSupport {
 	Tier: *string,
@@ -1892,7 +1998,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadataTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelmetadata"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelmetadata"
 
 &sentinelmetadata.SentinelMetadataTimeouts {
 	Create: *string,
@@ -1968,7 +2074,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadataAuthorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelmetadata"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelmetadata"
 
 sentinelmetadata.NewSentinelMetadataAuthorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SentinelMetadataAuthorOutputReference
 ```
@@ -2304,7 +2410,7 @@ func InternalValue() SentinelMetadataAuthor
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadataCategoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelmetadata"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelmetadata"
 
 sentinelmetadata.NewSentinelMetadataCategoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SentinelMetadataCategoryOutputReference
 ```
@@ -2611,7 +2717,7 @@ func InternalValue() SentinelMetadataCategory
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadataSourceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelmetadata"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelmetadata"
 
 sentinelmetadata.NewSentinelMetadataSourceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SentinelMetadataSourceOutputReference
 ```
@@ -2940,7 +3046,7 @@ func InternalValue() SentinelMetadataSource
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadataSupportOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelmetadata"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelmetadata"
 
 sentinelmetadata.NewSentinelMetadataSupportOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SentinelMetadataSupportOutputReference
 ```
@@ -3298,7 +3404,7 @@ func InternalValue() SentinelMetadataSupport
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelMetadata.SentinelMetadataTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelmetadata"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelmetadata"
 
 sentinelmetadata.NewSentinelMetadataTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SentinelMetadataTimeoutsOutputReference
 ```

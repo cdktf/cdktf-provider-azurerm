@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapi"
 
 apimanagementapi.NewApiManagementApi(scope Construct, id *string, config ApiManagementApiConfig) ApiManagementApi
 ```
@@ -60,6 +60,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.getBooleanAttribute">GetBooleanAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.getBooleanMapAttribute">GetBooleanMapAttribute</a></code> | *No description.* |
@@ -69,7 +70,9 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.getNumberMapAttribute">GetNumberMapAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.getStringAttribute">GetStringAttribute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.getStringMapAttribute">GetStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.importFrom">ImportFrom</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.interpolationForAttribute">InterpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.moveTo">MoveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.putContact">PutContact</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.putImport">PutImport</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.putLicense">PutLicense</a></code> | *No description.* |
@@ -165,6 +168,22 @@ func ToTerraform() interface{}
 ```
 
 Adds this resource to the terraform JSON output.
+
+##### `AddMoveTarget` <a name="AddMoveTarget" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.addMoveTarget"></a>
+
+```go
+func AddMoveTarget(moveTarget *string)
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The string move target that will correspond to this resource.
+
+---
 
 ##### `GetAnyMapAttribute` <a name="GetAnyMapAttribute" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.getAnyMapAttribute"></a>
 
@@ -274,6 +293,24 @@ func GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 
 ---
 
+##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.importFrom"></a>
+
+```go
+func ImportFrom(id *string, provider TerraformProvider)
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.importFrom.parameter.id"></a>
+
+- *Type:* *string
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.importFrom.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+---
+
 ##### `InterpolationForAttribute` <a name="InterpolationForAttribute" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.interpolationForAttribute"></a>
 
 ```go
@@ -283,6 +320,30 @@ func InterpolationForAttribute(terraformAttribute *string) IResolvable
 ###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.interpolationForAttribute.parameter.terraformAttribute"></a>
 
 - *Type:* *string
+
+---
+
+##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.moveTo"></a>
+
+```go
+func MoveTo(moveTarget *string, index interface{})
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.moveTo.parameter.moveTarget"></a>
+
+- *Type:* *string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.moveTo.parameter.index"></a>
+
+- *Type:* interface{}
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
 ---
 
@@ -509,13 +570,14 @@ func ResetVersionSetId()
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.isConstruct">IsConstruct</a></code> | Checks if `x` is a construct. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.isTerraformElement">IsTerraformElement</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.isTerraformResource">IsTerraformResource</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.generateConfigForImport">GenerateConfigForImport</a></code> | Generates CDKTF code for importing a ApiManagementApi resource upon running "cdktf plan <stack-name>". |
 
 ---
 
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapi"
 
 apimanagementapi.ApiManagementApi_IsConstruct(x interface{}) *bool
 ```
@@ -547,7 +609,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapi"
 
 apimanagementapi.ApiManagementApi_IsTerraformElement(x interface{}) *bool
 ```
@@ -561,7 +623,7 @@ apimanagementapi.ApiManagementApi_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapi"
 
 apimanagementapi.ApiManagementApi_IsTerraformResource(x interface{}) *bool
 ```
@@ -569,6 +631,50 @@ apimanagementapi.ApiManagementApi_IsTerraformResource(x interface{}) *bool
 ###### `x`<sup>Required</sup> <a name="x" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.isTerraformResource.parameter.x"></a>
 
 - *Type:* interface{}
+
+---
+
+##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.generateConfigForImport"></a>
+
+```go
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapi"
+
+apimanagementapi.ApiManagementApi_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
+```
+
+Generates CDKTF code for importing a ApiManagementApi resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* github.com/aws/constructs-go/constructs/v10.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* *string
+
+The construct id used in the generated config for the ApiManagementApi to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* *string
+
+The id of the existing ApiManagementApi that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/api_management_api#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApi.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider
+
+? Optional instance of the provider where the ApiManagementApi to import is found.
 
 ---
 
@@ -1354,7 +1460,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApiConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapi"
 
 &apimanagementapi.ApiManagementApiConfig {
 	Connection: interface{},
@@ -1369,24 +1475,24 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapi"
 	ResourceGroupName: *string,
 	Revision: *string,
 	ApiType: *string,
-	Contact: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.apiManagementApi.ApiManagementApiContact,
+	Contact: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementApi.ApiManagementApiContact,
 	Description: *string,
 	DisplayName: *string,
 	Id: *string,
-	Import: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.apiManagementApi.ApiManagementApiImport,
-	License: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.apiManagementApi.ApiManagementApiLicense,
-	Oauth2Authorization: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.apiManagementApi.ApiManagementApiOauth2Authorization,
-	OpenidAuthentication: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.apiManagementApi.ApiManagementApiOpenidAuthentication,
+	Import: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementApi.ApiManagementApiImport,
+	License: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementApi.ApiManagementApiLicense,
+	Oauth2Authorization: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementApi.ApiManagementApiOauth2Authorization,
+	OpenidAuthentication: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementApi.ApiManagementApiOpenidAuthentication,
 	Path: *string,
 	Protocols: *[]*string,
 	RevisionDescription: *string,
 	ServiceUrl: *string,
 	SoapPassThrough: interface{},
 	SourceApiId: *string,
-	SubscriptionKeyParameterNames: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.apiManagementApi.ApiManagementApiSubscriptionKeyParameterNames,
+	SubscriptionKeyParameterNames: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementApi.ApiManagementApiSubscriptionKeyParameterNames,
 	SubscriptionRequired: interface{},
 	TermsOfServiceUrl: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.apiManagementApi.ApiManagementApiTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementApi.ApiManagementApiTimeouts,
 	Version: *string,
 	VersionDescription: *string,
 	VersionSetId: *string,
@@ -1837,7 +1943,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApiContact.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapi"
 
 &apimanagementapi.ApiManagementApiContact {
 	Email: *string,
@@ -1897,12 +2003,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApiImport.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapi"
 
 &apimanagementapi.ApiManagementApiImport {
 	ContentFormat: *string,
 	ContentValue: *string,
-	WsdlSelector: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.apiManagementApi.ApiManagementApiImportWsdlSelector,
+	WsdlSelector: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementApi.ApiManagementApiImportWsdlSelector,
 }
 ```
 
@@ -1959,7 +2065,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApiImportWsdlSelector.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapi"
 
 &apimanagementapi.ApiManagementApiImportWsdlSelector {
 	EndpointName: *string,
@@ -2005,7 +2111,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApiLicense.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapi"
 
 &apimanagementapi.ApiManagementApiLicense {
 	Name: *string,
@@ -2051,7 +2157,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApiOauth2Authorization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapi"
 
 &apimanagementapi.ApiManagementApiOauth2Authorization {
 	AuthorizationServerName: *string,
@@ -2097,7 +2203,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApiOpenidAuthentication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapi"
 
 &apimanagementapi.ApiManagementApiOpenidAuthentication {
 	OpenidProviderName: *string,
@@ -2143,7 +2249,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApiSubscriptionKeyParameterNames.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapi"
 
 &apimanagementapi.ApiManagementApiSubscriptionKeyParameterNames {
 	Header: *string,
@@ -2189,7 +2295,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApiTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapi"
 
 &apimanagementapi.ApiManagementApiTimeouts {
 	Create: *string,
@@ -2265,7 +2371,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApiContactOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapi"
 
 apimanagementapi.NewApiManagementApiContactOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementApiContactOutputReference
 ```
@@ -2601,7 +2707,7 @@ func InternalValue() ApiManagementApiContact
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApiImportOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapi"
 
 apimanagementapi.NewApiManagementApiImportOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementApiImportOutputReference
 ```
@@ -2936,7 +3042,7 @@ func InternalValue() ApiManagementApiImport
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApiImportWsdlSelectorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapi"
 
 apimanagementapi.NewApiManagementApiImportWsdlSelectorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementApiImportWsdlSelectorOutputReference
 ```
@@ -3229,7 +3335,7 @@ func InternalValue() ApiManagementApiImportWsdlSelector
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApiLicenseOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapi"
 
 apimanagementapi.NewApiManagementApiLicenseOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementApiLicenseOutputReference
 ```
@@ -3536,7 +3642,7 @@ func InternalValue() ApiManagementApiLicense
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApiOauth2AuthorizationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapi"
 
 apimanagementapi.NewApiManagementApiOauth2AuthorizationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementApiOauth2AuthorizationOutputReference
 ```
@@ -3836,7 +3942,7 @@ func InternalValue() ApiManagementApiOauth2Authorization
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApiOpenidAuthenticationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapi"
 
 apimanagementapi.NewApiManagementApiOpenidAuthenticationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementApiOpenidAuthenticationOutputReference
 ```
@@ -4136,7 +4242,7 @@ func InternalValue() ApiManagementApiOpenidAuthentication
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApiSubscriptionKeyParameterNamesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapi"
 
 apimanagementapi.NewApiManagementApiSubscriptionKeyParameterNamesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementApiSubscriptionKeyParameterNamesOutputReference
 ```
@@ -4429,7 +4535,7 @@ func InternalValue() ApiManagementApiSubscriptionKeyParameterNames
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApi.ApiManagementApiTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapi"
 
 apimanagementapi.NewApiManagementApiTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementApiTimeoutsOutputReference
 ```

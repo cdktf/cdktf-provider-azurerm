@@ -1,8 +1,3 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
 // https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/media_live_event_output
 // generated from terraform resource schema
 
@@ -228,6 +223,20 @@ export class MediaLiveEventOutput extends cdktf.TerraformResource {
   // STATIC PROPERTIES
   // =================
   public static readonly tfResourceType = "azurerm_media_live_event_output";
+
+  // ==============
+  // STATIC Methods
+  // ==============
+  /**
+  * Generates CDKTF code for importing a MediaLiveEventOutput resource upon running "cdktf plan <stack-name>"
+  * @param scope The scope in which to define this construct
+  * @param importToId The construct id used in the generated config for the MediaLiveEventOutput to import
+  * @param importFromId The id of the existing MediaLiveEventOutput that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/media_live_event_output#import import section} in the documentation of this resource for the id to use
+  * @param provider? Optional instance of the provider where the MediaLiveEventOutput to import is found
+  */
+  public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
+        return new cdktf.ImportableResource(scope, importToId, { terraformResourceType: "azurerm_media_live_event_output", importId: importFromId, provider });
+      }
 
   // ===========
   // INITIALIZER
