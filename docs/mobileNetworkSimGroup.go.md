@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mobileNetworkSimGroup.MobileNetworkSimGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworksimgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworksimgroup"
 
 mobilenetworksimgroup.NewMobileNetworkSimGroup(scope Construct, id *string, config MobileNetworkSimGroupConfig) MobileNetworkSimGroup
 ```
@@ -393,7 +393,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mobileNetworkSimGroup.MobileNetworkSimGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworksimgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworksimgroup"
 
 mobilenetworksimgroup.MobileNetworkSimGroup_IsConstruct(x interface{}) *bool
 ```
@@ -425,7 +425,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mobileNetworkSimGroup.MobileNetworkSimGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworksimgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworksimgroup"
 
 mobilenetworksimgroup.MobileNetworkSimGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -439,7 +439,7 @@ mobilenetworksimgroup.MobileNetworkSimGroup_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mobileNetworkSimGroup.MobileNetworkSimGroup.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworksimgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworksimgroup"
 
 mobilenetworksimgroup.MobileNetworkSimGroup_IsTerraformResource(x interface{}) *bool
 ```
@@ -453,7 +453,7 @@ mobilenetworksimgroup.MobileNetworkSimGroup_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.mobileNetworkSimGroup.MobileNetworkSimGroup.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworksimgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworksimgroup"
 
 mobilenetworksimgroup.MobileNetworkSimGroup_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -858,7 +858,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mobileNetworkSimGroup.MobileNetworkSimGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworksimgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworksimgroup"
 
 &mobilenetworksimgroup.MobileNetworkSimGroupConfig {
 	Connection: interface{},
@@ -873,9 +873,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworksimgroup
 	Name: *string,
 	EncryptionKeyUrl: *string,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mobileNetworkSimGroup.MobileNetworkSimGroupIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mobileNetworkSimGroup.MobileNetworkSimGroupIdentity,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mobileNetworkSimGroup.MobileNetworkSimGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mobileNetworkSimGroup.MobileNetworkSimGroupTimeouts,
 }
 ```
 
@@ -1079,7 +1079,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mobileNetworkSimGroup.MobileNetworkSimGroupIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworksimgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworksimgroup"
 
 &mobilenetworksimgroup.MobileNetworkSimGroupIdentity {
 	IdentityIds: *[]*string,
@@ -1125,7 +1125,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mobileNetworkSimGroup.MobileNetworkSimGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworksimgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworksimgroup"
 
 &mobilenetworksimgroup.MobileNetworkSimGroupTimeouts {
 	Create: *string,
@@ -1201,7 +1201,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mobileNetworkSimGroup.MobileNetworkSimGroupIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworksimgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworksimgroup"
 
 mobilenetworksimgroup.NewMobileNetworkSimGroupIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MobileNetworkSimGroupIdentityOutputReference
 ```
@@ -1494,7 +1494,7 @@ func InternalValue() MobileNetworkSimGroupIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mobileNetworkSimGroup.MobileNetworkSimGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworksimgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworksimgroup"
 
 mobilenetworksimgroup.NewMobileNetworkSimGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MobileNetworkSimGroupTimeoutsOutputReference
 ```

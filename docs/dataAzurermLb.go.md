@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlb"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlb"
 
 dataazurermlb.NewDataAzurermLb(scope Construct, id *string, config DataAzurermLbConfig) DataAzurermLb
 ```
@@ -298,7 +298,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlb"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlb"
 
 dataazurermlb.DataAzurermLb_IsConstruct(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlb"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlb"
 
 dataazurermlb.DataAzurermLb_IsTerraformElement(x interface{}) *bool
 ```
@@ -344,7 +344,7 @@ dataazurermlb.DataAzurermLb_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlb"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlb"
 
 dataazurermlb.DataAzurermLb_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -358,7 +358,7 @@ dataazurermlb.DataAzurermLb_IsTerraformDataSource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLb.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlb"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlb"
 
 dataazurermlb.DataAzurermLb_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -719,7 +719,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlb"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlb"
 
 &dataazurermlb.DataAzurermLbConfig {
 	Connection: interface{},
@@ -732,7 +732,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlb"
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermLb.DataAzurermLbTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermLb.DataAzurermLbTimeouts,
 }
 ```
 
@@ -882,7 +882,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbFrontendIpConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlb"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlb"
 
 &dataazurermlb.DataAzurermLbFrontendIpConfiguration {
 
@@ -895,7 +895,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlb"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlb"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlb"
 
 &dataazurermlb.DataAzurermLbTimeouts {
 	Read: *string,
@@ -929,7 +929,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbFrontendIpConfigurationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlb"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlb"
 
 dataazurermlb.NewDataAzurermLbFrontendIpConfigurationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLbFrontendIpConfigurationList
 ```
@@ -1061,7 +1061,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbFrontendIpConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlb"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlb"
 
 dataazurermlb.NewDataAzurermLbFrontendIpConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLbFrontendIpConfigurationOutputReference
 ```
@@ -1416,7 +1416,7 @@ func InternalValue() DataAzurermLbFrontendIpConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLb.DataAzurermLbTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlb"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlb"
 
 dataazurermlb.NewDataAzurermLbTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermLbTimeoutsOutputReference
 ```
