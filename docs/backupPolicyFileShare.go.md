@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShare.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyfileshare"
 
 backuppolicyfileshare.NewBackupPolicyFileShare(scope Construct, id *string, config BackupPolicyFileShareConfig) BackupPolicyFileShare
 ```
@@ -390,7 +390,7 @@ func ResetTimezone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShare.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyfileshare"
 
 backuppolicyfileshare.BackupPolicyFileShare_IsConstruct(x interface{}) *bool
 ```
@@ -422,7 +422,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShare.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyfileshare"
 
 backuppolicyfileshare.BackupPolicyFileShare_IsTerraformElement(x interface{}) *bool
 ```
@@ -436,7 +436,7 @@ backuppolicyfileshare.BackupPolicyFileShare_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShare.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyfileshare"
 
 backuppolicyfileshare.BackupPolicyFileShare_IsTerraformResource(x interface{}) *bool
 ```
@@ -877,11 +877,11 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareBackup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyfileshare"
 
 &backuppolicyfileshare.BackupPolicyFileShareBackup {
 	Frequency: *string,
-	Hourly: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.backupPolicyFileShare.BackupPolicyFileShareBackupHourly,
+	Hourly: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.backupPolicyFileShare.BackupPolicyFileShareBackupHourly,
 	Time: *string,
 }
 ```
@@ -939,7 +939,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareBackupHourly.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyfileshare"
 
 &backuppolicyfileshare.BackupPolicyFileShareBackupHourly {
 	Interval: *f64,
@@ -999,7 +999,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyfileshare"
 
 &backuppolicyfileshare.BackupPolicyFileShareConfig {
 	Connection: interface{},
@@ -1009,16 +1009,16 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/backuppolicyfiles
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Backup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.backupPolicyFileShare.BackupPolicyFileShareBackup,
+	Backup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.backupPolicyFileShare.BackupPolicyFileShareBackup,
 	Name: *string,
 	RecoveryVaultName: *string,
 	ResourceGroupName: *string,
-	RetentionDaily: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.backupPolicyFileShare.BackupPolicyFileShareRetentionDaily,
+	RetentionDaily: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionDaily,
 	Id: *string,
-	RetentionMonthly: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.backupPolicyFileShare.BackupPolicyFileShareRetentionMonthly,
-	RetentionWeekly: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.backupPolicyFileShare.BackupPolicyFileShareRetentionWeekly,
-	RetentionYearly: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.backupPolicyFileShare.BackupPolicyFileShareRetentionYearly,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.backupPolicyFileShare.BackupPolicyFileShareTimeouts,
+	RetentionMonthly: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionMonthly,
+	RetentionWeekly: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionWeekly,
+	RetentionYearly: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionYearly,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.backupPolicyFileShare.BackupPolicyFileShareTimeouts,
 	Timezone: *string,
 }
 ```
@@ -1270,7 +1270,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionDaily.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyfileshare"
 
 &backuppolicyfileshare.BackupPolicyFileShareRetentionDaily {
 	Count: *f64,
@@ -1302,7 +1302,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionMonthly.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyfileshare"
 
 &backuppolicyfileshare.BackupPolicyFileShareRetentionMonthly {
 	Count: *f64,
@@ -1390,7 +1390,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionWeekly.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyfileshare"
 
 &backuppolicyfileshare.BackupPolicyFileShareRetentionWeekly {
 	Count: *f64,
@@ -1436,7 +1436,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionYearly.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyfileshare"
 
 &backuppolicyfileshare.BackupPolicyFileShareRetentionYearly {
 	Count: *f64,
@@ -1538,7 +1538,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyfileshare"
 
 &backuppolicyfileshare.BackupPolicyFileShareTimeouts {
 	Create: *string,
@@ -1614,7 +1614,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareBackupHourlyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyfileshare"
 
 backuppolicyfileshare.NewBackupPolicyFileShareBackupHourlyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyFileShareBackupHourlyOutputReference
 ```
@@ -1929,7 +1929,7 @@ func InternalValue() BackupPolicyFileShareBackupHourly
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareBackupOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyfileshare"
 
 backuppolicyfileshare.NewBackupPolicyFileShareBackupOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyFileShareBackupOutputReference
 ```
@@ -2271,7 +2271,7 @@ func InternalValue() BackupPolicyFileShareBackup
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionDailyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyfileshare"
 
 backuppolicyfileshare.NewBackupPolicyFileShareRetentionDailyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyFileShareRetentionDailyOutputReference
 ```
@@ -2542,7 +2542,7 @@ func InternalValue() BackupPolicyFileShareRetentionDaily
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionMonthlyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyfileshare"
 
 backuppolicyfileshare.NewBackupPolicyFileShareRetentionMonthlyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyFileShareRetentionMonthlyOutputReference
 ```
@@ -2929,7 +2929,7 @@ func InternalValue() BackupPolicyFileShareRetentionMonthly
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionWeeklyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyfileshare"
 
 backuppolicyfileshare.NewBackupPolicyFileShareRetentionWeeklyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyFileShareRetentionWeeklyOutputReference
 ```
@@ -3222,7 +3222,7 @@ func InternalValue() BackupPolicyFileShareRetentionWeekly
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareRetentionYearlyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyfileshare"
 
 backuppolicyfileshare.NewBackupPolicyFileShareRetentionYearlyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyFileShareRetentionYearlyOutputReference
 ```
@@ -3631,7 +3631,7 @@ func InternalValue() BackupPolicyFileShareRetentionYearly
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.backupPolicyFileShare.BackupPolicyFileShareTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/backuppolicyfileshare"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/backuppolicyfileshare"
 
 backuppolicyfileshare.NewBackupPolicyFileShareTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BackupPolicyFileShareTimeoutsOutputReference
 ```

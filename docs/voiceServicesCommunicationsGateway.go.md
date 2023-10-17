@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.voiceServicesCommunicationsGateway.VoiceServicesCommunicationsGateway.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/voiceservicescommunicationsgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/voiceservicescommunicationsgateway"
 
 voiceservicescommunicationsgateway.NewVoiceServicesCommunicationsGateway(scope Construct, id *string, config VoiceServicesCommunicationsGatewayConfig) VoiceServicesCommunicationsGateway
 ```
@@ -352,7 +352,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.voiceServicesCommunicationsGateway.VoiceServicesCommunicationsGateway.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/voiceservicescommunicationsgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/voiceservicescommunicationsgateway"
 
 voiceservicescommunicationsgateway.VoiceServicesCommunicationsGateway_IsConstruct(x interface{}) *bool
 ```
@@ -384,7 +384,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.voiceServicesCommunicationsGateway.VoiceServicesCommunicationsGateway.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/voiceservicescommunicationsgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/voiceservicescommunicationsgateway"
 
 voiceservicescommunicationsgateway.VoiceServicesCommunicationsGateway_IsTerraformElement(x interface{}) *bool
 ```
@@ -398,7 +398,7 @@ voiceservicescommunicationsgateway.VoiceServicesCommunicationsGateway_IsTerrafor
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.voiceServicesCommunicationsGateway.VoiceServicesCommunicationsGateway.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/voiceservicescommunicationsgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/voiceservicescommunicationsgateway"
 
 voiceservicescommunicationsgateway.VoiceServicesCommunicationsGateway_IsTerraformResource(x interface{}) *bool
 ```
@@ -949,7 +949,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.voiceServicesCommunicationsGateway.VoiceServicesCommunicationsGatewayConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/voiceservicescommunicationsgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/voiceservicescommunicationsgateway"
 
 &voiceservicescommunicationsgateway.VoiceServicesCommunicationsGatewayConfig {
 	Connection: interface{},
@@ -974,7 +974,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/voiceservicescomm
 	MicrosoftTeamsVoicemailPilotNumber: *string,
 	OnPremMcpEnabled: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.voiceServicesCommunicationsGateway.VoiceServicesCommunicationsGatewayTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.voiceServicesCommunicationsGateway.VoiceServicesCommunicationsGatewayTimeouts,
 }
 ```
 
@@ -1282,7 +1282,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.voiceServicesCommunicationsGateway.VoiceServicesCommunicationsGatewayServiceLocation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/voiceservicescommunicationsgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/voiceservicescommunicationsgateway"
 
 &voiceservicescommunicationsgateway.VoiceServicesCommunicationsGatewayServiceLocation {
 	Location: *string,
@@ -1370,7 +1370,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.voiceServicesCommunicationsGateway.VoiceServicesCommunicationsGatewayTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/voiceservicescommunicationsgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/voiceservicescommunicationsgateway"
 
 &voiceservicescommunicationsgateway.VoiceServicesCommunicationsGatewayTimeouts {
 	Create: *string,
@@ -1446,7 +1446,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.voiceServicesCommunicationsGateway.VoiceServicesCommunicationsGatewayServiceLocationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/voiceservicescommunicationsgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/voiceservicescommunicationsgateway"
 
 voiceservicescommunicationsgateway.NewVoiceServicesCommunicationsGatewayServiceLocationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VoiceServicesCommunicationsGatewayServiceLocationList
 ```
@@ -1589,7 +1589,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.voiceServicesCommunicationsGateway.VoiceServicesCommunicationsGatewayServiceLocationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/voiceservicescommunicationsgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/voiceservicescommunicationsgateway"
 
 voiceservicescommunicationsgateway.NewVoiceServicesCommunicationsGatewayServiceLocationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VoiceServicesCommunicationsGatewayServiceLocationOutputReference
 ```
@@ -1987,7 +1987,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.voiceServicesCommunicationsGateway.VoiceServicesCommunicationsGatewayTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/voiceservicescommunicationsgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/voiceservicescommunicationsgateway"
 
 voiceservicescommunicationsgateway.NewVoiceServicesCommunicationsGatewayTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VoiceServicesCommunicationsGatewayTimeoutsOutputReference
 ```

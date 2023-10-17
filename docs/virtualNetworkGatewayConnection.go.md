@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualNetworkGatewayConnection.VirtualNetworkGatewayConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualnetworkgatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetworkgatewayconnection"
 
 virtualnetworkgatewayconnection.NewVirtualNetworkGatewayConnection(scope Construct, id *string, config VirtualNetworkGatewayConnectionConfig) VirtualNetworkGatewayConnection
 ```
@@ -469,7 +469,7 @@ func ResetUsePolicyBasedTrafficSelectors()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.virtualNetworkGatewayConnection.VirtualNetworkGatewayConnection.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualnetworkgatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetworkgatewayconnection"
 
 virtualnetworkgatewayconnection.VirtualNetworkGatewayConnection_IsConstruct(x interface{}) *bool
 ```
@@ -501,7 +501,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.virtualNetworkGatewayConnection.VirtualNetworkGatewayConnection.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualnetworkgatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetworkgatewayconnection"
 
 virtualnetworkgatewayconnection.VirtualNetworkGatewayConnection_IsTerraformElement(x interface{}) *bool
 ```
@@ -515,7 +515,7 @@ virtualnetworkgatewayconnection.VirtualNetworkGatewayConnection_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.virtualNetworkGatewayConnection.VirtualNetworkGatewayConnection.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualnetworkgatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetworkgatewayconnection"
 
 virtualnetworkgatewayconnection.VirtualNetworkGatewayConnection_IsTerraformResource(x interface{}) *bool
 ```
@@ -1286,7 +1286,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualNetworkGatewayConnection.VirtualNetworkGatewayConnectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualnetworkgatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetworkgatewayconnection"
 
 &virtualnetworkgatewayconnection.VirtualNetworkGatewayConnectionConfig {
 	Connection: interface{},
@@ -1304,7 +1304,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualnetworkgat
 	AuthorizationKey: *string,
 	ConnectionMode: *string,
 	ConnectionProtocol: *string,
-	CustomBgpAddresses: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.virtualNetworkGatewayConnection.VirtualNetworkGatewayConnectionCustomBgpAddresses,
+	CustomBgpAddresses: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.virtualNetworkGatewayConnection.VirtualNetworkGatewayConnectionCustomBgpAddresses,
 	DpdTimeoutSeconds: *f64,
 	EgressNatRuleIds: *[]*string,
 	EnableBgp: interface{},
@@ -1312,14 +1312,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualnetworkgat
 	ExpressRouteGatewayBypass: interface{},
 	Id: *string,
 	IngressNatRuleIds: *[]*string,
-	IpsecPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.virtualNetworkGatewayConnection.VirtualNetworkGatewayConnectionIpsecPolicy,
+	IpsecPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.virtualNetworkGatewayConnection.VirtualNetworkGatewayConnectionIpsecPolicy,
 	LocalAzureIpAddressEnabled: interface{},
 	LocalNetworkGatewayId: *string,
 	PeerVirtualNetworkGatewayId: *string,
 	RoutingWeight: *f64,
 	SharedKey: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.virtualNetworkGatewayConnection.VirtualNetworkGatewayConnectionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.virtualNetworkGatewayConnection.VirtualNetworkGatewayConnectionTimeouts,
 	TrafficSelectorPolicy: interface{},
 	UsePolicyBasedTrafficSelectors: interface{},
 }
@@ -1763,7 +1763,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualNetworkGatewayConnection.VirtualNetworkGatewayConnectionCustomBgpAddresses.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualnetworkgatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetworkgatewayconnection"
 
 &virtualnetworkgatewayconnection.VirtualNetworkGatewayConnectionCustomBgpAddresses {
 	Primary: *string,
@@ -1809,7 +1809,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualNetworkGatewayConnection.VirtualNetworkGatewayConnectionIpsecPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualnetworkgatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetworkgatewayconnection"
 
 &virtualnetworkgatewayconnection.VirtualNetworkGatewayConnectionIpsecPolicy {
 	DhGroup: *string,
@@ -1939,7 +1939,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualNetworkGatewayConnection.VirtualNetworkGatewayConnectionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualnetworkgatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetworkgatewayconnection"
 
 &virtualnetworkgatewayconnection.VirtualNetworkGatewayConnectionTimeouts {
 	Create: *string,
@@ -2013,7 +2013,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualNetworkGatewayConnection.VirtualNetworkGatewayConnectionTrafficSelectorPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualnetworkgatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetworkgatewayconnection"
 
 &virtualnetworkgatewayconnection.VirtualNetworkGatewayConnectionTrafficSelectorPolicy {
 	LocalAddressCidrs: *[]*string,
@@ -2061,7 +2061,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualNetworkGatewayConnection.VirtualNetworkGatewayConnectionCustomBgpAddressesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualnetworkgatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetworkgatewayconnection"
 
 virtualnetworkgatewayconnection.NewVirtualNetworkGatewayConnectionCustomBgpAddressesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VirtualNetworkGatewayConnectionCustomBgpAddressesOutputReference
 ```
@@ -2361,7 +2361,7 @@ func InternalValue() VirtualNetworkGatewayConnectionCustomBgpAddresses
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualNetworkGatewayConnection.VirtualNetworkGatewayConnectionIpsecPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualnetworkgatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetworkgatewayconnection"
 
 virtualnetworkgatewayconnection.NewVirtualNetworkGatewayConnectionIpsecPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VirtualNetworkGatewayConnectionIpsecPolicyOutputReference
 ```
@@ -2800,7 +2800,7 @@ func InternalValue() VirtualNetworkGatewayConnectionIpsecPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualNetworkGatewayConnection.VirtualNetworkGatewayConnectionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualnetworkgatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetworkgatewayconnection"
 
 virtualnetworkgatewayconnection.NewVirtualNetworkGatewayConnectionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VirtualNetworkGatewayConnectionTimeoutsOutputReference
 ```
@@ -3165,7 +3165,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualNetworkGatewayConnection.VirtualNetworkGatewayConnectionTrafficSelectorPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualnetworkgatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetworkgatewayconnection"
 
 virtualnetworkgatewayconnection.NewVirtualNetworkGatewayConnectionTrafficSelectorPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VirtualNetworkGatewayConnectionTrafficSelectorPolicyList
 ```
@@ -3308,7 +3308,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualNetworkGatewayConnection.VirtualNetworkGatewayConnectionTrafficSelectorPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualnetworkgatewayconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetworkgatewayconnection"
 
 virtualnetworkgatewayconnection.NewVirtualNetworkGatewayConnectionTrafficSelectorPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VirtualNetworkGatewayConnectionTrafficSelectorPolicyOutputReference
 ```

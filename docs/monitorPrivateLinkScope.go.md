@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorPrivateLinkScope.MonitorPrivateLinkScope.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorprivatelinkscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorprivatelinkscope"
 
 monitorprivatelinkscope.NewMonitorPrivateLinkScope(scope Construct, id *string, config MonitorPrivateLinkScopeConfig) MonitorPrivateLinkScope
 ```
@@ -304,7 +304,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.monitorPrivateLinkScope.MonitorPrivateLinkScope.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorprivatelinkscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorprivatelinkscope"
 
 monitorprivatelinkscope.MonitorPrivateLinkScope_IsConstruct(x interface{}) *bool
 ```
@@ -336,7 +336,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.monitorPrivateLinkScope.MonitorPrivateLinkScope.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorprivatelinkscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorprivatelinkscope"
 
 monitorprivatelinkscope.MonitorPrivateLinkScope_IsTerraformElement(x interface{}) *bool
 ```
@@ -350,7 +350,7 @@ monitorprivatelinkscope.MonitorPrivateLinkScope_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.monitorPrivateLinkScope.MonitorPrivateLinkScope.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorprivatelinkscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorprivatelinkscope"
 
 monitorprivatelinkscope.MonitorPrivateLinkScope_IsTerraformResource(x interface{}) *bool
 ```
@@ -659,7 +659,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorPrivateLinkScope.MonitorPrivateLinkScopeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorprivatelinkscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorprivatelinkscope"
 
 &monitorprivatelinkscope.MonitorPrivateLinkScopeConfig {
 	Connection: interface{},
@@ -673,7 +673,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorprivatelin
 	ResourceGroupName: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorPrivateLinkScope.MonitorPrivateLinkScopeTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorPrivateLinkScope.MonitorPrivateLinkScopeTimeouts,
 }
 ```
 
@@ -836,7 +836,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorPrivateLinkScope.MonitorPrivateLinkScopeTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorprivatelinkscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorprivatelinkscope"
 
 &monitorprivatelinkscope.MonitorPrivateLinkScopeTimeouts {
 	Create: *string,
@@ -912,7 +912,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorPrivateLinkScope.MonitorPrivateLinkScopeTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorprivatelinkscope"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorprivatelinkscope"
 
 monitorprivatelinkscope.NewMonitorPrivateLinkScopeTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorPrivateLinkScopeTimeoutsOutputReference
 ```
