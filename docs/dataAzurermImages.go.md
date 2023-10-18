@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermImages.DataAzurermImages.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermimages"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermimages"
 
 dataazurermimages.NewDataAzurermImages(scope Construct, id *string, config DataAzurermImagesConfig) DataAzurermImages
 ```
@@ -305,7 +305,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermImages.DataAzurermImages.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermimages"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermimages"
 
 dataazurermimages.DataAzurermImages_IsConstruct(x interface{}) *bool
 ```
@@ -337,7 +337,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermImages.DataAzurermImages.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermimages"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermimages"
 
 dataazurermimages.DataAzurermImages_IsTerraformElement(x interface{}) *bool
 ```
@@ -351,7 +351,7 @@ dataazurermimages.DataAzurermImages_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermImages.DataAzurermImages.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermimages"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermimages"
 
 dataazurermimages.DataAzurermImages_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -365,7 +365,7 @@ dataazurermimages.DataAzurermImages_IsTerraformDataSource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermImages.DataAzurermImages.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermimages"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermimages"
 
 dataazurermimages.DataAzurermImages_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -671,7 +671,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermImages.DataAzurermImagesConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermimages"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermimages"
 
 &dataazurermimages.DataAzurermImagesConfig {
 	Connection: interface{},
@@ -684,7 +684,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermimages
 	ResourceGroupName: *string,
 	Id: *string,
 	TagsFilter: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermImages.DataAzurermImagesTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermImages.DataAzurermImagesTimeouts,
 }
 ```
 
@@ -834,7 +834,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermImages.DataAzurermImagesImages.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermimages"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermimages"
 
 &dataazurermimages.DataAzurermImagesImages {
 
@@ -847,7 +847,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermimages
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermImages.DataAzurermImagesImagesDataDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermimages"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermimages"
 
 &dataazurermimages.DataAzurermImagesImagesDataDisk {
 
@@ -860,7 +860,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermimages
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermImages.DataAzurermImagesImagesOsDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermimages"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermimages"
 
 &dataazurermimages.DataAzurermImagesImagesOsDisk {
 
@@ -873,7 +873,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermimages
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermImages.DataAzurermImagesTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermimages"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermimages"
 
 &dataazurermimages.DataAzurermImagesTimeouts {
 	Read: *string,
@@ -907,7 +907,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermImages.DataAzurermImagesImagesDataDiskList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermimages"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermimages"
 
 dataazurermimages.NewDataAzurermImagesImagesDataDiskList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermImagesImagesDataDiskList
 ```
@@ -1039,7 +1039,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermImages.DataAzurermImagesImagesDataDiskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermimages"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermimages"
 
 dataazurermimages.NewDataAzurermImagesImagesDataDiskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermImagesImagesDataDiskOutputReference
 ```
@@ -1361,7 +1361,7 @@ func InternalValue() DataAzurermImagesImagesDataDisk
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermImages.DataAzurermImagesImagesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermimages"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermimages"
 
 dataazurermimages.NewDataAzurermImagesImagesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermImagesImagesList
 ```
@@ -1493,7 +1493,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermImages.DataAzurermImagesImagesOsDiskList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermimages"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermimages"
 
 dataazurermimages.NewDataAzurermImagesImagesOsDiskList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermImagesImagesOsDiskList
 ```
@@ -1625,7 +1625,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermImages.DataAzurermImagesImagesOsDiskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermimages"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermimages"
 
 dataazurermimages.NewDataAzurermImagesImagesOsDiskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermImagesImagesOsDiskOutputReference
 ```
@@ -1969,7 +1969,7 @@ func InternalValue() DataAzurermImagesImagesOsDisk
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermImages.DataAzurermImagesImagesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermimages"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermimages"
 
 dataazurermimages.NewDataAzurermImagesImagesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermImagesImagesOutputReference
 ```
@@ -2302,7 +2302,7 @@ func InternalValue() DataAzurermImagesImages
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermImages.DataAzurermImagesTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermimages"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermimages"
 
 dataazurermimages.NewDataAzurermImagesTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermImagesTimeoutsOutputReference
 ```
