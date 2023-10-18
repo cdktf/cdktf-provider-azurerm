@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.routeServer.RouteServer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/routeserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/routeserver"
 
 routeserver.NewRouteServer(scope Construct, id *string, config RouteServerConfig) RouteServer
 ```
@@ -373,7 +373,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.routeServer.RouteServer.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/routeserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/routeserver"
 
 routeserver.RouteServer_IsConstruct(x interface{}) *bool
 ```
@@ -405,7 +405,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.routeServer.RouteServer.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/routeserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/routeserver"
 
 routeserver.RouteServer_IsTerraformElement(x interface{}) *bool
 ```
@@ -419,7 +419,7 @@ routeserver.RouteServer_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.routeServer.RouteServer.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/routeserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/routeserver"
 
 routeserver.RouteServer_IsTerraformResource(x interface{}) *bool
 ```
@@ -433,7 +433,7 @@ routeserver.RouteServer_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.routeServer.RouteServer.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/routeserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/routeserver"
 
 routeserver.RouteServer_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -915,7 +915,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.routeServer.RouteServerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/routeserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/routeserver"
 
 &routeserver.RouteServerConfig {
 	Connection: interface{},
@@ -934,7 +934,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/routeserver"
 	BranchToBranchTrafficEnabled: interface{},
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.routeServer.RouteServerTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.routeServer.RouteServerTimeouts,
 }
 ```
 
@@ -1162,7 +1162,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.routeServer.RouteServerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/routeserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/routeserver"
 
 &routeserver.RouteServerTimeouts {
 	Create: *string,
@@ -1238,7 +1238,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.routeServer.RouteServerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/routeserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/routeserver"
 
 routeserver.NewRouteServerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) RouteServerTimeoutsOutputReference
 ```
