@@ -1,6 +1,6 @@
 # `data_azurerm_eventhub_cluster`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_eventhub_cluster`](https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_cluster).
+Refer to the Terraform Registory for docs: [`data_azurerm_eventhub_cluster`](https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_cluster).
 
 # `dataAzurermEventhubCluster` Submodule <a name="`dataAzurermEventhubCluster` Submodule" id="@cdktf/provider-azurerm.dataAzurermEventhubCluster"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_eventhub_cluster`](htt
 
 ### DataAzurermEventhubCluster <a name="DataAzurermEventhubCluster" id="@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_cluster azurerm_eventhub_cluster}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_cluster azurerm_eventhub_cluster}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.Initializer"></a>
 
@@ -45,9 +45,9 @@ DataAzurermEventhubCluster.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_cluster#name DataAzurermEventhubCluster#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_cluster#resource_group_name DataAzurermEventhubCluster#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_cluster#id DataAzurermEventhubCluster#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_cluster#name DataAzurermEventhubCluster#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_cluster#resource_group_name DataAzurermEventhubCluster#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_cluster#id DataAzurermEventhubCluster#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubCluster.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubClusterTimeouts">DataAzurermEventhubClusterTimeouts</a></code> | timeouts block. |
 
 ---
@@ -116,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_cluster#name DataAzurermEventhubCluster#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_cluster#name DataAzurermEventhubCluster#name}.
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_cluster#resource_group_name DataAzurermEventhubCluster#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_cluster#resource_group_name DataAzurermEventhubCluster#resource_group_name}.
 
 ---
 
@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_cluster#id DataAzurermEventhubCluster#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_cluster#id DataAzurermEventhubCluster#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -145,7 +145,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_cluster#timeouts DataAzurermEventhubCluster#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_cluster#timeouts DataAzurermEventhubCluster#timeouts}
 
 ---
 
@@ -486,7 +486,7 @@ The construct id used in the generated config for the DataAzurermEventhubCluster
 
 The id of the existing DataAzurermEventhubCluster that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_cluster#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_cluster#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -806,9 +806,9 @@ DataAzurermEventhubClusterConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubClusterConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubClusterConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubClusterConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubClusterConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_cluster#name DataAzurermEventhubCluster#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubClusterConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_cluster#resource_group_name DataAzurermEventhubCluster#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubClusterConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_cluster#id DataAzurermEventhubCluster#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubClusterConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_cluster#name DataAzurermEventhubCluster#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubClusterConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_cluster#resource_group_name DataAzurermEventhubCluster#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubClusterConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_cluster#id DataAzurermEventhubCluster#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubClusterConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubClusterTimeouts">DataAzurermEventhubClusterTimeouts</a></code> | timeouts block. |
 
 ---
@@ -891,7 +891,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_cluster#name DataAzurermEventhubCluster#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_cluster#name DataAzurermEventhubCluster#name}.
 
 ---
 
@@ -903,7 +903,7 @@ public java.lang.String getResourceGroupName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_cluster#resource_group_name DataAzurermEventhubCluster#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_cluster#resource_group_name DataAzurermEventhubCluster#resource_group_name}.
 
 ---
 
@@ -915,7 +915,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_cluster#id DataAzurermEventhubCluster#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_cluster#id DataAzurermEventhubCluster#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -932,7 +932,7 @@ public DataAzurermEventhubClusterTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_cluster#timeouts DataAzurermEventhubCluster#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_cluster#timeouts DataAzurermEventhubCluster#timeouts}
 
 ---
 
@@ -952,7 +952,7 @@ DataAzurermEventhubClusterTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubClusterTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_cluster#read DataAzurermEventhubCluster#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubCluster.DataAzurermEventhubClusterTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_cluster#read DataAzurermEventhubCluster#read}. |
 
 ---
 
@@ -964,7 +964,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_cluster#read DataAzurermEventhubCluster#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_cluster#read DataAzurermEventhubCluster#read}.
 
 ---
 

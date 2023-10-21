@@ -1,6 +1,6 @@
 # `data_azurerm_eventhub`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_eventhub`](https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub).
+Refer to the Terraform Registory for docs: [`data_azurerm_eventhub`](https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub).
 
 # `dataAzurermEventhub` Submodule <a name="`dataAzurermEventhub` Submodule" id="@cdktf/provider-azurerm.dataAzurermEventhub"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_eventhub`](https://reg
 
 ### DataAzurermEventhub <a name="DataAzurermEventhub" id="@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhub"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub azurerm_eventhub}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub azurerm_eventhub}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhub.Initializer"></a>
 
@@ -387,7 +387,7 @@ The construct id used in the generated config for the DataAzurermEventhub to imp
 
 The id of the existing DataAzurermEventhub that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -726,10 +726,10 @@ new DataAzurermEventhubConfig {
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub#name DataAzurermEventhub#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubConfig.property.namespaceName">NamespaceName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub#namespace_name DataAzurermEventhub#namespace_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub#resource_group_name DataAzurermEventhub#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub#id DataAzurermEventhub#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub#name DataAzurermEventhub#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubConfig.property.namespaceName">NamespaceName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub#namespace_name DataAzurermEventhub#namespace_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub#resource_group_name DataAzurermEventhub#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub#id DataAzurermEventhub#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubTimeouts">DataAzurermEventhubTimeouts</a></code> | timeouts block. |
 
 ---
@@ -812,7 +812,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub#name DataAzurermEventhub#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub#name DataAzurermEventhub#name}.
 
 ---
 
@@ -824,7 +824,7 @@ public string NamespaceName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub#namespace_name DataAzurermEventhub#namespace_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub#namespace_name DataAzurermEventhub#namespace_name}.
 
 ---
 
@@ -836,7 +836,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub#resource_group_name DataAzurermEventhub#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub#resource_group_name DataAzurermEventhub#resource_group_name}.
 
 ---
 
@@ -848,7 +848,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub#id DataAzurermEventhub#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub#id DataAzurermEventhub#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -865,7 +865,7 @@ public DataAzurermEventhubTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub#timeouts DataAzurermEventhub#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub#timeouts DataAzurermEventhub#timeouts}
 
 ---
 
@@ -885,7 +885,7 @@ new DataAzurermEventhubTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub#read DataAzurermEventhub#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhub.DataAzurermEventhubTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub#read DataAzurermEventhub#read}. |
 
 ---
 
@@ -897,7 +897,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub#read DataAzurermEventhub#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub#read DataAzurermEventhub#read}.
 
 ---
 

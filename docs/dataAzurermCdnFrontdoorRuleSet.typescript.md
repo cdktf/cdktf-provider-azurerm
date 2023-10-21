@@ -1,6 +1,6 @@
 # `data_azurerm_cdn_frontdoor_rule_set`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_cdn_frontdoor_rule_set`](https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/cdn_frontdoor_rule_set).
+Refer to the Terraform Registory for docs: [`data_azurerm_cdn_frontdoor_rule_set`](https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/cdn_frontdoor_rule_set).
 
 # `dataAzurermCdnFrontdoorRuleSet` Submodule <a name="`dataAzurermCdnFrontdoorRuleSet` Submodule" id="@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_cdn_frontdoor_rule_set
 
 ### DataAzurermCdnFrontdoorRuleSet <a name="DataAzurermCdnFrontdoorRuleSet" id="@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSet"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/cdn_frontdoor_rule_set azurerm_cdn_frontdoor_rule_set}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/cdn_frontdoor_rule_set azurerm_cdn_frontdoor_rule_set}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSet.Initializer"></a>
 
@@ -387,7 +387,7 @@ The construct id used in the generated config for the DataAzurermCdnFrontdoorRul
 
 The id of the existing DataAzurermCdnFrontdoorRuleSet that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/cdn_frontdoor_rule_set#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/cdn_frontdoor_rule_set#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -702,10 +702,10 @@ const dataAzurermCdnFrontdoorRuleSetConfig: dataAzurermCdnFrontdoorRuleSet.DataA
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/cdn_frontdoor_rule_set#name DataAzurermCdnFrontdoorRuleSet#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetConfig.property.profileName">profileName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/cdn_frontdoor_rule_set#profile_name DataAzurermCdnFrontdoorRuleSet#profile_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/cdn_frontdoor_rule_set#resource_group_name DataAzurermCdnFrontdoorRuleSet#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/cdn_frontdoor_rule_set#id DataAzurermCdnFrontdoorRuleSet#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/cdn_frontdoor_rule_set#name DataAzurermCdnFrontdoorRuleSet#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetConfig.property.profileName">profileName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/cdn_frontdoor_rule_set#profile_name DataAzurermCdnFrontdoorRuleSet#profile_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/cdn_frontdoor_rule_set#resource_group_name DataAzurermCdnFrontdoorRuleSet#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/cdn_frontdoor_rule_set#id DataAzurermCdnFrontdoorRuleSet#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetTimeouts">DataAzurermCdnFrontdoorRuleSetTimeouts</a></code> | timeouts block. |
 
 ---
@@ -788,7 +788,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/cdn_frontdoor_rule_set#name DataAzurermCdnFrontdoorRuleSet#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/cdn_frontdoor_rule_set#name DataAzurermCdnFrontdoorRuleSet#name}.
 
 ---
 
@@ -800,7 +800,7 @@ public readonly profileName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/cdn_frontdoor_rule_set#profile_name DataAzurermCdnFrontdoorRuleSet#profile_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/cdn_frontdoor_rule_set#profile_name DataAzurermCdnFrontdoorRuleSet#profile_name}.
 
 ---
 
@@ -812,7 +812,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/cdn_frontdoor_rule_set#resource_group_name DataAzurermCdnFrontdoorRuleSet#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/cdn_frontdoor_rule_set#resource_group_name DataAzurermCdnFrontdoorRuleSet#resource_group_name}.
 
 ---
 
@@ -824,7 +824,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/cdn_frontdoor_rule_set#id DataAzurermCdnFrontdoorRuleSet#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/cdn_frontdoor_rule_set#id DataAzurermCdnFrontdoorRuleSet#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -841,7 +841,7 @@ public readonly timeouts: DataAzurermCdnFrontdoorRuleSetTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/cdn_frontdoor_rule_set#timeouts DataAzurermCdnFrontdoorRuleSet#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/cdn_frontdoor_rule_set#timeouts DataAzurermCdnFrontdoorRuleSet#timeouts}
 
 ---
 
@@ -859,7 +859,7 @@ const dataAzurermCdnFrontdoorRuleSetTimeouts: dataAzurermCdnFrontdoorRuleSet.Dat
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/cdn_frontdoor_rule_set#read DataAzurermCdnFrontdoorRuleSet#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermCdnFrontdoorRuleSet.DataAzurermCdnFrontdoorRuleSetTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/cdn_frontdoor_rule_set#read DataAzurermCdnFrontdoorRuleSet#read}. |
 
 ---
 
@@ -871,7 +871,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/cdn_frontdoor_rule_set#read DataAzurermCdnFrontdoorRuleSet#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/cdn_frontdoor_rule_set#read DataAzurermCdnFrontdoorRuleSet#read}.
 
 ---
 

@@ -1,6 +1,6 @@
 # `azurerm_mysql_firewall_rule`
 
-Refer to the Terraform Registory for docs: [`azurerm_mysql_firewall_rule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule).
+Refer to the Terraform Registory for docs: [`azurerm_mysql_firewall_rule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule).
 
 # `mysqlFirewallRule` Submodule <a name="`mysqlFirewallRule` Submodule" id="@cdktf/provider-azurerm.mysqlFirewallRule"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_mysql_firewall_rule`](https
 
 ### MysqlFirewallRule <a name="MysqlFirewallRule" id="@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRule"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule azurerm_mysql_firewall_rule}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule azurerm_mysql_firewall_rule}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRule.Initializer"></a>
 
@@ -46,12 +46,12 @@ mysqlFirewallRule.MysqlFirewallRule(
 | <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRule.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRule.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRule.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRule.Initializer.parameter.endIpAddress">end_ip_address</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#end_ip_address MysqlFirewallRule#end_ip_address}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRule.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#name MysqlFirewallRule#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRule.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#resource_group_name MysqlFirewallRule#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRule.Initializer.parameter.serverName">server_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#server_name MysqlFirewallRule#server_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRule.Initializer.parameter.startIpAddress">start_ip_address</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#start_ip_address MysqlFirewallRule#start_ip_address}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRule.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#id MysqlFirewallRule#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRule.Initializer.parameter.endIpAddress">end_ip_address</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#end_ip_address MysqlFirewallRule#end_ip_address}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRule.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#name MysqlFirewallRule#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRule.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#resource_group_name MysqlFirewallRule#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRule.Initializer.parameter.serverName">server_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#server_name MysqlFirewallRule#server_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRule.Initializer.parameter.startIpAddress">start_ip_address</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#start_ip_address MysqlFirewallRule#start_ip_address}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRule.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#id MysqlFirewallRule#id}. |
 | <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRule.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRuleTimeouts">MysqlFirewallRuleTimeouts</a></code> | timeouts block. |
 
 ---
@@ -120,7 +120,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#end_ip_address MysqlFirewallRule#end_ip_address}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#end_ip_address MysqlFirewallRule#end_ip_address}.
 
 ---
 
@@ -128,7 +128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#name MysqlFirewallRule#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#name MysqlFirewallRule#name}.
 
 ---
 
@@ -136,7 +136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#resource_group_name MysqlFirewallRule#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#resource_group_name MysqlFirewallRule#resource_group_name}.
 
 ---
 
@@ -144,7 +144,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#server_name MysqlFirewallRule#server_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#server_name MysqlFirewallRule#server_name}.
 
 ---
 
@@ -152,7 +152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#start_ip_address MysqlFirewallRule#start_ip_address}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#start_ip_address MysqlFirewallRule#start_ip_address}.
 
 ---
 
@@ -160,7 +160,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#id MysqlFirewallRule#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#id MysqlFirewallRule#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -173,7 +173,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#timeouts MysqlFirewallRule#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#timeouts MysqlFirewallRule#timeouts}
 
 ---
 
@@ -496,7 +496,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#create MysqlFirewallRule#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#create MysqlFirewallRule#create}.
 
 ---
 
@@ -504,7 +504,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#delete MysqlFirewallRule#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#delete MysqlFirewallRule#delete}.
 
 ---
 
@@ -512,7 +512,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#read MysqlFirewallRule#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#read MysqlFirewallRule#read}.
 
 ---
 
@@ -520,7 +520,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#update MysqlFirewallRule#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#update MysqlFirewallRule#update}.
 
 ---
 
@@ -650,7 +650,7 @@ The construct id used in the generated config for the MysqlFirewallRule to impor
 
 The id of the existing MysqlFirewallRule that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1035,12 +1035,12 @@ mysqlFirewallRule.MysqlFirewallRuleConfig(
 | <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRuleConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRuleConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRuleConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRuleConfig.property.endIpAddress">end_ip_address</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#end_ip_address MysqlFirewallRule#end_ip_address}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRuleConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#name MysqlFirewallRule#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRuleConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#resource_group_name MysqlFirewallRule#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRuleConfig.property.serverName">server_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#server_name MysqlFirewallRule#server_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRuleConfig.property.startIpAddress">start_ip_address</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#start_ip_address MysqlFirewallRule#start_ip_address}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRuleConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#id MysqlFirewallRule#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRuleConfig.property.endIpAddress">end_ip_address</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#end_ip_address MysqlFirewallRule#end_ip_address}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRuleConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#name MysqlFirewallRule#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRuleConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#resource_group_name MysqlFirewallRule#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRuleConfig.property.serverName">server_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#server_name MysqlFirewallRule#server_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRuleConfig.property.startIpAddress">start_ip_address</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#start_ip_address MysqlFirewallRule#start_ip_address}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRuleConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#id MysqlFirewallRule#id}. |
 | <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRuleConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRuleTimeouts">MysqlFirewallRuleTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1123,7 +1123,7 @@ end_ip_address: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#end_ip_address MysqlFirewallRule#end_ip_address}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#end_ip_address MysqlFirewallRule#end_ip_address}.
 
 ---
 
@@ -1135,7 +1135,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#name MysqlFirewallRule#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#name MysqlFirewallRule#name}.
 
 ---
 
@@ -1147,7 +1147,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#resource_group_name MysqlFirewallRule#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#resource_group_name MysqlFirewallRule#resource_group_name}.
 
 ---
 
@@ -1159,7 +1159,7 @@ server_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#server_name MysqlFirewallRule#server_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#server_name MysqlFirewallRule#server_name}.
 
 ---
 
@@ -1171,7 +1171,7 @@ start_ip_address: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#start_ip_address MysqlFirewallRule#start_ip_address}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#start_ip_address MysqlFirewallRule#start_ip_address}.
 
 ---
 
@@ -1183,7 +1183,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#id MysqlFirewallRule#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#id MysqlFirewallRule#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1200,7 +1200,7 @@ timeouts: MysqlFirewallRuleTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#timeouts MysqlFirewallRule#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#timeouts MysqlFirewallRule#timeouts}
 
 ---
 
@@ -1223,10 +1223,10 @@ mysqlFirewallRule.MysqlFirewallRuleTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRuleTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#create MysqlFirewallRule#create}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRuleTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#delete MysqlFirewallRule#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRuleTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#read MysqlFirewallRule#read}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRuleTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#update MysqlFirewallRule#update}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRuleTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#create MysqlFirewallRule#create}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRuleTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#delete MysqlFirewallRule#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRuleTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#read MysqlFirewallRule#read}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlFirewallRule.MysqlFirewallRuleTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#update MysqlFirewallRule#update}. |
 
 ---
 
@@ -1238,7 +1238,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#create MysqlFirewallRule#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#create MysqlFirewallRule#create}.
 
 ---
 
@@ -1250,7 +1250,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#delete MysqlFirewallRule#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#delete MysqlFirewallRule#delete}.
 
 ---
 
@@ -1262,7 +1262,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#read MysqlFirewallRule#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#read MysqlFirewallRule#read}.
 
 ---
 
@@ -1274,7 +1274,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mysql_firewall_rule#update MysqlFirewallRule#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mysql_firewall_rule#update MysqlFirewallRule#update}.
 
 ---
 

@@ -90,6 +90,7 @@ Object.defineProperty(exports, 'applicationInsightsWebTest', { get: function () 
 Object.defineProperty(exports, 'applicationInsightsWorkbook', { get: function () { return require('./application-insights-workbook'); } });
 Object.defineProperty(exports, 'applicationInsightsWorkbookTemplate', { get: function () { return require('./application-insights-workbook-template'); } });
 Object.defineProperty(exports, 'applicationLoadBalancer', { get: function () { return require('./application-load-balancer'); } });
+Object.defineProperty(exports, 'applicationLoadBalancerFrontend', { get: function () { return require('./application-load-balancer-frontend'); } });
 Object.defineProperty(exports, 'applicationSecurityGroup', { get: function () { return require('./application-security-group'); } });
 Object.defineProperty(exports, 'arcKubernetesCluster', { get: function () { return require('./arc-kubernetes-cluster'); } });
 Object.defineProperty(exports, 'arcKubernetesClusterExtension', { get: function () { return require('./arc-kubernetes-cluster-extension'); } });
@@ -304,6 +305,8 @@ Object.defineProperty(exports, 'datadogMonitorTagRule', { get: function () { ret
 Object.defineProperty(exports, 'dedicatedHardwareSecurityModule', { get: function () { return require('./dedicated-hardware-security-module'); } });
 Object.defineProperty(exports, 'dedicatedHost', { get: function () { return require('./dedicated-host'); } });
 Object.defineProperty(exports, 'dedicatedHostGroup', { get: function () { return require('./dedicated-host-group'); } });
+Object.defineProperty(exports, 'devCenter', { get: function () { return require('./dev-center'); } });
+Object.defineProperty(exports, 'devCenterProject', { get: function () { return require('./dev-center-project'); } });
 Object.defineProperty(exports, 'devTestGlobalVmShutdownSchedule', { get: function () { return require('./dev-test-global-vm-shutdown-schedule'); } });
 Object.defineProperty(exports, 'devTestLab', { get: function () { return require('./dev-test-lab'); } });
 Object.defineProperty(exports, 'devTestLinuxVirtualMachine', { get: function () { return require('./dev-test-linux-virtual-machine'); } });

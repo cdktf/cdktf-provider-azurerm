@@ -1,6 +1,6 @@
 # `azurerm_mobile_network_data_network`
 
-Refer to the Terraform Registory for docs: [`azurerm_mobile_network_data_network`](https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mobile_network_data_network).
+Refer to the Terraform Registory for docs: [`azurerm_mobile_network_data_network`](https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mobile_network_data_network).
 
 # `mobileNetworkDataNetwork` Submodule <a name="`mobileNetworkDataNetwork` Submodule" id="@cdktf/provider-azurerm.mobileNetworkDataNetwork"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_mobile_network_data_network
 
 ### MobileNetworkDataNetwork <a name="MobileNetworkDataNetwork" id="@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetwork"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mobile_network_data_network azurerm_mobile_network_data_network}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mobile_network_data_network azurerm_mobile_network_data_network}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetwork.Initializer"></a>
 
@@ -462,7 +462,7 @@ The construct id used in the generated config for the MobileNetworkDataNetwork t
 
 The id of the existing MobileNetworkDataNetwork that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mobile_network_data_network#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mobile_network_data_network#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -832,12 +832,12 @@ const mobileNetworkDataNetworkConfig: mobileNetworkDataNetwork.MobileNetworkData
 | <code><a href="#@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetworkConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetworkConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetworkConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetworkConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mobile_network_data_network#location MobileNetworkDataNetwork#location}. |
-| <code><a href="#@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetworkConfig.property.mobileNetworkId">mobileNetworkId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mobile_network_data_network#mobile_network_id MobileNetworkDataNetwork#mobile_network_id}. |
-| <code><a href="#@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetworkConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mobile_network_data_network#name MobileNetworkDataNetwork#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetworkConfig.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mobile_network_data_network#description MobileNetworkDataNetwork#description}. |
-| <code><a href="#@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetworkConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mobile_network_data_network#id MobileNetworkDataNetwork#id}. |
-| <code><a href="#@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetworkConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mobile_network_data_network#tags MobileNetworkDataNetwork#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetworkConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mobile_network_data_network#location MobileNetworkDataNetwork#location}. |
+| <code><a href="#@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetworkConfig.property.mobileNetworkId">mobileNetworkId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mobile_network_data_network#mobile_network_id MobileNetworkDataNetwork#mobile_network_id}. |
+| <code><a href="#@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetworkConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mobile_network_data_network#name MobileNetworkDataNetwork#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetworkConfig.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mobile_network_data_network#description MobileNetworkDataNetwork#description}. |
+| <code><a href="#@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetworkConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mobile_network_data_network#id MobileNetworkDataNetwork#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetworkConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mobile_network_data_network#tags MobileNetworkDataNetwork#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetworkConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetworkTimeouts">MobileNetworkDataNetworkTimeouts</a></code> | timeouts block. |
 
 ---
@@ -920,7 +920,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mobile_network_data_network#location MobileNetworkDataNetwork#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mobile_network_data_network#location MobileNetworkDataNetwork#location}.
 
 ---
 
@@ -932,7 +932,7 @@ public readonly mobileNetworkId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mobile_network_data_network#mobile_network_id MobileNetworkDataNetwork#mobile_network_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mobile_network_data_network#mobile_network_id MobileNetworkDataNetwork#mobile_network_id}.
 
 ---
 
@@ -944,7 +944,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mobile_network_data_network#name MobileNetworkDataNetwork#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mobile_network_data_network#name MobileNetworkDataNetwork#name}.
 
 ---
 
@@ -956,7 +956,7 @@ public readonly description: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mobile_network_data_network#description MobileNetworkDataNetwork#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mobile_network_data_network#description MobileNetworkDataNetwork#description}.
 
 ---
 
@@ -968,7 +968,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mobile_network_data_network#id MobileNetworkDataNetwork#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mobile_network_data_network#id MobileNetworkDataNetwork#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -983,7 +983,7 @@ public readonly tags: {[ key: string ]: string};
 
 - *Type:* {[ key: string ]: string}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mobile_network_data_network#tags MobileNetworkDataNetwork#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mobile_network_data_network#tags MobileNetworkDataNetwork#tags}.
 
 ---
 
@@ -997,7 +997,7 @@ public readonly timeouts: MobileNetworkDataNetworkTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mobile_network_data_network#timeouts MobileNetworkDataNetwork#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mobile_network_data_network#timeouts MobileNetworkDataNetwork#timeouts}
 
 ---
 
@@ -1015,10 +1015,10 @@ const mobileNetworkDataNetworkTimeouts: mobileNetworkDataNetwork.MobileNetworkDa
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetworkTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mobile_network_data_network#create MobileNetworkDataNetwork#create}. |
-| <code><a href="#@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetworkTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mobile_network_data_network#delete MobileNetworkDataNetwork#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetworkTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mobile_network_data_network#read MobileNetworkDataNetwork#read}. |
-| <code><a href="#@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetworkTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mobile_network_data_network#update MobileNetworkDataNetwork#update}. |
+| <code><a href="#@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetworkTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mobile_network_data_network#create MobileNetworkDataNetwork#create}. |
+| <code><a href="#@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetworkTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mobile_network_data_network#delete MobileNetworkDataNetwork#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetworkTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mobile_network_data_network#read MobileNetworkDataNetwork#read}. |
+| <code><a href="#@cdktf/provider-azurerm.mobileNetworkDataNetwork.MobileNetworkDataNetworkTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mobile_network_data_network#update MobileNetworkDataNetwork#update}. |
 
 ---
 
@@ -1030,7 +1030,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mobile_network_data_network#create MobileNetworkDataNetwork#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mobile_network_data_network#create MobileNetworkDataNetwork#create}.
 
 ---
 
@@ -1042,7 +1042,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mobile_network_data_network#delete MobileNetworkDataNetwork#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mobile_network_data_network#delete MobileNetworkDataNetwork#delete}.
 
 ---
 
@@ -1054,7 +1054,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mobile_network_data_network#read MobileNetworkDataNetwork#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mobile_network_data_network#read MobileNetworkDataNetwork#read}.
 
 ---
 
@@ -1066,7 +1066,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/mobile_network_data_network#update MobileNetworkDataNetwork#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/mobile_network_data_network#update MobileNetworkDataNetwork#update}.
 
 ---
 

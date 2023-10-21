@@ -1,6 +1,6 @@
 # `azurerm_api_management_identity_provider_microsoft`
 
-Refer to the Terraform Registory for docs: [`azurerm_api_management_identity_provider_microsoft`](https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/api_management_identity_provider_microsoft).
+Refer to the Terraform Registory for docs: [`azurerm_api_management_identity_provider_microsoft`](https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/api_management_identity_provider_microsoft).
 
 # `apiManagementIdentityProviderMicrosoft` Submodule <a name="`apiManagementIdentityProviderMicrosoft` Submodule" id="@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_api_management_identity_pro
 
 ### ApiManagementIdentityProviderMicrosoft <a name="ApiManagementIdentityProviderMicrosoft" id="@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoft"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/api_management_identity_provider_microsoft azurerm_api_management_identity_provider_microsoft}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/api_management_identity_provider_microsoft azurerm_api_management_identity_provider_microsoft}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoft.Initializer"></a>
 
@@ -448,7 +448,7 @@ The construct id used in the generated config for the ApiManagementIdentityProvi
 
 The id of the existing ApiManagementIdentityProviderMicrosoft that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/api_management_identity_provider_microsoft#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/api_management_identity_provider_microsoft#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -810,11 +810,11 @@ new ApiManagementIdentityProviderMicrosoftConfig {
 | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftConfig.property.apiManagementName">ApiManagementName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/api_management_identity_provider_microsoft#api_management_name ApiManagementIdentityProviderMicrosoft#api_management_name}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftConfig.property.clientId">ClientId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/api_management_identity_provider_microsoft#client_id ApiManagementIdentityProviderMicrosoft#client_id}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftConfig.property.clientSecret">ClientSecret</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/api_management_identity_provider_microsoft#client_secret ApiManagementIdentityProviderMicrosoft#client_secret}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/api_management_identity_provider_microsoft#resource_group_name ApiManagementIdentityProviderMicrosoft#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/api_management_identity_provider_microsoft#id ApiManagementIdentityProviderMicrosoft#id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftConfig.property.apiManagementName">ApiManagementName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/api_management_identity_provider_microsoft#api_management_name ApiManagementIdentityProviderMicrosoft#api_management_name}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftConfig.property.clientId">ClientId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/api_management_identity_provider_microsoft#client_id ApiManagementIdentityProviderMicrosoft#client_id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftConfig.property.clientSecret">ClientSecret</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/api_management_identity_provider_microsoft#client_secret ApiManagementIdentityProviderMicrosoft#client_secret}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/api_management_identity_provider_microsoft#resource_group_name ApiManagementIdentityProviderMicrosoft#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/api_management_identity_provider_microsoft#id ApiManagementIdentityProviderMicrosoft#id}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftTimeouts">ApiManagementIdentityProviderMicrosoftTimeouts</a></code> | timeouts block. |
 
 ---
@@ -897,7 +897,7 @@ public string ApiManagementName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/api_management_identity_provider_microsoft#api_management_name ApiManagementIdentityProviderMicrosoft#api_management_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/api_management_identity_provider_microsoft#api_management_name ApiManagementIdentityProviderMicrosoft#api_management_name}.
 
 ---
 
@@ -909,7 +909,7 @@ public string ClientId { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/api_management_identity_provider_microsoft#client_id ApiManagementIdentityProviderMicrosoft#client_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/api_management_identity_provider_microsoft#client_id ApiManagementIdentityProviderMicrosoft#client_id}.
 
 ---
 
@@ -921,7 +921,7 @@ public string ClientSecret { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/api_management_identity_provider_microsoft#client_secret ApiManagementIdentityProviderMicrosoft#client_secret}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/api_management_identity_provider_microsoft#client_secret ApiManagementIdentityProviderMicrosoft#client_secret}.
 
 ---
 
@@ -933,7 +933,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/api_management_identity_provider_microsoft#resource_group_name ApiManagementIdentityProviderMicrosoft#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/api_management_identity_provider_microsoft#resource_group_name ApiManagementIdentityProviderMicrosoft#resource_group_name}.
 
 ---
 
@@ -945,7 +945,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/api_management_identity_provider_microsoft#id ApiManagementIdentityProviderMicrosoft#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/api_management_identity_provider_microsoft#id ApiManagementIdentityProviderMicrosoft#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -962,7 +962,7 @@ public ApiManagementIdentityProviderMicrosoftTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/api_management_identity_provider_microsoft#timeouts ApiManagementIdentityProviderMicrosoft#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/api_management_identity_provider_microsoft#timeouts ApiManagementIdentityProviderMicrosoft#timeouts}
 
 ---
 
@@ -985,10 +985,10 @@ new ApiManagementIdentityProviderMicrosoftTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/api_management_identity_provider_microsoft#create ApiManagementIdentityProviderMicrosoft#create}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/api_management_identity_provider_microsoft#delete ApiManagementIdentityProviderMicrosoft#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/api_management_identity_provider_microsoft#read ApiManagementIdentityProviderMicrosoft#read}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/api_management_identity_provider_microsoft#update ApiManagementIdentityProviderMicrosoft#update}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/api_management_identity_provider_microsoft#create ApiManagementIdentityProviderMicrosoft#create}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/api_management_identity_provider_microsoft#delete ApiManagementIdentityProviderMicrosoft#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/api_management_identity_provider_microsoft#read ApiManagementIdentityProviderMicrosoft#read}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementIdentityProviderMicrosoft.ApiManagementIdentityProviderMicrosoftTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/api_management_identity_provider_microsoft#update ApiManagementIdentityProviderMicrosoft#update}. |
 
 ---
 
@@ -1000,7 +1000,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/api_management_identity_provider_microsoft#create ApiManagementIdentityProviderMicrosoft#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/api_management_identity_provider_microsoft#create ApiManagementIdentityProviderMicrosoft#create}.
 
 ---
 
@@ -1012,7 +1012,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/api_management_identity_provider_microsoft#delete ApiManagementIdentityProviderMicrosoft#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/api_management_identity_provider_microsoft#delete ApiManagementIdentityProviderMicrosoft#delete}.
 
 ---
 
@@ -1024,7 +1024,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/api_management_identity_provider_microsoft#read ApiManagementIdentityProviderMicrosoft#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/api_management_identity_provider_microsoft#read ApiManagementIdentityProviderMicrosoft#read}.
 
 ---
 
@@ -1036,7 +1036,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/api_management_identity_provider_microsoft#update ApiManagementIdentityProviderMicrosoft#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/api_management_identity_provider_microsoft#update ApiManagementIdentityProviderMicrosoft#update}.
 
 ---
 

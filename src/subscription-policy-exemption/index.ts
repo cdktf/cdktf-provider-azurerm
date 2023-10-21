@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/subscription_policy_exemption
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/subscription_policy_exemption
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,70 +13,70 @@ import * as cdktf from 'cdktf';
 
 export interface SubscriptionPolicyExemptionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/subscription_policy_exemption#description SubscriptionPolicyExemption#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/subscription_policy_exemption#description SubscriptionPolicyExemption#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/subscription_policy_exemption#display_name SubscriptionPolicyExemption#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/subscription_policy_exemption#display_name SubscriptionPolicyExemption#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/subscription_policy_exemption#exemption_category SubscriptionPolicyExemption#exemption_category}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/subscription_policy_exemption#exemption_category SubscriptionPolicyExemption#exemption_category}
   */
   readonly exemptionCategory: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/subscription_policy_exemption#expires_on SubscriptionPolicyExemption#expires_on}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/subscription_policy_exemption#expires_on SubscriptionPolicyExemption#expires_on}
   */
   readonly expiresOn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/subscription_policy_exemption#id SubscriptionPolicyExemption#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/subscription_policy_exemption#id SubscriptionPolicyExemption#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/subscription_policy_exemption#metadata SubscriptionPolicyExemption#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/subscription_policy_exemption#metadata SubscriptionPolicyExemption#metadata}
   */
   readonly metadata?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/subscription_policy_exemption#name SubscriptionPolicyExemption#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/subscription_policy_exemption#name SubscriptionPolicyExemption#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/subscription_policy_exemption#policy_assignment_id SubscriptionPolicyExemption#policy_assignment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/subscription_policy_exemption#policy_assignment_id SubscriptionPolicyExemption#policy_assignment_id}
   */
   readonly policyAssignmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/subscription_policy_exemption#policy_definition_reference_ids SubscriptionPolicyExemption#policy_definition_reference_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/subscription_policy_exemption#policy_definition_reference_ids SubscriptionPolicyExemption#policy_definition_reference_ids}
   */
   readonly policyDefinitionReferenceIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/subscription_policy_exemption#subscription_id SubscriptionPolicyExemption#subscription_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/subscription_policy_exemption#subscription_id SubscriptionPolicyExemption#subscription_id}
   */
   readonly subscriptionId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/subscription_policy_exemption#timeouts SubscriptionPolicyExemption#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/subscription_policy_exemption#timeouts SubscriptionPolicyExemption#timeouts}
   */
   readonly timeouts?: SubscriptionPolicyExemptionTimeouts;
 }
 export interface SubscriptionPolicyExemptionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/subscription_policy_exemption#create SubscriptionPolicyExemption#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/subscription_policy_exemption#create SubscriptionPolicyExemption#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/subscription_policy_exemption#delete SubscriptionPolicyExemption#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/subscription_policy_exemption#delete SubscriptionPolicyExemption#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/subscription_policy_exemption#read SubscriptionPolicyExemption#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/subscription_policy_exemption#read SubscriptionPolicyExemption#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/subscription_policy_exemption#update SubscriptionPolicyExemption#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/subscription_policy_exemption#update SubscriptionPolicyExemption#update}
   */
   readonly update?: string;
 }
@@ -220,7 +220,7 @@ export class SubscriptionPolicyExemptionTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/subscription_policy_exemption azurerm_subscription_policy_exemption}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/subscription_policy_exemption azurerm_subscription_policy_exemption}
 */
 export class SubscriptionPolicyExemption extends cdktf.TerraformResource {
 
@@ -236,7 +236,7 @@ export class SubscriptionPolicyExemption extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SubscriptionPolicyExemption resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SubscriptionPolicyExemption to import
-  * @param importFromId The id of the existing SubscriptionPolicyExemption that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/subscription_policy_exemption#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SubscriptionPolicyExemption that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/subscription_policy_exemption#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SubscriptionPolicyExemption to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -248,7 +248,7 @@ export class SubscriptionPolicyExemption extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/subscription_policy_exemption azurerm_subscription_policy_exemption} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/subscription_policy_exemption azurerm_subscription_policy_exemption} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -259,7 +259,7 @@ export class SubscriptionPolicyExemption extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_subscription_policy_exemption',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.76.0',
+        providerVersion: '3.77.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
