@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermExtendedLocations.DataAzurermExtendedLocations.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermextendedlocations"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermextendedlocations"
 
 dataazurermextendedlocations.NewDataAzurermExtendedLocations(scope Construct, id *string, config DataAzurermExtendedLocationsConfig) DataAzurermExtendedLocations
 ```
@@ -298,7 +298,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermExtendedLocations.DataAzurermExtendedLocations.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermextendedlocations"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermextendedlocations"
 
 dataazurermextendedlocations.DataAzurermExtendedLocations_IsConstruct(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermExtendedLocations.DataAzurermExtendedLocations.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermextendedlocations"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermextendedlocations"
 
 dataazurermextendedlocations.DataAzurermExtendedLocations_IsTerraformElement(x interface{}) *bool
 ```
@@ -344,7 +344,7 @@ dataazurermextendedlocations.DataAzurermExtendedLocations_IsTerraformElement(x i
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermExtendedLocations.DataAzurermExtendedLocations.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermextendedlocations"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermextendedlocations"
 
 dataazurermextendedlocations.DataAzurermExtendedLocations_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -358,7 +358,7 @@ dataazurermextendedlocations.DataAzurermExtendedLocations_IsTerraformDataSource(
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermExtendedLocations.DataAzurermExtendedLocations.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermextendedlocations"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermextendedlocations"
 
 dataazurermextendedlocations.DataAzurermExtendedLocations_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -642,7 +642,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermExtendedLocations.DataAzurermExtendedLocationsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermextendedlocations"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermextendedlocations"
 
 &dataazurermextendedlocations.DataAzurermExtendedLocationsConfig {
 	Connection: interface{},
@@ -654,7 +654,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermextendedlo
 	Provisioners: *[]interface{},
 	Location: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermExtendedLocations.DataAzurermExtendedLocationsTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermExtendedLocations.DataAzurermExtendedLocationsTimeouts,
 }
 ```
 
@@ -791,7 +791,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermExtendedLocations.DataAzurermExtendedLocationsTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermextendedlocations"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermextendedlocations"
 
 &dataazurermextendedlocations.DataAzurermExtendedLocationsTimeouts {
 	Read: *string,
@@ -825,7 +825,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermExtendedLocations.DataAzurermExtendedLocationsTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermextendedlocations"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermextendedlocations"
 
 dataazurermextendedlocations.NewDataAzurermExtendedLocationsTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermExtendedLocationsTimeoutsOutputReference
 ```

@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.synapseSqlPoolWorkloadGroup.SynapseSqlPoolWorkloadGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapsesqlpoolworkloadgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/synapsesqlpoolworkloadgroup"
 
 synapsesqlpoolworkloadgroup.NewSynapseSqlPoolWorkloadGroup(scope Construct, id *string, config SynapseSqlPoolWorkloadGroupConfig) SynapseSqlPoolWorkloadGroup
 ```
@@ -387,7 +387,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.synapseSqlPoolWorkloadGroup.SynapseSqlPoolWorkloadGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapsesqlpoolworkloadgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/synapsesqlpoolworkloadgroup"
 
 synapsesqlpoolworkloadgroup.SynapseSqlPoolWorkloadGroup_IsConstruct(x interface{}) *bool
 ```
@@ -419,7 +419,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.synapseSqlPoolWorkloadGroup.SynapseSqlPoolWorkloadGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapsesqlpoolworkloadgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/synapsesqlpoolworkloadgroup"
 
 synapsesqlpoolworkloadgroup.SynapseSqlPoolWorkloadGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -433,7 +433,7 @@ synapsesqlpoolworkloadgroup.SynapseSqlPoolWorkloadGroup_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.synapseSqlPoolWorkloadGroup.SynapseSqlPoolWorkloadGroup.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapsesqlpoolworkloadgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/synapsesqlpoolworkloadgroup"
 
 synapsesqlpoolworkloadgroup.SynapseSqlPoolWorkloadGroup_IsTerraformResource(x interface{}) *bool
 ```
@@ -447,7 +447,7 @@ synapsesqlpoolworkloadgroup.SynapseSqlPoolWorkloadGroup_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.synapseSqlPoolWorkloadGroup.SynapseSqlPoolWorkloadGroup.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapsesqlpoolworkloadgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/synapsesqlpoolworkloadgroup"
 
 synapsesqlpoolworkloadgroup.SynapseSqlPoolWorkloadGroup_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -896,7 +896,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.synapseSqlPoolWorkloadGroup.SynapseSqlPoolWorkloadGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapsesqlpoolworkloadgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/synapsesqlpoolworkloadgroup"
 
 &synapsesqlpoolworkloadgroup.SynapseSqlPoolWorkloadGroupConfig {
 	Connection: interface{},
@@ -915,7 +915,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapsesqlpoolworkloa
 	MaxResourcePercentPerRequest: *f64,
 	MinResourcePercentPerRequest: *f64,
 	QueryExecutionTimeoutInSeconds: *f64,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.synapseSqlPoolWorkloadGroup.SynapseSqlPoolWorkloadGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.synapseSqlPoolWorkloadGroup.SynapseSqlPoolWorkloadGroupTimeouts,
 }
 ```
 
@@ -1143,7 +1143,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.synapseSqlPoolWorkloadGroup.SynapseSqlPoolWorkloadGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapsesqlpoolworkloadgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/synapsesqlpoolworkloadgroup"
 
 &synapsesqlpoolworkloadgroup.SynapseSqlPoolWorkloadGroupTimeouts {
 	Create: *string,
@@ -1219,7 +1219,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.synapseSqlPoolWorkloadGroup.SynapseSqlPoolWorkloadGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapsesqlpoolworkloadgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/synapsesqlpoolworkloadgroup"
 
 synapsesqlpoolworkloadgroup.NewSynapseSqlPoolWorkloadGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SynapseSqlPoolWorkloadGroupTimeoutsOutputReference
 ```
