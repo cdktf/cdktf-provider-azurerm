@@ -1,3 +1,3 @@
 # `data_azurerm_eventhub_sas`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_eventhub_sas`](https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_sas).
+Refer to the Terraform Registory for docs: [`data_azurerm_eventhub_sas`](https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_sas).

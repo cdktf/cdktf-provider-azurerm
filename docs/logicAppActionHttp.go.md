@@ -1,6 +1,6 @@
 # `azurerm_logic_app_action_http`
 
-Refer to the Terraform Registory for docs: [`azurerm_logic_app_action_http`](https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http).
+Refer to the Terraform Registory for docs: [`azurerm_logic_app_action_http`](https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http).
 
 # `logicAppActionHttp` Submodule <a name="`logicAppActionHttp` Submodule" id="@cdktf/provider-azurerm.logicAppActionHttp"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_logic_app_action_http`](htt
 
 ### LogicAppActionHttp <a name="LogicAppActionHttp" id="@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttp"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http azurerm_logic_app_action_http}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http azurerm_logic_app_action_http}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttp.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logicappactionhttp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappactionhttp"
 
 logicappactionhttp.NewLogicAppActionHttp(scope Construct, id *string, config LogicAppActionHttpConfig) LogicAppActionHttp
 ```
@@ -400,7 +400,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttp.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logicappactionhttp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappactionhttp"
 
 logicappactionhttp.LogicAppActionHttp_IsConstruct(x interface{}) *bool
 ```
@@ -432,7 +432,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttp.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logicappactionhttp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappactionhttp"
 
 logicappactionhttp.LogicAppActionHttp_IsTerraformElement(x interface{}) *bool
 ```
@@ -446,7 +446,7 @@ logicappactionhttp.LogicAppActionHttp_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttp.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logicappactionhttp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappactionhttp"
 
 logicappactionhttp.LogicAppActionHttp_IsTerraformResource(x interface{}) *bool
 ```
@@ -460,7 +460,7 @@ logicappactionhttp.LogicAppActionHttp_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttp.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logicappactionhttp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappactionhttp"
 
 logicappactionhttp.LogicAppActionHttp_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -489,7 +489,7 @@ The construct id used in the generated config for the LogicAppActionHttp to impo
 
 The id of the existing LogicAppActionHttp that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -909,7 +909,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logicappactionhttp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappactionhttp"
 
 &logicappactionhttp.LogicAppActionHttpConfig {
 	Connection: interface{},
@@ -928,7 +928,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logicappactionhtt
 	Id: *string,
 	Queries: *map[string]*string,
 	RunAfter: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.logicAppActionHttp.LogicAppActionHttpTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.logicAppActionHttp.LogicAppActionHttpTimeouts,
 }
 ```
 
@@ -943,14 +943,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logicappactionhtt
 | <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpConfig.property.logicAppId">LogicAppId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#logic_app_id LogicAppActionHttp#logic_app_id}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpConfig.property.method">Method</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#method LogicAppActionHttp#method}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#name LogicAppActionHttp#name}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpConfig.property.uri">Uri</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#uri LogicAppActionHttp#uri}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpConfig.property.body">Body</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#body LogicAppActionHttp#body}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpConfig.property.headers">Headers</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#headers LogicAppActionHttp#headers}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#id LogicAppActionHttp#id}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpConfig.property.queries">Queries</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#queries LogicAppActionHttp#queries}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpConfig.property.logicAppId">LogicAppId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#logic_app_id LogicAppActionHttp#logic_app_id}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpConfig.property.method">Method</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#method LogicAppActionHttp#method}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#name LogicAppActionHttp#name}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpConfig.property.uri">Uri</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#uri LogicAppActionHttp#uri}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpConfig.property.body">Body</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#body LogicAppActionHttp#body}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpConfig.property.headers">Headers</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#headers LogicAppActionHttp#headers}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#id LogicAppActionHttp#id}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpConfig.property.queries">Queries</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#queries LogicAppActionHttp#queries}. |
 | <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpConfig.property.runAfter">RunAfter</a></code> | <code>interface{}</code> | run_after block. |
 | <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpTimeouts">LogicAppActionHttpTimeouts</a></code> | timeouts block. |
 
@@ -1034,7 +1034,7 @@ LogicAppId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#logic_app_id LogicAppActionHttp#logic_app_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#logic_app_id LogicAppActionHttp#logic_app_id}.
 
 ---
 
@@ -1046,7 +1046,7 @@ Method *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#method LogicAppActionHttp#method}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#method LogicAppActionHttp#method}.
 
 ---
 
@@ -1058,7 +1058,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#name LogicAppActionHttp#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#name LogicAppActionHttp#name}.
 
 ---
 
@@ -1070,7 +1070,7 @@ Uri *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#uri LogicAppActionHttp#uri}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#uri LogicAppActionHttp#uri}.
 
 ---
 
@@ -1082,7 +1082,7 @@ Body *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#body LogicAppActionHttp#body}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#body LogicAppActionHttp#body}.
 
 ---
 
@@ -1094,7 +1094,7 @@ Headers *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#headers LogicAppActionHttp#headers}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#headers LogicAppActionHttp#headers}.
 
 ---
 
@@ -1106,7 +1106,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#id LogicAppActionHttp#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#id LogicAppActionHttp#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1121,7 +1121,7 @@ Queries *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#queries LogicAppActionHttp#queries}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#queries LogicAppActionHttp#queries}.
 
 ---
 
@@ -1135,7 +1135,7 @@ RunAfter interface{}
 
 run_after block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#run_after LogicAppActionHttp#run_after}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#run_after LogicAppActionHttp#run_after}
 
 ---
 
@@ -1149,7 +1149,7 @@ Timeouts LogicAppActionHttpTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#timeouts LogicAppActionHttp#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#timeouts LogicAppActionHttp#timeouts}
 
 ---
 
@@ -1158,7 +1158,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpRunAfter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logicappactionhttp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappactionhttp"
 
 &logicappactionhttp.LogicAppActionHttpRunAfter {
 	ActionName: *string,
@@ -1170,8 +1170,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logicappactionhtt
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpRunAfter.property.actionName">ActionName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#action_name LogicAppActionHttp#action_name}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpRunAfter.property.actionResult">ActionResult</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#action_result LogicAppActionHttp#action_result}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpRunAfter.property.actionName">ActionName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#action_name LogicAppActionHttp#action_name}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpRunAfter.property.actionResult">ActionResult</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#action_result LogicAppActionHttp#action_result}. |
 
 ---
 
@@ -1183,7 +1183,7 @@ ActionName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#action_name LogicAppActionHttp#action_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#action_name LogicAppActionHttp#action_name}.
 
 ---
 
@@ -1195,7 +1195,7 @@ ActionResult *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#action_result LogicAppActionHttp#action_result}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#action_result LogicAppActionHttp#action_result}.
 
 ---
 
@@ -1204,7 +1204,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logicappactionhttp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappactionhttp"
 
 &logicappactionhttp.LogicAppActionHttpTimeouts {
 	Create: *string,
@@ -1218,10 +1218,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logicappactionhtt
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#create LogicAppActionHttp#create}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#delete LogicAppActionHttp#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#read LogicAppActionHttp#read}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#update LogicAppActionHttp#update}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#create LogicAppActionHttp#create}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#delete LogicAppActionHttp#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#read LogicAppActionHttp#read}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#update LogicAppActionHttp#update}. |
 
 ---
 
@@ -1233,7 +1233,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#create LogicAppActionHttp#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#create LogicAppActionHttp#create}.
 
 ---
 
@@ -1245,7 +1245,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#delete LogicAppActionHttp#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#delete LogicAppActionHttp#delete}.
 
 ---
 
@@ -1257,7 +1257,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#read LogicAppActionHttp#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#read LogicAppActionHttp#read}.
 
 ---
 
@@ -1269,7 +1269,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/resources/logic_app_action_http#update LogicAppActionHttp#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/resources/logic_app_action_http#update LogicAppActionHttp#update}.
 
 ---
 
@@ -1280,7 +1280,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpRunAfterList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logicappactionhttp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappactionhttp"
 
 logicappactionhttp.NewLogicAppActionHttpRunAfterList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LogicAppActionHttpRunAfterList
 ```
@@ -1423,7 +1423,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpRunAfterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logicappactionhttp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappactionhttp"
 
 logicappactionhttp.NewLogicAppActionHttpRunAfterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LogicAppActionHttpRunAfterOutputReference
 ```
@@ -1734,7 +1734,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppActionHttp.LogicAppActionHttpTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logicappactionhttp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappactionhttp"
 
 logicappactionhttp.NewLogicAppActionHttpTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogicAppActionHttpTimeoutsOutputReference
 ```

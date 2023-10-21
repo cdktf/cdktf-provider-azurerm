@@ -1,6 +1,6 @@
 # `data_azurerm_eventhub_sas`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_eventhub_sas`](https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_sas).
+Refer to the Terraform Registory for docs: [`data_azurerm_eventhub_sas`](https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_sas).
 
 # `dataAzurermEventhubSas` Submodule <a name="`dataAzurermEventhubSas` Submodule" id="@cdktf/provider-azurerm.dataAzurermEventhubSas"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_eventhub_sas`](https:/
 
 ### DataAzurermEventhubSas <a name="DataAzurermEventhubSas" id="@cdktf/provider-azurerm.dataAzurermEventhubSas.DataAzurermEventhubSas"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_sas azurerm_eventhub_sas}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_sas azurerm_eventhub_sas}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermEventhubSas.DataAzurermEventhubSas.Initializer"></a>
 
@@ -387,7 +387,7 @@ The construct id used in the generated config for the DataAzurermEventhubSas to 
 
 The id of the existing DataAzurermEventhubSas that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_sas#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_sas#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -680,9 +680,9 @@ const dataAzurermEventhubSasConfig: dataAzurermEventhubSas.DataAzurermEventhubSa
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubSas.DataAzurermEventhubSasConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubSas.DataAzurermEventhubSasConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubSas.DataAzurermEventhubSasConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubSas.DataAzurermEventhubSasConfig.property.connectionString">connectionString</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_sas#connection_string DataAzurermEventhubSas#connection_string}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubSas.DataAzurermEventhubSasConfig.property.expiry">expiry</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_sas#expiry DataAzurermEventhubSas#expiry}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubSas.DataAzurermEventhubSasConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_sas#id DataAzurermEventhubSas#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubSas.DataAzurermEventhubSasConfig.property.connectionString">connectionString</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_sas#connection_string DataAzurermEventhubSas#connection_string}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubSas.DataAzurermEventhubSasConfig.property.expiry">expiry</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_sas#expiry DataAzurermEventhubSas#expiry}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubSas.DataAzurermEventhubSasConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_sas#id DataAzurermEventhubSas#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubSas.DataAzurermEventhubSasConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubSas.DataAzurermEventhubSasTimeouts">DataAzurermEventhubSasTimeouts</a></code> | timeouts block. |
 
 ---
@@ -765,7 +765,7 @@ public readonly connectionString: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_sas#connection_string DataAzurermEventhubSas#connection_string}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_sas#connection_string DataAzurermEventhubSas#connection_string}.
 
 ---
 
@@ -777,7 +777,7 @@ public readonly expiry: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_sas#expiry DataAzurermEventhubSas#expiry}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_sas#expiry DataAzurermEventhubSas#expiry}.
 
 ---
 
@@ -789,7 +789,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_sas#id DataAzurermEventhubSas#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_sas#id DataAzurermEventhubSas#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -806,7 +806,7 @@ public readonly timeouts: DataAzurermEventhubSasTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_sas#timeouts DataAzurermEventhubSas#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_sas#timeouts DataAzurermEventhubSas#timeouts}
 
 ---
 
@@ -824,7 +824,7 @@ const dataAzurermEventhubSasTimeouts: dataAzurermEventhubSas.DataAzurermEventhub
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubSas.DataAzurermEventhubSasTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_sas#read DataAzurermEventhubSas#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubSas.DataAzurermEventhubSasTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_sas#read DataAzurermEventhubSas#read}. |
 
 ---
 
@@ -836,7 +836,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/eventhub_sas#read DataAzurermEventhubSas#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/eventhub_sas#read DataAzurermEventhubSas#read}.
 
 ---
 

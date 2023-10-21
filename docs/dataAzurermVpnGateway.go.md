@@ -1,6 +1,6 @@
 # `data_azurerm_vpn_gateway`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_vpn_gateway`](https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/vpn_gateway).
+Refer to the Terraform Registory for docs: [`data_azurerm_vpn_gateway`](https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/vpn_gateway).
 
 # `dataAzurermVpnGateway` Submodule <a name="`dataAzurermVpnGateway` Submodule" id="@cdktf/provider-azurerm.dataAzurermVpnGateway"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_azurerm_vpn_gateway`](https://
 
 ### DataAzurermVpnGateway <a name="DataAzurermVpnGateway" id="@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGateway"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/vpn_gateway azurerm_vpn_gateway}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/vpn_gateway azurerm_vpn_gateway}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGateway.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvpngateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvpngateway"
 
 dataazurermvpngateway.NewDataAzurermVpnGateway(scope Construct, id *string, config DataAzurermVpnGatewayConfig) DataAzurermVpnGateway
 ```
@@ -298,7 +298,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGateway.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvpngateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvpngateway"
 
 dataazurermvpngateway.DataAzurermVpnGateway_IsConstruct(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGateway.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvpngateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvpngateway"
 
 dataazurermvpngateway.DataAzurermVpnGateway_IsTerraformElement(x interface{}) *bool
 ```
@@ -344,7 +344,7 @@ dataazurermvpngateway.DataAzurermVpnGateway_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGateway.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvpngateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvpngateway"
 
 dataazurermvpngateway.DataAzurermVpnGateway_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -358,7 +358,7 @@ dataazurermvpngateway.DataAzurermVpnGateway_IsTerraformDataSource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGateway.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvpngateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvpngateway"
 
 dataazurermvpngateway.DataAzurermVpnGateway_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -387,7 +387,7 @@ The construct id used in the generated config for the DataAzurermVpnGateway to i
 
 The id of the existing DataAzurermVpnGateway that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/vpn_gateway#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/vpn_gateway#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -708,7 +708,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGatewayBgpSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvpngateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvpngateway"
 
 &dataazurermvpngateway.DataAzurermVpnGatewayBgpSettings {
 
@@ -721,7 +721,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvpngat
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGatewayBgpSettingsInstance0BgpPeeringAddress.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvpngateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvpngateway"
 
 &dataazurermvpngateway.DataAzurermVpnGatewayBgpSettingsInstance0BgpPeeringAddress {
 
@@ -734,7 +734,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvpngat
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGatewayBgpSettingsInstance1BgpPeeringAddress.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvpngateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvpngateway"
 
 &dataazurermvpngateway.DataAzurermVpnGatewayBgpSettingsInstance1BgpPeeringAddress {
 
@@ -747,7 +747,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvpngat
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGatewayConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvpngateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvpngateway"
 
 &dataazurermvpngateway.DataAzurermVpnGatewayConfig {
 	Connection: interface{},
@@ -760,7 +760,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvpngat
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermVpnGateway.DataAzurermVpnGatewayTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermVpnGateway.DataAzurermVpnGatewayTimeouts,
 }
 ```
 
@@ -775,9 +775,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvpngat
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGatewayConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGatewayConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGatewayConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGatewayConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/vpn_gateway#name DataAzurermVpnGateway#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGatewayConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/vpn_gateway#resource_group_name DataAzurermVpnGateway#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGatewayConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/vpn_gateway#id DataAzurermVpnGateway#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGatewayConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/vpn_gateway#name DataAzurermVpnGateway#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGatewayConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/vpn_gateway#resource_group_name DataAzurermVpnGateway#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGatewayConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/vpn_gateway#id DataAzurermVpnGateway#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGatewayConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGatewayTimeouts">DataAzurermVpnGatewayTimeouts</a></code> | timeouts block. |
 
 ---
@@ -860,7 +860,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/vpn_gateway#name DataAzurermVpnGateway#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/vpn_gateway#name DataAzurermVpnGateway#name}.
 
 ---
 
@@ -872,7 +872,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/vpn_gateway#resource_group_name DataAzurermVpnGateway#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/vpn_gateway#resource_group_name DataAzurermVpnGateway#resource_group_name}.
 
 ---
 
@@ -884,7 +884,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/vpn_gateway#id DataAzurermVpnGateway#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/vpn_gateway#id DataAzurermVpnGateway#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -901,7 +901,7 @@ Timeouts DataAzurermVpnGatewayTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/vpn_gateway#timeouts DataAzurermVpnGateway#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/vpn_gateway#timeouts DataAzurermVpnGateway#timeouts}
 
 ---
 
@@ -910,7 +910,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGatewayTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvpngateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvpngateway"
 
 &dataazurermvpngateway.DataAzurermVpnGatewayTimeouts {
 	Read: *string,
@@ -921,7 +921,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvpngat
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGatewayTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/vpn_gateway#read DataAzurermVpnGateway#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGatewayTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/vpn_gateway#read DataAzurermVpnGateway#read}. |
 
 ---
 
@@ -933,7 +933,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/vpn_gateway#read DataAzurermVpnGateway#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/vpn_gateway#read DataAzurermVpnGateway#read}.
 
 ---
 
@@ -944,7 +944,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGatewayBgpSettingsInstance0BgpPeeringAddressList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvpngateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvpngateway"
 
 dataazurermvpngateway.NewDataAzurermVpnGatewayBgpSettingsInstance0BgpPeeringAddressList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermVpnGatewayBgpSettingsInstance0BgpPeeringAddressList
 ```
@@ -1076,7 +1076,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvpngateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvpngateway"
 
 dataazurermvpngateway.NewDataAzurermVpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermVpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference
 ```
@@ -1387,7 +1387,7 @@ func InternalValue() DataAzurermVpnGatewayBgpSettingsInstance0BgpPeeringAddress
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGatewayBgpSettingsInstance1BgpPeeringAddressList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvpngateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvpngateway"
 
 dataazurermvpngateway.NewDataAzurermVpnGatewayBgpSettingsInstance1BgpPeeringAddressList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermVpnGatewayBgpSettingsInstance1BgpPeeringAddressList
 ```
@@ -1519,7 +1519,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvpngateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvpngateway"
 
 dataazurermvpngateway.NewDataAzurermVpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermVpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference
 ```
@@ -1830,7 +1830,7 @@ func InternalValue() DataAzurermVpnGatewayBgpSettingsInstance1BgpPeeringAddress
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGatewayBgpSettingsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvpngateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvpngateway"
 
 dataazurermvpngateway.NewDataAzurermVpnGatewayBgpSettingsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermVpnGatewayBgpSettingsList
 ```
@@ -1962,7 +1962,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGatewayBgpSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvpngateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvpngateway"
 
 dataazurermvpngateway.NewDataAzurermVpnGatewayBgpSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermVpnGatewayBgpSettingsOutputReference
 ```
@@ -2284,7 +2284,7 @@ func InternalValue() DataAzurermVpnGatewayBgpSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVpnGateway.DataAzurermVpnGatewayTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvpngateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvpngateway"
 
 dataazurermvpngateway.NewDataAzurermVpnGatewayTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermVpnGatewayTimeoutsOutputReference
 ```

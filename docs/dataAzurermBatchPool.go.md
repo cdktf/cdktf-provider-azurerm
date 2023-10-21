@@ -1,6 +1,6 @@
 # `data_azurerm_batch_pool`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_batch_pool`](https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/batch_pool).
+Refer to the Terraform Registory for docs: [`data_azurerm_batch_pool`](https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/batch_pool).
 
 # `dataAzurermBatchPool` Submodule <a name="`dataAzurermBatchPool` Submodule" id="@cdktf/provider-azurerm.dataAzurermBatchPool"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_azurerm_batch_pool`](https://r
 
 ### DataAzurermBatchPool <a name="DataAzurermBatchPool" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPool"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/batch_pool azurerm_batch_pool}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/batch_pool azurerm_batch_pool}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPool(scope Construct, id *string, config DataAzurermBatchPoolConfig) DataAzurermBatchPool
 ```
@@ -298,7 +298,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPool.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.DataAzurermBatchPool_IsConstruct(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPool.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.DataAzurermBatchPool_IsTerraformElement(x interface{}) *bool
 ```
@@ -344,7 +344,7 @@ dataazurermbatchpool.DataAzurermBatchPool_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPool.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.DataAzurermBatchPool_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -358,7 +358,7 @@ dataazurermbatchpool.DataAzurermBatchPool_IsTerraformDataSource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPool.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.DataAzurermBatchPool_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -387,7 +387,7 @@ The construct id used in the generated config for the DataAzurermBatchPool to im
 
 The id of the existing DataAzurermBatchPool that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/batch_pool#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/batch_pool#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -928,7 +928,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolAutoScale.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolAutoScale {
 
@@ -941,7 +941,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolCertificate {
 
@@ -954,7 +954,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolConfig {
 	Connection: interface{},
@@ -968,7 +968,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermBatchPool.DataAzurermBatchPoolTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermBatchPool.DataAzurermBatchPoolTimeouts,
 }
 ```
 
@@ -983,10 +983,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolConfig.property.accountName">AccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/batch_pool#account_name DataAzurermBatchPool#account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/batch_pool#name DataAzurermBatchPool#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/batch_pool#resource_group_name DataAzurermBatchPool#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/batch_pool#id DataAzurermBatchPool#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolConfig.property.accountName">AccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/batch_pool#account_name DataAzurermBatchPool#account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/batch_pool#name DataAzurermBatchPool#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/batch_pool#resource_group_name DataAzurermBatchPool#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/batch_pool#id DataAzurermBatchPool#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolTimeouts">DataAzurermBatchPoolTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1069,7 +1069,7 @@ AccountName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/batch_pool#account_name DataAzurermBatchPool#account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/batch_pool#account_name DataAzurermBatchPool#account_name}.
 
 ---
 
@@ -1081,7 +1081,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/batch_pool#name DataAzurermBatchPool#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/batch_pool#name DataAzurermBatchPool#name}.
 
 ---
 
@@ -1093,7 +1093,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/batch_pool#resource_group_name DataAzurermBatchPool#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/batch_pool#resource_group_name DataAzurermBatchPool#resource_group_name}.
 
 ---
 
@@ -1105,7 +1105,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/batch_pool#id DataAzurermBatchPool#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/batch_pool#id DataAzurermBatchPool#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1122,7 +1122,7 @@ Timeouts DataAzurermBatchPoolTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/batch_pool#timeouts DataAzurermBatchPool#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/batch_pool#timeouts DataAzurermBatchPool#timeouts}
 
 ---
 
@@ -1131,7 +1131,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolContainerConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolContainerConfiguration {
 
@@ -1144,7 +1144,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolContainerConfigurationContainerRegistries.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolContainerConfigurationContainerRegistries {
 
@@ -1157,7 +1157,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolDataDisks.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolDataDisks {
 
@@ -1170,7 +1170,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolDiskEncryption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolDiskEncryption {
 
@@ -1183,7 +1183,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolExtensions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolExtensions {
 
@@ -1196,7 +1196,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolFixedScale.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolFixedScale {
 
@@ -1209,7 +1209,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolMount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolMount {
 
@@ -1222,7 +1222,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolMountAzureBlobFileSystem.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolMountAzureBlobFileSystem {
 
@@ -1235,7 +1235,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolMountAzureFileShare.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolMountAzureFileShare {
 
@@ -1248,7 +1248,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolMountCifsMount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolMountCifsMount {
 
@@ -1261,7 +1261,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolMountNfsMount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolMountNfsMount {
 
@@ -1274,7 +1274,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolNetworkConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolNetworkConfiguration {
 
@@ -1287,7 +1287,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolNetworkConfigurationEndpointConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolNetworkConfigurationEndpointConfiguration {
 
@@ -1300,7 +1300,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules {
 
@@ -1313,7 +1313,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolNodePlacement.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolNodePlacement {
 
@@ -1326,7 +1326,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolStartTask.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolStartTask {
 
@@ -1339,7 +1339,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolStartTaskContainer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolStartTaskContainer {
 
@@ -1352,7 +1352,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolStartTaskContainerRegistry.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolStartTaskContainerRegistry {
 
@@ -1365,7 +1365,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolStartTaskResourceFile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolStartTaskResourceFile {
 
@@ -1378,7 +1378,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolStartTaskUserIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolStartTaskUserIdentity {
 
@@ -1391,7 +1391,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolStartTaskUserIdentityAutoUser.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolStartTaskUserIdentityAutoUser {
 
@@ -1404,7 +1404,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolStorageImageReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolStorageImageReference {
 
@@ -1417,7 +1417,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolTaskSchedulingPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolTaskSchedulingPolicy {
 
@@ -1430,7 +1430,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolTimeouts {
 	Read: *string,
@@ -1441,7 +1441,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/batch_pool#read DataAzurermBatchPool#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/batch_pool#read DataAzurermBatchPool#read}. |
 
 ---
 
@@ -1453,7 +1453,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/batch_pool#read DataAzurermBatchPool#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/batch_pool#read DataAzurermBatchPool#read}.
 
 ---
 
@@ -1462,7 +1462,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolUserAccounts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolUserAccounts {
 
@@ -1475,7 +1475,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolUserAccountsLinuxUserConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolUserAccountsLinuxUserConfiguration {
 
@@ -1488,7 +1488,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolUserAccountsWindowsUserConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolUserAccountsWindowsUserConfiguration {
 
@@ -1501,7 +1501,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolWindows.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 &dataazurermbatchpool.DataAzurermBatchPoolWindows {
 
@@ -1516,7 +1516,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchp
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolAutoScaleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolAutoScaleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolAutoScaleList
 ```
@@ -1648,7 +1648,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolAutoScaleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolAutoScaleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolAutoScaleOutputReference
 ```
@@ -1937,7 +1937,7 @@ func InternalValue() DataAzurermBatchPoolAutoScale
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolCertificateList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolCertificateList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolCertificateList
 ```
@@ -2069,7 +2069,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolCertificateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolCertificateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolCertificateOutputReference
 ```
@@ -2380,7 +2380,7 @@ func InternalValue() DataAzurermBatchPoolCertificate
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolContainerConfigurationContainerRegistriesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolContainerConfigurationContainerRegistriesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolContainerConfigurationContainerRegistriesList
 ```
@@ -2512,7 +2512,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolContainerConfigurationContainerRegistriesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolContainerConfigurationContainerRegistriesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolContainerConfigurationContainerRegistriesOutputReference
 ```
@@ -2823,7 +2823,7 @@ func InternalValue() DataAzurermBatchPoolContainerConfigurationContainerRegistri
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolContainerConfigurationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolContainerConfigurationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolContainerConfigurationList
 ```
@@ -2955,7 +2955,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolContainerConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolContainerConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolContainerConfigurationOutputReference
 ```
@@ -3255,7 +3255,7 @@ func InternalValue() DataAzurermBatchPoolContainerConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolDataDisksList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolDataDisksList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolDataDisksList
 ```
@@ -3387,7 +3387,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolDataDisksOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolDataDisksOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolDataDisksOutputReference
 ```
@@ -3698,7 +3698,7 @@ func InternalValue() DataAzurermBatchPoolDataDisks
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolDiskEncryptionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolDiskEncryptionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolDiskEncryptionList
 ```
@@ -3830,7 +3830,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolDiskEncryptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolDiskEncryptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolDiskEncryptionOutputReference
 ```
@@ -4108,7 +4108,7 @@ func InternalValue() DataAzurermBatchPoolDiskEncryption
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolExtensionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolExtensionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolExtensionsList
 ```
@@ -4240,7 +4240,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolExtensionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolExtensionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolExtensionsOutputReference
 ```
@@ -4595,7 +4595,7 @@ func InternalValue() DataAzurermBatchPoolExtensions
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolFixedScaleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolFixedScaleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolFixedScaleList
 ```
@@ -4727,7 +4727,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolFixedScaleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolFixedScaleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolFixedScaleOutputReference
 ```
@@ -5027,7 +5027,7 @@ func InternalValue() DataAzurermBatchPoolFixedScale
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolMountAzureBlobFileSystemList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolMountAzureBlobFileSystemList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolMountAzureBlobFileSystemList
 ```
@@ -5159,7 +5159,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolMountAzureBlobFileSystemOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolMountAzureBlobFileSystemOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolMountAzureBlobFileSystemOutputReference
 ```
@@ -5503,7 +5503,7 @@ func InternalValue() DataAzurermBatchPoolMountAzureBlobFileSystem
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolMountAzureFileShareList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolMountAzureFileShareList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolMountAzureFileShareList
 ```
@@ -5635,7 +5635,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolMountAzureFileShareOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolMountAzureFileShareOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolMountAzureFileShareOutputReference
 ```
@@ -5957,7 +5957,7 @@ func InternalValue() DataAzurermBatchPoolMountAzureFileShare
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolMountCifsMountList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolMountCifsMountList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolMountCifsMountList
 ```
@@ -6089,7 +6089,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolMountCifsMountOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolMountCifsMountOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolMountCifsMountOutputReference
 ```
@@ -6411,7 +6411,7 @@ func InternalValue() DataAzurermBatchPoolMountCifsMount
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolMountList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolMountList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolMountList
 ```
@@ -6543,7 +6543,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolMountNfsMountList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolMountNfsMountList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolMountNfsMountList
 ```
@@ -6675,7 +6675,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolMountNfsMountOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolMountNfsMountOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolMountNfsMountOutputReference
 ```
@@ -6975,7 +6975,7 @@ func InternalValue() DataAzurermBatchPoolMountNfsMount
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolMountOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolMountOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolMountOutputReference
 ```
@@ -7286,7 +7286,7 @@ func InternalValue() DataAzurermBatchPoolMount
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolNetworkConfigurationEndpointConfigurationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationList
 ```
@@ -7418,7 +7418,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesList
 ```
@@ -7550,7 +7550,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesOutputReference
 ```
@@ -7861,7 +7861,7 @@ func InternalValue() DataAzurermBatchPoolNetworkConfigurationEndpointConfigurati
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolNetworkConfigurationEndpointConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolNetworkConfigurationEndpointConfigurationOutputReference
 ```
@@ -8183,7 +8183,7 @@ func InternalValue() DataAzurermBatchPoolNetworkConfigurationEndpointConfigurati
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolNetworkConfigurationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolNetworkConfigurationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolNetworkConfigurationList
 ```
@@ -8315,7 +8315,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolNetworkConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolNetworkConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolNetworkConfigurationOutputReference
 ```
@@ -8648,7 +8648,7 @@ func InternalValue() DataAzurermBatchPoolNetworkConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolNodePlacementList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolNodePlacementList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolNodePlacementList
 ```
@@ -8780,7 +8780,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolNodePlacementOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolNodePlacementOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolNodePlacementOutputReference
 ```
@@ -9058,7 +9058,7 @@ func InternalValue() DataAzurermBatchPoolNodePlacement
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolStartTaskContainerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolStartTaskContainerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolStartTaskContainerList
 ```
@@ -9190,7 +9190,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolStartTaskContainerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolStartTaskContainerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolStartTaskContainerOutputReference
 ```
@@ -9501,7 +9501,7 @@ func InternalValue() DataAzurermBatchPoolStartTaskContainer
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolStartTaskContainerRegistryList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolStartTaskContainerRegistryList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolStartTaskContainerRegistryList
 ```
@@ -9633,7 +9633,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolStartTaskContainerRegistryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolStartTaskContainerRegistryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolStartTaskContainerRegistryOutputReference
 ```
@@ -9944,7 +9944,7 @@ func InternalValue() DataAzurermBatchPoolStartTaskContainerRegistry
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolStartTaskList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolStartTaskList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolStartTaskList
 ```
@@ -10076,7 +10076,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolStartTaskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolStartTaskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolStartTaskOutputReference
 ```
@@ -10420,7 +10420,7 @@ func InternalValue() DataAzurermBatchPoolStartTask
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolStartTaskResourceFileList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolStartTaskResourceFileList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolStartTaskResourceFileList
 ```
@@ -10552,7 +10552,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolStartTaskResourceFileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolStartTaskResourceFileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolStartTaskResourceFileOutputReference
 ```
@@ -10896,7 +10896,7 @@ func InternalValue() DataAzurermBatchPoolStartTaskResourceFile
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolStartTaskUserIdentityAutoUserList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolStartTaskUserIdentityAutoUserList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolStartTaskUserIdentityAutoUserList
 ```
@@ -11028,7 +11028,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolStartTaskUserIdentityAutoUserOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolStartTaskUserIdentityAutoUserOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolStartTaskUserIdentityAutoUserOutputReference
 ```
@@ -11317,7 +11317,7 @@ func InternalValue() DataAzurermBatchPoolStartTaskUserIdentityAutoUser
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolStartTaskUserIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolStartTaskUserIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolStartTaskUserIdentityList
 ```
@@ -11449,7 +11449,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolStartTaskUserIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolStartTaskUserIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolStartTaskUserIdentityOutputReference
 ```
@@ -11738,7 +11738,7 @@ func InternalValue() DataAzurermBatchPoolStartTaskUserIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolStorageImageReferenceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolStorageImageReferenceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolStorageImageReferenceList
 ```
@@ -11870,7 +11870,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolStorageImageReferenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolStorageImageReferenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolStorageImageReferenceOutputReference
 ```
@@ -12192,7 +12192,7 @@ func InternalValue() DataAzurermBatchPoolStorageImageReference
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolTaskSchedulingPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolTaskSchedulingPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolTaskSchedulingPolicyList
 ```
@@ -12324,7 +12324,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolTaskSchedulingPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolTaskSchedulingPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolTaskSchedulingPolicyOutputReference
 ```
@@ -12602,7 +12602,7 @@ func InternalValue() DataAzurermBatchPoolTaskSchedulingPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermBatchPoolTimeoutsOutputReference
 ```
@@ -12880,7 +12880,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolUserAccountsLinuxUserConfigurationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolUserAccountsLinuxUserConfigurationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolUserAccountsLinuxUserConfigurationList
 ```
@@ -13012,7 +13012,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolUserAccountsLinuxUserConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolUserAccountsLinuxUserConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolUserAccountsLinuxUserConfigurationOutputReference
 ```
@@ -13312,7 +13312,7 @@ func InternalValue() DataAzurermBatchPoolUserAccountsLinuxUserConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolUserAccountsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolUserAccountsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolUserAccountsList
 ```
@@ -13444,7 +13444,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolUserAccountsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolUserAccountsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolUserAccountsOutputReference
 ```
@@ -13766,7 +13766,7 @@ func InternalValue() DataAzurermBatchPoolUserAccounts
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolUserAccountsWindowsUserConfigurationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolUserAccountsWindowsUserConfigurationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolUserAccountsWindowsUserConfigurationList
 ```
@@ -13898,7 +13898,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolUserAccountsWindowsUserConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolUserAccountsWindowsUserConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolUserAccountsWindowsUserConfigurationOutputReference
 ```
@@ -14176,7 +14176,7 @@ func InternalValue() DataAzurermBatchPoolUserAccountsWindowsUserConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolWindowsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolWindowsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchPoolWindowsList
 ```
@@ -14308,7 +14308,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchPool.DataAzurermBatchPoolWindowsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchpool"
 
 dataazurermbatchpool.NewDataAzurermBatchPoolWindowsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchPoolWindowsOutputReference
 ```

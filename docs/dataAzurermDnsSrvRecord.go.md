@@ -1,6 +1,6 @@
 # `data_azurerm_dns_srv_record`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_dns_srv_record`](https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/dns_srv_record).
+Refer to the Terraform Registory for docs: [`data_azurerm_dns_srv_record`](https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/dns_srv_record).
 
 # `dataAzurermDnsSrvRecord` Submodule <a name="`dataAzurermDnsSrvRecord` Submodule" id="@cdktf/provider-azurerm.dataAzurermDnsSrvRecord"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_azurerm_dns_srv_record`](https
 
 ### DataAzurermDnsSrvRecord <a name="DataAzurermDnsSrvRecord" id="@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/dns_srv_record azurerm_dns_srv_record}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/dns_srv_record azurerm_dns_srv_record}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdnssrvrecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnssrvrecord"
 
 dataazurermdnssrvrecord.NewDataAzurermDnsSrvRecord(scope Construct, id *string, config DataAzurermDnsSrvRecordConfig) DataAzurermDnsSrvRecord
 ```
@@ -298,7 +298,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdnssrvrecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnssrvrecord"
 
 dataazurermdnssrvrecord.DataAzurermDnsSrvRecord_IsConstruct(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdnssrvrecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnssrvrecord"
 
 dataazurermdnssrvrecord.DataAzurermDnsSrvRecord_IsTerraformElement(x interface{}) *bool
 ```
@@ -344,7 +344,7 @@ dataazurermdnssrvrecord.DataAzurermDnsSrvRecord_IsTerraformElement(x interface{}
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdnssrvrecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnssrvrecord"
 
 dataazurermdnssrvrecord.DataAzurermDnsSrvRecord_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -358,7 +358,7 @@ dataazurermdnssrvrecord.DataAzurermDnsSrvRecord_IsTerraformDataSource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecord.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdnssrvrecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnssrvrecord"
 
 dataazurermdnssrvrecord.DataAzurermDnsSrvRecord_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -387,7 +387,7 @@ The construct id used in the generated config for the DataAzurermDnsSrvRecord to
 
 The id of the existing DataAzurermDnsSrvRecord that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/dns_srv_record#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/dns_srv_record#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -719,7 +719,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdnssrvrecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnssrvrecord"
 
 &dataazurermdnssrvrecord.DataAzurermDnsSrvRecordConfig {
 	Connection: interface{},
@@ -733,7 +733,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdnssrv
 	ResourceGroupName: *string,
 	ZoneName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordTimeouts,
 }
 ```
 
@@ -748,10 +748,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdnssrv
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/dns_srv_record#name DataAzurermDnsSrvRecord#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/dns_srv_record#resource_group_name DataAzurermDnsSrvRecord#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordConfig.property.zoneName">ZoneName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/dns_srv_record#zone_name DataAzurermDnsSrvRecord#zone_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/dns_srv_record#id DataAzurermDnsSrvRecord#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/dns_srv_record#name DataAzurermDnsSrvRecord#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/dns_srv_record#resource_group_name DataAzurermDnsSrvRecord#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordConfig.property.zoneName">ZoneName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/dns_srv_record#zone_name DataAzurermDnsSrvRecord#zone_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/dns_srv_record#id DataAzurermDnsSrvRecord#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordTimeouts">DataAzurermDnsSrvRecordTimeouts</a></code> | timeouts block. |
 
 ---
@@ -834,7 +834,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/dns_srv_record#name DataAzurermDnsSrvRecord#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/dns_srv_record#name DataAzurermDnsSrvRecord#name}.
 
 ---
 
@@ -846,7 +846,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/dns_srv_record#resource_group_name DataAzurermDnsSrvRecord#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/dns_srv_record#resource_group_name DataAzurermDnsSrvRecord#resource_group_name}.
 
 ---
 
@@ -858,7 +858,7 @@ ZoneName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/dns_srv_record#zone_name DataAzurermDnsSrvRecord#zone_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/dns_srv_record#zone_name DataAzurermDnsSrvRecord#zone_name}.
 
 ---
 
@@ -870,7 +870,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/dns_srv_record#id DataAzurermDnsSrvRecord#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/dns_srv_record#id DataAzurermDnsSrvRecord#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -887,7 +887,7 @@ Timeouts DataAzurermDnsSrvRecordTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/dns_srv_record#timeouts DataAzurermDnsSrvRecord#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/dns_srv_record#timeouts DataAzurermDnsSrvRecord#timeouts}
 
 ---
 
@@ -896,7 +896,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordRecord.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdnssrvrecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnssrvrecord"
 
 &dataazurermdnssrvrecord.DataAzurermDnsSrvRecordRecord {
 
@@ -909,7 +909,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdnssrv
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdnssrvrecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnssrvrecord"
 
 &dataazurermdnssrvrecord.DataAzurermDnsSrvRecordTimeouts {
 	Read: *string,
@@ -920,7 +920,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdnssrv
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/dns_srv_record#read DataAzurermDnsSrvRecord#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/dns_srv_record#read DataAzurermDnsSrvRecord#read}. |
 
 ---
 
@@ -932,7 +932,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.76.0/docs/data-sources/dns_srv_record#read DataAzurermDnsSrvRecord#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/dns_srv_record#read DataAzurermDnsSrvRecord#read}.
 
 ---
 
@@ -943,7 +943,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordRecordList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdnssrvrecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnssrvrecord"
 
 dataazurermdnssrvrecord.NewDataAzurermDnsSrvRecordRecordList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermDnsSrvRecordRecordList
 ```
@@ -1075,7 +1075,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordRecordOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdnssrvrecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnssrvrecord"
 
 dataazurermdnssrvrecord.NewDataAzurermDnsSrvRecordRecordOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermDnsSrvRecordRecordOutputReference
 ```
@@ -1386,7 +1386,7 @@ func InternalValue() DataAzurermDnsSrvRecordRecord
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDnsSrvRecord.DataAzurermDnsSrvRecordTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdnssrvrecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnssrvrecord"
 
 dataazurermdnssrvrecord.NewDataAzurermDnsSrvRecordTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermDnsSrvRecordTimeoutsOutputReference
 ```
