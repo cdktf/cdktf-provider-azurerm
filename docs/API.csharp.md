@@ -1079,6 +1079,7 @@ The following submodules are available:
 - [resourceGroupPolicyRemediation](./resourceGroupPolicyRemediation.csharp.md)
 - [resourceGroupTemplateDeployment](./resourceGroupTemplateDeployment.csharp.md)
 - [resourceManagementPrivateLink](./resourceManagementPrivateLink.csharp.md)
+- [resourceManagementPrivateLinkAssociation](./resourceManagementPrivateLinkAssociation.csharp.md)
 - [resourcePolicyAssignment](./resourcePolicyAssignment.csharp.md)
 - [resourcePolicyExemption](./resourcePolicyExemption.csharp.md)
 - [resourcePolicyRemediation](./resourcePolicyRemediation.csharp.md)

@@ -1079,6 +1079,7 @@ The following submodules are available:
 - [resourceGroupPolicyRemediation](./resourceGroupPolicyRemediation.go.md)
 - [resourceGroupTemplateDeployment](./resourceGroupTemplateDeployment.go.md)
 - [resourceManagementPrivateLink](./resourceManagementPrivateLink.go.md)
+- [resourceManagementPrivateLinkAssociation](./resourceManagementPrivateLinkAssociation.go.md)
 - [resourcePolicyAssignment](./resourcePolicyAssignment.go.md)
 - [resourcePolicyExemption](./resourcePolicyExemption.go.md)
 - [resourcePolicyRemediation](./resourcePolicyRemediation.go.md)

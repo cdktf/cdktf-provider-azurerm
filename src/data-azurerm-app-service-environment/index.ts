@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/app_service_environment
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/app_service_environment
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermAppServiceEnvironmentConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/app_service_environment#id DataAzurermAppServiceEnvironment#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/app_service_environment#id DataAzurermAppServiceEnvironment#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/app_service_environment#name DataAzurermAppServiceEnvironment#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/app_service_environment#name DataAzurermAppServiceEnvironment#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/app_service_environment#resource_group_name DataAzurermAppServiceEnvironment#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/app_service_environment#resource_group_name DataAzurermAppServiceEnvironment#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/app_service_environment#timeouts DataAzurermAppServiceEnvironment#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/app_service_environment#timeouts DataAzurermAppServiceEnvironment#timeouts}
   */
   readonly timeouts?: DataAzurermAppServiceEnvironmentTimeouts;
 }
@@ -105,7 +100,7 @@ export class DataAzurermAppServiceEnvironmentClusterSettingList extends cdktf.Co
 }
 export interface DataAzurermAppServiceEnvironmentTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/app_service_environment#read DataAzurermAppServiceEnvironment#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/app_service_environment#read DataAzurermAppServiceEnvironment#read}
   */
   readonly read?: string;
 }
@@ -180,7 +175,7 @@ export class DataAzurermAppServiceEnvironmentTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/app_service_environment azurerm_app_service_environment}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/app_service_environment azurerm_app_service_environment}
 */
 export class DataAzurermAppServiceEnvironment extends cdktf.TerraformDataSource {
 
@@ -196,7 +191,7 @@ export class DataAzurermAppServiceEnvironment extends cdktf.TerraformDataSource 
   * Generates CDKTF code for importing a DataAzurermAppServiceEnvironment resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermAppServiceEnvironment to import
-  * @param importFromId The id of the existing DataAzurermAppServiceEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/app_service_environment#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermAppServiceEnvironment that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/app_service_environment#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermAppServiceEnvironment to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -208,7 +203,7 @@ export class DataAzurermAppServiceEnvironment extends cdktf.TerraformDataSource 
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/app_service_environment azurerm_app_service_environment} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/app_service_environment azurerm_app_service_environment} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -219,7 +214,7 @@ export class DataAzurermAppServiceEnvironment extends cdktf.TerraformDataSource 
       terraformResourceType: 'azurerm_app_service_environment',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.77.0',
+        providerVersion: '3.78.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
