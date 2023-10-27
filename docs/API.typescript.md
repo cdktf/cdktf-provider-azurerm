@@ -1079,6 +1079,7 @@ The following submodules are available:
 - [resourceGroupPolicyRemediation](./resourceGroupPolicyRemediation.typescript.md)
 - [resourceGroupTemplateDeployment](./resourceGroupTemplateDeployment.typescript.md)
 - [resourceManagementPrivateLink](./resourceManagementPrivateLink.typescript.md)
+- [resourceManagementPrivateLinkAssociation](./resourceManagementPrivateLinkAssociation.typescript.md)
 - [resourcePolicyAssignment](./resourcePolicyAssignment.typescript.md)
 - [resourcePolicyExemption](./resourcePolicyExemption.typescript.md)
 - [resourcePolicyRemediation](./resourcePolicyRemediation.typescript.md)

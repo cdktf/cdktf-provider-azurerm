@@ -1079,6 +1079,7 @@ The following submodules are available:
 - [resourceGroupPolicyRemediation](./resourceGroupPolicyRemediation.python.md)
 - [resourceGroupTemplateDeployment](./resourceGroupTemplateDeployment.python.md)
 - [resourceManagementPrivateLink](./resourceManagementPrivateLink.python.md)
+- [resourceManagementPrivateLinkAssociation](./resourceManagementPrivateLinkAssociation.python.md)
 - [resourcePolicyAssignment](./resourcePolicyAssignment.python.md)
 - [resourcePolicyExemption](./resourcePolicyExemption.python.md)
 - [resourcePolicyRemediation](./resourcePolicyRemediation.python.md)

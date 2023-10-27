@@ -755,6 +755,7 @@ Object.defineProperty(exports, 'resourceGroupPolicyExemption', { get: function (
 Object.defineProperty(exports, 'resourceGroupPolicyRemediation', { get: function () { return require('./resource-group-policy-remediation'); } });
 Object.defineProperty(exports, 'resourceGroupTemplateDeployment', { get: function () { return require('./resource-group-template-deployment'); } });
 Object.defineProperty(exports, 'resourceManagementPrivateLink', { get: function () { return require('./resource-management-private-link'); } });
+Object.defineProperty(exports, 'resourceManagementPrivateLinkAssociation', { get: function () { return require('./resource-management-private-link-association'); } });
 Object.defineProperty(exports, 'resourcePolicyAssignment', { get: function () { return require('./resource-policy-assignment'); } });
 Object.defineProperty(exports, 'resourcePolicyExemption', { get: function () { return require('./resource-policy-exemption'); } });
 Object.defineProperty(exports, 'resourcePolicyRemediation', { get: function () { return require('./resource-policy-remediation'); } });

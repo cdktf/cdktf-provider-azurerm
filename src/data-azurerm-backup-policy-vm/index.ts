@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/backup_policy_vm
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/backup_policy_vm
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,34 +13,34 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermBackupPolicyVmConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/backup_policy_vm#id DataAzurermBackupPolicyVm#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/backup_policy_vm#id DataAzurermBackupPolicyVm#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/backup_policy_vm#name DataAzurermBackupPolicyVm#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/backup_policy_vm#name DataAzurermBackupPolicyVm#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/backup_policy_vm#recovery_vault_name DataAzurermBackupPolicyVm#recovery_vault_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/backup_policy_vm#recovery_vault_name DataAzurermBackupPolicyVm#recovery_vault_name}
   */
   readonly recoveryVaultName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/backup_policy_vm#resource_group_name DataAzurermBackupPolicyVm#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/backup_policy_vm#resource_group_name DataAzurermBackupPolicyVm#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/backup_policy_vm#timeouts DataAzurermBackupPolicyVm#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/backup_policy_vm#timeouts DataAzurermBackupPolicyVm#timeouts}
   */
   readonly timeouts?: DataAzurermBackupPolicyVmTimeouts;
 }
 export interface DataAzurermBackupPolicyVmTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/backup_policy_vm#read DataAzurermBackupPolicyVm#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/backup_policy_vm#read DataAzurermBackupPolicyVm#read}
   */
   readonly read?: string;
 }
@@ -115,7 +115,7 @@ export class DataAzurermBackupPolicyVmTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/backup_policy_vm azurerm_backup_policy_vm}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/backup_policy_vm azurerm_backup_policy_vm}
 */
 export class DataAzurermBackupPolicyVm extends cdktf.TerraformDataSource {
 
@@ -131,7 +131,7 @@ export class DataAzurermBackupPolicyVm extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermBackupPolicyVm resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermBackupPolicyVm to import
-  * @param importFromId The id of the existing DataAzurermBackupPolicyVm that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/backup_policy_vm#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermBackupPolicyVm that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/backup_policy_vm#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermBackupPolicyVm to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -143,7 +143,7 @@ export class DataAzurermBackupPolicyVm extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.77.0/docs/data-sources/backup_policy_vm azurerm_backup_policy_vm} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/backup_policy_vm azurerm_backup_policy_vm} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -154,7 +154,7 @@ export class DataAzurermBackupPolicyVm extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_backup_policy_vm',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.77.0',
+        providerVersion: '3.78.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

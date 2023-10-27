@@ -1079,6 +1079,7 @@ The following submodules are available:
 - [resourceGroupPolicyRemediation](./resourceGroupPolicyRemediation.java.md)
 - [resourceGroupTemplateDeployment](./resourceGroupTemplateDeployment.java.md)
 - [resourceManagementPrivateLink](./resourceManagementPrivateLink.java.md)
+- [resourceManagementPrivateLinkAssociation](./resourceManagementPrivateLinkAssociation.java.md)
 - [resourcePolicyAssignment](./resourcePolicyAssignment.java.md)
 - [resourcePolicyExemption](./resourcePolicyExemption.java.md)
 - [resourcePolicyRemediation](./resourcePolicyRemediation.java.md)

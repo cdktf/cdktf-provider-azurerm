@@ -755,6 +755,7 @@ export * as resourceGroupPolicyExemption from './resource-group-policy-exemption
 export * as resourceGroupPolicyRemediation from './resource-group-policy-remediation';
 export * as resourceGroupTemplateDeployment from './resource-group-template-deployment';
 export * as resourceManagementPrivateLink from './resource-management-private-link';
+export * as resourceManagementPrivateLinkAssociation from './resource-management-private-link-association';
 export * as resourcePolicyAssignment from './resource-policy-assignment';
 export * as resourcePolicyExemption from './resource-policy-exemption';
 export * as resourcePolicyRemediation from './resource-policy-remediation';
