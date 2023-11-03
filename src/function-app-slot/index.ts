@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,100 +13,100 @@ import * as cdktf from 'cdktf';
 
 export interface FunctionAppSlotConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#app_service_plan_id FunctionAppSlot#app_service_plan_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#app_service_plan_id FunctionAppSlot#app_service_plan_id}
   */
   readonly appServicePlanId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#app_settings FunctionAppSlot#app_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#app_settings FunctionAppSlot#app_settings}
   */
   readonly appSettings?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#daily_memory_time_quota FunctionAppSlot#daily_memory_time_quota}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#daily_memory_time_quota FunctionAppSlot#daily_memory_time_quota}
   */
   readonly dailyMemoryTimeQuota?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#enable_builtin_logging FunctionAppSlot#enable_builtin_logging}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#enable_builtin_logging FunctionAppSlot#enable_builtin_logging}
   */
   readonly enableBuiltinLogging?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#enabled FunctionAppSlot#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#enabled FunctionAppSlot#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#function_app_name FunctionAppSlot#function_app_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#function_app_name FunctionAppSlot#function_app_name}
   */
   readonly functionAppName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#https_only FunctionAppSlot#https_only}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#https_only FunctionAppSlot#https_only}
   */
   readonly httpsOnly?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#id FunctionAppSlot#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#id FunctionAppSlot#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#location FunctionAppSlot#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#location FunctionAppSlot#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#name FunctionAppSlot#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#name FunctionAppSlot#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#os_type FunctionAppSlot#os_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#os_type FunctionAppSlot#os_type}
   */
   readonly osType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#resource_group_name FunctionAppSlot#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#resource_group_name FunctionAppSlot#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#storage_account_access_key FunctionAppSlot#storage_account_access_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#storage_account_access_key FunctionAppSlot#storage_account_access_key}
   */
   readonly storageAccountAccessKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#storage_account_name FunctionAppSlot#storage_account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#storage_account_name FunctionAppSlot#storage_account_name}
   */
   readonly storageAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#tags FunctionAppSlot#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#tags FunctionAppSlot#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#version FunctionAppSlot#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#version FunctionAppSlot#version}
   */
   readonly version?: string;
   /**
   * auth_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#auth_settings FunctionAppSlot#auth_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#auth_settings FunctionAppSlot#auth_settings}
   */
   readonly authSettings?: FunctionAppSlotAuthSettings;
   /**
   * connection_string block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#connection_string FunctionAppSlot#connection_string}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#connection_string FunctionAppSlot#connection_string}
   */
   readonly connectionString?: FunctionAppSlotConnectionString[] | cdktf.IResolvable;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#identity FunctionAppSlot#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#identity FunctionAppSlot#identity}
   */
   readonly identity?: FunctionAppSlotIdentity;
   /**
   * site_config block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#site_config FunctionAppSlot#site_config}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#site_config FunctionAppSlot#site_config}
   */
   readonly siteConfig?: FunctionAppSlotSiteConfig;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#timeouts FunctionAppSlot#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#timeouts FunctionAppSlot#timeouts}
   */
   readonly timeouts?: FunctionAppSlotTimeouts;
 }
@@ -181,15 +181,15 @@ export class FunctionAppSlotSiteCredentialList extends cdktf.ComplexList {
 }
 export interface FunctionAppSlotAuthSettingsActiveDirectory {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#allowed_audiences FunctionAppSlot#allowed_audiences}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#allowed_audiences FunctionAppSlot#allowed_audiences}
   */
   readonly allowedAudiences?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#client_id FunctionAppSlot#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#client_id FunctionAppSlot#client_id}
   */
   readonly clientId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#client_secret FunctionAppSlot#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#client_secret FunctionAppSlot#client_secret}
   */
   readonly clientSecret?: string;
 }
@@ -297,15 +297,15 @@ export class FunctionAppSlotAuthSettingsActiveDirectoryOutputReference extends c
 }
 export interface FunctionAppSlotAuthSettingsFacebook {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#app_id FunctionAppSlot#app_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#app_id FunctionAppSlot#app_id}
   */
   readonly appId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#app_secret FunctionAppSlot#app_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#app_secret FunctionAppSlot#app_secret}
   */
   readonly appSecret: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#oauth_scopes FunctionAppSlot#oauth_scopes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#oauth_scopes FunctionAppSlot#oauth_scopes}
   */
   readonly oauthScopes?: string[];
 }
@@ -410,15 +410,15 @@ export class FunctionAppSlotAuthSettingsFacebookOutputReference extends cdktf.Co
 }
 export interface FunctionAppSlotAuthSettingsGoogle {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#client_id FunctionAppSlot#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#client_id FunctionAppSlot#client_id}
   */
   readonly clientId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#client_secret FunctionAppSlot#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#client_secret FunctionAppSlot#client_secret}
   */
   readonly clientSecret: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#oauth_scopes FunctionAppSlot#oauth_scopes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#oauth_scopes FunctionAppSlot#oauth_scopes}
   */
   readonly oauthScopes?: string[];
 }
@@ -523,15 +523,15 @@ export class FunctionAppSlotAuthSettingsGoogleOutputReference extends cdktf.Comp
 }
 export interface FunctionAppSlotAuthSettingsMicrosoft {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#client_id FunctionAppSlot#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#client_id FunctionAppSlot#client_id}
   */
   readonly clientId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#client_secret FunctionAppSlot#client_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#client_secret FunctionAppSlot#client_secret}
   */
   readonly clientSecret: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#oauth_scopes FunctionAppSlot#oauth_scopes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#oauth_scopes FunctionAppSlot#oauth_scopes}
   */
   readonly oauthScopes?: string[];
 }
@@ -636,11 +636,11 @@ export class FunctionAppSlotAuthSettingsMicrosoftOutputReference extends cdktf.C
 }
 export interface FunctionAppSlotAuthSettingsTwitter {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#consumer_key FunctionAppSlot#consumer_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#consumer_key FunctionAppSlot#consumer_key}
   */
   readonly consumerKey: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#consumer_secret FunctionAppSlot#consumer_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#consumer_secret FunctionAppSlot#consumer_secret}
   */
   readonly consumerSecret: string;
 }
@@ -722,69 +722,69 @@ export class FunctionAppSlotAuthSettingsTwitterOutputReference extends cdktf.Com
 }
 export interface FunctionAppSlotAuthSettings {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#additional_login_params FunctionAppSlot#additional_login_params}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#additional_login_params FunctionAppSlot#additional_login_params}
   */
   readonly additionalLoginParams?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#allowed_external_redirect_urls FunctionAppSlot#allowed_external_redirect_urls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#allowed_external_redirect_urls FunctionAppSlot#allowed_external_redirect_urls}
   */
   readonly allowedExternalRedirectUrls?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#default_provider FunctionAppSlot#default_provider}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#default_provider FunctionAppSlot#default_provider}
   */
   readonly defaultProvider?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#enabled FunctionAppSlot#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#enabled FunctionAppSlot#enabled}
   */
   readonly enabled: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#issuer FunctionAppSlot#issuer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#issuer FunctionAppSlot#issuer}
   */
   readonly issuer?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#runtime_version FunctionAppSlot#runtime_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#runtime_version FunctionAppSlot#runtime_version}
   */
   readonly runtimeVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#token_refresh_extension_hours FunctionAppSlot#token_refresh_extension_hours}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#token_refresh_extension_hours FunctionAppSlot#token_refresh_extension_hours}
   */
   readonly tokenRefreshExtensionHours?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#token_store_enabled FunctionAppSlot#token_store_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#token_store_enabled FunctionAppSlot#token_store_enabled}
   */
   readonly tokenStoreEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#unauthenticated_client_action FunctionAppSlot#unauthenticated_client_action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#unauthenticated_client_action FunctionAppSlot#unauthenticated_client_action}
   */
   readonly unauthenticatedClientAction?: string;
   /**
   * active_directory block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#active_directory FunctionAppSlot#active_directory}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#active_directory FunctionAppSlot#active_directory}
   */
   readonly activeDirectory?: FunctionAppSlotAuthSettingsActiveDirectory;
   /**
   * facebook block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#facebook FunctionAppSlot#facebook}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#facebook FunctionAppSlot#facebook}
   */
   readonly facebook?: FunctionAppSlotAuthSettingsFacebook;
   /**
   * google block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#google FunctionAppSlot#google}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#google FunctionAppSlot#google}
   */
   readonly google?: FunctionAppSlotAuthSettingsGoogle;
   /**
   * microsoft block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#microsoft FunctionAppSlot#microsoft}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#microsoft FunctionAppSlot#microsoft}
   */
   readonly microsoft?: FunctionAppSlotAuthSettingsMicrosoft;
   /**
   * twitter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#twitter FunctionAppSlot#twitter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#twitter FunctionAppSlot#twitter}
   */
   readonly twitter?: FunctionAppSlotAuthSettingsTwitter;
 }
@@ -1145,15 +1145,15 @@ export class FunctionAppSlotAuthSettingsOutputReference extends cdktf.ComplexObj
 }
 export interface FunctionAppSlotConnectionString {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#name FunctionAppSlot#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#name FunctionAppSlot#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#type FunctionAppSlot#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#type FunctionAppSlot#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#value FunctionAppSlot#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#value FunctionAppSlot#value}
   */
   readonly value: string;
 }
@@ -1287,11 +1287,11 @@ export class FunctionAppSlotConnectionStringList extends cdktf.ComplexList {
 }
 export interface FunctionAppSlotIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#identity_ids FunctionAppSlot#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#identity_ids FunctionAppSlot#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#type FunctionAppSlot#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#type FunctionAppSlot#type}
   */
   readonly type: string;
 }
@@ -1386,19 +1386,19 @@ export class FunctionAppSlotIdentityOutputReference extends cdktf.ComplexObject 
 }
 export interface FunctionAppSlotSiteConfigIpRestrictionHeaders {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#x_azure_fdid FunctionAppSlot#x_azure_fdid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#x_azure_fdid FunctionAppSlot#x_azure_fdid}
   */
   readonly xAzureFdid?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#x_fd_health_probe FunctionAppSlot#x_fd_health_probe}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#x_fd_health_probe FunctionAppSlot#x_fd_health_probe}
   */
   readonly xFdHealthProbe?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#x_forwarded_for FunctionAppSlot#x_forwarded_for}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#x_forwarded_for FunctionAppSlot#x_forwarded_for}
   */
   readonly xForwardedFor?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#x_forwarded_host FunctionAppSlot#x_forwarded_host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#x_forwarded_host FunctionAppSlot#x_forwarded_host}
   */
   readonly xForwardedHost?: string[];
 }
@@ -1564,31 +1564,31 @@ export class FunctionAppSlotSiteConfigIpRestrictionHeadersList extends cdktf.Com
 }
 export interface FunctionAppSlotSiteConfigIpRestriction {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#action FunctionAppSlot#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#action FunctionAppSlot#action}
   */
   readonly action?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#headers FunctionAppSlot#headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#headers FunctionAppSlot#headers}
   */
   readonly headers?: FunctionAppSlotSiteConfigIpRestrictionHeaders[] | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#ip_address FunctionAppSlot#ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#ip_address FunctionAppSlot#ip_address}
   */
   readonly ipAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#name FunctionAppSlot#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#name FunctionAppSlot#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#priority FunctionAppSlot#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#priority FunctionAppSlot#priority}
   */
   readonly priority?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#service_tag FunctionAppSlot#service_tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#service_tag FunctionAppSlot#service_tag}
   */
   readonly serviceTag?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#virtual_network_subnet_id FunctionAppSlot#virtual_network_subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#virtual_network_subnet_id FunctionAppSlot#virtual_network_subnet_id}
   */
   readonly virtualNetworkSubnetId?: string;
 }
@@ -1823,19 +1823,19 @@ export class FunctionAppSlotSiteConfigIpRestrictionList extends cdktf.ComplexLis
 }
 export interface FunctionAppSlotSiteConfigScmIpRestrictionHeaders {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#x_azure_fdid FunctionAppSlot#x_azure_fdid}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#x_azure_fdid FunctionAppSlot#x_azure_fdid}
   */
   readonly xAzureFdid?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#x_fd_health_probe FunctionAppSlot#x_fd_health_probe}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#x_fd_health_probe FunctionAppSlot#x_fd_health_probe}
   */
   readonly xFdHealthProbe?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#x_forwarded_for FunctionAppSlot#x_forwarded_for}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#x_forwarded_for FunctionAppSlot#x_forwarded_for}
   */
   readonly xForwardedFor?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#x_forwarded_host FunctionAppSlot#x_forwarded_host}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#x_forwarded_host FunctionAppSlot#x_forwarded_host}
   */
   readonly xForwardedHost?: string[];
 }
@@ -2001,31 +2001,31 @@ export class FunctionAppSlotSiteConfigScmIpRestrictionHeadersList extends cdktf.
 }
 export interface FunctionAppSlotSiteConfigScmIpRestriction {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#action FunctionAppSlot#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#action FunctionAppSlot#action}
   */
   readonly action?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#headers FunctionAppSlot#headers}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#headers FunctionAppSlot#headers}
   */
   readonly headers?: FunctionAppSlotSiteConfigScmIpRestrictionHeaders[] | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#ip_address FunctionAppSlot#ip_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#ip_address FunctionAppSlot#ip_address}
   */
   readonly ipAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#name FunctionAppSlot#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#name FunctionAppSlot#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#priority FunctionAppSlot#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#priority FunctionAppSlot#priority}
   */
   readonly priority?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#service_tag FunctionAppSlot#service_tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#service_tag FunctionAppSlot#service_tag}
   */
   readonly serviceTag?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#virtual_network_subnet_id FunctionAppSlot#virtual_network_subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#virtual_network_subnet_id FunctionAppSlot#virtual_network_subnet_id}
   */
   readonly virtualNetworkSubnetId?: string;
 }
@@ -2260,11 +2260,11 @@ export class FunctionAppSlotSiteConfigScmIpRestrictionList extends cdktf.Complex
 }
 export interface FunctionAppSlotSiteConfigCors {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#allowed_origins FunctionAppSlot#allowed_origins}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#allowed_origins FunctionAppSlot#allowed_origins}
   */
   readonly allowedOrigins: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#support_credentials FunctionAppSlot#support_credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#support_credentials FunctionAppSlot#support_credentials}
   */
   readonly supportCredentials?: boolean | cdktf.IResolvable;
 }
@@ -2349,89 +2349,89 @@ export class FunctionAppSlotSiteConfigCorsOutputReference extends cdktf.ComplexO
 }
 export interface FunctionAppSlotSiteConfig {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#always_on FunctionAppSlot#always_on}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#always_on FunctionAppSlot#always_on}
   */
   readonly alwaysOn?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#app_scale_limit FunctionAppSlot#app_scale_limit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#app_scale_limit FunctionAppSlot#app_scale_limit}
   */
   readonly appScaleLimit?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#auto_swap_slot_name FunctionAppSlot#auto_swap_slot_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#auto_swap_slot_name FunctionAppSlot#auto_swap_slot_name}
   */
   readonly autoSwapSlotName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#dotnet_framework_version FunctionAppSlot#dotnet_framework_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#dotnet_framework_version FunctionAppSlot#dotnet_framework_version}
   */
   readonly dotnetFrameworkVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#elastic_instance_minimum FunctionAppSlot#elastic_instance_minimum}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#elastic_instance_minimum FunctionAppSlot#elastic_instance_minimum}
   */
   readonly elasticInstanceMinimum?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#ftps_state FunctionAppSlot#ftps_state}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#ftps_state FunctionAppSlot#ftps_state}
   */
   readonly ftpsState?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#health_check_path FunctionAppSlot#health_check_path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#health_check_path FunctionAppSlot#health_check_path}
   */
   readonly healthCheckPath?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#http2_enabled FunctionAppSlot#http2_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#http2_enabled FunctionAppSlot#http2_enabled}
   */
   readonly http2Enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#ip_restriction FunctionAppSlot#ip_restriction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#ip_restriction FunctionAppSlot#ip_restriction}
   */
   readonly ipRestriction?: FunctionAppSlotSiteConfigIpRestriction[] | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#java_version FunctionAppSlot#java_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#java_version FunctionAppSlot#java_version}
   */
   readonly javaVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#linux_fx_version FunctionAppSlot#linux_fx_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#linux_fx_version FunctionAppSlot#linux_fx_version}
   */
   readonly linuxFxVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#min_tls_version FunctionAppSlot#min_tls_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#min_tls_version FunctionAppSlot#min_tls_version}
   */
   readonly minTlsVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#pre_warmed_instance_count FunctionAppSlot#pre_warmed_instance_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#pre_warmed_instance_count FunctionAppSlot#pre_warmed_instance_count}
   */
   readonly preWarmedInstanceCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#runtime_scale_monitoring_enabled FunctionAppSlot#runtime_scale_monitoring_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#runtime_scale_monitoring_enabled FunctionAppSlot#runtime_scale_monitoring_enabled}
   */
   readonly runtimeScaleMonitoringEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#scm_ip_restriction FunctionAppSlot#scm_ip_restriction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#scm_ip_restriction FunctionAppSlot#scm_ip_restriction}
   */
   readonly scmIpRestriction?: FunctionAppSlotSiteConfigScmIpRestriction[] | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#scm_type FunctionAppSlot#scm_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#scm_type FunctionAppSlot#scm_type}
   */
   readonly scmType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#scm_use_main_ip_restriction FunctionAppSlot#scm_use_main_ip_restriction}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#scm_use_main_ip_restriction FunctionAppSlot#scm_use_main_ip_restriction}
   */
   readonly scmUseMainIpRestriction?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#use_32_bit_worker_process FunctionAppSlot#use_32_bit_worker_process}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#use_32_bit_worker_process FunctionAppSlot#use_32_bit_worker_process}
   */
   readonly use32BitWorkerProcess?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#vnet_route_all_enabled FunctionAppSlot#vnet_route_all_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#vnet_route_all_enabled FunctionAppSlot#vnet_route_all_enabled}
   */
   readonly vnetRouteAllEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#websockets_enabled FunctionAppSlot#websockets_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#websockets_enabled FunctionAppSlot#websockets_enabled}
   */
   readonly websocketsEnabled?: boolean | cdktf.IResolvable;
   /**
   * cors block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#cors FunctionAppSlot#cors}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#cors FunctionAppSlot#cors}
   */
   readonly cors?: FunctionAppSlotSiteConfigCors;
 }
@@ -2956,19 +2956,19 @@ export class FunctionAppSlotSiteConfigOutputReference extends cdktf.ComplexObjec
 }
 export interface FunctionAppSlotTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#create FunctionAppSlot#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#create FunctionAppSlot#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#delete FunctionAppSlot#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#delete FunctionAppSlot#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#read FunctionAppSlot#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#read FunctionAppSlot#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#update FunctionAppSlot#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#update FunctionAppSlot#update}
   */
   readonly update?: string;
 }
@@ -3112,7 +3112,7 @@ export class FunctionAppSlotTimeoutsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot azurerm_function_app_slot}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot azurerm_function_app_slot}
 */
 export class FunctionAppSlot extends cdktf.TerraformResource {
 
@@ -3128,7 +3128,7 @@ export class FunctionAppSlot extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a FunctionAppSlot resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the FunctionAppSlot to import
-  * @param importFromId The id of the existing FunctionAppSlot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing FunctionAppSlot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the FunctionAppSlot to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -3140,7 +3140,7 @@ export class FunctionAppSlot extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_slot azurerm_function_app_slot} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_slot azurerm_function_app_slot} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -3151,7 +3151,7 @@ export class FunctionAppSlot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_function_app_slot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.78.0',
+        providerVersion: '3.79.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

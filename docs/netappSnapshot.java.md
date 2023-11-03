@@ -1,6 +1,6 @@
 # `azurerm_netapp_snapshot`
 
-Refer to the Terraform Registory for docs: [`azurerm_netapp_snapshot`](https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot).
+Refer to the Terraform Registory for docs: [`azurerm_netapp_snapshot`](https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot).
 
 # `netappSnapshot` Submodule <a name="`netappSnapshot` Submodule" id="@cdktf/provider-azurerm.netappSnapshot"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_netapp_snapshot`](https://r
 
 ### NetappSnapshot <a name="NetappSnapshot" id="@cdktf/provider-azurerm.netappSnapshot.NetappSnapshot"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot azurerm_netapp_snapshot}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot azurerm_netapp_snapshot}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappSnapshot.NetappSnapshot.Initializer"></a>
 
@@ -49,13 +49,13 @@ NetappSnapshot.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshot.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshot.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshot.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshot.Initializer.parameter.accountName">accountName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#account_name NetappSnapshot#account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshot.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#location NetappSnapshot#location}. |
-| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshot.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#name NetappSnapshot#name}. |
-| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshot.Initializer.parameter.poolName">poolName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#pool_name NetappSnapshot#pool_name}. |
-| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshot.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#resource_group_name NetappSnapshot#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshot.Initializer.parameter.volumeName">volumeName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#volume_name NetappSnapshot#volume_name}. |
-| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshot.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#id NetappSnapshot#id}. |
+| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshot.Initializer.parameter.accountName">accountName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#account_name NetappSnapshot#account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshot.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#location NetappSnapshot#location}. |
+| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshot.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#name NetappSnapshot#name}. |
+| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshot.Initializer.parameter.poolName">poolName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#pool_name NetappSnapshot#pool_name}. |
+| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshot.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#resource_group_name NetappSnapshot#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshot.Initializer.parameter.volumeName">volumeName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#volume_name NetappSnapshot#volume_name}. |
+| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshot.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#id NetappSnapshot#id}. |
 | <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshot.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotTimeouts">NetappSnapshotTimeouts</a></code> | timeouts block. |
 
 ---
@@ -124,7 +124,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#account_name NetappSnapshot#account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#account_name NetappSnapshot#account_name}.
 
 ---
 
@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#location NetappSnapshot#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#location NetappSnapshot#location}.
 
 ---
 
@@ -140,7 +140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#name NetappSnapshot#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#name NetappSnapshot#name}.
 
 ---
 
@@ -148,7 +148,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#pool_name NetappSnapshot#pool_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#pool_name NetappSnapshot#pool_name}.
 
 ---
 
@@ -156,7 +156,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#resource_group_name NetappSnapshot#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#resource_group_name NetappSnapshot#resource_group_name}.
 
 ---
 
@@ -164,7 +164,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#volume_name NetappSnapshot#volume_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#volume_name NetappSnapshot#volume_name}.
 
 ---
 
@@ -172,7 +172,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#id NetappSnapshot#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#id NetappSnapshot#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -185,7 +185,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#timeouts NetappSnapshot#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#timeouts NetappSnapshot#timeouts}
 
 ---
 
@@ -589,7 +589,7 @@ The construct id used in the generated config for the NetappSnapshot to import.
 
 The id of the existing NetappSnapshot that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1001,13 +1001,13 @@ NetappSnapshotConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotConfig.property.accountName">accountName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#account_name NetappSnapshot#account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#location NetappSnapshot#location}. |
-| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#name NetappSnapshot#name}. |
-| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotConfig.property.poolName">poolName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#pool_name NetappSnapshot#pool_name}. |
-| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#resource_group_name NetappSnapshot#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotConfig.property.volumeName">volumeName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#volume_name NetappSnapshot#volume_name}. |
-| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#id NetappSnapshot#id}. |
+| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotConfig.property.accountName">accountName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#account_name NetappSnapshot#account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#location NetappSnapshot#location}. |
+| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#name NetappSnapshot#name}. |
+| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotConfig.property.poolName">poolName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#pool_name NetappSnapshot#pool_name}. |
+| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#resource_group_name NetappSnapshot#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotConfig.property.volumeName">volumeName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#volume_name NetappSnapshot#volume_name}. |
+| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#id NetappSnapshot#id}. |
 | <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotTimeouts">NetappSnapshotTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1090,7 +1090,7 @@ public java.lang.String getAccountName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#account_name NetappSnapshot#account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#account_name NetappSnapshot#account_name}.
 
 ---
 
@@ -1102,7 +1102,7 @@ public java.lang.String getLocation();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#location NetappSnapshot#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#location NetappSnapshot#location}.
 
 ---
 
@@ -1114,7 +1114,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#name NetappSnapshot#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#name NetappSnapshot#name}.
 
 ---
 
@@ -1126,7 +1126,7 @@ public java.lang.String getPoolName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#pool_name NetappSnapshot#pool_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#pool_name NetappSnapshot#pool_name}.
 
 ---
 
@@ -1138,7 +1138,7 @@ public java.lang.String getResourceGroupName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#resource_group_name NetappSnapshot#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#resource_group_name NetappSnapshot#resource_group_name}.
 
 ---
 
@@ -1150,7 +1150,7 @@ public java.lang.String getVolumeName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#volume_name NetappSnapshot#volume_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#volume_name NetappSnapshot#volume_name}.
 
 ---
 
@@ -1162,7 +1162,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#id NetappSnapshot#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#id NetappSnapshot#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1179,7 +1179,7 @@ public NetappSnapshotTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#timeouts NetappSnapshot#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#timeouts NetappSnapshot#timeouts}
 
 ---
 
@@ -1202,10 +1202,10 @@ NetappSnapshotTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#create NetappSnapshot#create}. |
-| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#delete NetappSnapshot#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#read NetappSnapshot#read}. |
-| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#update NetappSnapshot#update}. |
+| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#create NetappSnapshot#create}. |
+| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#delete NetappSnapshot#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#read NetappSnapshot#read}. |
+| <code><a href="#@cdktf/provider-azurerm.netappSnapshot.NetappSnapshotTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#update NetappSnapshot#update}. |
 
 ---
 
@@ -1217,7 +1217,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#create NetappSnapshot#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#create NetappSnapshot#create}.
 
 ---
 
@@ -1229,7 +1229,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#delete NetappSnapshot#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#delete NetappSnapshot#delete}.
 
 ---
 
@@ -1241,7 +1241,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#read NetappSnapshot#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#read NetappSnapshot#read}.
 
 ---
 
@@ -1253,7 +1253,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/netapp_snapshot#update NetappSnapshot#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/netapp_snapshot#update NetappSnapshot#update}.
 
 ---
 

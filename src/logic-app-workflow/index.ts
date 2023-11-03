@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,78 +13,78 @@ import * as cdktf from 'cdktf';
 
 export interface LogicAppWorkflowConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#enabled LogicAppWorkflow#enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#enabled LogicAppWorkflow#enabled}
   */
   readonly enabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#id LogicAppWorkflow#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#id LogicAppWorkflow#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#integration_service_environment_id LogicAppWorkflow#integration_service_environment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#integration_service_environment_id LogicAppWorkflow#integration_service_environment_id}
   */
   readonly integrationServiceEnvironmentId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#location LogicAppWorkflow#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#location LogicAppWorkflow#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#logic_app_integration_account_id LogicAppWorkflow#logic_app_integration_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#logic_app_integration_account_id LogicAppWorkflow#logic_app_integration_account_id}
   */
   readonly logicAppIntegrationAccountId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#name LogicAppWorkflow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#name LogicAppWorkflow#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#parameters LogicAppWorkflow#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#parameters LogicAppWorkflow#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#resource_group_name LogicAppWorkflow#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#resource_group_name LogicAppWorkflow#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#tags LogicAppWorkflow#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#tags LogicAppWorkflow#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#workflow_parameters LogicAppWorkflow#workflow_parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#workflow_parameters LogicAppWorkflow#workflow_parameters}
   */
   readonly workflowParameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#workflow_schema LogicAppWorkflow#workflow_schema}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#workflow_schema LogicAppWorkflow#workflow_schema}
   */
   readonly workflowSchema?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#workflow_version LogicAppWorkflow#workflow_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#workflow_version LogicAppWorkflow#workflow_version}
   */
   readonly workflowVersion?: string;
   /**
   * access_control block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#access_control LogicAppWorkflow#access_control}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#access_control LogicAppWorkflow#access_control}
   */
   readonly accessControl?: LogicAppWorkflowAccessControl;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#identity LogicAppWorkflow#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#identity LogicAppWorkflow#identity}
   */
   readonly identity?: LogicAppWorkflowIdentity;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#timeouts LogicAppWorkflow#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#timeouts LogicAppWorkflow#timeouts}
   */
   readonly timeouts?: LogicAppWorkflowTimeouts;
 }
 export interface LogicAppWorkflowAccessControlAction {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#allowed_caller_ip_address_range LogicAppWorkflow#allowed_caller_ip_address_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#allowed_caller_ip_address_range LogicAppWorkflow#allowed_caller_ip_address_range}
   */
   readonly allowedCallerIpAddressRange: string[];
 }
@@ -146,7 +146,7 @@ export class LogicAppWorkflowAccessControlActionOutputReference extends cdktf.Co
 }
 export interface LogicAppWorkflowAccessControlContent {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#allowed_caller_ip_address_range LogicAppWorkflow#allowed_caller_ip_address_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#allowed_caller_ip_address_range LogicAppWorkflow#allowed_caller_ip_address_range}
   */
   readonly allowedCallerIpAddressRange: string[];
 }
@@ -208,11 +208,11 @@ export class LogicAppWorkflowAccessControlContentOutputReference extends cdktf.C
 }
 export interface LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaim {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#name LogicAppWorkflow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#name LogicAppWorkflow#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#value LogicAppWorkflow#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#value LogicAppWorkflow#value}
   */
   readonly value: string;
 }
@@ -326,13 +326,13 @@ export class LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaimLi
 }
 export interface LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#name LogicAppWorkflow#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#name LogicAppWorkflow#name}
   */
   readonly name: string;
   /**
   * claim block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#claim LogicAppWorkflow#claim}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#claim LogicAppWorkflow#claim}
   */
   readonly claim: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyClaim[] | cdktf.IResolvable;
 }
@@ -446,13 +446,13 @@ export class LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicyList ex
 }
 export interface LogicAppWorkflowAccessControlTrigger {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#allowed_caller_ip_address_range LogicAppWorkflow#allowed_caller_ip_address_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#allowed_caller_ip_address_range LogicAppWorkflow#allowed_caller_ip_address_range}
   */
   readonly allowedCallerIpAddressRange: string[];
   /**
   * open_authentication_policy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#open_authentication_policy LogicAppWorkflow#open_authentication_policy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#open_authentication_policy LogicAppWorkflow#open_authentication_policy}
   */
   readonly openAuthenticationPolicy?: LogicAppWorkflowAccessControlTriggerOpenAuthenticationPolicy[] | cdktf.IResolvable;
 }
@@ -537,7 +537,7 @@ export class LogicAppWorkflowAccessControlTriggerOutputReference extends cdktf.C
 }
 export interface LogicAppWorkflowAccessControlWorkflowManagement {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#allowed_caller_ip_address_range LogicAppWorkflow#allowed_caller_ip_address_range}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#allowed_caller_ip_address_range LogicAppWorkflow#allowed_caller_ip_address_range}
   */
   readonly allowedCallerIpAddressRange: string[];
 }
@@ -601,25 +601,25 @@ export interface LogicAppWorkflowAccessControl {
   /**
   * action block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#action LogicAppWorkflow#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#action LogicAppWorkflow#action}
   */
   readonly action?: LogicAppWorkflowAccessControlAction;
   /**
   * content block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#content LogicAppWorkflow#content}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#content LogicAppWorkflow#content}
   */
   readonly content?: LogicAppWorkflowAccessControlContent;
   /**
   * trigger block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#trigger LogicAppWorkflow#trigger}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#trigger LogicAppWorkflow#trigger}
   */
   readonly trigger?: LogicAppWorkflowAccessControlTrigger;
   /**
   * workflow_management block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#workflow_management LogicAppWorkflow#workflow_management}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#workflow_management LogicAppWorkflow#workflow_management}
   */
   readonly workflowManagement?: LogicAppWorkflowAccessControlWorkflowManagement;
 }
@@ -753,11 +753,11 @@ export class LogicAppWorkflowAccessControlOutputReference extends cdktf.ComplexO
 }
 export interface LogicAppWorkflowIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#identity_ids LogicAppWorkflow#identity_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#identity_ids LogicAppWorkflow#identity_ids}
   */
   readonly identityIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#type LogicAppWorkflow#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#type LogicAppWorkflow#type}
   */
   readonly type: string;
 }
@@ -852,19 +852,19 @@ export class LogicAppWorkflowIdentityOutputReference extends cdktf.ComplexObject
 }
 export interface LogicAppWorkflowTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#create LogicAppWorkflow#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#create LogicAppWorkflow#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#delete LogicAppWorkflow#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#delete LogicAppWorkflow#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#read LogicAppWorkflow#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#read LogicAppWorkflow#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#update LogicAppWorkflow#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#update LogicAppWorkflow#update}
   */
   readonly update?: string;
 }
@@ -1008,7 +1008,7 @@ export class LogicAppWorkflowTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow azurerm_logic_app_workflow}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow azurerm_logic_app_workflow}
 */
 export class LogicAppWorkflow extends cdktf.TerraformResource {
 
@@ -1024,7 +1024,7 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a LogicAppWorkflow resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the LogicAppWorkflow to import
-  * @param importFromId The id of the existing LogicAppWorkflow that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing LogicAppWorkflow that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the LogicAppWorkflow to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1036,7 +1036,7 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/logic_app_workflow azurerm_logic_app_workflow} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logic_app_workflow azurerm_logic_app_workflow} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1047,7 +1047,7 @@ export class LogicAppWorkflow extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_logic_app_workflow',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.78.0',
+        providerVersion: '3.79.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

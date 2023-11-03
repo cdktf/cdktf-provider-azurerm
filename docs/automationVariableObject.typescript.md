@@ -1,6 +1,6 @@
 # `azurerm_automation_variable_object`
 
-Refer to the Terraform Registory for docs: [`azurerm_automation_variable_object`](https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object).
+Refer to the Terraform Registory for docs: [`azurerm_automation_variable_object`](https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object).
 
 # `automationVariableObject` Submodule <a name="`automationVariableObject` Submodule" id="@cdktf/provider-azurerm.automationVariableObject"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_automation_variable_object`
 
 ### AutomationVariableObject <a name="AutomationVariableObject" id="@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObject"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object azurerm_automation_variable_object}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object azurerm_automation_variable_object}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObject.Initializer"></a>
 
@@ -469,7 +469,7 @@ The construct id used in the generated config for the AutomationVariableObject t
 
 The id of the existing AutomationVariableObject that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -861,14 +861,14 @@ const automationVariableObjectConfig: automationVariableObject.AutomationVariabl
 | <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectConfig.property.automationAccountName">automationAccountName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#automation_account_name AutomationVariableObject#automation_account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#name AutomationVariableObject#name}. |
-| <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#resource_group_name AutomationVariableObject#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectConfig.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#description AutomationVariableObject#description}. |
-| <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectConfig.property.encrypted">encrypted</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#encrypted AutomationVariableObject#encrypted}. |
-| <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#id AutomationVariableObject#id}. |
+| <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectConfig.property.automationAccountName">automationAccountName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#automation_account_name AutomationVariableObject#automation_account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#name AutomationVariableObject#name}. |
+| <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#resource_group_name AutomationVariableObject#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectConfig.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#description AutomationVariableObject#description}. |
+| <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectConfig.property.encrypted">encrypted</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#encrypted AutomationVariableObject#encrypted}. |
+| <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#id AutomationVariableObject#id}. |
 | <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectTimeouts">AutomationVariableObjectTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectConfig.property.value">value</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#value AutomationVariableObject#value}. |
+| <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectConfig.property.value">value</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#value AutomationVariableObject#value}. |
 
 ---
 
@@ -950,7 +950,7 @@ public readonly automationAccountName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#automation_account_name AutomationVariableObject#automation_account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#automation_account_name AutomationVariableObject#automation_account_name}.
 
 ---
 
@@ -962,7 +962,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#name AutomationVariableObject#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#name AutomationVariableObject#name}.
 
 ---
 
@@ -974,7 +974,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#resource_group_name AutomationVariableObject#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#resource_group_name AutomationVariableObject#resource_group_name}.
 
 ---
 
@@ -986,7 +986,7 @@ public readonly description: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#description AutomationVariableObject#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#description AutomationVariableObject#description}.
 
 ---
 
@@ -998,7 +998,7 @@ public readonly encrypted: boolean | IResolvable;
 
 - *Type:* boolean | cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#encrypted AutomationVariableObject#encrypted}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#encrypted AutomationVariableObject#encrypted}.
 
 ---
 
@@ -1010,7 +1010,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#id AutomationVariableObject#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#id AutomationVariableObject#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1027,7 +1027,7 @@ public readonly timeouts: AutomationVariableObjectTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#timeouts AutomationVariableObject#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#timeouts AutomationVariableObject#timeouts}
 
 ---
 
@@ -1039,7 +1039,7 @@ public readonly value: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#value AutomationVariableObject#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#value AutomationVariableObject#value}.
 
 ---
 
@@ -1057,10 +1057,10 @@ const automationVariableObjectTimeouts: automationVariableObject.AutomationVaria
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#create AutomationVariableObject#create}. |
-| <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#delete AutomationVariableObject#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#read AutomationVariableObject#read}. |
-| <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#update AutomationVariableObject#update}. |
+| <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#create AutomationVariableObject#create}. |
+| <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#delete AutomationVariableObject#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#read AutomationVariableObject#read}. |
+| <code><a href="#@cdktf/provider-azurerm.automationVariableObject.AutomationVariableObjectTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#update AutomationVariableObject#update}. |
 
 ---
 
@@ -1072,7 +1072,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#create AutomationVariableObject#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#create AutomationVariableObject#create}.
 
 ---
 
@@ -1084,7 +1084,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#delete AutomationVariableObject#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#delete AutomationVariableObject#delete}.
 
 ---
 
@@ -1096,7 +1096,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#read AutomationVariableObject#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#read AutomationVariableObject#read}.
 
 ---
 
@@ -1108,7 +1108,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#update AutomationVariableObject#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#update AutomationVariableObject#update}.
 
 ---
 

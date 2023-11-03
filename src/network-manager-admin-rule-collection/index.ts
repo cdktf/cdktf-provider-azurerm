@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/network_manager_admin_rule_collection
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/network_manager_admin_rule_collection
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +13,50 @@ import * as cdktf from 'cdktf';
 
 export interface NetworkManagerAdminRuleCollectionConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/network_manager_admin_rule_collection#description NetworkManagerAdminRuleCollection#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/network_manager_admin_rule_collection#description NetworkManagerAdminRuleCollection#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/network_manager_admin_rule_collection#id NetworkManagerAdminRuleCollection#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/network_manager_admin_rule_collection#id NetworkManagerAdminRuleCollection#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/network_manager_admin_rule_collection#name NetworkManagerAdminRuleCollection#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/network_manager_admin_rule_collection#name NetworkManagerAdminRuleCollection#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/network_manager_admin_rule_collection#network_group_ids NetworkManagerAdminRuleCollection#network_group_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/network_manager_admin_rule_collection#network_group_ids NetworkManagerAdminRuleCollection#network_group_ids}
   */
   readonly networkGroupIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/network_manager_admin_rule_collection#security_admin_configuration_id NetworkManagerAdminRuleCollection#security_admin_configuration_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/network_manager_admin_rule_collection#security_admin_configuration_id NetworkManagerAdminRuleCollection#security_admin_configuration_id}
   */
   readonly securityAdminConfigurationId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/network_manager_admin_rule_collection#timeouts NetworkManagerAdminRuleCollection#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/network_manager_admin_rule_collection#timeouts NetworkManagerAdminRuleCollection#timeouts}
   */
   readonly timeouts?: NetworkManagerAdminRuleCollectionTimeouts;
 }
 export interface NetworkManagerAdminRuleCollectionTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/network_manager_admin_rule_collection#create NetworkManagerAdminRuleCollection#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/network_manager_admin_rule_collection#create NetworkManagerAdminRuleCollection#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/network_manager_admin_rule_collection#delete NetworkManagerAdminRuleCollection#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/network_manager_admin_rule_collection#delete NetworkManagerAdminRuleCollection#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/network_manager_admin_rule_collection#read NetworkManagerAdminRuleCollection#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/network_manager_admin_rule_collection#read NetworkManagerAdminRuleCollection#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/network_manager_admin_rule_collection#update NetworkManagerAdminRuleCollection#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/network_manager_admin_rule_collection#update NetworkManagerAdminRuleCollection#update}
   */
   readonly update?: string;
 }
@@ -200,7 +200,7 @@ export class NetworkManagerAdminRuleCollectionTimeoutsOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/network_manager_admin_rule_collection azurerm_network_manager_admin_rule_collection}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/network_manager_admin_rule_collection azurerm_network_manager_admin_rule_collection}
 */
 export class NetworkManagerAdminRuleCollection extends cdktf.TerraformResource {
 
@@ -216,7 +216,7 @@ export class NetworkManagerAdminRuleCollection extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NetworkManagerAdminRuleCollection resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetworkManagerAdminRuleCollection to import
-  * @param importFromId The id of the existing NetworkManagerAdminRuleCollection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/network_manager_admin_rule_collection#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetworkManagerAdminRuleCollection that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/network_manager_admin_rule_collection#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetworkManagerAdminRuleCollection to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -228,7 +228,7 @@ export class NetworkManagerAdminRuleCollection extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/network_manager_admin_rule_collection azurerm_network_manager_admin_rule_collection} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/network_manager_admin_rule_collection azurerm_network_manager_admin_rule_collection} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -239,7 +239,7 @@ export class NetworkManagerAdminRuleCollection extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_network_manager_admin_rule_collection',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.78.0',
+        providerVersion: '3.79.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

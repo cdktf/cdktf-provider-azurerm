@@ -644,6 +644,7 @@ Object.defineProperty(exports, 'netappVolumeQuotaRule', { get: function () { ret
 Object.defineProperty(exports, 'networkConnectionMonitor', { get: function () { return require('./network-connection-monitor'); } });
 Object.defineProperty(exports, 'networkDdosProtectionPlan', { get: function () { return require('./network-ddos-protection-plan'); } });
 Object.defineProperty(exports, 'networkFunctionAzureTrafficCollector', { get: function () { return require('./network-function-azure-traffic-collector'); } });
+Object.defineProperty(exports, 'networkFunctionCollectorPolicy', { get: function () { return require('./network-function-collector-policy'); } });
 Object.defineProperty(exports, 'networkInterface', { get: function () { return require('./network-interface'); } });
 Object.defineProperty(exports, 'networkInterfaceApplicationGatewayBackendAddressPoolAssociation', { get: function () { return require('./network-interface-application-gateway-backend-address-pool-association'); } });
 Object.defineProperty(exports, 'networkInterfaceApplicationSecurityGroupAssociation', { get: function () { return require('./network-interface-application-security-group-association'); } });

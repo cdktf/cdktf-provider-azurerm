@@ -1,6 +1,6 @@
 # `azurerm_synapse_workspace_key`
 
-Refer to the Terraform Registory for docs: [`azurerm_synapse_workspace_key`](https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key).
+Refer to the Terraform Registory for docs: [`azurerm_synapse_workspace_key`](https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key).
 
 # `synapseWorkspaceKey` Submodule <a name="`synapseWorkspaceKey` Submodule" id="@cdktf/provider-azurerm.synapseWorkspaceKey"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_synapse_workspace_key`](htt
 
 ### SynapseWorkspaceKey <a name="SynapseWorkspaceKey" id="@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKey"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key azurerm_synapse_workspace_key}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key azurerm_synapse_workspace_key}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKey.Initializer"></a>
 
@@ -45,11 +45,11 @@ synapseWorkspaceKey.SynapseWorkspaceKey(
 | <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKey.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKey.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKey.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKey.Initializer.parameter.active">active</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#active SynapseWorkspaceKey#active}. |
-| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKey.Initializer.parameter.customerManagedKeyName">customer_managed_key_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#customer_managed_key_name SynapseWorkspaceKey#customer_managed_key_name}. |
-| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKey.Initializer.parameter.synapseWorkspaceId">synapse_workspace_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#synapse_workspace_id SynapseWorkspaceKey#synapse_workspace_id}. |
-| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKey.Initializer.parameter.customerManagedKeyVersionlessId">customer_managed_key_versionless_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#customer_managed_key_versionless_id SynapseWorkspaceKey#customer_managed_key_versionless_id}. |
-| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKey.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#id SynapseWorkspaceKey#id}. |
+| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKey.Initializer.parameter.active">active</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#active SynapseWorkspaceKey#active}. |
+| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKey.Initializer.parameter.customerManagedKeyName">customer_managed_key_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#customer_managed_key_name SynapseWorkspaceKey#customer_managed_key_name}. |
+| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKey.Initializer.parameter.synapseWorkspaceId">synapse_workspace_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#synapse_workspace_id SynapseWorkspaceKey#synapse_workspace_id}. |
+| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKey.Initializer.parameter.customerManagedKeyVersionlessId">customer_managed_key_versionless_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#customer_managed_key_versionless_id SynapseWorkspaceKey#customer_managed_key_versionless_id}. |
+| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKey.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#id SynapseWorkspaceKey#id}. |
 | <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKey.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKeyTimeouts">SynapseWorkspaceKeyTimeouts</a></code> | timeouts block. |
 
 ---
@@ -118,7 +118,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#active SynapseWorkspaceKey#active}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#active SynapseWorkspaceKey#active}.
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#customer_managed_key_name SynapseWorkspaceKey#customer_managed_key_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#customer_managed_key_name SynapseWorkspaceKey#customer_managed_key_name}.
 
 ---
 
@@ -134,7 +134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#synapse_workspace_id SynapseWorkspaceKey#synapse_workspace_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#synapse_workspace_id SynapseWorkspaceKey#synapse_workspace_id}.
 
 ---
 
@@ -142,7 +142,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#customer_managed_key_versionless_id SynapseWorkspaceKey#customer_managed_key_versionless_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#customer_managed_key_versionless_id SynapseWorkspaceKey#customer_managed_key_versionless_id}.
 
 ---
 
@@ -150,7 +150,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#id SynapseWorkspaceKey#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#id SynapseWorkspaceKey#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -163,7 +163,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#timeouts SynapseWorkspaceKey#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#timeouts SynapseWorkspaceKey#timeouts}
 
 ---
 
@@ -487,7 +487,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#create SynapseWorkspaceKey#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#create SynapseWorkspaceKey#create}.
 
 ---
 
@@ -495,7 +495,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#delete SynapseWorkspaceKey#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#delete SynapseWorkspaceKey#delete}.
 
 ---
 
@@ -503,7 +503,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#read SynapseWorkspaceKey#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#read SynapseWorkspaceKey#read}.
 
 ---
 
@@ -511,7 +511,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#update SynapseWorkspaceKey#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#update SynapseWorkspaceKey#update}.
 
 ---
 
@@ -647,7 +647,7 @@ The construct id used in the generated config for the SynapseWorkspaceKey to imp
 
 The id of the existing SynapseWorkspaceKey that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1009,11 +1009,11 @@ synapseWorkspaceKey.SynapseWorkspaceKeyConfig(
 | <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKeyConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKeyConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKeyConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKeyConfig.property.active">active</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#active SynapseWorkspaceKey#active}. |
-| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKeyConfig.property.customerManagedKeyName">customer_managed_key_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#customer_managed_key_name SynapseWorkspaceKey#customer_managed_key_name}. |
-| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKeyConfig.property.synapseWorkspaceId">synapse_workspace_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#synapse_workspace_id SynapseWorkspaceKey#synapse_workspace_id}. |
-| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKeyConfig.property.customerManagedKeyVersionlessId">customer_managed_key_versionless_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#customer_managed_key_versionless_id SynapseWorkspaceKey#customer_managed_key_versionless_id}. |
-| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKeyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#id SynapseWorkspaceKey#id}. |
+| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKeyConfig.property.active">active</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#active SynapseWorkspaceKey#active}. |
+| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKeyConfig.property.customerManagedKeyName">customer_managed_key_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#customer_managed_key_name SynapseWorkspaceKey#customer_managed_key_name}. |
+| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKeyConfig.property.synapseWorkspaceId">synapse_workspace_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#synapse_workspace_id SynapseWorkspaceKey#synapse_workspace_id}. |
+| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKeyConfig.property.customerManagedKeyVersionlessId">customer_managed_key_versionless_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#customer_managed_key_versionless_id SynapseWorkspaceKey#customer_managed_key_versionless_id}. |
+| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKeyConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#id SynapseWorkspaceKey#id}. |
 | <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKeyConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKeyTimeouts">SynapseWorkspaceKeyTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1096,7 +1096,7 @@ active: typing.Union[bool, IResolvable]
 
 - *Type:* typing.Union[bool, cdktf.IResolvable]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#active SynapseWorkspaceKey#active}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#active SynapseWorkspaceKey#active}.
 
 ---
 
@@ -1108,7 +1108,7 @@ customer_managed_key_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#customer_managed_key_name SynapseWorkspaceKey#customer_managed_key_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#customer_managed_key_name SynapseWorkspaceKey#customer_managed_key_name}.
 
 ---
 
@@ -1120,7 +1120,7 @@ synapse_workspace_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#synapse_workspace_id SynapseWorkspaceKey#synapse_workspace_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#synapse_workspace_id SynapseWorkspaceKey#synapse_workspace_id}.
 
 ---
 
@@ -1132,7 +1132,7 @@ customer_managed_key_versionless_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#customer_managed_key_versionless_id SynapseWorkspaceKey#customer_managed_key_versionless_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#customer_managed_key_versionless_id SynapseWorkspaceKey#customer_managed_key_versionless_id}.
 
 ---
 
@@ -1144,7 +1144,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#id SynapseWorkspaceKey#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#id SynapseWorkspaceKey#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1161,7 +1161,7 @@ timeouts: SynapseWorkspaceKeyTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#timeouts SynapseWorkspaceKey#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#timeouts SynapseWorkspaceKey#timeouts}
 
 ---
 
@@ -1184,10 +1184,10 @@ synapseWorkspaceKey.SynapseWorkspaceKeyTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKeyTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#create SynapseWorkspaceKey#create}. |
-| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKeyTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#delete SynapseWorkspaceKey#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKeyTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#read SynapseWorkspaceKey#read}. |
-| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKeyTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#update SynapseWorkspaceKey#update}. |
+| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKeyTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#create SynapseWorkspaceKey#create}. |
+| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKeyTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#delete SynapseWorkspaceKey#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKeyTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#read SynapseWorkspaceKey#read}. |
+| <code><a href="#@cdktf/provider-azurerm.synapseWorkspaceKey.SynapseWorkspaceKeyTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#update SynapseWorkspaceKey#update}. |
 
 ---
 
@@ -1199,7 +1199,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#create SynapseWorkspaceKey#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#create SynapseWorkspaceKey#create}.
 
 ---
 
@@ -1211,7 +1211,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#delete SynapseWorkspaceKey#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#delete SynapseWorkspaceKey#delete}.
 
 ---
 
@@ -1223,7 +1223,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#read SynapseWorkspaceKey#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#read SynapseWorkspaceKey#read}.
 
 ---
 
@@ -1235,7 +1235,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/synapse_workspace_key#update SynapseWorkspaceKey#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/synapse_workspace_key#update SynapseWorkspaceKey#update}.
 
 ---
 

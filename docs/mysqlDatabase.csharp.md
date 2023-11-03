@@ -1,6 +1,6 @@
 # `azurerm_mysql_database`
 
-Refer to the Terraform Registory for docs: [`azurerm_mysql_database`](https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/mysql_database).
+Refer to the Terraform Registory for docs: [`azurerm_mysql_database`](https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mysql_database).
 
 # `mysqlDatabase` Submodule <a name="`mysqlDatabase` Submodule" id="@cdktf/provider-azurerm.mysqlDatabase"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_mysql_database`](https://re
 
 ### MysqlDatabase <a name="MysqlDatabase" id="@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabase"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/mysql_database azurerm_mysql_database}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mysql_database azurerm_mysql_database}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabase.Initializer"></a>
 
@@ -448,7 +448,7 @@ The construct id used in the generated config for the MysqlDatabase to import.
 
 The id of the existing MysqlDatabase that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/mysql_database#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mysql_database#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -833,12 +833,12 @@ new MysqlDatabaseConfig {
 | <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseConfig.property.charset">Charset</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/mysql_database#charset MysqlDatabase#charset}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseConfig.property.collation">Collation</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/mysql_database#collation MysqlDatabase#collation}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/mysql_database#name MysqlDatabase#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/mysql_database#resource_group_name MysqlDatabase#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseConfig.property.serverName">ServerName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/mysql_database#server_name MysqlDatabase#server_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/mysql_database#id MysqlDatabase#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseConfig.property.charset">Charset</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mysql_database#charset MysqlDatabase#charset}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseConfig.property.collation">Collation</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mysql_database#collation MysqlDatabase#collation}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mysql_database#name MysqlDatabase#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mysql_database#resource_group_name MysqlDatabase#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseConfig.property.serverName">ServerName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mysql_database#server_name MysqlDatabase#server_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mysql_database#id MysqlDatabase#id}. |
 | <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseTimeouts">MysqlDatabaseTimeouts</a></code> | timeouts block. |
 
 ---
@@ -921,7 +921,7 @@ public string Charset { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/mysql_database#charset MysqlDatabase#charset}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mysql_database#charset MysqlDatabase#charset}.
 
 ---
 
@@ -933,7 +933,7 @@ public string Collation { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/mysql_database#collation MysqlDatabase#collation}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mysql_database#collation MysqlDatabase#collation}.
 
 ---
 
@@ -945,7 +945,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/mysql_database#name MysqlDatabase#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mysql_database#name MysqlDatabase#name}.
 
 ---
 
@@ -957,7 +957,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/mysql_database#resource_group_name MysqlDatabase#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mysql_database#resource_group_name MysqlDatabase#resource_group_name}.
 
 ---
 
@@ -969,7 +969,7 @@ public string ServerName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/mysql_database#server_name MysqlDatabase#server_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mysql_database#server_name MysqlDatabase#server_name}.
 
 ---
 
@@ -981,7 +981,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/mysql_database#id MysqlDatabase#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mysql_database#id MysqlDatabase#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -998,7 +998,7 @@ public MysqlDatabaseTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/mysql_database#timeouts MysqlDatabase#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mysql_database#timeouts MysqlDatabase#timeouts}
 
 ---
 
@@ -1021,10 +1021,10 @@ new MysqlDatabaseTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/mysql_database#create MysqlDatabase#create}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/mysql_database#delete MysqlDatabase#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/mysql_database#read MysqlDatabase#read}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/mysql_database#update MysqlDatabase#update}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mysql_database#create MysqlDatabase#create}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mysql_database#delete MysqlDatabase#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mysql_database#read MysqlDatabase#read}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlDatabase.MysqlDatabaseTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mysql_database#update MysqlDatabase#update}. |
 
 ---
 
@@ -1036,7 +1036,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/mysql_database#create MysqlDatabase#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mysql_database#create MysqlDatabase#create}.
 
 ---
 
@@ -1048,7 +1048,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/mysql_database#delete MysqlDatabase#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mysql_database#delete MysqlDatabase#delete}.
 
 ---
 
@@ -1060,7 +1060,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/mysql_database#read MysqlDatabase#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mysql_database#read MysqlDatabase#read}.
 
 ---
 
@@ -1072,7 +1072,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/mysql_database#update MysqlDatabase#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mysql_database#update MysqlDatabase#update}.
 
 ---
 

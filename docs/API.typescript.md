@@ -967,6 +967,7 @@ The following submodules are available:
 - [networkConnectionMonitor](./networkConnectionMonitor.typescript.md)
 - [networkDdosProtectionPlan](./networkDdosProtectionPlan.typescript.md)
 - [networkFunctionAzureTrafficCollector](./networkFunctionAzureTrafficCollector.typescript.md)
+- [networkFunctionCollectorPolicy](./networkFunctionCollectorPolicy.typescript.md)
 - [networkInterface](./networkInterface.typescript.md)
 - [networkInterfaceApplicationGatewayBackendAddressPoolAssociation](./networkInterfaceApplicationGatewayBackendAddressPoolAssociation.typescript.md)
 - [networkInterfaceApplicationSecurityGroupAssociation](./networkInterfaceApplicationSecurityGroupAssociation.typescript.md)

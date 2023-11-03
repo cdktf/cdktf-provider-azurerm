@@ -1,6 +1,6 @@
 # `azurerm_linux_function_app`
 
-Refer to the Terraform Registory for docs: [`azurerm_linux_function_app`](https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app).
+Refer to the Terraform Registory for docs: [`azurerm_linux_function_app`](https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app).
 
 # `linuxFunctionApp` Submodule <a name="`linuxFunctionApp` Submodule" id="@cdktf/provider-azurerm.linuxFunctionApp"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_linux_function_app`](https:
 
 ### LinuxFunctionApp <a name="LinuxFunctionApp" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app azurerm_linux_function_app}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app azurerm_linux_function_app}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer"></a>
 
@@ -734,7 +734,7 @@ The construct id used in the generated config for the LinuxFunctionApp to import
 
 The id of the existing LinuxFunctionApp that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1796,7 +1796,7 @@ public readonly enabled: boolean | IResolvable;
 
 Should the Authentication / Authorization feature be enabled?
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#enabled LinuxFunctionApp#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#enabled LinuxFunctionApp#enabled}
 
 ---
 
@@ -1810,7 +1810,7 @@ public readonly activeDirectory: LinuxFunctionAppAuthSettingsActiveDirectory;
 
 active_directory block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#active_directory LinuxFunctionApp#active_directory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#active_directory LinuxFunctionApp#active_directory}
 
 ---
 
@@ -1824,7 +1824,7 @@ public readonly additionalLoginParameters: {[ key: string ]: string};
 
 Specifies a map of Login Parameters to send to the OpenID Connect authorization endpoint when a user logs in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#additional_login_parameters LinuxFunctionApp#additional_login_parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#additional_login_parameters LinuxFunctionApp#additional_login_parameters}
 
 ---
 
@@ -1838,7 +1838,7 @@ public readonly allowedExternalRedirectUrls: string[];
 
 Specifies a list of External URLs that can be redirected to as part of logging in or logging out of the Windows Web App.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#allowed_external_redirect_urls LinuxFunctionApp#allowed_external_redirect_urls}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#allowed_external_redirect_urls LinuxFunctionApp#allowed_external_redirect_urls}
 
 ---
 
@@ -1854,7 +1854,7 @@ The default authentication provider to use when multiple providers are configure
 
 Possible values include: `AzureActiveDirectory`, `Facebook`, `Google`, `MicrosoftAccount`, `Twitter`, `Github`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#default_provider LinuxFunctionApp#default_provider}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#default_provider LinuxFunctionApp#default_provider}
 
 ---
 
@@ -1868,7 +1868,7 @@ public readonly facebook: LinuxFunctionAppAuthSettingsFacebook;
 
 facebook block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#facebook LinuxFunctionApp#facebook}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#facebook LinuxFunctionApp#facebook}
 
 ---
 
@@ -1882,7 +1882,7 @@ public readonly github: LinuxFunctionAppAuthSettingsGithub;
 
 github block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#github LinuxFunctionApp#github}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#github LinuxFunctionApp#github}
 
 ---
 
@@ -1896,7 +1896,7 @@ public readonly google: LinuxFunctionAppAuthSettingsGoogle;
 
 google block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#google LinuxFunctionApp#google}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#google LinuxFunctionApp#google}
 
 ---
 
@@ -1910,7 +1910,7 @@ public readonly issuer: string;
 
 The OpenID Connect Issuer URI that represents the entity which issues access tokens.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#issuer LinuxFunctionApp#issuer}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#issuer LinuxFunctionApp#issuer}
 
 ---
 
@@ -1924,7 +1924,7 @@ public readonly microsoft: LinuxFunctionAppAuthSettingsMicrosoft;
 
 microsoft block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#microsoft LinuxFunctionApp#microsoft}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#microsoft LinuxFunctionApp#microsoft}
 
 ---
 
@@ -1938,7 +1938,7 @@ public readonly runtimeVersion: string;
 
 The RuntimeVersion of the Authentication / Authorization feature in use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#runtime_version LinuxFunctionApp#runtime_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#runtime_version LinuxFunctionApp#runtime_version}
 
 ---
 
@@ -1954,7 +1954,7 @@ The number of hours after session token expiration that a session token can be u
 
 Defaults to `72` hours.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#token_refresh_extension_hours LinuxFunctionApp#token_refresh_extension_hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#token_refresh_extension_hours LinuxFunctionApp#token_refresh_extension_hours}
 
 ---
 
@@ -1968,7 +1968,7 @@ public readonly tokenStoreEnabled: boolean | IResolvable;
 
 Should the Windows Web App durably store platform-specific security tokens that are obtained during login flows? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#token_store_enabled LinuxFunctionApp#token_store_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#token_store_enabled LinuxFunctionApp#token_store_enabled}
 
 ---
 
@@ -1982,7 +1982,7 @@ public readonly twitter: LinuxFunctionAppAuthSettingsTwitter;
 
 twitter block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#twitter LinuxFunctionApp#twitter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#twitter LinuxFunctionApp#twitter}
 
 ---
 
@@ -1996,7 +1996,7 @@ public readonly unauthenticatedClientAction: string;
 
 The action to take when an unauthenticated client attempts to access the app. Possible values include: `RedirectToLoginPage`, `AllowAnonymous`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#unauthenticated_client_action LinuxFunctionApp#unauthenticated_client_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#unauthenticated_client_action LinuxFunctionApp#unauthenticated_client_action}
 
 ---
 
@@ -2031,7 +2031,7 @@ public readonly clientId: string;
 
 The ID of the Client to use to authenticate with Azure Active Directory.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_id LinuxFunctionApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_id LinuxFunctionApp#client_id}
 
 ---
 
@@ -2045,7 +2045,7 @@ public readonly allowedAudiences: string[];
 
 Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#allowed_audiences LinuxFunctionApp#allowed_audiences}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#allowed_audiences LinuxFunctionApp#allowed_audiences}
 
 ---
 
@@ -2059,7 +2059,7 @@ public readonly clientSecret: string;
 
 The Client Secret for the Client ID. Cannot be used with `client_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_secret LinuxFunctionApp#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_secret LinuxFunctionApp#client_secret}
 
 ---
 
@@ -2073,7 +2073,7 @@ public readonly clientSecretSettingName: string;
 
 The App Setting name that contains the client secret of the Client. Cannot be used with `client_secret`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_secret_setting_name LinuxFunctionApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_secret_setting_name LinuxFunctionApp#client_secret_setting_name}
 
 ---
 
@@ -2108,7 +2108,7 @@ public readonly appId: string;
 
 The App ID of the Facebook app used for login.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#app_id LinuxFunctionApp#app_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#app_id LinuxFunctionApp#app_id}
 
 ---
 
@@ -2122,7 +2122,7 @@ public readonly appSecret: string;
 
 The App Secret of the Facebook app used for Facebook Login. Cannot be specified with `app_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#app_secret LinuxFunctionApp#app_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#app_secret LinuxFunctionApp#app_secret}
 
 ---
 
@@ -2136,7 +2136,7 @@ public readonly appSecretSettingName: string;
 
 The app setting name that contains the `app_secret` value used for Facebook Login. Cannot be specified with `app_secret`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#app_secret_setting_name LinuxFunctionApp#app_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#app_secret_setting_name LinuxFunctionApp#app_secret_setting_name}
 
 ---
 
@@ -2150,7 +2150,7 @@ public readonly oauthScopes: string[];
 
 Specifies a list of OAuth 2.0 scopes to be requested as part of Facebook Login authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#oauth_scopes LinuxFunctionApp#oauth_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#oauth_scopes LinuxFunctionApp#oauth_scopes}
 
 ---
 
@@ -2185,7 +2185,7 @@ public readonly clientId: string;
 
 The ID of the GitHub app used for login.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_id LinuxFunctionApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_id LinuxFunctionApp#client_id}
 
 ---
 
@@ -2199,7 +2199,7 @@ public readonly clientSecret: string;
 
 The Client Secret of the GitHub app used for GitHub Login. Cannot be specified with `client_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_secret LinuxFunctionApp#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_secret LinuxFunctionApp#client_secret}
 
 ---
 
@@ -2213,7 +2213,7 @@ public readonly clientSecretSettingName: string;
 
 The app setting name that contains the `client_secret` value used for GitHub Login. Cannot be specified with `client_secret`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_secret_setting_name LinuxFunctionApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_secret_setting_name LinuxFunctionApp#client_secret_setting_name}
 
 ---
 
@@ -2227,7 +2227,7 @@ public readonly oauthScopes: string[];
 
 Specifies a list of OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#oauth_scopes LinuxFunctionApp#oauth_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#oauth_scopes LinuxFunctionApp#oauth_scopes}
 
 ---
 
@@ -2262,7 +2262,7 @@ public readonly clientId: string;
 
 The OpenID Connect Client ID for the Google web application.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_id LinuxFunctionApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_id LinuxFunctionApp#client_id}
 
 ---
 
@@ -2276,7 +2276,7 @@ public readonly clientSecret: string;
 
 The client secret associated with the Google web application.  Cannot be specified with `client_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_secret LinuxFunctionApp#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_secret LinuxFunctionApp#client_secret}
 
 ---
 
@@ -2290,7 +2290,7 @@ public readonly clientSecretSettingName: string;
 
 The app setting name that contains the `client_secret` value used for Google Login. Cannot be specified with `client_secret`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_secret_setting_name LinuxFunctionApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_secret_setting_name LinuxFunctionApp#client_secret_setting_name}
 
 ---
 
@@ -2304,7 +2304,7 @@ public readonly oauthScopes: string[];
 
 Specifies a list of OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication. If not specified, "openid", "profile", and "email" are used as default scopes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#oauth_scopes LinuxFunctionApp#oauth_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#oauth_scopes LinuxFunctionApp#oauth_scopes}
 
 ---
 
@@ -2339,7 +2339,7 @@ public readonly clientId: string;
 
 The OAuth 2.0 client ID that was created for the app used for authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_id LinuxFunctionApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_id LinuxFunctionApp#client_id}
 
 ---
 
@@ -2353,7 +2353,7 @@ public readonly clientSecret: string;
 
 The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_secret LinuxFunctionApp#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_secret LinuxFunctionApp#client_secret}
 
 ---
 
@@ -2367,7 +2367,7 @@ public readonly clientSecretSettingName: string;
 
 The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_secret_setting_name LinuxFunctionApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_secret_setting_name LinuxFunctionApp#client_secret_setting_name}
 
 ---
 
@@ -2381,7 +2381,7 @@ public readonly oauthScopes: string[];
 
 The list of OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication. If not specified, `wl.basic` is used as the default scope.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#oauth_scopes LinuxFunctionApp#oauth_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#oauth_scopes LinuxFunctionApp#oauth_scopes}
 
 ---
 
@@ -2415,7 +2415,7 @@ public readonly consumerKey: string;
 
 The OAuth 1.0a consumer key of the Twitter application used for sign-in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#consumer_key LinuxFunctionApp#consumer_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#consumer_key LinuxFunctionApp#consumer_key}
 
 ---
 
@@ -2429,7 +2429,7 @@ public readonly consumerSecret: string;
 
 The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#consumer_secret LinuxFunctionApp#consumer_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#consumer_secret LinuxFunctionApp#consumer_secret}
 
 ---
 
@@ -2443,7 +2443,7 @@ public readonly consumerSecretSettingName: string;
 
 The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#consumer_secret_setting_name LinuxFunctionApp#consumer_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#consumer_secret_setting_name LinuxFunctionApp#consumer_secret_setting_name}
 
 ---
 
@@ -2496,7 +2496,7 @@ public readonly login: LinuxFunctionAppAuthSettingsV2Login;
 
 login block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#login LinuxFunctionApp#login}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#login LinuxFunctionApp#login}
 
 ---
 
@@ -2510,7 +2510,7 @@ public readonly activeDirectoryV2: LinuxFunctionAppAuthSettingsV2ActiveDirectory
 
 active_directory_v2 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#active_directory_v2 LinuxFunctionApp#active_directory_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#active_directory_v2 LinuxFunctionApp#active_directory_v2}
 
 ---
 
@@ -2524,7 +2524,7 @@ public readonly appleV2: LinuxFunctionAppAuthSettingsV2AppleV2;
 
 apple_v2 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#apple_v2 LinuxFunctionApp#apple_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#apple_v2 LinuxFunctionApp#apple_v2}
 
 ---
 
@@ -2538,7 +2538,7 @@ public readonly authEnabled: boolean | IResolvable;
 
 Should the AuthV2 Settings be enabled. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#auth_enabled LinuxFunctionApp#auth_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#auth_enabled LinuxFunctionApp#auth_enabled}
 
 ---
 
@@ -2552,7 +2552,7 @@ public readonly azureStaticWebAppV2: LinuxFunctionAppAuthSettingsV2AzureStaticWe
 
 azure_static_web_app_v2 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#azure_static_web_app_v2 LinuxFunctionApp#azure_static_web_app_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#azure_static_web_app_v2 LinuxFunctionApp#azure_static_web_app_v2}
 
 ---
 
@@ -2566,7 +2566,7 @@ public readonly configFilePath: string;
 
 The path to the App Auth settings. **Note:** Relative Paths are evaluated from the Site Root directory.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#config_file_path LinuxFunctionApp#config_file_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#config_file_path LinuxFunctionApp#config_file_path}
 
 ---
 
@@ -2580,7 +2580,7 @@ public readonly customOidcV2: IResolvable | LinuxFunctionAppAuthSettingsV2Custom
 
 custom_oidc_v2 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#custom_oidc_v2 LinuxFunctionApp#custom_oidc_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#custom_oidc_v2 LinuxFunctionApp#custom_oidc_v2}
 
 ---
 
@@ -2596,7 +2596,7 @@ The Default Authentication Provider to use when the `unauthenticated_action` is 
 
 Possible values include: `apple`, `azureactivedirectory`, `facebook`, `github`, `google`, `twitter` and the `name` of your `custom_oidc_v2` provider.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#default_provider LinuxFunctionApp#default_provider}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#default_provider LinuxFunctionApp#default_provider}
 
 ---
 
@@ -2610,7 +2610,7 @@ public readonly excludedPaths: string[];
 
 The paths which should be excluded from the `unauthenticated_action` when it is set to `RedirectToLoginPage`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#excluded_paths LinuxFunctionApp#excluded_paths}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#excluded_paths LinuxFunctionApp#excluded_paths}
 
 ---
 
@@ -2624,7 +2624,7 @@ public readonly facebookV2: LinuxFunctionAppAuthSettingsV2FacebookV2;
 
 facebook_v2 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#facebook_v2 LinuxFunctionApp#facebook_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#facebook_v2 LinuxFunctionApp#facebook_v2}
 
 ---
 
@@ -2640,7 +2640,7 @@ The convention used to determine the url of the request made.
 
 Possible values include `ForwardProxyConventionNoProxy`, `ForwardProxyConventionStandard`, `ForwardProxyConventionCustom`. Defaults to `ForwardProxyConventionNoProxy`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#forward_proxy_convention LinuxFunctionApp#forward_proxy_convention}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#forward_proxy_convention LinuxFunctionApp#forward_proxy_convention}
 
 ---
 
@@ -2654,7 +2654,7 @@ public readonly forwardProxyCustomHostHeaderName: string;
 
 The name of the header containing the host of the request.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#forward_proxy_custom_host_header_name LinuxFunctionApp#forward_proxy_custom_host_header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#forward_proxy_custom_host_header_name LinuxFunctionApp#forward_proxy_custom_host_header_name}
 
 ---
 
@@ -2668,7 +2668,7 @@ public readonly forwardProxyCustomSchemeHeaderName: string;
 
 The name of the header containing the scheme of the request.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#forward_proxy_custom_scheme_header_name LinuxFunctionApp#forward_proxy_custom_scheme_header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#forward_proxy_custom_scheme_header_name LinuxFunctionApp#forward_proxy_custom_scheme_header_name}
 
 ---
 
@@ -2682,7 +2682,7 @@ public readonly githubV2: LinuxFunctionAppAuthSettingsV2GithubV2;
 
 github_v2 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#github_v2 LinuxFunctionApp#github_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#github_v2 LinuxFunctionApp#github_v2}
 
 ---
 
@@ -2696,7 +2696,7 @@ public readonly googleV2: LinuxFunctionAppAuthSettingsV2GoogleV2;
 
 google_v2 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#google_v2 LinuxFunctionApp#google_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#google_v2 LinuxFunctionApp#google_v2}
 
 ---
 
@@ -2710,7 +2710,7 @@ public readonly httpRouteApiPrefix: string;
 
 The prefix that should precede all the authentication and authorisation paths. Defaults to `/.auth`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#http_route_api_prefix LinuxFunctionApp#http_route_api_prefix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#http_route_api_prefix LinuxFunctionApp#http_route_api_prefix}
 
 ---
 
@@ -2724,7 +2724,7 @@ public readonly microsoftV2: LinuxFunctionAppAuthSettingsV2MicrosoftV2;
 
 microsoft_v2 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#microsoft_v2 LinuxFunctionApp#microsoft_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#microsoft_v2 LinuxFunctionApp#microsoft_v2}
 
 ---
 
@@ -2738,7 +2738,7 @@ public readonly requireAuthentication: boolean | IResolvable;
 
 Should the authentication flow be used for all requests.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#require_authentication LinuxFunctionApp#require_authentication}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#require_authentication LinuxFunctionApp#require_authentication}
 
 ---
 
@@ -2752,7 +2752,7 @@ public readonly requireHttps: boolean | IResolvable;
 
 Should HTTPS be required on connections? Defaults to true.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#require_https LinuxFunctionApp#require_https}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#require_https LinuxFunctionApp#require_https}
 
 ---
 
@@ -2766,7 +2766,7 @@ public readonly runtimeVersion: string;
 
 The Runtime Version of the Authentication and Authorisation feature of this App. Defaults to `~1`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#runtime_version LinuxFunctionApp#runtime_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#runtime_version LinuxFunctionApp#runtime_version}
 
 ---
 
@@ -2780,7 +2780,7 @@ public readonly twitterV2: LinuxFunctionAppAuthSettingsV2TwitterV2;
 
 twitter_v2 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#twitter_v2 LinuxFunctionApp#twitter_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#twitter_v2 LinuxFunctionApp#twitter_v2}
 
 ---
 
@@ -2796,7 +2796,7 @@ The action to take for requests made without authentication.
 
 Possible values include `RedirectToLoginPage`, `AllowAnonymous`, `Return401`, and `Return403`. Defaults to `RedirectToLoginPage`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#unauthenticated_action LinuxFunctionApp#unauthenticated_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#unauthenticated_action LinuxFunctionApp#unauthenticated_action}
 
 ---
 
@@ -2839,7 +2839,7 @@ public readonly clientId: string;
 
 The ID of the Client to use to authenticate with Azure Active Directory.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_id LinuxFunctionApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_id LinuxFunctionApp#client_id}
 
 ---
 
@@ -2853,7 +2853,7 @@ public readonly tenantAuthEndpoint: string;
 
 The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#tenant_auth_endpoint LinuxFunctionApp#tenant_auth_endpoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#tenant_auth_endpoint LinuxFunctionApp#tenant_auth_endpoint}
 
 ---
 
@@ -2867,7 +2867,7 @@ public readonly allowedApplications: string[];
 
 The list of allowed Applications for the Default Authorisation Policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#allowed_applications LinuxFunctionApp#allowed_applications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#allowed_applications LinuxFunctionApp#allowed_applications}
 
 ---
 
@@ -2881,7 +2881,7 @@ public readonly allowedAudiences: string[];
 
 Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#allowed_audiences LinuxFunctionApp#allowed_audiences}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#allowed_audiences LinuxFunctionApp#allowed_audiences}
 
 ---
 
@@ -2895,7 +2895,7 @@ public readonly allowedGroups: string[];
 
 The list of allowed Group Names for the Default Authorisation Policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#allowed_groups LinuxFunctionApp#allowed_groups}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#allowed_groups LinuxFunctionApp#allowed_groups}
 
 ---
 
@@ -2909,7 +2909,7 @@ public readonly allowedIdentities: string[];
 
 The list of allowed Identities for the Default Authorisation Policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#allowed_identities LinuxFunctionApp#allowed_identities}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#allowed_identities LinuxFunctionApp#allowed_identities}
 
 ---
 
@@ -2923,7 +2923,7 @@ public readonly clientSecretCertificateThumbprint: string;
 
 The thumbprint of the certificate used for signing purposes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_secret_certificate_thumbprint LinuxFunctionApp#client_secret_certificate_thumbprint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_secret_certificate_thumbprint LinuxFunctionApp#client_secret_certificate_thumbprint}
 
 ---
 
@@ -2937,7 +2937,7 @@ public readonly clientSecretSettingName: string;
 
 The App Setting name that contains the client secret of the Client.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_secret_setting_name LinuxFunctionApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_secret_setting_name LinuxFunctionApp#client_secret_setting_name}
 
 ---
 
@@ -2951,7 +2951,7 @@ public readonly jwtAllowedClientApplications: string[];
 
 A list of Allowed Client Applications in the JWT Claim.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#jwt_allowed_client_applications LinuxFunctionApp#jwt_allowed_client_applications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#jwt_allowed_client_applications LinuxFunctionApp#jwt_allowed_client_applications}
 
 ---
 
@@ -2965,7 +2965,7 @@ public readonly jwtAllowedGroups: string[];
 
 A list of Allowed Groups in the JWT Claim.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#jwt_allowed_groups LinuxFunctionApp#jwt_allowed_groups}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#jwt_allowed_groups LinuxFunctionApp#jwt_allowed_groups}
 
 ---
 
@@ -2979,7 +2979,7 @@ public readonly loginParameters: {[ key: string ]: string};
 
 A map of key-value pairs to send to the Authorisation Endpoint when a user logs in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#login_parameters LinuxFunctionApp#login_parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#login_parameters LinuxFunctionApp#login_parameters}
 
 ---
 
@@ -2993,7 +2993,7 @@ public readonly wwwAuthenticationDisabled: boolean | IResolvable;
 
 Should the www-authenticate provider should be omitted from the request? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#www_authentication_disabled LinuxFunctionApp#www_authentication_disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#www_authentication_disabled LinuxFunctionApp#www_authentication_disabled}
 
 ---
 
@@ -3026,7 +3026,7 @@ public readonly clientId: string;
 
 The OpenID Connect Client ID for the Apple web application.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_id LinuxFunctionApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_id LinuxFunctionApp#client_id}
 
 ---
 
@@ -3040,7 +3040,7 @@ public readonly clientSecretSettingName: string;
 
 The app setting name that contains the `client_secret` value used for Apple Login.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_secret_setting_name LinuxFunctionApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_secret_setting_name LinuxFunctionApp#client_secret_setting_name}
 
 ---
 
@@ -3072,7 +3072,7 @@ public readonly clientId: string;
 
 The ID of the Client to use to authenticate with Azure Static Web App Authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_id LinuxFunctionApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_id LinuxFunctionApp#client_id}
 
 ---
 
@@ -3108,7 +3108,7 @@ public readonly clientId: string;
 
 The ID of the Client to use to authenticate with this Custom OIDC.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_id LinuxFunctionApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_id LinuxFunctionApp#client_id}
 
 ---
 
@@ -3122,7 +3122,7 @@ public readonly name: string;
 
 The name of the Custom OIDC Authentication Provider.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#name LinuxFunctionApp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#name LinuxFunctionApp#name}
 
 ---
 
@@ -3136,7 +3136,7 @@ public readonly openidConfigurationEndpoint: string;
 
 The endpoint that contains all the configuration endpoints for this Custom OIDC provider.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#openid_configuration_endpoint LinuxFunctionApp#openid_configuration_endpoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#openid_configuration_endpoint LinuxFunctionApp#openid_configuration_endpoint}
 
 ---
 
@@ -3150,7 +3150,7 @@ public readonly nameClaimType: string;
 
 The name of the claim that contains the users name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#name_claim_type LinuxFunctionApp#name_claim_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#name_claim_type LinuxFunctionApp#name_claim_type}
 
 ---
 
@@ -3164,7 +3164,7 @@ public readonly scopes: string[];
 
 The list of the scopes that should be requested while authenticating.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#scopes LinuxFunctionApp#scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#scopes LinuxFunctionApp#scopes}
 
 ---
 
@@ -3199,7 +3199,7 @@ public readonly appId: string;
 
 The App ID of the Facebook app used for login.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#app_id LinuxFunctionApp#app_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#app_id LinuxFunctionApp#app_id}
 
 ---
 
@@ -3213,7 +3213,7 @@ public readonly appSecretSettingName: string;
 
 The app setting name that contains the `app_secret` value used for Facebook Login.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#app_secret_setting_name LinuxFunctionApp#app_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#app_secret_setting_name LinuxFunctionApp#app_secret_setting_name}
 
 ---
 
@@ -3227,7 +3227,7 @@ public readonly graphApiVersion: string;
 
 The version of the Facebook API to be used while logging in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#graph_api_version LinuxFunctionApp#graph_api_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#graph_api_version LinuxFunctionApp#graph_api_version}
 
 ---
 
@@ -3241,7 +3241,7 @@ public readonly loginScopes: string[];
 
 Specifies a list of scopes to be requested as part of Facebook Login authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#login_scopes LinuxFunctionApp#login_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#login_scopes LinuxFunctionApp#login_scopes}
 
 ---
 
@@ -3275,7 +3275,7 @@ public readonly clientId: string;
 
 The ID of the GitHub app used for login.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_id LinuxFunctionApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_id LinuxFunctionApp#client_id}
 
 ---
 
@@ -3289,7 +3289,7 @@ public readonly clientSecretSettingName: string;
 
 The app setting name that contains the `client_secret` value used for GitHub Login.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_secret_setting_name LinuxFunctionApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_secret_setting_name LinuxFunctionApp#client_secret_setting_name}
 
 ---
 
@@ -3303,7 +3303,7 @@ public readonly loginScopes: string[];
 
 Specifies a list of OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#login_scopes LinuxFunctionApp#login_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#login_scopes LinuxFunctionApp#login_scopes}
 
 ---
 
@@ -3338,7 +3338,7 @@ public readonly clientId: string;
 
 The OpenID Connect Client ID for the Google web application.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_id LinuxFunctionApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_id LinuxFunctionApp#client_id}
 
 ---
 
@@ -3352,7 +3352,7 @@ public readonly clientSecretSettingName: string;
 
 The app setting name that contains the `client_secret` value used for Google Login.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_secret_setting_name LinuxFunctionApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_secret_setting_name LinuxFunctionApp#client_secret_setting_name}
 
 ---
 
@@ -3366,7 +3366,7 @@ public readonly allowedAudiences: string[];
 
 Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#allowed_audiences LinuxFunctionApp#allowed_audiences}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#allowed_audiences LinuxFunctionApp#allowed_audiences}
 
 ---
 
@@ -3380,7 +3380,7 @@ public readonly loginScopes: string[];
 
 Specifies a list of Login scopes that will be requested as part of Google Sign-In authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#login_scopes LinuxFunctionApp#login_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#login_scopes LinuxFunctionApp#login_scopes}
 
 ---
 
@@ -3424,7 +3424,7 @@ External URLs that can be redirected to as part of logging in or logging out of 
 
 This is an advanced setting typically only needed by Windows Store application backends. **Note:** URLs within the current domain are always implicitly allowed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#allowed_external_redirect_urls LinuxFunctionApp#allowed_external_redirect_urls}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#allowed_external_redirect_urls LinuxFunctionApp#allowed_external_redirect_urls}
 
 ---
 
@@ -3438,7 +3438,7 @@ public readonly cookieExpirationConvention: string;
 
 The method by which cookies expire. Possible values include: `FixedTime`, and `IdentityProviderDerived`. Defaults to `FixedTime`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#cookie_expiration_convention LinuxFunctionApp#cookie_expiration_convention}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#cookie_expiration_convention LinuxFunctionApp#cookie_expiration_convention}
 
 ---
 
@@ -3452,7 +3452,7 @@ public readonly cookieExpirationTime: string;
 
 The time after the request is made when the session cookie should expire. Defaults to `08:00:00`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#cookie_expiration_time LinuxFunctionApp#cookie_expiration_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#cookie_expiration_time LinuxFunctionApp#cookie_expiration_time}
 
 ---
 
@@ -3466,7 +3466,7 @@ public readonly logoutEndpoint: string;
 
 The endpoint to which logout requests should be made.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#logout_endpoint LinuxFunctionApp#logout_endpoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#logout_endpoint LinuxFunctionApp#logout_endpoint}
 
 ---
 
@@ -3480,7 +3480,7 @@ public readonly nonceExpirationTime: string;
 
 The time after the request is made when the nonce should expire. Defaults to `00:05:00`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#nonce_expiration_time LinuxFunctionApp#nonce_expiration_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#nonce_expiration_time LinuxFunctionApp#nonce_expiration_time}
 
 ---
 
@@ -3494,7 +3494,7 @@ public readonly preserveUrlFragmentsForLogins: boolean | IResolvable;
 
 Should the fragments from the request be preserved after the login request is made. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#preserve_url_fragments_for_logins LinuxFunctionApp#preserve_url_fragments_for_logins}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#preserve_url_fragments_for_logins LinuxFunctionApp#preserve_url_fragments_for_logins}
 
 ---
 
@@ -3510,7 +3510,7 @@ The number of hours after session token expiration that a session token can be u
 
 Defaults to `72` hours.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#token_refresh_extension_time LinuxFunctionApp#token_refresh_extension_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#token_refresh_extension_time LinuxFunctionApp#token_refresh_extension_time}
 
 ---
 
@@ -3524,7 +3524,7 @@ public readonly tokenStoreEnabled: boolean | IResolvable;
 
 Should the Token Store configuration Enabled. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#token_store_enabled LinuxFunctionApp#token_store_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#token_store_enabled LinuxFunctionApp#token_store_enabled}
 
 ---
 
@@ -3538,7 +3538,7 @@ public readonly tokenStorePath: string;
 
 The directory path in the App Filesystem in which the tokens will be stored.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#token_store_path LinuxFunctionApp#token_store_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#token_store_path LinuxFunctionApp#token_store_path}
 
 ---
 
@@ -3552,7 +3552,7 @@ public readonly tokenStoreSasSettingName: string;
 
 The name of the app setting which contains the SAS URL of the blob storage containing the tokens.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#token_store_sas_setting_name LinuxFunctionApp#token_store_sas_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#token_store_sas_setting_name LinuxFunctionApp#token_store_sas_setting_name}
 
 ---
 
@@ -3566,7 +3566,7 @@ public readonly validateNonce: boolean | IResolvable;
 
 Should the nonce be validated while completing the login flow. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#validate_nonce LinuxFunctionApp#validate_nonce}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#validate_nonce LinuxFunctionApp#validate_nonce}
 
 ---
 
@@ -3601,7 +3601,7 @@ public readonly clientId: string;
 
 The OAuth 2.0 client ID that was created for the app used for authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_id LinuxFunctionApp#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_id LinuxFunctionApp#client_id}
 
 ---
 
@@ -3615,7 +3615,7 @@ public readonly clientSecretSettingName: string;
 
 The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_secret_setting_name LinuxFunctionApp#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_secret_setting_name LinuxFunctionApp#client_secret_setting_name}
 
 ---
 
@@ -3629,7 +3629,7 @@ public readonly allowedAudiences: string[];
 
 Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#allowed_audiences LinuxFunctionApp#allowed_audiences}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#allowed_audiences LinuxFunctionApp#allowed_audiences}
 
 ---
 
@@ -3643,7 +3643,7 @@ public readonly loginScopes: string[];
 
 The list of Login scopes that will be requested as part of Microsoft Account authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#login_scopes LinuxFunctionApp#login_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#login_scopes LinuxFunctionApp#login_scopes}
 
 ---
 
@@ -3676,7 +3676,7 @@ public readonly consumerKey: string;
 
 The OAuth 1.0a consumer key of the Twitter application used for sign-in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#consumer_key LinuxFunctionApp#consumer_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#consumer_key LinuxFunctionApp#consumer_key}
 
 ---
 
@@ -3690,7 +3690,7 @@ public readonly consumerSecretSettingName: string;
 
 The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#consumer_secret_setting_name LinuxFunctionApp#consumer_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#consumer_secret_setting_name LinuxFunctionApp#consumer_secret_setting_name}
 
 ---
 
@@ -3725,7 +3725,7 @@ public readonly name: string;
 
 The name which should be used for this Backup.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#name LinuxFunctionApp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#name LinuxFunctionApp#name}
 
 ---
 
@@ -3739,7 +3739,7 @@ public readonly schedule: LinuxFunctionAppBackupSchedule;
 
 schedule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#schedule LinuxFunctionApp#schedule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#schedule LinuxFunctionApp#schedule}
 
 ---
 
@@ -3753,7 +3753,7 @@ public readonly storageAccountUrl: string;
 
 The SAS URL to the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#storage_account_url LinuxFunctionApp#storage_account_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#storage_account_url LinuxFunctionApp#storage_account_url}
 
 ---
 
@@ -3767,7 +3767,7 @@ public readonly enabled: boolean | IResolvable;
 
 Should this backup job be enabled?
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#enabled LinuxFunctionApp#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#enabled LinuxFunctionApp#enabled}
 
 ---
 
@@ -3803,7 +3803,7 @@ public readonly frequencyInterval: number;
 
 How often the backup should be executed (e.g. for weekly backup, this should be set to `7` and `frequency_unit` should be set to `Day`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#frequency_interval LinuxFunctionApp#frequency_interval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#frequency_interval LinuxFunctionApp#frequency_interval}
 
 ---
 
@@ -3817,7 +3817,7 @@ public readonly frequencyUnit: string;
 
 The unit of time for how often the backup should take place. Possible values include: `Day` and `Hour`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#frequency_unit LinuxFunctionApp#frequency_unit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#frequency_unit LinuxFunctionApp#frequency_unit}
 
 ---
 
@@ -3831,7 +3831,7 @@ public readonly keepAtLeastOneBackup: boolean | IResolvable;
 
 Should the service keep at least one backup, regardless of age of backup. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#keep_at_least_one_backup LinuxFunctionApp#keep_at_least_one_backup}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#keep_at_least_one_backup LinuxFunctionApp#keep_at_least_one_backup}
 
 ---
 
@@ -3845,7 +3845,7 @@ public readonly retentionPeriodDays: number;
 
 After how many days backups should be deleted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#retention_period_days LinuxFunctionApp#retention_period_days}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#retention_period_days LinuxFunctionApp#retention_period_days}
 
 ---
 
@@ -3859,7 +3859,7 @@ public readonly startTime: string;
 
 When the schedule should start working in RFC-3339 format.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#start_time LinuxFunctionApp#start_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#start_time LinuxFunctionApp#start_time}
 
 ---
 
@@ -3884,9 +3884,9 @@ const linuxFunctionAppConfig: linuxFunctionApp.LinuxFunctionAppConfig = { ... }
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#location LinuxFunctionApp#location}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#location LinuxFunctionApp#location}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.name">name</a></code> | <code>string</code> | Specifies the name of the Function App. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#resource_group_name LinuxFunctionApp#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#resource_group_name LinuxFunctionApp#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.servicePlanId">servicePlanId</a></code> | <code>string</code> | The ID of the App Service Plan within which to create this Function App. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.siteConfig">siteConfig</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig">LinuxFunctionAppSiteConfig</a></code> | site_config block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.appSettings">appSettings</a></code> | <code>{[ key: string ]: string}</code> | A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values. |
@@ -3903,19 +3903,19 @@ const linuxFunctionAppConfig: linuxFunctionApp.LinuxFunctionAppConfig = { ... }
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.enabled">enabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Is the Linux Function App enabled. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.functionsExtensionVersion">functionsExtensionVersion</a></code> | <code>string</code> | The runtime version associated with the Function App. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.httpsOnly">httpsOnly</a></code> | <code>boolean \| cdktf.IResolvable</code> | Can the Function App only be accessed via HTTPS? |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#id LinuxFunctionApp#id}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#id LinuxFunctionApp#id}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppIdentity">LinuxFunctionAppIdentity</a></code> | identity block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.keyVaultReferenceIdentityId">keyVaultReferenceIdentityId</a></code> | <code>string</code> | The User Assigned Identity to use for Key Vault access. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.publicNetworkAccessEnabled">publicNetworkAccessEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#public_network_access_enabled LinuxFunctionApp#public_network_access_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.publicNetworkAccessEnabled">publicNetworkAccessEnabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#public_network_access_enabled LinuxFunctionApp#public_network_access_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.stickySettings">stickySettings</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStickySettings">LinuxFunctionAppStickySettings</a></code> | sticky_settings block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.storageAccount">storageAccount</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount">LinuxFunctionAppStorageAccount</a>[]</code> | storage_account block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.storageAccountAccessKey">storageAccountAccessKey</a></code> | <code>string</code> | The access key which will be used to access the storage account for the Function App. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.storageAccountName">storageAccountName</a></code> | <code>string</code> | The backend storage account name which will be used by this Function App. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.storageKeyVaultSecretId">storageKeyVaultSecretId</a></code> | <code>string</code> | The Key Vault Secret ID, including version, that contains the Connection String to connect to the storage account for this Function App. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.storageUsesManagedIdentity">storageUsesManagedIdentity</a></code> | <code>boolean \| cdktf.IResolvable</code> | Should the Function App use its Managed Identity to access storage? |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#tags LinuxFunctionApp#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#tags LinuxFunctionApp#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeouts">LinuxFunctionAppTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.virtualNetworkSubnetId">virtualNetworkSubnetId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#virtual_network_subnet_id LinuxFunctionApp#virtual_network_subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.virtualNetworkSubnetId">virtualNetworkSubnetId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#virtual_network_subnet_id LinuxFunctionApp#virtual_network_subnet_id}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.zipDeployFile">zipDeployFile</a></code> | <code>string</code> | The local path and filename of the Zip packaged application to deploy to this Linux Function App. |
 
 ---
@@ -3998,7 +3998,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#location LinuxFunctionApp#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#location LinuxFunctionApp#location}.
 
 ---
 
@@ -4012,7 +4012,7 @@ public readonly name: string;
 
 Specifies the name of the Function App.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#name LinuxFunctionApp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#name LinuxFunctionApp#name}
 
 ---
 
@@ -4024,7 +4024,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#resource_group_name LinuxFunctionApp#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#resource_group_name LinuxFunctionApp#resource_group_name}.
 
 ---
 
@@ -4038,7 +4038,7 @@ public readonly servicePlanId: string;
 
 The ID of the App Service Plan within which to create this Function App.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#service_plan_id LinuxFunctionApp#service_plan_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#service_plan_id LinuxFunctionApp#service_plan_id}
 
 ---
 
@@ -4052,7 +4052,7 @@ public readonly siteConfig: LinuxFunctionAppSiteConfig;
 
 site_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#site_config LinuxFunctionApp#site_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#site_config LinuxFunctionApp#site_config}
 
 ---
 
@@ -4066,7 +4066,7 @@ public readonly appSettings: {[ key: string ]: string};
 
 A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#app_settings LinuxFunctionApp#app_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#app_settings LinuxFunctionApp#app_settings}
 
 ---
 
@@ -4080,7 +4080,7 @@ public readonly authSettings: LinuxFunctionAppAuthSettings;
 
 auth_settings block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#auth_settings LinuxFunctionApp#auth_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#auth_settings LinuxFunctionApp#auth_settings}
 
 ---
 
@@ -4094,7 +4094,7 @@ public readonly authSettingsV2: LinuxFunctionAppAuthSettingsV2;
 
 auth_settings_v2 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#auth_settings_v2 LinuxFunctionApp#auth_settings_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#auth_settings_v2 LinuxFunctionApp#auth_settings_v2}
 
 ---
 
@@ -4108,7 +4108,7 @@ public readonly backup: LinuxFunctionAppBackup;
 
 backup block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#backup LinuxFunctionApp#backup}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#backup LinuxFunctionApp#backup}
 
 ---
 
@@ -4122,7 +4122,7 @@ public readonly builtinLoggingEnabled: boolean | IResolvable;
 
 Should built in logging be enabled. Configures `AzureWebJobsDashboard` app setting based on the configured storage setting.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#builtin_logging_enabled LinuxFunctionApp#builtin_logging_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#builtin_logging_enabled LinuxFunctionApp#builtin_logging_enabled}
 
 ---
 
@@ -4136,7 +4136,7 @@ public readonly clientCertificateEnabled: boolean | IResolvable;
 
 Should the function app use Client Certificates.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_certificate_enabled LinuxFunctionApp#client_certificate_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_certificate_enabled LinuxFunctionApp#client_certificate_enabled}
 
 ---
 
@@ -4150,7 +4150,7 @@ public readonly clientCertificateExclusionPaths: string;
 
 Paths to exclude when using client certificates, separated by ;
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_certificate_exclusion_paths LinuxFunctionApp#client_certificate_exclusion_paths}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_certificate_exclusion_paths LinuxFunctionApp#client_certificate_exclusion_paths}
 
 ---
 
@@ -4166,7 +4166,7 @@ The mode of the Function App's client certificates requirement for incoming requ
 
 Possible values are `Required`, `Optional`, and `OptionalInteractiveUser` 
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#client_certificate_mode LinuxFunctionApp#client_certificate_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#client_certificate_mode LinuxFunctionApp#client_certificate_mode}
 
 ---
 
@@ -4180,7 +4180,7 @@ public readonly connectionString: IResolvable | LinuxFunctionAppConnectionString
 
 connection_string block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#connection_string LinuxFunctionApp#connection_string}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#connection_string LinuxFunctionApp#connection_string}
 
 ---
 
@@ -4194,7 +4194,7 @@ public readonly contentShareForceDisabled: boolean | IResolvable;
 
 Force disable the content share settings.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#content_share_force_disabled LinuxFunctionApp#content_share_force_disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#content_share_force_disabled LinuxFunctionApp#content_share_force_disabled}
 
 ---
 
@@ -4210,7 +4210,7 @@ The amount of memory in gigabyte-seconds that your application is allowed to con
 
 Setting this value only affects function apps in Consumption Plans.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#daily_memory_time_quota LinuxFunctionApp#daily_memory_time_quota}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#daily_memory_time_quota LinuxFunctionApp#daily_memory_time_quota}
 
 ---
 
@@ -4224,7 +4224,7 @@ public readonly enabled: boolean | IResolvable;
 
 Is the Linux Function App enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#enabled LinuxFunctionApp#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#enabled LinuxFunctionApp#enabled}
 
 ---
 
@@ -4238,7 +4238,7 @@ public readonly functionsExtensionVersion: string;
 
 The runtime version associated with the Function App.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#functions_extension_version LinuxFunctionApp#functions_extension_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#functions_extension_version LinuxFunctionApp#functions_extension_version}
 
 ---
 
@@ -4252,7 +4252,7 @@ public readonly httpsOnly: boolean | IResolvable;
 
 Can the Function App only be accessed via HTTPS?
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#https_only LinuxFunctionApp#https_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#https_only LinuxFunctionApp#https_only}
 
 ---
 
@@ -4264,7 +4264,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#id LinuxFunctionApp#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#id LinuxFunctionApp#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -4281,7 +4281,7 @@ public readonly identity: LinuxFunctionAppIdentity;
 
 identity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#identity LinuxFunctionApp#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#identity LinuxFunctionApp#identity}
 
 ---
 
@@ -4295,7 +4295,7 @@ public readonly keyVaultReferenceIdentityId: string;
 
 The User Assigned Identity to use for Key Vault access.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#key_vault_reference_identity_id LinuxFunctionApp#key_vault_reference_identity_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#key_vault_reference_identity_id LinuxFunctionApp#key_vault_reference_identity_id}
 
 ---
 
@@ -4307,7 +4307,7 @@ public readonly publicNetworkAccessEnabled: boolean | IResolvable;
 
 - *Type:* boolean | cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#public_network_access_enabled LinuxFunctionApp#public_network_access_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#public_network_access_enabled LinuxFunctionApp#public_network_access_enabled}.
 
 ---
 
@@ -4321,7 +4321,7 @@ public readonly stickySettings: LinuxFunctionAppStickySettings;
 
 sticky_settings block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#sticky_settings LinuxFunctionApp#sticky_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#sticky_settings LinuxFunctionApp#sticky_settings}
 
 ---
 
@@ -4335,7 +4335,7 @@ public readonly storageAccount: IResolvable | LinuxFunctionAppStorageAccount[];
 
 storage_account block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#storage_account LinuxFunctionApp#storage_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#storage_account LinuxFunctionApp#storage_account}
 
 ---
 
@@ -4349,7 +4349,7 @@ public readonly storageAccountAccessKey: string;
 
 The access key which will be used to access the storage account for the Function App.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#storage_account_access_key LinuxFunctionApp#storage_account_access_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#storage_account_access_key LinuxFunctionApp#storage_account_access_key}
 
 ---
 
@@ -4363,7 +4363,7 @@ public readonly storageAccountName: string;
 
 The backend storage account name which will be used by this Function App.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#storage_account_name LinuxFunctionApp#storage_account_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#storage_account_name LinuxFunctionApp#storage_account_name}
 
 ---
 
@@ -4377,7 +4377,7 @@ public readonly storageKeyVaultSecretId: string;
 
 The Key Vault Secret ID, including version, that contains the Connection String to connect to the storage account for this Function App.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#storage_key_vault_secret_id LinuxFunctionApp#storage_key_vault_secret_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#storage_key_vault_secret_id LinuxFunctionApp#storage_key_vault_secret_id}
 
 ---
 
@@ -4391,7 +4391,7 @@ public readonly storageUsesManagedIdentity: boolean | IResolvable;
 
 Should the Function App use its Managed Identity to access storage?
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#storage_uses_managed_identity LinuxFunctionApp#storage_uses_managed_identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#storage_uses_managed_identity LinuxFunctionApp#storage_uses_managed_identity}
 
 ---
 
@@ -4403,7 +4403,7 @@ public readonly tags: {[ key: string ]: string};
 
 - *Type:* {[ key: string ]: string}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#tags LinuxFunctionApp#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#tags LinuxFunctionApp#tags}.
 
 ---
 
@@ -4417,7 +4417,7 @@ public readonly timeouts: LinuxFunctionAppTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#timeouts LinuxFunctionApp#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#timeouts LinuxFunctionApp#timeouts}
 
 ---
 
@@ -4429,7 +4429,7 @@ public readonly virtualNetworkSubnetId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#virtual_network_subnet_id LinuxFunctionApp#virtual_network_subnet_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#virtual_network_subnet_id LinuxFunctionApp#virtual_network_subnet_id}.
 
 ---
 
@@ -4445,7 +4445,7 @@ The local path and filename of the Zip packaged application to deploy to this Li
 
 **Note:** Using this value requires either `WEBSITE_RUN_FROM_PACKAGE=1` or `SCM_DO_BUILD_DURING_DEPLOYMENT=true` to be set on the App in `app_settings`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#zip_deploy_file LinuxFunctionApp#zip_deploy_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#zip_deploy_file LinuxFunctionApp#zip_deploy_file}
 
 ---
 
@@ -4479,7 +4479,7 @@ public readonly name: string;
 
 The name which should be used for this Connection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#name LinuxFunctionApp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#name LinuxFunctionApp#name}
 
 ---
 
@@ -4493,7 +4493,7 @@ public readonly type: string;
 
 Type of database. Possible values include: `MySQL`, `SQLServer`, `SQLAzure`, `Custom`, `NotificationHub`, `ServiceBus`, `EventHub`, `APIHub`, `DocDb`, `RedisCache`, and `PostgreSQL`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#type LinuxFunctionApp#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#type LinuxFunctionApp#type}
 
 ---
 
@@ -4507,7 +4507,7 @@ public readonly value: string;
 
 The connection string value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#value LinuxFunctionApp#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#value LinuxFunctionApp#value}
 
 ---
 
@@ -4525,8 +4525,8 @@ const linuxFunctionAppIdentity: linuxFunctionApp.LinuxFunctionAppIdentity = { ..
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppIdentity.property.type">type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#type LinuxFunctionApp#type}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppIdentity.property.identityIds">identityIds</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#identity_ids LinuxFunctionApp#identity_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppIdentity.property.type">type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#type LinuxFunctionApp#type}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppIdentity.property.identityIds">identityIds</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#identity_ids LinuxFunctionApp#identity_ids}. |
 
 ---
 
@@ -4538,7 +4538,7 @@ public readonly type: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#type LinuxFunctionApp#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#type LinuxFunctionApp#type}.
 
 ---
 
@@ -4550,7 +4550,7 @@ public readonly identityIds: string[];
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#identity_ids LinuxFunctionApp#identity_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#identity_ids LinuxFunctionApp#identity_ids}.
 
 ---
 
@@ -4614,7 +4614,7 @@ public readonly alwaysOn: boolean | IResolvable;
 
 If this Linux Web App is Always On enabled. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#always_on LinuxFunctionApp#always_on}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#always_on LinuxFunctionApp#always_on}
 
 ---
 
@@ -4628,7 +4628,7 @@ public readonly apiDefinitionUrl: string;
 
 The URL of the API definition that describes this Linux Function App.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#api_definition_url LinuxFunctionApp#api_definition_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#api_definition_url LinuxFunctionApp#api_definition_url}
 
 ---
 
@@ -4642,7 +4642,7 @@ public readonly apiManagementApiId: string;
 
 The ID of the API Management API for this Linux Function App.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#api_management_api_id LinuxFunctionApp#api_management_api_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#api_management_api_id LinuxFunctionApp#api_management_api_id}
 
 ---
 
@@ -4656,7 +4656,7 @@ public readonly appCommandLine: string;
 
 The program and any arguments used to launch this app via the command line. (Example `node myapp.js`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#app_command_line LinuxFunctionApp#app_command_line}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#app_command_line LinuxFunctionApp#app_command_line}
 
 ---
 
@@ -4670,7 +4670,7 @@ public readonly applicationInsightsConnectionString: string;
 
 The Connection String for linking the Linux Function App to Application Insights.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#application_insights_connection_string LinuxFunctionApp#application_insights_connection_string}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#application_insights_connection_string LinuxFunctionApp#application_insights_connection_string}
 
 ---
 
@@ -4684,7 +4684,7 @@ public readonly applicationInsightsKey: string;
 
 The Instrumentation Key for connecting the Linux Function App to Application Insights.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#application_insights_key LinuxFunctionApp#application_insights_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#application_insights_key LinuxFunctionApp#application_insights_key}
 
 ---
 
@@ -4698,7 +4698,7 @@ public readonly applicationStack: LinuxFunctionAppSiteConfigApplicationStack;
 
 application_stack block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#application_stack LinuxFunctionApp#application_stack}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#application_stack LinuxFunctionApp#application_stack}
 
 ---
 
@@ -4714,7 +4714,7 @@ The number of workers this function app can scale out to.
 
 Only applicable to apps on the Consumption and Premium plan.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#app_scale_limit LinuxFunctionApp#app_scale_limit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#app_scale_limit LinuxFunctionApp#app_scale_limit}
 
 ---
 
@@ -4728,7 +4728,7 @@ public readonly appServiceLogs: LinuxFunctionAppSiteConfigAppServiceLogs;
 
 app_service_logs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#app_service_logs LinuxFunctionApp#app_service_logs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#app_service_logs LinuxFunctionApp#app_service_logs}
 
 ---
 
@@ -4742,7 +4742,7 @@ public readonly containerRegistryManagedIdentityClientId: string;
 
 The Client ID of the Managed Service Identity to use for connections to the Azure Container Registry.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#container_registry_managed_identity_client_id LinuxFunctionApp#container_registry_managed_identity_client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#container_registry_managed_identity_client_id LinuxFunctionApp#container_registry_managed_identity_client_id}
 
 ---
 
@@ -4756,7 +4756,7 @@ public readonly containerRegistryUseManagedIdentity: boolean | IResolvable;
 
 Should connections for Azure Container Registry use Managed Identity.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#container_registry_use_managed_identity LinuxFunctionApp#container_registry_use_managed_identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#container_registry_use_managed_identity LinuxFunctionApp#container_registry_use_managed_identity}
 
 ---
 
@@ -4770,7 +4770,7 @@ public readonly cors: LinuxFunctionAppSiteConfigCors;
 
 cors block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#cors LinuxFunctionApp#cors}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#cors LinuxFunctionApp#cors}
 
 ---
 
@@ -4784,7 +4784,7 @@ public readonly defaultDocuments: string[];
 
 Specifies a list of Default Documents for the Linux Web App.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#default_documents LinuxFunctionApp#default_documents}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#default_documents LinuxFunctionApp#default_documents}
 
 ---
 
@@ -4798,7 +4798,7 @@ public readonly elasticInstanceMinimum: number;
 
 The number of minimum instances for this Linux Function App. Only affects apps on Elastic Premium plans.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#elastic_instance_minimum LinuxFunctionApp#elastic_instance_minimum}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#elastic_instance_minimum LinuxFunctionApp#elastic_instance_minimum}
 
 ---
 
@@ -4814,7 +4814,7 @@ State of FTP / FTPS service for this function app.
 
 Possible values include: `AllAllowed`, `FtpsOnly` and `Disabled`. Defaults to `Disabled`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#ftps_state LinuxFunctionApp#ftps_state}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#ftps_state LinuxFunctionApp#ftps_state}
 
 ---
 
@@ -4830,7 +4830,7 @@ The amount of time in minutes that a node is unhealthy before being removed from
 
 Possible values are between `2` and `10`. Defaults to `10`. Only valid in conjunction with `health_check_path`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#health_check_eviction_time_in_min LinuxFunctionApp#health_check_eviction_time_in_min}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#health_check_eviction_time_in_min LinuxFunctionApp#health_check_eviction_time_in_min}
 
 ---
 
@@ -4844,7 +4844,7 @@ public readonly healthCheckPath: string;
 
 The path to be checked for this function app health.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#health_check_path LinuxFunctionApp#health_check_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#health_check_path LinuxFunctionApp#health_check_path}
 
 ---
 
@@ -4858,7 +4858,7 @@ public readonly http2Enabled: boolean | IResolvable;
 
 Specifies if the http2 protocol should be enabled. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#http2_enabled LinuxFunctionApp#http2_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#http2_enabled LinuxFunctionApp#http2_enabled}
 
 ---
 
@@ -4872,7 +4872,7 @@ public readonly ipRestriction: IResolvable | LinuxFunctionAppSiteConfigIpRestric
 
 ip_restriction block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#ip_restriction LinuxFunctionApp#ip_restriction}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#ip_restriction LinuxFunctionApp#ip_restriction}
 
 ---
 
@@ -4886,7 +4886,7 @@ public readonly loadBalancingMode: string;
 
 The Site load balancing mode. Possible values include: `WeightedRoundRobin`, `LeastRequests`, `LeastResponseTime`, `WeightedTotalTraffic`, `RequestHash`, `PerSiteRoundRobin`. Defaults to `LeastRequests` if omitted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#load_balancing_mode LinuxFunctionApp#load_balancing_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#load_balancing_mode LinuxFunctionApp#load_balancing_mode}
 
 ---
 
@@ -4900,7 +4900,7 @@ public readonly managedPipelineMode: string;
 
 The Managed Pipeline mode. Possible values include: `Integrated`, `Classic`. Defaults to `Integrated`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#managed_pipeline_mode LinuxFunctionApp#managed_pipeline_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#managed_pipeline_mode LinuxFunctionApp#managed_pipeline_mode}
 
 ---
 
@@ -4916,7 +4916,7 @@ The configures the minimum version of TLS required for SSL requests.
 
 Possible values include: `1.0`, `1.1`, and  `1.2`. Defaults to `1.2`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#minimum_tls_version LinuxFunctionApp#minimum_tls_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#minimum_tls_version LinuxFunctionApp#minimum_tls_version}
 
 ---
 
@@ -4930,7 +4930,7 @@ public readonly preWarmedInstanceCount: number;
 
 The number of pre-warmed instances for this function app. Only affects apps on an Elastic Premium plan.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#pre_warmed_instance_count LinuxFunctionApp#pre_warmed_instance_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#pre_warmed_instance_count LinuxFunctionApp#pre_warmed_instance_count}
 
 ---
 
@@ -4944,7 +4944,7 @@ public readonly remoteDebuggingEnabled: boolean | IResolvable;
 
 Should Remote Debugging be enabled. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#remote_debugging_enabled LinuxFunctionApp#remote_debugging_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#remote_debugging_enabled LinuxFunctionApp#remote_debugging_enabled}
 
 ---
 
@@ -4958,7 +4958,7 @@ public readonly remoteDebuggingVersion: string;
 
 The Remote Debugging Version. Possible values include `VS2017`, `VS2019`, and `VS2022``.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#remote_debugging_version LinuxFunctionApp#remote_debugging_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#remote_debugging_version LinuxFunctionApp#remote_debugging_version}
 
 ---
 
@@ -4972,7 +4972,7 @@ public readonly runtimeScaleMonitoringEnabled: boolean | IResolvable;
 
 Should Functions Runtime Scale Monitoring be enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#runtime_scale_monitoring_enabled LinuxFunctionApp#runtime_scale_monitoring_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#runtime_scale_monitoring_enabled LinuxFunctionApp#runtime_scale_monitoring_enabled}
 
 ---
 
@@ -4986,7 +4986,7 @@ public readonly scmIpRestriction: IResolvable | LinuxFunctionAppSiteConfigScmIpR
 
 scm_ip_restriction block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#scm_ip_restriction LinuxFunctionApp#scm_ip_restriction}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#scm_ip_restriction LinuxFunctionApp#scm_ip_restriction}
 
 ---
 
@@ -5000,7 +5000,7 @@ public readonly scmMinimumTlsVersion: string;
 
 Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: `1.0`, `1.1`, and  `1.2`. Defaults to `1.2`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#scm_minimum_tls_version LinuxFunctionApp#scm_minimum_tls_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#scm_minimum_tls_version LinuxFunctionApp#scm_minimum_tls_version}
 
 ---
 
@@ -5014,7 +5014,7 @@ public readonly scmUseMainIpRestriction: boolean | IResolvable;
 
 Should the Linux Function App `ip_restriction` configuration be used for the SCM also.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#scm_use_main_ip_restriction LinuxFunctionApp#scm_use_main_ip_restriction}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#scm_use_main_ip_restriction LinuxFunctionApp#scm_use_main_ip_restriction}
 
 ---
 
@@ -5028,7 +5028,7 @@ public readonly use32BitWorker: boolean | IResolvable;
 
 Should the Linux Web App use a 32-bit worker.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#use_32_bit_worker LinuxFunctionApp#use_32_bit_worker}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#use_32_bit_worker LinuxFunctionApp#use_32_bit_worker}
 
 ---
 
@@ -5042,7 +5042,7 @@ public readonly vnetRouteAllEnabled: boolean | IResolvable;
 
 Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#vnet_route_all_enabled LinuxFunctionApp#vnet_route_all_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#vnet_route_all_enabled LinuxFunctionApp#vnet_route_all_enabled}
 
 ---
 
@@ -5056,7 +5056,7 @@ public readonly websocketsEnabled: boolean | IResolvable;
 
 Should Web Sockets be enabled. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#websockets_enabled LinuxFunctionApp#websockets_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#websockets_enabled LinuxFunctionApp#websockets_enabled}
 
 ---
 
@@ -5070,7 +5070,7 @@ public readonly workerCount: number;
 
 The number of Workers for this Linux Function App.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#worker_count LinuxFunctionApp#worker_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#worker_count LinuxFunctionApp#worker_count}
 
 ---
 
@@ -5094,7 +5094,7 @@ const linuxFunctionAppSiteConfigApplicationStack: linuxFunctionApp.LinuxFunction
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.nodeVersion">nodeVersion</a></code> | <code>string</code> | The version of Node to use. Possible values include `12`, `14`, `16` and `18`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.powershellCoreVersion">powershellCoreVersion</a></code> | <code>string</code> | The version of PowerShell Core to use. Possibles values are `7`, and `7.2`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.pythonVersion">pythonVersion</a></code> | <code>string</code> | The version of Python to use. Possible values include `3.11`, `3.10`, `3.9`, `3.8`, and `3.7`. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.useCustomRuntime">useCustomRuntime</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#use_custom_runtime LinuxFunctionApp#use_custom_runtime}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.useCustomRuntime">useCustomRuntime</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#use_custom_runtime LinuxFunctionApp#use_custom_runtime}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.useDotnetIsolatedRuntime">useDotnetIsolatedRuntime</a></code> | <code>boolean \| cdktf.IResolvable</code> | Should the DotNet process use an isolated runtime. Defaults to `false`. |
 
 ---
@@ -5109,7 +5109,7 @@ public readonly docker: IResolvable | LinuxFunctionAppSiteConfigApplicationStack
 
 docker block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#docker LinuxFunctionApp#docker}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#docker LinuxFunctionApp#docker}
 
 ---
 
@@ -5123,7 +5123,7 @@ public readonly dotnetVersion: string;
 
 The version of .Net. Possible values are `3.1`, `6.0` and `7.0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#dotnet_version LinuxFunctionApp#dotnet_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#dotnet_version LinuxFunctionApp#dotnet_version}
 
 ---
 
@@ -5137,7 +5137,7 @@ public readonly javaVersion: string;
 
 The version of Java to use. Possible values are `8`, `11`, and `17`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#java_version LinuxFunctionApp#java_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#java_version LinuxFunctionApp#java_version}
 
 ---
 
@@ -5151,7 +5151,7 @@ public readonly nodeVersion: string;
 
 The version of Node to use. Possible values include `12`, `14`, `16` and `18`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#node_version LinuxFunctionApp#node_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#node_version LinuxFunctionApp#node_version}
 
 ---
 
@@ -5165,7 +5165,7 @@ public readonly powershellCoreVersion: string;
 
 The version of PowerShell Core to use. Possibles values are `7`, and `7.2`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#powershell_core_version LinuxFunctionApp#powershell_core_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#powershell_core_version LinuxFunctionApp#powershell_core_version}
 
 ---
 
@@ -5179,7 +5179,7 @@ public readonly pythonVersion: string;
 
 The version of Python to use. Possible values include `3.11`, `3.10`, `3.9`, `3.8`, and `3.7`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#python_version LinuxFunctionApp#python_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#python_version LinuxFunctionApp#python_version}
 
 ---
 
@@ -5191,7 +5191,7 @@ public readonly useCustomRuntime: boolean | IResolvable;
 
 - *Type:* boolean | cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#use_custom_runtime LinuxFunctionApp#use_custom_runtime}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#use_custom_runtime LinuxFunctionApp#use_custom_runtime}.
 
 ---
 
@@ -5205,7 +5205,7 @@ public readonly useDotnetIsolatedRuntime: boolean | IResolvable;
 
 Should the DotNet process use an isolated runtime. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#use_dotnet_isolated_runtime LinuxFunctionApp#use_dotnet_isolated_runtime}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#use_dotnet_isolated_runtime LinuxFunctionApp#use_dotnet_isolated_runtime}
 
 ---
 
@@ -5241,7 +5241,7 @@ public readonly imageName: string;
 
 The name of the Docker image to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#image_name LinuxFunctionApp#image_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#image_name LinuxFunctionApp#image_name}
 
 ---
 
@@ -5255,7 +5255,7 @@ public readonly imageTag: string;
 
 The image tag of the image to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#image_tag LinuxFunctionApp#image_tag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#image_tag LinuxFunctionApp#image_tag}
 
 ---
 
@@ -5269,7 +5269,7 @@ public readonly registryUrl: string;
 
 The URL of the docker registry.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#registry_url LinuxFunctionApp#registry_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#registry_url LinuxFunctionApp#registry_url}
 
 ---
 
@@ -5283,7 +5283,7 @@ public readonly registryPassword: string;
 
 The password for the account to use to connect to the registry.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#registry_password LinuxFunctionApp#registry_password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#registry_password LinuxFunctionApp#registry_password}
 
 ---
 
@@ -5297,7 +5297,7 @@ public readonly registryUsername: string;
 
 The username to use for connections to the registry.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#registry_username LinuxFunctionApp#registry_username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#registry_username LinuxFunctionApp#registry_username}
 
 ---
 
@@ -5330,7 +5330,7 @@ public readonly diskQuotaMb: number;
 
 The amount of disk space to use for logs. Valid values are between `25` and `100`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#disk_quota_mb LinuxFunctionApp#disk_quota_mb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#disk_quota_mb LinuxFunctionApp#disk_quota_mb}
 
 ---
 
@@ -5344,7 +5344,7 @@ public readonly retentionPeriodDays: number;
 
 The retention period for logs in days. Valid values are between `0` and `99999`. Defaults to `0` (never delete).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#retention_period_days LinuxFunctionApp#retention_period_days}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#retention_period_days LinuxFunctionApp#retention_period_days}
 
 ---
 
@@ -5377,7 +5377,7 @@ public readonly allowedOrigins: string[];
 
 Specifies a list of origins that should be allowed to make cross-origin calls.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#allowed_origins LinuxFunctionApp#allowed_origins}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#allowed_origins LinuxFunctionApp#allowed_origins}
 
 ---
 
@@ -5391,7 +5391,7 @@ public readonly supportCredentials: boolean | IResolvable;
 
 Are credentials allowed in CORS requests? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#support_credentials LinuxFunctionApp#support_credentials}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#support_credentials LinuxFunctionApp#support_credentials}
 
 ---
 
@@ -5410,7 +5410,7 @@ const linuxFunctionAppSiteConfigIpRestriction: linuxFunctionApp.LinuxFunctionApp
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction.property.action">action</a></code> | <code>string</code> | The action to take. Possible values are `Allow` or `Deny`. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction.property.headers">headers</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders">LinuxFunctionAppSiteConfigIpRestrictionHeaders</a>[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#headers LinuxFunctionApp#headers}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction.property.headers">headers</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders">LinuxFunctionAppSiteConfigIpRestrictionHeaders</a>[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#headers LinuxFunctionApp#headers}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction.property.ipAddress">ipAddress</a></code> | <code>string</code> | The CIDR notation of the IP or IP Range to match. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction.property.name">name</a></code> | <code>string</code> | The name which should be used for this `ip_restriction`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction.property.priority">priority</a></code> | <code>number</code> | The priority value of this `ip_restriction`. |
@@ -5429,7 +5429,7 @@ public readonly action: string;
 
 The action to take. Possible values are `Allow` or `Deny`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#action LinuxFunctionApp#action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#action LinuxFunctionApp#action}
 
 ---
 
@@ -5441,7 +5441,7 @@ public readonly headers: IResolvable | LinuxFunctionAppSiteConfigIpRestrictionHe
 
 - *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders">LinuxFunctionAppSiteConfigIpRestrictionHeaders</a>[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#headers LinuxFunctionApp#headers}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#headers LinuxFunctionApp#headers}.
 
 ---
 
@@ -5457,7 +5457,7 @@ The CIDR notation of the IP or IP Range to match.
 
 For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#ip_address LinuxFunctionApp#ip_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#ip_address LinuxFunctionApp#ip_address}
 
 ---
 
@@ -5471,7 +5471,7 @@ public readonly name: string;
 
 The name which should be used for this `ip_restriction`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#name LinuxFunctionApp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#name LinuxFunctionApp#name}
 
 ---
 
@@ -5485,7 +5485,7 @@ public readonly priority: number;
 
 The priority value of this `ip_restriction`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#priority LinuxFunctionApp#priority}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#priority LinuxFunctionApp#priority}
 
 ---
 
@@ -5499,7 +5499,7 @@ public readonly serviceTag: string;
 
 The Service Tag used for this IP Restriction.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#service_tag LinuxFunctionApp#service_tag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#service_tag LinuxFunctionApp#service_tag}
 
 ---
 
@@ -5513,7 +5513,7 @@ public readonly virtualNetworkSubnetId: string;
 
 The Virtual Network Subnet ID used for this IP Restriction.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#virtual_network_subnet_id LinuxFunctionApp#virtual_network_subnet_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#virtual_network_subnet_id LinuxFunctionApp#virtual_network_subnet_id}
 
 ---
 
@@ -5531,10 +5531,10 @@ const linuxFunctionAppSiteConfigIpRestrictionHeaders: linuxFunctionApp.LinuxFunc
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders.property.xAzureFdid">xAzureFdid</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#x_azure_fdid LinuxFunctionApp#x_azure_fdid}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders.property.xFdHealthProbe">xFdHealthProbe</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#x_fd_health_probe LinuxFunctionApp#x_fd_health_probe}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders.property.xForwardedFor">xForwardedFor</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#x_forwarded_for LinuxFunctionApp#x_forwarded_for}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders.property.xForwardedHost">xForwardedHost</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#x_forwarded_host LinuxFunctionApp#x_forwarded_host}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders.property.xAzureFdid">xAzureFdid</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#x_azure_fdid LinuxFunctionApp#x_azure_fdid}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders.property.xFdHealthProbe">xFdHealthProbe</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#x_fd_health_probe LinuxFunctionApp#x_fd_health_probe}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders.property.xForwardedFor">xForwardedFor</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#x_forwarded_for LinuxFunctionApp#x_forwarded_for}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders.property.xForwardedHost">xForwardedHost</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#x_forwarded_host LinuxFunctionApp#x_forwarded_host}. |
 
 ---
 
@@ -5546,7 +5546,7 @@ public readonly xAzureFdid: string[];
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#x_azure_fdid LinuxFunctionApp#x_azure_fdid}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#x_azure_fdid LinuxFunctionApp#x_azure_fdid}.
 
 ---
 
@@ -5558,7 +5558,7 @@ public readonly xFdHealthProbe: string[];
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#x_fd_health_probe LinuxFunctionApp#x_fd_health_probe}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#x_fd_health_probe LinuxFunctionApp#x_fd_health_probe}.
 
 ---
 
@@ -5570,7 +5570,7 @@ public readonly xForwardedFor: string[];
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#x_forwarded_for LinuxFunctionApp#x_forwarded_for}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#x_forwarded_for LinuxFunctionApp#x_forwarded_for}.
 
 ---
 
@@ -5582,7 +5582,7 @@ public readonly xForwardedHost: string[];
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#x_forwarded_host LinuxFunctionApp#x_forwarded_host}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#x_forwarded_host LinuxFunctionApp#x_forwarded_host}.
 
 ---
 
@@ -5601,7 +5601,7 @@ const linuxFunctionAppSiteConfigScmIpRestriction: linuxFunctionApp.LinuxFunction
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction.property.action">action</a></code> | <code>string</code> | The action to take. Possible values are `Allow` or `Deny`. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction.property.headers">headers</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders">LinuxFunctionAppSiteConfigScmIpRestrictionHeaders</a>[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#headers LinuxFunctionApp#headers}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction.property.headers">headers</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders">LinuxFunctionAppSiteConfigScmIpRestrictionHeaders</a>[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#headers LinuxFunctionApp#headers}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction.property.ipAddress">ipAddress</a></code> | <code>string</code> | The CIDR notation of the IP or IP Range to match. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction.property.name">name</a></code> | <code>string</code> | The name which should be used for this `ip_restriction`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction.property.priority">priority</a></code> | <code>number</code> | The priority value of this `ip_restriction`. |
@@ -5620,7 +5620,7 @@ public readonly action: string;
 
 The action to take. Possible values are `Allow` or `Deny`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#action LinuxFunctionApp#action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#action LinuxFunctionApp#action}
 
 ---
 
@@ -5632,7 +5632,7 @@ public readonly headers: IResolvable | LinuxFunctionAppSiteConfigScmIpRestrictio
 
 - *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders">LinuxFunctionAppSiteConfigScmIpRestrictionHeaders</a>[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#headers LinuxFunctionApp#headers}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#headers LinuxFunctionApp#headers}.
 
 ---
 
@@ -5648,7 +5648,7 @@ The CIDR notation of the IP or IP Range to match.
 
 For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#ip_address LinuxFunctionApp#ip_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#ip_address LinuxFunctionApp#ip_address}
 
 ---
 
@@ -5662,7 +5662,7 @@ public readonly name: string;
 
 The name which should be used for this `ip_restriction`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#name LinuxFunctionApp#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#name LinuxFunctionApp#name}
 
 ---
 
@@ -5676,7 +5676,7 @@ public readonly priority: number;
 
 The priority value of this `ip_restriction`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#priority LinuxFunctionApp#priority}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#priority LinuxFunctionApp#priority}
 
 ---
 
@@ -5690,7 +5690,7 @@ public readonly serviceTag: string;
 
 The Service Tag used for this IP Restriction.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#service_tag LinuxFunctionApp#service_tag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#service_tag LinuxFunctionApp#service_tag}
 
 ---
 
@@ -5704,7 +5704,7 @@ public readonly virtualNetworkSubnetId: string;
 
 The Virtual Network Subnet ID used for this IP Restriction.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#virtual_network_subnet_id LinuxFunctionApp#virtual_network_subnet_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#virtual_network_subnet_id LinuxFunctionApp#virtual_network_subnet_id}
 
 ---
 
@@ -5722,10 +5722,10 @@ const linuxFunctionAppSiteConfigScmIpRestrictionHeaders: linuxFunctionApp.LinuxF
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders.property.xAzureFdid">xAzureFdid</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#x_azure_fdid LinuxFunctionApp#x_azure_fdid}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders.property.xFdHealthProbe">xFdHealthProbe</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#x_fd_health_probe LinuxFunctionApp#x_fd_health_probe}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders.property.xForwardedFor">xForwardedFor</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#x_forwarded_for LinuxFunctionApp#x_forwarded_for}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders.property.xForwardedHost">xForwardedHost</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#x_forwarded_host LinuxFunctionApp#x_forwarded_host}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders.property.xAzureFdid">xAzureFdid</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#x_azure_fdid LinuxFunctionApp#x_azure_fdid}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders.property.xFdHealthProbe">xFdHealthProbe</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#x_fd_health_probe LinuxFunctionApp#x_fd_health_probe}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders.property.xForwardedFor">xForwardedFor</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#x_forwarded_for LinuxFunctionApp#x_forwarded_for}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders.property.xForwardedHost">xForwardedHost</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#x_forwarded_host LinuxFunctionApp#x_forwarded_host}. |
 
 ---
 
@@ -5737,7 +5737,7 @@ public readonly xAzureFdid: string[];
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#x_azure_fdid LinuxFunctionApp#x_azure_fdid}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#x_azure_fdid LinuxFunctionApp#x_azure_fdid}.
 
 ---
 
@@ -5749,7 +5749,7 @@ public readonly xFdHealthProbe: string[];
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#x_fd_health_probe LinuxFunctionApp#x_fd_health_probe}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#x_fd_health_probe LinuxFunctionApp#x_fd_health_probe}.
 
 ---
 
@@ -5761,7 +5761,7 @@ public readonly xForwardedFor: string[];
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#x_forwarded_for LinuxFunctionApp#x_forwarded_for}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#x_forwarded_for LinuxFunctionApp#x_forwarded_for}.
 
 ---
 
@@ -5773,7 +5773,7 @@ public readonly xForwardedHost: string[];
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#x_forwarded_host LinuxFunctionApp#x_forwarded_host}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#x_forwarded_host LinuxFunctionApp#x_forwarded_host}.
 
 ---
 
@@ -5802,8 +5802,8 @@ const linuxFunctionAppStickySettings: linuxFunctionApp.LinuxFunctionAppStickySet
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStickySettings.property.appSettingNames">appSettingNames</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#app_setting_names LinuxFunctionApp#app_setting_names}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStickySettings.property.connectionStringNames">connectionStringNames</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#connection_string_names LinuxFunctionApp#connection_string_names}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStickySettings.property.appSettingNames">appSettingNames</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#app_setting_names LinuxFunctionApp#app_setting_names}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStickySettings.property.connectionStringNames">connectionStringNames</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#connection_string_names LinuxFunctionApp#connection_string_names}. |
 
 ---
 
@@ -5815,7 +5815,7 @@ public readonly appSettingNames: string[];
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#app_setting_names LinuxFunctionApp#app_setting_names}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#app_setting_names LinuxFunctionApp#app_setting_names}.
 
 ---
 
@@ -5827,7 +5827,7 @@ public readonly connectionStringNames: string[];
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#connection_string_names LinuxFunctionApp#connection_string_names}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#connection_string_names LinuxFunctionApp#connection_string_names}.
 
 ---
 
@@ -5845,12 +5845,12 @@ const linuxFunctionAppStorageAccount: linuxFunctionApp.LinuxFunctionAppStorageAc
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount.property.accessKey">accessKey</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#access_key LinuxFunctionApp#access_key}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount.property.accountName">accountName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#account_name LinuxFunctionApp#account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#name LinuxFunctionApp#name}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount.property.shareName">shareName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#share_name LinuxFunctionApp#share_name}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount.property.type">type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#type LinuxFunctionApp#type}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount.property.mountPath">mountPath</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#mount_path LinuxFunctionApp#mount_path}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount.property.accessKey">accessKey</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#access_key LinuxFunctionApp#access_key}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount.property.accountName">accountName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#account_name LinuxFunctionApp#account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#name LinuxFunctionApp#name}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount.property.shareName">shareName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#share_name LinuxFunctionApp#share_name}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount.property.type">type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#type LinuxFunctionApp#type}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount.property.mountPath">mountPath</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#mount_path LinuxFunctionApp#mount_path}. |
 
 ---
 
@@ -5862,7 +5862,7 @@ public readonly accessKey: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#access_key LinuxFunctionApp#access_key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#access_key LinuxFunctionApp#access_key}.
 
 ---
 
@@ -5874,7 +5874,7 @@ public readonly accountName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#account_name LinuxFunctionApp#account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#account_name LinuxFunctionApp#account_name}.
 
 ---
 
@@ -5886,7 +5886,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#name LinuxFunctionApp#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#name LinuxFunctionApp#name}.
 
 ---
 
@@ -5898,7 +5898,7 @@ public readonly shareName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#share_name LinuxFunctionApp#share_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#share_name LinuxFunctionApp#share_name}.
 
 ---
 
@@ -5910,7 +5910,7 @@ public readonly type: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#type LinuxFunctionApp#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#type LinuxFunctionApp#type}.
 
 ---
 
@@ -5922,7 +5922,7 @@ public readonly mountPath: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#mount_path LinuxFunctionApp#mount_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#mount_path LinuxFunctionApp#mount_path}.
 
 ---
 
@@ -5940,10 +5940,10 @@ const linuxFunctionAppTimeouts: linuxFunctionApp.LinuxFunctionAppTimeouts = { ..
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#create LinuxFunctionApp#create}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#delete LinuxFunctionApp#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#read LinuxFunctionApp#read}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#update LinuxFunctionApp#update}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#create LinuxFunctionApp#create}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#delete LinuxFunctionApp#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#read LinuxFunctionApp#read}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#update LinuxFunctionApp#update}. |
 
 ---
 
@@ -5955,7 +5955,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#create LinuxFunctionApp#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#create LinuxFunctionApp#create}.
 
 ---
 
@@ -5967,7 +5967,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#delete LinuxFunctionApp#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#delete LinuxFunctionApp#delete}.
 
 ---
 
@@ -5979,7 +5979,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#read LinuxFunctionApp#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#read LinuxFunctionApp#read}.
 
 ---
 
@@ -5991,7 +5991,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/linux_function_app#update LinuxFunctionApp#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/linux_function_app#update LinuxFunctionApp#update}.
 
 ---
 

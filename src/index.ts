@@ -644,6 +644,7 @@ export * as netappVolumeQuotaRule from './netapp-volume-quota-rule';
 export * as networkConnectionMonitor from './network-connection-monitor';
 export * as networkDdosProtectionPlan from './network-ddos-protection-plan';
 export * as networkFunctionAzureTrafficCollector from './network-function-azure-traffic-collector';
+export * as networkFunctionCollectorPolicy from './network-function-collector-policy';
 export * as networkInterface from './network-interface';
 export * as networkInterfaceApplicationGatewayBackendAddressPoolAssociation from './network-interface-application-gateway-backend-address-pool-association';
 export * as networkInterfaceApplicationSecurityGroupAssociation from './network-interface-application-security-group-association';

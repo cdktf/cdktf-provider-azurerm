@@ -1,6 +1,6 @@
 # `azurerm_kubernetes_cluster`
 
-Refer to the Terraform Registory for docs: [`azurerm_kubernetes_cluster`](https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster).
+Refer to the Terraform Registory for docs: [`azurerm_kubernetes_cluster`](https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster).
 
 # `kubernetesCluster` Submodule <a name="`kubernetesCluster` Submodule" id="@cdktf/provider-azurerm.kubernetesCluster"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_kubernetes_cluster`](https:
 
 ### KubernetesCluster <a name="KubernetesCluster" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster azurerm_kubernetes_cluster}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster azurerm_kubernetes_cluster}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.Initializer"></a>
 
@@ -1150,7 +1150,7 @@ The construct id used in the generated config for the KubernetesCluster to impor
 
 The id of the existing KubernetesCluster that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -2747,7 +2747,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAciConnectorLinux.property.subnetName">SubnetName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#subnet_name KubernetesCluster#subnet_name}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAciConnectorLinux.property.subnetName">SubnetName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#subnet_name KubernetesCluster#subnet_name}. |
 
 ---
 
@@ -2759,7 +2759,7 @@ SubnetName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#subnet_name KubernetesCluster#subnet_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#subnet_name KubernetesCluster#subnet_name}.
 
 ---
 
@@ -2794,9 +2794,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterApiServerAccessProfile.property.authorizedIpRanges">AuthorizedIpRanges</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#authorized_ip_ranges KubernetesCluster#authorized_ip_ranges}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterApiServerAccessProfile.property.subnetId">SubnetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#subnet_id KubernetesCluster#subnet_id}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterApiServerAccessProfile.property.vnetIntegrationEnabled">VnetIntegrationEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#vnet_integration_enabled KubernetesCluster#vnet_integration_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterApiServerAccessProfile.property.authorizedIpRanges">AuthorizedIpRanges</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#authorized_ip_ranges KubernetesCluster#authorized_ip_ranges}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterApiServerAccessProfile.property.subnetId">SubnetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#subnet_id KubernetesCluster#subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterApiServerAccessProfile.property.vnetIntegrationEnabled">VnetIntegrationEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#vnet_integration_enabled KubernetesCluster#vnet_integration_enabled}. |
 
 ---
 
@@ -2808,7 +2808,7 @@ AuthorizedIpRanges *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#authorized_ip_ranges KubernetesCluster#authorized_ip_ranges}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#authorized_ip_ranges KubernetesCluster#authorized_ip_ranges}.
 
 ---
 
@@ -2820,7 +2820,7 @@ SubnetId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#subnet_id KubernetesCluster#subnet_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#subnet_id KubernetesCluster#subnet_id}.
 
 ---
 
@@ -2832,7 +2832,7 @@ VnetIntegrationEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#vnet_integration_enabled KubernetesCluster#vnet_integration_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#vnet_integration_enabled KubernetesCluster#vnet_integration_enabled}.
 
 ---
 
@@ -2868,23 +2868,23 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.balanceSimilarNodeGroups">BalanceSimilarNodeGroups</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#balance_similar_node_groups KubernetesCluster#balance_similar_node_groups}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.emptyBulkDeleteMax">EmptyBulkDeleteMax</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#empty_bulk_delete_max KubernetesCluster#empty_bulk_delete_max}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.expander">Expander</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#expander KubernetesCluster#expander}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.maxGracefulTerminationSec">MaxGracefulTerminationSec</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#max_graceful_termination_sec KubernetesCluster#max_graceful_termination_sec}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.maxNodeProvisioningTime">MaxNodeProvisioningTime</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#max_node_provisioning_time KubernetesCluster#max_node_provisioning_time}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.maxUnreadyNodes">MaxUnreadyNodes</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#max_unready_nodes KubernetesCluster#max_unready_nodes}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.maxUnreadyPercentage">MaxUnreadyPercentage</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#max_unready_percentage KubernetesCluster#max_unready_percentage}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.newPodScaleUpDelay">NewPodScaleUpDelay</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#new_pod_scale_up_delay KubernetesCluster#new_pod_scale_up_delay}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.scaleDownDelayAfterAdd">ScaleDownDelayAfterAdd</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#scale_down_delay_after_add KubernetesCluster#scale_down_delay_after_add}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.scaleDownDelayAfterDelete">ScaleDownDelayAfterDelete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#scale_down_delay_after_delete KubernetesCluster#scale_down_delay_after_delete}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.scaleDownDelayAfterFailure">ScaleDownDelayAfterFailure</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#scale_down_delay_after_failure KubernetesCluster#scale_down_delay_after_failure}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.scaleDownUnneeded">ScaleDownUnneeded</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#scale_down_unneeded KubernetesCluster#scale_down_unneeded}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.scaleDownUnready">ScaleDownUnready</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#scale_down_unready KubernetesCluster#scale_down_unready}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.scaleDownUtilizationThreshold">ScaleDownUtilizationThreshold</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#scale_down_utilization_threshold KubernetesCluster#scale_down_utilization_threshold}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.scanInterval">ScanInterval</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#scan_interval KubernetesCluster#scan_interval}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.skipNodesWithLocalStorage">SkipNodesWithLocalStorage</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#skip_nodes_with_local_storage KubernetesCluster#skip_nodes_with_local_storage}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.skipNodesWithSystemPods">SkipNodesWithSystemPods</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#skip_nodes_with_system_pods KubernetesCluster#skip_nodes_with_system_pods}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.balanceSimilarNodeGroups">BalanceSimilarNodeGroups</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#balance_similar_node_groups KubernetesCluster#balance_similar_node_groups}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.emptyBulkDeleteMax">EmptyBulkDeleteMax</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#empty_bulk_delete_max KubernetesCluster#empty_bulk_delete_max}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.expander">Expander</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#expander KubernetesCluster#expander}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.maxGracefulTerminationSec">MaxGracefulTerminationSec</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#max_graceful_termination_sec KubernetesCluster#max_graceful_termination_sec}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.maxNodeProvisioningTime">MaxNodeProvisioningTime</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#max_node_provisioning_time KubernetesCluster#max_node_provisioning_time}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.maxUnreadyNodes">MaxUnreadyNodes</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#max_unready_nodes KubernetesCluster#max_unready_nodes}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.maxUnreadyPercentage">MaxUnreadyPercentage</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#max_unready_percentage KubernetesCluster#max_unready_percentage}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.newPodScaleUpDelay">NewPodScaleUpDelay</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#new_pod_scale_up_delay KubernetesCluster#new_pod_scale_up_delay}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.scaleDownDelayAfterAdd">ScaleDownDelayAfterAdd</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#scale_down_delay_after_add KubernetesCluster#scale_down_delay_after_add}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.scaleDownDelayAfterDelete">ScaleDownDelayAfterDelete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#scale_down_delay_after_delete KubernetesCluster#scale_down_delay_after_delete}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.scaleDownDelayAfterFailure">ScaleDownDelayAfterFailure</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#scale_down_delay_after_failure KubernetesCluster#scale_down_delay_after_failure}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.scaleDownUnneeded">ScaleDownUnneeded</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#scale_down_unneeded KubernetesCluster#scale_down_unneeded}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.scaleDownUnready">ScaleDownUnready</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#scale_down_unready KubernetesCluster#scale_down_unready}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.scaleDownUtilizationThreshold">ScaleDownUtilizationThreshold</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#scale_down_utilization_threshold KubernetesCluster#scale_down_utilization_threshold}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.scanInterval">ScanInterval</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#scan_interval KubernetesCluster#scan_interval}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.skipNodesWithLocalStorage">SkipNodesWithLocalStorage</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#skip_nodes_with_local_storage KubernetesCluster#skip_nodes_with_local_storage}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.skipNodesWithSystemPods">SkipNodesWithSystemPods</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#skip_nodes_with_system_pods KubernetesCluster#skip_nodes_with_system_pods}. |
 
 ---
 
@@ -2896,7 +2896,7 @@ BalanceSimilarNodeGroups interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#balance_similar_node_groups KubernetesCluster#balance_similar_node_groups}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#balance_similar_node_groups KubernetesCluster#balance_similar_node_groups}.
 
 ---
 
@@ -2908,7 +2908,7 @@ EmptyBulkDeleteMax *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#empty_bulk_delete_max KubernetesCluster#empty_bulk_delete_max}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#empty_bulk_delete_max KubernetesCluster#empty_bulk_delete_max}.
 
 ---
 
@@ -2920,7 +2920,7 @@ Expander *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#expander KubernetesCluster#expander}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#expander KubernetesCluster#expander}.
 
 ---
 
@@ -2932,7 +2932,7 @@ MaxGracefulTerminationSec *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#max_graceful_termination_sec KubernetesCluster#max_graceful_termination_sec}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#max_graceful_termination_sec KubernetesCluster#max_graceful_termination_sec}.
 
 ---
 
@@ -2944,7 +2944,7 @@ MaxNodeProvisioningTime *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#max_node_provisioning_time KubernetesCluster#max_node_provisioning_time}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#max_node_provisioning_time KubernetesCluster#max_node_provisioning_time}.
 
 ---
 
@@ -2956,7 +2956,7 @@ MaxUnreadyNodes *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#max_unready_nodes KubernetesCluster#max_unready_nodes}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#max_unready_nodes KubernetesCluster#max_unready_nodes}.
 
 ---
 
@@ -2968,7 +2968,7 @@ MaxUnreadyPercentage *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#max_unready_percentage KubernetesCluster#max_unready_percentage}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#max_unready_percentage KubernetesCluster#max_unready_percentage}.
 
 ---
 
@@ -2980,7 +2980,7 @@ NewPodScaleUpDelay *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#new_pod_scale_up_delay KubernetesCluster#new_pod_scale_up_delay}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#new_pod_scale_up_delay KubernetesCluster#new_pod_scale_up_delay}.
 
 ---
 
@@ -2992,7 +2992,7 @@ ScaleDownDelayAfterAdd *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#scale_down_delay_after_add KubernetesCluster#scale_down_delay_after_add}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#scale_down_delay_after_add KubernetesCluster#scale_down_delay_after_add}.
 
 ---
 
@@ -3004,7 +3004,7 @@ ScaleDownDelayAfterDelete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#scale_down_delay_after_delete KubernetesCluster#scale_down_delay_after_delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#scale_down_delay_after_delete KubernetesCluster#scale_down_delay_after_delete}.
 
 ---
 
@@ -3016,7 +3016,7 @@ ScaleDownDelayAfterFailure *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#scale_down_delay_after_failure KubernetesCluster#scale_down_delay_after_failure}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#scale_down_delay_after_failure KubernetesCluster#scale_down_delay_after_failure}.
 
 ---
 
@@ -3028,7 +3028,7 @@ ScaleDownUnneeded *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#scale_down_unneeded KubernetesCluster#scale_down_unneeded}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#scale_down_unneeded KubernetesCluster#scale_down_unneeded}.
 
 ---
 
@@ -3040,7 +3040,7 @@ ScaleDownUnready *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#scale_down_unready KubernetesCluster#scale_down_unready}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#scale_down_unready KubernetesCluster#scale_down_unready}.
 
 ---
 
@@ -3052,7 +3052,7 @@ ScaleDownUtilizationThreshold *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#scale_down_utilization_threshold KubernetesCluster#scale_down_utilization_threshold}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#scale_down_utilization_threshold KubernetesCluster#scale_down_utilization_threshold}.
 
 ---
 
@@ -3064,7 +3064,7 @@ ScanInterval *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#scan_interval KubernetesCluster#scan_interval}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#scan_interval KubernetesCluster#scan_interval}.
 
 ---
 
@@ -3076,7 +3076,7 @@ SkipNodesWithLocalStorage interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#skip_nodes_with_local_storage KubernetesCluster#skip_nodes_with_local_storage}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#skip_nodes_with_local_storage KubernetesCluster#skip_nodes_with_local_storage}.
 
 ---
 
@@ -3088,7 +3088,7 @@ SkipNodesWithSystemPods interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#skip_nodes_with_system_pods KubernetesCluster#skip_nodes_with_system_pods}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#skip_nodes_with_system_pods KubernetesCluster#skip_nodes_with_system_pods}.
 
 ---
 
@@ -3114,13 +3114,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl.property.adminGroupObjectIds">AdminGroupObjectIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#admin_group_object_ids KubernetesCluster#admin_group_object_ids}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl.property.azureRbacEnabled">AzureRbacEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#azure_rbac_enabled KubernetesCluster#azure_rbac_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl.property.clientAppId">ClientAppId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#client_app_id KubernetesCluster#client_app_id}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl.property.managed">Managed</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#managed KubernetesCluster#managed}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl.property.serverAppId">ServerAppId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#server_app_id KubernetesCluster#server_app_id}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl.property.serverAppSecret">ServerAppSecret</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#server_app_secret KubernetesCluster#server_app_secret}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl.property.tenantId">TenantId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#tenant_id KubernetesCluster#tenant_id}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl.property.adminGroupObjectIds">AdminGroupObjectIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#admin_group_object_ids KubernetesCluster#admin_group_object_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl.property.azureRbacEnabled">AzureRbacEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#azure_rbac_enabled KubernetesCluster#azure_rbac_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl.property.clientAppId">ClientAppId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#client_app_id KubernetesCluster#client_app_id}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl.property.managed">Managed</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#managed KubernetesCluster#managed}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl.property.serverAppId">ServerAppId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#server_app_id KubernetesCluster#server_app_id}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl.property.serverAppSecret">ServerAppSecret</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#server_app_secret KubernetesCluster#server_app_secret}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl.property.tenantId">TenantId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#tenant_id KubernetesCluster#tenant_id}. |
 
 ---
 
@@ -3132,7 +3132,7 @@ AdminGroupObjectIds *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#admin_group_object_ids KubernetesCluster#admin_group_object_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#admin_group_object_ids KubernetesCluster#admin_group_object_ids}.
 
 ---
 
@@ -3144,7 +3144,7 @@ AzureRbacEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#azure_rbac_enabled KubernetesCluster#azure_rbac_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#azure_rbac_enabled KubernetesCluster#azure_rbac_enabled}.
 
 ---
 
@@ -3156,7 +3156,7 @@ ClientAppId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#client_app_id KubernetesCluster#client_app_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#client_app_id KubernetesCluster#client_app_id}.
 
 ---
 
@@ -3168,7 +3168,7 @@ Managed interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#managed KubernetesCluster#managed}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#managed KubernetesCluster#managed}.
 
 ---
 
@@ -3180,7 +3180,7 @@ ServerAppId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#server_app_id KubernetesCluster#server_app_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#server_app_id KubernetesCluster#server_app_id}.
 
 ---
 
@@ -3192,7 +3192,7 @@ ServerAppSecret *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#server_app_secret KubernetesCluster#server_app_secret}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#server_app_secret KubernetesCluster#server_app_secret}.
 
 ---
 
@@ -3204,7 +3204,7 @@ TenantId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#tenant_id KubernetesCluster#tenant_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#tenant_id KubernetesCluster#tenant_id}.
 
 ---
 
@@ -3224,7 +3224,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfidentialComputing.property.sgxQuoteHelperEnabled">SgxQuoteHelperEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#sgx_quote_helper_enabled KubernetesCluster#sgx_quote_helper_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfidentialComputing.property.sgxQuoteHelperEnabled">SgxQuoteHelperEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#sgx_quote_helper_enabled KubernetesCluster#sgx_quote_helper_enabled}. |
 
 ---
 
@@ -3236,7 +3236,7 @@ SgxQuoteHelperEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#sgx_quote_helper_enabled KubernetesCluster#sgx_quote_helper_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#sgx_quote_helper_enabled KubernetesCluster#sgx_quote_helper_enabled}.
 
 ---
 
@@ -3328,63 +3328,63 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.defaultNodePool">DefaultNodePool</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool">KubernetesClusterDefaultNodePool</a></code> | default_node_pool block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#location KubernetesCluster#location}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#name KubernetesCluster#name}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#resource_group_name KubernetesCluster#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#location KubernetesCluster#location}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#name KubernetesCluster#name}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#resource_group_name KubernetesCluster#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.aciConnectorLinux">AciConnectorLinux</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAciConnectorLinux">KubernetesClusterAciConnectorLinux</a></code> | aci_connector_linux block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.apiServerAccessProfile">ApiServerAccessProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterApiServerAccessProfile">KubernetesClusterApiServerAccessProfile</a></code> | api_server_access_profile block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.apiServerAuthorizedIpRanges">ApiServerAuthorizedIpRanges</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#api_server_authorized_ip_ranges KubernetesCluster#api_server_authorized_ip_ranges}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.automaticChannelUpgrade">AutomaticChannelUpgrade</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#automatic_channel_upgrade KubernetesCluster#automatic_channel_upgrade}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.apiServerAuthorizedIpRanges">ApiServerAuthorizedIpRanges</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#api_server_authorized_ip_ranges KubernetesCluster#api_server_authorized_ip_ranges}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.automaticChannelUpgrade">AutomaticChannelUpgrade</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#automatic_channel_upgrade KubernetesCluster#automatic_channel_upgrade}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.autoScalerProfile">AutoScalerProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile">KubernetesClusterAutoScalerProfile</a></code> | auto_scaler_profile block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.azureActiveDirectoryRoleBasedAccessControl">AzureActiveDirectoryRoleBasedAccessControl</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl">KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl</a></code> | azure_active_directory_role_based_access_control block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.azurePolicyEnabled">AzurePolicyEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#azure_policy_enabled KubernetesCluster#azure_policy_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.azurePolicyEnabled">AzurePolicyEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#azure_policy_enabled KubernetesCluster#azure_policy_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.confidentialComputing">ConfidentialComputing</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfidentialComputing">KubernetesClusterConfidentialComputing</a></code> | confidential_computing block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.customCaTrustCertificatesBase64">CustomCaTrustCertificatesBase64</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#custom_ca_trust_certificates_base64 KubernetesCluster#custom_ca_trust_certificates_base64}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.diskEncryptionSetId">DiskEncryptionSetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#disk_encryption_set_id KubernetesCluster#disk_encryption_set_id}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.dnsPrefix">DnsPrefix</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#dns_prefix KubernetesCluster#dns_prefix}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.dnsPrefixPrivateCluster">DnsPrefixPrivateCluster</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#dns_prefix_private_cluster KubernetesCluster#dns_prefix_private_cluster}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.edgeZone">EdgeZone</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#edge_zone KubernetesCluster#edge_zone}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.enablePodSecurityPolicy">EnablePodSecurityPolicy</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#enable_pod_security_policy KubernetesCluster#enable_pod_security_policy}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.httpApplicationRoutingEnabled">HttpApplicationRoutingEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#http_application_routing_enabled KubernetesCluster#http_application_routing_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.customCaTrustCertificatesBase64">CustomCaTrustCertificatesBase64</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#custom_ca_trust_certificates_base64 KubernetesCluster#custom_ca_trust_certificates_base64}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.diskEncryptionSetId">DiskEncryptionSetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#disk_encryption_set_id KubernetesCluster#disk_encryption_set_id}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.dnsPrefix">DnsPrefix</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#dns_prefix KubernetesCluster#dns_prefix}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.dnsPrefixPrivateCluster">DnsPrefixPrivateCluster</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#dns_prefix_private_cluster KubernetesCluster#dns_prefix_private_cluster}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.edgeZone">EdgeZone</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#edge_zone KubernetesCluster#edge_zone}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.enablePodSecurityPolicy">EnablePodSecurityPolicy</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#enable_pod_security_policy KubernetesCluster#enable_pod_security_policy}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.httpApplicationRoutingEnabled">HttpApplicationRoutingEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#http_application_routing_enabled KubernetesCluster#http_application_routing_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.httpProxyConfig">HttpProxyConfig</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterHttpProxyConfig">KubernetesClusterHttpProxyConfig</a></code> | http_proxy_config block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#id KubernetesCluster#id}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#id KubernetesCluster#id}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.identity">Identity</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterIdentity">KubernetesClusterIdentity</a></code> | identity block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.imageCleanerEnabled">ImageCleanerEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#image_cleaner_enabled KubernetesCluster#image_cleaner_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.imageCleanerIntervalHours">ImageCleanerIntervalHours</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#image_cleaner_interval_hours KubernetesCluster#image_cleaner_interval_hours}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.imageCleanerEnabled">ImageCleanerEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#image_cleaner_enabled KubernetesCluster#image_cleaner_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.imageCleanerIntervalHours">ImageCleanerIntervalHours</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#image_cleaner_interval_hours KubernetesCluster#image_cleaner_interval_hours}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.ingressApplicationGateway">IngressApplicationGateway</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterIngressApplicationGateway">KubernetesClusterIngressApplicationGateway</a></code> | ingress_application_gateway block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.keyManagementService">KeyManagementService</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyManagementService">KubernetesClusterKeyManagementService</a></code> | key_management_service block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.keyVaultSecretsProvider">KeyVaultSecretsProvider</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyVaultSecretsProvider">KubernetesClusterKeyVaultSecretsProvider</a></code> | key_vault_secrets_provider block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.kubeletIdentity">KubeletIdentity</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKubeletIdentity">KubernetesClusterKubeletIdentity</a></code> | kubelet_identity block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.kubernetesVersion">KubernetesVersion</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#kubernetes_version KubernetesCluster#kubernetes_version}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.kubernetesVersion">KubernetesVersion</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#kubernetes_version KubernetesCluster#kubernetes_version}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.linuxProfile">LinuxProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterLinuxProfile">KubernetesClusterLinuxProfile</a></code> | linux_profile block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.localAccountDisabled">LocalAccountDisabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#local_account_disabled KubernetesCluster#local_account_disabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.localAccountDisabled">LocalAccountDisabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#local_account_disabled KubernetesCluster#local_account_disabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.maintenanceWindow">MaintenanceWindow</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindow">KubernetesClusterMaintenanceWindow</a></code> | maintenance_window block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.maintenanceWindowAutoUpgrade">MaintenanceWindowAutoUpgrade</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade">KubernetesClusterMaintenanceWindowAutoUpgrade</a></code> | maintenance_window_auto_upgrade block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.maintenanceWindowNodeOs">MaintenanceWindowNodeOs</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs">KubernetesClusterMaintenanceWindowNodeOs</a></code> | maintenance_window_node_os block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.microsoftDefender">MicrosoftDefender</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMicrosoftDefender">KubernetesClusterMicrosoftDefender</a></code> | microsoft_defender block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.monitorMetrics">MonitorMetrics</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMonitorMetrics">KubernetesClusterMonitorMetrics</a></code> | monitor_metrics block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.networkProfile">NetworkProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile">KubernetesClusterNetworkProfile</a></code> | network_profile block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.nodeOsChannelUpgrade">NodeOsChannelUpgrade</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#node_os_channel_upgrade KubernetesCluster#node_os_channel_upgrade}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.nodeResourceGroup">NodeResourceGroup</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#node_resource_group KubernetesCluster#node_resource_group}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.oidcIssuerEnabled">OidcIssuerEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#oidc_issuer_enabled KubernetesCluster#oidc_issuer_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.nodeOsChannelUpgrade">NodeOsChannelUpgrade</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#node_os_channel_upgrade KubernetesCluster#node_os_channel_upgrade}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.nodeResourceGroup">NodeResourceGroup</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#node_resource_group KubernetesCluster#node_resource_group}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.oidcIssuerEnabled">OidcIssuerEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#oidc_issuer_enabled KubernetesCluster#oidc_issuer_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.omsAgent">OmsAgent</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgent">KubernetesClusterOmsAgent</a></code> | oms_agent block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.openServiceMeshEnabled">OpenServiceMeshEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#open_service_mesh_enabled KubernetesCluster#open_service_mesh_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.privateClusterEnabled">PrivateClusterEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#private_cluster_enabled KubernetesCluster#private_cluster_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.privateClusterPublicFqdnEnabled">PrivateClusterPublicFqdnEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#private_cluster_public_fqdn_enabled KubernetesCluster#private_cluster_public_fqdn_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.privateDnsZoneId">PrivateDnsZoneId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#private_dns_zone_id KubernetesCluster#private_dns_zone_id}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.publicNetworkAccessEnabled">PublicNetworkAccessEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#public_network_access_enabled KubernetesCluster#public_network_access_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.roleBasedAccessControlEnabled">RoleBasedAccessControlEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#role_based_access_control_enabled KubernetesCluster#role_based_access_control_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.runCommandEnabled">RunCommandEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#run_command_enabled KubernetesCluster#run_command_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.openServiceMeshEnabled">OpenServiceMeshEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#open_service_mesh_enabled KubernetesCluster#open_service_mesh_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.privateClusterEnabled">PrivateClusterEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#private_cluster_enabled KubernetesCluster#private_cluster_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.privateClusterPublicFqdnEnabled">PrivateClusterPublicFqdnEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#private_cluster_public_fqdn_enabled KubernetesCluster#private_cluster_public_fqdn_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.privateDnsZoneId">PrivateDnsZoneId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#private_dns_zone_id KubernetesCluster#private_dns_zone_id}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.publicNetworkAccessEnabled">PublicNetworkAccessEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#public_network_access_enabled KubernetesCluster#public_network_access_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.roleBasedAccessControlEnabled">RoleBasedAccessControlEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#role_based_access_control_enabled KubernetesCluster#role_based_access_control_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.runCommandEnabled">RunCommandEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#run_command_enabled KubernetesCluster#run_command_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.serviceMeshProfile">ServiceMeshProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfile">KubernetesClusterServiceMeshProfile</a></code> | service_mesh_profile block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.servicePrincipal">ServicePrincipal</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServicePrincipal">KubernetesClusterServicePrincipal</a></code> | service_principal block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.skuTier">SkuTier</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#sku_tier KubernetesCluster#sku_tier}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.skuTier">SkuTier</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#sku_tier KubernetesCluster#sku_tier}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.storageProfile">StorageProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfile">KubernetesClusterStorageProfile</a></code> | storage_profile block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#tags KubernetesCluster#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#tags KubernetesCluster#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeouts">KubernetesClusterTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.webAppRouting">WebAppRouting</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWebAppRouting">KubernetesClusterWebAppRouting</a></code> | web_app_routing block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.windowsProfile">WindowsProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWindowsProfile">KubernetesClusterWindowsProfile</a></code> | windows_profile block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.workloadAutoscalerProfile">WorkloadAutoscalerProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfile">KubernetesClusterWorkloadAutoscalerProfile</a></code> | workload_autoscaler_profile block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.workloadIdentityEnabled">WorkloadIdentityEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#workload_identity_enabled KubernetesCluster#workload_identity_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.workloadIdentityEnabled">WorkloadIdentityEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#workload_identity_enabled KubernetesCluster#workload_identity_enabled}. |
 
 ---
 
@@ -3468,7 +3468,7 @@ DefaultNodePool KubernetesClusterDefaultNodePool
 
 default_node_pool block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#default_node_pool KubernetesCluster#default_node_pool}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#default_node_pool KubernetesCluster#default_node_pool}
 
 ---
 
@@ -3480,7 +3480,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#location KubernetesCluster#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#location KubernetesCluster#location}.
 
 ---
 
@@ -3492,7 +3492,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#name KubernetesCluster#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#name KubernetesCluster#name}.
 
 ---
 
@@ -3504,7 +3504,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#resource_group_name KubernetesCluster#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#resource_group_name KubernetesCluster#resource_group_name}.
 
 ---
 
@@ -3518,7 +3518,7 @@ AciConnectorLinux KubernetesClusterAciConnectorLinux
 
 aci_connector_linux block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#aci_connector_linux KubernetesCluster#aci_connector_linux}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#aci_connector_linux KubernetesCluster#aci_connector_linux}
 
 ---
 
@@ -3532,7 +3532,7 @@ ApiServerAccessProfile KubernetesClusterApiServerAccessProfile
 
 api_server_access_profile block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#api_server_access_profile KubernetesCluster#api_server_access_profile}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#api_server_access_profile KubernetesCluster#api_server_access_profile}
 
 ---
 
@@ -3544,7 +3544,7 @@ ApiServerAuthorizedIpRanges *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#api_server_authorized_ip_ranges KubernetesCluster#api_server_authorized_ip_ranges}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#api_server_authorized_ip_ranges KubernetesCluster#api_server_authorized_ip_ranges}.
 
 ---
 
@@ -3556,7 +3556,7 @@ AutomaticChannelUpgrade *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#automatic_channel_upgrade KubernetesCluster#automatic_channel_upgrade}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#automatic_channel_upgrade KubernetesCluster#automatic_channel_upgrade}.
 
 ---
 
@@ -3570,7 +3570,7 @@ AutoScalerProfile KubernetesClusterAutoScalerProfile
 
 auto_scaler_profile block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#auto_scaler_profile KubernetesCluster#auto_scaler_profile}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#auto_scaler_profile KubernetesCluster#auto_scaler_profile}
 
 ---
 
@@ -3584,7 +3584,7 @@ AzureActiveDirectoryRoleBasedAccessControl KubernetesClusterAzureActiveDirectory
 
 azure_active_directory_role_based_access_control block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#azure_active_directory_role_based_access_control KubernetesCluster#azure_active_directory_role_based_access_control}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#azure_active_directory_role_based_access_control KubernetesCluster#azure_active_directory_role_based_access_control}
 
 ---
 
@@ -3596,7 +3596,7 @@ AzurePolicyEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#azure_policy_enabled KubernetesCluster#azure_policy_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#azure_policy_enabled KubernetesCluster#azure_policy_enabled}.
 
 ---
 
@@ -3610,7 +3610,7 @@ ConfidentialComputing KubernetesClusterConfidentialComputing
 
 confidential_computing block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#confidential_computing KubernetesCluster#confidential_computing}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#confidential_computing KubernetesCluster#confidential_computing}
 
 ---
 
@@ -3622,7 +3622,7 @@ CustomCaTrustCertificatesBase64 *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#custom_ca_trust_certificates_base64 KubernetesCluster#custom_ca_trust_certificates_base64}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#custom_ca_trust_certificates_base64 KubernetesCluster#custom_ca_trust_certificates_base64}.
 
 ---
 
@@ -3634,7 +3634,7 @@ DiskEncryptionSetId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#disk_encryption_set_id KubernetesCluster#disk_encryption_set_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#disk_encryption_set_id KubernetesCluster#disk_encryption_set_id}.
 
 ---
 
@@ -3646,7 +3646,7 @@ DnsPrefix *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#dns_prefix KubernetesCluster#dns_prefix}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#dns_prefix KubernetesCluster#dns_prefix}.
 
 ---
 
@@ -3658,7 +3658,7 @@ DnsPrefixPrivateCluster *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#dns_prefix_private_cluster KubernetesCluster#dns_prefix_private_cluster}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#dns_prefix_private_cluster KubernetesCluster#dns_prefix_private_cluster}.
 
 ---
 
@@ -3670,7 +3670,7 @@ EdgeZone *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#edge_zone KubernetesCluster#edge_zone}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#edge_zone KubernetesCluster#edge_zone}.
 
 ---
 
@@ -3682,7 +3682,7 @@ EnablePodSecurityPolicy interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#enable_pod_security_policy KubernetesCluster#enable_pod_security_policy}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#enable_pod_security_policy KubernetesCluster#enable_pod_security_policy}.
 
 ---
 
@@ -3694,7 +3694,7 @@ HttpApplicationRoutingEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#http_application_routing_enabled KubernetesCluster#http_application_routing_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#http_application_routing_enabled KubernetesCluster#http_application_routing_enabled}.
 
 ---
 
@@ -3708,7 +3708,7 @@ HttpProxyConfig KubernetesClusterHttpProxyConfig
 
 http_proxy_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#http_proxy_config KubernetesCluster#http_proxy_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#http_proxy_config KubernetesCluster#http_proxy_config}
 
 ---
 
@@ -3720,7 +3720,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#id KubernetesCluster#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#id KubernetesCluster#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -3737,7 +3737,7 @@ Identity KubernetesClusterIdentity
 
 identity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#identity KubernetesCluster#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#identity KubernetesCluster#identity}
 
 ---
 
@@ -3749,7 +3749,7 @@ ImageCleanerEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#image_cleaner_enabled KubernetesCluster#image_cleaner_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#image_cleaner_enabled KubernetesCluster#image_cleaner_enabled}.
 
 ---
 
@@ -3761,7 +3761,7 @@ ImageCleanerIntervalHours *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#image_cleaner_interval_hours KubernetesCluster#image_cleaner_interval_hours}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#image_cleaner_interval_hours KubernetesCluster#image_cleaner_interval_hours}.
 
 ---
 
@@ -3775,7 +3775,7 @@ IngressApplicationGateway KubernetesClusterIngressApplicationGateway
 
 ingress_application_gateway block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#ingress_application_gateway KubernetesCluster#ingress_application_gateway}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#ingress_application_gateway KubernetesCluster#ingress_application_gateway}
 
 ---
 
@@ -3789,7 +3789,7 @@ KeyManagementService KubernetesClusterKeyManagementService
 
 key_management_service block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#key_management_service KubernetesCluster#key_management_service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#key_management_service KubernetesCluster#key_management_service}
 
 ---
 
@@ -3803,7 +3803,7 @@ KeyVaultSecretsProvider KubernetesClusterKeyVaultSecretsProvider
 
 key_vault_secrets_provider block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#key_vault_secrets_provider KubernetesCluster#key_vault_secrets_provider}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#key_vault_secrets_provider KubernetesCluster#key_vault_secrets_provider}
 
 ---
 
@@ -3817,7 +3817,7 @@ KubeletIdentity KubernetesClusterKubeletIdentity
 
 kubelet_identity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#kubelet_identity KubernetesCluster#kubelet_identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#kubelet_identity KubernetesCluster#kubelet_identity}
 
 ---
 
@@ -3829,7 +3829,7 @@ KubernetesVersion *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#kubernetes_version KubernetesCluster#kubernetes_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#kubernetes_version KubernetesCluster#kubernetes_version}.
 
 ---
 
@@ -3843,7 +3843,7 @@ LinuxProfile KubernetesClusterLinuxProfile
 
 linux_profile block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#linux_profile KubernetesCluster#linux_profile}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#linux_profile KubernetesCluster#linux_profile}
 
 ---
 
@@ -3855,7 +3855,7 @@ LocalAccountDisabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#local_account_disabled KubernetesCluster#local_account_disabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#local_account_disabled KubernetesCluster#local_account_disabled}.
 
 ---
 
@@ -3869,7 +3869,7 @@ MaintenanceWindow KubernetesClusterMaintenanceWindow
 
 maintenance_window block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#maintenance_window KubernetesCluster#maintenance_window}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#maintenance_window KubernetesCluster#maintenance_window}
 
 ---
 
@@ -3883,7 +3883,7 @@ MaintenanceWindowAutoUpgrade KubernetesClusterMaintenanceWindowAutoUpgrade
 
 maintenance_window_auto_upgrade block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#maintenance_window_auto_upgrade KubernetesCluster#maintenance_window_auto_upgrade}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#maintenance_window_auto_upgrade KubernetesCluster#maintenance_window_auto_upgrade}
 
 ---
 
@@ -3897,7 +3897,7 @@ MaintenanceWindowNodeOs KubernetesClusterMaintenanceWindowNodeOs
 
 maintenance_window_node_os block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#maintenance_window_node_os KubernetesCluster#maintenance_window_node_os}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#maintenance_window_node_os KubernetesCluster#maintenance_window_node_os}
 
 ---
 
@@ -3911,7 +3911,7 @@ MicrosoftDefender KubernetesClusterMicrosoftDefender
 
 microsoft_defender block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#microsoft_defender KubernetesCluster#microsoft_defender}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#microsoft_defender KubernetesCluster#microsoft_defender}
 
 ---
 
@@ -3925,7 +3925,7 @@ MonitorMetrics KubernetesClusterMonitorMetrics
 
 monitor_metrics block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#monitor_metrics KubernetesCluster#monitor_metrics}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#monitor_metrics KubernetesCluster#monitor_metrics}
 
 ---
 
@@ -3939,7 +3939,7 @@ NetworkProfile KubernetesClusterNetworkProfile
 
 network_profile block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#network_profile KubernetesCluster#network_profile}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#network_profile KubernetesCluster#network_profile}
 
 ---
 
@@ -3951,7 +3951,7 @@ NodeOsChannelUpgrade *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#node_os_channel_upgrade KubernetesCluster#node_os_channel_upgrade}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#node_os_channel_upgrade KubernetesCluster#node_os_channel_upgrade}.
 
 ---
 
@@ -3963,7 +3963,7 @@ NodeResourceGroup *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#node_resource_group KubernetesCluster#node_resource_group}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#node_resource_group KubernetesCluster#node_resource_group}.
 
 ---
 
@@ -3975,7 +3975,7 @@ OidcIssuerEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#oidc_issuer_enabled KubernetesCluster#oidc_issuer_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#oidc_issuer_enabled KubernetesCluster#oidc_issuer_enabled}.
 
 ---
 
@@ -3989,7 +3989,7 @@ OmsAgent KubernetesClusterOmsAgent
 
 oms_agent block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#oms_agent KubernetesCluster#oms_agent}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#oms_agent KubernetesCluster#oms_agent}
 
 ---
 
@@ -4001,7 +4001,7 @@ OpenServiceMeshEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#open_service_mesh_enabled KubernetesCluster#open_service_mesh_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#open_service_mesh_enabled KubernetesCluster#open_service_mesh_enabled}.
 
 ---
 
@@ -4013,7 +4013,7 @@ PrivateClusterEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#private_cluster_enabled KubernetesCluster#private_cluster_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#private_cluster_enabled KubernetesCluster#private_cluster_enabled}.
 
 ---
 
@@ -4025,7 +4025,7 @@ PrivateClusterPublicFqdnEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#private_cluster_public_fqdn_enabled KubernetesCluster#private_cluster_public_fqdn_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#private_cluster_public_fqdn_enabled KubernetesCluster#private_cluster_public_fqdn_enabled}.
 
 ---
 
@@ -4037,7 +4037,7 @@ PrivateDnsZoneId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#private_dns_zone_id KubernetesCluster#private_dns_zone_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#private_dns_zone_id KubernetesCluster#private_dns_zone_id}.
 
 ---
 
@@ -4049,7 +4049,7 @@ PublicNetworkAccessEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#public_network_access_enabled KubernetesCluster#public_network_access_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#public_network_access_enabled KubernetesCluster#public_network_access_enabled}.
 
 ---
 
@@ -4061,7 +4061,7 @@ RoleBasedAccessControlEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#role_based_access_control_enabled KubernetesCluster#role_based_access_control_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#role_based_access_control_enabled KubernetesCluster#role_based_access_control_enabled}.
 
 ---
 
@@ -4073,7 +4073,7 @@ RunCommandEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#run_command_enabled KubernetesCluster#run_command_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#run_command_enabled KubernetesCluster#run_command_enabled}.
 
 ---
 
@@ -4087,7 +4087,7 @@ ServiceMeshProfile KubernetesClusterServiceMeshProfile
 
 service_mesh_profile block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#service_mesh_profile KubernetesCluster#service_mesh_profile}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#service_mesh_profile KubernetesCluster#service_mesh_profile}
 
 ---
 
@@ -4101,7 +4101,7 @@ ServicePrincipal KubernetesClusterServicePrincipal
 
 service_principal block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#service_principal KubernetesCluster#service_principal}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#service_principal KubernetesCluster#service_principal}
 
 ---
 
@@ -4113,7 +4113,7 @@ SkuTier *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#sku_tier KubernetesCluster#sku_tier}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#sku_tier KubernetesCluster#sku_tier}.
 
 ---
 
@@ -4127,7 +4127,7 @@ StorageProfile KubernetesClusterStorageProfile
 
 storage_profile block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#storage_profile KubernetesCluster#storage_profile}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#storage_profile KubernetesCluster#storage_profile}
 
 ---
 
@@ -4139,7 +4139,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#tags KubernetesCluster#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#tags KubernetesCluster#tags}.
 
 ---
 
@@ -4153,7 +4153,7 @@ Timeouts KubernetesClusterTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#timeouts KubernetesCluster#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#timeouts KubernetesCluster#timeouts}
 
 ---
 
@@ -4167,7 +4167,7 @@ WebAppRouting KubernetesClusterWebAppRouting
 
 web_app_routing block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#web_app_routing KubernetesCluster#web_app_routing}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#web_app_routing KubernetesCluster#web_app_routing}
 
 ---
 
@@ -4181,7 +4181,7 @@ WindowsProfile KubernetesClusterWindowsProfile
 
 windows_profile block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#windows_profile KubernetesCluster#windows_profile}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#windows_profile KubernetesCluster#windows_profile}
 
 ---
 
@@ -4195,7 +4195,7 @@ WorkloadAutoscalerProfile KubernetesClusterWorkloadAutoscalerProfile
 
 workload_autoscaler_profile block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#workload_autoscaler_profile KubernetesCluster#workload_autoscaler_profile}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#workload_autoscaler_profile KubernetesCluster#workload_autoscaler_profile}
 
 ---
 
@@ -4207,7 +4207,7 @@ WorkloadIdentityEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#workload_identity_enabled KubernetesCluster#workload_identity_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#workload_identity_enabled KubernetesCluster#workload_identity_enabled}.
 
 ---
 
@@ -4264,44 +4264,44 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#name KubernetesCluster#name}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.vmSize">VmSize</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#vm_size KubernetesCluster#vm_size}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.capacityReservationGroupId">CapacityReservationGroupId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#capacity_reservation_group_id KubernetesCluster#capacity_reservation_group_id}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.customCaTrustEnabled">CustomCaTrustEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#custom_ca_trust_enabled KubernetesCluster#custom_ca_trust_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.enableAutoScaling">EnableAutoScaling</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#enable_auto_scaling KubernetesCluster#enable_auto_scaling}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.enableHostEncryption">EnableHostEncryption</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#enable_host_encryption KubernetesCluster#enable_host_encryption}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.enableNodePublicIp">EnableNodePublicIp</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#enable_node_public_ip KubernetesCluster#enable_node_public_ip}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.fipsEnabled">FipsEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#fips_enabled KubernetesCluster#fips_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.hostGroupId">HostGroupId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#host_group_id KubernetesCluster#host_group_id}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#name KubernetesCluster#name}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.vmSize">VmSize</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#vm_size KubernetesCluster#vm_size}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.capacityReservationGroupId">CapacityReservationGroupId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#capacity_reservation_group_id KubernetesCluster#capacity_reservation_group_id}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.customCaTrustEnabled">CustomCaTrustEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#custom_ca_trust_enabled KubernetesCluster#custom_ca_trust_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.enableAutoScaling">EnableAutoScaling</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#enable_auto_scaling KubernetesCluster#enable_auto_scaling}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.enableHostEncryption">EnableHostEncryption</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#enable_host_encryption KubernetesCluster#enable_host_encryption}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.enableNodePublicIp">EnableNodePublicIp</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#enable_node_public_ip KubernetesCluster#enable_node_public_ip}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.fipsEnabled">FipsEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#fips_enabled KubernetesCluster#fips_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.hostGroupId">HostGroupId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#host_group_id KubernetesCluster#host_group_id}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.kubeletConfig">KubeletConfig</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig">KubernetesClusterDefaultNodePoolKubeletConfig</a></code> | kubelet_config block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.kubeletDiskType">KubeletDiskType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#kubelet_disk_type KubernetesCluster#kubelet_disk_type}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.kubeletDiskType">KubeletDiskType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#kubelet_disk_type KubernetesCluster#kubelet_disk_type}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.linuxOsConfig">LinuxOsConfig</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfig">KubernetesClusterDefaultNodePoolLinuxOsConfig</a></code> | linux_os_config block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.maxCount">MaxCount</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#max_count KubernetesCluster#max_count}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.maxPods">MaxPods</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#max_pods KubernetesCluster#max_pods}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.messageOfTheDay">MessageOfTheDay</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#message_of_the_day KubernetesCluster#message_of_the_day}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.minCount">MinCount</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#min_count KubernetesCluster#min_count}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.nodeCount">NodeCount</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#node_count KubernetesCluster#node_count}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.nodeLabels">NodeLabels</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#node_labels KubernetesCluster#node_labels}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.maxCount">MaxCount</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#max_count KubernetesCluster#max_count}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.maxPods">MaxPods</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#max_pods KubernetesCluster#max_pods}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.messageOfTheDay">MessageOfTheDay</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#message_of_the_day KubernetesCluster#message_of_the_day}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.minCount">MinCount</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#min_count KubernetesCluster#min_count}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.nodeCount">NodeCount</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#node_count KubernetesCluster#node_count}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.nodeLabels">NodeLabels</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#node_labels KubernetesCluster#node_labels}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.nodeNetworkProfile">NodeNetworkProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfile">KubernetesClusterDefaultNodePoolNodeNetworkProfile</a></code> | node_network_profile block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.nodePublicIpPrefixId">NodePublicIpPrefixId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#node_public_ip_prefix_id KubernetesCluster#node_public_ip_prefix_id}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.nodeTaints">NodeTaints</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#node_taints KubernetesCluster#node_taints}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.onlyCriticalAddonsEnabled">OnlyCriticalAddonsEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#only_critical_addons_enabled KubernetesCluster#only_critical_addons_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.orchestratorVersion">OrchestratorVersion</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#orchestrator_version KubernetesCluster#orchestrator_version}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.osDiskSizeGb">OsDiskSizeGb</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#os_disk_size_gb KubernetesCluster#os_disk_size_gb}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.osDiskType">OsDiskType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#os_disk_type KubernetesCluster#os_disk_type}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.osSku">OsSku</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#os_sku KubernetesCluster#os_sku}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.podSubnetId">PodSubnetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#pod_subnet_id KubernetesCluster#pod_subnet_id}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.proximityPlacementGroupId">ProximityPlacementGroupId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#proximity_placement_group_id KubernetesCluster#proximity_placement_group_id}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.scaleDownMode">ScaleDownMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#scale_down_mode KubernetesCluster#scale_down_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.snapshotId">SnapshotId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#snapshot_id KubernetesCluster#snapshot_id}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#tags KubernetesCluster#tags}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.temporaryNameForRotation">TemporaryNameForRotation</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#temporary_name_for_rotation KubernetesCluster#temporary_name_for_rotation}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#type KubernetesCluster#type}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.ultraSsdEnabled">UltraSsdEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#ultra_ssd_enabled KubernetesCluster#ultra_ssd_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.nodePublicIpPrefixId">NodePublicIpPrefixId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#node_public_ip_prefix_id KubernetesCluster#node_public_ip_prefix_id}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.nodeTaints">NodeTaints</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#node_taints KubernetesCluster#node_taints}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.onlyCriticalAddonsEnabled">OnlyCriticalAddonsEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#only_critical_addons_enabled KubernetesCluster#only_critical_addons_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.orchestratorVersion">OrchestratorVersion</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#orchestrator_version KubernetesCluster#orchestrator_version}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.osDiskSizeGb">OsDiskSizeGb</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#os_disk_size_gb KubernetesCluster#os_disk_size_gb}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.osDiskType">OsDiskType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#os_disk_type KubernetesCluster#os_disk_type}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.osSku">OsSku</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#os_sku KubernetesCluster#os_sku}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.podSubnetId">PodSubnetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#pod_subnet_id KubernetesCluster#pod_subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.proximityPlacementGroupId">ProximityPlacementGroupId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#proximity_placement_group_id KubernetesCluster#proximity_placement_group_id}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.scaleDownMode">ScaleDownMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#scale_down_mode KubernetesCluster#scale_down_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.snapshotId">SnapshotId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#snapshot_id KubernetesCluster#snapshot_id}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#tags KubernetesCluster#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.temporaryNameForRotation">TemporaryNameForRotation</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#temporary_name_for_rotation KubernetesCluster#temporary_name_for_rotation}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#type KubernetesCluster#type}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.ultraSsdEnabled">UltraSsdEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#ultra_ssd_enabled KubernetesCluster#ultra_ssd_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.upgradeSettings">UpgradeSettings</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolUpgradeSettings">KubernetesClusterDefaultNodePoolUpgradeSettings</a></code> | upgrade_settings block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.vnetSubnetId">VnetSubnetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#vnet_subnet_id KubernetesCluster#vnet_subnet_id}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.workloadRuntime">WorkloadRuntime</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#workload_runtime KubernetesCluster#workload_runtime}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.zones">Zones</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#zones KubernetesCluster#zones}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.vnetSubnetId">VnetSubnetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#vnet_subnet_id KubernetesCluster#vnet_subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.workloadRuntime">WorkloadRuntime</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#workload_runtime KubernetesCluster#workload_runtime}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.zones">Zones</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#zones KubernetesCluster#zones}. |
 
 ---
 
@@ -4313,7 +4313,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#name KubernetesCluster#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#name KubernetesCluster#name}.
 
 ---
 
@@ -4325,7 +4325,7 @@ VmSize *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#vm_size KubernetesCluster#vm_size}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#vm_size KubernetesCluster#vm_size}.
 
 ---
 
@@ -4337,7 +4337,7 @@ CapacityReservationGroupId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#capacity_reservation_group_id KubernetesCluster#capacity_reservation_group_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#capacity_reservation_group_id KubernetesCluster#capacity_reservation_group_id}.
 
 ---
 
@@ -4349,7 +4349,7 @@ CustomCaTrustEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#custom_ca_trust_enabled KubernetesCluster#custom_ca_trust_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#custom_ca_trust_enabled KubernetesCluster#custom_ca_trust_enabled}.
 
 ---
 
@@ -4361,7 +4361,7 @@ EnableAutoScaling interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#enable_auto_scaling KubernetesCluster#enable_auto_scaling}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#enable_auto_scaling KubernetesCluster#enable_auto_scaling}.
 
 ---
 
@@ -4373,7 +4373,7 @@ EnableHostEncryption interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#enable_host_encryption KubernetesCluster#enable_host_encryption}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#enable_host_encryption KubernetesCluster#enable_host_encryption}.
 
 ---
 
@@ -4385,7 +4385,7 @@ EnableNodePublicIp interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#enable_node_public_ip KubernetesCluster#enable_node_public_ip}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#enable_node_public_ip KubernetesCluster#enable_node_public_ip}.
 
 ---
 
@@ -4397,7 +4397,7 @@ FipsEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#fips_enabled KubernetesCluster#fips_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#fips_enabled KubernetesCluster#fips_enabled}.
 
 ---
 
@@ -4409,7 +4409,7 @@ HostGroupId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#host_group_id KubernetesCluster#host_group_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#host_group_id KubernetesCluster#host_group_id}.
 
 ---
 
@@ -4423,7 +4423,7 @@ KubeletConfig KubernetesClusterDefaultNodePoolKubeletConfig
 
 kubelet_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#kubelet_config KubernetesCluster#kubelet_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#kubelet_config KubernetesCluster#kubelet_config}
 
 ---
 
@@ -4435,7 +4435,7 @@ KubeletDiskType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#kubelet_disk_type KubernetesCluster#kubelet_disk_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#kubelet_disk_type KubernetesCluster#kubelet_disk_type}.
 
 ---
 
@@ -4449,7 +4449,7 @@ LinuxOsConfig KubernetesClusterDefaultNodePoolLinuxOsConfig
 
 linux_os_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#linux_os_config KubernetesCluster#linux_os_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#linux_os_config KubernetesCluster#linux_os_config}
 
 ---
 
@@ -4461,7 +4461,7 @@ MaxCount *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#max_count KubernetesCluster#max_count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#max_count KubernetesCluster#max_count}.
 
 ---
 
@@ -4473,7 +4473,7 @@ MaxPods *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#max_pods KubernetesCluster#max_pods}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#max_pods KubernetesCluster#max_pods}.
 
 ---
 
@@ -4485,7 +4485,7 @@ MessageOfTheDay *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#message_of_the_day KubernetesCluster#message_of_the_day}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#message_of_the_day KubernetesCluster#message_of_the_day}.
 
 ---
 
@@ -4497,7 +4497,7 @@ MinCount *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#min_count KubernetesCluster#min_count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#min_count KubernetesCluster#min_count}.
 
 ---
 
@@ -4509,7 +4509,7 @@ NodeCount *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#node_count KubernetesCluster#node_count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#node_count KubernetesCluster#node_count}.
 
 ---
 
@@ -4521,7 +4521,7 @@ NodeLabels *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#node_labels KubernetesCluster#node_labels}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#node_labels KubernetesCluster#node_labels}.
 
 ---
 
@@ -4535,7 +4535,7 @@ NodeNetworkProfile KubernetesClusterDefaultNodePoolNodeNetworkProfile
 
 node_network_profile block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#node_network_profile KubernetesCluster#node_network_profile}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#node_network_profile KubernetesCluster#node_network_profile}
 
 ---
 
@@ -4547,7 +4547,7 @@ NodePublicIpPrefixId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#node_public_ip_prefix_id KubernetesCluster#node_public_ip_prefix_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#node_public_ip_prefix_id KubernetesCluster#node_public_ip_prefix_id}.
 
 ---
 
@@ -4559,7 +4559,7 @@ NodeTaints *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#node_taints KubernetesCluster#node_taints}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#node_taints KubernetesCluster#node_taints}.
 
 ---
 
@@ -4571,7 +4571,7 @@ OnlyCriticalAddonsEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#only_critical_addons_enabled KubernetesCluster#only_critical_addons_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#only_critical_addons_enabled KubernetesCluster#only_critical_addons_enabled}.
 
 ---
 
@@ -4583,7 +4583,7 @@ OrchestratorVersion *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#orchestrator_version KubernetesCluster#orchestrator_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#orchestrator_version KubernetesCluster#orchestrator_version}.
 
 ---
 
@@ -4595,7 +4595,7 @@ OsDiskSizeGb *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#os_disk_size_gb KubernetesCluster#os_disk_size_gb}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#os_disk_size_gb KubernetesCluster#os_disk_size_gb}.
 
 ---
 
@@ -4607,7 +4607,7 @@ OsDiskType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#os_disk_type KubernetesCluster#os_disk_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#os_disk_type KubernetesCluster#os_disk_type}.
 
 ---
 
@@ -4619,7 +4619,7 @@ OsSku *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#os_sku KubernetesCluster#os_sku}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#os_sku KubernetesCluster#os_sku}.
 
 ---
 
@@ -4631,7 +4631,7 @@ PodSubnetId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#pod_subnet_id KubernetesCluster#pod_subnet_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#pod_subnet_id KubernetesCluster#pod_subnet_id}.
 
 ---
 
@@ -4643,7 +4643,7 @@ ProximityPlacementGroupId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#proximity_placement_group_id KubernetesCluster#proximity_placement_group_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#proximity_placement_group_id KubernetesCluster#proximity_placement_group_id}.
 
 ---
 
@@ -4655,7 +4655,7 @@ ScaleDownMode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#scale_down_mode KubernetesCluster#scale_down_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#scale_down_mode KubernetesCluster#scale_down_mode}.
 
 ---
 
@@ -4667,7 +4667,7 @@ SnapshotId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#snapshot_id KubernetesCluster#snapshot_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#snapshot_id KubernetesCluster#snapshot_id}.
 
 ---
 
@@ -4679,7 +4679,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#tags KubernetesCluster#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#tags KubernetesCluster#tags}.
 
 ---
 
@@ -4691,7 +4691,7 @@ TemporaryNameForRotation *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#temporary_name_for_rotation KubernetesCluster#temporary_name_for_rotation}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#temporary_name_for_rotation KubernetesCluster#temporary_name_for_rotation}.
 
 ---
 
@@ -4703,7 +4703,7 @@ Type *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#type KubernetesCluster#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#type KubernetesCluster#type}.
 
 ---
 
@@ -4715,7 +4715,7 @@ UltraSsdEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#ultra_ssd_enabled KubernetesCluster#ultra_ssd_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#ultra_ssd_enabled KubernetesCluster#ultra_ssd_enabled}.
 
 ---
 
@@ -4729,7 +4729,7 @@ UpgradeSettings KubernetesClusterDefaultNodePoolUpgradeSettings
 
 upgrade_settings block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#upgrade_settings KubernetesCluster#upgrade_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#upgrade_settings KubernetesCluster#upgrade_settings}
 
 ---
 
@@ -4741,7 +4741,7 @@ VnetSubnetId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#vnet_subnet_id KubernetesCluster#vnet_subnet_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#vnet_subnet_id KubernetesCluster#vnet_subnet_id}.
 
 ---
 
@@ -4753,7 +4753,7 @@ WorkloadRuntime *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#workload_runtime KubernetesCluster#workload_runtime}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#workload_runtime KubernetesCluster#workload_runtime}.
 
 ---
 
@@ -4765,7 +4765,7 @@ Zones *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#zones KubernetesCluster#zones}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#zones KubernetesCluster#zones}.
 
 ---
 
@@ -4794,16 +4794,16 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.allowedUnsafeSysctls">AllowedUnsafeSysctls</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#allowed_unsafe_sysctls KubernetesCluster#allowed_unsafe_sysctls}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.containerLogMaxLine">ContainerLogMaxLine</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#container_log_max_line KubernetesCluster#container_log_max_line}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.containerLogMaxSizeMb">ContainerLogMaxSizeMb</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#container_log_max_size_mb KubernetesCluster#container_log_max_size_mb}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.cpuCfsQuotaEnabled">CpuCfsQuotaEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#cpu_cfs_quota_enabled KubernetesCluster#cpu_cfs_quota_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.cpuCfsQuotaPeriod">CpuCfsQuotaPeriod</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#cpu_cfs_quota_period KubernetesCluster#cpu_cfs_quota_period}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.cpuManagerPolicy">CpuManagerPolicy</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#cpu_manager_policy KubernetesCluster#cpu_manager_policy}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.imageGcHighThreshold">ImageGcHighThreshold</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#image_gc_high_threshold KubernetesCluster#image_gc_high_threshold}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.imageGcLowThreshold">ImageGcLowThreshold</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#image_gc_low_threshold KubernetesCluster#image_gc_low_threshold}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.podMaxPid">PodMaxPid</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#pod_max_pid KubernetesCluster#pod_max_pid}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.topologyManagerPolicy">TopologyManagerPolicy</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#topology_manager_policy KubernetesCluster#topology_manager_policy}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.allowedUnsafeSysctls">AllowedUnsafeSysctls</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#allowed_unsafe_sysctls KubernetesCluster#allowed_unsafe_sysctls}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.containerLogMaxLine">ContainerLogMaxLine</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#container_log_max_line KubernetesCluster#container_log_max_line}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.containerLogMaxSizeMb">ContainerLogMaxSizeMb</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#container_log_max_size_mb KubernetesCluster#container_log_max_size_mb}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.cpuCfsQuotaEnabled">CpuCfsQuotaEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#cpu_cfs_quota_enabled KubernetesCluster#cpu_cfs_quota_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.cpuCfsQuotaPeriod">CpuCfsQuotaPeriod</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#cpu_cfs_quota_period KubernetesCluster#cpu_cfs_quota_period}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.cpuManagerPolicy">CpuManagerPolicy</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#cpu_manager_policy KubernetesCluster#cpu_manager_policy}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.imageGcHighThreshold">ImageGcHighThreshold</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#image_gc_high_threshold KubernetesCluster#image_gc_high_threshold}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.imageGcLowThreshold">ImageGcLowThreshold</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#image_gc_low_threshold KubernetesCluster#image_gc_low_threshold}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.podMaxPid">PodMaxPid</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#pod_max_pid KubernetesCluster#pod_max_pid}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.topologyManagerPolicy">TopologyManagerPolicy</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#topology_manager_policy KubernetesCluster#topology_manager_policy}. |
 
 ---
 
@@ -4815,7 +4815,7 @@ AllowedUnsafeSysctls *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#allowed_unsafe_sysctls KubernetesCluster#allowed_unsafe_sysctls}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#allowed_unsafe_sysctls KubernetesCluster#allowed_unsafe_sysctls}.
 
 ---
 
@@ -4827,7 +4827,7 @@ ContainerLogMaxLine *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#container_log_max_line KubernetesCluster#container_log_max_line}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#container_log_max_line KubernetesCluster#container_log_max_line}.
 
 ---
 
@@ -4839,7 +4839,7 @@ ContainerLogMaxSizeMb *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#container_log_max_size_mb KubernetesCluster#container_log_max_size_mb}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#container_log_max_size_mb KubernetesCluster#container_log_max_size_mb}.
 
 ---
 
@@ -4851,7 +4851,7 @@ CpuCfsQuotaEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#cpu_cfs_quota_enabled KubernetesCluster#cpu_cfs_quota_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#cpu_cfs_quota_enabled KubernetesCluster#cpu_cfs_quota_enabled}.
 
 ---
 
@@ -4863,7 +4863,7 @@ CpuCfsQuotaPeriod *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#cpu_cfs_quota_period KubernetesCluster#cpu_cfs_quota_period}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#cpu_cfs_quota_period KubernetesCluster#cpu_cfs_quota_period}.
 
 ---
 
@@ -4875,7 +4875,7 @@ CpuManagerPolicy *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#cpu_manager_policy KubernetesCluster#cpu_manager_policy}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#cpu_manager_policy KubernetesCluster#cpu_manager_policy}.
 
 ---
 
@@ -4887,7 +4887,7 @@ ImageGcHighThreshold *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#image_gc_high_threshold KubernetesCluster#image_gc_high_threshold}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#image_gc_high_threshold KubernetesCluster#image_gc_high_threshold}.
 
 ---
 
@@ -4899,7 +4899,7 @@ ImageGcLowThreshold *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#image_gc_low_threshold KubernetesCluster#image_gc_low_threshold}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#image_gc_low_threshold KubernetesCluster#image_gc_low_threshold}.
 
 ---
 
@@ -4911,7 +4911,7 @@ PodMaxPid *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#pod_max_pid KubernetesCluster#pod_max_pid}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#pod_max_pid KubernetesCluster#pod_max_pid}.
 
 ---
 
@@ -4923,7 +4923,7 @@ TopologyManagerPolicy *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#topology_manager_policy KubernetesCluster#topology_manager_policy}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#topology_manager_policy KubernetesCluster#topology_manager_policy}.
 
 ---
 
@@ -4946,10 +4946,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfig.property.swapFileSizeMb">SwapFileSizeMb</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#swap_file_size_mb KubernetesCluster#swap_file_size_mb}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfig.property.swapFileSizeMb">SwapFileSizeMb</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#swap_file_size_mb KubernetesCluster#swap_file_size_mb}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfig.property.sysctlConfig">SysctlConfig</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig">KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig</a></code> | sysctl_config block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfig.property.transparentHugePageDefrag">TransparentHugePageDefrag</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#transparent_huge_page_defrag KubernetesCluster#transparent_huge_page_defrag}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfig.property.transparentHugePageEnabled">TransparentHugePageEnabled</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#transparent_huge_page_enabled KubernetesCluster#transparent_huge_page_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfig.property.transparentHugePageDefrag">TransparentHugePageDefrag</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#transparent_huge_page_defrag KubernetesCluster#transparent_huge_page_defrag}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfig.property.transparentHugePageEnabled">TransparentHugePageEnabled</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#transparent_huge_page_enabled KubernetesCluster#transparent_huge_page_enabled}. |
 
 ---
 
@@ -4961,7 +4961,7 @@ SwapFileSizeMb *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#swap_file_size_mb KubernetesCluster#swap_file_size_mb}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#swap_file_size_mb KubernetesCluster#swap_file_size_mb}.
 
 ---
 
@@ -4975,7 +4975,7 @@ SysctlConfig KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig
 
 sysctl_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#sysctl_config KubernetesCluster#sysctl_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#sysctl_config KubernetesCluster#sysctl_config}
 
 ---
 
@@ -4987,7 +4987,7 @@ TransparentHugePageDefrag *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#transparent_huge_page_defrag KubernetesCluster#transparent_huge_page_defrag}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#transparent_huge_page_defrag KubernetesCluster#transparent_huge_page_defrag}.
 
 ---
 
@@ -4999,7 +4999,7 @@ TransparentHugePageEnabled *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#transparent_huge_page_enabled KubernetesCluster#transparent_huge_page_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#transparent_huge_page_enabled KubernetesCluster#transparent_huge_page_enabled}.
 
 ---
 
@@ -5047,35 +5047,35 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.fsAioMaxNr">FsAioMaxNr</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#fs_aio_max_nr KubernetesCluster#fs_aio_max_nr}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.fsFileMax">FsFileMax</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#fs_file_max KubernetesCluster#fs_file_max}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.fsInotifyMaxUserWatches">FsInotifyMaxUserWatches</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#fs_inotify_max_user_watches KubernetesCluster#fs_inotify_max_user_watches}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.fsNrOpen">FsNrOpen</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#fs_nr_open KubernetesCluster#fs_nr_open}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.kernelThreadsMax">KernelThreadsMax</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#kernel_threads_max KubernetesCluster#kernel_threads_max}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netCoreNetdevMaxBacklog">NetCoreNetdevMaxBacklog</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_core_netdev_max_backlog KubernetesCluster#net_core_netdev_max_backlog}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netCoreOptmemMax">NetCoreOptmemMax</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_core_optmem_max KubernetesCluster#net_core_optmem_max}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netCoreRmemDefault">NetCoreRmemDefault</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_core_rmem_default KubernetesCluster#net_core_rmem_default}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netCoreRmemMax">NetCoreRmemMax</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_core_rmem_max KubernetesCluster#net_core_rmem_max}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netCoreSomaxconn">NetCoreSomaxconn</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_core_somaxconn KubernetesCluster#net_core_somaxconn}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netCoreWmemDefault">NetCoreWmemDefault</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_core_wmem_default KubernetesCluster#net_core_wmem_default}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netCoreWmemMax">NetCoreWmemMax</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_core_wmem_max KubernetesCluster#net_core_wmem_max}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4IpLocalPortRangeMax">NetIpv4IpLocalPortRangeMax</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_ipv4_ip_local_port_range_max KubernetesCluster#net_ipv4_ip_local_port_range_max}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4IpLocalPortRangeMin">NetIpv4IpLocalPortRangeMin</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_ipv4_ip_local_port_range_min KubernetesCluster#net_ipv4_ip_local_port_range_min}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4NeighDefaultGcThresh1">NetIpv4NeighDefaultGcThresh1</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_ipv4_neigh_default_gc_thresh1 KubernetesCluster#net_ipv4_neigh_default_gc_thresh1}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4NeighDefaultGcThresh2">NetIpv4NeighDefaultGcThresh2</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_ipv4_neigh_default_gc_thresh2 KubernetesCluster#net_ipv4_neigh_default_gc_thresh2}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4NeighDefaultGcThresh3">NetIpv4NeighDefaultGcThresh3</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_ipv4_neigh_default_gc_thresh3 KubernetesCluster#net_ipv4_neigh_default_gc_thresh3}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4TcpFinTimeout">NetIpv4TcpFinTimeout</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_fin_timeout KubernetesCluster#net_ipv4_tcp_fin_timeout}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4TcpKeepaliveIntvl">NetIpv4TcpKeepaliveIntvl</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_keepalive_intvl KubernetesCluster#net_ipv4_tcp_keepalive_intvl}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4TcpKeepaliveProbes">NetIpv4TcpKeepaliveProbes</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_keepalive_probes KubernetesCluster#net_ipv4_tcp_keepalive_probes}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4TcpKeepaliveTime">NetIpv4TcpKeepaliveTime</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_keepalive_time KubernetesCluster#net_ipv4_tcp_keepalive_time}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4TcpMaxSynBacklog">NetIpv4TcpMaxSynBacklog</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_max_syn_backlog KubernetesCluster#net_ipv4_tcp_max_syn_backlog}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4TcpMaxTwBuckets">NetIpv4TcpMaxTwBuckets</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_max_tw_buckets KubernetesCluster#net_ipv4_tcp_max_tw_buckets}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4TcpTwReuse">NetIpv4TcpTwReuse</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_tw_reuse KubernetesCluster#net_ipv4_tcp_tw_reuse}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netNetfilterNfConntrackBuckets">NetNetfilterNfConntrackBuckets</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_netfilter_nf_conntrack_buckets KubernetesCluster#net_netfilter_nf_conntrack_buckets}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netNetfilterNfConntrackMax">NetNetfilterNfConntrackMax</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_netfilter_nf_conntrack_max KubernetesCluster#net_netfilter_nf_conntrack_max}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.vmMaxMapCount">VmMaxMapCount</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#vm_max_map_count KubernetesCluster#vm_max_map_count}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.vmSwappiness">VmSwappiness</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#vm_swappiness KubernetesCluster#vm_swappiness}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.vmVfsCachePressure">VmVfsCachePressure</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#vm_vfs_cache_pressure KubernetesCluster#vm_vfs_cache_pressure}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.fsAioMaxNr">FsAioMaxNr</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#fs_aio_max_nr KubernetesCluster#fs_aio_max_nr}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.fsFileMax">FsFileMax</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#fs_file_max KubernetesCluster#fs_file_max}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.fsInotifyMaxUserWatches">FsInotifyMaxUserWatches</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#fs_inotify_max_user_watches KubernetesCluster#fs_inotify_max_user_watches}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.fsNrOpen">FsNrOpen</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#fs_nr_open KubernetesCluster#fs_nr_open}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.kernelThreadsMax">KernelThreadsMax</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#kernel_threads_max KubernetesCluster#kernel_threads_max}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netCoreNetdevMaxBacklog">NetCoreNetdevMaxBacklog</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_core_netdev_max_backlog KubernetesCluster#net_core_netdev_max_backlog}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netCoreOptmemMax">NetCoreOptmemMax</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_core_optmem_max KubernetesCluster#net_core_optmem_max}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netCoreRmemDefault">NetCoreRmemDefault</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_core_rmem_default KubernetesCluster#net_core_rmem_default}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netCoreRmemMax">NetCoreRmemMax</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_core_rmem_max KubernetesCluster#net_core_rmem_max}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netCoreSomaxconn">NetCoreSomaxconn</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_core_somaxconn KubernetesCluster#net_core_somaxconn}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netCoreWmemDefault">NetCoreWmemDefault</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_core_wmem_default KubernetesCluster#net_core_wmem_default}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netCoreWmemMax">NetCoreWmemMax</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_core_wmem_max KubernetesCluster#net_core_wmem_max}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4IpLocalPortRangeMax">NetIpv4IpLocalPortRangeMax</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_ipv4_ip_local_port_range_max KubernetesCluster#net_ipv4_ip_local_port_range_max}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4IpLocalPortRangeMin">NetIpv4IpLocalPortRangeMin</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_ipv4_ip_local_port_range_min KubernetesCluster#net_ipv4_ip_local_port_range_min}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4NeighDefaultGcThresh1">NetIpv4NeighDefaultGcThresh1</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_ipv4_neigh_default_gc_thresh1 KubernetesCluster#net_ipv4_neigh_default_gc_thresh1}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4NeighDefaultGcThresh2">NetIpv4NeighDefaultGcThresh2</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_ipv4_neigh_default_gc_thresh2 KubernetesCluster#net_ipv4_neigh_default_gc_thresh2}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4NeighDefaultGcThresh3">NetIpv4NeighDefaultGcThresh3</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_ipv4_neigh_default_gc_thresh3 KubernetesCluster#net_ipv4_neigh_default_gc_thresh3}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4TcpFinTimeout">NetIpv4TcpFinTimeout</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_fin_timeout KubernetesCluster#net_ipv4_tcp_fin_timeout}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4TcpKeepaliveIntvl">NetIpv4TcpKeepaliveIntvl</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_keepalive_intvl KubernetesCluster#net_ipv4_tcp_keepalive_intvl}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4TcpKeepaliveProbes">NetIpv4TcpKeepaliveProbes</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_keepalive_probes KubernetesCluster#net_ipv4_tcp_keepalive_probes}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4TcpKeepaliveTime">NetIpv4TcpKeepaliveTime</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_keepalive_time KubernetesCluster#net_ipv4_tcp_keepalive_time}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4TcpMaxSynBacklog">NetIpv4TcpMaxSynBacklog</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_max_syn_backlog KubernetesCluster#net_ipv4_tcp_max_syn_backlog}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4TcpMaxTwBuckets">NetIpv4TcpMaxTwBuckets</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_max_tw_buckets KubernetesCluster#net_ipv4_tcp_max_tw_buckets}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4TcpTwReuse">NetIpv4TcpTwReuse</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_tw_reuse KubernetesCluster#net_ipv4_tcp_tw_reuse}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netNetfilterNfConntrackBuckets">NetNetfilterNfConntrackBuckets</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_netfilter_nf_conntrack_buckets KubernetesCluster#net_netfilter_nf_conntrack_buckets}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netNetfilterNfConntrackMax">NetNetfilterNfConntrackMax</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_netfilter_nf_conntrack_max KubernetesCluster#net_netfilter_nf_conntrack_max}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.vmMaxMapCount">VmMaxMapCount</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#vm_max_map_count KubernetesCluster#vm_max_map_count}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.vmSwappiness">VmSwappiness</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#vm_swappiness KubernetesCluster#vm_swappiness}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.vmVfsCachePressure">VmVfsCachePressure</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#vm_vfs_cache_pressure KubernetesCluster#vm_vfs_cache_pressure}. |
 
 ---
 
@@ -5087,7 +5087,7 @@ FsAioMaxNr *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#fs_aio_max_nr KubernetesCluster#fs_aio_max_nr}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#fs_aio_max_nr KubernetesCluster#fs_aio_max_nr}.
 
 ---
 
@@ -5099,7 +5099,7 @@ FsFileMax *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#fs_file_max KubernetesCluster#fs_file_max}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#fs_file_max KubernetesCluster#fs_file_max}.
 
 ---
 
@@ -5111,7 +5111,7 @@ FsInotifyMaxUserWatches *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#fs_inotify_max_user_watches KubernetesCluster#fs_inotify_max_user_watches}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#fs_inotify_max_user_watches KubernetesCluster#fs_inotify_max_user_watches}.
 
 ---
 
@@ -5123,7 +5123,7 @@ FsNrOpen *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#fs_nr_open KubernetesCluster#fs_nr_open}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#fs_nr_open KubernetesCluster#fs_nr_open}.
 
 ---
 
@@ -5135,7 +5135,7 @@ KernelThreadsMax *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#kernel_threads_max KubernetesCluster#kernel_threads_max}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#kernel_threads_max KubernetesCluster#kernel_threads_max}.
 
 ---
 
@@ -5147,7 +5147,7 @@ NetCoreNetdevMaxBacklog *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_core_netdev_max_backlog KubernetesCluster#net_core_netdev_max_backlog}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_core_netdev_max_backlog KubernetesCluster#net_core_netdev_max_backlog}.
 
 ---
 
@@ -5159,7 +5159,7 @@ NetCoreOptmemMax *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_core_optmem_max KubernetesCluster#net_core_optmem_max}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_core_optmem_max KubernetesCluster#net_core_optmem_max}.
 
 ---
 
@@ -5171,7 +5171,7 @@ NetCoreRmemDefault *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_core_rmem_default KubernetesCluster#net_core_rmem_default}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_core_rmem_default KubernetesCluster#net_core_rmem_default}.
 
 ---
 
@@ -5183,7 +5183,7 @@ NetCoreRmemMax *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_core_rmem_max KubernetesCluster#net_core_rmem_max}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_core_rmem_max KubernetesCluster#net_core_rmem_max}.
 
 ---
 
@@ -5195,7 +5195,7 @@ NetCoreSomaxconn *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_core_somaxconn KubernetesCluster#net_core_somaxconn}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_core_somaxconn KubernetesCluster#net_core_somaxconn}.
 
 ---
 
@@ -5207,7 +5207,7 @@ NetCoreWmemDefault *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_core_wmem_default KubernetesCluster#net_core_wmem_default}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_core_wmem_default KubernetesCluster#net_core_wmem_default}.
 
 ---
 
@@ -5219,7 +5219,7 @@ NetCoreWmemMax *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_core_wmem_max KubernetesCluster#net_core_wmem_max}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_core_wmem_max KubernetesCluster#net_core_wmem_max}.
 
 ---
 
@@ -5231,7 +5231,7 @@ NetIpv4IpLocalPortRangeMax *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_ipv4_ip_local_port_range_max KubernetesCluster#net_ipv4_ip_local_port_range_max}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_ipv4_ip_local_port_range_max KubernetesCluster#net_ipv4_ip_local_port_range_max}.
 
 ---
 
@@ -5243,7 +5243,7 @@ NetIpv4IpLocalPortRangeMin *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_ipv4_ip_local_port_range_min KubernetesCluster#net_ipv4_ip_local_port_range_min}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_ipv4_ip_local_port_range_min KubernetesCluster#net_ipv4_ip_local_port_range_min}.
 
 ---
 
@@ -5255,7 +5255,7 @@ NetIpv4NeighDefaultGcThresh1 *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_ipv4_neigh_default_gc_thresh1 KubernetesCluster#net_ipv4_neigh_default_gc_thresh1}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_ipv4_neigh_default_gc_thresh1 KubernetesCluster#net_ipv4_neigh_default_gc_thresh1}.
 
 ---
 
@@ -5267,7 +5267,7 @@ NetIpv4NeighDefaultGcThresh2 *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_ipv4_neigh_default_gc_thresh2 KubernetesCluster#net_ipv4_neigh_default_gc_thresh2}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_ipv4_neigh_default_gc_thresh2 KubernetesCluster#net_ipv4_neigh_default_gc_thresh2}.
 
 ---
 
@@ -5279,7 +5279,7 @@ NetIpv4NeighDefaultGcThresh3 *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_ipv4_neigh_default_gc_thresh3 KubernetesCluster#net_ipv4_neigh_default_gc_thresh3}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_ipv4_neigh_default_gc_thresh3 KubernetesCluster#net_ipv4_neigh_default_gc_thresh3}.
 
 ---
 
@@ -5291,7 +5291,7 @@ NetIpv4TcpFinTimeout *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_fin_timeout KubernetesCluster#net_ipv4_tcp_fin_timeout}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_fin_timeout KubernetesCluster#net_ipv4_tcp_fin_timeout}.
 
 ---
 
@@ -5303,7 +5303,7 @@ NetIpv4TcpKeepaliveIntvl *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_keepalive_intvl KubernetesCluster#net_ipv4_tcp_keepalive_intvl}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_keepalive_intvl KubernetesCluster#net_ipv4_tcp_keepalive_intvl}.
 
 ---
 
@@ -5315,7 +5315,7 @@ NetIpv4TcpKeepaliveProbes *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_keepalive_probes KubernetesCluster#net_ipv4_tcp_keepalive_probes}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_keepalive_probes KubernetesCluster#net_ipv4_tcp_keepalive_probes}.
 
 ---
 
@@ -5327,7 +5327,7 @@ NetIpv4TcpKeepaliveTime *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_keepalive_time KubernetesCluster#net_ipv4_tcp_keepalive_time}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_keepalive_time KubernetesCluster#net_ipv4_tcp_keepalive_time}.
 
 ---
 
@@ -5339,7 +5339,7 @@ NetIpv4TcpMaxSynBacklog *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_max_syn_backlog KubernetesCluster#net_ipv4_tcp_max_syn_backlog}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_max_syn_backlog KubernetesCluster#net_ipv4_tcp_max_syn_backlog}.
 
 ---
 
@@ -5351,7 +5351,7 @@ NetIpv4TcpMaxTwBuckets *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_max_tw_buckets KubernetesCluster#net_ipv4_tcp_max_tw_buckets}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_max_tw_buckets KubernetesCluster#net_ipv4_tcp_max_tw_buckets}.
 
 ---
 
@@ -5363,7 +5363,7 @@ NetIpv4TcpTwReuse interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_tw_reuse KubernetesCluster#net_ipv4_tcp_tw_reuse}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_tw_reuse KubernetesCluster#net_ipv4_tcp_tw_reuse}.
 
 ---
 
@@ -5375,7 +5375,7 @@ NetNetfilterNfConntrackBuckets *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_netfilter_nf_conntrack_buckets KubernetesCluster#net_netfilter_nf_conntrack_buckets}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_netfilter_nf_conntrack_buckets KubernetesCluster#net_netfilter_nf_conntrack_buckets}.
 
 ---
 
@@ -5387,7 +5387,7 @@ NetNetfilterNfConntrackMax *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#net_netfilter_nf_conntrack_max KubernetesCluster#net_netfilter_nf_conntrack_max}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#net_netfilter_nf_conntrack_max KubernetesCluster#net_netfilter_nf_conntrack_max}.
 
 ---
 
@@ -5399,7 +5399,7 @@ VmMaxMapCount *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#vm_max_map_count KubernetesCluster#vm_max_map_count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#vm_max_map_count KubernetesCluster#vm_max_map_count}.
 
 ---
 
@@ -5411,7 +5411,7 @@ VmSwappiness *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#vm_swappiness KubernetesCluster#vm_swappiness}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#vm_swappiness KubernetesCluster#vm_swappiness}.
 
 ---
 
@@ -5423,7 +5423,7 @@ VmVfsCachePressure *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#vm_vfs_cache_pressure KubernetesCluster#vm_vfs_cache_pressure}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#vm_vfs_cache_pressure KubernetesCluster#vm_vfs_cache_pressure}.
 
 ---
 
@@ -5443,7 +5443,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfile.property.nodePublicIpTags">NodePublicIpTags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#node_public_ip_tags KubernetesCluster#node_public_ip_tags}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfile.property.nodePublicIpTags">NodePublicIpTags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#node_public_ip_tags KubernetesCluster#node_public_ip_tags}. |
 
 ---
 
@@ -5455,7 +5455,7 @@ NodePublicIpTags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#node_public_ip_tags KubernetesCluster#node_public_ip_tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#node_public_ip_tags KubernetesCluster#node_public_ip_tags}.
 
 ---
 
@@ -5475,7 +5475,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolUpgradeSettings.property.maxSurge">MaxSurge</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#max_surge KubernetesCluster#max_surge}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolUpgradeSettings.property.maxSurge">MaxSurge</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#max_surge KubernetesCluster#max_surge}. |
 
 ---
 
@@ -5487,7 +5487,7 @@ MaxSurge *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#max_surge KubernetesCluster#max_surge}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#max_surge KubernetesCluster#max_surge}.
 
 ---
 
@@ -5510,10 +5510,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterHttpProxyConfig.property.httpProxy">HttpProxy</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#http_proxy KubernetesCluster#http_proxy}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterHttpProxyConfig.property.httpsProxy">HttpsProxy</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#https_proxy KubernetesCluster#https_proxy}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterHttpProxyConfig.property.noProxy">NoProxy</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#no_proxy KubernetesCluster#no_proxy}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterHttpProxyConfig.property.trustedCa">TrustedCa</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#trusted_ca KubernetesCluster#trusted_ca}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterHttpProxyConfig.property.httpProxy">HttpProxy</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#http_proxy KubernetesCluster#http_proxy}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterHttpProxyConfig.property.httpsProxy">HttpsProxy</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#https_proxy KubernetesCluster#https_proxy}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterHttpProxyConfig.property.noProxy">NoProxy</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#no_proxy KubernetesCluster#no_proxy}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterHttpProxyConfig.property.trustedCa">TrustedCa</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#trusted_ca KubernetesCluster#trusted_ca}. |
 
 ---
 
@@ -5525,7 +5525,7 @@ HttpProxy *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#http_proxy KubernetesCluster#http_proxy}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#http_proxy KubernetesCluster#http_proxy}.
 
 ---
 
@@ -5537,7 +5537,7 @@ HttpsProxy *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#https_proxy KubernetesCluster#https_proxy}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#https_proxy KubernetesCluster#https_proxy}.
 
 ---
 
@@ -5549,7 +5549,7 @@ NoProxy *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#no_proxy KubernetesCluster#no_proxy}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#no_proxy KubernetesCluster#no_proxy}.
 
 ---
 
@@ -5561,7 +5561,7 @@ TrustedCa *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#trusted_ca KubernetesCluster#trusted_ca}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#trusted_ca KubernetesCluster#trusted_ca}.
 
 ---
 
@@ -5582,8 +5582,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterIdentity.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#type KubernetesCluster#type}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterIdentity.property.identityIds">IdentityIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#identity_ids KubernetesCluster#identity_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterIdentity.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#type KubernetesCluster#type}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterIdentity.property.identityIds">IdentityIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#identity_ids KubernetesCluster#identity_ids}. |
 
 ---
 
@@ -5595,7 +5595,7 @@ Type *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#type KubernetesCluster#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#type KubernetesCluster#type}.
 
 ---
 
@@ -5607,7 +5607,7 @@ IdentityIds *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#identity_ids KubernetesCluster#identity_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#identity_ids KubernetesCluster#identity_ids}.
 
 ---
 
@@ -5630,10 +5630,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterIngressApplicationGateway.property.gatewayId">GatewayId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#gateway_id KubernetesCluster#gateway_id}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterIngressApplicationGateway.property.gatewayName">GatewayName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#gateway_name KubernetesCluster#gateway_name}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterIngressApplicationGateway.property.subnetCidr">SubnetCidr</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#subnet_cidr KubernetesCluster#subnet_cidr}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterIngressApplicationGateway.property.subnetId">SubnetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#subnet_id KubernetesCluster#subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterIngressApplicationGateway.property.gatewayId">GatewayId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#gateway_id KubernetesCluster#gateway_id}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterIngressApplicationGateway.property.gatewayName">GatewayName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#gateway_name KubernetesCluster#gateway_name}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterIngressApplicationGateway.property.subnetCidr">SubnetCidr</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#subnet_cidr KubernetesCluster#subnet_cidr}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterIngressApplicationGateway.property.subnetId">SubnetId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#subnet_id KubernetesCluster#subnet_id}. |
 
 ---
 
@@ -5645,7 +5645,7 @@ GatewayId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#gateway_id KubernetesCluster#gateway_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#gateway_id KubernetesCluster#gateway_id}.
 
 ---
 
@@ -5657,7 +5657,7 @@ GatewayName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#gateway_name KubernetesCluster#gateway_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#gateway_name KubernetesCluster#gateway_name}.
 
 ---
 
@@ -5669,7 +5669,7 @@ SubnetCidr *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#subnet_cidr KubernetesCluster#subnet_cidr}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#subnet_cidr KubernetesCluster#subnet_cidr}.
 
 ---
 
@@ -5681,7 +5681,7 @@ SubnetId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#subnet_id KubernetesCluster#subnet_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#subnet_id KubernetesCluster#subnet_id}.
 
 ---
 
@@ -5715,8 +5715,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyManagementService.property.keyVaultKeyId">KeyVaultKeyId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#key_vault_key_id KubernetesCluster#key_vault_key_id}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyManagementService.property.keyVaultNetworkAccess">KeyVaultNetworkAccess</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#key_vault_network_access KubernetesCluster#key_vault_network_access}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyManagementService.property.keyVaultKeyId">KeyVaultKeyId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#key_vault_key_id KubernetesCluster#key_vault_key_id}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyManagementService.property.keyVaultNetworkAccess">KeyVaultNetworkAccess</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#key_vault_network_access KubernetesCluster#key_vault_network_access}. |
 
 ---
 
@@ -5728,7 +5728,7 @@ KeyVaultKeyId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#key_vault_key_id KubernetesCluster#key_vault_key_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#key_vault_key_id KubernetesCluster#key_vault_key_id}.
 
 ---
 
@@ -5740,7 +5740,7 @@ KeyVaultNetworkAccess *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#key_vault_network_access KubernetesCluster#key_vault_network_access}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#key_vault_network_access KubernetesCluster#key_vault_network_access}.
 
 ---
 
@@ -5761,8 +5761,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyVaultSecretsProvider.property.secretRotationEnabled">SecretRotationEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#secret_rotation_enabled KubernetesCluster#secret_rotation_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyVaultSecretsProvider.property.secretRotationInterval">SecretRotationInterval</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#secret_rotation_interval KubernetesCluster#secret_rotation_interval}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyVaultSecretsProvider.property.secretRotationEnabled">SecretRotationEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#secret_rotation_enabled KubernetesCluster#secret_rotation_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyVaultSecretsProvider.property.secretRotationInterval">SecretRotationInterval</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#secret_rotation_interval KubernetesCluster#secret_rotation_interval}. |
 
 ---
 
@@ -5774,7 +5774,7 @@ SecretRotationEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#secret_rotation_enabled KubernetesCluster#secret_rotation_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#secret_rotation_enabled KubernetesCluster#secret_rotation_enabled}.
 
 ---
 
@@ -5786,7 +5786,7 @@ SecretRotationInterval *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#secret_rotation_interval KubernetesCluster#secret_rotation_interval}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#secret_rotation_interval KubernetesCluster#secret_rotation_interval}.
 
 ---
 
@@ -5847,9 +5847,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKubeletIdentity.property.clientId">ClientId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#client_id KubernetesCluster#client_id}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKubeletIdentity.property.objectId">ObjectId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#object_id KubernetesCluster#object_id}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKubeletIdentity.property.userAssignedIdentityId">UserAssignedIdentityId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#user_assigned_identity_id KubernetesCluster#user_assigned_identity_id}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKubeletIdentity.property.clientId">ClientId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#client_id KubernetesCluster#client_id}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKubeletIdentity.property.objectId">ObjectId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#object_id KubernetesCluster#object_id}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKubeletIdentity.property.userAssignedIdentityId">UserAssignedIdentityId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#user_assigned_identity_id KubernetesCluster#user_assigned_identity_id}. |
 
 ---
 
@@ -5861,7 +5861,7 @@ ClientId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#client_id KubernetesCluster#client_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#client_id KubernetesCluster#client_id}.
 
 ---
 
@@ -5873,7 +5873,7 @@ ObjectId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#object_id KubernetesCluster#object_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#object_id KubernetesCluster#object_id}.
 
 ---
 
@@ -5885,7 +5885,7 @@ UserAssignedIdentityId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#user_assigned_identity_id KubernetesCluster#user_assigned_identity_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#user_assigned_identity_id KubernetesCluster#user_assigned_identity_id}.
 
 ---
 
@@ -5906,7 +5906,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterLinuxProfile.property.adminUsername">AdminUsername</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#admin_username KubernetesCluster#admin_username}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterLinuxProfile.property.adminUsername">AdminUsername</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#admin_username KubernetesCluster#admin_username}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterLinuxProfile.property.sshKey">SshKey</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterLinuxProfileSshKey">KubernetesClusterLinuxProfileSshKey</a></code> | ssh_key block. |
 
 ---
@@ -5919,7 +5919,7 @@ AdminUsername *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#admin_username KubernetesCluster#admin_username}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#admin_username KubernetesCluster#admin_username}.
 
 ---
 
@@ -5933,7 +5933,7 @@ SshKey KubernetesClusterLinuxProfileSshKey
 
 ssh_key block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#ssh_key KubernetesCluster#ssh_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#ssh_key KubernetesCluster#ssh_key}
 
 ---
 
@@ -5953,7 +5953,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterLinuxProfileSshKey.property.keyData">KeyData</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#key_data KubernetesCluster#key_data}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterLinuxProfileSshKey.property.keyData">KeyData</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#key_data KubernetesCluster#key_data}. |
 
 ---
 
@@ -5965,7 +5965,7 @@ KeyData *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#key_data KubernetesCluster#key_data}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#key_data KubernetesCluster#key_data}.
 
 ---
 
@@ -6001,7 +6001,7 @@ Allowed interface{}
 
 allowed block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#allowed KubernetesCluster#allowed}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#allowed KubernetesCluster#allowed}
 
 ---
 
@@ -6015,7 +6015,7 @@ NotAllowed interface{}
 
 not_allowed block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#not_allowed KubernetesCluster#not_allowed}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#not_allowed KubernetesCluster#not_allowed}
 
 ---
 
@@ -6036,8 +6036,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowed.property.day">Day</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#day KubernetesCluster#day}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowed.property.hours">Hours</a></code> | <code>*[]*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#hours KubernetesCluster#hours}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowed.property.day">Day</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#day KubernetesCluster#day}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowed.property.hours">Hours</a></code> | <code>*[]*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#hours KubernetesCluster#hours}. |
 
 ---
 
@@ -6049,7 +6049,7 @@ Day *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#day KubernetesCluster#day}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#day KubernetesCluster#day}.
 
 ---
 
@@ -6061,7 +6061,7 @@ Hours *[]*f64
 
 - *Type:* *[]*f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#hours KubernetesCluster#hours}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#hours KubernetesCluster#hours}.
 
 ---
 
@@ -6090,16 +6090,16 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.duration">Duration</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#duration KubernetesCluster#duration}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.frequency">Frequency</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#frequency KubernetesCluster#frequency}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.interval">Interval</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#interval KubernetesCluster#interval}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.dayOfMonth">DayOfMonth</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#day_of_month KubernetesCluster#day_of_month}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.dayOfWeek">DayOfWeek</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#day_of_week KubernetesCluster#day_of_week}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.duration">Duration</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#duration KubernetesCluster#duration}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.frequency">Frequency</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#frequency KubernetesCluster#frequency}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.interval">Interval</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#interval KubernetesCluster#interval}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.dayOfMonth">DayOfMonth</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#day_of_month KubernetesCluster#day_of_month}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.dayOfWeek">DayOfWeek</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#day_of_week KubernetesCluster#day_of_week}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.notAllowed">NotAllowed</a></code> | <code>interface{}</code> | not_allowed block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.startDate">StartDate</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#start_date KubernetesCluster#start_date}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.startTime">StartTime</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#start_time KubernetesCluster#start_time}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.utcOffset">UtcOffset</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#utc_offset KubernetesCluster#utc_offset}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.weekIndex">WeekIndex</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#week_index KubernetesCluster#week_index}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.startDate">StartDate</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#start_date KubernetesCluster#start_date}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.startTime">StartTime</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#start_time KubernetesCluster#start_time}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.utcOffset">UtcOffset</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#utc_offset KubernetesCluster#utc_offset}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.weekIndex">WeekIndex</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#week_index KubernetesCluster#week_index}. |
 
 ---
 
@@ -6111,7 +6111,7 @@ Duration *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#duration KubernetesCluster#duration}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#duration KubernetesCluster#duration}.
 
 ---
 
@@ -6123,7 +6123,7 @@ Frequency *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#frequency KubernetesCluster#frequency}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#frequency KubernetesCluster#frequency}.
 
 ---
 
@@ -6135,7 +6135,7 @@ Interval *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#interval KubernetesCluster#interval}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#interval KubernetesCluster#interval}.
 
 ---
 
@@ -6147,7 +6147,7 @@ DayOfMonth *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#day_of_month KubernetesCluster#day_of_month}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#day_of_month KubernetesCluster#day_of_month}.
 
 ---
 
@@ -6159,7 +6159,7 @@ DayOfWeek *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#day_of_week KubernetesCluster#day_of_week}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#day_of_week KubernetesCluster#day_of_week}.
 
 ---
 
@@ -6173,7 +6173,7 @@ NotAllowed interface{}
 
 not_allowed block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#not_allowed KubernetesCluster#not_allowed}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#not_allowed KubernetesCluster#not_allowed}
 
 ---
 
@@ -6185,7 +6185,7 @@ StartDate *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#start_date KubernetesCluster#start_date}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#start_date KubernetesCluster#start_date}.
 
 ---
 
@@ -6197,7 +6197,7 @@ StartTime *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#start_time KubernetesCluster#start_time}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#start_time KubernetesCluster#start_time}.
 
 ---
 
@@ -6209,7 +6209,7 @@ UtcOffset *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#utc_offset KubernetesCluster#utc_offset}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#utc_offset KubernetesCluster#utc_offset}.
 
 ---
 
@@ -6221,7 +6221,7 @@ WeekIndex *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#week_index KubernetesCluster#week_index}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#week_index KubernetesCluster#week_index}.
 
 ---
 
@@ -6242,8 +6242,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed.property.end">End</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#end KubernetesCluster#end}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed.property.start">Start</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#start KubernetesCluster#start}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed.property.end">End</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#end KubernetesCluster#end}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed.property.start">Start</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#start KubernetesCluster#start}. |
 
 ---
 
@@ -6255,7 +6255,7 @@ End *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#end KubernetesCluster#end}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#end KubernetesCluster#end}.
 
 ---
 
@@ -6267,7 +6267,7 @@ Start *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#start KubernetesCluster#start}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#start KubernetesCluster#start}.
 
 ---
 
@@ -6296,16 +6296,16 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.duration">Duration</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#duration KubernetesCluster#duration}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.frequency">Frequency</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#frequency KubernetesCluster#frequency}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.interval">Interval</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#interval KubernetesCluster#interval}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.dayOfMonth">DayOfMonth</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#day_of_month KubernetesCluster#day_of_month}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.dayOfWeek">DayOfWeek</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#day_of_week KubernetesCluster#day_of_week}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.duration">Duration</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#duration KubernetesCluster#duration}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.frequency">Frequency</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#frequency KubernetesCluster#frequency}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.interval">Interval</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#interval KubernetesCluster#interval}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.dayOfMonth">DayOfMonth</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#day_of_month KubernetesCluster#day_of_month}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.dayOfWeek">DayOfWeek</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#day_of_week KubernetesCluster#day_of_week}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.notAllowed">NotAllowed</a></code> | <code>interface{}</code> | not_allowed block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.startDate">StartDate</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#start_date KubernetesCluster#start_date}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.startTime">StartTime</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#start_time KubernetesCluster#start_time}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.utcOffset">UtcOffset</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#utc_offset KubernetesCluster#utc_offset}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.weekIndex">WeekIndex</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#week_index KubernetesCluster#week_index}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.startDate">StartDate</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#start_date KubernetesCluster#start_date}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.startTime">StartTime</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#start_time KubernetesCluster#start_time}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.utcOffset">UtcOffset</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#utc_offset KubernetesCluster#utc_offset}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.weekIndex">WeekIndex</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#week_index KubernetesCluster#week_index}. |
 
 ---
 
@@ -6317,7 +6317,7 @@ Duration *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#duration KubernetesCluster#duration}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#duration KubernetesCluster#duration}.
 
 ---
 
@@ -6329,7 +6329,7 @@ Frequency *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#frequency KubernetesCluster#frequency}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#frequency KubernetesCluster#frequency}.
 
 ---
 
@@ -6341,7 +6341,7 @@ Interval *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#interval KubernetesCluster#interval}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#interval KubernetesCluster#interval}.
 
 ---
 
@@ -6353,7 +6353,7 @@ DayOfMonth *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#day_of_month KubernetesCluster#day_of_month}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#day_of_month KubernetesCluster#day_of_month}.
 
 ---
 
@@ -6365,7 +6365,7 @@ DayOfWeek *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#day_of_week KubernetesCluster#day_of_week}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#day_of_week KubernetesCluster#day_of_week}.
 
 ---
 
@@ -6379,7 +6379,7 @@ NotAllowed interface{}
 
 not_allowed block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#not_allowed KubernetesCluster#not_allowed}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#not_allowed KubernetesCluster#not_allowed}
 
 ---
 
@@ -6391,7 +6391,7 @@ StartDate *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#start_date KubernetesCluster#start_date}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#start_date KubernetesCluster#start_date}.
 
 ---
 
@@ -6403,7 +6403,7 @@ StartTime *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#start_time KubernetesCluster#start_time}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#start_time KubernetesCluster#start_time}.
 
 ---
 
@@ -6415,7 +6415,7 @@ UtcOffset *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#utc_offset KubernetesCluster#utc_offset}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#utc_offset KubernetesCluster#utc_offset}.
 
 ---
 
@@ -6427,7 +6427,7 @@ WeekIndex *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#week_index KubernetesCluster#week_index}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#week_index KubernetesCluster#week_index}.
 
 ---
 
@@ -6448,8 +6448,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsNotAllowed.property.end">End</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#end KubernetesCluster#end}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsNotAllowed.property.start">Start</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#start KubernetesCluster#start}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsNotAllowed.property.end">End</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#end KubernetesCluster#end}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsNotAllowed.property.start">Start</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#start KubernetesCluster#start}. |
 
 ---
 
@@ -6461,7 +6461,7 @@ End *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#end KubernetesCluster#end}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#end KubernetesCluster#end}.
 
 ---
 
@@ -6473,7 +6473,7 @@ Start *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#start KubernetesCluster#start}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#start KubernetesCluster#start}.
 
 ---
 
@@ -6494,8 +6494,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowed.property.end">End</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#end KubernetesCluster#end}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowed.property.start">Start</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#start KubernetesCluster#start}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowed.property.end">End</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#end KubernetesCluster#end}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowed.property.start">Start</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#start KubernetesCluster#start}. |
 
 ---
 
@@ -6507,7 +6507,7 @@ End *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#end KubernetesCluster#end}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#end KubernetesCluster#end}.
 
 ---
 
@@ -6519,7 +6519,7 @@ Start *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#start KubernetesCluster#start}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#start KubernetesCluster#start}.
 
 ---
 
@@ -6539,7 +6539,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMicrosoftDefender.property.logAnalyticsWorkspaceId">LogAnalyticsWorkspaceId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#log_analytics_workspace_id KubernetesCluster#log_analytics_workspace_id}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMicrosoftDefender.property.logAnalyticsWorkspaceId">LogAnalyticsWorkspaceId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#log_analytics_workspace_id KubernetesCluster#log_analytics_workspace_id}. |
 
 ---
 
@@ -6551,7 +6551,7 @@ LogAnalyticsWorkspaceId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#log_analytics_workspace_id KubernetesCluster#log_analytics_workspace_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#log_analytics_workspace_id KubernetesCluster#log_analytics_workspace_id}.
 
 ---
 
@@ -6572,8 +6572,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMonitorMetrics.property.annotationsAllowed">AnnotationsAllowed</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#annotations_allowed KubernetesCluster#annotations_allowed}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMonitorMetrics.property.labelsAllowed">LabelsAllowed</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#labels_allowed KubernetesCluster#labels_allowed}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMonitorMetrics.property.annotationsAllowed">AnnotationsAllowed</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#annotations_allowed KubernetesCluster#annotations_allowed}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMonitorMetrics.property.labelsAllowed">LabelsAllowed</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#labels_allowed KubernetesCluster#labels_allowed}. |
 
 ---
 
@@ -6585,7 +6585,7 @@ AnnotationsAllowed *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#annotations_allowed KubernetesCluster#annotations_allowed}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#annotations_allowed KubernetesCluster#annotations_allowed}.
 
 ---
 
@@ -6597,7 +6597,7 @@ LabelsAllowed *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#labels_allowed KubernetesCluster#labels_allowed}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#labels_allowed KubernetesCluster#labels_allowed}.
 
 ---
 
@@ -6632,22 +6632,22 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.networkPlugin">NetworkPlugin</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#network_plugin KubernetesCluster#network_plugin}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.dnsServiceIp">DnsServiceIp</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#dns_service_ip KubernetesCluster#dns_service_ip}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.dockerBridgeCidr">DockerBridgeCidr</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#docker_bridge_cidr KubernetesCluster#docker_bridge_cidr}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.ebpfDataPlane">EbpfDataPlane</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#ebpf_data_plane KubernetesCluster#ebpf_data_plane}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.ipVersions">IpVersions</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#ip_versions KubernetesCluster#ip_versions}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.networkPlugin">NetworkPlugin</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#network_plugin KubernetesCluster#network_plugin}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.dnsServiceIp">DnsServiceIp</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#dns_service_ip KubernetesCluster#dns_service_ip}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.dockerBridgeCidr">DockerBridgeCidr</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#docker_bridge_cidr KubernetesCluster#docker_bridge_cidr}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.ebpfDataPlane">EbpfDataPlane</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#ebpf_data_plane KubernetesCluster#ebpf_data_plane}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.ipVersions">IpVersions</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#ip_versions KubernetesCluster#ip_versions}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.loadBalancerProfile">LoadBalancerProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileLoadBalancerProfile">KubernetesClusterNetworkProfileLoadBalancerProfile</a></code> | load_balancer_profile block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.loadBalancerSku">LoadBalancerSku</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#load_balancer_sku KubernetesCluster#load_balancer_sku}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.loadBalancerSku">LoadBalancerSku</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#load_balancer_sku KubernetesCluster#load_balancer_sku}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.natGatewayProfile">NatGatewayProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileNatGatewayProfile">KubernetesClusterNetworkProfileNatGatewayProfile</a></code> | nat_gateway_profile block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.networkMode">NetworkMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#network_mode KubernetesCluster#network_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.networkPluginMode">NetworkPluginMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#network_plugin_mode KubernetesCluster#network_plugin_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.networkPolicy">NetworkPolicy</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#network_policy KubernetesCluster#network_policy}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.outboundType">OutboundType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#outbound_type KubernetesCluster#outbound_type}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.podCidr">PodCidr</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#pod_cidr KubernetesCluster#pod_cidr}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.podCidrs">PodCidrs</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#pod_cidrs KubernetesCluster#pod_cidrs}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.serviceCidr">ServiceCidr</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#service_cidr KubernetesCluster#service_cidr}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.serviceCidrs">ServiceCidrs</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#service_cidrs KubernetesCluster#service_cidrs}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.networkMode">NetworkMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#network_mode KubernetesCluster#network_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.networkPluginMode">NetworkPluginMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#network_plugin_mode KubernetesCluster#network_plugin_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.networkPolicy">NetworkPolicy</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#network_policy KubernetesCluster#network_policy}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.outboundType">OutboundType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#outbound_type KubernetesCluster#outbound_type}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.podCidr">PodCidr</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#pod_cidr KubernetesCluster#pod_cidr}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.podCidrs">PodCidrs</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#pod_cidrs KubernetesCluster#pod_cidrs}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.serviceCidr">ServiceCidr</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#service_cidr KubernetesCluster#service_cidr}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile.property.serviceCidrs">ServiceCidrs</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#service_cidrs KubernetesCluster#service_cidrs}. |
 
 ---
 
@@ -6659,7 +6659,7 @@ NetworkPlugin *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#network_plugin KubernetesCluster#network_plugin}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#network_plugin KubernetesCluster#network_plugin}.
 
 ---
 
@@ -6671,7 +6671,7 @@ DnsServiceIp *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#dns_service_ip KubernetesCluster#dns_service_ip}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#dns_service_ip KubernetesCluster#dns_service_ip}.
 
 ---
 
@@ -6683,7 +6683,7 @@ DockerBridgeCidr *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#docker_bridge_cidr KubernetesCluster#docker_bridge_cidr}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#docker_bridge_cidr KubernetesCluster#docker_bridge_cidr}.
 
 ---
 
@@ -6695,7 +6695,7 @@ EbpfDataPlane *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#ebpf_data_plane KubernetesCluster#ebpf_data_plane}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#ebpf_data_plane KubernetesCluster#ebpf_data_plane}.
 
 ---
 
@@ -6707,7 +6707,7 @@ IpVersions *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#ip_versions KubernetesCluster#ip_versions}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#ip_versions KubernetesCluster#ip_versions}.
 
 ---
 
@@ -6721,7 +6721,7 @@ LoadBalancerProfile KubernetesClusterNetworkProfileLoadBalancerProfile
 
 load_balancer_profile block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#load_balancer_profile KubernetesCluster#load_balancer_profile}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#load_balancer_profile KubernetesCluster#load_balancer_profile}
 
 ---
 
@@ -6733,7 +6733,7 @@ LoadBalancerSku *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#load_balancer_sku KubernetesCluster#load_balancer_sku}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#load_balancer_sku KubernetesCluster#load_balancer_sku}.
 
 ---
 
@@ -6747,7 +6747,7 @@ NatGatewayProfile KubernetesClusterNetworkProfileNatGatewayProfile
 
 nat_gateway_profile block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#nat_gateway_profile KubernetesCluster#nat_gateway_profile}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#nat_gateway_profile KubernetesCluster#nat_gateway_profile}
 
 ---
 
@@ -6759,7 +6759,7 @@ NetworkMode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#network_mode KubernetesCluster#network_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#network_mode KubernetesCluster#network_mode}.
 
 ---
 
@@ -6771,7 +6771,7 @@ NetworkPluginMode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#network_plugin_mode KubernetesCluster#network_plugin_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#network_plugin_mode KubernetesCluster#network_plugin_mode}.
 
 ---
 
@@ -6783,7 +6783,7 @@ NetworkPolicy *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#network_policy KubernetesCluster#network_policy}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#network_policy KubernetesCluster#network_policy}.
 
 ---
 
@@ -6795,7 +6795,7 @@ OutboundType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#outbound_type KubernetesCluster#outbound_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#outbound_type KubernetesCluster#outbound_type}.
 
 ---
 
@@ -6807,7 +6807,7 @@ PodCidr *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#pod_cidr KubernetesCluster#pod_cidr}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#pod_cidr KubernetesCluster#pod_cidr}.
 
 ---
 
@@ -6819,7 +6819,7 @@ PodCidrs *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#pod_cidrs KubernetesCluster#pod_cidrs}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#pod_cidrs KubernetesCluster#pod_cidrs}.
 
 ---
 
@@ -6831,7 +6831,7 @@ ServiceCidr *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#service_cidr KubernetesCluster#service_cidr}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#service_cidr KubernetesCluster#service_cidr}.
 
 ---
 
@@ -6843,7 +6843,7 @@ ServiceCidrs *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#service_cidrs KubernetesCluster#service_cidrs}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#service_cidrs KubernetesCluster#service_cidrs}.
 
 ---
 
@@ -6868,12 +6868,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileLoadBalancerProfile.property.idleTimeoutInMinutes">IdleTimeoutInMinutes</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#idle_timeout_in_minutes KubernetesCluster#idle_timeout_in_minutes}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileLoadBalancerProfile.property.managedOutboundIpCount">ManagedOutboundIpCount</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#managed_outbound_ip_count KubernetesCluster#managed_outbound_ip_count}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileLoadBalancerProfile.property.managedOutboundIpv6Count">ManagedOutboundIpv6Count</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#managed_outbound_ipv6_count KubernetesCluster#managed_outbound_ipv6_count}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileLoadBalancerProfile.property.outboundIpAddressIds">OutboundIpAddressIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#outbound_ip_address_ids KubernetesCluster#outbound_ip_address_ids}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileLoadBalancerProfile.property.outboundIpPrefixIds">OutboundIpPrefixIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#outbound_ip_prefix_ids KubernetesCluster#outbound_ip_prefix_ids}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileLoadBalancerProfile.property.outboundPortsAllocated">OutboundPortsAllocated</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#outbound_ports_allocated KubernetesCluster#outbound_ports_allocated}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileLoadBalancerProfile.property.idleTimeoutInMinutes">IdleTimeoutInMinutes</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#idle_timeout_in_minutes KubernetesCluster#idle_timeout_in_minutes}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileLoadBalancerProfile.property.managedOutboundIpCount">ManagedOutboundIpCount</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#managed_outbound_ip_count KubernetesCluster#managed_outbound_ip_count}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileLoadBalancerProfile.property.managedOutboundIpv6Count">ManagedOutboundIpv6Count</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#managed_outbound_ipv6_count KubernetesCluster#managed_outbound_ipv6_count}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileLoadBalancerProfile.property.outboundIpAddressIds">OutboundIpAddressIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#outbound_ip_address_ids KubernetesCluster#outbound_ip_address_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileLoadBalancerProfile.property.outboundIpPrefixIds">OutboundIpPrefixIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#outbound_ip_prefix_ids KubernetesCluster#outbound_ip_prefix_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileLoadBalancerProfile.property.outboundPortsAllocated">OutboundPortsAllocated</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#outbound_ports_allocated KubernetesCluster#outbound_ports_allocated}. |
 
 ---
 
@@ -6885,7 +6885,7 @@ IdleTimeoutInMinutes *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#idle_timeout_in_minutes KubernetesCluster#idle_timeout_in_minutes}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#idle_timeout_in_minutes KubernetesCluster#idle_timeout_in_minutes}.
 
 ---
 
@@ -6897,7 +6897,7 @@ ManagedOutboundIpCount *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#managed_outbound_ip_count KubernetesCluster#managed_outbound_ip_count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#managed_outbound_ip_count KubernetesCluster#managed_outbound_ip_count}.
 
 ---
 
@@ -6909,7 +6909,7 @@ ManagedOutboundIpv6Count *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#managed_outbound_ipv6_count KubernetesCluster#managed_outbound_ipv6_count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#managed_outbound_ipv6_count KubernetesCluster#managed_outbound_ipv6_count}.
 
 ---
 
@@ -6921,7 +6921,7 @@ OutboundIpAddressIds *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#outbound_ip_address_ids KubernetesCluster#outbound_ip_address_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#outbound_ip_address_ids KubernetesCluster#outbound_ip_address_ids}.
 
 ---
 
@@ -6933,7 +6933,7 @@ OutboundIpPrefixIds *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#outbound_ip_prefix_ids KubernetesCluster#outbound_ip_prefix_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#outbound_ip_prefix_ids KubernetesCluster#outbound_ip_prefix_ids}.
 
 ---
 
@@ -6945,7 +6945,7 @@ OutboundPortsAllocated *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#outbound_ports_allocated KubernetesCluster#outbound_ports_allocated}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#outbound_ports_allocated KubernetesCluster#outbound_ports_allocated}.
 
 ---
 
@@ -6966,8 +6966,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileNatGatewayProfile.property.idleTimeoutInMinutes">IdleTimeoutInMinutes</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#idle_timeout_in_minutes KubernetesCluster#idle_timeout_in_minutes}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileNatGatewayProfile.property.managedOutboundIpCount">ManagedOutboundIpCount</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#managed_outbound_ip_count KubernetesCluster#managed_outbound_ip_count}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileNatGatewayProfile.property.idleTimeoutInMinutes">IdleTimeoutInMinutes</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#idle_timeout_in_minutes KubernetesCluster#idle_timeout_in_minutes}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileNatGatewayProfile.property.managedOutboundIpCount">ManagedOutboundIpCount</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#managed_outbound_ip_count KubernetesCluster#managed_outbound_ip_count}. |
 
 ---
 
@@ -6979,7 +6979,7 @@ IdleTimeoutInMinutes *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#idle_timeout_in_minutes KubernetesCluster#idle_timeout_in_minutes}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#idle_timeout_in_minutes KubernetesCluster#idle_timeout_in_minutes}.
 
 ---
 
@@ -6991,7 +6991,7 @@ ManagedOutboundIpCount *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#managed_outbound_ip_count KubernetesCluster#managed_outbound_ip_count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#managed_outbound_ip_count KubernetesCluster#managed_outbound_ip_count}.
 
 ---
 
@@ -7012,8 +7012,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgent.property.logAnalyticsWorkspaceId">LogAnalyticsWorkspaceId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#log_analytics_workspace_id KubernetesCluster#log_analytics_workspace_id}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgent.property.msiAuthForMonitoringEnabled">MsiAuthForMonitoringEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#msi_auth_for_monitoring_enabled KubernetesCluster#msi_auth_for_monitoring_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgent.property.logAnalyticsWorkspaceId">LogAnalyticsWorkspaceId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#log_analytics_workspace_id KubernetesCluster#log_analytics_workspace_id}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgent.property.msiAuthForMonitoringEnabled">MsiAuthForMonitoringEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#msi_auth_for_monitoring_enabled KubernetesCluster#msi_auth_for_monitoring_enabled}. |
 
 ---
 
@@ -7025,7 +7025,7 @@ LogAnalyticsWorkspaceId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#log_analytics_workspace_id KubernetesCluster#log_analytics_workspace_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#log_analytics_workspace_id KubernetesCluster#log_analytics_workspace_id}.
 
 ---
 
@@ -7037,7 +7037,7 @@ MsiAuthForMonitoringEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#msi_auth_for_monitoring_enabled KubernetesCluster#msi_auth_for_monitoring_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#msi_auth_for_monitoring_enabled KubernetesCluster#msi_auth_for_monitoring_enabled}.
 
 ---
 
@@ -7072,9 +7072,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfile.property.mode">Mode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#mode KubernetesCluster#mode}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfile.property.externalIngressGatewayEnabled">ExternalIngressGatewayEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#external_ingress_gateway_enabled KubernetesCluster#external_ingress_gateway_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfile.property.internalIngressGatewayEnabled">InternalIngressGatewayEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#internal_ingress_gateway_enabled KubernetesCluster#internal_ingress_gateway_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfile.property.mode">Mode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#mode KubernetesCluster#mode}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfile.property.externalIngressGatewayEnabled">ExternalIngressGatewayEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#external_ingress_gateway_enabled KubernetesCluster#external_ingress_gateway_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfile.property.internalIngressGatewayEnabled">InternalIngressGatewayEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#internal_ingress_gateway_enabled KubernetesCluster#internal_ingress_gateway_enabled}. |
 
 ---
 
@@ -7086,7 +7086,7 @@ Mode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#mode KubernetesCluster#mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#mode KubernetesCluster#mode}.
 
 ---
 
@@ -7098,7 +7098,7 @@ ExternalIngressGatewayEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#external_ingress_gateway_enabled KubernetesCluster#external_ingress_gateway_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#external_ingress_gateway_enabled KubernetesCluster#external_ingress_gateway_enabled}.
 
 ---
 
@@ -7110,7 +7110,7 @@ InternalIngressGatewayEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#internal_ingress_gateway_enabled KubernetesCluster#internal_ingress_gateway_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#internal_ingress_gateway_enabled KubernetesCluster#internal_ingress_gateway_enabled}.
 
 ---
 
@@ -7131,8 +7131,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServicePrincipal.property.clientId">ClientId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#client_id KubernetesCluster#client_id}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServicePrincipal.property.clientSecret">ClientSecret</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#client_secret KubernetesCluster#client_secret}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServicePrincipal.property.clientId">ClientId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#client_id KubernetesCluster#client_id}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServicePrincipal.property.clientSecret">ClientSecret</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#client_secret KubernetesCluster#client_secret}. |
 
 ---
 
@@ -7144,7 +7144,7 @@ ClientId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#client_id KubernetesCluster#client_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#client_id KubernetesCluster#client_id}.
 
 ---
 
@@ -7156,7 +7156,7 @@ ClientSecret *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#client_secret KubernetesCluster#client_secret}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#client_secret KubernetesCluster#client_secret}.
 
 ---
 
@@ -7180,11 +7180,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfile.property.blobDriverEnabled">BlobDriverEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#blob_driver_enabled KubernetesCluster#blob_driver_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfile.property.diskDriverEnabled">DiskDriverEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#disk_driver_enabled KubernetesCluster#disk_driver_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfile.property.diskDriverVersion">DiskDriverVersion</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#disk_driver_version KubernetesCluster#disk_driver_version}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfile.property.fileDriverEnabled">FileDriverEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#file_driver_enabled KubernetesCluster#file_driver_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfile.property.snapshotControllerEnabled">SnapshotControllerEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#snapshot_controller_enabled KubernetesCluster#snapshot_controller_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfile.property.blobDriverEnabled">BlobDriverEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#blob_driver_enabled KubernetesCluster#blob_driver_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfile.property.diskDriverEnabled">DiskDriverEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#disk_driver_enabled KubernetesCluster#disk_driver_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfile.property.diskDriverVersion">DiskDriverVersion</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#disk_driver_version KubernetesCluster#disk_driver_version}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfile.property.fileDriverEnabled">FileDriverEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#file_driver_enabled KubernetesCluster#file_driver_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfile.property.snapshotControllerEnabled">SnapshotControllerEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#snapshot_controller_enabled KubernetesCluster#snapshot_controller_enabled}. |
 
 ---
 
@@ -7196,7 +7196,7 @@ BlobDriverEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#blob_driver_enabled KubernetesCluster#blob_driver_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#blob_driver_enabled KubernetesCluster#blob_driver_enabled}.
 
 ---
 
@@ -7208,7 +7208,7 @@ DiskDriverEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#disk_driver_enabled KubernetesCluster#disk_driver_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#disk_driver_enabled KubernetesCluster#disk_driver_enabled}.
 
 ---
 
@@ -7220,7 +7220,7 @@ DiskDriverVersion *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#disk_driver_version KubernetesCluster#disk_driver_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#disk_driver_version KubernetesCluster#disk_driver_version}.
 
 ---
 
@@ -7232,7 +7232,7 @@ FileDriverEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#file_driver_enabled KubernetesCluster#file_driver_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#file_driver_enabled KubernetesCluster#file_driver_enabled}.
 
 ---
 
@@ -7244,7 +7244,7 @@ SnapshotControllerEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#snapshot_controller_enabled KubernetesCluster#snapshot_controller_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#snapshot_controller_enabled KubernetesCluster#snapshot_controller_enabled}.
 
 ---
 
@@ -7267,10 +7267,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#create KubernetesCluster#create}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#delete KubernetesCluster#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#read KubernetesCluster#read}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#update KubernetesCluster#update}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#create KubernetesCluster#create}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#delete KubernetesCluster#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#read KubernetesCluster#read}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#update KubernetesCluster#update}. |
 
 ---
 
@@ -7282,7 +7282,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#create KubernetesCluster#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#create KubernetesCluster#create}.
 
 ---
 
@@ -7294,7 +7294,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#delete KubernetesCluster#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#delete KubernetesCluster#delete}.
 
 ---
 
@@ -7306,7 +7306,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#read KubernetesCluster#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#read KubernetesCluster#read}.
 
 ---
 
@@ -7318,7 +7318,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#update KubernetesCluster#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#update KubernetesCluster#update}.
 
 ---
 
@@ -7338,7 +7338,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWebAppRouting.property.dnsZoneId">DnsZoneId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#dns_zone_id KubernetesCluster#dns_zone_id}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWebAppRouting.property.dnsZoneId">DnsZoneId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#dns_zone_id KubernetesCluster#dns_zone_id}. |
 
 ---
 
@@ -7350,7 +7350,7 @@ DnsZoneId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#dns_zone_id KubernetesCluster#dns_zone_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#dns_zone_id KubernetesCluster#dns_zone_id}.
 
 ---
 
@@ -7386,10 +7386,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWindowsProfile.property.adminUsername">AdminUsername</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#admin_username KubernetesCluster#admin_username}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWindowsProfile.property.adminPassword">AdminPassword</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#admin_password KubernetesCluster#admin_password}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWindowsProfile.property.adminUsername">AdminUsername</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#admin_username KubernetesCluster#admin_username}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWindowsProfile.property.adminPassword">AdminPassword</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#admin_password KubernetesCluster#admin_password}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWindowsProfile.property.gmsa">Gmsa</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWindowsProfileGmsa">KubernetesClusterWindowsProfileGmsa</a></code> | gmsa block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWindowsProfile.property.license">License</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#license KubernetesCluster#license}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWindowsProfile.property.license">License</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#license KubernetesCluster#license}. |
 
 ---
 
@@ -7401,7 +7401,7 @@ AdminUsername *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#admin_username KubernetesCluster#admin_username}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#admin_username KubernetesCluster#admin_username}.
 
 ---
 
@@ -7413,7 +7413,7 @@ AdminPassword *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#admin_password KubernetesCluster#admin_password}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#admin_password KubernetesCluster#admin_password}.
 
 ---
 
@@ -7427,7 +7427,7 @@ Gmsa KubernetesClusterWindowsProfileGmsa
 
 gmsa block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#gmsa KubernetesCluster#gmsa}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#gmsa KubernetesCluster#gmsa}
 
 ---
 
@@ -7439,7 +7439,7 @@ License *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#license KubernetesCluster#license}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#license KubernetesCluster#license}.
 
 ---
 
@@ -7460,8 +7460,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWindowsProfileGmsa.property.dnsServer">DnsServer</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#dns_server KubernetesCluster#dns_server}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWindowsProfileGmsa.property.rootDomain">RootDomain</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#root_domain KubernetesCluster#root_domain}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWindowsProfileGmsa.property.dnsServer">DnsServer</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#dns_server KubernetesCluster#dns_server}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWindowsProfileGmsa.property.rootDomain">RootDomain</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#root_domain KubernetesCluster#root_domain}. |
 
 ---
 
@@ -7473,7 +7473,7 @@ DnsServer *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#dns_server KubernetesCluster#dns_server}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#dns_server KubernetesCluster#dns_server}.
 
 ---
 
@@ -7485,7 +7485,7 @@ RootDomain *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#root_domain KubernetesCluster#root_domain}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#root_domain KubernetesCluster#root_domain}.
 
 ---
 
@@ -7506,8 +7506,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetescluster
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfile.property.kedaEnabled">KedaEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#keda_enabled KubernetesCluster#keda_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfile.property.verticalPodAutoscalerEnabled">VerticalPodAutoscalerEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#vertical_pod_autoscaler_enabled KubernetesCluster#vertical_pod_autoscaler_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfile.property.kedaEnabled">KedaEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#keda_enabled KubernetesCluster#keda_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfile.property.verticalPodAutoscalerEnabled">VerticalPodAutoscalerEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#vertical_pod_autoscaler_enabled KubernetesCluster#vertical_pod_autoscaler_enabled}. |
 
 ---
 
@@ -7519,7 +7519,7 @@ KedaEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#keda_enabled KubernetesCluster#keda_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#keda_enabled KubernetesCluster#keda_enabled}.
 
 ---
 
@@ -7531,7 +7531,7 @@ VerticalPodAutoscalerEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/kubernetes_cluster#vertical_pod_autoscaler_enabled KubernetesCluster#vertical_pod_autoscaler_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/kubernetes_cluster#vertical_pod_autoscaler_enabled KubernetesCluster#vertical_pod_autoscaler_enabled}.
 
 ---
 
