@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSite.DataAzurermMobileNetworkSite.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworksite"
 
 dataazurermmobilenetworksite.NewDataAzurermMobileNetworkSite(scope Construct, id *string, config DataAzurermMobileNetworkSiteConfig) DataAzurermMobileNetworkSite
 ```
@@ -298,7 +298,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSite.DataAzurermMobileNetworkSite.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworksite"
 
 dataazurermmobilenetworksite.DataAzurermMobileNetworkSite_IsConstruct(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSite.DataAzurermMobileNetworkSite.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworksite"
 
 dataazurermmobilenetworksite.DataAzurermMobileNetworkSite_IsTerraformElement(x interface{}) *bool
 ```
@@ -344,7 +344,7 @@ dataazurermmobilenetworksite.DataAzurermMobileNetworkSite_IsTerraformElement(x i
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSite.DataAzurermMobileNetworkSite.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworksite"
 
 dataazurermmobilenetworksite.DataAzurermMobileNetworkSite_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -358,7 +358,7 @@ dataazurermmobilenetworksite.DataAzurermMobileNetworkSite_IsTerraformDataSource(
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSite.DataAzurermMobileNetworkSite.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworksite"
 
 dataazurermmobilenetworksite.DataAzurermMobileNetworkSite_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -686,7 +686,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSite.DataAzurermMobileNetworkSiteConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworksite"
 
 &dataazurermmobilenetworksite.DataAzurermMobileNetworkSiteConfig {
 	Connection: interface{},
@@ -699,7 +699,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetw
 	MobileNetworkId: *string,
 	Name: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermMobileNetworkSite.DataAzurermMobileNetworkSiteTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermMobileNetworkSite.DataAzurermMobileNetworkSiteTimeouts,
 }
 ```
 
@@ -849,7 +849,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSite.DataAzurermMobileNetworkSiteTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworksite"
 
 &dataazurermmobilenetworksite.DataAzurermMobileNetworkSiteTimeouts {
 	Read: *string,
@@ -883,7 +883,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSite.DataAzurermMobileNetworkSiteTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworksite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworksite"
 
 dataazurermmobilenetworksite.NewDataAzurermMobileNetworkSiteTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermMobileNetworkSiteTimeoutsOutputReference
 ```
