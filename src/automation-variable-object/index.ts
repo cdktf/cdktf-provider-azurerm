@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,58 +8,58 @@ import * as cdktf from 'cdktf';
 
 export interface AutomationVariableObjectConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#automation_account_name AutomationVariableObject#automation_account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#automation_account_name AutomationVariableObject#automation_account_name}
   */
   readonly automationAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#description AutomationVariableObject#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#description AutomationVariableObject#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#encrypted AutomationVariableObject#encrypted}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#encrypted AutomationVariableObject#encrypted}
   */
   readonly encrypted?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#id AutomationVariableObject#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#id AutomationVariableObject#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#name AutomationVariableObject#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#name AutomationVariableObject#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#resource_group_name AutomationVariableObject#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#resource_group_name AutomationVariableObject#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#value AutomationVariableObject#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#value AutomationVariableObject#value}
   */
   readonly value?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#timeouts AutomationVariableObject#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#timeouts AutomationVariableObject#timeouts}
   */
   readonly timeouts?: AutomationVariableObjectTimeouts;
 }
 export interface AutomationVariableObjectTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#create AutomationVariableObject#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#create AutomationVariableObject#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#delete AutomationVariableObject#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#delete AutomationVariableObject#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#read AutomationVariableObject#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#read AutomationVariableObject#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#update AutomationVariableObject#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#update AutomationVariableObject#update}
   */
   readonly update?: string;
 }
@@ -208,7 +203,7 @@ export class AutomationVariableObjectTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object azurerm_automation_variable_object}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object azurerm_automation_variable_object}
 */
 export class AutomationVariableObject extends cdktf.TerraformResource {
 
@@ -224,7 +219,7 @@ export class AutomationVariableObject extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a AutomationVariableObject resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the AutomationVariableObject to import
-  * @param importFromId The id of the existing AutomationVariableObject that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing AutomationVariableObject that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the AutomationVariableObject to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -236,7 +231,7 @@ export class AutomationVariableObject extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/automation_variable_object azurerm_automation_variable_object} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/automation_variable_object azurerm_automation_variable_object} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -247,7 +242,7 @@ export class AutomationVariableObject extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_automation_variable_object',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.78.0',
+        providerVersion: '3.79.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

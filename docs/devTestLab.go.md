@@ -1,6 +1,6 @@
 # `azurerm_dev_test_lab`
 
-Refer to the Terraform Registory for docs: [`azurerm_dev_test_lab`](https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/dev_test_lab).
+Refer to the Terraform Registory for docs: [`azurerm_dev_test_lab`](https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/dev_test_lab).
 
 # `devTestLab` Submodule <a name="`devTestLab` Submodule" id="@cdktf/provider-azurerm.devTestLab"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_dev_test_lab`](https://regi
 
 ### DevTestLab <a name="DevTestLab" id="@cdktf/provider-azurerm.devTestLab.DevTestLab"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/dev_test_lab azurerm_dev_test_lab}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/dev_test_lab azurerm_dev_test_lab}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.devTestLab.DevTestLab.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestlab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestlab"
 
 devtestlab.NewDevTestLab(scope Construct, id *string, config DevTestLabConfig) DevTestLab
 ```
@@ -373,7 +373,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.devTestLab.DevTestLab.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestlab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestlab"
 
 devtestlab.DevTestLab_IsConstruct(x interface{}) *bool
 ```
@@ -405,7 +405,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.devTestLab.DevTestLab.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestlab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestlab"
 
 devtestlab.DevTestLab_IsTerraformElement(x interface{}) *bool
 ```
@@ -419,7 +419,7 @@ devtestlab.DevTestLab_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.devTestLab.DevTestLab.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestlab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestlab"
 
 devtestlab.DevTestLab_IsTerraformResource(x interface{}) *bool
 ```
@@ -433,7 +433,7 @@ devtestlab.DevTestLab_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.devTestLab.DevTestLab.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestlab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestlab"
 
 devtestlab.DevTestLab_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -462,7 +462,7 @@ The construct id used in the generated config for the DevTestLab to import.
 
 The id of the existing DevTestLab that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/dev_test_lab#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/dev_test_lab#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -882,7 +882,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.devTestLab.DevTestLabConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestlab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestlab"
 
 &devtestlab.DevTestLabConfig {
 	Connection: interface{},
@@ -898,7 +898,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestlab"
 	Id: *string,
 	StorageType: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.devTestLab.DevTestLabTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.devTestLab.DevTestLabTimeouts,
 }
 ```
 
@@ -913,12 +913,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestlab"
 | <code><a href="#@cdktf/provider-azurerm.devTestLab.DevTestLabConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.devTestLab.DevTestLabConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.devTestLab.DevTestLabConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.devTestLab.DevTestLabConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/dev_test_lab#location DevTestLab#location}. |
-| <code><a href="#@cdktf/provider-azurerm.devTestLab.DevTestLabConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/dev_test_lab#name DevTestLab#name}. |
-| <code><a href="#@cdktf/provider-azurerm.devTestLab.DevTestLabConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/dev_test_lab#resource_group_name DevTestLab#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.devTestLab.DevTestLabConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/dev_test_lab#id DevTestLab#id}. |
-| <code><a href="#@cdktf/provider-azurerm.devTestLab.DevTestLabConfig.property.storageType">StorageType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/dev_test_lab#storage_type DevTestLab#storage_type}. |
-| <code><a href="#@cdktf/provider-azurerm.devTestLab.DevTestLabConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/dev_test_lab#tags DevTestLab#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.devTestLab.DevTestLabConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/dev_test_lab#location DevTestLab#location}. |
+| <code><a href="#@cdktf/provider-azurerm.devTestLab.DevTestLabConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/dev_test_lab#name DevTestLab#name}. |
+| <code><a href="#@cdktf/provider-azurerm.devTestLab.DevTestLabConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/dev_test_lab#resource_group_name DevTestLab#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.devTestLab.DevTestLabConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/dev_test_lab#id DevTestLab#id}. |
+| <code><a href="#@cdktf/provider-azurerm.devTestLab.DevTestLabConfig.property.storageType">StorageType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/dev_test_lab#storage_type DevTestLab#storage_type}. |
+| <code><a href="#@cdktf/provider-azurerm.devTestLab.DevTestLabConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/dev_test_lab#tags DevTestLab#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.devTestLab.DevTestLabConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.devTestLab.DevTestLabTimeouts">DevTestLabTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1001,7 +1001,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/dev_test_lab#location DevTestLab#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/dev_test_lab#location DevTestLab#location}.
 
 ---
 
@@ -1013,7 +1013,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/dev_test_lab#name DevTestLab#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/dev_test_lab#name DevTestLab#name}.
 
 ---
 
@@ -1025,7 +1025,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/dev_test_lab#resource_group_name DevTestLab#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/dev_test_lab#resource_group_name DevTestLab#resource_group_name}.
 
 ---
 
@@ -1037,7 +1037,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/dev_test_lab#id DevTestLab#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/dev_test_lab#id DevTestLab#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1052,7 +1052,7 @@ StorageType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/dev_test_lab#storage_type DevTestLab#storage_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/dev_test_lab#storage_type DevTestLab#storage_type}.
 
 ---
 
@@ -1064,7 +1064,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/dev_test_lab#tags DevTestLab#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/dev_test_lab#tags DevTestLab#tags}.
 
 ---
 
@@ -1078,7 +1078,7 @@ Timeouts DevTestLabTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/dev_test_lab#timeouts DevTestLab#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/dev_test_lab#timeouts DevTestLab#timeouts}
 
 ---
 
@@ -1087,7 +1087,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.devTestLab.DevTestLabTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestlab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestlab"
 
 &devtestlab.DevTestLabTimeouts {
 	Create: *string,
@@ -1101,10 +1101,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestlab"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.devTestLab.DevTestLabTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/dev_test_lab#create DevTestLab#create}. |
-| <code><a href="#@cdktf/provider-azurerm.devTestLab.DevTestLabTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/dev_test_lab#delete DevTestLab#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.devTestLab.DevTestLabTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/dev_test_lab#read DevTestLab#read}. |
-| <code><a href="#@cdktf/provider-azurerm.devTestLab.DevTestLabTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/dev_test_lab#update DevTestLab#update}. |
+| <code><a href="#@cdktf/provider-azurerm.devTestLab.DevTestLabTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/dev_test_lab#create DevTestLab#create}. |
+| <code><a href="#@cdktf/provider-azurerm.devTestLab.DevTestLabTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/dev_test_lab#delete DevTestLab#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.devTestLab.DevTestLabTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/dev_test_lab#read DevTestLab#read}. |
+| <code><a href="#@cdktf/provider-azurerm.devTestLab.DevTestLabTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/dev_test_lab#update DevTestLab#update}. |
 
 ---
 
@@ -1116,7 +1116,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/dev_test_lab#create DevTestLab#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/dev_test_lab#create DevTestLab#create}.
 
 ---
 
@@ -1128,7 +1128,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/dev_test_lab#delete DevTestLab#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/dev_test_lab#delete DevTestLab#delete}.
 
 ---
 
@@ -1140,7 +1140,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/dev_test_lab#read DevTestLab#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/dev_test_lab#read DevTestLab#read}.
 
 ---
 
@@ -1152,7 +1152,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/dev_test_lab#update DevTestLab#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/dev_test_lab#update DevTestLab#update}.
 
 ---
 
@@ -1163,7 +1163,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.devTestLab.DevTestLabTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestlab"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/devtestlab"
 
 devtestlab.NewDevTestLabTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DevTestLabTimeoutsOutputReference
 ```

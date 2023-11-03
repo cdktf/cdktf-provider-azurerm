@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/mobile_network_sim_group
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/mobile_network_sim_group
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermMobileNetworkSimGroupConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/mobile_network_sim_group#id DataAzurermMobileNetworkSimGroup#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/mobile_network_sim_group#id DataAzurermMobileNetworkSimGroup#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/mobile_network_sim_group#mobile_network_id DataAzurermMobileNetworkSimGroup#mobile_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/mobile_network_sim_group#mobile_network_id DataAzurermMobileNetworkSimGroup#mobile_network_id}
   */
   readonly mobileNetworkId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/mobile_network_sim_group#name DataAzurermMobileNetworkSimGroup#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/mobile_network_sim_group#name DataAzurermMobileNetworkSimGroup#name}
   */
   readonly name: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/mobile_network_sim_group#timeouts DataAzurermMobileNetworkSimGroup#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/mobile_network_sim_group#timeouts DataAzurermMobileNetworkSimGroup#timeouts}
   */
   readonly timeouts?: DataAzurermMobileNetworkSimGroupTimeouts;
 }
@@ -115,7 +110,7 @@ export class DataAzurermMobileNetworkSimGroupIdentityList extends cdktf.ComplexL
 }
 export interface DataAzurermMobileNetworkSimGroupTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/mobile_network_sim_group#read DataAzurermMobileNetworkSimGroup#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/mobile_network_sim_group#read DataAzurermMobileNetworkSimGroup#read}
   */
   readonly read?: string;
 }
@@ -190,7 +185,7 @@ export class DataAzurermMobileNetworkSimGroupTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/mobile_network_sim_group azurerm_mobile_network_sim_group}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/mobile_network_sim_group azurerm_mobile_network_sim_group}
 */
 export class DataAzurermMobileNetworkSimGroup extends cdktf.TerraformDataSource {
 
@@ -206,7 +201,7 @@ export class DataAzurermMobileNetworkSimGroup extends cdktf.TerraformDataSource 
   * Generates CDKTF code for importing a DataAzurermMobileNetworkSimGroup resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermMobileNetworkSimGroup to import
-  * @param importFromId The id of the existing DataAzurermMobileNetworkSimGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/mobile_network_sim_group#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermMobileNetworkSimGroup that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/mobile_network_sim_group#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermMobileNetworkSimGroup to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -218,7 +213,7 @@ export class DataAzurermMobileNetworkSimGroup extends cdktf.TerraformDataSource 
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/mobile_network_sim_group azurerm_mobile_network_sim_group} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/mobile_network_sim_group azurerm_mobile_network_sim_group} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -229,7 +224,7 @@ export class DataAzurermMobileNetworkSimGroup extends cdktf.TerraformDataSource 
       terraformResourceType: 'azurerm_mobile_network_sim_group',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.78.0',
+        providerVersion: '3.79.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

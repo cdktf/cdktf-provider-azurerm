@@ -967,6 +967,7 @@ The following submodules are available:
 - [networkConnectionMonitor](./networkConnectionMonitor.go.md)
 - [networkDdosProtectionPlan](./networkDdosProtectionPlan.go.md)
 - [networkFunctionAzureTrafficCollector](./networkFunctionAzureTrafficCollector.go.md)
+- [networkFunctionCollectorPolicy](./networkFunctionCollectorPolicy.go.md)
 - [networkInterface](./networkInterface.go.md)
 - [networkInterfaceApplicationGatewayBackendAddressPoolAssociation](./networkInterfaceApplicationGatewayBackendAddressPoolAssociation.go.md)
 - [networkInterfaceApplicationSecurityGroupAssociation](./networkInterfaceApplicationSecurityGroupAssociation.go.md)

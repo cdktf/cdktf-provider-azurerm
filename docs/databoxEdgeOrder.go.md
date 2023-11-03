@@ -1,6 +1,6 @@
 # `azurerm_databox_edge_order`
 
-Refer to the Terraform Registory for docs: [`azurerm_databox_edge_order`](https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order).
+Refer to the Terraform Registory for docs: [`azurerm_databox_edge_order`](https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order).
 
 # `databoxEdgeOrder` Submodule <a name="`databoxEdgeOrder` Submodule" id="@cdktf/provider-azurerm.databoxEdgeOrder"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_databox_edge_order`](https:
 
 ### DataboxEdgeOrder <a name="DataboxEdgeOrder" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrder"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order azurerm_databox_edge_order}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order azurerm_databox_edge_order}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrder.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 
 databoxedgeorder.NewDataboxEdgeOrder(scope Construct, id *string, config DataboxEdgeOrderConfig) DataboxEdgeOrder
 ```
@@ -385,7 +385,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrder.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 
 databoxedgeorder.DataboxEdgeOrder_IsConstruct(x interface{}) *bool
 ```
@@ -417,7 +417,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrder.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 
 databoxedgeorder.DataboxEdgeOrder_IsTerraformElement(x interface{}) *bool
 ```
@@ -431,7 +431,7 @@ databoxedgeorder.DataboxEdgeOrder_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrder.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 
 databoxedgeorder.DataboxEdgeOrder_IsTerraformResource(x interface{}) *bool
 ```
@@ -445,7 +445,7 @@ databoxedgeorder.DataboxEdgeOrder_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrder.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 
 databoxedgeorder.DataboxEdgeOrder_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -474,7 +474,7 @@ The construct id used in the generated config for the DataboxEdgeOrder to import
 
 The id of the existing DataboxEdgeOrder that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -872,7 +872,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 
 &databoxedgeorder.DataboxEdgeOrderConfig {
 	Connection: interface{},
@@ -882,12 +882,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Contact: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.databoxEdgeOrder.DataboxEdgeOrderContact,
+	Contact: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.databoxEdgeOrder.DataboxEdgeOrderContact,
 	DeviceName: *string,
 	ResourceGroupName: *string,
-	ShipmentAddress: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.databoxEdgeOrder.DataboxEdgeOrderShipmentAddress,
+	ShipmentAddress: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentAddress,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.databoxEdgeOrder.DataboxEdgeOrderTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.databoxEdgeOrder.DataboxEdgeOrderTimeouts,
 }
 ```
 
@@ -903,10 +903,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
 | <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderConfig.property.contact">Contact</a></code> | <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderContact">DataboxEdgeOrderContact</a></code> | contact block. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderConfig.property.deviceName">DeviceName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#device_name DataboxEdgeOrder#device_name}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#resource_group_name DataboxEdgeOrder#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderConfig.property.deviceName">DeviceName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#device_name DataboxEdgeOrder#device_name}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#resource_group_name DataboxEdgeOrder#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderConfig.property.shipmentAddress">ShipmentAddress</a></code> | <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentAddress">DataboxEdgeOrderShipmentAddress</a></code> | shipment_address block. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#id DataboxEdgeOrder#id}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#id DataboxEdgeOrder#id}. |
 | <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderTimeouts">DataboxEdgeOrderTimeouts</a></code> | timeouts block. |
 
 ---
@@ -991,7 +991,7 @@ Contact DataboxEdgeOrderContact
 
 contact block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#contact DataboxEdgeOrder#contact}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#contact DataboxEdgeOrder#contact}
 
 ---
 
@@ -1003,7 +1003,7 @@ DeviceName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#device_name DataboxEdgeOrder#device_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#device_name DataboxEdgeOrder#device_name}.
 
 ---
 
@@ -1015,7 +1015,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#resource_group_name DataboxEdgeOrder#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#resource_group_name DataboxEdgeOrder#resource_group_name}.
 
 ---
 
@@ -1029,7 +1029,7 @@ ShipmentAddress DataboxEdgeOrderShipmentAddress
 
 shipment_address block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#shipment_address DataboxEdgeOrder#shipment_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#shipment_address DataboxEdgeOrder#shipment_address}
 
 ---
 
@@ -1041,7 +1041,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#id DataboxEdgeOrder#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#id DataboxEdgeOrder#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1058,7 +1058,7 @@ Timeouts DataboxEdgeOrderTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#timeouts DataboxEdgeOrder#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#timeouts DataboxEdgeOrder#timeouts}
 
 ---
 
@@ -1067,7 +1067,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderContact.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 
 &databoxedgeorder.DataboxEdgeOrderContact {
 	CompanyName: *string,
@@ -1081,10 +1081,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderContact.property.companyName">CompanyName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#company_name DataboxEdgeOrder#company_name}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderContact.property.emails">Emails</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#emails DataboxEdgeOrder#emails}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderContact.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#name DataboxEdgeOrder#name}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderContact.property.phoneNumber">PhoneNumber</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#phone_number DataboxEdgeOrder#phone_number}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderContact.property.companyName">CompanyName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#company_name DataboxEdgeOrder#company_name}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderContact.property.emails">Emails</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#emails DataboxEdgeOrder#emails}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderContact.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#name DataboxEdgeOrder#name}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderContact.property.phoneNumber">PhoneNumber</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#phone_number DataboxEdgeOrder#phone_number}. |
 
 ---
 
@@ -1096,7 +1096,7 @@ CompanyName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#company_name DataboxEdgeOrder#company_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#company_name DataboxEdgeOrder#company_name}.
 
 ---
 
@@ -1108,7 +1108,7 @@ Emails *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#emails DataboxEdgeOrder#emails}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#emails DataboxEdgeOrder#emails}.
 
 ---
 
@@ -1120,7 +1120,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#name DataboxEdgeOrder#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#name DataboxEdgeOrder#name}.
 
 ---
 
@@ -1132,7 +1132,7 @@ PhoneNumber *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#phone_number DataboxEdgeOrder#phone_number}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#phone_number DataboxEdgeOrder#phone_number}.
 
 ---
 
@@ -1141,7 +1141,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderReturnTracking.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 
 &databoxedgeorder.DataboxEdgeOrderReturnTracking {
 
@@ -1154,7 +1154,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentAddress.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 
 &databoxedgeorder.DataboxEdgeOrderShipmentAddress {
 	Address: *[]*string,
@@ -1169,11 +1169,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentAddress.property.address">Address</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#address DataboxEdgeOrder#address}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentAddress.property.city">City</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#city DataboxEdgeOrder#city}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentAddress.property.country">Country</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#country DataboxEdgeOrder#country}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentAddress.property.postalCode">PostalCode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#postal_code DataboxEdgeOrder#postal_code}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentAddress.property.state">State</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#state DataboxEdgeOrder#state}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentAddress.property.address">Address</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#address DataboxEdgeOrder#address}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentAddress.property.city">City</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#city DataboxEdgeOrder#city}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentAddress.property.country">Country</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#country DataboxEdgeOrder#country}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentAddress.property.postalCode">PostalCode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#postal_code DataboxEdgeOrder#postal_code}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentAddress.property.state">State</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#state DataboxEdgeOrder#state}. |
 
 ---
 
@@ -1185,7 +1185,7 @@ Address *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#address DataboxEdgeOrder#address}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#address DataboxEdgeOrder#address}.
 
 ---
 
@@ -1197,7 +1197,7 @@ City *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#city DataboxEdgeOrder#city}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#city DataboxEdgeOrder#city}.
 
 ---
 
@@ -1209,7 +1209,7 @@ Country *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#country DataboxEdgeOrder#country}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#country DataboxEdgeOrder#country}.
 
 ---
 
@@ -1221,7 +1221,7 @@ PostalCode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#postal_code DataboxEdgeOrder#postal_code}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#postal_code DataboxEdgeOrder#postal_code}.
 
 ---
 
@@ -1233,7 +1233,7 @@ State *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#state DataboxEdgeOrder#state}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#state DataboxEdgeOrder#state}.
 
 ---
 
@@ -1242,7 +1242,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentHistory.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 
 &databoxedgeorder.DataboxEdgeOrderShipmentHistory {
 
@@ -1255,7 +1255,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentTracking.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 
 &databoxedgeorder.DataboxEdgeOrderShipmentTracking {
 
@@ -1268,7 +1268,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderStatus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 
 &databoxedgeorder.DataboxEdgeOrderStatus {
 
@@ -1281,7 +1281,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 
 &databoxedgeorder.DataboxEdgeOrderTimeouts {
 	Create: *string,
@@ -1295,10 +1295,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#create DataboxEdgeOrder#create}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#delete DataboxEdgeOrder#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#read DataboxEdgeOrder#read}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#update DataboxEdgeOrder#update}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#create DataboxEdgeOrder#create}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#delete DataboxEdgeOrder#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#read DataboxEdgeOrder#read}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#update DataboxEdgeOrder#update}. |
 
 ---
 
@@ -1310,7 +1310,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#create DataboxEdgeOrder#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#create DataboxEdgeOrder#create}.
 
 ---
 
@@ -1322,7 +1322,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#delete DataboxEdgeOrder#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#delete DataboxEdgeOrder#delete}.
 
 ---
 
@@ -1334,7 +1334,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#read DataboxEdgeOrder#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#read DataboxEdgeOrder#read}.
 
 ---
 
@@ -1346,7 +1346,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/databox_edge_order#update DataboxEdgeOrder#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/databox_edge_order#update DataboxEdgeOrder#update}.
 
 ---
 
@@ -1357,7 +1357,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderContactOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 
 databoxedgeorder.NewDataboxEdgeOrderContactOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataboxEdgeOrderContactOutputReference
 ```
@@ -1694,7 +1694,7 @@ func InternalValue() DataboxEdgeOrderContact
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderReturnTrackingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 
 databoxedgeorder.NewDataboxEdgeOrderReturnTrackingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataboxEdgeOrderReturnTrackingList
 ```
@@ -1826,7 +1826,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderReturnTrackingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 
 databoxedgeorder.NewDataboxEdgeOrderReturnTrackingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataboxEdgeOrderReturnTrackingOutputReference
 ```
@@ -2137,7 +2137,7 @@ func InternalValue() DataboxEdgeOrderReturnTracking
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentAddressOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 
 databoxedgeorder.NewDataboxEdgeOrderShipmentAddressOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataboxEdgeOrderShipmentAddressOutputReference
 ```
@@ -2496,7 +2496,7 @@ func InternalValue() DataboxEdgeOrderShipmentAddress
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentHistoryList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 
 databoxedgeorder.NewDataboxEdgeOrderShipmentHistoryList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataboxEdgeOrderShipmentHistoryList
 ```
@@ -2628,7 +2628,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentHistoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 
 databoxedgeorder.NewDataboxEdgeOrderShipmentHistoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataboxEdgeOrderShipmentHistoryOutputReference
 ```
@@ -2928,7 +2928,7 @@ func InternalValue() DataboxEdgeOrderShipmentHistory
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentTrackingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 
 databoxedgeorder.NewDataboxEdgeOrderShipmentTrackingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataboxEdgeOrderShipmentTrackingList
 ```
@@ -3060,7 +3060,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderShipmentTrackingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 
 databoxedgeorder.NewDataboxEdgeOrderShipmentTrackingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataboxEdgeOrderShipmentTrackingOutputReference
 ```
@@ -3371,7 +3371,7 @@ func InternalValue() DataboxEdgeOrderShipmentTracking
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderStatusList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 
 databoxedgeorder.NewDataboxEdgeOrderStatusList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataboxEdgeOrderStatusList
 ```
@@ -3503,7 +3503,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderStatusOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 
 databoxedgeorder.NewDataboxEdgeOrderStatusOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataboxEdgeOrderStatusOutputReference
 ```
@@ -3814,7 +3814,7 @@ func InternalValue() DataboxEdgeOrderStatus
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeOrder.DataboxEdgeOrderTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgeorder"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgeorder"
 
 databoxedgeorder.NewDataboxEdgeOrderTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataboxEdgeOrderTimeoutsOutputReference
 ```

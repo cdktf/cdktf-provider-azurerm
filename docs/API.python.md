@@ -967,6 +967,7 @@ The following submodules are available:
 - [networkConnectionMonitor](./networkConnectionMonitor.python.md)
 - [networkDdosProtectionPlan](./networkDdosProtectionPlan.python.md)
 - [networkFunctionAzureTrafficCollector](./networkFunctionAzureTrafficCollector.python.md)
+- [networkFunctionCollectorPolicy](./networkFunctionCollectorPolicy.python.md)
 - [networkInterface](./networkInterface.python.md)
 - [networkInterfaceApplicationGatewayBackendAddressPoolAssociation](./networkInterfaceApplicationGatewayBackendAddressPoolAssociation.python.md)
 - [networkInterfaceApplicationSecurityGroupAssociation](./networkInterfaceApplicationSecurityGroupAssociation.python.md)

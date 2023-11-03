@@ -1,6 +1,6 @@
 # `azurerm_eventgrid_system_topic`
 
-Refer to the Terraform Registory for docs: [`azurerm_eventgrid_system_topic`](https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic).
+Refer to the Terraform Registory for docs: [`azurerm_eventgrid_system_topic`](https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic).
 
 # `eventgridSystemTopic` Submodule <a name="`eventgridSystemTopic` Submodule" id="@cdktf/provider-azurerm.eventgridSystemTopic"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_eventgrid_system_topic`](ht
 
 ### EventgridSystemTopic <a name="EventgridSystemTopic" id="@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic azurerm_eventgrid_system_topic}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic azurerm_eventgrid_system_topic}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.Initializer"></a>
 
@@ -48,14 +48,14 @@ eventgridSystemTopic.EventgridSystemTopic(
 | <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#location EventgridSystemTopic#location}. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#name EventgridSystemTopic#name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#resource_group_name EventgridSystemTopic#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.Initializer.parameter.sourceArmResourceId">source_arm_resource_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#source_arm_resource_id EventgridSystemTopic#source_arm_resource_id}. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.Initializer.parameter.topicType">topic_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#topic_type EventgridSystemTopic#topic_type}. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#id EventgridSystemTopic#id}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#location EventgridSystemTopic#location}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#name EventgridSystemTopic#name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#resource_group_name EventgridSystemTopic#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.Initializer.parameter.sourceArmResourceId">source_arm_resource_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#source_arm_resource_id EventgridSystemTopic#source_arm_resource_id}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.Initializer.parameter.topicType">topic_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#topic_type EventgridSystemTopic#topic_type}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#id EventgridSystemTopic#id}. |
 | <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.Initializer.parameter.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicIdentity">EventgridSystemTopicIdentity</a></code> | identity block. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#tags EventgridSystemTopic#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#tags EventgridSystemTopic#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopic.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicTimeouts">EventgridSystemTopicTimeouts</a></code> | timeouts block. |
 
 ---
@@ -124,7 +124,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#location EventgridSystemTopic#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#location EventgridSystemTopic#location}.
 
 ---
 
@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#name EventgridSystemTopic#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#name EventgridSystemTopic#name}.
 
 ---
 
@@ -140,7 +140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#resource_group_name EventgridSystemTopic#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#resource_group_name EventgridSystemTopic#resource_group_name}.
 
 ---
 
@@ -148,7 +148,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#source_arm_resource_id EventgridSystemTopic#source_arm_resource_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#source_arm_resource_id EventgridSystemTopic#source_arm_resource_id}.
 
 ---
 
@@ -156,7 +156,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#topic_type EventgridSystemTopic#topic_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#topic_type EventgridSystemTopic#topic_type}.
 
 ---
 
@@ -164,7 +164,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#id EventgridSystemTopic#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#id EventgridSystemTopic#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -177,7 +177,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 identity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#identity EventgridSystemTopic#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#identity EventgridSystemTopic#identity}
 
 ---
 
@@ -185,7 +185,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#tags EventgridSystemTopic#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#tags EventgridSystemTopic#tags}.
 
 ---
 
@@ -195,7 +195,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#timeouts EventgridSystemTopic#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#timeouts EventgridSystemTopic#timeouts}
 
 ---
 
@@ -519,7 +519,7 @@ def put_identity(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#type EventgridSystemTopic#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#type EventgridSystemTopic#type}.
 
 ---
 
@@ -527,7 +527,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#identity_ids EventgridSystemTopic#identity_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#identity_ids EventgridSystemTopic#identity_ids}.
 
 ---
 
@@ -546,7 +546,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#create EventgridSystemTopic#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#create EventgridSystemTopic#create}.
 
 ---
 
@@ -554,7 +554,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#delete EventgridSystemTopic#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#delete EventgridSystemTopic#delete}.
 
 ---
 
@@ -562,7 +562,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#read EventgridSystemTopic#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#read EventgridSystemTopic#read}.
 
 ---
 
@@ -570,7 +570,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#update EventgridSystemTopic#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#update EventgridSystemTopic#update}.
 
 ---
 
@@ -712,7 +712,7 @@ The construct id used in the generated config for the EventgridSystemTopic to im
 
 The id of the existing EventgridSystemTopic that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1154,14 +1154,14 @@ eventgridSystemTopic.EventgridSystemTopicConfig(
 | <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#location EventgridSystemTopic#location}. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#name EventgridSystemTopic#name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#resource_group_name EventgridSystemTopic#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicConfig.property.sourceArmResourceId">source_arm_resource_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#source_arm_resource_id EventgridSystemTopic#source_arm_resource_id}. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicConfig.property.topicType">topic_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#topic_type EventgridSystemTopic#topic_type}. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#id EventgridSystemTopic#id}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#location EventgridSystemTopic#location}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#name EventgridSystemTopic#name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#resource_group_name EventgridSystemTopic#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicConfig.property.sourceArmResourceId">source_arm_resource_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#source_arm_resource_id EventgridSystemTopic#source_arm_resource_id}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicConfig.property.topicType">topic_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#topic_type EventgridSystemTopic#topic_type}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#id EventgridSystemTopic#id}. |
 | <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicConfig.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicIdentity">EventgridSystemTopicIdentity</a></code> | identity block. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#tags EventgridSystemTopic#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#tags EventgridSystemTopic#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicTimeouts">EventgridSystemTopicTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1244,7 +1244,7 @@ location: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#location EventgridSystemTopic#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#location EventgridSystemTopic#location}.
 
 ---
 
@@ -1256,7 +1256,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#name EventgridSystemTopic#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#name EventgridSystemTopic#name}.
 
 ---
 
@@ -1268,7 +1268,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#resource_group_name EventgridSystemTopic#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#resource_group_name EventgridSystemTopic#resource_group_name}.
 
 ---
 
@@ -1280,7 +1280,7 @@ source_arm_resource_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#source_arm_resource_id EventgridSystemTopic#source_arm_resource_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#source_arm_resource_id EventgridSystemTopic#source_arm_resource_id}.
 
 ---
 
@@ -1292,7 +1292,7 @@ topic_type: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#topic_type EventgridSystemTopic#topic_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#topic_type EventgridSystemTopic#topic_type}.
 
 ---
 
@@ -1304,7 +1304,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#id EventgridSystemTopic#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#id EventgridSystemTopic#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1321,7 +1321,7 @@ identity: EventgridSystemTopicIdentity
 
 identity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#identity EventgridSystemTopic#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#identity EventgridSystemTopic#identity}
 
 ---
 
@@ -1333,7 +1333,7 @@ tags: typing.Mapping[str]
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#tags EventgridSystemTopic#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#tags EventgridSystemTopic#tags}.
 
 ---
 
@@ -1347,7 +1347,7 @@ timeouts: EventgridSystemTopicTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#timeouts EventgridSystemTopic#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#timeouts EventgridSystemTopic#timeouts}
 
 ---
 
@@ -1368,8 +1368,8 @@ eventgridSystemTopic.EventgridSystemTopicIdentity(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicIdentity.property.type">type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#type EventgridSystemTopic#type}. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicIdentity.property.identityIds">identity_ids</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#identity_ids EventgridSystemTopic#identity_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicIdentity.property.type">type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#type EventgridSystemTopic#type}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicIdentity.property.identityIds">identity_ids</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#identity_ids EventgridSystemTopic#identity_ids}. |
 
 ---
 
@@ -1381,7 +1381,7 @@ type: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#type EventgridSystemTopic#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#type EventgridSystemTopic#type}.
 
 ---
 
@@ -1393,7 +1393,7 @@ identity_ids: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#identity_ids EventgridSystemTopic#identity_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#identity_ids EventgridSystemTopic#identity_ids}.
 
 ---
 
@@ -1416,10 +1416,10 @@ eventgridSystemTopic.EventgridSystemTopicTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#create EventgridSystemTopic#create}. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#delete EventgridSystemTopic#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#read EventgridSystemTopic#read}. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#update EventgridSystemTopic#update}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#create EventgridSystemTopic#create}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#delete EventgridSystemTopic#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#read EventgridSystemTopic#read}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridSystemTopic.EventgridSystemTopicTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#update EventgridSystemTopic#update}. |
 
 ---
 
@@ -1431,7 +1431,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#create EventgridSystemTopic#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#create EventgridSystemTopic#create}.
 
 ---
 
@@ -1443,7 +1443,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#delete EventgridSystemTopic#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#delete EventgridSystemTopic#delete}.
 
 ---
 
@@ -1455,7 +1455,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#read EventgridSystemTopic#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#read EventgridSystemTopic#read}.
 
 ---
 
@@ -1467,7 +1467,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/eventgrid_system_topic#update EventgridSystemTopic#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/eventgrid_system_topic#update EventgridSystemTopic#update}.
 
 ---
 

@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/container_connected_registry
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/container_connected_registry
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,84 +8,84 @@ import * as cdktf from 'cdktf';
 
 export interface ContainerConnectedRegistryConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/container_connected_registry#audit_log_enabled ContainerConnectedRegistry#audit_log_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/container_connected_registry#audit_log_enabled ContainerConnectedRegistry#audit_log_enabled}
   */
   readonly auditLogEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/container_connected_registry#client_token_ids ContainerConnectedRegistry#client_token_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/container_connected_registry#client_token_ids ContainerConnectedRegistry#client_token_ids}
   */
   readonly clientTokenIds?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/container_connected_registry#container_registry_id ContainerConnectedRegistry#container_registry_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/container_connected_registry#container_registry_id ContainerConnectedRegistry#container_registry_id}
   */
   readonly containerRegistryId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/container_connected_registry#id ContainerConnectedRegistry#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/container_connected_registry#id ContainerConnectedRegistry#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/container_connected_registry#log_level ContainerConnectedRegistry#log_level}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/container_connected_registry#log_level ContainerConnectedRegistry#log_level}
   */
   readonly logLevel?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/container_connected_registry#mode ContainerConnectedRegistry#mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/container_connected_registry#mode ContainerConnectedRegistry#mode}
   */
   readonly mode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/container_connected_registry#name ContainerConnectedRegistry#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/container_connected_registry#name ContainerConnectedRegistry#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/container_connected_registry#parent_registry_id ContainerConnectedRegistry#parent_registry_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/container_connected_registry#parent_registry_id ContainerConnectedRegistry#parent_registry_id}
   */
   readonly parentRegistryId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/container_connected_registry#sync_message_ttl ContainerConnectedRegistry#sync_message_ttl}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/container_connected_registry#sync_message_ttl ContainerConnectedRegistry#sync_message_ttl}
   */
   readonly syncMessageTtl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/container_connected_registry#sync_schedule ContainerConnectedRegistry#sync_schedule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/container_connected_registry#sync_schedule ContainerConnectedRegistry#sync_schedule}
   */
   readonly syncSchedule?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/container_connected_registry#sync_token_id ContainerConnectedRegistry#sync_token_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/container_connected_registry#sync_token_id ContainerConnectedRegistry#sync_token_id}
   */
   readonly syncTokenId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/container_connected_registry#sync_window ContainerConnectedRegistry#sync_window}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/container_connected_registry#sync_window ContainerConnectedRegistry#sync_window}
   */
   readonly syncWindow?: string;
   /**
   * notification block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/container_connected_registry#notification ContainerConnectedRegistry#notification}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/container_connected_registry#notification ContainerConnectedRegistry#notification}
   */
   readonly notification?: ContainerConnectedRegistryNotification[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/container_connected_registry#timeouts ContainerConnectedRegistry#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/container_connected_registry#timeouts ContainerConnectedRegistry#timeouts}
   */
   readonly timeouts?: ContainerConnectedRegistryTimeouts;
 }
 export interface ContainerConnectedRegistryNotification {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/container_connected_registry#action ContainerConnectedRegistry#action}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/container_connected_registry#action ContainerConnectedRegistry#action}
   */
   readonly action: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/container_connected_registry#digest ContainerConnectedRegistry#digest}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/container_connected_registry#digest ContainerConnectedRegistry#digest}
   */
   readonly digest?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/container_connected_registry#name ContainerConnectedRegistry#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/container_connected_registry#name ContainerConnectedRegistry#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/container_connected_registry#tag ContainerConnectedRegistry#tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/container_connected_registry#tag ContainerConnectedRegistry#tag}
   */
   readonly tag?: string;
 }
@@ -250,19 +245,19 @@ export class ContainerConnectedRegistryNotificationList extends cdktf.ComplexLis
 }
 export interface ContainerConnectedRegistryTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/container_connected_registry#create ContainerConnectedRegistry#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/container_connected_registry#create ContainerConnectedRegistry#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/container_connected_registry#delete ContainerConnectedRegistry#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/container_connected_registry#delete ContainerConnectedRegistry#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/container_connected_registry#read ContainerConnectedRegistry#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/container_connected_registry#read ContainerConnectedRegistry#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/container_connected_registry#update ContainerConnectedRegistry#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/container_connected_registry#update ContainerConnectedRegistry#update}
   */
   readonly update?: string;
 }
@@ -406,7 +401,7 @@ export class ContainerConnectedRegistryTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/container_connected_registry azurerm_container_connected_registry}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/container_connected_registry azurerm_container_connected_registry}
 */
 export class ContainerConnectedRegistry extends cdktf.TerraformResource {
 
@@ -422,7 +417,7 @@ export class ContainerConnectedRegistry extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ContainerConnectedRegistry resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ContainerConnectedRegistry to import
-  * @param importFromId The id of the existing ContainerConnectedRegistry that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/container_connected_registry#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ContainerConnectedRegistry that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/container_connected_registry#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ContainerConnectedRegistry to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -434,7 +429,7 @@ export class ContainerConnectedRegistry extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/container_connected_registry azurerm_container_connected_registry} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/container_connected_registry azurerm_container_connected_registry} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -445,7 +440,7 @@ export class ContainerConnectedRegistry extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_container_connected_registry',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.78.0',
+        providerVersion: '3.79.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

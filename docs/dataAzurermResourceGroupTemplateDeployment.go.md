@@ -1,6 +1,6 @@
 # `data_azurerm_resource_group_template_deployment`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_resource_group_template_deployment`](https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/resource_group_template_deployment).
+Refer to the Terraform Registory for docs: [`data_azurerm_resource_group_template_deployment`](https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/resource_group_template_deployment).
 
 # `dataAzurermResourceGroupTemplateDeployment` Submodule <a name="`dataAzurermResourceGroupTemplateDeployment` Submodule" id="@cdktf/provider-azurerm.dataAzurermResourceGroupTemplateDeployment"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_azurerm_resource_group_templat
 
 ### DataAzurermResourceGroupTemplateDeployment <a name="DataAzurermResourceGroupTemplateDeployment" id="@cdktf/provider-azurerm.dataAzurermResourceGroupTemplateDeployment.DataAzurermResourceGroupTemplateDeployment"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/resource_group_template_deployment azurerm_resource_group_template_deployment}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/resource_group_template_deployment azurerm_resource_group_template_deployment}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermResourceGroupTemplateDeployment.DataAzurermResourceGroupTemplateDeployment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermresourcegrouptemplatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresourcegrouptemplatedeployment"
 
 dataazurermresourcegrouptemplatedeployment.NewDataAzurermResourceGroupTemplateDeployment(scope Construct, id *string, config DataAzurermResourceGroupTemplateDeploymentConfig) DataAzurermResourceGroupTemplateDeployment
 ```
@@ -298,7 +298,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermResourceGroupTemplateDeployment.DataAzurermResourceGroupTemplateDeployment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermresourcegrouptemplatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresourcegrouptemplatedeployment"
 
 dataazurermresourcegrouptemplatedeployment.DataAzurermResourceGroupTemplateDeployment_IsConstruct(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermResourceGroupTemplateDeployment.DataAzurermResourceGroupTemplateDeployment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermresourcegrouptemplatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresourcegrouptemplatedeployment"
 
 dataazurermresourcegrouptemplatedeployment.DataAzurermResourceGroupTemplateDeployment_IsTerraformElement(x interface{}) *bool
 ```
@@ -344,7 +344,7 @@ dataazurermresourcegrouptemplatedeployment.DataAzurermResourceGroupTemplateDeplo
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermResourceGroupTemplateDeployment.DataAzurermResourceGroupTemplateDeployment.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermresourcegrouptemplatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresourcegrouptemplatedeployment"
 
 dataazurermresourcegrouptemplatedeployment.DataAzurermResourceGroupTemplateDeployment_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -358,7 +358,7 @@ dataazurermresourcegrouptemplatedeployment.DataAzurermResourceGroupTemplateDeplo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermResourceGroupTemplateDeployment.DataAzurermResourceGroupTemplateDeployment.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermresourcegrouptemplatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresourcegrouptemplatedeployment"
 
 dataazurermresourcegrouptemplatedeployment.DataAzurermResourceGroupTemplateDeployment_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -387,7 +387,7 @@ The construct id used in the generated config for the DataAzurermResourceGroupTe
 
 The id of the existing DataAzurermResourceGroupTemplateDeployment that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/resource_group_template_deployment#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/resource_group_template_deployment#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -664,7 +664,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermResourceGroupTemplateDeployment.DataAzurermResourceGroupTemplateDeploymentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermresourcegrouptemplatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresourcegrouptemplatedeployment"
 
 &dataazurermresourcegrouptemplatedeployment.DataAzurermResourceGroupTemplateDeploymentConfig {
 	Connection: interface{},
@@ -677,7 +677,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermresour
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermResourceGroupTemplateDeployment.DataAzurermResourceGroupTemplateDeploymentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermResourceGroupTemplateDeployment.DataAzurermResourceGroupTemplateDeploymentTimeouts,
 }
 ```
 
@@ -692,9 +692,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermresour
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroupTemplateDeployment.DataAzurermResourceGroupTemplateDeploymentConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroupTemplateDeployment.DataAzurermResourceGroupTemplateDeploymentConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroupTemplateDeployment.DataAzurermResourceGroupTemplateDeploymentConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroupTemplateDeployment.DataAzurermResourceGroupTemplateDeploymentConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/resource_group_template_deployment#name DataAzurermResourceGroupTemplateDeployment#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroupTemplateDeployment.DataAzurermResourceGroupTemplateDeploymentConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/resource_group_template_deployment#resource_group_name DataAzurermResourceGroupTemplateDeployment#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroupTemplateDeployment.DataAzurermResourceGroupTemplateDeploymentConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/resource_group_template_deployment#id DataAzurermResourceGroupTemplateDeployment#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroupTemplateDeployment.DataAzurermResourceGroupTemplateDeploymentConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/resource_group_template_deployment#name DataAzurermResourceGroupTemplateDeployment#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroupTemplateDeployment.DataAzurermResourceGroupTemplateDeploymentConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/resource_group_template_deployment#resource_group_name DataAzurermResourceGroupTemplateDeployment#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroupTemplateDeployment.DataAzurermResourceGroupTemplateDeploymentConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/resource_group_template_deployment#id DataAzurermResourceGroupTemplateDeployment#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroupTemplateDeployment.DataAzurermResourceGroupTemplateDeploymentConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroupTemplateDeployment.DataAzurermResourceGroupTemplateDeploymentTimeouts">DataAzurermResourceGroupTemplateDeploymentTimeouts</a></code> | timeouts block. |
 
 ---
@@ -777,7 +777,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/resource_group_template_deployment#name DataAzurermResourceGroupTemplateDeployment#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/resource_group_template_deployment#name DataAzurermResourceGroupTemplateDeployment#name}.
 
 ---
 
@@ -789,7 +789,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/resource_group_template_deployment#resource_group_name DataAzurermResourceGroupTemplateDeployment#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/resource_group_template_deployment#resource_group_name DataAzurermResourceGroupTemplateDeployment#resource_group_name}.
 
 ---
 
@@ -801,7 +801,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/resource_group_template_deployment#id DataAzurermResourceGroupTemplateDeployment#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/resource_group_template_deployment#id DataAzurermResourceGroupTemplateDeployment#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -818,7 +818,7 @@ Timeouts DataAzurermResourceGroupTemplateDeploymentTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/resource_group_template_deployment#timeouts DataAzurermResourceGroupTemplateDeployment#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/resource_group_template_deployment#timeouts DataAzurermResourceGroupTemplateDeployment#timeouts}
 
 ---
 
@@ -827,7 +827,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermResourceGroupTemplateDeployment.DataAzurermResourceGroupTemplateDeploymentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermresourcegrouptemplatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresourcegrouptemplatedeployment"
 
 &dataazurermresourcegrouptemplatedeployment.DataAzurermResourceGroupTemplateDeploymentTimeouts {
 	Read: *string,
@@ -838,7 +838,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermresour
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroupTemplateDeployment.DataAzurermResourceGroupTemplateDeploymentTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/resource_group_template_deployment#read DataAzurermResourceGroupTemplateDeployment#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermResourceGroupTemplateDeployment.DataAzurermResourceGroupTemplateDeploymentTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/resource_group_template_deployment#read DataAzurermResourceGroupTemplateDeployment#read}. |
 
 ---
 
@@ -850,7 +850,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/data-sources/resource_group_template_deployment#read DataAzurermResourceGroupTemplateDeployment#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/resource_group_template_deployment#read DataAzurermResourceGroupTemplateDeployment#read}.
 
 ---
 
@@ -861,7 +861,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermResourceGroupTemplateDeployment.DataAzurermResourceGroupTemplateDeploymentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermresourcegrouptemplatedeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresourcegrouptemplatedeployment"
 
 dataazurermresourcegrouptemplatedeployment.NewDataAzurermResourceGroupTemplateDeploymentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermResourceGroupTemplateDeploymentTimeoutsOutputReference
 ```

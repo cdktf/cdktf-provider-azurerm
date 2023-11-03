@@ -967,6 +967,7 @@ The following submodules are available:
 - [networkConnectionMonitor](./networkConnectionMonitor.java.md)
 - [networkDdosProtectionPlan](./networkDdosProtectionPlan.java.md)
 - [networkFunctionAzureTrafficCollector](./networkFunctionAzureTrafficCollector.java.md)
+- [networkFunctionCollectorPolicy](./networkFunctionCollectorPolicy.java.md)
 - [networkInterface](./networkInterface.java.md)
 - [networkInterfaceApplicationGatewayBackendAddressPoolAssociation](./networkInterfaceApplicationGatewayBackendAddressPoolAssociation.java.md)
 - [networkInterfaceApplicationSecurityGroupAssociation](./networkInterfaceApplicationSecurityGroupAssociation.java.md)

@@ -967,6 +967,7 @@ The following submodules are available:
 - [networkConnectionMonitor](./networkConnectionMonitor.csharp.md)
 - [networkDdosProtectionPlan](./networkDdosProtectionPlan.csharp.md)
 - [networkFunctionAzureTrafficCollector](./networkFunctionAzureTrafficCollector.csharp.md)
+- [networkFunctionCollectorPolicy](./networkFunctionCollectorPolicy.csharp.md)
 - [networkInterface](./networkInterface.csharp.md)
 - [networkInterfaceApplicationGatewayBackendAddressPoolAssociation](./networkInterfaceApplicationGatewayBackendAddressPoolAssociation.csharp.md)
 - [networkInterfaceApplicationSecurityGroupAssociation](./networkInterfaceApplicationSecurityGroupAssociation.csharp.md)

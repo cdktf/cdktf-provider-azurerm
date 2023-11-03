@@ -1,6 +1,6 @@
 # `azurerm_function_app_function`
 
-Refer to the Terraform Registory for docs: [`azurerm_function_app_function`](https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_function).
+Refer to the Terraform Registory for docs: [`azurerm_function_app_function`](https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_function).
 
 # `functionAppFunction` Submodule <a name="`functionAppFunction` Submodule" id="@cdktf/provider-azurerm.functionAppFunction"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_function_app_function`](htt
 
 ### FunctionAppFunction <a name="FunctionAppFunction" id="@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunction"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_function azurerm_function_app_function}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_function azurerm_function_app_function}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappfunction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionappfunction"
 
 functionappfunction.NewFunctionAppFunction(scope Construct, id *string, config FunctionAppFunctionConfig) FunctionAppFunction
 ```
@@ -400,7 +400,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunction.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappfunction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionappfunction"
 
 functionappfunction.FunctionAppFunction_IsConstruct(x interface{}) *bool
 ```
@@ -432,7 +432,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunction.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappfunction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionappfunction"
 
 functionappfunction.FunctionAppFunction_IsTerraformElement(x interface{}) *bool
 ```
@@ -446,7 +446,7 @@ functionappfunction.FunctionAppFunction_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunction.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappfunction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionappfunction"
 
 functionappfunction.FunctionAppFunction_IsTerraformResource(x interface{}) *bool
 ```
@@ -460,7 +460,7 @@ functionappfunction.FunctionAppFunction_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunction.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappfunction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionappfunction"
 
 functionappfunction.FunctionAppFunction_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -489,7 +489,7 @@ The construct id used in the generated config for the FunctionAppFunction to imp
 
 The id of the existing FunctionAppFunction that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_function#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_function#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -964,7 +964,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappfunction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionappfunction"
 
 &functionappfunction.FunctionAppFunctionConfig {
 	Connection: interface{},
@@ -982,7 +982,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappfuncti
 	Id: *string,
 	Language: *string,
 	TestData: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.functionAppFunction.FunctionAppFunctionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.functionAppFunction.FunctionAppFunctionTimeouts,
 }
 ```
 
@@ -1002,7 +1002,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappfuncti
 | <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionConfig.property.name">Name</a></code> | <code>*string</code> | The name of the function. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionConfig.property.enabled">Enabled</a></code> | <code>interface{}</code> | Should this function be enabled. Defaults to `true`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionConfig.property.file">File</a></code> | <code>interface{}</code> | file block. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_function#id FunctionAppFunction#id}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_function#id FunctionAppFunction#id}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionConfig.property.language">Language</a></code> | <code>*string</code> | The language the Function is written in. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionConfig.property.testData">TestData</a></code> | <code>*string</code> | The test data for the function. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionTimeouts">FunctionAppFunctionTimeouts</a></code> | timeouts block. |
@@ -1089,7 +1089,7 @@ ConfigJson *string
 
 The config for this Function in JSON format.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_function#config_json FunctionAppFunction#config_json}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_function#config_json FunctionAppFunction#config_json}
 
 ---
 
@@ -1103,7 +1103,7 @@ FunctionAppId *string
 
 The ID of the Function App in which this function should reside.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_function#function_app_id FunctionAppFunction#function_app_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_function#function_app_id FunctionAppFunction#function_app_id}
 
 ---
 
@@ -1117,7 +1117,7 @@ Name *string
 
 The name of the function.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_function#name FunctionAppFunction#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_function#name FunctionAppFunction#name}
 
 ---
 
@@ -1131,7 +1131,7 @@ Enabled interface{}
 
 Should this function be enabled. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_function#enabled FunctionAppFunction#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_function#enabled FunctionAppFunction#enabled}
 
 ---
 
@@ -1145,7 +1145,7 @@ File interface{}
 
 file block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_function#file FunctionAppFunction#file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_function#file FunctionAppFunction#file}
 
 ---
 
@@ -1157,7 +1157,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_function#id FunctionAppFunction#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_function#id FunctionAppFunction#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1174,7 +1174,7 @@ Language *string
 
 The language the Function is written in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_function#language FunctionAppFunction#language}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_function#language FunctionAppFunction#language}
 
 ---
 
@@ -1188,7 +1188,7 @@ TestData *string
 
 The test data for the function.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_function#test_data FunctionAppFunction#test_data}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_function#test_data FunctionAppFunction#test_data}
 
 ---
 
@@ -1202,7 +1202,7 @@ Timeouts FunctionAppFunctionTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_function#timeouts FunctionAppFunction#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_function#timeouts FunctionAppFunction#timeouts}
 
 ---
 
@@ -1211,7 +1211,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionFile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappfunction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionappfunction"
 
 &functionappfunction.FunctionAppFunctionFile {
 	Content: *string,
@@ -1238,7 +1238,7 @@ Content *string
 
 The content of the file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_function#content FunctionAppFunction#content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_function#content FunctionAppFunction#content}
 
 ---
 
@@ -1252,7 +1252,7 @@ Name *string
 
 The filename of the file to be uploaded.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_function#name FunctionAppFunction#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_function#name FunctionAppFunction#name}
 
 ---
 
@@ -1261,7 +1261,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappfunction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionappfunction"
 
 &functionappfunction.FunctionAppFunctionTimeouts {
 	Create: *string,
@@ -1275,10 +1275,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappfuncti
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_function#create FunctionAppFunction#create}. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_function#delete FunctionAppFunction#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_function#read FunctionAppFunction#read}. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_function#update FunctionAppFunction#update}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_function#create FunctionAppFunction#create}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_function#delete FunctionAppFunction#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_function#read FunctionAppFunction#read}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_function#update FunctionAppFunction#update}. |
 
 ---
 
@@ -1290,7 +1290,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_function#create FunctionAppFunction#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_function#create FunctionAppFunction#create}.
 
 ---
 
@@ -1302,7 +1302,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_function#delete FunctionAppFunction#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_function#delete FunctionAppFunction#delete}.
 
 ---
 
@@ -1314,7 +1314,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_function#read FunctionAppFunction#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_function#read FunctionAppFunction#read}.
 
 ---
 
@@ -1326,7 +1326,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/function_app_function#update FunctionAppFunction#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/function_app_function#update FunctionAppFunction#update}.
 
 ---
 
@@ -1337,7 +1337,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionFileList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappfunction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionappfunction"
 
 functionappfunction.NewFunctionAppFunctionFileList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FunctionAppFunctionFileList
 ```
@@ -1480,7 +1480,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionFileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappfunction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionappfunction"
 
 functionappfunction.NewFunctionAppFunctionFileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FunctionAppFunctionFileOutputReference
 ```
@@ -1791,7 +1791,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappfunction"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/functionappfunction"
 
 functionappfunction.NewFunctionAppFunctionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FunctionAppFunctionTimeoutsOutputReference
 ```

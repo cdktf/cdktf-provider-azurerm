@@ -1,6 +1,6 @@
 # `azurerm_storage_mover_project`
 
-Refer to the Terraform Registory for docs: [`azurerm_storage_mover_project`](https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/storage_mover_project).
+Refer to the Terraform Registory for docs: [`azurerm_storage_mover_project`](https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/storage_mover_project).
 
 # `storageMoverProject` Submodule <a name="`storageMoverProject` Submodule" id="@cdktf/provider-azurerm.storageMoverProject"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_storage_mover_project`](htt
 
 ### StorageMoverProject <a name="StorageMoverProject" id="@cdktf/provider-azurerm.storageMoverProject.StorageMoverProject"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/storage_mover_project azurerm_storage_mover_project}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/storage_mover_project azurerm_storage_mover_project}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageMoverProject.StorageMoverProject.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemoverproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemoverproject"
 
 storagemoverproject.NewStorageMoverProject(scope Construct, id *string, config StorageMoverProjectConfig) StorageMoverProject
 ```
@@ -366,7 +366,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.storageMoverProject.StorageMoverProject.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemoverproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemoverproject"
 
 storagemoverproject.StorageMoverProject_IsConstruct(x interface{}) *bool
 ```
@@ -398,7 +398,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.storageMoverProject.StorageMoverProject.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemoverproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemoverproject"
 
 storagemoverproject.StorageMoverProject_IsTerraformElement(x interface{}) *bool
 ```
@@ -412,7 +412,7 @@ storagemoverproject.StorageMoverProject_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.storageMoverProject.StorageMoverProject.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemoverproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemoverproject"
 
 storagemoverproject.StorageMoverProject_IsTerraformResource(x interface{}) *bool
 ```
@@ -426,7 +426,7 @@ storagemoverproject.StorageMoverProject_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.storageMoverProject.StorageMoverProject.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemoverproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemoverproject"
 
 storagemoverproject.StorageMoverProject_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -455,7 +455,7 @@ The construct id used in the generated config for the StorageMoverProject to imp
 
 The id of the existing StorageMoverProject that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/storage_mover_project#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/storage_mover_project#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -765,7 +765,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemoverproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemoverproject"
 
 &storagemoverproject.StorageMoverProjectConfig {
 	Connection: interface{},
@@ -779,7 +779,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemoverproje
 	StorageMoverId: *string,
 	Description: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageMoverProject.StorageMoverProjectTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageMoverProject.StorageMoverProjectTimeouts,
 }
 ```
 
@@ -794,10 +794,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemoverproje
 | <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/storage_mover_project#name StorageMoverProject#name}. |
-| <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectConfig.property.storageMoverId">StorageMoverId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/storage_mover_project#storage_mover_id StorageMoverProject#storage_mover_id}. |
-| <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectConfig.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/storage_mover_project#description StorageMoverProject#description}. |
-| <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/storage_mover_project#id StorageMoverProject#id}. |
+| <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/storage_mover_project#name StorageMoverProject#name}. |
+| <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectConfig.property.storageMoverId">StorageMoverId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/storage_mover_project#storage_mover_id StorageMoverProject#storage_mover_id}. |
+| <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectConfig.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/storage_mover_project#description StorageMoverProject#description}. |
+| <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/storage_mover_project#id StorageMoverProject#id}. |
 | <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectTimeouts">StorageMoverProjectTimeouts</a></code> | timeouts block. |
 
 ---
@@ -880,7 +880,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/storage_mover_project#name StorageMoverProject#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/storage_mover_project#name StorageMoverProject#name}.
 
 ---
 
@@ -892,7 +892,7 @@ StorageMoverId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/storage_mover_project#storage_mover_id StorageMoverProject#storage_mover_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/storage_mover_project#storage_mover_id StorageMoverProject#storage_mover_id}.
 
 ---
 
@@ -904,7 +904,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/storage_mover_project#description StorageMoverProject#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/storage_mover_project#description StorageMoverProject#description}.
 
 ---
 
@@ -916,7 +916,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/storage_mover_project#id StorageMoverProject#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/storage_mover_project#id StorageMoverProject#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -933,7 +933,7 @@ Timeouts StorageMoverProjectTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/storage_mover_project#timeouts StorageMoverProject#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/storage_mover_project#timeouts StorageMoverProject#timeouts}
 
 ---
 
@@ -942,7 +942,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemoverproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemoverproject"
 
 &storagemoverproject.StorageMoverProjectTimeouts {
 	Create: *string,
@@ -956,10 +956,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemoverproje
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/storage_mover_project#create StorageMoverProject#create}. |
-| <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/storage_mover_project#delete StorageMoverProject#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/storage_mover_project#read StorageMoverProject#read}. |
-| <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/storage_mover_project#update StorageMoverProject#update}. |
+| <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/storage_mover_project#create StorageMoverProject#create}. |
+| <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/storage_mover_project#delete StorageMoverProject#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/storage_mover_project#read StorageMoverProject#read}. |
+| <code><a href="#@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/storage_mover_project#update StorageMoverProject#update}. |
 
 ---
 
@@ -971,7 +971,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/storage_mover_project#create StorageMoverProject#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/storage_mover_project#create StorageMoverProject#create}.
 
 ---
 
@@ -983,7 +983,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/storage_mover_project#delete StorageMoverProject#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/storage_mover_project#delete StorageMoverProject#delete}.
 
 ---
 
@@ -995,7 +995,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/storage_mover_project#read StorageMoverProject#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/storage_mover_project#read StorageMoverProject#read}.
 
 ---
 
@@ -1007,7 +1007,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/storage_mover_project#update StorageMoverProject#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/storage_mover_project#update StorageMoverProject#update}.
 
 ---
 
@@ -1018,7 +1018,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageMoverProject.StorageMoverProjectTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemoverproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemoverproject"
 
 storagemoverproject.NewStorageMoverProjectTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageMoverProjectTimeoutsOutputReference
 ```

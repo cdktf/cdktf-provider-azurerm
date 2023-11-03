@@ -1,3 +1,3 @@
 # `azurerm_monitor_alert_processing_rule_action_group`
 
-Refer to the Terraform Registory for docs: [`azurerm_monitor_alert_processing_rule_action_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.78.0/docs/resources/monitor_alert_processing_rule_action_group).
+Refer to the Terraform Registory for docs: [`azurerm_monitor_alert_processing_rule_action_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/monitor_alert_processing_rule_action_group).
