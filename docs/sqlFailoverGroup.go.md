@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 sqlfailovergroup.NewSqlFailoverGroup(scope Construct, id *string, config SqlFailoverGroupConfig) SqlFailoverGroup
 ```
@@ -419,7 +419,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 sqlfailovergroup.SqlFailoverGroup_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 sqlfailovergroup.SqlFailoverGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ sqlfailovergroup.SqlFailoverGroup_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroup.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 sqlfailovergroup.SqlFailoverGroup_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ sqlfailovergroup.SqlFailoverGroup_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroup.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 sqlfailovergroup.SqlFailoverGroup_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -950,7 +950,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 &sqlfailovergroup.SqlFailoverGroupConfig {
 	Connection: interface{},
@@ -962,14 +962,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqlfailovergroup"
 	Provisioners: *[]interface{},
 	Name: *string,
 	PartnerServers: interface{},
-	ReadWriteEndpointFailoverPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.sqlFailoverGroup.SqlFailoverGroupReadWriteEndpointFailoverPolicy,
+	ReadWriteEndpointFailoverPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sqlFailoverGroup.SqlFailoverGroupReadWriteEndpointFailoverPolicy,
 	ResourceGroupName: *string,
 	ServerName: *string,
 	Databases: *[]*string,
 	Id: *string,
-	ReadonlyEndpointFailoverPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.sqlFailoverGroup.SqlFailoverGroupReadonlyEndpointFailoverPolicy,
+	ReadonlyEndpointFailoverPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sqlFailoverGroup.SqlFailoverGroupReadonlyEndpointFailoverPolicy,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.sqlFailoverGroup.SqlFailoverGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sqlFailoverGroup.SqlFailoverGroupTimeouts,
 }
 ```
 
@@ -1203,7 +1203,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupPartnerServers.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 &sqlfailovergroup.SqlFailoverGroupPartnerServers {
 	Id: *string,
@@ -1238,7 +1238,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupReadonlyEndpointFailoverPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 &sqlfailovergroup.SqlFailoverGroupReadonlyEndpointFailoverPolicy {
 	Mode: *string,
@@ -1270,7 +1270,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupReadWriteEndpointFailoverPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 &sqlfailovergroup.SqlFailoverGroupReadWriteEndpointFailoverPolicy {
 	Mode: *string,
@@ -1316,7 +1316,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 &sqlfailovergroup.SqlFailoverGroupTimeouts {
 	Create: *string,
@@ -1392,7 +1392,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupPartnerServersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 sqlfailovergroup.NewSqlFailoverGroupPartnerServersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SqlFailoverGroupPartnerServersList
 ```
@@ -1535,7 +1535,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupPartnerServersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 sqlfailovergroup.NewSqlFailoverGroupPartnerServersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SqlFailoverGroupPartnerServersOutputReference
 ```
@@ -1846,7 +1846,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupReadonlyEndpointFailoverPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 sqlfailovergroup.NewSqlFailoverGroupReadonlyEndpointFailoverPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlFailoverGroupReadonlyEndpointFailoverPolicyOutputReference
 ```
@@ -2117,7 +2117,7 @@ func InternalValue() SqlFailoverGroupReadonlyEndpointFailoverPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupReadWriteEndpointFailoverPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 sqlfailovergroup.NewSqlFailoverGroupReadWriteEndpointFailoverPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlFailoverGroupReadWriteEndpointFailoverPolicyOutputReference
 ```
@@ -2417,7 +2417,7 @@ func InternalValue() SqlFailoverGroupReadWriteEndpointFailoverPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlFailoverGroup.SqlFailoverGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqlfailovergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlfailovergroup"
 
 sqlfailovergroup.NewSqlFailoverGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlFailoverGroupTimeoutsOutputReference
 ```

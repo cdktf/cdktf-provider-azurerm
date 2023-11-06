@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbGremlinDatabase.CosmosdbGremlinDatabase.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbgremlindatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlindatabase"
 
 cosmosdbgremlindatabase.NewCosmosdbGremlinDatabase(scope Construct, id *string, config CosmosdbGremlinDatabaseConfig) CosmosdbGremlinDatabase
 ```
@@ -386,7 +386,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.cosmosdbGremlinDatabase.CosmosdbGremlinDatabase.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbgremlindatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlindatabase"
 
 cosmosdbgremlindatabase.CosmosdbGremlinDatabase_IsConstruct(x interface{}) *bool
 ```
@@ -418,7 +418,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.cosmosdbGremlinDatabase.CosmosdbGremlinDatabase.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbgremlindatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlindatabase"
 
 cosmosdbgremlindatabase.CosmosdbGremlinDatabase_IsTerraformElement(x interface{}) *bool
 ```
@@ -432,7 +432,7 @@ cosmosdbgremlindatabase.CosmosdbGremlinDatabase_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.cosmosdbGremlinDatabase.CosmosdbGremlinDatabase.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbgremlindatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlindatabase"
 
 cosmosdbgremlindatabase.CosmosdbGremlinDatabase_IsTerraformResource(x interface{}) *bool
 ```
@@ -446,7 +446,7 @@ cosmosdbgremlindatabase.CosmosdbGremlinDatabase_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.cosmosdbGremlinDatabase.CosmosdbGremlinDatabase.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbgremlindatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlindatabase"
 
 cosmosdbgremlindatabase.CosmosdbGremlinDatabase_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -829,7 +829,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbGremlinDatabase.CosmosdbGremlinDatabaseAutoscaleSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbgremlindatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlindatabase"
 
 &cosmosdbgremlindatabase.CosmosdbGremlinDatabaseAutoscaleSettings {
 	MaxThroughput: *f64,
@@ -861,7 +861,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbGremlinDatabase.CosmosdbGremlinDatabaseConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbgremlindatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlindatabase"
 
 &cosmosdbgremlindatabase.CosmosdbGremlinDatabaseConfig {
 	Connection: interface{},
@@ -874,10 +874,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbgremlinda
 	AccountName: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	AutoscaleSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.cosmosdbGremlinDatabase.CosmosdbGremlinDatabaseAutoscaleSettings,
+	AutoscaleSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbGremlinDatabase.CosmosdbGremlinDatabaseAutoscaleSettings,
 	Id: *string,
 	Throughput: *f64,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.cosmosdbGremlinDatabase.CosmosdbGremlinDatabaseTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbGremlinDatabase.CosmosdbGremlinDatabaseTimeouts,
 }
 ```
 
@@ -1068,7 +1068,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbGremlinDatabase.CosmosdbGremlinDatabaseTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbgremlindatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlindatabase"
 
 &cosmosdbgremlindatabase.CosmosdbGremlinDatabaseTimeouts {
 	Create: *string,
@@ -1144,7 +1144,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbGremlinDatabase.CosmosdbGremlinDatabaseAutoscaleSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbgremlindatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlindatabase"
 
 cosmosdbgremlindatabase.NewCosmosdbGremlinDatabaseAutoscaleSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbGremlinDatabaseAutoscaleSettingsOutputReference
 ```
@@ -1422,7 +1422,7 @@ func InternalValue() CosmosdbGremlinDatabaseAutoscaleSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbGremlinDatabase.CosmosdbGremlinDatabaseTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbgremlindatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbgremlindatabase"
 
 cosmosdbgremlindatabase.NewCosmosdbGremlinDatabaseTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbGremlinDatabaseTimeoutsOutputReference
 ```

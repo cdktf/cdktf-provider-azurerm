@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsReferenceInputMssql.StreamAnalyticsReferenceInputMssql.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsreferenceinputmssql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsreferenceinputmssql"
 
 streamanalyticsreferenceinputmssql.NewStreamAnalyticsReferenceInputMssql(scope Construct, id *string, config StreamAnalyticsReferenceInputMssqlConfig) StreamAnalyticsReferenceInputMssql
 ```
@@ -380,7 +380,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.streamAnalyticsReferenceInputMssql.StreamAnalyticsReferenceInputMssql.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsreferenceinputmssql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsreferenceinputmssql"
 
 streamanalyticsreferenceinputmssql.StreamAnalyticsReferenceInputMssql_IsConstruct(x interface{}) *bool
 ```
@@ -412,7 +412,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.streamAnalyticsReferenceInputMssql.StreamAnalyticsReferenceInputMssql.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsreferenceinputmssql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsreferenceinputmssql"
 
 streamanalyticsreferenceinputmssql.StreamAnalyticsReferenceInputMssql_IsTerraformElement(x interface{}) *bool
 ```
@@ -426,7 +426,7 @@ streamanalyticsreferenceinputmssql.StreamAnalyticsReferenceInputMssql_IsTerrafor
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.streamAnalyticsReferenceInputMssql.StreamAnalyticsReferenceInputMssql.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsreferenceinputmssql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsreferenceinputmssql"
 
 streamanalyticsreferenceinputmssql.StreamAnalyticsReferenceInputMssql_IsTerraformResource(x interface{}) *bool
 ```
@@ -440,7 +440,7 @@ streamanalyticsreferenceinputmssql.StreamAnalyticsReferenceInputMssql_IsTerrafor
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.streamAnalyticsReferenceInputMssql.StreamAnalyticsReferenceInputMssql.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsreferenceinputmssql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsreferenceinputmssql"
 
 streamanalyticsreferenceinputmssql.StreamAnalyticsReferenceInputMssql_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -977,7 +977,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsReferenceInputMssql.StreamAnalyticsReferenceInputMssqlConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsreferenceinputmssql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsreferenceinputmssql"
 
 &streamanalyticsreferenceinputmssql.StreamAnalyticsReferenceInputMssqlConfig {
 	Connection: interface{},
@@ -1000,7 +1000,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsre
 	Id: *string,
 	RefreshIntervalDuration: *string,
 	Table: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.streamAnalyticsReferenceInputMssql.StreamAnalyticsReferenceInputMssqlTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.streamAnalyticsReferenceInputMssql.StreamAnalyticsReferenceInputMssqlTimeouts,
 }
 ```
 
@@ -1280,7 +1280,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsReferenceInputMssql.StreamAnalyticsReferenceInputMssqlTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsreferenceinputmssql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsreferenceinputmssql"
 
 &streamanalyticsreferenceinputmssql.StreamAnalyticsReferenceInputMssqlTimeouts {
 	Create: *string,
@@ -1356,7 +1356,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsReferenceInputMssql.StreamAnalyticsReferenceInputMssqlTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsreferenceinputmssql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsreferenceinputmssql"
 
 streamanalyticsreferenceinputmssql.NewStreamAnalyticsReferenceInputMssqlTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StreamAnalyticsReferenceInputMssqlTimeoutsOutputReference
 ```

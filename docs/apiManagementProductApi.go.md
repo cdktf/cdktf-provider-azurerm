@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApi.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementproductapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementproductapi"
 
 apimanagementproductapi.NewApiManagementProductApi(scope Construct, id *string, config ApiManagementProductApiConfig) ApiManagementProductApi
 ```
@@ -359,7 +359,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApi.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementproductapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementproductapi"
 
 apimanagementproductapi.ApiManagementProductApi_IsConstruct(x interface{}) *bool
 ```
@@ -391,7 +391,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApi.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementproductapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementproductapi"
 
 apimanagementproductapi.ApiManagementProductApi_IsTerraformElement(x interface{}) *bool
 ```
@@ -405,7 +405,7 @@ apimanagementproductapi.ApiManagementProductApi_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApi.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementproductapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementproductapi"
 
 apimanagementproductapi.ApiManagementProductApi_IsTerraformResource(x interface{}) *bool
 ```
@@ -419,7 +419,7 @@ apimanagementproductapi.ApiManagementProductApi_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApi.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementproductapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementproductapi"
 
 apimanagementproductapi.ApiManagementProductApi_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -780,7 +780,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApiConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementproductapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementproductapi"
 
 &apimanagementproductapi.ApiManagementProductApiConfig {
 	Connection: interface{},
@@ -795,7 +795,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementprod
 	ProductId: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.apiManagementProductApi.ApiManagementProductApiTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementProductApi.ApiManagementProductApiTimeouts,
 }
 ```
 
@@ -971,7 +971,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApiTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementproductapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementproductapi"
 
 &apimanagementproductapi.ApiManagementProductApiTimeouts {
 	Create: *string,
@@ -1047,7 +1047,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementProductApi.ApiManagementProductApiTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementproductapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementproductapi"
 
 apimanagementproductapi.NewApiManagementProductApiTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementProductApiTimeoutsOutputReference
 ```

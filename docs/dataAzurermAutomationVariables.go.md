@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariables.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 dataazurermautomationvariables.NewDataAzurermAutomationVariables(scope Construct, id *string, config DataAzurermAutomationVariablesConfig) DataAzurermAutomationVariables
 ```
@@ -298,7 +298,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariables.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 dataazurermautomationvariables.DataAzurermAutomationVariables_IsConstruct(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariables.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 dataazurermautomationvariables.DataAzurermAutomationVariables_IsTerraformElement(x interface{}) *bool
 ```
@@ -344,7 +344,7 @@ dataazurermautomationvariables.DataAzurermAutomationVariables_IsTerraformElement
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariables.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 dataazurermautomationvariables.DataAzurermAutomationVariables_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -358,7 +358,7 @@ dataazurermautomationvariables.DataAzurermAutomationVariables_IsTerraformDataSou
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariables.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 dataazurermautomationvariables.DataAzurermAutomationVariables_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -708,7 +708,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariablesBool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 &dataazurermautomationvariables.DataAzurermAutomationVariablesBool {
 
@@ -721,7 +721,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautoma
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariablesConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 &dataazurermautomationvariables.DataAzurermAutomationVariablesConfig {
 	Connection: interface{},
@@ -733,7 +733,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautoma
 	Provisioners: *[]interface{},
 	AutomationAccountId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermAutomationVariables.DataAzurermAutomationVariablesTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariablesTimeouts,
 }
 ```
 
@@ -870,7 +870,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariablesDatetime.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 &dataazurermautomationvariables.DataAzurermAutomationVariablesDatetime {
 
@@ -883,7 +883,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautoma
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariablesEncrypted.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 &dataazurermautomationvariables.DataAzurermAutomationVariablesEncrypted {
 
@@ -896,7 +896,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautoma
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariablesInt.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 &dataazurermautomationvariables.DataAzurermAutomationVariablesInt {
 
@@ -909,7 +909,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautoma
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariablesNull.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 &dataazurermautomationvariables.DataAzurermAutomationVariablesNull {
 
@@ -922,7 +922,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautoma
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariablesObject.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 &dataazurermautomationvariables.DataAzurermAutomationVariablesObject {
 
@@ -935,7 +935,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautoma
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariablesString.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 &dataazurermautomationvariables.DataAzurermAutomationVariablesString {
 
@@ -948,7 +948,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautoma
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariablesTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 &dataazurermautomationvariables.DataAzurermAutomationVariablesTimeouts {
 	Read: *string,
@@ -982,7 +982,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariablesBoolList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 dataazurermautomationvariables.NewDataAzurermAutomationVariablesBoolList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermAutomationVariablesBoolList
 ```
@@ -1114,7 +1114,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariablesBoolOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 dataazurermautomationvariables.NewDataAzurermAutomationVariablesBoolOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermAutomationVariablesBoolOutputReference
 ```
@@ -1436,7 +1436,7 @@ func InternalValue() DataAzurermAutomationVariablesBool
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariablesDatetimeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 dataazurermautomationvariables.NewDataAzurermAutomationVariablesDatetimeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermAutomationVariablesDatetimeList
 ```
@@ -1568,7 +1568,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariablesDatetimeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 dataazurermautomationvariables.NewDataAzurermAutomationVariablesDatetimeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermAutomationVariablesDatetimeOutputReference
 ```
@@ -1890,7 +1890,7 @@ func InternalValue() DataAzurermAutomationVariablesDatetime
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariablesEncryptedList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 dataazurermautomationvariables.NewDataAzurermAutomationVariablesEncryptedList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermAutomationVariablesEncryptedList
 ```
@@ -2022,7 +2022,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariablesEncryptedOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 dataazurermautomationvariables.NewDataAzurermAutomationVariablesEncryptedOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermAutomationVariablesEncryptedOutputReference
 ```
@@ -2344,7 +2344,7 @@ func InternalValue() DataAzurermAutomationVariablesEncrypted
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariablesIntList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 dataazurermautomationvariables.NewDataAzurermAutomationVariablesIntList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermAutomationVariablesIntList
 ```
@@ -2476,7 +2476,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariablesIntOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 dataazurermautomationvariables.NewDataAzurermAutomationVariablesIntOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermAutomationVariablesIntOutputReference
 ```
@@ -2798,7 +2798,7 @@ func InternalValue() DataAzurermAutomationVariablesInt
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariablesNullList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 dataazurermautomationvariables.NewDataAzurermAutomationVariablesNullList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermAutomationVariablesNullList
 ```
@@ -2930,7 +2930,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariablesNullOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 dataazurermautomationvariables.NewDataAzurermAutomationVariablesNullOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermAutomationVariablesNullOutputReference
 ```
@@ -3252,7 +3252,7 @@ func InternalValue() DataAzurermAutomationVariablesNull
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariablesObjectList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 dataazurermautomationvariables.NewDataAzurermAutomationVariablesObjectList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermAutomationVariablesObjectList
 ```
@@ -3384,7 +3384,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariablesObjectOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 dataazurermautomationvariables.NewDataAzurermAutomationVariablesObjectOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermAutomationVariablesObjectOutputReference
 ```
@@ -3706,7 +3706,7 @@ func InternalValue() DataAzurermAutomationVariablesObject
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariablesStringList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 dataazurermautomationvariables.NewDataAzurermAutomationVariablesStringList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermAutomationVariablesStringList
 ```
@@ -3838,7 +3838,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariablesStringOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 dataazurermautomationvariables.NewDataAzurermAutomationVariablesStringOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermAutomationVariablesStringOutputReference
 ```
@@ -4160,7 +4160,7 @@ func InternalValue() DataAzurermAutomationVariablesString
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermAutomationVariables.DataAzurermAutomationVariablesTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermautomationvariables"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermautomationvariables"
 
 dataazurermautomationvariables.NewDataAzurermAutomationVariablesTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermAutomationVariablesTimeoutsOutputReference
 ```
