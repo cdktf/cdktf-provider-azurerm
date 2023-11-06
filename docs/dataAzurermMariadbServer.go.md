@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMariadbServer.DataAzurermMariadbServer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmariadbserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmariadbserver"
 
 dataazurermmariadbserver.NewDataAzurermMariadbServer(scope Construct, id *string, config DataAzurermMariadbServerConfig) DataAzurermMariadbServer
 ```
@@ -298,7 +298,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermMariadbServer.DataAzurermMariadbServer.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmariadbserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmariadbserver"
 
 dataazurermmariadbserver.DataAzurermMariadbServer_IsConstruct(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermMariadbServer.DataAzurermMariadbServer.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmariadbserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmariadbserver"
 
 dataazurermmariadbserver.DataAzurermMariadbServer_IsTerraformElement(x interface{}) *bool
 ```
@@ -344,7 +344,7 @@ dataazurermmariadbserver.DataAzurermMariadbServer_IsTerraformElement(x interface
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermMariadbServer.DataAzurermMariadbServer.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmariadbserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmariadbserver"
 
 dataazurermmariadbserver.DataAzurermMariadbServer_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -358,7 +358,7 @@ dataazurermmariadbserver.DataAzurermMariadbServer_IsTerraformDataSource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermMariadbServer.DataAzurermMariadbServer.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmariadbserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmariadbserver"
 
 dataazurermmariadbserver.DataAzurermMariadbServer_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -741,7 +741,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMariadbServer.DataAzurermMariadbServerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmariadbserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmariadbserver"
 
 &dataazurermmariadbserver.DataAzurermMariadbServerConfig {
 	Connection: interface{},
@@ -754,7 +754,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmariadbser
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermMariadbServer.DataAzurermMariadbServerTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermMariadbServer.DataAzurermMariadbServerTimeouts,
 }
 ```
 
@@ -904,7 +904,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMariadbServer.DataAzurermMariadbServerStorageProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmariadbserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmariadbserver"
 
 &dataazurermmariadbserver.DataAzurermMariadbServerStorageProfile {
 
@@ -917,7 +917,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmariadbser
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMariadbServer.DataAzurermMariadbServerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmariadbserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmariadbserver"
 
 &dataazurermmariadbserver.DataAzurermMariadbServerTimeouts {
 	Read: *string,
@@ -951,7 +951,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMariadbServer.DataAzurermMariadbServerStorageProfileList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmariadbserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmariadbserver"
 
 dataazurermmariadbserver.NewDataAzurermMariadbServerStorageProfileList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMariadbServerStorageProfileList
 ```
@@ -1083,7 +1083,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMariadbServer.DataAzurermMariadbServerStorageProfileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmariadbserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmariadbserver"
 
 dataazurermmariadbserver.NewDataAzurermMariadbServerStorageProfileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMariadbServerStorageProfileOutputReference
 ```
@@ -1394,7 +1394,7 @@ func InternalValue() DataAzurermMariadbServerStorageProfile
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMariadbServer.DataAzurermMariadbServerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmariadbserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmariadbserver"
 
 dataazurermmariadbserver.NewDataAzurermMariadbServerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermMariadbServerTimeoutsOutputReference
 ```

@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespace.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermservicebusnamespace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermservicebusnamespace"
 
 dataazurermservicebusnamespace.NewDataAzurermServicebusNamespace(scope Construct, id *string, config DataAzurermServicebusNamespaceConfig) DataAzurermServicebusNamespace
 ```
@@ -298,7 +298,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespace.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermservicebusnamespace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermservicebusnamespace"
 
 dataazurermservicebusnamespace.DataAzurermServicebusNamespace_IsConstruct(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespace.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermservicebusnamespace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermservicebusnamespace"
 
 dataazurermservicebusnamespace.DataAzurermServicebusNamespace_IsTerraformElement(x interface{}) *bool
 ```
@@ -344,7 +344,7 @@ dataazurermservicebusnamespace.DataAzurermServicebusNamespace_IsTerraformElement
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespace.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermservicebusnamespace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermservicebusnamespace"
 
 dataazurermservicebusnamespace.DataAzurermServicebusNamespace_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -358,7 +358,7 @@ dataazurermservicebusnamespace.DataAzurermServicebusNamespace_IsTerraformDataSou
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespace.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermservicebusnamespace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermservicebusnamespace"
 
 dataazurermservicebusnamespace.DataAzurermServicebusNamespace_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -763,7 +763,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespaceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermservicebusnamespace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermservicebusnamespace"
 
 &dataazurermservicebusnamespace.DataAzurermServicebusNamespaceConfig {
 	Connection: interface{},
@@ -776,7 +776,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermservicebus
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespaceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermServicebusNamespace.DataAzurermServicebusNamespaceTimeouts,
 }
 ```
 
@@ -926,7 +926,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespaceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermservicebusnamespace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermservicebusnamespace"
 
 &dataazurermservicebusnamespace.DataAzurermServicebusNamespaceTimeouts {
 	Read: *string,
@@ -960,7 +960,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermServicebusNamespace.DataAzurermServicebusNamespaceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermservicebusnamespace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermservicebusnamespace"
 
 dataazurermservicebusnamespace.NewDataAzurermServicebusNamespaceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermServicebusNamespaceTimeoutsOutputReference
 ```

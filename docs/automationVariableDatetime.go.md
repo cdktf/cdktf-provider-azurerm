@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationVariableDatetime.AutomationVariableDatetime.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationvariabledatetime"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationvariabledatetime"
 
 automationvariabledatetime.NewAutomationVariableDatetime(scope Construct, id *string, config AutomationVariableDatetimeConfig) AutomationVariableDatetime
 ```
@@ -380,7 +380,7 @@ func ResetValue()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.automationVariableDatetime.AutomationVariableDatetime.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationvariabledatetime"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationvariabledatetime"
 
 automationvariabledatetime.AutomationVariableDatetime_IsConstruct(x interface{}) *bool
 ```
@@ -412,7 +412,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.automationVariableDatetime.AutomationVariableDatetime.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationvariabledatetime"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationvariabledatetime"
 
 automationvariabledatetime.AutomationVariableDatetime_IsTerraformElement(x interface{}) *bool
 ```
@@ -426,7 +426,7 @@ automationvariabledatetime.AutomationVariableDatetime_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.automationVariableDatetime.AutomationVariableDatetime.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationvariabledatetime"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationvariabledatetime"
 
 automationvariabledatetime.AutomationVariableDatetime_IsTerraformResource(x interface{}) *bool
 ```
@@ -440,7 +440,7 @@ automationvariabledatetime.AutomationVariableDatetime_IsTerraformResource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.automationVariableDatetime.AutomationVariableDatetime.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationvariabledatetime"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationvariabledatetime"
 
 automationvariabledatetime.AutomationVariableDatetime_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -845,7 +845,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationVariableDatetime.AutomationVariableDatetimeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationvariabledatetime"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationvariabledatetime"
 
 &automationvariabledatetime.AutomationVariableDatetimeConfig {
 	Connection: interface{},
@@ -861,7 +861,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationvariabledat
 	Description: *string,
 	Encrypted: interface{},
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automationVariableDatetime.AutomationVariableDatetimeTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.automationVariableDatetime.AutomationVariableDatetimeTimeouts,
 	Value: *string,
 }
 ```
@@ -1064,7 +1064,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationVariableDatetime.AutomationVariableDatetimeTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationvariabledatetime"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationvariabledatetime"
 
 &automationvariabledatetime.AutomationVariableDatetimeTimeouts {
 	Create: *string,
@@ -1140,7 +1140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationVariableDatetime.AutomationVariableDatetimeTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationvariabledatetime"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationvariabledatetime"
 
 automationvariabledatetime.NewAutomationVariableDatetimeTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationVariableDatetimeTimeoutsOutputReference
 ```
