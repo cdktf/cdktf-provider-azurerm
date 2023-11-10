@@ -1,6 +1,6 @@
 # `azurerm_mssql_server_dns_alias`
 
-Refer to the Terraform Registory for docs: [`azurerm_mssql_server_dns_alias`](https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mssql_server_dns_alias).
+Refer to the Terraform Registory for docs: [`azurerm_mssql_server_dns_alias`](https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/mssql_server_dns_alias).
 
 # `mssqlServerDnsAlias` Submodule <a name="`mssqlServerDnsAlias` Submodule" id="@cdktf/provider-azurerm.mssqlServerDnsAlias"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_mssql_server_dns_alias`](ht
 
 ### MssqlServerDnsAlias <a name="MssqlServerDnsAlias" id="@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mssql_server_dns_alias azurerm_mssql_server_dns_alias}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/mssql_server_dns_alias azurerm_mssql_server_dns_alias}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer"></a>
 
@@ -43,9 +43,9 @@ mssqlServerDnsAlias.MssqlServerDnsAlias(
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.mssqlServerId">mssql_server_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mssql_server_dns_alias#mssql_server_id MssqlServerDnsAlias#mssql_server_id}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mssql_server_dns_alias#name MssqlServerDnsAlias#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mssql_server_dns_alias#id MssqlServerDnsAlias#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.mssqlServerId">mssql_server_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/mssql_server_dns_alias#mssql_server_id MssqlServerDnsAlias#mssql_server_id}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/mssql_server_dns_alias#name MssqlServerDnsAlias#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/mssql_server_dns_alias#id MssqlServerDnsAlias#id}. |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAlias.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasTimeouts">MssqlServerDnsAliasTimeouts</a></code> | timeouts block. |
 
 ---
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mssql_server_dns_alias#mssql_server_id MssqlServerDnsAlias#mssql_server_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/mssql_server_dns_alias#mssql_server_id MssqlServerDnsAlias#mssql_server_id}.
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mssql_server_dns_alias#name MssqlServerDnsAlias#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/mssql_server_dns_alias#name MssqlServerDnsAlias#name}.
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mssql_server_dns_alias#id MssqlServerDnsAlias#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/mssql_server_dns_alias#id MssqlServerDnsAlias#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -143,7 +143,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mssql_server_dns_alias#timeouts MssqlServerDnsAlias#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/mssql_server_dns_alias#timeouts MssqlServerDnsAlias#timeouts}
 
 ---
 
@@ -465,7 +465,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mssql_server_dns_alias#create MssqlServerDnsAlias#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/mssql_server_dns_alias#create MssqlServerDnsAlias#create}.
 
 ---
 
@@ -473,7 +473,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mssql_server_dns_alias#delete MssqlServerDnsAlias#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/mssql_server_dns_alias#delete MssqlServerDnsAlias#delete}.
 
 ---
 
@@ -481,7 +481,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mssql_server_dns_alias#read MssqlServerDnsAlias#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/mssql_server_dns_alias#read MssqlServerDnsAlias#read}.
 
 ---
 
@@ -611,7 +611,7 @@ The construct id used in the generated config for the MssqlServerDnsAlias to imp
 
 The id of the existing MssqlServerDnsAlias that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mssql_server_dns_alias#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/mssql_server_dns_alias#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -938,9 +938,9 @@ mssqlServerDnsAlias.MssqlServerDnsAliasConfig(
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.property.mssqlServerId">mssql_server_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mssql_server_dns_alias#mssql_server_id MssqlServerDnsAlias#mssql_server_id}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mssql_server_dns_alias#name MssqlServerDnsAlias#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mssql_server_dns_alias#id MssqlServerDnsAlias#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.property.mssqlServerId">mssql_server_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/mssql_server_dns_alias#mssql_server_id MssqlServerDnsAlias#mssql_server_id}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/mssql_server_dns_alias#name MssqlServerDnsAlias#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/mssql_server_dns_alias#id MssqlServerDnsAlias#id}. |
 | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasTimeouts">MssqlServerDnsAliasTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1023,7 +1023,7 @@ mssql_server_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mssql_server_dns_alias#mssql_server_id MssqlServerDnsAlias#mssql_server_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/mssql_server_dns_alias#mssql_server_id MssqlServerDnsAlias#mssql_server_id}.
 
 ---
 
@@ -1035,7 +1035,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mssql_server_dns_alias#name MssqlServerDnsAlias#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/mssql_server_dns_alias#name MssqlServerDnsAlias#name}.
 
 ---
 
@@ -1047,7 +1047,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mssql_server_dns_alias#id MssqlServerDnsAlias#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/mssql_server_dns_alias#id MssqlServerDnsAlias#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1064,7 +1064,7 @@ timeouts: MssqlServerDnsAliasTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mssql_server_dns_alias#timeouts MssqlServerDnsAlias#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/mssql_server_dns_alias#timeouts MssqlServerDnsAlias#timeouts}
 
 ---
 
@@ -1086,9 +1086,9 @@ mssqlServerDnsAlias.MssqlServerDnsAliasTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mssql_server_dns_alias#create MssqlServerDnsAlias#create}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mssql_server_dns_alias#delete MssqlServerDnsAlias#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mssql_server_dns_alias#read MssqlServerDnsAlias#read}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/mssql_server_dns_alias#create MssqlServerDnsAlias#create}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/mssql_server_dns_alias#delete MssqlServerDnsAlias#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlServerDnsAlias.MssqlServerDnsAliasTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/mssql_server_dns_alias#read MssqlServerDnsAlias#read}. |
 
 ---
 
@@ -1100,7 +1100,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mssql_server_dns_alias#create MssqlServerDnsAlias#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/mssql_server_dns_alias#create MssqlServerDnsAlias#create}.
 
 ---
 
@@ -1112,7 +1112,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mssql_server_dns_alias#delete MssqlServerDnsAlias#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/mssql_server_dns_alias#delete MssqlServerDnsAlias#delete}.
 
 ---
 
@@ -1124,7 +1124,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/mssql_server_dns_alias#read MssqlServerDnsAlias#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/mssql_server_dns_alias#read MssqlServerDnsAlias#read}.
 
 ---
 

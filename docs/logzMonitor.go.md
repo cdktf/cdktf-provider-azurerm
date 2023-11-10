@@ -1,6 +1,6 @@
 # `azurerm_logz_monitor`
 
-Refer to the Terraform Registory for docs: [`azurerm_logz_monitor`](https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor).
+Refer to the Terraform Registory for docs: [`azurerm_logz_monitor`](https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor).
 
 # `logzMonitor` Submodule <a name="`logzMonitor` Submodule" id="@cdktf/provider-azurerm.logzMonitor"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_logz_monitor`](https://regi
 
 ### LogzMonitor <a name="LogzMonitor" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitor"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor azurerm_logz_monitor}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor azurerm_logz_monitor}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitor.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzmonitor"
 
 logzmonitor.NewLogzMonitor(scope Construct, id *string, config LogzMonitorConfig) LogzMonitor
 ```
@@ -413,7 +413,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitor.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzmonitor"
 
 logzmonitor.LogzMonitor_IsConstruct(x interface{}) *bool
 ```
@@ -445,7 +445,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitor.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzmonitor"
 
 logzmonitor.LogzMonitor_IsTerraformElement(x interface{}) *bool
 ```
@@ -459,7 +459,7 @@ logzmonitor.LogzMonitor_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitor.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzmonitor"
 
 logzmonitor.LogzMonitor_IsTerraformResource(x interface{}) *bool
 ```
@@ -473,7 +473,7 @@ logzmonitor.LogzMonitor_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitor.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzmonitor"
 
 logzmonitor.LogzMonitor_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -502,7 +502,7 @@ The construct id used in the generated config for the LogzMonitor to import.
 
 The id of the existing LogzMonitor that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -966,7 +966,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitorConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzmonitor"
 
 &logzmonitor.LogzMonitorConfig {
 	Connection: interface{},
@@ -978,15 +978,15 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
 	Provisioners: *[]interface{},
 	Location: *string,
 	Name: *string,
-	Plan: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.logzMonitor.LogzMonitorPlan,
+	Plan: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.logzMonitor.LogzMonitorPlan,
 	ResourceGroupName: *string,
-	User: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.logzMonitor.LogzMonitorUser,
+	User: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.logzMonitor.LogzMonitorUser,
 	CompanyName: *string,
 	Enabled: interface{},
 	EnterpriseAppId: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.logzMonitor.LogzMonitorTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.logzMonitor.LogzMonitorTimeouts,
 }
 ```
 
@@ -1001,16 +1001,16 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
 | <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#location LogzMonitor#location}. |
-| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#name LogzMonitor#name}. |
+| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorConfig.property.location">Location</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#location LogzMonitor#location}. |
+| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#name LogzMonitor#name}. |
 | <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorConfig.property.plan">Plan</a></code> | <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorPlan">LogzMonitorPlan</a></code> | plan block. |
-| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#resource_group_name LogzMonitor#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#resource_group_name LogzMonitor#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorConfig.property.user">User</a></code> | <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorUser">LogzMonitorUser</a></code> | user block. |
-| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorConfig.property.companyName">CompanyName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#company_name LogzMonitor#company_name}. |
-| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorConfig.property.enabled">Enabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#enabled LogzMonitor#enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorConfig.property.enterpriseAppId">EnterpriseAppId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#enterprise_app_id LogzMonitor#enterprise_app_id}. |
-| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#id LogzMonitor#id}. |
-| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#tags LogzMonitor#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorConfig.property.companyName">CompanyName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#company_name LogzMonitor#company_name}. |
+| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorConfig.property.enabled">Enabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#enabled LogzMonitor#enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorConfig.property.enterpriseAppId">EnterpriseAppId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#enterprise_app_id LogzMonitor#enterprise_app_id}. |
+| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#id LogzMonitor#id}. |
+| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#tags LogzMonitor#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorTimeouts">LogzMonitorTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1093,7 +1093,7 @@ Location *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#location LogzMonitor#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#location LogzMonitor#location}.
 
 ---
 
@@ -1105,7 +1105,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#name LogzMonitor#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#name LogzMonitor#name}.
 
 ---
 
@@ -1119,7 +1119,7 @@ Plan LogzMonitorPlan
 
 plan block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#plan LogzMonitor#plan}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#plan LogzMonitor#plan}
 
 ---
 
@@ -1131,7 +1131,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#resource_group_name LogzMonitor#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#resource_group_name LogzMonitor#resource_group_name}.
 
 ---
 
@@ -1145,7 +1145,7 @@ User LogzMonitorUser
 
 user block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#user LogzMonitor#user}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#user LogzMonitor#user}
 
 ---
 
@@ -1157,7 +1157,7 @@ CompanyName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#company_name LogzMonitor#company_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#company_name LogzMonitor#company_name}.
 
 ---
 
@@ -1169,7 +1169,7 @@ Enabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#enabled LogzMonitor#enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#enabled LogzMonitor#enabled}.
 
 ---
 
@@ -1181,7 +1181,7 @@ EnterpriseAppId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#enterprise_app_id LogzMonitor#enterprise_app_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#enterprise_app_id LogzMonitor#enterprise_app_id}.
 
 ---
 
@@ -1193,7 +1193,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#id LogzMonitor#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#id LogzMonitor#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1208,7 +1208,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#tags LogzMonitor#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#tags LogzMonitor#tags}.
 
 ---
 
@@ -1222,7 +1222,7 @@ Timeouts LogzMonitorTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#timeouts LogzMonitor#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#timeouts LogzMonitor#timeouts}
 
 ---
 
@@ -1231,7 +1231,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitorPlan.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzmonitor"
 
 &logzmonitor.LogzMonitorPlan {
 	BillingCycle: *string,
@@ -1245,10 +1245,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorPlan.property.billingCycle">BillingCycle</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#billing_cycle LogzMonitor#billing_cycle}. |
-| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorPlan.property.effectiveDate">EffectiveDate</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#effective_date LogzMonitor#effective_date}. |
-| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorPlan.property.usageType">UsageType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#usage_type LogzMonitor#usage_type}. |
-| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorPlan.property.planId">PlanId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#plan_id LogzMonitor#plan_id}. |
+| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorPlan.property.billingCycle">BillingCycle</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#billing_cycle LogzMonitor#billing_cycle}. |
+| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorPlan.property.effectiveDate">EffectiveDate</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#effective_date LogzMonitor#effective_date}. |
+| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorPlan.property.usageType">UsageType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#usage_type LogzMonitor#usage_type}. |
+| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorPlan.property.planId">PlanId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#plan_id LogzMonitor#plan_id}. |
 
 ---
 
@@ -1260,7 +1260,7 @@ BillingCycle *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#billing_cycle LogzMonitor#billing_cycle}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#billing_cycle LogzMonitor#billing_cycle}.
 
 ---
 
@@ -1272,7 +1272,7 @@ EffectiveDate *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#effective_date LogzMonitor#effective_date}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#effective_date LogzMonitor#effective_date}.
 
 ---
 
@@ -1284,7 +1284,7 @@ UsageType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#usage_type LogzMonitor#usage_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#usage_type LogzMonitor#usage_type}.
 
 ---
 
@@ -1296,7 +1296,7 @@ PlanId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#plan_id LogzMonitor#plan_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#plan_id LogzMonitor#plan_id}.
 
 ---
 
@@ -1305,7 +1305,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitorTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzmonitor"
 
 &logzmonitor.LogzMonitorTimeouts {
 	Create: *string,
@@ -1319,10 +1319,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#create LogzMonitor#create}. |
-| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#delete LogzMonitor#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#read LogzMonitor#read}. |
-| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#update LogzMonitor#update}. |
+| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#create LogzMonitor#create}. |
+| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#delete LogzMonitor#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#read LogzMonitor#read}. |
+| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#update LogzMonitor#update}. |
 
 ---
 
@@ -1334,7 +1334,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#create LogzMonitor#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#create LogzMonitor#create}.
 
 ---
 
@@ -1346,7 +1346,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#delete LogzMonitor#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#delete LogzMonitor#delete}.
 
 ---
 
@@ -1358,7 +1358,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#read LogzMonitor#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#read LogzMonitor#read}.
 
 ---
 
@@ -1370,7 +1370,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#update LogzMonitor#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#update LogzMonitor#update}.
 
 ---
 
@@ -1379,7 +1379,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitorUser.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzmonitor"
 
 &logzmonitor.LogzMonitorUser {
 	Email: *string,
@@ -1393,10 +1393,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorUser.property.email">Email</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#email LogzMonitor#email}. |
-| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorUser.property.firstName">FirstName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#first_name LogzMonitor#first_name}. |
-| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorUser.property.lastName">LastName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#last_name LogzMonitor#last_name}. |
-| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorUser.property.phoneNumber">PhoneNumber</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#phone_number LogzMonitor#phone_number}. |
+| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorUser.property.email">Email</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#email LogzMonitor#email}. |
+| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorUser.property.firstName">FirstName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#first_name LogzMonitor#first_name}. |
+| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorUser.property.lastName">LastName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#last_name LogzMonitor#last_name}. |
+| <code><a href="#@cdktf/provider-azurerm.logzMonitor.LogzMonitorUser.property.phoneNumber">PhoneNumber</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#phone_number LogzMonitor#phone_number}. |
 
 ---
 
@@ -1408,7 +1408,7 @@ Email *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#email LogzMonitor#email}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#email LogzMonitor#email}.
 
 ---
 
@@ -1420,7 +1420,7 @@ FirstName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#first_name LogzMonitor#first_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#first_name LogzMonitor#first_name}.
 
 ---
 
@@ -1432,7 +1432,7 @@ LastName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#last_name LogzMonitor#last_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#last_name LogzMonitor#last_name}.
 
 ---
 
@@ -1444,7 +1444,7 @@ PhoneNumber *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/logz_monitor#phone_number LogzMonitor#phone_number}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logz_monitor#phone_number LogzMonitor#phone_number}.
 
 ---
 
@@ -1455,7 +1455,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitorPlanOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzmonitor"
 
 logzmonitor.NewLogzMonitorPlanOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogzMonitorPlanOutputReference
 ```
@@ -1799,7 +1799,7 @@ func InternalValue() LogzMonitorPlan
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitorTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzmonitor"
 
 logzmonitor.NewLogzMonitorTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogzMonitorTimeoutsOutputReference
 ```
@@ -2164,7 +2164,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logzMonitor.LogzMonitorUserOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logzmonitor"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logzmonitor"
 
 logzmonitor.NewLogzMonitorUserOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogzMonitorUserOutputReference
 ```

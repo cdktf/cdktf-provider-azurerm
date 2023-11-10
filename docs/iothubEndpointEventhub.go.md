@@ -1,6 +1,6 @@
 # `azurerm_iothub_endpoint_eventhub`
 
-Refer to the Terraform Registory for docs: [`azurerm_iothub_endpoint_eventhub`](https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub).
+Refer to the Terraform Registory for docs: [`azurerm_iothub_endpoint_eventhub`](https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub).
 
 # `iothubEndpointEventhub` Submodule <a name="`iothubEndpointEventhub` Submodule" id="@cdktf/provider-azurerm.iothubEndpointEventhub"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`azurerm_iothub_endpoint_eventhub`](
 
 ### IothubEndpointEventhub <a name="IothubEndpointEventhub" id="@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhub"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub azurerm_iothub_endpoint_eventhub}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub azurerm_iothub_endpoint_eventhub}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhub.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointeventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointeventhub"
 
 iothubendpointeventhub.NewIothubEndpointEventhub(scope Construct, id *string, config IothubEndpointEventhubConfig) IothubEndpointEventhub
 ```
@@ -394,7 +394,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhub.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointeventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointeventhub"
 
 iothubendpointeventhub.IothubEndpointEventhub_IsConstruct(x interface{}) *bool
 ```
@@ -426,7 +426,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhub.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointeventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointeventhub"
 
 iothubendpointeventhub.IothubEndpointEventhub_IsTerraformElement(x interface{}) *bool
 ```
@@ -440,7 +440,7 @@ iothubendpointeventhub.IothubEndpointEventhub_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhub.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointeventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointeventhub"
 
 iothubendpointeventhub.IothubEndpointEventhub_IsTerraformResource(x interface{}) *bool
 ```
@@ -454,7 +454,7 @@ iothubendpointeventhub.IothubEndpointEventhub_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhub.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointeventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointeventhub"
 
 iothubendpointeventhub.IothubEndpointEventhub_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -483,7 +483,7 @@ The construct id used in the generated config for the IothubEndpointEventhub to 
 
 The id of the existing IothubEndpointEventhub that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -903,7 +903,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointeventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointeventhub"
 
 &iothubendpointeventhub.IothubEndpointEventhubConfig {
 	Connection: interface{},
@@ -922,7 +922,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointeve
 	EntityPath: *string,
 	Id: *string,
 	IdentityId: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.iothubEndpointEventhub.IothubEndpointEventhubTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.iothubEndpointEventhub.IothubEndpointEventhubTimeouts,
 }
 ```
 
@@ -937,15 +937,15 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointeve
 | <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubConfig.property.iothubId">IothubId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#iothub_id IothubEndpointEventhub#iothub_id}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#name IothubEndpointEventhub#name}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#resource_group_name IothubEndpointEventhub#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubConfig.property.authenticationType">AuthenticationType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#authentication_type IothubEndpointEventhub#authentication_type}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubConfig.property.connectionString">ConnectionString</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#connection_string IothubEndpointEventhub#connection_string}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubConfig.property.endpointUri">EndpointUri</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#endpoint_uri IothubEndpointEventhub#endpoint_uri}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubConfig.property.entityPath">EntityPath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#entity_path IothubEndpointEventhub#entity_path}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#id IothubEndpointEventhub#id}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubConfig.property.identityId">IdentityId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#identity_id IothubEndpointEventhub#identity_id}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubConfig.property.iothubId">IothubId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#iothub_id IothubEndpointEventhub#iothub_id}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#name IothubEndpointEventhub#name}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#resource_group_name IothubEndpointEventhub#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubConfig.property.authenticationType">AuthenticationType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#authentication_type IothubEndpointEventhub#authentication_type}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubConfig.property.connectionString">ConnectionString</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#connection_string IothubEndpointEventhub#connection_string}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubConfig.property.endpointUri">EndpointUri</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#endpoint_uri IothubEndpointEventhub#endpoint_uri}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubConfig.property.entityPath">EntityPath</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#entity_path IothubEndpointEventhub#entity_path}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#id IothubEndpointEventhub#id}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubConfig.property.identityId">IdentityId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#identity_id IothubEndpointEventhub#identity_id}. |
 | <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubTimeouts">IothubEndpointEventhubTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1028,7 +1028,7 @@ IothubId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#iothub_id IothubEndpointEventhub#iothub_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#iothub_id IothubEndpointEventhub#iothub_id}.
 
 ---
 
@@ -1040,7 +1040,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#name IothubEndpointEventhub#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#name IothubEndpointEventhub#name}.
 
 ---
 
@@ -1052,7 +1052,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#resource_group_name IothubEndpointEventhub#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#resource_group_name IothubEndpointEventhub#resource_group_name}.
 
 ---
 
@@ -1064,7 +1064,7 @@ AuthenticationType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#authentication_type IothubEndpointEventhub#authentication_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#authentication_type IothubEndpointEventhub#authentication_type}.
 
 ---
 
@@ -1076,7 +1076,7 @@ ConnectionString *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#connection_string IothubEndpointEventhub#connection_string}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#connection_string IothubEndpointEventhub#connection_string}.
 
 ---
 
@@ -1088,7 +1088,7 @@ EndpointUri *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#endpoint_uri IothubEndpointEventhub#endpoint_uri}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#endpoint_uri IothubEndpointEventhub#endpoint_uri}.
 
 ---
 
@@ -1100,7 +1100,7 @@ EntityPath *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#entity_path IothubEndpointEventhub#entity_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#entity_path IothubEndpointEventhub#entity_path}.
 
 ---
 
@@ -1112,7 +1112,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#id IothubEndpointEventhub#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#id IothubEndpointEventhub#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1127,7 +1127,7 @@ IdentityId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#identity_id IothubEndpointEventhub#identity_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#identity_id IothubEndpointEventhub#identity_id}.
 
 ---
 
@@ -1141,7 +1141,7 @@ Timeouts IothubEndpointEventhubTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#timeouts IothubEndpointEventhub#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#timeouts IothubEndpointEventhub#timeouts}
 
 ---
 
@@ -1150,7 +1150,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointeventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointeventhub"
 
 &iothubendpointeventhub.IothubEndpointEventhubTimeouts {
 	Create: *string,
@@ -1164,10 +1164,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointeve
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#create IothubEndpointEventhub#create}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#delete IothubEndpointEventhub#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#read IothubEndpointEventhub#read}. |
-| <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#update IothubEndpointEventhub#update}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#create IothubEndpointEventhub#create}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#delete IothubEndpointEventhub#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#read IothubEndpointEventhub#read}. |
+| <code><a href="#@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#update IothubEndpointEventhub#update}. |
 
 ---
 
@@ -1179,7 +1179,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#create IothubEndpointEventhub#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#create IothubEndpointEventhub#create}.
 
 ---
 
@@ -1191,7 +1191,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#delete IothubEndpointEventhub#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#delete IothubEndpointEventhub#delete}.
 
 ---
 
@@ -1203,7 +1203,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#read IothubEndpointEventhub#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#read IothubEndpointEventhub#read}.
 
 ---
 
@@ -1215,7 +1215,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/resources/iothub_endpoint_eventhub#update IothubEndpointEventhub#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/iothub_endpoint_eventhub#update IothubEndpointEventhub#update}.
 
 ---
 
@@ -1226,7 +1226,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothubEndpointEventhub.IothubEndpointEventhubTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointeventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointeventhub"
 
 iothubendpointeventhub.NewIothubEndpointEventhubTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IothubEndpointEventhubTimeoutsOutputReference
 ```

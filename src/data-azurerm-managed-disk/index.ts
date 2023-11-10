@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/managed_disk
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/managed_disk
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermManagedDiskConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/managed_disk#id DataAzurermManagedDisk#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/managed_disk#id DataAzurermManagedDisk#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/managed_disk#name DataAzurermManagedDisk#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/managed_disk#name DataAzurermManagedDisk#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/managed_disk#resource_group_name DataAzurermManagedDisk#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/managed_disk#resource_group_name DataAzurermManagedDisk#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/managed_disk#timeouts DataAzurermManagedDisk#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/managed_disk#timeouts DataAzurermManagedDisk#timeouts}
   */
   readonly timeouts?: DataAzurermManagedDiskTimeouts;
 }
@@ -250,7 +245,7 @@ export class DataAzurermManagedDiskEncryptionSettingsList extends cdktf.ComplexL
 }
 export interface DataAzurermManagedDiskTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/managed_disk#read DataAzurermManagedDisk#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/managed_disk#read DataAzurermManagedDisk#read}
   */
   readonly read?: string;
 }
@@ -325,7 +320,7 @@ export class DataAzurermManagedDiskTimeoutsOutputReference extends cdktf.Complex
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/managed_disk azurerm_managed_disk}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/managed_disk azurerm_managed_disk}
 */
 export class DataAzurermManagedDisk extends cdktf.TerraformDataSource {
 
@@ -341,7 +336,7 @@ export class DataAzurermManagedDisk extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermManagedDisk resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermManagedDisk to import
-  * @param importFromId The id of the existing DataAzurermManagedDisk that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/managed_disk#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermManagedDisk that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/managed_disk#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermManagedDisk to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -353,7 +348,7 @@ export class DataAzurermManagedDisk extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/managed_disk azurerm_managed_disk} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/managed_disk azurerm_managed_disk} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -364,7 +359,7 @@ export class DataAzurermManagedDisk extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_managed_disk',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.79.0',
+        providerVersion: '3.80.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

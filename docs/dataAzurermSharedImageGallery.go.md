@@ -1,6 +1,6 @@
 # `data_azurerm_shared_image_gallery`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_shared_image_gallery`](https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/shared_image_gallery).
+Refer to the Terraform Registory for docs: [`data_azurerm_shared_image_gallery`](https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/shared_image_gallery).
 
 # `dataAzurermSharedImageGallery` Submodule <a name="`dataAzurermSharedImageGallery` Submodule" id="@cdktf/provider-azurerm.dataAzurermSharedImageGallery"></a>
 
@@ -8,12 +8,12 @@ Refer to the Terraform Registory for docs: [`data_azurerm_shared_image_gallery`]
 
 ### DataAzurermSharedImageGallery <a name="DataAzurermSharedImageGallery" id="@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGallery"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/shared_image_gallery azurerm_shared_image_gallery}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/shared_image_gallery azurerm_shared_image_gallery}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGallery.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsharedimagegallery"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimagegallery"
 
 dataazurermsharedimagegallery.NewDataAzurermSharedImageGallery(scope Construct, id *string, config DataAzurermSharedImageGalleryConfig) DataAzurermSharedImageGallery
 ```
@@ -298,7 +298,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGallery.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsharedimagegallery"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimagegallery"
 
 dataazurermsharedimagegallery.DataAzurermSharedImageGallery_IsConstruct(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGallery.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsharedimagegallery"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimagegallery"
 
 dataazurermsharedimagegallery.DataAzurermSharedImageGallery_IsTerraformElement(x interface{}) *bool
 ```
@@ -344,7 +344,7 @@ dataazurermsharedimagegallery.DataAzurermSharedImageGallery_IsTerraformElement(x
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGallery.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsharedimagegallery"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimagegallery"
 
 dataazurermsharedimagegallery.DataAzurermSharedImageGallery_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -358,7 +358,7 @@ dataazurermsharedimagegallery.DataAzurermSharedImageGallery_IsTerraformDataSourc
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGallery.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsharedimagegallery"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimagegallery"
 
 dataazurermsharedimagegallery.DataAzurermSharedImageGallery_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -387,7 +387,7 @@ The construct id used in the generated config for the DataAzurermSharedImageGall
 
 The id of the existing DataAzurermSharedImageGallery that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/shared_image_gallery#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/shared_image_gallery#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -697,7 +697,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGalleryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsharedimagegallery"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimagegallery"
 
 &dataazurermsharedimagegallery.DataAzurermSharedImageGalleryConfig {
 	Connection: interface{},
@@ -710,7 +710,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermshared
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermSharedImageGallery.DataAzurermSharedImageGalleryTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGalleryTimeouts,
 }
 ```
 
@@ -725,9 +725,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermshared
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGalleryConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGalleryConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGalleryConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGalleryConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/shared_image_gallery#name DataAzurermSharedImageGallery#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGalleryConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/shared_image_gallery#resource_group_name DataAzurermSharedImageGallery#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGalleryConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/shared_image_gallery#id DataAzurermSharedImageGallery#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGalleryConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/shared_image_gallery#name DataAzurermSharedImageGallery#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGalleryConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/shared_image_gallery#resource_group_name DataAzurermSharedImageGallery#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGalleryConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/shared_image_gallery#id DataAzurermSharedImageGallery#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGalleryConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGalleryTimeouts">DataAzurermSharedImageGalleryTimeouts</a></code> | timeouts block. |
 
 ---
@@ -810,7 +810,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/shared_image_gallery#name DataAzurermSharedImageGallery#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/shared_image_gallery#name DataAzurermSharedImageGallery#name}.
 
 ---
 
@@ -822,7 +822,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/shared_image_gallery#resource_group_name DataAzurermSharedImageGallery#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/shared_image_gallery#resource_group_name DataAzurermSharedImageGallery#resource_group_name}.
 
 ---
 
@@ -834,7 +834,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/shared_image_gallery#id DataAzurermSharedImageGallery#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/shared_image_gallery#id DataAzurermSharedImageGallery#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -851,7 +851,7 @@ Timeouts DataAzurermSharedImageGalleryTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/shared_image_gallery#timeouts DataAzurermSharedImageGallery#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/shared_image_gallery#timeouts DataAzurermSharedImageGallery#timeouts}
 
 ---
 
@@ -860,7 +860,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGalleryTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsharedimagegallery"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimagegallery"
 
 &dataazurermsharedimagegallery.DataAzurermSharedImageGalleryTimeouts {
 	Read: *string,
@@ -871,7 +871,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermshared
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGalleryTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/shared_image_gallery#read DataAzurermSharedImageGallery#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGalleryTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/shared_image_gallery#read DataAzurermSharedImageGallery#read}. |
 
 ---
 
@@ -883,7 +883,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/shared_image_gallery#read DataAzurermSharedImageGallery#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/shared_image_gallery#read DataAzurermSharedImageGallery#read}.
 
 ---
 
@@ -894,7 +894,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSharedImageGallery.DataAzurermSharedImageGalleryTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsharedimagegallery"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsharedimagegallery"
 
 dataazurermsharedimagegallery.NewDataAzurermSharedImageGalleryTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermSharedImageGalleryTimeoutsOutputReference
 ```
