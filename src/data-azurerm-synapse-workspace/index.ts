@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/synapse_workspace
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/synapse_workspace
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +13,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermSynapseWorkspaceConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/synapse_workspace#id DataAzurermSynapseWorkspace#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/synapse_workspace#id DataAzurermSynapseWorkspace#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/synapse_workspace#name DataAzurermSynapseWorkspace#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/synapse_workspace#name DataAzurermSynapseWorkspace#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/synapse_workspace#resource_group_name DataAzurermSynapseWorkspace#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/synapse_workspace#resource_group_name DataAzurermSynapseWorkspace#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/synapse_workspace#timeouts DataAzurermSynapseWorkspace#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/synapse_workspace#timeouts DataAzurermSynapseWorkspace#timeouts}
   */
   readonly timeouts?: DataAzurermSynapseWorkspaceTimeouts;
 }
@@ -115,7 +115,7 @@ export class DataAzurermSynapseWorkspaceIdentityList extends cdktf.ComplexList {
 }
 export interface DataAzurermSynapseWorkspaceTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/synapse_workspace#read DataAzurermSynapseWorkspace#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/synapse_workspace#read DataAzurermSynapseWorkspace#read}
   */
   readonly read?: string;
 }
@@ -190,7 +190,7 @@ export class DataAzurermSynapseWorkspaceTimeoutsOutputReference extends cdktf.Co
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/synapse_workspace azurerm_synapse_workspace}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/synapse_workspace azurerm_synapse_workspace}
 */
 export class DataAzurermSynapseWorkspace extends cdktf.TerraformDataSource {
 
@@ -206,7 +206,7 @@ export class DataAzurermSynapseWorkspace extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermSynapseWorkspace resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermSynapseWorkspace to import
-  * @param importFromId The id of the existing DataAzurermSynapseWorkspace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/synapse_workspace#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermSynapseWorkspace that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/synapse_workspace#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermSynapseWorkspace to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -218,7 +218,7 @@ export class DataAzurermSynapseWorkspace extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.79.0/docs/data-sources/synapse_workspace azurerm_synapse_workspace} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/synapse_workspace azurerm_synapse_workspace} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -229,7 +229,7 @@ export class DataAzurermSynapseWorkspace extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_synapse_workspace',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.79.0',
+        providerVersion: '3.80.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
