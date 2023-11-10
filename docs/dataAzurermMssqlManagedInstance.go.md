@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMssqlManagedInstance.DataAzurermMssqlManagedInstance.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmssqlmanagedinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmssqlmanagedinstance"
 
 dataazurermmssqlmanagedinstance.NewDataAzurermMssqlManagedInstance(scope Construct, id *string, config DataAzurermMssqlManagedInstanceConfig) DataAzurermMssqlManagedInstance
 ```
@@ -298,7 +298,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermMssqlManagedInstance.DataAzurermMssqlManagedInstance.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmssqlmanagedinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmssqlmanagedinstance"
 
 dataazurermmssqlmanagedinstance.DataAzurermMssqlManagedInstance_IsConstruct(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermMssqlManagedInstance.DataAzurermMssqlManagedInstance.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmssqlmanagedinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmssqlmanagedinstance"
 
 dataazurermmssqlmanagedinstance.DataAzurermMssqlManagedInstance_IsTerraformElement(x interface{}) *bool
 ```
@@ -344,7 +344,7 @@ dataazurermmssqlmanagedinstance.DataAzurermMssqlManagedInstance_IsTerraformEleme
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermMssqlManagedInstance.DataAzurermMssqlManagedInstance.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmssqlmanagedinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmssqlmanagedinstance"
 
 dataazurermmssqlmanagedinstance.DataAzurermMssqlManagedInstance_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -358,7 +358,7 @@ dataazurermmssqlmanagedinstance.DataAzurermMssqlManagedInstance_IsTerraformDataS
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermMssqlManagedInstance.DataAzurermMssqlManagedInstance.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmssqlmanagedinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmssqlmanagedinstance"
 
 dataazurermmssqlmanagedinstance.DataAzurermMssqlManagedInstance_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -851,7 +851,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMssqlManagedInstance.DataAzurermMssqlManagedInstanceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmssqlmanagedinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmssqlmanagedinstance"
 
 &dataazurermmssqlmanagedinstance.DataAzurermMssqlManagedInstanceConfig {
 	Connection: interface{},
@@ -864,7 +864,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmssqlmanag
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermMssqlManagedInstance.DataAzurermMssqlManagedInstanceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermMssqlManagedInstance.DataAzurermMssqlManagedInstanceTimeouts,
 }
 ```
 
@@ -1014,7 +1014,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMssqlManagedInstance.DataAzurermMssqlManagedInstanceIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmssqlmanagedinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmssqlmanagedinstance"
 
 &dataazurermmssqlmanagedinstance.DataAzurermMssqlManagedInstanceIdentity {
 
@@ -1027,7 +1027,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmssqlmanag
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMssqlManagedInstance.DataAzurermMssqlManagedInstanceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmssqlmanagedinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmssqlmanagedinstance"
 
 &dataazurermmssqlmanagedinstance.DataAzurermMssqlManagedInstanceTimeouts {
 	Read: *string,
@@ -1061,7 +1061,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMssqlManagedInstance.DataAzurermMssqlManagedInstanceIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmssqlmanagedinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmssqlmanagedinstance"
 
 dataazurermmssqlmanagedinstance.NewDataAzurermMssqlManagedInstanceIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMssqlManagedInstanceIdentityList
 ```
@@ -1193,7 +1193,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMssqlManagedInstance.DataAzurermMssqlManagedInstanceIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmssqlmanagedinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmssqlmanagedinstance"
 
 dataazurermmssqlmanagedinstance.NewDataAzurermMssqlManagedInstanceIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMssqlManagedInstanceIdentityOutputReference
 ```
@@ -1504,7 +1504,7 @@ func InternalValue() DataAzurermMssqlManagedInstanceIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMssqlManagedInstance.DataAzurermMssqlManagedInstanceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmssqlmanagedinstance"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmssqlmanagedinstance"
 
 dataazurermmssqlmanagedinstance.NewDataAzurermMssqlManagedInstanceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermMssqlManagedInstanceTimeoutsOutputReference
 ```
