@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appServiceVirtualNetworkSwiftConnection.AppServiceVirtualNetworkSwiftConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appservicevirtualnetworkswiftconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicevirtualnetworkswiftconnection"
 
 appservicevirtualnetworkswiftconnection.NewAppServiceVirtualNetworkSwiftConnection(scope Construct, id *string, config AppServiceVirtualNetworkSwiftConnectionConfig) AppServiceVirtualNetworkSwiftConnection
 ```
@@ -359,7 +359,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.appServiceVirtualNetworkSwiftConnection.AppServiceVirtualNetworkSwiftConnection.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appservicevirtualnetworkswiftconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicevirtualnetworkswiftconnection"
 
 appservicevirtualnetworkswiftconnection.AppServiceVirtualNetworkSwiftConnection_IsConstruct(x interface{}) *bool
 ```
@@ -391,7 +391,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.appServiceVirtualNetworkSwiftConnection.AppServiceVirtualNetworkSwiftConnection.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appservicevirtualnetworkswiftconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicevirtualnetworkswiftconnection"
 
 appservicevirtualnetworkswiftconnection.AppServiceVirtualNetworkSwiftConnection_IsTerraformElement(x interface{}) *bool
 ```
@@ -405,7 +405,7 @@ appservicevirtualnetworkswiftconnection.AppServiceVirtualNetworkSwiftConnection_
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.appServiceVirtualNetworkSwiftConnection.AppServiceVirtualNetworkSwiftConnection.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appservicevirtualnetworkswiftconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicevirtualnetworkswiftconnection"
 
 appservicevirtualnetworkswiftconnection.AppServiceVirtualNetworkSwiftConnection_IsTerraformResource(x interface{}) *bool
 ```
@@ -419,7 +419,7 @@ appservicevirtualnetworkswiftconnection.AppServiceVirtualNetworkSwiftConnection_
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.appServiceVirtualNetworkSwiftConnection.AppServiceVirtualNetworkSwiftConnection.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appservicevirtualnetworkswiftconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicevirtualnetworkswiftconnection"
 
 appservicevirtualnetworkswiftconnection.AppServiceVirtualNetworkSwiftConnection_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -736,7 +736,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appServiceVirtualNetworkSwiftConnection.AppServiceVirtualNetworkSwiftConnectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appservicevirtualnetworkswiftconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicevirtualnetworkswiftconnection"
 
 &appservicevirtualnetworkswiftconnection.AppServiceVirtualNetworkSwiftConnectionConfig {
 	Connection: interface{},
@@ -749,7 +749,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appservicevirtual
 	AppServiceId: *string,
 	SubnetId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.appServiceVirtualNetworkSwiftConnection.AppServiceVirtualNetworkSwiftConnectionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appServiceVirtualNetworkSwiftConnection.AppServiceVirtualNetworkSwiftConnectionTimeouts,
 }
 ```
 
@@ -899,7 +899,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appServiceVirtualNetworkSwiftConnection.AppServiceVirtualNetworkSwiftConnectionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appservicevirtualnetworkswiftconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicevirtualnetworkswiftconnection"
 
 &appservicevirtualnetworkswiftconnection.AppServiceVirtualNetworkSwiftConnectionTimeouts {
 	Create: *string,
@@ -975,7 +975,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appServiceVirtualNetworkSwiftConnection.AppServiceVirtualNetworkSwiftConnectionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appservicevirtualnetworkswiftconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicevirtualnetworkswiftconnection"
 
 appservicevirtualnetworkswiftconnection.NewAppServiceVirtualNetworkSwiftConnectionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceVirtualNetworkSwiftConnectionTimeoutsOutputReference
 ```

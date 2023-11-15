@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.galleryApplicationVersion.GalleryApplicationVersion.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/galleryapplicationversion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/galleryapplicationversion"
 
 galleryapplicationversion.NewGalleryApplicationVersion(scope Construct, id *string, config GalleryApplicationVersionConfig) GalleryApplicationVersion
 ```
@@ -426,7 +426,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.galleryApplicationVersion.GalleryApplicationVersion.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/galleryapplicationversion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/galleryapplicationversion"
 
 galleryapplicationversion.GalleryApplicationVersion_IsConstruct(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.galleryApplicationVersion.GalleryApplicationVersion.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/galleryapplicationversion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/galleryapplicationversion"
 
 galleryapplicationversion.GalleryApplicationVersion_IsTerraformElement(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ galleryapplicationversion.GalleryApplicationVersion_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.galleryApplicationVersion.GalleryApplicationVersion.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/galleryapplicationversion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/galleryapplicationversion"
 
 galleryapplicationversion.GalleryApplicationVersion_IsTerraformResource(x interface{}) *bool
 ```
@@ -486,7 +486,7 @@ galleryapplicationversion.GalleryApplicationVersion_IsTerraformResource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.galleryApplicationVersion.GalleryApplicationVersion.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/galleryapplicationversion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/galleryapplicationversion"
 
 galleryapplicationversion.GalleryApplicationVersion_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -979,7 +979,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.galleryApplicationVersion.GalleryApplicationVersionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/galleryapplicationversion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/galleryapplicationversion"
 
 &galleryapplicationversion.GalleryApplicationVersionConfig {
 	Connection: interface{},
@@ -991,16 +991,16 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/galleryapplicatio
 	Provisioners: *[]interface{},
 	GalleryApplicationId: *string,
 	Location: *string,
-	ManageAction: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.galleryApplicationVersion.GalleryApplicationVersionManageAction,
+	ManageAction: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.galleryApplicationVersion.GalleryApplicationVersionManageAction,
 	Name: *string,
-	Source: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.galleryApplicationVersion.GalleryApplicationVersionSource,
+	Source: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.galleryApplicationVersion.GalleryApplicationVersionSource,
 	TargetRegion: interface{},
 	EnableHealthCheck: interface{},
 	EndOfLifeDate: *string,
 	ExcludeFromLatest: interface{},
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.galleryApplicationVersion.GalleryApplicationVersionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.galleryApplicationVersion.GalleryApplicationVersionTimeouts,
 }
 ```
 
@@ -1260,7 +1260,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.galleryApplicationVersion.GalleryApplicationVersionManageAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/galleryapplicationversion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/galleryapplicationversion"
 
 &galleryapplicationversion.GalleryApplicationVersionManageAction {
 	Install: *string,
@@ -1320,7 +1320,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.galleryApplicationVersion.GalleryApplicationVersionSource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/galleryapplicationversion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/galleryapplicationversion"
 
 &galleryapplicationversion.GalleryApplicationVersionSource {
 	MediaLink: *string,
@@ -1366,7 +1366,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.galleryApplicationVersion.GalleryApplicationVersionTargetRegion.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/galleryapplicationversion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/galleryapplicationversion"
 
 &galleryapplicationversion.GalleryApplicationVersionTargetRegion {
 	Name: *string,
@@ -1426,7 +1426,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.galleryApplicationVersion.GalleryApplicationVersionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/galleryapplicationversion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/galleryapplicationversion"
 
 &galleryapplicationversion.GalleryApplicationVersionTimeouts {
 	Create: *string,
@@ -1502,7 +1502,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.galleryApplicationVersion.GalleryApplicationVersionManageActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/galleryapplicationversion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/galleryapplicationversion"
 
 galleryapplicationversion.NewGalleryApplicationVersionManageActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GalleryApplicationVersionManageActionOutputReference
 ```
@@ -1824,7 +1824,7 @@ func InternalValue() GalleryApplicationVersionManageAction
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.galleryApplicationVersion.GalleryApplicationVersionSourceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/galleryapplicationversion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/galleryapplicationversion"
 
 galleryapplicationversion.NewGalleryApplicationVersionSourceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GalleryApplicationVersionSourceOutputReference
 ```
@@ -2124,7 +2124,7 @@ func InternalValue() GalleryApplicationVersionSource
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.galleryApplicationVersion.GalleryApplicationVersionTargetRegionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/galleryapplicationversion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/galleryapplicationversion"
 
 galleryapplicationversion.NewGalleryApplicationVersionTargetRegionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) GalleryApplicationVersionTargetRegionList
 ```
@@ -2267,7 +2267,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.galleryApplicationVersion.GalleryApplicationVersionTargetRegionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/galleryapplicationversion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/galleryapplicationversion"
 
 galleryapplicationversion.NewGalleryApplicationVersionTargetRegionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) GalleryApplicationVersionTargetRegionOutputReference
 ```
@@ -2607,7 +2607,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.galleryApplicationVersion.GalleryApplicationVersionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/galleryapplicationversion"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/galleryapplicationversion"
 
 galleryapplicationversion.NewGalleryApplicationVersionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) GalleryApplicationVersionTimeoutsOutputReference
 ```

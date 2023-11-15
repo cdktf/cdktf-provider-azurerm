@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.applicationInsightsWebTest.ApplicationInsightsWebTest.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/applicationinsightswebtest"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/applicationinsightswebtest"
 
 applicationinsightswebtest.NewApplicationInsightsWebTest(scope Construct, id *string, config ApplicationInsightsWebTestConfig) ApplicationInsightsWebTest
 ```
@@ -401,7 +401,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.applicationInsightsWebTest.ApplicationInsightsWebTest.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/applicationinsightswebtest"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/applicationinsightswebtest"
 
 applicationinsightswebtest.ApplicationInsightsWebTest_IsConstruct(x interface{}) *bool
 ```
@@ -433,7 +433,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.applicationInsightsWebTest.ApplicationInsightsWebTest.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/applicationinsightswebtest"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/applicationinsightswebtest"
 
 applicationinsightswebtest.ApplicationInsightsWebTest_IsTerraformElement(x interface{}) *bool
 ```
@@ -447,7 +447,7 @@ applicationinsightswebtest.ApplicationInsightsWebTest_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.applicationInsightsWebTest.ApplicationInsightsWebTest.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/applicationinsightswebtest"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/applicationinsightswebtest"
 
 applicationinsightswebtest.ApplicationInsightsWebTest_IsTerraformResource(x interface{}) *bool
 ```
@@ -461,7 +461,7 @@ applicationinsightswebtest.ApplicationInsightsWebTest_IsTerraformResource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.applicationInsightsWebTest.ApplicationInsightsWebTest.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/applicationinsightswebtest"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/applicationinsightswebtest"
 
 applicationinsightswebtest.ApplicationInsightsWebTest_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1031,7 +1031,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.applicationInsightsWebTest.ApplicationInsightsWebTestConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/applicationinsightswebtest"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/applicationinsightswebtest"
 
 &applicationinsightswebtest.ApplicationInsightsWebTestConfig {
 	Connection: interface{},
@@ -1055,7 +1055,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/applicationinsigh
 	RetryEnabled: interface{},
 	Tags: *map[string]*string,
 	Timeout: *f64,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.applicationInsightsWebTest.ApplicationInsightsWebTestTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.applicationInsightsWebTest.ApplicationInsightsWebTestTimeouts,
 }
 ```
 
@@ -1348,7 +1348,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.applicationInsightsWebTest.ApplicationInsightsWebTestTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/applicationinsightswebtest"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/applicationinsightswebtest"
 
 &applicationinsightswebtest.ApplicationInsightsWebTestTimeouts {
 	Create: *string,
@@ -1424,7 +1424,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.applicationInsightsWebTest.ApplicationInsightsWebTestTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/applicationinsightswebtest"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/applicationinsightswebtest"
 
 applicationinsightswebtest.NewApplicationInsightsWebTestTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApplicationInsightsWebTestTimeoutsOutputReference
 ```

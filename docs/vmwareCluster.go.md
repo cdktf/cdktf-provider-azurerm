@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vmwareCluster.VmwareCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vmwarecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vmwarecluster"
 
 vmwarecluster.NewVmwareCluster(scope Construct, id *string, config VmwareClusterConfig) VmwareCluster
 ```
@@ -359,7 +359,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.vmwareCluster.VmwareCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vmwarecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vmwarecluster"
 
 vmwarecluster.VmwareCluster_IsConstruct(x interface{}) *bool
 ```
@@ -391,7 +391,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.vmwareCluster.VmwareCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vmwarecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vmwarecluster"
 
 vmwarecluster.VmwareCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -405,7 +405,7 @@ vmwarecluster.VmwareCluster_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.vmwareCluster.VmwareCluster.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vmwarecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vmwarecluster"
 
 vmwarecluster.VmwareCluster_IsTerraformResource(x interface{}) *bool
 ```
@@ -419,7 +419,7 @@ vmwarecluster.VmwareCluster_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.vmwareCluster.VmwareCluster.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vmwarecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vmwarecluster"
 
 vmwarecluster.VmwareCluster_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -802,7 +802,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vmwareCluster.VmwareClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vmwarecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vmwarecluster"
 
 &vmwarecluster.VmwareClusterConfig {
 	Connection: interface{},
@@ -817,7 +817,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vmwarecluster"
 	SkuName: *string,
 	VmwareCloudId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.vmwareCluster.VmwareClusterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.vmwareCluster.VmwareClusterTimeouts,
 }
 ```
 
@@ -993,7 +993,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vmwareCluster.VmwareClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vmwarecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vmwarecluster"
 
 &vmwarecluster.VmwareClusterTimeouts {
 	Create: *string,
@@ -1069,7 +1069,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vmwareCluster.VmwareClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vmwarecluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vmwarecluster"
 
 vmwarecluster.NewVmwareClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VmwareClusterTimeoutsOutputReference
 ```

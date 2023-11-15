@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryDatasetAzureBlob.DataFactoryDatasetAzureBlob.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorydatasetazureblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetazureblob"
 
 datafactorydatasetazureblob.NewDataFactoryDatasetAzureBlob(scope Construct, id *string, config DataFactoryDatasetAzureBlobConfig) DataFactoryDatasetAzureBlob
 ```
@@ -442,7 +442,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataFactoryDatasetAzureBlob.DataFactoryDatasetAzureBlob.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorydatasetazureblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetazureblob"
 
 datafactorydatasetazureblob.DataFactoryDatasetAzureBlob_IsConstruct(x interface{}) *bool
 ```
@@ -474,7 +474,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataFactoryDatasetAzureBlob.DataFactoryDatasetAzureBlob.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorydatasetazureblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetazureblob"
 
 datafactorydatasetazureblob.DataFactoryDatasetAzureBlob_IsTerraformElement(x interface{}) *bool
 ```
@@ -488,7 +488,7 @@ datafactorydatasetazureblob.DataFactoryDatasetAzureBlob_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataFactoryDatasetAzureBlob.DataFactoryDatasetAzureBlob.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorydatasetazureblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetazureblob"
 
 datafactorydatasetazureblob.DataFactoryDatasetAzureBlob_IsTerraformResource(x interface{}) *bool
 ```
@@ -502,7 +502,7 @@ datafactorydatasetazureblob.DataFactoryDatasetAzureBlob_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataFactoryDatasetAzureBlob.DataFactoryDatasetAzureBlob.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorydatasetazureblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetazureblob"
 
 datafactorydatasetazureblob.DataFactoryDatasetAzureBlob_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1061,7 +1061,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryDatasetAzureBlob.DataFactoryDatasetAzureBlobConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorydatasetazureblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetazureblob"
 
 &datafactorydatasetazureblob.DataFactoryDatasetAzureBlobConfig {
 	Connection: interface{},
@@ -1085,7 +1085,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorydatase
 	Parameters: *map[string]*string,
 	Path: *string,
 	SchemaColumn: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataFactoryDatasetAzureBlob.DataFactoryDatasetAzureBlobTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryDatasetAzureBlob.DataFactoryDatasetAzureBlobTimeouts,
 }
 ```
 
@@ -1380,7 +1380,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryDatasetAzureBlob.DataFactoryDatasetAzureBlobSchemaColumn.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorydatasetazureblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetazureblob"
 
 &datafactorydatasetazureblob.DataFactoryDatasetAzureBlobSchemaColumn {
 	Name: *string,
@@ -1440,7 +1440,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryDatasetAzureBlob.DataFactoryDatasetAzureBlobTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorydatasetazureblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetazureblob"
 
 &datafactorydatasetazureblob.DataFactoryDatasetAzureBlobTimeouts {
 	Create: *string,
@@ -1516,7 +1516,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryDatasetAzureBlob.DataFactoryDatasetAzureBlobSchemaColumnList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorydatasetazureblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetazureblob"
 
 datafactorydatasetazureblob.NewDataFactoryDatasetAzureBlobSchemaColumnList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataFactoryDatasetAzureBlobSchemaColumnList
 ```
@@ -1659,7 +1659,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryDatasetAzureBlob.DataFactoryDatasetAzureBlobSchemaColumnOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorydatasetazureblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetazureblob"
 
 datafactorydatasetazureblob.NewDataFactoryDatasetAzureBlobSchemaColumnOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataFactoryDatasetAzureBlobSchemaColumnOutputReference
 ```
@@ -2006,7 +2006,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryDatasetAzureBlob.DataFactoryDatasetAzureBlobTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorydatasetazureblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetazureblob"
 
 datafactorydatasetazureblob.NewDataFactoryDatasetAzureBlobTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryDatasetAzureBlobTimeoutsOutputReference
 ```

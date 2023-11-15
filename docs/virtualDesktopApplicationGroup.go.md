@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualdesktopapplicationgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualdesktopapplicationgroup"
 
 virtualdesktopapplicationgroup.NewVirtualDesktopApplicationGroup(scope Construct, id *string, config VirtualDesktopApplicationGroupConfig) VirtualDesktopApplicationGroup
 ```
@@ -387,7 +387,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualdesktopapplicationgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualdesktopapplicationgroup"
 
 virtualdesktopapplicationgroup.VirtualDesktopApplicationGroup_IsConstruct(x interface{}) *bool
 ```
@@ -419,7 +419,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualdesktopapplicationgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualdesktopapplicationgroup"
 
 virtualdesktopapplicationgroup.VirtualDesktopApplicationGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -433,7 +433,7 @@ virtualdesktopapplicationgroup.VirtualDesktopApplicationGroup_IsTerraformElement
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroup.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualdesktopapplicationgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualdesktopapplicationgroup"
 
 virtualdesktopapplicationgroup.VirtualDesktopApplicationGroup_IsTerraformResource(x interface{}) *bool
 ```
@@ -447,7 +447,7 @@ virtualdesktopapplicationgroup.VirtualDesktopApplicationGroup_IsTerraformResourc
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroup.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualdesktopapplicationgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualdesktopapplicationgroup"
 
 virtualdesktopapplicationgroup.VirtualDesktopApplicationGroup_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -918,7 +918,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualdesktopapplicationgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualdesktopapplicationgroup"
 
 &virtualdesktopapplicationgroup.VirtualDesktopApplicationGroupConfig {
 	Connection: interface{},
@@ -938,7 +938,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualdesktopapp
 	FriendlyName: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupTimeouts,
 }
 ```
 
@@ -1179,7 +1179,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualdesktopapplicationgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualdesktopapplicationgroup"
 
 &virtualdesktopapplicationgroup.VirtualDesktopApplicationGroupTimeouts {
 	Create: *string,
@@ -1255,7 +1255,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualdesktopapplicationgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualdesktopapplicationgroup"
 
 virtualdesktopapplicationgroup.NewVirtualDesktopApplicationGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VirtualDesktopApplicationGroupTimeoutsOutputReference
 ```

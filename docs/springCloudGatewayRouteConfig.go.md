@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudGatewayRouteConfig.SpringCloudGatewayRouteConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgatewayrouteconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgatewayrouteconfig"
 
 springcloudgatewayrouteconfig.NewSpringCloudGatewayRouteConfig(scope Construct, id *string, config SpringCloudGatewayRouteConfigConfig) SpringCloudGatewayRouteConfig
 ```
@@ -434,7 +434,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.springCloudGatewayRouteConfig.SpringCloudGatewayRouteConfig.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgatewayrouteconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgatewayrouteconfig"
 
 springcloudgatewayrouteconfig.SpringCloudGatewayRouteConfig_IsConstruct(x interface{}) *bool
 ```
@@ -466,7 +466,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.springCloudGatewayRouteConfig.SpringCloudGatewayRouteConfig.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgatewayrouteconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgatewayrouteconfig"
 
 springcloudgatewayrouteconfig.SpringCloudGatewayRouteConfig_IsTerraformElement(x interface{}) *bool
 ```
@@ -480,7 +480,7 @@ springcloudgatewayrouteconfig.SpringCloudGatewayRouteConfig_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.springCloudGatewayRouteConfig.SpringCloudGatewayRouteConfig.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgatewayrouteconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgatewayrouteconfig"
 
 springcloudgatewayrouteconfig.SpringCloudGatewayRouteConfig_IsTerraformResource(x interface{}) *bool
 ```
@@ -494,7 +494,7 @@ springcloudgatewayrouteconfig.SpringCloudGatewayRouteConfig_IsTerraformResource(
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.springCloudGatewayRouteConfig.SpringCloudGatewayRouteConfig.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgatewayrouteconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgatewayrouteconfig"
 
 springcloudgatewayrouteconfig.SpringCloudGatewayRouteConfig_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -965,7 +965,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudGatewayRouteConfig.SpringCloudGatewayRouteConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgatewayrouteconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgatewayrouteconfig"
 
 &springcloudgatewayrouteconfig.SpringCloudGatewayRouteConfigConfig {
 	Connection: interface{},
@@ -979,13 +979,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgatewa
 	SpringCloudGatewayId: *string,
 	Filters: *[]*string,
 	Id: *string,
-	OpenApi: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.springCloudGatewayRouteConfig.SpringCloudGatewayRouteConfigOpenApi,
+	OpenApi: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.springCloudGatewayRouteConfig.SpringCloudGatewayRouteConfigOpenApi,
 	Predicates: *[]*string,
 	Protocol: *string,
 	Route: interface{},
 	SpringCloudAppId: *string,
 	SsoValidationEnabled: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.springCloudGatewayRouteConfig.SpringCloudGatewayRouteConfigTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.springCloudGatewayRouteConfig.SpringCloudGatewayRouteConfigTimeouts,
 }
 ```
 
@@ -1230,7 +1230,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudGatewayRouteConfig.SpringCloudGatewayRouteConfigOpenApi.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgatewayrouteconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgatewayrouteconfig"
 
 &springcloudgatewayrouteconfig.SpringCloudGatewayRouteConfigOpenApi {
 	Uri: *string,
@@ -1262,7 +1262,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudGatewayRouteConfig.SpringCloudGatewayRouteConfigRoute.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgatewayrouteconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgatewayrouteconfig"
 
 &springcloudgatewayrouteconfig.SpringCloudGatewayRouteConfigRoute {
 	Order: *f64,
@@ -1406,7 +1406,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudGatewayRouteConfig.SpringCloudGatewayRouteConfigTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgatewayrouteconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgatewayrouteconfig"
 
 &springcloudgatewayrouteconfig.SpringCloudGatewayRouteConfigTimeouts {
 	Create: *string,
@@ -1482,7 +1482,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudGatewayRouteConfig.SpringCloudGatewayRouteConfigOpenApiOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgatewayrouteconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgatewayrouteconfig"
 
 springcloudgatewayrouteconfig.NewSpringCloudGatewayRouteConfigOpenApiOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudGatewayRouteConfigOpenApiOutputReference
 ```
@@ -1760,7 +1760,7 @@ func InternalValue() SpringCloudGatewayRouteConfigOpenApi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudGatewayRouteConfig.SpringCloudGatewayRouteConfigRouteList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgatewayrouteconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgatewayrouteconfig"
 
 springcloudgatewayrouteconfig.NewSpringCloudGatewayRouteConfigRouteList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SpringCloudGatewayRouteConfigRouteList
 ```
@@ -1903,7 +1903,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudGatewayRouteConfig.SpringCloudGatewayRouteConfigRouteOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgatewayrouteconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgatewayrouteconfig"
 
 springcloudgatewayrouteconfig.NewSpringCloudGatewayRouteConfigRouteOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SpringCloudGatewayRouteConfigRouteOutputReference
 ```
@@ -2424,7 +2424,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudGatewayRouteConfig.SpringCloudGatewayRouteConfigTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudgatewayrouteconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudgatewayrouteconfig"
 
 springcloudgatewayrouteconfig.NewSpringCloudGatewayRouteConfigTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudGatewayRouteConfigTimeoutsOutputReference
 ```

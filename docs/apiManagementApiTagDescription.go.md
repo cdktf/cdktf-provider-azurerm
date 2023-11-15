@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiTagDescription.ApiManagementApiTagDescription.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapitagdescription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapitagdescription"
 
 apimanagementapitagdescription.NewApiManagementApiTagDescription(scope Construct, id *string, config ApiManagementApiTagDescriptionConfig) ApiManagementApiTagDescription
 ```
@@ -380,7 +380,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.apiManagementApiTagDescription.ApiManagementApiTagDescription.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapitagdescription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapitagdescription"
 
 apimanagementapitagdescription.ApiManagementApiTagDescription_IsConstruct(x interface{}) *bool
 ```
@@ -412,7 +412,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.apiManagementApiTagDescription.ApiManagementApiTagDescription.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapitagdescription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapitagdescription"
 
 apimanagementapitagdescription.ApiManagementApiTagDescription_IsTerraformElement(x interface{}) *bool
 ```
@@ -426,7 +426,7 @@ apimanagementapitagdescription.ApiManagementApiTagDescription_IsTerraformElement
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.apiManagementApiTagDescription.ApiManagementApiTagDescription.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapitagdescription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapitagdescription"
 
 apimanagementapitagdescription.ApiManagementApiTagDescription_IsTerraformResource(x interface{}) *bool
 ```
@@ -440,7 +440,7 @@ apimanagementapitagdescription.ApiManagementApiTagDescription_IsTerraformResourc
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.apiManagementApiTagDescription.ApiManagementApiTagDescription.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapitagdescription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapitagdescription"
 
 apimanagementapitagdescription.ApiManagementApiTagDescription_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -801,7 +801,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApiTagDescription.ApiManagementApiTagDescriptionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapitagdescription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapitagdescription"
 
 &apimanagementapitagdescription.ApiManagementApiTagDescriptionConfig {
 	Connection: interface{},
@@ -816,7 +816,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapit
 	ExternalDocumentationDescription: *string,
 	ExternalDocumentationUrl: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.apiManagementApiTagDescription.ApiManagementApiTagDescriptionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementApiTagDescription.ApiManagementApiTagDescriptionTimeouts,
 }
 ```
 
@@ -992,7 +992,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementApiTagDescription.ApiManagementApiTagDescriptionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapitagdescription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapitagdescription"
 
 &apimanagementapitagdescription.ApiManagementApiTagDescriptionTimeouts {
 	Create: *string,
@@ -1068,7 +1068,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementApiTagDescription.ApiManagementApiTagDescriptionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementapitagdescription"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementapitagdescription"
 
 apimanagementapitagdescription.NewApiManagementApiTagDescriptionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementApiTagDescriptionTimeoutsOutputReference
 ```
