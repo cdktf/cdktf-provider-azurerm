@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHdinsightCluster.DataAzurermHdinsightCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhdinsightcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermhdinsightcluster"
 
 dataazurermhdinsightcluster.NewDataAzurermHdinsightCluster(scope Construct, id *string, config DataAzurermHdinsightClusterConfig) DataAzurermHdinsightCluster
 ```
@@ -298,7 +298,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermHdinsightCluster.DataAzurermHdinsightCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhdinsightcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermhdinsightcluster"
 
 dataazurermhdinsightcluster.DataAzurermHdinsightCluster_IsConstruct(x interface{}) *bool
 ```
@@ -330,7 +330,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermHdinsightCluster.DataAzurermHdinsightCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhdinsightcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermhdinsightcluster"
 
 dataazurermhdinsightcluster.DataAzurermHdinsightCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -344,7 +344,7 @@ dataazurermhdinsightcluster.DataAzurermHdinsightCluster_IsTerraformElement(x int
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermHdinsightCluster.DataAzurermHdinsightCluster.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhdinsightcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermhdinsightcluster"
 
 dataazurermhdinsightcluster.DataAzurermHdinsightCluster_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -358,7 +358,7 @@ dataazurermhdinsightcluster.DataAzurermHdinsightCluster_IsTerraformDataSource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermHdinsightCluster.DataAzurermHdinsightCluster.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhdinsightcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermhdinsightcluster"
 
 dataazurermhdinsightcluster.DataAzurermHdinsightCluster_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -785,7 +785,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermHdinsightCluster.DataAzurermHdinsightClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhdinsightcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermhdinsightcluster"
 
 &dataazurermhdinsightcluster.DataAzurermHdinsightClusterConfig {
 	Connection: interface{},
@@ -798,7 +798,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhdinsightc
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermHdinsightCluster.DataAzurermHdinsightClusterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermHdinsightCluster.DataAzurermHdinsightClusterTimeouts,
 }
 ```
 
@@ -948,7 +948,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermHdinsightCluster.DataAzurermHdinsightClusterGateway.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhdinsightcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermhdinsightcluster"
 
 &dataazurermhdinsightcluster.DataAzurermHdinsightClusterGateway {
 
@@ -961,7 +961,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhdinsightc
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermHdinsightCluster.DataAzurermHdinsightClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhdinsightcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermhdinsightcluster"
 
 &dataazurermhdinsightcluster.DataAzurermHdinsightClusterTimeouts {
 	Read: *string,
@@ -995,7 +995,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHdinsightCluster.DataAzurermHdinsightClusterGatewayList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhdinsightcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermhdinsightcluster"
 
 dataazurermhdinsightcluster.NewDataAzurermHdinsightClusterGatewayList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermHdinsightClusterGatewayList
 ```
@@ -1127,7 +1127,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHdinsightCluster.DataAzurermHdinsightClusterGatewayOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhdinsightcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermhdinsightcluster"
 
 dataazurermhdinsightcluster.NewDataAzurermHdinsightClusterGatewayOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermHdinsightClusterGatewayOutputReference
 ```
@@ -1427,7 +1427,7 @@ func InternalValue() DataAzurermHdinsightClusterGateway
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermHdinsightCluster.DataAzurermHdinsightClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermhdinsightcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermhdinsightcluster"
 
 dataazurermhdinsightcluster.NewDataAzurermHdinsightClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermHdinsightClusterTimeoutsOutputReference
 ```

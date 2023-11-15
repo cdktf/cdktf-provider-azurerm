@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceOdbc.DataFactoryLinkedServiceOdbc.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceodbc"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceodbc"
 
 datafactorylinkedserviceodbc.NewDataFactoryLinkedServiceOdbc(scope Construct, id *string, config DataFactoryLinkedServiceOdbcConfig) DataFactoryLinkedServiceOdbc
 ```
@@ -414,7 +414,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceOdbc.DataFactoryLinkedServiceOdbc.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceodbc"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceodbc"
 
 datafactorylinkedserviceodbc.DataFactoryLinkedServiceOdbc_IsConstruct(x interface{}) *bool
 ```
@@ -446,7 +446,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceOdbc.DataFactoryLinkedServiceOdbc.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceodbc"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceodbc"
 
 datafactorylinkedserviceodbc.DataFactoryLinkedServiceOdbc_IsTerraformElement(x interface{}) *bool
 ```
@@ -460,7 +460,7 @@ datafactorylinkedserviceodbc.DataFactoryLinkedServiceOdbc_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceOdbc.DataFactoryLinkedServiceOdbc.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceodbc"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceodbc"
 
 datafactorylinkedserviceodbc.DataFactoryLinkedServiceOdbc_IsTerraformResource(x interface{}) *bool
 ```
@@ -474,7 +474,7 @@ datafactorylinkedserviceodbc.DataFactoryLinkedServiceOdbc_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceOdbc.DataFactoryLinkedServiceOdbc.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceodbc"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceodbc"
 
 datafactorylinkedserviceodbc.DataFactoryLinkedServiceOdbc_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -945,7 +945,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceOdbc.DataFactoryLinkedServiceOdbcBasicAuthentication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceodbc"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceodbc"
 
 &datafactorylinkedserviceodbc.DataFactoryLinkedServiceOdbcBasicAuthentication {
 	Password: *string,
@@ -991,7 +991,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceOdbc.DataFactoryLinkedServiceOdbcConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceodbc"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceodbc"
 
 &datafactorylinkedserviceodbc.DataFactoryLinkedServiceOdbcConfig {
 	Connection: interface{},
@@ -1006,12 +1006,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserv
 	Name: *string,
 	AdditionalProperties: *map[string]*string,
 	Annotations: *[]*string,
-	BasicAuthentication: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryLinkedServiceOdbc.DataFactoryLinkedServiceOdbcBasicAuthentication,
+	BasicAuthentication: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataFactoryLinkedServiceOdbc.DataFactoryLinkedServiceOdbcBasicAuthentication,
 	Description: *string,
 	Id: *string,
 	IntegrationRuntimeName: *string,
 	Parameters: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryLinkedServiceOdbc.DataFactoryLinkedServiceOdbcTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataFactoryLinkedServiceOdbc.DataFactoryLinkedServiceOdbcTimeouts,
 }
 ```
 
@@ -1254,7 +1254,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceOdbc.DataFactoryLinkedServiceOdbcTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceodbc"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceodbc"
 
 &datafactorylinkedserviceodbc.DataFactoryLinkedServiceOdbcTimeouts {
 	Create: *string,
@@ -1330,7 +1330,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceOdbc.DataFactoryLinkedServiceOdbcBasicAuthenticationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceodbc"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceodbc"
 
 datafactorylinkedserviceodbc.NewDataFactoryLinkedServiceOdbcBasicAuthenticationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryLinkedServiceOdbcBasicAuthenticationOutputReference
 ```
@@ -1623,7 +1623,7 @@ func InternalValue() DataFactoryLinkedServiceOdbcBasicAuthentication
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceOdbc.DataFactoryLinkedServiceOdbcTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceodbc"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceodbc"
 
 datafactorylinkedserviceodbc.NewDataFactoryLinkedServiceOdbcTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryLinkedServiceOdbcTimeoutsOutputReference
 ```
