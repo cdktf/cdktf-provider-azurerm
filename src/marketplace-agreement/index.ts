@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/marketplace_agreement
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/marketplace_agreement
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,46 +13,46 @@ import * as cdktf from 'cdktf';
 
 export interface MarketplaceAgreementConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/marketplace_agreement#id MarketplaceAgreement#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/marketplace_agreement#id MarketplaceAgreement#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/marketplace_agreement#offer MarketplaceAgreement#offer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/marketplace_agreement#offer MarketplaceAgreement#offer}
   */
   readonly offer: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/marketplace_agreement#plan MarketplaceAgreement#plan}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/marketplace_agreement#plan MarketplaceAgreement#plan}
   */
   readonly plan: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/marketplace_agreement#publisher MarketplaceAgreement#publisher}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/marketplace_agreement#publisher MarketplaceAgreement#publisher}
   */
   readonly publisher: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/marketplace_agreement#timeouts MarketplaceAgreement#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/marketplace_agreement#timeouts MarketplaceAgreement#timeouts}
   */
   readonly timeouts?: MarketplaceAgreementTimeouts;
 }
 export interface MarketplaceAgreementTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/marketplace_agreement#create MarketplaceAgreement#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/marketplace_agreement#create MarketplaceAgreement#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/marketplace_agreement#delete MarketplaceAgreement#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/marketplace_agreement#delete MarketplaceAgreement#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/marketplace_agreement#read MarketplaceAgreement#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/marketplace_agreement#read MarketplaceAgreement#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/marketplace_agreement#update MarketplaceAgreement#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/marketplace_agreement#update MarketplaceAgreement#update}
   */
   readonly update?: string;
 }
@@ -196,7 +196,7 @@ export class MarketplaceAgreementTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/marketplace_agreement azurerm_marketplace_agreement}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/marketplace_agreement azurerm_marketplace_agreement}
 */
 export class MarketplaceAgreement extends cdktf.TerraformResource {
 
@@ -212,7 +212,7 @@ export class MarketplaceAgreement extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a MarketplaceAgreement resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the MarketplaceAgreement to import
-  * @param importFromId The id of the existing MarketplaceAgreement that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/marketplace_agreement#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing MarketplaceAgreement that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/marketplace_agreement#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the MarketplaceAgreement to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -224,7 +224,7 @@ export class MarketplaceAgreement extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/marketplace_agreement azurerm_marketplace_agreement} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/marketplace_agreement azurerm_marketplace_agreement} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -235,7 +235,7 @@ export class MarketplaceAgreement extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_marketplace_agreement',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.80.0',
+        providerVersion: '3.81.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -1,6 +1,6 @@
 # `azurerm_pim_active_role_assignment`
 
-Refer to the Terraform Registory for docs: [`azurerm_pim_active_role_assignment`](https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/pim_active_role_assignment).
+Refer to the Terraform Registory for docs: [`azurerm_pim_active_role_assignment`](https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/pim_active_role_assignment).
 
 # `pimActiveRoleAssignment` Submodule <a name="`pimActiveRoleAssignment` Submodule" id="@cdktf/provider-azurerm.pimActiveRoleAssignment"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_pim_active_role_assignment`
 
 ### PimActiveRoleAssignment <a name="PimActiveRoleAssignment" id="@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignment"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/pim_active_role_assignment azurerm_pim_active_role_assignment}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/pim_active_role_assignment azurerm_pim_active_role_assignment}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignment.Initializer"></a>
 
@@ -495,7 +495,7 @@ The construct id used in the generated config for the PimActiveRoleAssignment to
 
 The id of the existing PimActiveRoleAssignment that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/pim_active_role_assignment#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/pim_active_role_assignment#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -917,7 +917,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/pimactiveroleassi
 | <code><a href="#@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignmentConfig.property.principalId">PrincipalId</a></code> | <code>*string</code> | The principal id. |
 | <code><a href="#@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignmentConfig.property.roleDefinitionId">RoleDefinitionId</a></code> | <code>*string</code> | The role definition id. |
 | <code><a href="#@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignmentConfig.property.scope">Scope</a></code> | <code>*string</code> | The scope. |
-| <code><a href="#@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignmentConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/pim_active_role_assignment#id PimActiveRoleAssignment#id}. |
+| <code><a href="#@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignmentConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/pim_active_role_assignment#id PimActiveRoleAssignment#id}. |
 | <code><a href="#@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignmentConfig.property.justification">Justification</a></code> | <code>*string</code> | The justification of the role assignment. |
 | <code><a href="#@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignmentConfig.property.schedule">Schedule</a></code> | <code><a href="#@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignmentSchedule">PimActiveRoleAssignmentSchedule</a></code> | schedule block. |
 | <code><a href="#@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignmentConfig.property.ticket">Ticket</a></code> | <code><a href="#@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignmentTicket">PimActiveRoleAssignmentTicket</a></code> | ticket block. |
@@ -1005,7 +1005,7 @@ PrincipalId *string
 
 The principal id.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/pim_active_role_assignment#principal_id PimActiveRoleAssignment#principal_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/pim_active_role_assignment#principal_id PimActiveRoleAssignment#principal_id}
 
 ---
 
@@ -1019,7 +1019,7 @@ RoleDefinitionId *string
 
 The role definition id.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/pim_active_role_assignment#role_definition_id PimActiveRoleAssignment#role_definition_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/pim_active_role_assignment#role_definition_id PimActiveRoleAssignment#role_definition_id}
 
 ---
 
@@ -1033,7 +1033,7 @@ Scope *string
 
 The scope.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/pim_active_role_assignment#scope PimActiveRoleAssignment#scope}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/pim_active_role_assignment#scope PimActiveRoleAssignment#scope}
 
 ---
 
@@ -1045,7 +1045,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/pim_active_role_assignment#id PimActiveRoleAssignment#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/pim_active_role_assignment#id PimActiveRoleAssignment#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1062,7 +1062,7 @@ Justification *string
 
 The justification of the role assignment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/pim_active_role_assignment#justification PimActiveRoleAssignment#justification}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/pim_active_role_assignment#justification PimActiveRoleAssignment#justification}
 
 ---
 
@@ -1076,7 +1076,7 @@ Schedule PimActiveRoleAssignmentSchedule
 
 schedule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/pim_active_role_assignment#schedule PimActiveRoleAssignment#schedule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/pim_active_role_assignment#schedule PimActiveRoleAssignment#schedule}
 
 ---
 
@@ -1090,7 +1090,7 @@ Ticket PimActiveRoleAssignmentTicket
 
 ticket block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/pim_active_role_assignment#ticket PimActiveRoleAssignment#ticket}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/pim_active_role_assignment#ticket PimActiveRoleAssignment#ticket}
 
 ---
 
@@ -1104,7 +1104,7 @@ Timeouts PimActiveRoleAssignmentTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/pim_active_role_assignment#timeouts PimActiveRoleAssignment#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/pim_active_role_assignment#timeouts PimActiveRoleAssignment#timeouts}
 
 ---
 
@@ -1140,7 +1140,7 @@ Expiration PimActiveRoleAssignmentScheduleExpiration
 
 expiration block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/pim_active_role_assignment#expiration PimActiveRoleAssignment#expiration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/pim_active_role_assignment#expiration PimActiveRoleAssignment#expiration}
 
 ---
 
@@ -1154,7 +1154,7 @@ StartDateTime *string
 
 The start date time.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/pim_active_role_assignment#start_date_time PimActiveRoleAssignment#start_date_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/pim_active_role_assignment#start_date_time PimActiveRoleAssignment#start_date_time}
 
 ---
 
@@ -1192,7 +1192,7 @@ DurationDays *f64
 
 The duration of the assignment in days.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/pim_active_role_assignment#duration_days PimActiveRoleAssignment#duration_days}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/pim_active_role_assignment#duration_days PimActiveRoleAssignment#duration_days}
 
 ---
 
@@ -1206,7 +1206,7 @@ DurationHours *f64
 
 The duration of the assignment in hours.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/pim_active_role_assignment#duration_hours PimActiveRoleAssignment#duration_hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/pim_active_role_assignment#duration_hours PimActiveRoleAssignment#duration_hours}
 
 ---
 
@@ -1220,7 +1220,7 @@ EndDateTime *string
 
 The end date time of the assignment.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/pim_active_role_assignment#end_date_time PimActiveRoleAssignment#end_date_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/pim_active_role_assignment#end_date_time PimActiveRoleAssignment#end_date_time}
 
 ---
 
@@ -1256,7 +1256,7 @@ Number *string
 
 The ticket number.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/pim_active_role_assignment#number PimActiveRoleAssignment#number}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/pim_active_role_assignment#number PimActiveRoleAssignment#number}
 
 ---
 
@@ -1270,7 +1270,7 @@ SystemAttribute *string
 
 The ticket system.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/pim_active_role_assignment#system PimActiveRoleAssignment#system}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/pim_active_role_assignment#system PimActiveRoleAssignment#system}
 
 ---
 
@@ -1292,9 +1292,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/pimactiveroleassi
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignmentTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/pim_active_role_assignment#create PimActiveRoleAssignment#create}. |
-| <code><a href="#@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignmentTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/pim_active_role_assignment#delete PimActiveRoleAssignment#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignmentTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/pim_active_role_assignment#read PimActiveRoleAssignment#read}. |
+| <code><a href="#@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignmentTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/pim_active_role_assignment#create PimActiveRoleAssignment#create}. |
+| <code><a href="#@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignmentTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/pim_active_role_assignment#delete PimActiveRoleAssignment#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.pimActiveRoleAssignment.PimActiveRoleAssignmentTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/pim_active_role_assignment#read PimActiveRoleAssignment#read}. |
 
 ---
 
@@ -1306,7 +1306,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/pim_active_role_assignment#create PimActiveRoleAssignment#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/pim_active_role_assignment#create PimActiveRoleAssignment#create}.
 
 ---
 
@@ -1318,7 +1318,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/pim_active_role_assignment#delete PimActiveRoleAssignment#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/pim_active_role_assignment#delete PimActiveRoleAssignment#delete}.
 
 ---
 
@@ -1330,7 +1330,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/pim_active_role_assignment#read PimActiveRoleAssignment#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/pim_active_role_assignment#read PimActiveRoleAssignment#read}.
 
 ---
 

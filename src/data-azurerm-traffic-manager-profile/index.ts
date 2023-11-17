@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/traffic_manager_profile
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/traffic_manager_profile
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,32 +13,32 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermTrafficManagerProfileConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/traffic_manager_profile#id DataAzurermTrafficManagerProfile#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/traffic_manager_profile#id DataAzurermTrafficManagerProfile#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/traffic_manager_profile#name DataAzurermTrafficManagerProfile#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/traffic_manager_profile#name DataAzurermTrafficManagerProfile#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/traffic_manager_profile#resource_group_name DataAzurermTrafficManagerProfile#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/traffic_manager_profile#resource_group_name DataAzurermTrafficManagerProfile#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/traffic_manager_profile#tags DataAzurermTrafficManagerProfile#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/traffic_manager_profile#tags DataAzurermTrafficManagerProfile#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/traffic_manager_profile#traffic_view_enabled DataAzurermTrafficManagerProfile#traffic_view_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/traffic_manager_profile#traffic_view_enabled DataAzurermTrafficManagerProfile#traffic_view_enabled}
   */
   readonly trafficViewEnabled?: boolean | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/traffic_manager_profile#timeouts DataAzurermTrafficManagerProfile#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/traffic_manager_profile#timeouts DataAzurermTrafficManagerProfile#timeouts}
   */
   readonly timeouts?: DataAzurermTrafficManagerProfileTimeouts;
 }
@@ -282,7 +282,7 @@ export class DataAzurermTrafficManagerProfileMonitorConfigList extends cdktf.Com
 }
 export interface DataAzurermTrafficManagerProfileTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/traffic_manager_profile#read DataAzurermTrafficManagerProfile#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/traffic_manager_profile#read DataAzurermTrafficManagerProfile#read}
   */
   readonly read?: string;
 }
@@ -357,7 +357,7 @@ export class DataAzurermTrafficManagerProfileTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/traffic_manager_profile azurerm_traffic_manager_profile}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/traffic_manager_profile azurerm_traffic_manager_profile}
 */
 export class DataAzurermTrafficManagerProfile extends cdktf.TerraformDataSource {
 
@@ -373,7 +373,7 @@ export class DataAzurermTrafficManagerProfile extends cdktf.TerraformDataSource 
   * Generates CDKTF code for importing a DataAzurermTrafficManagerProfile resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermTrafficManagerProfile to import
-  * @param importFromId The id of the existing DataAzurermTrafficManagerProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/traffic_manager_profile#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermTrafficManagerProfile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/traffic_manager_profile#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermTrafficManagerProfile to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -385,7 +385,7 @@ export class DataAzurermTrafficManagerProfile extends cdktf.TerraformDataSource 
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/traffic_manager_profile azurerm_traffic_manager_profile} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/traffic_manager_profile azurerm_traffic_manager_profile} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -396,7 +396,7 @@ export class DataAzurermTrafficManagerProfile extends cdktf.TerraformDataSource 
       terraformResourceType: 'azurerm_traffic_manager_profile',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.80.0',
+        providerVersion: '3.81.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
