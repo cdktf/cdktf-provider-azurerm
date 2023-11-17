@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementGroupUser.ApiManagementGroupUser.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementgroupuser"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementgroupuser"
 
 apimanagementgroupuser.NewApiManagementGroupUser(scope Construct, id *string, config ApiManagementGroupUserConfig) ApiManagementGroupUser
 ```
@@ -359,7 +359,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.apiManagementGroupUser.ApiManagementGroupUser.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementgroupuser"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementgroupuser"
 
 apimanagementgroupuser.ApiManagementGroupUser_IsConstruct(x interface{}) *bool
 ```
@@ -391,7 +391,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.apiManagementGroupUser.ApiManagementGroupUser.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementgroupuser"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementgroupuser"
 
 apimanagementgroupuser.ApiManagementGroupUser_IsTerraformElement(x interface{}) *bool
 ```
@@ -405,7 +405,7 @@ apimanagementgroupuser.ApiManagementGroupUser_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.apiManagementGroupUser.ApiManagementGroupUser.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementgroupuser"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementgroupuser"
 
 apimanagementgroupuser.ApiManagementGroupUser_IsTerraformResource(x interface{}) *bool
 ```
@@ -419,7 +419,7 @@ apimanagementgroupuser.ApiManagementGroupUser_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.apiManagementGroupUser.ApiManagementGroupUser.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementgroupuser"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementgroupuser"
 
 apimanagementgroupuser.ApiManagementGroupUser_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -780,7 +780,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementGroupUser.ApiManagementGroupUserConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementgroupuser"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementgroupuser"
 
 &apimanagementgroupuser.ApiManagementGroupUserConfig {
 	Connection: interface{},
@@ -795,7 +795,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementgroupuse
 	ResourceGroupName: *string,
 	UserId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementGroupUser.ApiManagementGroupUserTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.apiManagementGroupUser.ApiManagementGroupUserTimeouts,
 }
 ```
 
@@ -971,7 +971,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementGroupUser.ApiManagementGroupUserTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementgroupuser"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementgroupuser"
 
 &apimanagementgroupuser.ApiManagementGroupUserTimeouts {
 	Create: *string,
@@ -1047,7 +1047,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementGroupUser.ApiManagementGroupUserTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementgroupuser"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementgroupuser"
 
 apimanagementgroupuser.NewApiManagementGroupUserTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementGroupUserTimeoutsOutputReference
 ```
