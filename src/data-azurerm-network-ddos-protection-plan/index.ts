@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/network_ddos_protection_plan
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/network_ddos_protection_plan
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,34 +8,30 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermNetworkDdosProtectionPlanConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/network_ddos_protection_plan#id DataAzurermNetworkDdosProtectionPlan#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/network_ddos_protection_plan#id DataAzurermNetworkDdosProtectionPlan#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/network_ddos_protection_plan#name DataAzurermNetworkDdosProtectionPlan#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/network_ddos_protection_plan#name DataAzurermNetworkDdosProtectionPlan#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/network_ddos_protection_plan#resource_group_name DataAzurermNetworkDdosProtectionPlan#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/network_ddos_protection_plan#resource_group_name DataAzurermNetworkDdosProtectionPlan#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/network_ddos_protection_plan#tags DataAzurermNetworkDdosProtectionPlan#tags}
-  */
-  readonly tags?: { [key: string]: string };
-  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/network_ddos_protection_plan#timeouts DataAzurermNetworkDdosProtectionPlan#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/network_ddos_protection_plan#timeouts DataAzurermNetworkDdosProtectionPlan#timeouts}
   */
   readonly timeouts?: DataAzurermNetworkDdosProtectionPlanTimeouts;
 }
 export interface DataAzurermNetworkDdosProtectionPlanTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/network_ddos_protection_plan#read DataAzurermNetworkDdosProtectionPlan#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/network_ddos_protection_plan#read DataAzurermNetworkDdosProtectionPlan#read}
   */
   readonly read?: string;
 }
@@ -115,7 +106,7 @@ export class DataAzurermNetworkDdosProtectionPlanTimeoutsOutputReference extends
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/network_ddos_protection_plan azurerm_network_ddos_protection_plan}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/network_ddos_protection_plan azurerm_network_ddos_protection_plan}
 */
 export class DataAzurermNetworkDdosProtectionPlan extends cdktf.TerraformDataSource {
 
@@ -131,7 +122,7 @@ export class DataAzurermNetworkDdosProtectionPlan extends cdktf.TerraformDataSou
   * Generates CDKTF code for importing a DataAzurermNetworkDdosProtectionPlan resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermNetworkDdosProtectionPlan to import
-  * @param importFromId The id of the existing DataAzurermNetworkDdosProtectionPlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/network_ddos_protection_plan#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermNetworkDdosProtectionPlan that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/network_ddos_protection_plan#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermNetworkDdosProtectionPlan to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -143,7 +134,7 @@ export class DataAzurermNetworkDdosProtectionPlan extends cdktf.TerraformDataSou
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/data-sources/network_ddos_protection_plan azurerm_network_ddos_protection_plan} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/network_ddos_protection_plan azurerm_network_ddos_protection_plan} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -154,7 +145,7 @@ export class DataAzurermNetworkDdosProtectionPlan extends cdktf.TerraformDataSou
       terraformResourceType: 'azurerm_network_ddos_protection_plan',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.80.0',
+        providerVersion: '3.81.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -168,7 +159,6 @@ export class DataAzurermNetworkDdosProtectionPlan extends cdktf.TerraformDataSou
     this._id = config.id;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
-    this._tags = config.tags;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -223,19 +213,9 @@ export class DataAzurermNetworkDdosProtectionPlan extends cdktf.TerraformDataSou
     return this._resourceGroupName;
   }
 
-  // tags - computed: false, optional: true, required: false
-  private _tags?: { [key: string]: string }; 
+  // tags - computed: true, optional: false, required: false
+  private _tags = new cdktf.StringMap(this, "tags");
   public get tags() {
-    return this.getStringMapAttribute('tags');
-  }
-  public set tags(value: { [key: string]: string }) {
-    this._tags = value;
-  }
-  public resetTags() {
-    this._tags = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get tagsInput() {
     return this._tags;
   }
 
@@ -269,7 +249,6 @@ export class DataAzurermNetworkDdosProtectionPlan extends cdktf.TerraformDataSou
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
-      tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: dataAzurermNetworkDdosProtectionPlanTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }

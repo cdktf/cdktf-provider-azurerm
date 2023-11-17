@@ -1,6 +1,6 @@
 # `azurerm_synapse_firewall_rule`
 
-Refer to the Terraform Registory for docs: [`azurerm_synapse_firewall_rule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/synapse_firewall_rule).
+Refer to the Terraform Registory for docs: [`azurerm_synapse_firewall_rule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/synapse_firewall_rule).
 
 # `synapseFirewallRule` Submodule <a name="`synapseFirewallRule` Submodule" id="@cdktf/provider-azurerm.synapseFirewallRule"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_synapse_firewall_rule`](htt
 
 ### SynapseFirewallRule <a name="SynapseFirewallRule" id="@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRule"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/synapse_firewall_rule azurerm_synapse_firewall_rule}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/synapse_firewall_rule azurerm_synapse_firewall_rule}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRule.Initializer"></a>
 
@@ -448,7 +448,7 @@ The construct id used in the generated config for the SynapseFirewallRule to imp
 
 The id of the existing SynapseFirewallRule that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/synapse_firewall_rule#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/synapse_firewall_rule#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -810,11 +810,11 @@ new SynapseFirewallRuleConfig {
 | <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleConfig.property.endIpAddress">EndIpAddress</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/synapse_firewall_rule#end_ip_address SynapseFirewallRule#end_ip_address}. |
-| <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/synapse_firewall_rule#name SynapseFirewallRule#name}. |
-| <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleConfig.property.startIpAddress">StartIpAddress</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/synapse_firewall_rule#start_ip_address SynapseFirewallRule#start_ip_address}. |
-| <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleConfig.property.synapseWorkspaceId">SynapseWorkspaceId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/synapse_firewall_rule#synapse_workspace_id SynapseFirewallRule#synapse_workspace_id}. |
-| <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/synapse_firewall_rule#id SynapseFirewallRule#id}. |
+| <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleConfig.property.endIpAddress">EndIpAddress</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/synapse_firewall_rule#end_ip_address SynapseFirewallRule#end_ip_address}. |
+| <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/synapse_firewall_rule#name SynapseFirewallRule#name}. |
+| <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleConfig.property.startIpAddress">StartIpAddress</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/synapse_firewall_rule#start_ip_address SynapseFirewallRule#start_ip_address}. |
+| <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleConfig.property.synapseWorkspaceId">SynapseWorkspaceId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/synapse_firewall_rule#synapse_workspace_id SynapseFirewallRule#synapse_workspace_id}. |
+| <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/synapse_firewall_rule#id SynapseFirewallRule#id}. |
 | <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleTimeouts">SynapseFirewallRuleTimeouts</a></code> | timeouts block. |
 
 ---
@@ -897,7 +897,7 @@ public string EndIpAddress { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/synapse_firewall_rule#end_ip_address SynapseFirewallRule#end_ip_address}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/synapse_firewall_rule#end_ip_address SynapseFirewallRule#end_ip_address}.
 
 ---
 
@@ -909,7 +909,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/synapse_firewall_rule#name SynapseFirewallRule#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/synapse_firewall_rule#name SynapseFirewallRule#name}.
 
 ---
 
@@ -921,7 +921,7 @@ public string StartIpAddress { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/synapse_firewall_rule#start_ip_address SynapseFirewallRule#start_ip_address}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/synapse_firewall_rule#start_ip_address SynapseFirewallRule#start_ip_address}.
 
 ---
 
@@ -933,7 +933,7 @@ public string SynapseWorkspaceId { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/synapse_firewall_rule#synapse_workspace_id SynapseFirewallRule#synapse_workspace_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/synapse_firewall_rule#synapse_workspace_id SynapseFirewallRule#synapse_workspace_id}.
 
 ---
 
@@ -945,7 +945,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/synapse_firewall_rule#id SynapseFirewallRule#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/synapse_firewall_rule#id SynapseFirewallRule#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -962,7 +962,7 @@ public SynapseFirewallRuleTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/synapse_firewall_rule#timeouts SynapseFirewallRule#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/synapse_firewall_rule#timeouts SynapseFirewallRule#timeouts}
 
 ---
 
@@ -985,10 +985,10 @@ new SynapseFirewallRuleTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/synapse_firewall_rule#create SynapseFirewallRule#create}. |
-| <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/synapse_firewall_rule#delete SynapseFirewallRule#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/synapse_firewall_rule#read SynapseFirewallRule#read}. |
-| <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/synapse_firewall_rule#update SynapseFirewallRule#update}. |
+| <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/synapse_firewall_rule#create SynapseFirewallRule#create}. |
+| <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/synapse_firewall_rule#delete SynapseFirewallRule#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/synapse_firewall_rule#read SynapseFirewallRule#read}. |
+| <code><a href="#@cdktf/provider-azurerm.synapseFirewallRule.SynapseFirewallRuleTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/synapse_firewall_rule#update SynapseFirewallRule#update}. |
 
 ---
 
@@ -1000,7 +1000,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/synapse_firewall_rule#create SynapseFirewallRule#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/synapse_firewall_rule#create SynapseFirewallRule#create}.
 
 ---
 
@@ -1012,7 +1012,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/synapse_firewall_rule#delete SynapseFirewallRule#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/synapse_firewall_rule#delete SynapseFirewallRule#delete}.
 
 ---
 
@@ -1024,7 +1024,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/synapse_firewall_rule#read SynapseFirewallRule#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/synapse_firewall_rule#read SynapseFirewallRule#read}.
 
 ---
 
@@ -1036,7 +1036,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/synapse_firewall_rule#update SynapseFirewallRule#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/synapse_firewall_rule#update SynapseFirewallRule#update}.
 
 ---
 

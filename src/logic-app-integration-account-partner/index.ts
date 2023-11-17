@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logic_app_integration_account_partner
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/logic_app_integration_account_partner
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,48 +8,48 @@ import * as cdktf from 'cdktf';
 
 export interface LogicAppIntegrationAccountPartnerConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logic_app_integration_account_partner#id LogicAppIntegrationAccountPartner#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/logic_app_integration_account_partner#id LogicAppIntegrationAccountPartner#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logic_app_integration_account_partner#integration_account_name LogicAppIntegrationAccountPartner#integration_account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/logic_app_integration_account_partner#integration_account_name LogicAppIntegrationAccountPartner#integration_account_name}
   */
   readonly integrationAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logic_app_integration_account_partner#metadata LogicAppIntegrationAccountPartner#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/logic_app_integration_account_partner#metadata LogicAppIntegrationAccountPartner#metadata}
   */
   readonly metadata?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logic_app_integration_account_partner#name LogicAppIntegrationAccountPartner#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/logic_app_integration_account_partner#name LogicAppIntegrationAccountPartner#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logic_app_integration_account_partner#resource_group_name LogicAppIntegrationAccountPartner#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/logic_app_integration_account_partner#resource_group_name LogicAppIntegrationAccountPartner#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * business_identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logic_app_integration_account_partner#business_identity LogicAppIntegrationAccountPartner#business_identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/logic_app_integration_account_partner#business_identity LogicAppIntegrationAccountPartner#business_identity}
   */
   readonly businessIdentity: LogicAppIntegrationAccountPartnerBusinessIdentity[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logic_app_integration_account_partner#timeouts LogicAppIntegrationAccountPartner#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/logic_app_integration_account_partner#timeouts LogicAppIntegrationAccountPartner#timeouts}
   */
   readonly timeouts?: LogicAppIntegrationAccountPartnerTimeouts;
 }
 export interface LogicAppIntegrationAccountPartnerBusinessIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logic_app_integration_account_partner#qualifier LogicAppIntegrationAccountPartner#qualifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/logic_app_integration_account_partner#qualifier LogicAppIntegrationAccountPartner#qualifier}
   */
   readonly qualifier: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logic_app_integration_account_partner#value LogicAppIntegrationAccountPartner#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/logic_app_integration_account_partner#value LogicAppIntegrationAccountPartner#value}
   */
   readonly value: string;
 }
@@ -168,19 +163,19 @@ export class LogicAppIntegrationAccountPartnerBusinessIdentityList extends cdktf
 }
 export interface LogicAppIntegrationAccountPartnerTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logic_app_integration_account_partner#create LogicAppIntegrationAccountPartner#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/logic_app_integration_account_partner#create LogicAppIntegrationAccountPartner#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logic_app_integration_account_partner#delete LogicAppIntegrationAccountPartner#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/logic_app_integration_account_partner#delete LogicAppIntegrationAccountPartner#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logic_app_integration_account_partner#read LogicAppIntegrationAccountPartner#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/logic_app_integration_account_partner#read LogicAppIntegrationAccountPartner#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logic_app_integration_account_partner#update LogicAppIntegrationAccountPartner#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/logic_app_integration_account_partner#update LogicAppIntegrationAccountPartner#update}
   */
   readonly update?: string;
 }
@@ -324,7 +319,7 @@ export class LogicAppIntegrationAccountPartnerTimeoutsOutputReference extends cd
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logic_app_integration_account_partner azurerm_logic_app_integration_account_partner}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/logic_app_integration_account_partner azurerm_logic_app_integration_account_partner}
 */
 export class LogicAppIntegrationAccountPartner extends cdktf.TerraformResource {
 
@@ -340,7 +335,7 @@ export class LogicAppIntegrationAccountPartner extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a LogicAppIntegrationAccountPartner resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the LogicAppIntegrationAccountPartner to import
-  * @param importFromId The id of the existing LogicAppIntegrationAccountPartner that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logic_app_integration_account_partner#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing LogicAppIntegrationAccountPartner that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/logic_app_integration_account_partner#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the LogicAppIntegrationAccountPartner to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -352,7 +347,7 @@ export class LogicAppIntegrationAccountPartner extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/logic_app_integration_account_partner azurerm_logic_app_integration_account_partner} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/logic_app_integration_account_partner azurerm_logic_app_integration_account_partner} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -363,7 +358,7 @@ export class LogicAppIntegrationAccountPartner extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_logic_app_integration_account_partner',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.80.0',
+        providerVersion: '3.81.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

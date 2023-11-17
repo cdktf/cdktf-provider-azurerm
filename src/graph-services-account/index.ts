@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/graph_services_account
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/graph_services_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,50 +8,50 @@ import * as cdktf from 'cdktf';
 
 export interface GraphServicesAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/graph_services_account#application_id GraphServicesAccount#application_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/graph_services_account#application_id GraphServicesAccount#application_id}
   */
   readonly applicationId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/graph_services_account#id GraphServicesAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/graph_services_account#id GraphServicesAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/graph_services_account#name GraphServicesAccount#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/graph_services_account#name GraphServicesAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/graph_services_account#resource_group_name GraphServicesAccount#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/graph_services_account#resource_group_name GraphServicesAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/graph_services_account#tags GraphServicesAccount#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/graph_services_account#tags GraphServicesAccount#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/graph_services_account#timeouts GraphServicesAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/graph_services_account#timeouts GraphServicesAccount#timeouts}
   */
   readonly timeouts?: GraphServicesAccountTimeouts;
 }
 export interface GraphServicesAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/graph_services_account#create GraphServicesAccount#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/graph_services_account#create GraphServicesAccount#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/graph_services_account#delete GraphServicesAccount#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/graph_services_account#delete GraphServicesAccount#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/graph_services_account#read GraphServicesAccount#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/graph_services_account#read GraphServicesAccount#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/graph_services_account#update GraphServicesAccount#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/graph_services_account#update GraphServicesAccount#update}
   */
   readonly update?: string;
 }
@@ -200,7 +195,7 @@ export class GraphServicesAccountTimeoutsOutputReference extends cdktf.ComplexOb
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/graph_services_account azurerm_graph_services_account}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/graph_services_account azurerm_graph_services_account}
 */
 export class GraphServicesAccount extends cdktf.TerraformResource {
 
@@ -216,7 +211,7 @@ export class GraphServicesAccount extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a GraphServicesAccount resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the GraphServicesAccount to import
-  * @param importFromId The id of the existing GraphServicesAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/graph_services_account#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing GraphServicesAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/graph_services_account#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the GraphServicesAccount to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -228,7 +223,7 @@ export class GraphServicesAccount extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.80.0/docs/resources/graph_services_account azurerm_graph_services_account} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/graph_services_account azurerm_graph_services_account} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -239,7 +234,7 @@ export class GraphServicesAccount extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_graph_services_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.80.0',
+        providerVersion: '3.81.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
