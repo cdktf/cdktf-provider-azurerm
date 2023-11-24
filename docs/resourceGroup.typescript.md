@@ -1,6 +1,6 @@
 # `azurerm_resource_group`
 
-Refer to the Terraform Registory for docs: [`azurerm_resource_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/resource_group).
+Refer to the Terraform Registory for docs: [`azurerm_resource_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/resource_group).
 
 # `resourceGroup` Submodule <a name="`resourceGroup` Submodule" id="@cdktf/provider-azurerm.resourceGroup"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_resource_group`](https://re
 
 ### ResourceGroup <a name="ResourceGroup" id="@cdktf/provider-azurerm.resourceGroup.ResourceGroup"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/resource_group azurerm_resource_group}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/resource_group azurerm_resource_group}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceGroup.ResourceGroup.Initializer"></a>
 
@@ -462,7 +462,7 @@ The construct id used in the generated config for the ResourceGroup to import.
 
 The id of the existing ResourceGroup that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/resource_group#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/resource_group#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -810,11 +810,11 @@ const resourceGroupConfig: resourceGroup.ResourceGroupConfig = { ... }
 | <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/resource_group#location ResourceGroup#location}. |
-| <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/resource_group#name ResourceGroup#name}. |
-| <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/resource_group#id ResourceGroup#id}. |
-| <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupConfig.property.managedBy">managedBy</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/resource_group#managed_by ResourceGroup#managed_by}. |
-| <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/resource_group#tags ResourceGroup#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/resource_group#location ResourceGroup#location}. |
+| <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/resource_group#name ResourceGroup#name}. |
+| <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/resource_group#id ResourceGroup#id}. |
+| <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupConfig.property.managedBy">managedBy</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/resource_group#managed_by ResourceGroup#managed_by}. |
+| <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/resource_group#tags ResourceGroup#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupTimeouts">ResourceGroupTimeouts</a></code> | timeouts block. |
 
 ---
@@ -897,7 +897,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/resource_group#location ResourceGroup#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/resource_group#location ResourceGroup#location}.
 
 ---
 
@@ -909,7 +909,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/resource_group#name ResourceGroup#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/resource_group#name ResourceGroup#name}.
 
 ---
 
@@ -921,7 +921,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/resource_group#id ResourceGroup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/resource_group#id ResourceGroup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -936,7 +936,7 @@ public readonly managedBy: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/resource_group#managed_by ResourceGroup#managed_by}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/resource_group#managed_by ResourceGroup#managed_by}.
 
 ---
 
@@ -948,7 +948,7 @@ public readonly tags: {[ key: string ]: string};
 
 - *Type:* {[ key: string ]: string}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/resource_group#tags ResourceGroup#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/resource_group#tags ResourceGroup#tags}.
 
 ---
 
@@ -962,7 +962,7 @@ public readonly timeouts: ResourceGroupTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/resource_group#timeouts ResourceGroup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/resource_group#timeouts ResourceGroup#timeouts}
 
 ---
 
@@ -980,10 +980,10 @@ const resourceGroupTimeouts: resourceGroup.ResourceGroupTimeouts = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/resource_group#create ResourceGroup#create}. |
-| <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/resource_group#delete ResourceGroup#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/resource_group#read ResourceGroup#read}. |
-| <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/resource_group#update ResourceGroup#update}. |
+| <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/resource_group#create ResourceGroup#create}. |
+| <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/resource_group#delete ResourceGroup#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/resource_group#read ResourceGroup#read}. |
+| <code><a href="#@cdktf/provider-azurerm.resourceGroup.ResourceGroupTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/resource_group#update ResourceGroup#update}. |
 
 ---
 
@@ -995,7 +995,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/resource_group#create ResourceGroup#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/resource_group#create ResourceGroup#create}.
 
 ---
 
@@ -1007,7 +1007,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/resource_group#delete ResourceGroup#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/resource_group#delete ResourceGroup#delete}.
 
 ---
 
@@ -1019,7 +1019,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/resource_group#read ResourceGroup#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/resource_group#read ResourceGroup#read}.
 
 ---
 
@@ -1031,7 +1031,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/resource_group#update ResourceGroup#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/resource_group#update ResourceGroup#update}.
 
 ---
 

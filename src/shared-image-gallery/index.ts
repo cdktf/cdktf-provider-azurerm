@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/shared_image_gallery
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/shared_image_gallery
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,60 +8,60 @@ import * as cdktf from 'cdktf';
 
 export interface SharedImageGalleryConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/shared_image_gallery#description SharedImageGallery#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/shared_image_gallery#description SharedImageGallery#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/shared_image_gallery#id SharedImageGallery#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/shared_image_gallery#id SharedImageGallery#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/shared_image_gallery#location SharedImageGallery#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/shared_image_gallery#location SharedImageGallery#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/shared_image_gallery#name SharedImageGallery#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/shared_image_gallery#name SharedImageGallery#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/shared_image_gallery#resource_group_name SharedImageGallery#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/shared_image_gallery#resource_group_name SharedImageGallery#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/shared_image_gallery#tags SharedImageGallery#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/shared_image_gallery#tags SharedImageGallery#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
   * sharing block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/shared_image_gallery#sharing SharedImageGallery#sharing}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/shared_image_gallery#sharing SharedImageGallery#sharing}
   */
   readonly sharing?: SharedImageGallerySharing;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/shared_image_gallery#timeouts SharedImageGallery#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/shared_image_gallery#timeouts SharedImageGallery#timeouts}
   */
   readonly timeouts?: SharedImageGalleryTimeouts;
 }
 export interface SharedImageGallerySharingCommunityGallery {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/shared_image_gallery#eula SharedImageGallery#eula}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/shared_image_gallery#eula SharedImageGallery#eula}
   */
   readonly eula: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/shared_image_gallery#prefix SharedImageGallery#prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/shared_image_gallery#prefix SharedImageGallery#prefix}
   */
   readonly prefix: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/shared_image_gallery#publisher_email SharedImageGallery#publisher_email}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/shared_image_gallery#publisher_email SharedImageGallery#publisher_email}
   */
   readonly publisherEmail: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/shared_image_gallery#publisher_uri SharedImageGallery#publisher_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/shared_image_gallery#publisher_uri SharedImageGallery#publisher_uri}
   */
   readonly publisherUri: string;
 }
@@ -193,13 +188,13 @@ export class SharedImageGallerySharingCommunityGalleryOutputReference extends cd
 }
 export interface SharedImageGallerySharing {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/shared_image_gallery#permission SharedImageGallery#permission}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/shared_image_gallery#permission SharedImageGallery#permission}
   */
   readonly permission: string;
   /**
   * community_gallery block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/shared_image_gallery#community_gallery SharedImageGallery#community_gallery}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/shared_image_gallery#community_gallery SharedImageGallery#community_gallery}
   */
   readonly communityGallery?: SharedImageGallerySharingCommunityGallery;
 }
@@ -284,19 +279,19 @@ export class SharedImageGallerySharingOutputReference extends cdktf.ComplexObjec
 }
 export interface SharedImageGalleryTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/shared_image_gallery#create SharedImageGallery#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/shared_image_gallery#create SharedImageGallery#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/shared_image_gallery#delete SharedImageGallery#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/shared_image_gallery#delete SharedImageGallery#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/shared_image_gallery#read SharedImageGallery#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/shared_image_gallery#read SharedImageGallery#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/shared_image_gallery#update SharedImageGallery#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/shared_image_gallery#update SharedImageGallery#update}
   */
   readonly update?: string;
 }
@@ -440,7 +435,7 @@ export class SharedImageGalleryTimeoutsOutputReference extends cdktf.ComplexObje
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/shared_image_gallery azurerm_shared_image_gallery}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/shared_image_gallery azurerm_shared_image_gallery}
 */
 export class SharedImageGallery extends cdktf.TerraformResource {
 
@@ -456,7 +451,7 @@ export class SharedImageGallery extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SharedImageGallery resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SharedImageGallery to import
-  * @param importFromId The id of the existing SharedImageGallery that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/shared_image_gallery#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SharedImageGallery that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/shared_image_gallery#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SharedImageGallery to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -468,7 +463,7 @@ export class SharedImageGallery extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/shared_image_gallery azurerm_shared_image_gallery} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/shared_image_gallery azurerm_shared_image_gallery} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -479,7 +474,7 @@ export class SharedImageGallery extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_shared_image_gallery',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.81.0',
+        providerVersion: '3.82.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
