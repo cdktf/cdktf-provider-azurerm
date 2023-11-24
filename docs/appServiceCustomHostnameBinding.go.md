@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appServiceCustomHostnameBinding.AppServiceCustomHostnameBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicecustomhostnamebinding"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appservicecustomhostnamebinding"
 
 appservicecustomhostnamebinding.NewAppServiceCustomHostnameBinding(scope Construct, id *string, config AppServiceCustomHostnameBindingConfig) AppServiceCustomHostnameBinding
 ```
@@ -373,7 +373,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.appServiceCustomHostnameBinding.AppServiceCustomHostnameBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicecustomhostnamebinding"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appservicecustomhostnamebinding"
 
 appservicecustomhostnamebinding.AppServiceCustomHostnameBinding_IsConstruct(x interface{}) *bool
 ```
@@ -405,7 +405,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.appServiceCustomHostnameBinding.AppServiceCustomHostnameBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicecustomhostnamebinding"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appservicecustomhostnamebinding"
 
 appservicecustomhostnamebinding.AppServiceCustomHostnameBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -419,7 +419,7 @@ appservicecustomhostnamebinding.AppServiceCustomHostnameBinding_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.appServiceCustomHostnameBinding.AppServiceCustomHostnameBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicecustomhostnamebinding"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appservicecustomhostnamebinding"
 
 appservicecustomhostnamebinding.AppServiceCustomHostnameBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -433,7 +433,7 @@ appservicecustomhostnamebinding.AppServiceCustomHostnameBinding_IsTerraformResou
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.appServiceCustomHostnameBinding.AppServiceCustomHostnameBinding.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicecustomhostnamebinding"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appservicecustomhostnamebinding"
 
 appservicecustomhostnamebinding.AppServiceCustomHostnameBinding_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -827,7 +827,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appServiceCustomHostnameBinding.AppServiceCustomHostnameBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicecustomhostnamebinding"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appservicecustomhostnamebinding"
 
 &appservicecustomhostnamebinding.AppServiceCustomHostnameBindingConfig {
 	Connection: interface{},
@@ -843,7 +843,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicecustomhostn
 	Id: *string,
 	SslState: *string,
 	Thumbprint: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.appServiceCustomHostnameBinding.AppServiceCustomHostnameBindingTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.appServiceCustomHostnameBinding.AppServiceCustomHostnameBindingTimeouts,
 }
 ```
 
@@ -1032,7 +1032,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appServiceCustomHostnameBinding.AppServiceCustomHostnameBindingTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicecustomhostnamebinding"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appservicecustomhostnamebinding"
 
 &appservicecustomhostnamebinding.AppServiceCustomHostnameBindingTimeouts {
 	Create: *string,
@@ -1094,7 +1094,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appServiceCustomHostnameBinding.AppServiceCustomHostnameBindingTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/appservicecustomhostnamebinding"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appservicecustomhostnamebinding"
 
 appservicecustomhostnamebinding.NewAppServiceCustomHostnameBindingTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceCustomHostnameBindingTimeoutsOutputReference
 ```

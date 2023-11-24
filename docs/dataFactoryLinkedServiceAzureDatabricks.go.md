@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureDatabricks.DataFactoryLinkedServiceAzureDatabricks.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazuredatabricks"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceazuredatabricks"
 
 datafactorylinkedserviceazuredatabricks.NewDataFactoryLinkedServiceAzureDatabricks(scope Construct, id *string, config DataFactoryLinkedServiceAzureDatabricksConfig) DataFactoryLinkedServiceAzureDatabricks
 ```
@@ -475,7 +475,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureDatabricks.DataFactoryLinkedServiceAzureDatabricks.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazuredatabricks"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceazuredatabricks"
 
 datafactorylinkedserviceazuredatabricks.DataFactoryLinkedServiceAzureDatabricks_IsConstruct(x interface{}) *bool
 ```
@@ -507,7 +507,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureDatabricks.DataFactoryLinkedServiceAzureDatabricks.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazuredatabricks"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceazuredatabricks"
 
 datafactorylinkedserviceazuredatabricks.DataFactoryLinkedServiceAzureDatabricks_IsTerraformElement(x interface{}) *bool
 ```
@@ -521,7 +521,7 @@ datafactorylinkedserviceazuredatabricks.DataFactoryLinkedServiceAzureDatabricks_
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureDatabricks.DataFactoryLinkedServiceAzureDatabricks.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazuredatabricks"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceazuredatabricks"
 
 datafactorylinkedserviceazuredatabricks.DataFactoryLinkedServiceAzureDatabricks_IsTerraformResource(x interface{}) *bool
 ```
@@ -535,7 +535,7 @@ datafactorylinkedserviceazuredatabricks.DataFactoryLinkedServiceAzureDatabricks_
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureDatabricks.DataFactoryLinkedServiceAzureDatabricks.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazuredatabricks"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceazuredatabricks"
 
 datafactorylinkedserviceazuredatabricks.DataFactoryLinkedServiceAzureDatabricks_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1116,7 +1116,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureDatabricks.DataFactoryLinkedServiceAzureDatabricksConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazuredatabricks"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceazuredatabricks"
 
 &datafactorylinkedserviceazuredatabricks.DataFactoryLinkedServiceAzureDatabricksConfig {
 	Connection: interface{},
@@ -1135,13 +1135,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserv
 	Description: *string,
 	ExistingClusterId: *string,
 	Id: *string,
-	InstancePool: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryLinkedServiceAzureDatabricks.DataFactoryLinkedServiceAzureDatabricksInstancePool,
+	InstancePool: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataFactoryLinkedServiceAzureDatabricks.DataFactoryLinkedServiceAzureDatabricksInstancePool,
 	IntegrationRuntimeName: *string,
-	KeyVaultPassword: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryLinkedServiceAzureDatabricks.DataFactoryLinkedServiceAzureDatabricksKeyVaultPassword,
+	KeyVaultPassword: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataFactoryLinkedServiceAzureDatabricks.DataFactoryLinkedServiceAzureDatabricksKeyVaultPassword,
 	MsiWorkSpaceResourceId: *string,
-	NewClusterConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryLinkedServiceAzureDatabricks.DataFactoryLinkedServiceAzureDatabricksNewClusterConfig,
+	NewClusterConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataFactoryLinkedServiceAzureDatabricks.DataFactoryLinkedServiceAzureDatabricksNewClusterConfig,
 	Parameters: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryLinkedServiceAzureDatabricks.DataFactoryLinkedServiceAzureDatabricksTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataFactoryLinkedServiceAzureDatabricks.DataFactoryLinkedServiceAzureDatabricksTimeouts,
 }
 ```
 
@@ -1453,7 +1453,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureDatabricks.DataFactoryLinkedServiceAzureDatabricksInstancePool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazuredatabricks"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceazuredatabricks"
 
 &datafactorylinkedserviceazuredatabricks.DataFactoryLinkedServiceAzureDatabricksInstancePool {
 	ClusterVersion: *string,
@@ -1527,7 +1527,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureDatabricks.DataFactoryLinkedServiceAzureDatabricksKeyVaultPassword.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazuredatabricks"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceazuredatabricks"
 
 &datafactorylinkedserviceazuredatabricks.DataFactoryLinkedServiceAzureDatabricksKeyVaultPassword {
 	LinkedServiceName: *string,
@@ -1573,7 +1573,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureDatabricks.DataFactoryLinkedServiceAzureDatabricksNewClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazuredatabricks"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceazuredatabricks"
 
 &datafactorylinkedserviceazuredatabricks.DataFactoryLinkedServiceAzureDatabricksNewClusterConfig {
 	ClusterVersion: *string,
@@ -1731,7 +1731,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureDatabricks.DataFactoryLinkedServiceAzureDatabricksTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazuredatabricks"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceazuredatabricks"
 
 &datafactorylinkedserviceazuredatabricks.DataFactoryLinkedServiceAzureDatabricksTimeouts {
 	Create: *string,
@@ -1807,7 +1807,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureDatabricks.DataFactoryLinkedServiceAzureDatabricksInstancePoolOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazuredatabricks"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceazuredatabricks"
 
 datafactorylinkedserviceazuredatabricks.NewDataFactoryLinkedServiceAzureDatabricksInstancePoolOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryLinkedServiceAzureDatabricksInstancePoolOutputReference
 ```
@@ -2158,7 +2158,7 @@ func InternalValue() DataFactoryLinkedServiceAzureDatabricksInstancePool
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureDatabricks.DataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazuredatabricks"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceazuredatabricks"
 
 datafactorylinkedserviceazuredatabricks.NewDataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryLinkedServiceAzureDatabricksKeyVaultPasswordOutputReference
 ```
@@ -2451,7 +2451,7 @@ func InternalValue() DataFactoryLinkedServiceAzureDatabricksKeyVaultPassword
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureDatabricks.DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazuredatabricks"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceazuredatabricks"
 
 datafactorylinkedserviceazuredatabricks.NewDataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryLinkedServiceAzureDatabricksNewClusterConfigOutputReference
 ```
@@ -2976,7 +2976,7 @@ func InternalValue() DataFactoryLinkedServiceAzureDatabricksNewClusterConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureDatabricks.DataFactoryLinkedServiceAzureDatabricksTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedserviceazuredatabricks"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceazuredatabricks"
 
 datafactorylinkedserviceazuredatabricks.NewDataFactoryLinkedServiceAzureDatabricksTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryLinkedServiceAzureDatabricksTimeoutsOutputReference
 ```

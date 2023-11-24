@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.attestationProvider.AttestationProvider.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/attestationprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/attestationprovider"
 
 attestationprovider.NewAttestationProvider(scope Construct, id *string, config AttestationProviderConfig) AttestationProvider
 ```
@@ -421,7 +421,7 @@ func ResetTpmPolicyBase64()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.attestationProvider.AttestationProvider.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/attestationprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/attestationprovider"
 
 attestationprovider.AttestationProvider_IsConstruct(x interface{}) *bool
 ```
@@ -453,7 +453,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.attestationProvider.AttestationProvider.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/attestationprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/attestationprovider"
 
 attestationprovider.AttestationProvider_IsTerraformElement(x interface{}) *bool
 ```
@@ -467,7 +467,7 @@ attestationprovider.AttestationProvider_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.attestationProvider.AttestationProvider.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/attestationprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/attestationprovider"
 
 attestationprovider.AttestationProvider_IsTerraformResource(x interface{}) *bool
 ```
@@ -481,7 +481,7 @@ attestationprovider.AttestationProvider_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.attestationProvider.AttestationProvider.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/attestationprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/attestationprovider"
 
 attestationprovider.AttestationProvider_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -996,7 +996,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.attestationProvider.AttestationProviderConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/attestationprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/attestationprovider"
 
 &attestationprovider.AttestationProviderConfig {
 	Connection: interface{},
@@ -1016,7 +1016,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/attestationprovider"
 	SevSnpPolicyBase64: *string,
 	SgxEnclavePolicyBase64: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.attestationProvider.AttestationProviderTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.attestationProvider.AttestationProviderTimeouts,
 	TpmPolicyBase64: *string,
 }
 ```
@@ -1273,7 +1273,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.attestationProvider.AttestationProviderPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/attestationprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/attestationprovider"
 
 &attestationprovider.AttestationProviderPolicy {
 	Data: *string,
@@ -1319,7 +1319,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.attestationProvider.AttestationProviderTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/attestationprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/attestationprovider"
 
 &attestationprovider.AttestationProviderTimeouts {
 	Create: *string,
@@ -1395,7 +1395,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.attestationProvider.AttestationProviderPolicyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/attestationprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/attestationprovider"
 
 attestationprovider.NewAttestationProviderPolicyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) AttestationProviderPolicyList
 ```
@@ -1538,7 +1538,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.attestationProvider.AttestationProviderPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/attestationprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/attestationprovider"
 
 attestationprovider.NewAttestationProviderPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) AttestationProviderPolicyOutputReference
 ```
@@ -1863,7 +1863,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.attestationProvider.AttestationProviderTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/attestationprovider"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/attestationprovider"
 
 attestationprovider.NewAttestationProviderTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AttestationProviderTimeoutsOutputReference
 ```

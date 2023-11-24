@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 firewallpolicyrulecollectiongroup.NewFirewallPolicyRuleCollectionGroup(scope Construct, id *string, config FirewallPolicyRuleCollectionGroupConfig) FirewallPolicyRuleCollectionGroup
 ```
@@ -419,7 +419,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 firewallpolicyrulecollectiongroup.FirewallPolicyRuleCollectionGroup_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 firewallpolicyrulecollectiongroup.FirewallPolicyRuleCollectionGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ firewallpolicyrulecollectiongroup.FirewallPolicyRuleCollectionGroup_IsTerraformE
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroup.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 firewallpolicyrulecollectiongroup.FirewallPolicyRuleCollectionGroup_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ firewallpolicyrulecollectiongroup.FirewallPolicyRuleCollectionGroup_IsTerraformR
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroup.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 firewallpolicyrulecollectiongroup.FirewallPolicyRuleCollectionGroup_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -884,7 +884,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupApplicationRuleCollection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 &firewallpolicyrulecollectiongroup.FirewallPolicyRuleCollectionGroupApplicationRuleCollection {
 	Action: *string,
@@ -960,7 +960,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 &firewallpolicyrulecollectiongroup.FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRule {
 	Name: *string,
@@ -1150,7 +1150,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleHttpHeaders.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 &firewallpolicyrulecollectiongroup.FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleHttpHeaders {
 	Name: *string,
@@ -1196,7 +1196,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleProtocols.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 &firewallpolicyrulecollectiongroup.FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleProtocols {
 	Port: *f64,
@@ -1242,7 +1242,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 &firewallpolicyrulecollectiongroup.FirewallPolicyRuleCollectionGroupConfig {
 	Connection: interface{},
@@ -1259,7 +1259,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecol
 	Id: *string,
 	NatRuleCollection: interface{},
 	NetworkRuleCollection: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupTimeouts,
 }
 ```
 
@@ -1467,7 +1467,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupNatRuleCollection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 &firewallpolicyrulecollectiongroup.FirewallPolicyRuleCollectionGroupNatRuleCollection {
 	Action: *string,
@@ -1543,7 +1543,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupNatRuleCollectionRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 &firewallpolicyrulecollectiongroup.FirewallPolicyRuleCollectionGroupNatRuleCollectionRule {
 	Name: *string,
@@ -1701,7 +1701,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupNetworkRuleCollection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 &firewallpolicyrulecollectiongroup.FirewallPolicyRuleCollectionGroupNetworkRuleCollection {
 	Action: *string,
@@ -1777,7 +1777,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupNetworkRuleCollectionRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 &firewallpolicyrulecollectiongroup.FirewallPolicyRuleCollectionGroupNetworkRuleCollectionRule {
 	DestinationPorts: *[]*string,
@@ -1921,7 +1921,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 &firewallpolicyrulecollectiongroup.FirewallPolicyRuleCollectionGroupTimeouts {
 	Create: *string,
@@ -1997,7 +1997,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupApplicationRuleCollectionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 firewallpolicyrulecollectiongroup.NewFirewallPolicyRuleCollectionGroupApplicationRuleCollectionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FirewallPolicyRuleCollectionGroupApplicationRuleCollectionList
 ```
@@ -2140,7 +2140,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupApplicationRuleCollectionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 firewallpolicyrulecollectiongroup.NewFirewallPolicyRuleCollectionGroupApplicationRuleCollectionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FirewallPolicyRuleCollectionGroupApplicationRuleCollectionOutputReference
 ```
@@ -2508,7 +2508,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleHttpHeadersList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 firewallpolicyrulecollectiongroup.NewFirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleHttpHeadersList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleHttpHeadersList
 ```
@@ -2651,7 +2651,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleHttpHeadersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 firewallpolicyrulecollectiongroup.NewFirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleHttpHeadersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleHttpHeadersOutputReference
 ```
@@ -2962,7 +2962,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 firewallpolicyrulecollectiongroup.NewFirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleList
 ```
@@ -3105,7 +3105,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 firewallpolicyrulecollectiongroup.NewFirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleOutputReference
 ```
@@ -3739,7 +3739,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleProtocolsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 firewallpolicyrulecollectiongroup.NewFirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleProtocolsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleProtocolsList
 ```
@@ -3882,7 +3882,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleProtocolsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 firewallpolicyrulecollectiongroup.NewFirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleProtocolsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FirewallPolicyRuleCollectionGroupApplicationRuleCollectionRuleProtocolsOutputReference
 ```
@@ -4193,7 +4193,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupNatRuleCollectionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 firewallpolicyrulecollectiongroup.NewFirewallPolicyRuleCollectionGroupNatRuleCollectionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FirewallPolicyRuleCollectionGroupNatRuleCollectionList
 ```
@@ -4336,7 +4336,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupNatRuleCollectionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 firewallpolicyrulecollectiongroup.NewFirewallPolicyRuleCollectionGroupNatRuleCollectionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FirewallPolicyRuleCollectionGroupNatRuleCollectionOutputReference
 ```
@@ -4704,7 +4704,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupNatRuleCollectionRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 firewallpolicyrulecollectiongroup.NewFirewallPolicyRuleCollectionGroupNatRuleCollectionRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FirewallPolicyRuleCollectionGroupNatRuleCollectionRuleList
 ```
@@ -4847,7 +4847,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupNatRuleCollectionRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 firewallpolicyrulecollectiongroup.NewFirewallPolicyRuleCollectionGroupNatRuleCollectionRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FirewallPolicyRuleCollectionGroupNatRuleCollectionRuleOutputReference
 ```
@@ -5383,7 +5383,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupNetworkRuleCollectionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 firewallpolicyrulecollectiongroup.NewFirewallPolicyRuleCollectionGroupNetworkRuleCollectionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FirewallPolicyRuleCollectionGroupNetworkRuleCollectionList
 ```
@@ -5526,7 +5526,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupNetworkRuleCollectionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 firewallpolicyrulecollectiongroup.NewFirewallPolicyRuleCollectionGroupNetworkRuleCollectionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FirewallPolicyRuleCollectionGroupNetworkRuleCollectionOutputReference
 ```
@@ -5894,7 +5894,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupNetworkRuleCollectionRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 firewallpolicyrulecollectiongroup.NewFirewallPolicyRuleCollectionGroupNetworkRuleCollectionRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FirewallPolicyRuleCollectionGroupNetworkRuleCollectionRuleList
 ```
@@ -6037,7 +6037,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupNetworkRuleCollectionRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 firewallpolicyrulecollectiongroup.NewFirewallPolicyRuleCollectionGroupNetworkRuleCollectionRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FirewallPolicyRuleCollectionGroupNetworkRuleCollectionRuleOutputReference
 ```
@@ -6544,7 +6544,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallPolicyRuleCollectionGroup.FirewallPolicyRuleCollectionGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallpolicyrulecollectiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallpolicyrulecollectiongroup"
 
 firewallpolicyrulecollectiongroup.NewFirewallPolicyRuleCollectionGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirewallPolicyRuleCollectionGroupTimeoutsOutputReference
 ```

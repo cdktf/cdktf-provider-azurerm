@@ -13,7 +13,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementpolicy"
 
 apimanagementpolicy.NewApiManagementPolicyA(scope Construct, id *string, config ApiManagementPolicyAConfig) ApiManagementPolicyA
 ```
@@ -373,7 +373,7 @@ func ResetXmlLink()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementpolicy"
 
 apimanagementpolicy.ApiManagementPolicyA_IsConstruct(x interface{}) *bool
 ```
@@ -405,7 +405,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementpolicy"
 
 apimanagementpolicy.ApiManagementPolicyA_IsTerraformElement(x interface{}) *bool
 ```
@@ -419,7 +419,7 @@ apimanagementpolicy.ApiManagementPolicyA_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementpolicy"
 
 apimanagementpolicy.ApiManagementPolicyA_IsTerraformResource(x interface{}) *bool
 ```
@@ -433,7 +433,7 @@ apimanagementpolicy.ApiManagementPolicyA_IsTerraformResource(x interface{}) *boo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementpolicy"
 
 apimanagementpolicy.ApiManagementPolicyA_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -772,7 +772,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementpolicy"
 
 &apimanagementpolicy.ApiManagementPolicyAConfig {
 	Connection: interface{},
@@ -784,7 +784,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementpolicy"
 	Provisioners: *[]interface{},
 	ApiManagementId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementPolicy.ApiManagementPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.apiManagementPolicy.ApiManagementPolicyTimeouts,
 	XmlContent: *string,
 	XmlLink: *string,
 }
@@ -949,7 +949,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementpolicy"
 
 &apimanagementpolicy.ApiManagementPolicyTimeouts {
 	Create: *string,
@@ -1025,7 +1025,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementpolicy"
 
 apimanagementpolicy.NewApiManagementPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementPolicyTimeoutsOutputReference
 ```
