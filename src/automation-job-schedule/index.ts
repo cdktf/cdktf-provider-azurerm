@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_job_schedule
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_job_schedule
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,64 +13,60 @@ import * as cdktf from 'cdktf';
 
 export interface AutomationJobScheduleConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_job_schedule#automation_account_name AutomationJobSchedule#automation_account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_job_schedule#automation_account_name AutomationJobSchedule#automation_account_name}
   */
   readonly automationAccountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_job_schedule#id AutomationJobSchedule#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_job_schedule#id AutomationJobSchedule#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_job_schedule#job_schedule_id AutomationJobSchedule#job_schedule_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_job_schedule#job_schedule_id AutomationJobSchedule#job_schedule_id}
   */
   readonly jobScheduleId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_job_schedule#parameters AutomationJobSchedule#parameters}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_job_schedule#parameters AutomationJobSchedule#parameters}
   */
   readonly parameters?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_job_schedule#resource_group_name AutomationJobSchedule#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_job_schedule#resource_group_name AutomationJobSchedule#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_job_schedule#run_on AutomationJobSchedule#run_on}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_job_schedule#run_on AutomationJobSchedule#run_on}
   */
   readonly runOn?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_job_schedule#runbook_name AutomationJobSchedule#runbook_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_job_schedule#runbook_name AutomationJobSchedule#runbook_name}
   */
   readonly runbookName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_job_schedule#schedule_name AutomationJobSchedule#schedule_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_job_schedule#schedule_name AutomationJobSchedule#schedule_name}
   */
   readonly scheduleName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_job_schedule#timeouts AutomationJobSchedule#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_job_schedule#timeouts AutomationJobSchedule#timeouts}
   */
   readonly timeouts?: AutomationJobScheduleTimeouts;
 }
 export interface AutomationJobScheduleTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_job_schedule#create AutomationJobSchedule#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_job_schedule#create AutomationJobSchedule#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_job_schedule#delete AutomationJobSchedule#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_job_schedule#delete AutomationJobSchedule#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_job_schedule#read AutomationJobSchedule#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_job_schedule#read AutomationJobSchedule#read}
   */
   readonly read?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_job_schedule#update AutomationJobSchedule#update}
-  */
-  readonly update?: string;
 }
 
 export function automationJobScheduleTimeoutsToTerraform(struct?: AutomationJobScheduleTimeouts | cdktf.IResolvable): any {
@@ -82,7 +78,6 @@ export function automationJobScheduleTimeoutsToTerraform(struct?: AutomationJobS
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
-    update: cdktf.stringToTerraform(struct!.update),
   }
 }
 
@@ -116,10 +111,6 @@ export class AutomationJobScheduleTimeoutsOutputReference extends cdktf.ComplexO
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.update = this._update;
-    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -130,7 +121,6 @@ export class AutomationJobScheduleTimeoutsOutputReference extends cdktf.ComplexO
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
-      this._update = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -142,7 +132,6 @@ export class AutomationJobScheduleTimeoutsOutputReference extends cdktf.ComplexO
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
-      this._update = value.update;
     }
   }
 
@@ -193,26 +182,10 @@ export class AutomationJobScheduleTimeoutsOutputReference extends cdktf.ComplexO
   public get readInput() {
     return this._read;
   }
-
-  // update - computed: false, optional: true, required: false
-  private _update?: string; 
-  public get update() {
-    return this.getStringAttribute('update');
-  }
-  public set update(value: string) {
-    this._update = value;
-  }
-  public resetUpdate() {
-    this._update = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get updateInput() {
-    return this._update;
-  }
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_job_schedule azurerm_automation_job_schedule}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_job_schedule azurerm_automation_job_schedule}
 */
 export class AutomationJobSchedule extends cdktf.TerraformResource {
 
@@ -228,7 +201,7 @@ export class AutomationJobSchedule extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a AutomationJobSchedule resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the AutomationJobSchedule to import
-  * @param importFromId The id of the existing AutomationJobSchedule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_job_schedule#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing AutomationJobSchedule that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_job_schedule#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the AutomationJobSchedule to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -240,7 +213,7 @@ export class AutomationJobSchedule extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_job_schedule azurerm_automation_job_schedule} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_job_schedule azurerm_automation_job_schedule} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -251,7 +224,7 @@ export class AutomationJobSchedule extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_automation_job_schedule',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.81.0',
+        providerVersion: '3.82.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

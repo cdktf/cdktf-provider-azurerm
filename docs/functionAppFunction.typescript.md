@@ -1,6 +1,6 @@
 # `azurerm_function_app_function`
 
-Refer to the Terraform Registory for docs: [`azurerm_function_app_function`](https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/function_app_function).
+Refer to the Terraform Registory for docs: [`azurerm_function_app_function`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/function_app_function).
 
 # `functionAppFunction` Submodule <a name="`functionAppFunction` Submodule" id="@cdktf/provider-azurerm.functionAppFunction"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_function_app_function`](htt
 
 ### FunctionAppFunction <a name="FunctionAppFunction" id="@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunction"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/function_app_function azurerm_function_app_function}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/function_app_function azurerm_function_app_function}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunction.Initializer"></a>
 
@@ -489,7 +489,7 @@ The construct id used in the generated config for the FunctionAppFunction to imp
 
 The id of the existing FunctionAppFunction that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/function_app_function#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/function_app_function#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -985,7 +985,7 @@ const functionAppFunctionConfig: functionAppFunction.FunctionAppFunctionConfig =
 | <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionConfig.property.name">name</a></code> | <code>string</code> | The name of the function. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionConfig.property.enabled">enabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Should this function be enabled. Defaults to `true`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionConfig.property.file">file</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionFile">FunctionAppFunctionFile</a>[]</code> | file block. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/function_app_function#id FunctionAppFunction#id}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/function_app_function#id FunctionAppFunction#id}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionConfig.property.language">language</a></code> | <code>string</code> | The language the Function is written in. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionConfig.property.testData">testData</a></code> | <code>string</code> | The test data for the function. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionTimeouts">FunctionAppFunctionTimeouts</a></code> | timeouts block. |
@@ -1072,7 +1072,7 @@ public readonly configJson: string;
 
 The config for this Function in JSON format.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/function_app_function#config_json FunctionAppFunction#config_json}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/function_app_function#config_json FunctionAppFunction#config_json}
 
 ---
 
@@ -1086,7 +1086,7 @@ public readonly functionAppId: string;
 
 The ID of the Function App in which this function should reside.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/function_app_function#function_app_id FunctionAppFunction#function_app_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/function_app_function#function_app_id FunctionAppFunction#function_app_id}
 
 ---
 
@@ -1100,7 +1100,7 @@ public readonly name: string;
 
 The name of the function.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/function_app_function#name FunctionAppFunction#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/function_app_function#name FunctionAppFunction#name}
 
 ---
 
@@ -1114,7 +1114,7 @@ public readonly enabled: boolean | IResolvable;
 
 Should this function be enabled. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/function_app_function#enabled FunctionAppFunction#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/function_app_function#enabled FunctionAppFunction#enabled}
 
 ---
 
@@ -1128,7 +1128,7 @@ public readonly file: IResolvable | FunctionAppFunctionFile[];
 
 file block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/function_app_function#file FunctionAppFunction#file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/function_app_function#file FunctionAppFunction#file}
 
 ---
 
@@ -1140,7 +1140,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/function_app_function#id FunctionAppFunction#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/function_app_function#id FunctionAppFunction#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1157,7 +1157,7 @@ public readonly language: string;
 
 The language the Function is written in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/function_app_function#language FunctionAppFunction#language}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/function_app_function#language FunctionAppFunction#language}
 
 ---
 
@@ -1171,7 +1171,7 @@ public readonly testData: string;
 
 The test data for the function.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/function_app_function#test_data FunctionAppFunction#test_data}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/function_app_function#test_data FunctionAppFunction#test_data}
 
 ---
 
@@ -1185,7 +1185,7 @@ public readonly timeouts: FunctionAppFunctionTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/function_app_function#timeouts FunctionAppFunction#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/function_app_function#timeouts FunctionAppFunction#timeouts}
 
 ---
 
@@ -1218,7 +1218,7 @@ public readonly content: string;
 
 The content of the file.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/function_app_function#content FunctionAppFunction#content}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/function_app_function#content FunctionAppFunction#content}
 
 ---
 
@@ -1232,7 +1232,7 @@ public readonly name: string;
 
 The filename of the file to be uploaded.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/function_app_function#name FunctionAppFunction#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/function_app_function#name FunctionAppFunction#name}
 
 ---
 
@@ -1250,10 +1250,10 @@ const functionAppFunctionTimeouts: functionAppFunction.FunctionAppFunctionTimeou
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/function_app_function#create FunctionAppFunction#create}. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/function_app_function#delete FunctionAppFunction#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/function_app_function#read FunctionAppFunction#read}. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/function_app_function#update FunctionAppFunction#update}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/function_app_function#create FunctionAppFunction#create}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/function_app_function#delete FunctionAppFunction#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/function_app_function#read FunctionAppFunction#read}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFunction.FunctionAppFunctionTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/function_app_function#update FunctionAppFunction#update}. |
 
 ---
 
@@ -1265,7 +1265,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/function_app_function#create FunctionAppFunction#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/function_app_function#create FunctionAppFunction#create}.
 
 ---
 
@@ -1277,7 +1277,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/function_app_function#delete FunctionAppFunction#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/function_app_function#delete FunctionAppFunction#delete}.
 
 ---
 
@@ -1289,7 +1289,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/function_app_function#read FunctionAppFunction#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/function_app_function#read FunctionAppFunction#read}.
 
 ---
 
@@ -1301,7 +1301,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/function_app_function#update FunctionAppFunction#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/function_app_function#update FunctionAppFunction#update}.
 
 ---
 

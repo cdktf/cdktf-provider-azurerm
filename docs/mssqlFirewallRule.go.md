@@ -1,6 +1,6 @@
 # `azurerm_mssql_firewall_rule`
 
-Refer to the Terraform Registory for docs: [`azurerm_mssql_firewall_rule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mssql_firewall_rule).
+Refer to the Terraform Registory for docs: [`azurerm_mssql_firewall_rule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mssql_firewall_rule).
 
 # `mssqlFirewallRule` Submodule <a name="`mssqlFirewallRule` Submodule" id="@cdktf/provider-azurerm.mssqlFirewallRule"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_mssql_firewall_rule`](https
 
 ### MssqlFirewallRule <a name="MssqlFirewallRule" id="@cdktf/provider-azurerm.mssqlFirewallRule.MssqlFirewallRule"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mssql_firewall_rule azurerm_mssql_firewall_rule}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mssql_firewall_rule azurerm_mssql_firewall_rule}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlFirewallRule.MssqlFirewallRule.Initializer"></a>
 
@@ -448,7 +448,7 @@ The construct id used in the generated config for the MssqlFirewallRule to impor
 
 The id of the existing MssqlFirewallRule that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mssql_firewall_rule#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mssql_firewall_rule#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -810,11 +810,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlfirewallrule
 | <code><a href="#@cdktf/provider-azurerm.mssqlFirewallRule.MssqlFirewallRuleConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlFirewallRule.MssqlFirewallRuleConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlFirewallRule.MssqlFirewallRuleConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mssqlFirewallRule.MssqlFirewallRuleConfig.property.endIpAddress">EndIpAddress</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mssql_firewall_rule#end_ip_address MssqlFirewallRule#end_ip_address}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlFirewallRule.MssqlFirewallRuleConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mssql_firewall_rule#name MssqlFirewallRule#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlFirewallRule.MssqlFirewallRuleConfig.property.serverId">ServerId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mssql_firewall_rule#server_id MssqlFirewallRule#server_id}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlFirewallRule.MssqlFirewallRuleConfig.property.startIpAddress">StartIpAddress</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mssql_firewall_rule#start_ip_address MssqlFirewallRule#start_ip_address}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlFirewallRule.MssqlFirewallRuleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mssql_firewall_rule#id MssqlFirewallRule#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlFirewallRule.MssqlFirewallRuleConfig.property.endIpAddress">EndIpAddress</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mssql_firewall_rule#end_ip_address MssqlFirewallRule#end_ip_address}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlFirewallRule.MssqlFirewallRuleConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mssql_firewall_rule#name MssqlFirewallRule#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlFirewallRule.MssqlFirewallRuleConfig.property.serverId">ServerId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mssql_firewall_rule#server_id MssqlFirewallRule#server_id}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlFirewallRule.MssqlFirewallRuleConfig.property.startIpAddress">StartIpAddress</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mssql_firewall_rule#start_ip_address MssqlFirewallRule#start_ip_address}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlFirewallRule.MssqlFirewallRuleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mssql_firewall_rule#id MssqlFirewallRule#id}. |
 | <code><a href="#@cdktf/provider-azurerm.mssqlFirewallRule.MssqlFirewallRuleConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mssqlFirewallRule.MssqlFirewallRuleTimeouts">MssqlFirewallRuleTimeouts</a></code> | timeouts block. |
 
 ---
@@ -897,7 +897,7 @@ EndIpAddress *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mssql_firewall_rule#end_ip_address MssqlFirewallRule#end_ip_address}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mssql_firewall_rule#end_ip_address MssqlFirewallRule#end_ip_address}.
 
 ---
 
@@ -909,7 +909,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mssql_firewall_rule#name MssqlFirewallRule#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mssql_firewall_rule#name MssqlFirewallRule#name}.
 
 ---
 
@@ -921,7 +921,7 @@ ServerId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mssql_firewall_rule#server_id MssqlFirewallRule#server_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mssql_firewall_rule#server_id MssqlFirewallRule#server_id}.
 
 ---
 
@@ -933,7 +933,7 @@ StartIpAddress *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mssql_firewall_rule#start_ip_address MssqlFirewallRule#start_ip_address}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mssql_firewall_rule#start_ip_address MssqlFirewallRule#start_ip_address}.
 
 ---
 
@@ -945,7 +945,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mssql_firewall_rule#id MssqlFirewallRule#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mssql_firewall_rule#id MssqlFirewallRule#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -962,7 +962,7 @@ Timeouts MssqlFirewallRuleTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mssql_firewall_rule#timeouts MssqlFirewallRule#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mssql_firewall_rule#timeouts MssqlFirewallRule#timeouts}
 
 ---
 
@@ -985,10 +985,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlfirewallrule
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mssqlFirewallRule.MssqlFirewallRuleTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mssql_firewall_rule#create MssqlFirewallRule#create}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlFirewallRule.MssqlFirewallRuleTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mssql_firewall_rule#delete MssqlFirewallRule#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlFirewallRule.MssqlFirewallRuleTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mssql_firewall_rule#read MssqlFirewallRule#read}. |
-| <code><a href="#@cdktf/provider-azurerm.mssqlFirewallRule.MssqlFirewallRuleTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mssql_firewall_rule#update MssqlFirewallRule#update}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlFirewallRule.MssqlFirewallRuleTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mssql_firewall_rule#create MssqlFirewallRule#create}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlFirewallRule.MssqlFirewallRuleTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mssql_firewall_rule#delete MssqlFirewallRule#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlFirewallRule.MssqlFirewallRuleTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mssql_firewall_rule#read MssqlFirewallRule#read}. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlFirewallRule.MssqlFirewallRuleTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mssql_firewall_rule#update MssqlFirewallRule#update}. |
 
 ---
 
@@ -1000,7 +1000,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mssql_firewall_rule#create MssqlFirewallRule#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mssql_firewall_rule#create MssqlFirewallRule#create}.
 
 ---
 
@@ -1012,7 +1012,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mssql_firewall_rule#delete MssqlFirewallRule#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mssql_firewall_rule#delete MssqlFirewallRule#delete}.
 
 ---
 
@@ -1024,7 +1024,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mssql_firewall_rule#read MssqlFirewallRule#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mssql_firewall_rule#read MssqlFirewallRule#read}.
 
 ---
 
@@ -1036,7 +1036,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mssql_firewall_rule#update MssqlFirewallRule#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mssql_firewall_rule#update MssqlFirewallRule#update}.
 
 ---
 

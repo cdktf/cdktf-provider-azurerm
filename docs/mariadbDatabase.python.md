@@ -1,6 +1,6 @@
 # `azurerm_mariadb_database`
 
-Refer to the Terraform Registory for docs: [`azurerm_mariadb_database`](https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database).
+Refer to the Terraform Registory for docs: [`azurerm_mariadb_database`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database).
 
 # `mariadbDatabase` Submodule <a name="`mariadbDatabase` Submodule" id="@cdktf/provider-azurerm.mariadbDatabase"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_mariadb_database`](https://
 
 ### MariadbDatabase <a name="MariadbDatabase" id="@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabase"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database azurerm_mariadb_database}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database azurerm_mariadb_database}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabase.Initializer"></a>
 
@@ -46,12 +46,12 @@ mariadbDatabase.MariadbDatabase(
 | <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabase.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabase.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabase.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabase.Initializer.parameter.charset">charset</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#charset MariadbDatabase#charset}. |
-| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabase.Initializer.parameter.collation">collation</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#collation MariadbDatabase#collation}. |
-| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabase.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#name MariadbDatabase#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabase.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#resource_group_name MariadbDatabase#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabase.Initializer.parameter.serverName">server_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#server_name MariadbDatabase#server_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabase.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#id MariadbDatabase#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabase.Initializer.parameter.charset">charset</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#charset MariadbDatabase#charset}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabase.Initializer.parameter.collation">collation</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#collation MariadbDatabase#collation}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabase.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#name MariadbDatabase#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabase.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#resource_group_name MariadbDatabase#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabase.Initializer.parameter.serverName">server_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#server_name MariadbDatabase#server_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabase.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#id MariadbDatabase#id}. |
 | <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabase.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeouts">MariadbDatabaseTimeouts</a></code> | timeouts block. |
 
 ---
@@ -120,7 +120,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#charset MariadbDatabase#charset}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#charset MariadbDatabase#charset}.
 
 ---
 
@@ -128,7 +128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#collation MariadbDatabase#collation}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#collation MariadbDatabase#collation}.
 
 ---
 
@@ -136,7 +136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#name MariadbDatabase#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#name MariadbDatabase#name}.
 
 ---
 
@@ -144,7 +144,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#resource_group_name MariadbDatabase#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#resource_group_name MariadbDatabase#resource_group_name}.
 
 ---
 
@@ -152,7 +152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#server_name MariadbDatabase#server_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#server_name MariadbDatabase#server_name}.
 
 ---
 
@@ -160,7 +160,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#id MariadbDatabase#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#id MariadbDatabase#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -173,7 +173,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#timeouts MariadbDatabase#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#timeouts MariadbDatabase#timeouts}
 
 ---
 
@@ -487,8 +487,7 @@ Optional The index corresponding to the key the resource is to appear in the for
 def put_timeouts(
   create: str = None,
   delete: str = None,
-  read: str = None,
-  update: str = None
+  read: str = None
 ) -> None
 ```
 
@@ -496,7 +495,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#create MariadbDatabase#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#create MariadbDatabase#create}.
 
 ---
 
@@ -504,7 +503,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#delete MariadbDatabase#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#delete MariadbDatabase#delete}.
 
 ---
 
@@ -512,15 +511,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#read MariadbDatabase#read}.
-
----
-
-###### `update`<sup>Optional</sup> <a name="update" id="@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabase.putTimeouts.parameter.update"></a>
-
-- *Type:* str
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#update MariadbDatabase#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#read MariadbDatabase#read}.
 
 ---
 
@@ -650,7 +641,7 @@ The construct id used in the generated config for the MariadbDatabase to import.
 
 The id of the existing MariadbDatabase that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1035,12 +1026,12 @@ mariadbDatabase.MariadbDatabaseConfig(
 | <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseConfig.property.charset">charset</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#charset MariadbDatabase#charset}. |
-| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseConfig.property.collation">collation</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#collation MariadbDatabase#collation}. |
-| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#name MariadbDatabase#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#resource_group_name MariadbDatabase#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseConfig.property.serverName">server_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#server_name MariadbDatabase#server_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#id MariadbDatabase#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseConfig.property.charset">charset</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#charset MariadbDatabase#charset}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseConfig.property.collation">collation</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#collation MariadbDatabase#collation}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#name MariadbDatabase#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#resource_group_name MariadbDatabase#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseConfig.property.serverName">server_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#server_name MariadbDatabase#server_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#id MariadbDatabase#id}. |
 | <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeouts">MariadbDatabaseTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1123,7 +1114,7 @@ charset: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#charset MariadbDatabase#charset}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#charset MariadbDatabase#charset}.
 
 ---
 
@@ -1135,7 +1126,7 @@ collation: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#collation MariadbDatabase#collation}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#collation MariadbDatabase#collation}.
 
 ---
 
@@ -1147,7 +1138,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#name MariadbDatabase#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#name MariadbDatabase#name}.
 
 ---
 
@@ -1159,7 +1150,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#resource_group_name MariadbDatabase#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#resource_group_name MariadbDatabase#resource_group_name}.
 
 ---
 
@@ -1171,7 +1162,7 @@ server_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#server_name MariadbDatabase#server_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#server_name MariadbDatabase#server_name}.
 
 ---
 
@@ -1183,7 +1174,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#id MariadbDatabase#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#id MariadbDatabase#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1200,7 +1191,7 @@ timeouts: MariadbDatabaseTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#timeouts MariadbDatabase#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#timeouts MariadbDatabase#timeouts}
 
 ---
 
@@ -1214,8 +1205,7 @@ from cdktf_cdktf_provider_azurerm import mariadb_database
 mariadbDatabase.MariadbDatabaseTimeouts(
   create: str = None,
   delete: str = None,
-  read: str = None,
-  update: str = None
+  read: str = None
 )
 ```
 
@@ -1223,10 +1213,9 @@ mariadbDatabase.MariadbDatabaseTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#create MariadbDatabase#create}. |
-| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#delete MariadbDatabase#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#read MariadbDatabase#read}. |
-| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#update MariadbDatabase#update}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#create MariadbDatabase#create}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#delete MariadbDatabase#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#read MariadbDatabase#read}. |
 
 ---
 
@@ -1238,7 +1227,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#create MariadbDatabase#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#create MariadbDatabase#create}.
 
 ---
 
@@ -1250,7 +1239,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#delete MariadbDatabase#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#delete MariadbDatabase#delete}.
 
 ---
 
@@ -1262,19 +1251,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#read MariadbDatabase#read}.
-
----
-
-##### `update`<sup>Optional</sup> <a name="update" id="@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeouts.property.update"></a>
-
-```python
-update: str
-```
-
-- *Type:* str
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/mariadb_database#update MariadbDatabase#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_database#read MariadbDatabase#read}.
 
 ---
 
@@ -1336,7 +1313,6 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeoutsOutputReference.resetCreate">reset_create</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeoutsOutputReference.resetDelete">reset_delete</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeoutsOutputReference.resetRead">reset_read</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeoutsOutputReference.resetUpdate">reset_update</a></code> | *No description.* |
 
 ---
 
@@ -1530,12 +1506,6 @@ def reset_delete() -> None
 def reset_read() -> None
 ```
 
-##### `reset_update` <a name="reset_update" id="@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeoutsOutputReference.resetUpdate"></a>
-
-```python
-def reset_update() -> None
-```
-
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -1546,11 +1516,9 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeoutsOutputReference.property.createInput">create_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeoutsOutputReference.property.deleteInput">delete_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeoutsOutputReference.property.readInput">read_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeoutsOutputReference.property.updateInput">update_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeouts">MariadbDatabaseTimeouts</a>]</code> | *No description.* |
 
 ---
@@ -1609,16 +1577,6 @@ read_input: str
 
 ---
 
-##### `update_input`<sup>Optional</sup> <a name="update_input" id="@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeoutsOutputReference.property.updateInput"></a>
-
-```python
-update_input: str
-```
-
-- *Type:* str
-
----
-
 ##### `create`<sup>Required</sup> <a name="create" id="@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeoutsOutputReference.property.create"></a>
 
 ```python
@@ -1643,16 +1601,6 @@ delete: str
 
 ```python
 read: str
-```
-
-- *Type:* str
-
----
-
-##### `update`<sup>Required</sup> <a name="update" id="@cdktf/provider-azurerm.mariadbDatabase.MariadbDatabaseTimeoutsOutputReference.property.update"></a>
-
-```python
-update: str
 ```
 
 - *Type:* str

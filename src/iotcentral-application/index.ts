@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/iotcentral_application
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iotcentral_application
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,64 +13,64 @@ import * as cdktf from 'cdktf';
 
 export interface IotcentralApplicationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/iotcentral_application#display_name IotcentralApplication#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iotcentral_application#display_name IotcentralApplication#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/iotcentral_application#id IotcentralApplication#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iotcentral_application#id IotcentralApplication#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/iotcentral_application#location IotcentralApplication#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iotcentral_application#location IotcentralApplication#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/iotcentral_application#name IotcentralApplication#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iotcentral_application#name IotcentralApplication#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/iotcentral_application#public_network_access_enabled IotcentralApplication#public_network_access_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iotcentral_application#public_network_access_enabled IotcentralApplication#public_network_access_enabled}
   */
   readonly publicNetworkAccessEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/iotcentral_application#resource_group_name IotcentralApplication#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iotcentral_application#resource_group_name IotcentralApplication#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/iotcentral_application#sku IotcentralApplication#sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iotcentral_application#sku IotcentralApplication#sku}
   */
   readonly sku?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/iotcentral_application#sub_domain IotcentralApplication#sub_domain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iotcentral_application#sub_domain IotcentralApplication#sub_domain}
   */
   readonly subDomain: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/iotcentral_application#tags IotcentralApplication#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iotcentral_application#tags IotcentralApplication#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/iotcentral_application#template IotcentralApplication#template}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iotcentral_application#template IotcentralApplication#template}
   */
   readonly template?: string;
   /**
   * identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/iotcentral_application#identity IotcentralApplication#identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iotcentral_application#identity IotcentralApplication#identity}
   */
   readonly identity?: IotcentralApplicationIdentity;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/iotcentral_application#timeouts IotcentralApplication#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iotcentral_application#timeouts IotcentralApplication#timeouts}
   */
   readonly timeouts?: IotcentralApplicationTimeouts;
 }
 export interface IotcentralApplicationIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/iotcentral_application#type IotcentralApplication#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iotcentral_application#type IotcentralApplication#type}
   */
   readonly type: string;
 }
@@ -142,19 +142,19 @@ export class IotcentralApplicationIdentityOutputReference extends cdktf.ComplexO
 }
 export interface IotcentralApplicationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/iotcentral_application#create IotcentralApplication#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iotcentral_application#create IotcentralApplication#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/iotcentral_application#delete IotcentralApplication#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iotcentral_application#delete IotcentralApplication#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/iotcentral_application#read IotcentralApplication#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iotcentral_application#read IotcentralApplication#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/iotcentral_application#update IotcentralApplication#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iotcentral_application#update IotcentralApplication#update}
   */
   readonly update?: string;
 }
@@ -298,7 +298,7 @@ export class IotcentralApplicationTimeoutsOutputReference extends cdktf.ComplexO
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/iotcentral_application azurerm_iotcentral_application}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iotcentral_application azurerm_iotcentral_application}
 */
 export class IotcentralApplication extends cdktf.TerraformResource {
 
@@ -314,7 +314,7 @@ export class IotcentralApplication extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a IotcentralApplication resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the IotcentralApplication to import
-  * @param importFromId The id of the existing IotcentralApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/iotcentral_application#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing IotcentralApplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iotcentral_application#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the IotcentralApplication to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -326,7 +326,7 @@ export class IotcentralApplication extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/iotcentral_application azurerm_iotcentral_application} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iotcentral_application azurerm_iotcentral_application} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -337,7 +337,7 @@ export class IotcentralApplication extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_iotcentral_application',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.81.0',
+        providerVersion: '3.82.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

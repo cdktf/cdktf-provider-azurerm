@@ -1,6 +1,6 @@
 # `azurerm_postgresql_firewall_rule`
 
-Refer to the Terraform Registory for docs: [`azurerm_postgresql_firewall_rule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule).
+Refer to the Terraform Registory for docs: [`azurerm_postgresql_firewall_rule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule).
 
 # `postgresqlFirewallRule` Submodule <a name="`postgresqlFirewallRule` Submodule" id="@cdktf/provider-azurerm.postgresqlFirewallRule"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_postgresql_firewall_rule`](
 
 ### PostgresqlFirewallRule <a name="PostgresqlFirewallRule" id="@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule azurerm_postgresql_firewall_rule}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule azurerm_postgresql_firewall_rule}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.Initializer"></a>
 
@@ -46,12 +46,12 @@ postgresqlFirewallRule.PostgresqlFirewallRule(
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.Initializer.parameter.endIpAddress">end_ip_address</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#end_ip_address PostgresqlFirewallRule#end_ip_address}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#name PostgresqlFirewallRule#name}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#resource_group_name PostgresqlFirewallRule#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.Initializer.parameter.serverName">server_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#server_name PostgresqlFirewallRule#server_name}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.Initializer.parameter.startIpAddress">start_ip_address</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#start_ip_address PostgresqlFirewallRule#start_ip_address}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#id PostgresqlFirewallRule#id}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.Initializer.parameter.endIpAddress">end_ip_address</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#end_ip_address PostgresqlFirewallRule#end_ip_address}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#name PostgresqlFirewallRule#name}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#resource_group_name PostgresqlFirewallRule#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.Initializer.parameter.serverName">server_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#server_name PostgresqlFirewallRule#server_name}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.Initializer.parameter.startIpAddress">start_ip_address</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#start_ip_address PostgresqlFirewallRule#start_ip_address}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#id PostgresqlFirewallRule#id}. |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeouts">PostgresqlFirewallRuleTimeouts</a></code> | timeouts block. |
 
 ---
@@ -120,7 +120,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#end_ip_address PostgresqlFirewallRule#end_ip_address}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#end_ip_address PostgresqlFirewallRule#end_ip_address}.
 
 ---
 
@@ -128,7 +128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#name PostgresqlFirewallRule#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#name PostgresqlFirewallRule#name}.
 
 ---
 
@@ -136,7 +136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#resource_group_name PostgresqlFirewallRule#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#resource_group_name PostgresqlFirewallRule#resource_group_name}.
 
 ---
 
@@ -144,7 +144,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#server_name PostgresqlFirewallRule#server_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#server_name PostgresqlFirewallRule#server_name}.
 
 ---
 
@@ -152,7 +152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#start_ip_address PostgresqlFirewallRule#start_ip_address}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#start_ip_address PostgresqlFirewallRule#start_ip_address}.
 
 ---
 
@@ -160,7 +160,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#id PostgresqlFirewallRule#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#id PostgresqlFirewallRule#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -173,7 +173,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#timeouts PostgresqlFirewallRule#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#timeouts PostgresqlFirewallRule#timeouts}
 
 ---
 
@@ -487,8 +487,7 @@ Optional The index corresponding to the key the resource is to appear in the for
 def put_timeouts(
   create: str = None,
   delete: str = None,
-  read: str = None,
-  update: str = None
+  read: str = None
 ) -> None
 ```
 
@@ -496,7 +495,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#create PostgresqlFirewallRule#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#create PostgresqlFirewallRule#create}.
 
 ---
 
@@ -504,7 +503,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#delete PostgresqlFirewallRule#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#delete PostgresqlFirewallRule#delete}.
 
 ---
 
@@ -512,15 +511,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#read PostgresqlFirewallRule#read}.
-
----
-
-###### `update`<sup>Optional</sup> <a name="update" id="@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRule.putTimeouts.parameter.update"></a>
-
-- *Type:* str
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#update PostgresqlFirewallRule#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#read PostgresqlFirewallRule#read}.
 
 ---
 
@@ -650,7 +641,7 @@ The construct id used in the generated config for the PostgresqlFirewallRule to 
 
 The id of the existing PostgresqlFirewallRule that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1035,12 +1026,12 @@ postgresqlFirewallRule.PostgresqlFirewallRuleConfig(
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleConfig.property.endIpAddress">end_ip_address</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#end_ip_address PostgresqlFirewallRule#end_ip_address}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#name PostgresqlFirewallRule#name}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#resource_group_name PostgresqlFirewallRule#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleConfig.property.serverName">server_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#server_name PostgresqlFirewallRule#server_name}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleConfig.property.startIpAddress">start_ip_address</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#start_ip_address PostgresqlFirewallRule#start_ip_address}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#id PostgresqlFirewallRule#id}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleConfig.property.endIpAddress">end_ip_address</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#end_ip_address PostgresqlFirewallRule#end_ip_address}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#name PostgresqlFirewallRule#name}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#resource_group_name PostgresqlFirewallRule#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleConfig.property.serverName">server_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#server_name PostgresqlFirewallRule#server_name}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleConfig.property.startIpAddress">start_ip_address</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#start_ip_address PostgresqlFirewallRule#start_ip_address}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#id PostgresqlFirewallRule#id}. |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeouts">PostgresqlFirewallRuleTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1123,7 +1114,7 @@ end_ip_address: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#end_ip_address PostgresqlFirewallRule#end_ip_address}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#end_ip_address PostgresqlFirewallRule#end_ip_address}.
 
 ---
 
@@ -1135,7 +1126,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#name PostgresqlFirewallRule#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#name PostgresqlFirewallRule#name}.
 
 ---
 
@@ -1147,7 +1138,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#resource_group_name PostgresqlFirewallRule#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#resource_group_name PostgresqlFirewallRule#resource_group_name}.
 
 ---
 
@@ -1159,7 +1150,7 @@ server_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#server_name PostgresqlFirewallRule#server_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#server_name PostgresqlFirewallRule#server_name}.
 
 ---
 
@@ -1171,7 +1162,7 @@ start_ip_address: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#start_ip_address PostgresqlFirewallRule#start_ip_address}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#start_ip_address PostgresqlFirewallRule#start_ip_address}.
 
 ---
 
@@ -1183,7 +1174,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#id PostgresqlFirewallRule#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#id PostgresqlFirewallRule#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1200,7 +1191,7 @@ timeouts: PostgresqlFirewallRuleTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#timeouts PostgresqlFirewallRule#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#timeouts PostgresqlFirewallRule#timeouts}
 
 ---
 
@@ -1214,8 +1205,7 @@ from cdktf_cdktf_provider_azurerm import postgresql_firewall_rule
 postgresqlFirewallRule.PostgresqlFirewallRuleTimeouts(
   create: str = None,
   delete: str = None,
-  read: str = None,
-  update: str = None
+  read: str = None
 )
 ```
 
@@ -1223,10 +1213,9 @@ postgresqlFirewallRule.PostgresqlFirewallRuleTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#create PostgresqlFirewallRule#create}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#delete PostgresqlFirewallRule#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#read PostgresqlFirewallRule#read}. |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#update PostgresqlFirewallRule#update}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#create PostgresqlFirewallRule#create}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#delete PostgresqlFirewallRule#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#read PostgresqlFirewallRule#read}. |
 
 ---
 
@@ -1238,7 +1227,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#create PostgresqlFirewallRule#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#create PostgresqlFirewallRule#create}.
 
 ---
 
@@ -1250,7 +1239,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#delete PostgresqlFirewallRule#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#delete PostgresqlFirewallRule#delete}.
 
 ---
 
@@ -1262,19 +1251,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#read PostgresqlFirewallRule#read}.
-
----
-
-##### `update`<sup>Optional</sup> <a name="update" id="@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeouts.property.update"></a>
-
-```python
-update: str
-```
-
-- *Type:* str
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_firewall_rule#update PostgresqlFirewallRule#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_firewall_rule#read PostgresqlFirewallRule#read}.
 
 ---
 
@@ -1336,7 +1313,6 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeoutsOutputReference.resetCreate">reset_create</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeoutsOutputReference.resetDelete">reset_delete</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeoutsOutputReference.resetRead">reset_read</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeoutsOutputReference.resetUpdate">reset_update</a></code> | *No description.* |
 
 ---
 
@@ -1530,12 +1506,6 @@ def reset_delete() -> None
 def reset_read() -> None
 ```
 
-##### `reset_update` <a name="reset_update" id="@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeoutsOutputReference.resetUpdate"></a>
-
-```python
-def reset_update() -> None
-```
-
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -1546,11 +1516,9 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeoutsOutputReference.property.createInput">create_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeoutsOutputReference.property.deleteInput">delete_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeoutsOutputReference.property.readInput">read_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeoutsOutputReference.property.updateInput">update_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeouts">PostgresqlFirewallRuleTimeouts</a>]</code> | *No description.* |
 
 ---
@@ -1609,16 +1577,6 @@ read_input: str
 
 ---
 
-##### `update_input`<sup>Optional</sup> <a name="update_input" id="@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeoutsOutputReference.property.updateInput"></a>
-
-```python
-update_input: str
-```
-
-- *Type:* str
-
----
-
 ##### `create`<sup>Required</sup> <a name="create" id="@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeoutsOutputReference.property.create"></a>
 
 ```python
@@ -1643,16 +1601,6 @@ delete: str
 
 ```python
 read: str
-```
-
-- *Type:* str
-
----
-
-##### `update`<sup>Required</sup> <a name="update" id="@cdktf/provider-azurerm.postgresqlFirewallRule.PostgresqlFirewallRuleTimeoutsOutputReference.property.update"></a>
-
-```python
-update: str
 ```
 
 - *Type:* str

@@ -1,6 +1,6 @@
 # `data_azurerm_data_factory`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_data_factory`](https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/data_factory).
+Refer to the Terraform Registory for docs: [`data_azurerm_data_factory`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/data_factory).
 
 # `dataAzurermDataFactory` Submodule <a name="`dataAzurermDataFactory` Submodule" id="@cdktf/provider-azurerm.dataAzurermDataFactory"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_data_factory`](https:/
 
 ### DataAzurermDataFactory <a name="DataAzurermDataFactory" id="@cdktf/provider-azurerm.dataAzurermDataFactory.DataAzurermDataFactory"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/data_factory azurerm_data_factory}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/data_factory azurerm_data_factory}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDataFactory.DataAzurermDataFactory.Initializer"></a>
 
@@ -387,7 +387,7 @@ The construct id used in the generated config for the DataAzurermDataFactory to 
 
 The id of the existing DataAzurermDataFactory that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/data_factory#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/data_factory#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -736,9 +736,9 @@ new DataAzurermDataFactoryConfig {
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDataFactory.DataAzurermDataFactoryConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDataFactory.DataAzurermDataFactoryConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDataFactory.DataAzurermDataFactoryConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDataFactory.DataAzurermDataFactoryConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/data_factory#name DataAzurermDataFactory#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDataFactory.DataAzurermDataFactoryConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/data_factory#resource_group_name DataAzurermDataFactory#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDataFactory.DataAzurermDataFactoryConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/data_factory#id DataAzurermDataFactory#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDataFactory.DataAzurermDataFactoryConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/data_factory#name DataAzurermDataFactory#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDataFactory.DataAzurermDataFactoryConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/data_factory#resource_group_name DataAzurermDataFactory#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDataFactory.DataAzurermDataFactoryConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/data_factory#id DataAzurermDataFactory#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDataFactory.DataAzurermDataFactoryConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermDataFactory.DataAzurermDataFactoryTimeouts">DataAzurermDataFactoryTimeouts</a></code> | timeouts block. |
 
 ---
@@ -821,7 +821,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/data_factory#name DataAzurermDataFactory#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/data_factory#name DataAzurermDataFactory#name}.
 
 ---
 
@@ -833,7 +833,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/data_factory#resource_group_name DataAzurermDataFactory#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/data_factory#resource_group_name DataAzurermDataFactory#resource_group_name}.
 
 ---
 
@@ -845,7 +845,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/data_factory#id DataAzurermDataFactory#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/data_factory#id DataAzurermDataFactory#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -862,7 +862,7 @@ public DataAzurermDataFactoryTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/data_factory#timeouts DataAzurermDataFactory#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/data_factory#timeouts DataAzurermDataFactory#timeouts}
 
 ---
 
@@ -908,7 +908,7 @@ new DataAzurermDataFactoryTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDataFactory.DataAzurermDataFactoryTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/data_factory#read DataAzurermDataFactory#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDataFactory.DataAzurermDataFactoryTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/data_factory#read DataAzurermDataFactory#read}. |
 
 ---
 
@@ -920,7 +920,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/data_factory#read DataAzurermDataFactory#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/data_factory#read DataAzurermDataFactory#read}.
 
 ---
 

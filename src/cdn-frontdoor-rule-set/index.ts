@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/cdn_frontdoor_rule_set
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_rule_set
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,44 +13,40 @@ import * as cdktf from 'cdktf';
 
 export interface CdnFrontdoorRuleSetConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/cdn_frontdoor_rule_set#cdn_frontdoor_profile_id CdnFrontdoorRuleSet#cdn_frontdoor_profile_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_rule_set#cdn_frontdoor_profile_id CdnFrontdoorRuleSet#cdn_frontdoor_profile_id}
   */
   readonly cdnFrontdoorProfileId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/cdn_frontdoor_rule_set#id CdnFrontdoorRuleSet#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_rule_set#id CdnFrontdoorRuleSet#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/cdn_frontdoor_rule_set#name CdnFrontdoorRuleSet#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_rule_set#name CdnFrontdoorRuleSet#name}
   */
   readonly name: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/cdn_frontdoor_rule_set#timeouts CdnFrontdoorRuleSet#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_rule_set#timeouts CdnFrontdoorRuleSet#timeouts}
   */
   readonly timeouts?: CdnFrontdoorRuleSetTimeouts;
 }
 export interface CdnFrontdoorRuleSetTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/cdn_frontdoor_rule_set#create CdnFrontdoorRuleSet#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_rule_set#create CdnFrontdoorRuleSet#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/cdn_frontdoor_rule_set#delete CdnFrontdoorRuleSet#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_rule_set#delete CdnFrontdoorRuleSet#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/cdn_frontdoor_rule_set#read CdnFrontdoorRuleSet#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_rule_set#read CdnFrontdoorRuleSet#read}
   */
   readonly read?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/cdn_frontdoor_rule_set#update CdnFrontdoorRuleSet#update}
-  */
-  readonly update?: string;
 }
 
 export function cdnFrontdoorRuleSetTimeoutsToTerraform(struct?: CdnFrontdoorRuleSetTimeouts | cdktf.IResolvable): any {
@@ -62,7 +58,6 @@ export function cdnFrontdoorRuleSetTimeoutsToTerraform(struct?: CdnFrontdoorRule
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
-    update: cdktf.stringToTerraform(struct!.update),
   }
 }
 
@@ -96,10 +91,6 @@ export class CdnFrontdoorRuleSetTimeoutsOutputReference extends cdktf.ComplexObj
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.update = this._update;
-    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -110,7 +101,6 @@ export class CdnFrontdoorRuleSetTimeoutsOutputReference extends cdktf.ComplexObj
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
-      this._update = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -122,7 +112,6 @@ export class CdnFrontdoorRuleSetTimeoutsOutputReference extends cdktf.ComplexObj
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
-      this._update = value.update;
     }
   }
 
@@ -173,26 +162,10 @@ export class CdnFrontdoorRuleSetTimeoutsOutputReference extends cdktf.ComplexObj
   public get readInput() {
     return this._read;
   }
-
-  // update - computed: false, optional: true, required: false
-  private _update?: string; 
-  public get update() {
-    return this.getStringAttribute('update');
-  }
-  public set update(value: string) {
-    this._update = value;
-  }
-  public resetUpdate() {
-    this._update = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get updateInput() {
-    return this._update;
-  }
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/cdn_frontdoor_rule_set azurerm_cdn_frontdoor_rule_set}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_rule_set azurerm_cdn_frontdoor_rule_set}
 */
 export class CdnFrontdoorRuleSet extends cdktf.TerraformResource {
 
@@ -208,7 +181,7 @@ export class CdnFrontdoorRuleSet extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a CdnFrontdoorRuleSet resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the CdnFrontdoorRuleSet to import
-  * @param importFromId The id of the existing CdnFrontdoorRuleSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/cdn_frontdoor_rule_set#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing CdnFrontdoorRuleSet that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_rule_set#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the CdnFrontdoorRuleSet to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -220,7 +193,7 @@ export class CdnFrontdoorRuleSet extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/cdn_frontdoor_rule_set azurerm_cdn_frontdoor_rule_set} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_rule_set azurerm_cdn_frontdoor_rule_set} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -231,7 +204,7 @@ export class CdnFrontdoorRuleSet extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_cdn_frontdoor_rule_set',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.81.0',
+        providerVersion: '3.82.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

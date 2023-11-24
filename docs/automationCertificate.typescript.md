@@ -1,6 +1,6 @@
 # `azurerm_automation_certificate`
 
-Refer to the Terraform Registory for docs: [`azurerm_automation_certificate`](https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_certificate).
+Refer to the Terraform Registory for docs: [`azurerm_automation_certificate`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_certificate).
 
 # `automationCertificate` Submodule <a name="`automationCertificate` Submodule" id="@cdktf/provider-azurerm.automationCertificate"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_automation_certificate`](ht
 
 ### AutomationCertificate <a name="AutomationCertificate" id="@cdktf/provider-azurerm.automationCertificate.AutomationCertificate"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_certificate azurerm_automation_certificate}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_certificate azurerm_automation_certificate}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationCertificate.AutomationCertificate.Initializer"></a>
 
@@ -462,7 +462,7 @@ The construct id used in the generated config for the AutomationCertificate to i
 
 The id of the existing AutomationCertificate that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_certificate#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_certificate#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -865,13 +865,13 @@ const automationCertificateConfig: automationCertificate.AutomationCertificateCo
 | <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateConfig.property.automationAccountName">automationAccountName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_certificate#automation_account_name AutomationCertificate#automation_account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateConfig.property.base64">base64</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_certificate#base64 AutomationCertificate#base64}. |
-| <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_certificate#name AutomationCertificate#name}. |
-| <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_certificate#resource_group_name AutomationCertificate#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateConfig.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_certificate#description AutomationCertificate#description}. |
-| <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateConfig.property.exportable">exportable</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_certificate#exportable AutomationCertificate#exportable}. |
-| <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_certificate#id AutomationCertificate#id}. |
+| <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateConfig.property.automationAccountName">automationAccountName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_certificate#automation_account_name AutomationCertificate#automation_account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateConfig.property.base64">base64</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_certificate#base64 AutomationCertificate#base64}. |
+| <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_certificate#name AutomationCertificate#name}. |
+| <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_certificate#resource_group_name AutomationCertificate#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateConfig.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_certificate#description AutomationCertificate#description}. |
+| <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateConfig.property.exportable">exportable</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_certificate#exportable AutomationCertificate#exportable}. |
+| <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_certificate#id AutomationCertificate#id}. |
 | <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateTimeouts">AutomationCertificateTimeouts</a></code> | timeouts block. |
 
 ---
@@ -954,7 +954,7 @@ public readonly automationAccountName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_certificate#automation_account_name AutomationCertificate#automation_account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_certificate#automation_account_name AutomationCertificate#automation_account_name}.
 
 ---
 
@@ -966,7 +966,7 @@ public readonly base64: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_certificate#base64 AutomationCertificate#base64}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_certificate#base64 AutomationCertificate#base64}.
 
 ---
 
@@ -978,7 +978,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_certificate#name AutomationCertificate#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_certificate#name AutomationCertificate#name}.
 
 ---
 
@@ -990,7 +990,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_certificate#resource_group_name AutomationCertificate#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_certificate#resource_group_name AutomationCertificate#resource_group_name}.
 
 ---
 
@@ -1002,7 +1002,7 @@ public readonly description: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_certificate#description AutomationCertificate#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_certificate#description AutomationCertificate#description}.
 
 ---
 
@@ -1014,7 +1014,7 @@ public readonly exportable: boolean | IResolvable;
 
 - *Type:* boolean | cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_certificate#exportable AutomationCertificate#exportable}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_certificate#exportable AutomationCertificate#exportable}.
 
 ---
 
@@ -1026,7 +1026,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_certificate#id AutomationCertificate#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_certificate#id AutomationCertificate#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1043,7 +1043,7 @@ public readonly timeouts: AutomationCertificateTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_certificate#timeouts AutomationCertificate#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_certificate#timeouts AutomationCertificate#timeouts}
 
 ---
 
@@ -1061,10 +1061,10 @@ const automationCertificateTimeouts: automationCertificate.AutomationCertificate
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_certificate#create AutomationCertificate#create}. |
-| <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_certificate#delete AutomationCertificate#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_certificate#read AutomationCertificate#read}. |
-| <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_certificate#update AutomationCertificate#update}. |
+| <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_certificate#create AutomationCertificate#create}. |
+| <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_certificate#delete AutomationCertificate#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_certificate#read AutomationCertificate#read}. |
+| <code><a href="#@cdktf/provider-azurerm.automationCertificate.AutomationCertificateTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_certificate#update AutomationCertificate#update}. |
 
 ---
 
@@ -1076,7 +1076,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_certificate#create AutomationCertificate#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_certificate#create AutomationCertificate#create}.
 
 ---
 
@@ -1088,7 +1088,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_certificate#delete AutomationCertificate#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_certificate#delete AutomationCertificate#delete}.
 
 ---
 
@@ -1100,7 +1100,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_certificate#read AutomationCertificate#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_certificate#read AutomationCertificate#read}.
 
 ---
 
@@ -1112,7 +1112,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/automation_certificate#update AutomationCertificate#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_certificate#update AutomationCertificate#update}.
 
 ---
 

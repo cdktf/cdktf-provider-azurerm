@@ -1,6 +1,6 @@
 # `data_azurerm_cosmosdb_mongo_database`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_cosmosdb_mongo_database`](https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/cosmosdb_mongo_database).
+Refer to the Terraform Registory for docs: [`data_azurerm_cosmosdb_mongo_database`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/cosmosdb_mongo_database).
 
 # `dataAzurermCosmosdbMongoDatabase` Submodule <a name="`dataAzurermCosmosdbMongoDatabase` Submodule" id="@cdktf/provider-azurerm.dataAzurermCosmosdbMongoDatabase"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`data_azurerm_cosmosdb_mongo_databas
 
 ### DataAzurermCosmosdbMongoDatabase <a name="DataAzurermCosmosdbMongoDatabase" id="@cdktf/provider-azurerm.dataAzurermCosmosdbMongoDatabase.DataAzurermCosmosdbMongoDatabase"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/cosmosdb_mongo_database azurerm_cosmosdb_mongo_database}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/cosmosdb_mongo_database azurerm_cosmosdb_mongo_database}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermCosmosdbMongoDatabase.DataAzurermCosmosdbMongoDatabase.Initializer"></a>
 
@@ -387,7 +387,7 @@ The construct id used in the generated config for the DataAzurermCosmosdbMongoDa
 
 The id of the existing DataAzurermCosmosdbMongoDatabase that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/cosmosdb_mongo_database#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/cosmosdb_mongo_database#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -702,10 +702,10 @@ const dataAzurermCosmosdbMongoDatabaseConfig: dataAzurermCosmosdbMongoDatabase.D
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCosmosdbMongoDatabase.DataAzurermCosmosdbMongoDatabaseConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCosmosdbMongoDatabase.DataAzurermCosmosdbMongoDatabaseConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCosmosdbMongoDatabase.DataAzurermCosmosdbMongoDatabaseConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermCosmosdbMongoDatabase.DataAzurermCosmosdbMongoDatabaseConfig.property.accountName">accountName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/cosmosdb_mongo_database#account_name DataAzurermCosmosdbMongoDatabase#account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermCosmosdbMongoDatabase.DataAzurermCosmosdbMongoDatabaseConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/cosmosdb_mongo_database#name DataAzurermCosmosdbMongoDatabase#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermCosmosdbMongoDatabase.DataAzurermCosmosdbMongoDatabaseConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/cosmosdb_mongo_database#resource_group_name DataAzurermCosmosdbMongoDatabase#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermCosmosdbMongoDatabase.DataAzurermCosmosdbMongoDatabaseConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/cosmosdb_mongo_database#id DataAzurermCosmosdbMongoDatabase#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermCosmosdbMongoDatabase.DataAzurermCosmosdbMongoDatabaseConfig.property.accountName">accountName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/cosmosdb_mongo_database#account_name DataAzurermCosmosdbMongoDatabase#account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermCosmosdbMongoDatabase.DataAzurermCosmosdbMongoDatabaseConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/cosmosdb_mongo_database#name DataAzurermCosmosdbMongoDatabase#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermCosmosdbMongoDatabase.DataAzurermCosmosdbMongoDatabaseConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/cosmosdb_mongo_database#resource_group_name DataAzurermCosmosdbMongoDatabase#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermCosmosdbMongoDatabase.DataAzurermCosmosdbMongoDatabaseConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/cosmosdb_mongo_database#id DataAzurermCosmosdbMongoDatabase#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermCosmosdbMongoDatabase.DataAzurermCosmosdbMongoDatabaseConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermCosmosdbMongoDatabase.DataAzurermCosmosdbMongoDatabaseTimeouts">DataAzurermCosmosdbMongoDatabaseTimeouts</a></code> | timeouts block. |
 
 ---
@@ -788,7 +788,7 @@ public readonly accountName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/cosmosdb_mongo_database#account_name DataAzurermCosmosdbMongoDatabase#account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/cosmosdb_mongo_database#account_name DataAzurermCosmosdbMongoDatabase#account_name}.
 
 ---
 
@@ -800,7 +800,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/cosmosdb_mongo_database#name DataAzurermCosmosdbMongoDatabase#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/cosmosdb_mongo_database#name DataAzurermCosmosdbMongoDatabase#name}.
 
 ---
 
@@ -812,7 +812,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/cosmosdb_mongo_database#resource_group_name DataAzurermCosmosdbMongoDatabase#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/cosmosdb_mongo_database#resource_group_name DataAzurermCosmosdbMongoDatabase#resource_group_name}.
 
 ---
 
@@ -824,7 +824,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/cosmosdb_mongo_database#id DataAzurermCosmosdbMongoDatabase#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/cosmosdb_mongo_database#id DataAzurermCosmosdbMongoDatabase#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -841,7 +841,7 @@ public readonly timeouts: DataAzurermCosmosdbMongoDatabaseTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/cosmosdb_mongo_database#timeouts DataAzurermCosmosdbMongoDatabase#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/cosmosdb_mongo_database#timeouts DataAzurermCosmosdbMongoDatabase#timeouts}
 
 ---
 
@@ -859,7 +859,7 @@ const dataAzurermCosmosdbMongoDatabaseTimeouts: dataAzurermCosmosdbMongoDatabase
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermCosmosdbMongoDatabase.DataAzurermCosmosdbMongoDatabaseTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/cosmosdb_mongo_database#read DataAzurermCosmosdbMongoDatabase#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermCosmosdbMongoDatabase.DataAzurermCosmosdbMongoDatabaseTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/cosmosdb_mongo_database#read DataAzurermCosmosdbMongoDatabase#read}. |
 
 ---
 
@@ -871,7 +871,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/data-sources/cosmosdb_mongo_database#read DataAzurermCosmosdbMongoDatabase#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/cosmosdb_mongo_database#read DataAzurermCosmosdbMongoDatabase#read}.
 
 ---
 

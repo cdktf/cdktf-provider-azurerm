@@ -1,6 +1,6 @@
 # `azurerm_media_live_event_output`
 
-Refer to the Terraform Registory for docs: [`azurerm_media_live_event_output`](https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output).
+Refer to the Terraform Registory for docs: [`azurerm_media_live_event_output`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output).
 
 # `mediaLiveEventOutput` Submodule <a name="`mediaLiveEventOutput` Submodule" id="@cdktf/provider-azurerm.mediaLiveEventOutput"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_media_live_event_output`](h
 
 ### MediaLiveEventOutput <a name="MediaLiveEventOutput" id="@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutput"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output azurerm_media_live_event_output}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output azurerm_media_live_event_output}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutput.Initializer"></a>
 
@@ -483,7 +483,7 @@ The construct id used in the generated config for the MediaLiveEventOutput to im
 
 The id of the existing MediaLiveEventOutput that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -941,16 +941,16 @@ const mediaLiveEventOutputConfig: mediaLiveEventOutput.MediaLiveEventOutputConfi
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputConfig.property.archiveWindowDuration">archiveWindowDuration</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#archive_window_duration MediaLiveEventOutput#archive_window_duration}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputConfig.property.assetName">assetName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#asset_name MediaLiveEventOutput#asset_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputConfig.property.liveEventId">liveEventId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#live_event_id MediaLiveEventOutput#live_event_id}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#name MediaLiveEventOutput#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputConfig.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#description MediaLiveEventOutput#description}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputConfig.property.hlsFragmentsPerTsSegment">hlsFragmentsPerTsSegment</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#hls_fragments_per_ts_segment MediaLiveEventOutput#hls_fragments_per_ts_segment}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#id MediaLiveEventOutput#id}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputConfig.property.manifestName">manifestName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#manifest_name MediaLiveEventOutput#manifest_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputConfig.property.outputSnapTimeInSeconds">outputSnapTimeInSeconds</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#output_snap_time_in_seconds MediaLiveEventOutput#output_snap_time_in_seconds}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputConfig.property.rewindWindowDuration">rewindWindowDuration</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#rewind_window_duration MediaLiveEventOutput#rewind_window_duration}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputConfig.property.archiveWindowDuration">archiveWindowDuration</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#archive_window_duration MediaLiveEventOutput#archive_window_duration}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputConfig.property.assetName">assetName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#asset_name MediaLiveEventOutput#asset_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputConfig.property.liveEventId">liveEventId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#live_event_id MediaLiveEventOutput#live_event_id}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#name MediaLiveEventOutput#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputConfig.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#description MediaLiveEventOutput#description}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputConfig.property.hlsFragmentsPerTsSegment">hlsFragmentsPerTsSegment</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#hls_fragments_per_ts_segment MediaLiveEventOutput#hls_fragments_per_ts_segment}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#id MediaLiveEventOutput#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputConfig.property.manifestName">manifestName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#manifest_name MediaLiveEventOutput#manifest_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputConfig.property.outputSnapTimeInSeconds">outputSnapTimeInSeconds</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#output_snap_time_in_seconds MediaLiveEventOutput#output_snap_time_in_seconds}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputConfig.property.rewindWindowDuration">rewindWindowDuration</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#rewind_window_duration MediaLiveEventOutput#rewind_window_duration}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeouts">MediaLiveEventOutputTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1033,7 +1033,7 @@ public readonly archiveWindowDuration: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#archive_window_duration MediaLiveEventOutput#archive_window_duration}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#archive_window_duration MediaLiveEventOutput#archive_window_duration}.
 
 ---
 
@@ -1045,7 +1045,7 @@ public readonly assetName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#asset_name MediaLiveEventOutput#asset_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#asset_name MediaLiveEventOutput#asset_name}.
 
 ---
 
@@ -1057,7 +1057,7 @@ public readonly liveEventId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#live_event_id MediaLiveEventOutput#live_event_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#live_event_id MediaLiveEventOutput#live_event_id}.
 
 ---
 
@@ -1069,7 +1069,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#name MediaLiveEventOutput#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#name MediaLiveEventOutput#name}.
 
 ---
 
@@ -1081,7 +1081,7 @@ public readonly description: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#description MediaLiveEventOutput#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#description MediaLiveEventOutput#description}.
 
 ---
 
@@ -1093,7 +1093,7 @@ public readonly hlsFragmentsPerTsSegment: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#hls_fragments_per_ts_segment MediaLiveEventOutput#hls_fragments_per_ts_segment}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#hls_fragments_per_ts_segment MediaLiveEventOutput#hls_fragments_per_ts_segment}.
 
 ---
 
@@ -1105,7 +1105,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#id MediaLiveEventOutput#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#id MediaLiveEventOutput#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1120,7 +1120,7 @@ public readonly manifestName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#manifest_name MediaLiveEventOutput#manifest_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#manifest_name MediaLiveEventOutput#manifest_name}.
 
 ---
 
@@ -1132,7 +1132,7 @@ public readonly outputSnapTimeInSeconds: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#output_snap_time_in_seconds MediaLiveEventOutput#output_snap_time_in_seconds}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#output_snap_time_in_seconds MediaLiveEventOutput#output_snap_time_in_seconds}.
 
 ---
 
@@ -1144,7 +1144,7 @@ public readonly rewindWindowDuration: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#rewind_window_duration MediaLiveEventOutput#rewind_window_duration}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#rewind_window_duration MediaLiveEventOutput#rewind_window_duration}.
 
 ---
 
@@ -1158,7 +1158,7 @@ public readonly timeouts: MediaLiveEventOutputTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#timeouts MediaLiveEventOutput#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#timeouts MediaLiveEventOutput#timeouts}
 
 ---
 
@@ -1176,10 +1176,9 @@ const mediaLiveEventOutputTimeouts: mediaLiveEventOutput.MediaLiveEventOutputTim
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#create MediaLiveEventOutput#create}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#delete MediaLiveEventOutput#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#read MediaLiveEventOutput#read}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#update MediaLiveEventOutput#update}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#create MediaLiveEventOutput#create}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#delete MediaLiveEventOutput#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#read MediaLiveEventOutput#read}. |
 
 ---
 
@@ -1191,7 +1190,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#create MediaLiveEventOutput#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#create MediaLiveEventOutput#create}.
 
 ---
 
@@ -1203,7 +1202,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#delete MediaLiveEventOutput#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#delete MediaLiveEventOutput#delete}.
 
 ---
 
@@ -1215,19 +1214,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#read MediaLiveEventOutput#read}.
-
----
-
-##### `update`<sup>Optional</sup> <a name="update" id="@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeouts.property.update"></a>
-
-```typescript
-public readonly update: string;
-```
-
-- *Type:* string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/media_live_event_output#update MediaLiveEventOutput#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event_output#read MediaLiveEventOutput#read}.
 
 ---
 
@@ -1286,7 +1273,6 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeoutsOutputReference.resetCreate">resetCreate</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeoutsOutputReference.resetDelete">resetDelete</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeoutsOutputReference.resetRead">resetRead</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeoutsOutputReference.resetUpdate">resetUpdate</a></code> | *No description.* |
 
 ---
 
@@ -1458,12 +1444,6 @@ public resetDelete(): void
 public resetRead(): void
 ```
 
-##### `resetUpdate` <a name="resetUpdate" id="@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeoutsOutputReference.resetUpdate"></a>
-
-```typescript
-public resetUpdate(): void
-```
-
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -1474,11 +1454,9 @@ public resetUpdate(): void
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeoutsOutputReference.property.createInput">createInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeoutsOutputReference.property.deleteInput">deleteInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeoutsOutputReference.property.updateInput">updateInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeoutsOutputReference.property.create">create</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeoutsOutputReference.property.delete">delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeoutsOutputReference.property.read">read</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeoutsOutputReference.property.update">update</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeouts">MediaLiveEventOutputTimeouts</a></code> | *No description.* |
 
 ---
@@ -1537,16 +1515,6 @@ public readonly readInput: string;
 
 ---
 
-##### `updateInput`<sup>Optional</sup> <a name="updateInput" id="@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeoutsOutputReference.property.updateInput"></a>
-
-```typescript
-public readonly updateInput: string;
-```
-
-- *Type:* string
-
----
-
 ##### `create`<sup>Required</sup> <a name="create" id="@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeoutsOutputReference.property.create"></a>
 
 ```typescript
@@ -1571,16 +1539,6 @@ public readonly delete: string;
 
 ```typescript
 public readonly read: string;
-```
-
-- *Type:* string
-
----
-
-##### `update`<sup>Required</sup> <a name="update" id="@cdktf/provider-azurerm.mediaLiveEventOutput.MediaLiveEventOutputTimeoutsOutputReference.property.update"></a>
-
-```typescript
-public readonly update: string;
 ```
 
 - *Type:* string

@@ -1,6 +1,6 @@
 # `azurerm_sql_managed_database`
 
-Refer to the Terraform Registory for docs: [`azurerm_sql_managed_database`](https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database).
+Refer to the Terraform Registory for docs: [`azurerm_sql_managed_database`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database).
 
 # `sqlManagedDatabase` Submodule <a name="`sqlManagedDatabase` Submodule" id="@cdktf/provider-azurerm.sqlManagedDatabase"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_sql_managed_database`](http
 
 ### SqlManagedDatabase <a name="SqlManagedDatabase" id="@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabase"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database azurerm_sql_managed_database}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database azurerm_sql_managed_database}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabase.Initializer"></a>
 
@@ -44,10 +44,10 @@ sqlManagedDatabase.SqlManagedDatabase(
 | <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabase.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabase.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabase.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabase.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#location SqlManagedDatabase#location}. |
-| <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabase.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#name SqlManagedDatabase#name}. |
-| <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabase.Initializer.parameter.sqlManagedInstanceId">sql_managed_instance_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#sql_managed_instance_id SqlManagedDatabase#sql_managed_instance_id}. |
-| <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabase.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#id SqlManagedDatabase#id}. |
+| <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabase.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#location SqlManagedDatabase#location}. |
+| <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabase.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#name SqlManagedDatabase#name}. |
+| <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabase.Initializer.parameter.sqlManagedInstanceId">sql_managed_instance_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#sql_managed_instance_id SqlManagedDatabase#sql_managed_instance_id}. |
+| <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabase.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#id SqlManagedDatabase#id}. |
 | <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabase.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeouts">SqlManagedDatabaseTimeouts</a></code> | timeouts block. |
 
 ---
@@ -116,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#location SqlManagedDatabase#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#location SqlManagedDatabase#location}.
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#name SqlManagedDatabase#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#name SqlManagedDatabase#name}.
 
 ---
 
@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#sql_managed_instance_id SqlManagedDatabase#sql_managed_instance_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#sql_managed_instance_id SqlManagedDatabase#sql_managed_instance_id}.
 
 ---
 
@@ -140,7 +140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#id SqlManagedDatabase#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#id SqlManagedDatabase#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -153,7 +153,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#timeouts SqlManagedDatabase#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#timeouts SqlManagedDatabase#timeouts}
 
 ---
 
@@ -467,8 +467,7 @@ Optional The index corresponding to the key the resource is to appear in the for
 def put_timeouts(
   create: str = None,
   delete: str = None,
-  read: str = None,
-  update: str = None
+  read: str = None
 ) -> None
 ```
 
@@ -476,7 +475,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#create SqlManagedDatabase#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#create SqlManagedDatabase#create}.
 
 ---
 
@@ -484,7 +483,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#delete SqlManagedDatabase#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#delete SqlManagedDatabase#delete}.
 
 ---
 
@@ -492,15 +491,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#read SqlManagedDatabase#read}.
-
----
-
-###### `update`<sup>Optional</sup> <a name="update" id="@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabase.putTimeouts.parameter.update"></a>
-
-- *Type:* str
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#update SqlManagedDatabase#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#read SqlManagedDatabase#read}.
 
 ---
 
@@ -630,7 +621,7 @@ The construct id used in the generated config for the SqlManagedDatabase to impo
 
 The id of the existing SqlManagedDatabase that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -969,10 +960,10 @@ sqlManagedDatabase.SqlManagedDatabaseConfig(
 | <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#location SqlManagedDatabase#location}. |
-| <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#name SqlManagedDatabase#name}. |
-| <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseConfig.property.sqlManagedInstanceId">sql_managed_instance_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#sql_managed_instance_id SqlManagedDatabase#sql_managed_instance_id}. |
-| <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#id SqlManagedDatabase#id}. |
+| <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#location SqlManagedDatabase#location}. |
+| <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#name SqlManagedDatabase#name}. |
+| <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseConfig.property.sqlManagedInstanceId">sql_managed_instance_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#sql_managed_instance_id SqlManagedDatabase#sql_managed_instance_id}. |
+| <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#id SqlManagedDatabase#id}. |
 | <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeouts">SqlManagedDatabaseTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1055,7 +1046,7 @@ location: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#location SqlManagedDatabase#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#location SqlManagedDatabase#location}.
 
 ---
 
@@ -1067,7 +1058,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#name SqlManagedDatabase#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#name SqlManagedDatabase#name}.
 
 ---
 
@@ -1079,7 +1070,7 @@ sql_managed_instance_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#sql_managed_instance_id SqlManagedDatabase#sql_managed_instance_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#sql_managed_instance_id SqlManagedDatabase#sql_managed_instance_id}.
 
 ---
 
@@ -1091,7 +1082,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#id SqlManagedDatabase#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#id SqlManagedDatabase#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1108,7 +1099,7 @@ timeouts: SqlManagedDatabaseTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#timeouts SqlManagedDatabase#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#timeouts SqlManagedDatabase#timeouts}
 
 ---
 
@@ -1122,8 +1113,7 @@ from cdktf_cdktf_provider_azurerm import sql_managed_database
 sqlManagedDatabase.SqlManagedDatabaseTimeouts(
   create: str = None,
   delete: str = None,
-  read: str = None,
-  update: str = None
+  read: str = None
 )
 ```
 
@@ -1131,10 +1121,9 @@ sqlManagedDatabase.SqlManagedDatabaseTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#create SqlManagedDatabase#create}. |
-| <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#delete SqlManagedDatabase#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#read SqlManagedDatabase#read}. |
-| <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#update SqlManagedDatabase#update}. |
+| <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#create SqlManagedDatabase#create}. |
+| <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#delete SqlManagedDatabase#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#read SqlManagedDatabase#read}. |
 
 ---
 
@@ -1146,7 +1135,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#create SqlManagedDatabase#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#create SqlManagedDatabase#create}.
 
 ---
 
@@ -1158,7 +1147,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#delete SqlManagedDatabase#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#delete SqlManagedDatabase#delete}.
 
 ---
 
@@ -1170,19 +1159,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#read SqlManagedDatabase#read}.
-
----
-
-##### `update`<sup>Optional</sup> <a name="update" id="@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeouts.property.update"></a>
-
-```python
-update: str
-```
-
-- *Type:* str
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/sql_managed_database#update SqlManagedDatabase#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_managed_database#read SqlManagedDatabase#read}.
 
 ---
 
@@ -1244,7 +1221,6 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeoutsOutputReference.resetCreate">reset_create</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeoutsOutputReference.resetDelete">reset_delete</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeoutsOutputReference.resetRead">reset_read</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeoutsOutputReference.resetUpdate">reset_update</a></code> | *No description.* |
 
 ---
 
@@ -1438,12 +1414,6 @@ def reset_delete() -> None
 def reset_read() -> None
 ```
 
-##### `reset_update` <a name="reset_update" id="@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeoutsOutputReference.resetUpdate"></a>
-
-```python
-def reset_update() -> None
-```
-
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -1454,11 +1424,9 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeoutsOutputReference.property.createInput">create_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeoutsOutputReference.property.deleteInput">delete_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeoutsOutputReference.property.readInput">read_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeoutsOutputReference.property.updateInput">update_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeouts">SqlManagedDatabaseTimeouts</a>]</code> | *No description.* |
 
 ---
@@ -1517,16 +1485,6 @@ read_input: str
 
 ---
 
-##### `update_input`<sup>Optional</sup> <a name="update_input" id="@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeoutsOutputReference.property.updateInput"></a>
-
-```python
-update_input: str
-```
-
-- *Type:* str
-
----
-
 ##### `create`<sup>Required</sup> <a name="create" id="@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeoutsOutputReference.property.create"></a>
 
 ```python
@@ -1551,16 +1509,6 @@ delete: str
 
 ```python
 read: str
-```
-
-- *Type:* str
-
----
-
-##### `update`<sup>Required</sup> <a name="update" id="@cdktf/provider-azurerm.sqlManagedDatabase.SqlManagedDatabaseTimeoutsOutputReference.property.update"></a>
-
-```python
-update: str
 ```
 
 - *Type:* str

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/netapp_snapshot
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/netapp_snapshot
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,60 +13,56 @@ import * as cdktf from 'cdktf';
 
 export interface NetappSnapshotConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/netapp_snapshot#account_name NetappSnapshot#account_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/netapp_snapshot#account_name NetappSnapshot#account_name}
   */
   readonly accountName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/netapp_snapshot#id NetappSnapshot#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/netapp_snapshot#id NetappSnapshot#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/netapp_snapshot#location NetappSnapshot#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/netapp_snapshot#location NetappSnapshot#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/netapp_snapshot#name NetappSnapshot#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/netapp_snapshot#name NetappSnapshot#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/netapp_snapshot#pool_name NetappSnapshot#pool_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/netapp_snapshot#pool_name NetappSnapshot#pool_name}
   */
   readonly poolName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/netapp_snapshot#resource_group_name NetappSnapshot#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/netapp_snapshot#resource_group_name NetappSnapshot#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/netapp_snapshot#volume_name NetappSnapshot#volume_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/netapp_snapshot#volume_name NetappSnapshot#volume_name}
   */
   readonly volumeName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/netapp_snapshot#timeouts NetappSnapshot#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/netapp_snapshot#timeouts NetappSnapshot#timeouts}
   */
   readonly timeouts?: NetappSnapshotTimeouts;
 }
 export interface NetappSnapshotTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/netapp_snapshot#create NetappSnapshot#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/netapp_snapshot#create NetappSnapshot#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/netapp_snapshot#delete NetappSnapshot#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/netapp_snapshot#delete NetappSnapshot#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/netapp_snapshot#read NetappSnapshot#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/netapp_snapshot#read NetappSnapshot#read}
   */
   readonly read?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/netapp_snapshot#update NetappSnapshot#update}
-  */
-  readonly update?: string;
 }
 
 export function netappSnapshotTimeoutsToTerraform(struct?: NetappSnapshotTimeouts | cdktf.IResolvable): any {
@@ -78,7 +74,6 @@ export function netappSnapshotTimeoutsToTerraform(struct?: NetappSnapshotTimeout
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
-    update: cdktf.stringToTerraform(struct!.update),
   }
 }
 
@@ -112,10 +107,6 @@ export class NetappSnapshotTimeoutsOutputReference extends cdktf.ComplexObject {
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.update = this._update;
-    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -126,7 +117,6 @@ export class NetappSnapshotTimeoutsOutputReference extends cdktf.ComplexObject {
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
-      this._update = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -138,7 +128,6 @@ export class NetappSnapshotTimeoutsOutputReference extends cdktf.ComplexObject {
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
-      this._update = value.update;
     }
   }
 
@@ -189,26 +178,10 @@ export class NetappSnapshotTimeoutsOutputReference extends cdktf.ComplexObject {
   public get readInput() {
     return this._read;
   }
-
-  // update - computed: false, optional: true, required: false
-  private _update?: string; 
-  public get update() {
-    return this.getStringAttribute('update');
-  }
-  public set update(value: string) {
-    this._update = value;
-  }
-  public resetUpdate() {
-    this._update = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get updateInput() {
-    return this._update;
-  }
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/netapp_snapshot azurerm_netapp_snapshot}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/netapp_snapshot azurerm_netapp_snapshot}
 */
 export class NetappSnapshot extends cdktf.TerraformResource {
 
@@ -224,7 +197,7 @@ export class NetappSnapshot extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a NetappSnapshot resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the NetappSnapshot to import
-  * @param importFromId The id of the existing NetappSnapshot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/netapp_snapshot#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing NetappSnapshot that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/netapp_snapshot#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the NetappSnapshot to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -236,7 +209,7 @@ export class NetappSnapshot extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/netapp_snapshot azurerm_netapp_snapshot} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/netapp_snapshot azurerm_netapp_snapshot} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -247,7 +220,7 @@ export class NetappSnapshot extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_netapp_snapshot',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.81.0',
+        providerVersion: '3.82.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

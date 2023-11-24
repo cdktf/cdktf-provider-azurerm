@@ -1,6 +1,6 @@
 # `azurerm_subnet_nat_gateway_association`
 
-Refer to the Terraform Registory for docs: [`azurerm_subnet_nat_gateway_association`](https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/subnet_nat_gateway_association).
+Refer to the Terraform Registory for docs: [`azurerm_subnet_nat_gateway_association`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/subnet_nat_gateway_association).
 
 # `subnetNatGatewayAssociation` Submodule <a name="`subnetNatGatewayAssociation` Submodule" id="@cdktf/provider-azurerm.subnetNatGatewayAssociation"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_subnet_nat_gateway_associat
 
 ### SubnetNatGatewayAssociation <a name="SubnetNatGatewayAssociation" id="@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociation"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/subnet_nat_gateway_association azurerm_subnet_nat_gateway_association}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/subnet_nat_gateway_association azurerm_subnet_nat_gateway_association}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociation.Initializer"></a>
 
@@ -45,9 +45,9 @@ SubnetNatGatewayAssociation.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociation.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociation.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociation.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociation.Initializer.parameter.natGatewayId">natGatewayId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/subnet_nat_gateway_association#nat_gateway_id SubnetNatGatewayAssociation#nat_gateway_id}. |
-| <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociation.Initializer.parameter.subnetId">subnetId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/subnet_nat_gateway_association#subnet_id SubnetNatGatewayAssociation#subnet_id}. |
-| <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociation.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/subnet_nat_gateway_association#id SubnetNatGatewayAssociation#id}. |
+| <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociation.Initializer.parameter.natGatewayId">natGatewayId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/subnet_nat_gateway_association#nat_gateway_id SubnetNatGatewayAssociation#nat_gateway_id}. |
+| <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociation.Initializer.parameter.subnetId">subnetId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/subnet_nat_gateway_association#subnet_id SubnetNatGatewayAssociation#subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociation.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/subnet_nat_gateway_association#id SubnetNatGatewayAssociation#id}. |
 | <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociation.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeouts">SubnetNatGatewayAssociationTimeouts</a></code> | timeouts block. |
 
 ---
@@ -116,7 +116,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/subnet_nat_gateway_association#nat_gateway_id SubnetNatGatewayAssociation#nat_gateway_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/subnet_nat_gateway_association#nat_gateway_id SubnetNatGatewayAssociation#nat_gateway_id}.
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/subnet_nat_gateway_association#subnet_id SubnetNatGatewayAssociation#subnet_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/subnet_nat_gateway_association#subnet_id SubnetNatGatewayAssociation#subnet_id}.
 
 ---
 
@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/subnet_nat_gateway_association#id SubnetNatGatewayAssociation#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/subnet_nat_gateway_association#id SubnetNatGatewayAssociation#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -145,7 +145,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/subnet_nat_gateway_association#timeouts SubnetNatGatewayAssociation#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/subnet_nat_gateway_association#timeouts SubnetNatGatewayAssociation#timeouts}
 
 ---
 
@@ -549,7 +549,7 @@ The construct id used in the generated config for the SubnetNatGatewayAssociatio
 
 The id of the existing SubnetNatGatewayAssociation that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/subnet_nat_gateway_association#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/subnet_nat_gateway_association#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -869,9 +869,9 @@ SubnetNatGatewayAssociationConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationConfig.property.natGatewayId">natGatewayId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/subnet_nat_gateway_association#nat_gateway_id SubnetNatGatewayAssociation#nat_gateway_id}. |
-| <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationConfig.property.subnetId">subnetId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/subnet_nat_gateway_association#subnet_id SubnetNatGatewayAssociation#subnet_id}. |
-| <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/subnet_nat_gateway_association#id SubnetNatGatewayAssociation#id}. |
+| <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationConfig.property.natGatewayId">natGatewayId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/subnet_nat_gateway_association#nat_gateway_id SubnetNatGatewayAssociation#nat_gateway_id}. |
+| <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationConfig.property.subnetId">subnetId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/subnet_nat_gateway_association#subnet_id SubnetNatGatewayAssociation#subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/subnet_nat_gateway_association#id SubnetNatGatewayAssociation#id}. |
 | <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeouts">SubnetNatGatewayAssociationTimeouts</a></code> | timeouts block. |
 
 ---
@@ -954,7 +954,7 @@ public java.lang.String getNatGatewayId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/subnet_nat_gateway_association#nat_gateway_id SubnetNatGatewayAssociation#nat_gateway_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/subnet_nat_gateway_association#nat_gateway_id SubnetNatGatewayAssociation#nat_gateway_id}.
 
 ---
 
@@ -966,7 +966,7 @@ public java.lang.String getSubnetId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/subnet_nat_gateway_association#subnet_id SubnetNatGatewayAssociation#subnet_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/subnet_nat_gateway_association#subnet_id SubnetNatGatewayAssociation#subnet_id}.
 
 ---
 
@@ -978,7 +978,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/subnet_nat_gateway_association#id SubnetNatGatewayAssociation#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/subnet_nat_gateway_association#id SubnetNatGatewayAssociation#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -995,7 +995,7 @@ public SubnetNatGatewayAssociationTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/subnet_nat_gateway_association#timeouts SubnetNatGatewayAssociation#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/subnet_nat_gateway_association#timeouts SubnetNatGatewayAssociation#timeouts}
 
 ---
 
@@ -1010,7 +1010,6 @@ SubnetNatGatewayAssociationTimeouts.builder()
 //  .create(java.lang.String)
 //  .delete(java.lang.String)
 //  .read(java.lang.String)
-//  .update(java.lang.String)
     .build();
 ```
 
@@ -1018,10 +1017,9 @@ SubnetNatGatewayAssociationTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/subnet_nat_gateway_association#create SubnetNatGatewayAssociation#create}. |
-| <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/subnet_nat_gateway_association#delete SubnetNatGatewayAssociation#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/subnet_nat_gateway_association#read SubnetNatGatewayAssociation#read}. |
-| <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/subnet_nat_gateway_association#update SubnetNatGatewayAssociation#update}. |
+| <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/subnet_nat_gateway_association#create SubnetNatGatewayAssociation#create}. |
+| <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/subnet_nat_gateway_association#delete SubnetNatGatewayAssociation#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/subnet_nat_gateway_association#read SubnetNatGatewayAssociation#read}. |
 
 ---
 
@@ -1033,7 +1031,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/subnet_nat_gateway_association#create SubnetNatGatewayAssociation#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/subnet_nat_gateway_association#create SubnetNatGatewayAssociation#create}.
 
 ---
 
@@ -1045,7 +1043,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/subnet_nat_gateway_association#delete SubnetNatGatewayAssociation#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/subnet_nat_gateway_association#delete SubnetNatGatewayAssociation#delete}.
 
 ---
 
@@ -1057,19 +1055,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/subnet_nat_gateway_association#read SubnetNatGatewayAssociation#read}.
-
----
-
-##### `update`<sup>Optional</sup> <a name="update" id="@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeouts.property.update"></a>
-
-```java
-public java.lang.String getUpdate();
-```
-
-- *Type:* java.lang.String
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/subnet_nat_gateway_association#update SubnetNatGatewayAssociation#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/subnet_nat_gateway_association#read SubnetNatGatewayAssociation#read}.
 
 ---
 
@@ -1128,7 +1114,6 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeoutsOutputReference.resetCreate">resetCreate</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeoutsOutputReference.resetDelete">resetDelete</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeoutsOutputReference.resetRead">resetRead</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeoutsOutputReference.resetUpdate">resetUpdate</a></code> | *No description.* |
 
 ---
 
@@ -1300,12 +1285,6 @@ public void resetDelete()
 public void resetRead()
 ```
 
-##### `resetUpdate` <a name="resetUpdate" id="@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeoutsOutputReference.resetUpdate"></a>
-
-```java
-public void resetUpdate()
-```
-
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -1316,11 +1295,9 @@ public void resetUpdate()
 | <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeoutsOutputReference.property.createInput">createInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeoutsOutputReference.property.deleteInput">deleteInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeoutsOutputReference.property.readInput">readInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeoutsOutputReference.property.updateInput">updateInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeoutsOutputReference.property.create">create</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeoutsOutputReference.property.delete">delete</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeoutsOutputReference.property.read">read</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeoutsOutputReference.property.update">update</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeouts">SubnetNatGatewayAssociationTimeouts</a></code> | *No description.* |
 
 ---
@@ -1379,16 +1356,6 @@ public java.lang.String getReadInput();
 
 ---
 
-##### `updateInput`<sup>Optional</sup> <a name="updateInput" id="@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeoutsOutputReference.property.updateInput"></a>
-
-```java
-public java.lang.String getUpdateInput();
-```
-
-- *Type:* java.lang.String
-
----
-
 ##### `create`<sup>Required</sup> <a name="create" id="@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeoutsOutputReference.property.create"></a>
 
 ```java
@@ -1413,16 +1380,6 @@ public java.lang.String getDelete();
 
 ```java
 public java.lang.String getRead();
-```
-
-- *Type:* java.lang.String
-
----
-
-##### `update`<sup>Required</sup> <a name="update" id="@cdktf/provider-azurerm.subnetNatGatewayAssociation.SubnetNatGatewayAssociationTimeoutsOutputReference.property.update"></a>
-
-```java
-public java.lang.String getUpdate();
 ```
 
 - *Type:* java.lang.String

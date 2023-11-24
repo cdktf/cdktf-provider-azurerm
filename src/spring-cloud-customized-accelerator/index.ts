@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,56 +13,60 @@ import * as cdktf from 'cdktf';
 
 export interface SpringCloudCustomizedAcceleratorConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#accelerator_tags SpringCloudCustomizedAccelerator#accelerator_tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#accelerator_tags SpringCloudCustomizedAccelerator#accelerator_tags}
   */
   readonly acceleratorTags?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#description SpringCloudCustomizedAccelerator#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#accelerator_type SpringCloudCustomizedAccelerator#accelerator_type}
+  */
+  readonly acceleratorType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#description SpringCloudCustomizedAccelerator#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#display_name SpringCloudCustomizedAccelerator#display_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#display_name SpringCloudCustomizedAccelerator#display_name}
   */
   readonly displayName?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#icon_url SpringCloudCustomizedAccelerator#icon_url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#icon_url SpringCloudCustomizedAccelerator#icon_url}
   */
   readonly iconUrl?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#id SpringCloudCustomizedAccelerator#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#id SpringCloudCustomizedAccelerator#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#name SpringCloudCustomizedAccelerator#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#name SpringCloudCustomizedAccelerator#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#spring_cloud_accelerator_id SpringCloudCustomizedAccelerator#spring_cloud_accelerator_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#spring_cloud_accelerator_id SpringCloudCustomizedAccelerator#spring_cloud_accelerator_id}
   */
   readonly springCloudAcceleratorId: string;
   /**
   * git_repository block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#git_repository SpringCloudCustomizedAccelerator#git_repository}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#git_repository SpringCloudCustomizedAccelerator#git_repository}
   */
   readonly gitRepository: SpringCloudCustomizedAcceleratorGitRepository;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#timeouts SpringCloudCustomizedAccelerator#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#timeouts SpringCloudCustomizedAccelerator#timeouts}
   */
   readonly timeouts?: SpringCloudCustomizedAcceleratorTimeouts;
 }
 export interface SpringCloudCustomizedAcceleratorGitRepositoryBasicAuth {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#password SpringCloudCustomizedAccelerator#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#password SpringCloudCustomizedAccelerator#password}
   */
   readonly password: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#username SpringCloudCustomizedAccelerator#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#username SpringCloudCustomizedAccelerator#username}
   */
   readonly username: string;
 }
@@ -144,15 +148,15 @@ export class SpringCloudCustomizedAcceleratorGitRepositoryBasicAuthOutputReferen
 }
 export interface SpringCloudCustomizedAcceleratorGitRepositorySshAuth {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#host_key SpringCloudCustomizedAccelerator#host_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#host_key SpringCloudCustomizedAccelerator#host_key}
   */
   readonly hostKey?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#host_key_algorithm SpringCloudCustomizedAccelerator#host_key_algorithm}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#host_key_algorithm SpringCloudCustomizedAccelerator#host_key_algorithm}
   */
   readonly hostKeyAlgorithm?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#private_key SpringCloudCustomizedAccelerator#private_key}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#private_key SpringCloudCustomizedAccelerator#private_key}
   */
   readonly privateKey: string;
 }
@@ -260,39 +264,43 @@ export class SpringCloudCustomizedAcceleratorGitRepositorySshAuthOutputReference
 }
 export interface SpringCloudCustomizedAcceleratorGitRepository {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#branch SpringCloudCustomizedAccelerator#branch}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#branch SpringCloudCustomizedAccelerator#branch}
   */
   readonly branch?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#ca_certificate_id SpringCloudCustomizedAccelerator#ca_certificate_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#ca_certificate_id SpringCloudCustomizedAccelerator#ca_certificate_id}
   */
   readonly caCertificateId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#commit SpringCloudCustomizedAccelerator#commit}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#commit SpringCloudCustomizedAccelerator#commit}
   */
   readonly commit?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#git_tag SpringCloudCustomizedAccelerator#git_tag}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#git_tag SpringCloudCustomizedAccelerator#git_tag}
   */
   readonly gitTag?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#interval_in_seconds SpringCloudCustomizedAccelerator#interval_in_seconds}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#interval_in_seconds SpringCloudCustomizedAccelerator#interval_in_seconds}
   */
   readonly intervalInSeconds?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#url SpringCloudCustomizedAccelerator#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#path SpringCloudCustomizedAccelerator#path}
+  */
+  readonly path?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#url SpringCloudCustomizedAccelerator#url}
   */
   readonly url: string;
   /**
   * basic_auth block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#basic_auth SpringCloudCustomizedAccelerator#basic_auth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#basic_auth SpringCloudCustomizedAccelerator#basic_auth}
   */
   readonly basicAuth?: SpringCloudCustomizedAcceleratorGitRepositoryBasicAuth;
   /**
   * ssh_auth block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#ssh_auth SpringCloudCustomizedAccelerator#ssh_auth}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#ssh_auth SpringCloudCustomizedAccelerator#ssh_auth}
   */
   readonly sshAuth?: SpringCloudCustomizedAcceleratorGitRepositorySshAuth;
 }
@@ -308,6 +316,7 @@ export function springCloudCustomizedAcceleratorGitRepositoryToTerraform(struct?
     commit: cdktf.stringToTerraform(struct!.commit),
     git_tag: cdktf.stringToTerraform(struct!.gitTag),
     interval_in_seconds: cdktf.numberToTerraform(struct!.intervalInSeconds),
+    path: cdktf.stringToTerraform(struct!.path),
     url: cdktf.stringToTerraform(struct!.url),
     basic_auth: springCloudCustomizedAcceleratorGitRepositoryBasicAuthToTerraform(struct!.basicAuth),
     ssh_auth: springCloudCustomizedAcceleratorGitRepositorySshAuthToTerraform(struct!.sshAuth),
@@ -348,6 +357,10 @@ export class SpringCloudCustomizedAcceleratorGitRepositoryOutputReference extend
       hasAnyValues = true;
       internalValueResult.intervalInSeconds = this._intervalInSeconds;
     }
+    if (this._path !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.path = this._path;
+    }
     if (this._url !== undefined) {
       hasAnyValues = true;
       internalValueResult.url = this._url;
@@ -371,6 +384,7 @@ export class SpringCloudCustomizedAcceleratorGitRepositoryOutputReference extend
       this._commit = undefined;
       this._gitTag = undefined;
       this._intervalInSeconds = undefined;
+      this._path = undefined;
       this._url = undefined;
       this._basicAuth.internalValue = undefined;
       this._sshAuth.internalValue = undefined;
@@ -382,6 +396,7 @@ export class SpringCloudCustomizedAcceleratorGitRepositoryOutputReference extend
       this._commit = value.commit;
       this._gitTag = value.gitTag;
       this._intervalInSeconds = value.intervalInSeconds;
+      this._path = value.path;
       this._url = value.url;
       this._basicAuth.internalValue = value.basicAuth;
       this._sshAuth.internalValue = value.sshAuth;
@@ -468,6 +483,22 @@ export class SpringCloudCustomizedAcceleratorGitRepositoryOutputReference extend
     return this._intervalInSeconds;
   }
 
+  // path - computed: false, optional: true, required: false
+  private _path?: string; 
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+  public set path(value: string) {
+    this._path = value;
+  }
+  public resetPath() {
+    this._path = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pathInput() {
+    return this._path;
+  }
+
   // url - computed: false, optional: false, required: true
   private _url?: string; 
   public get url() {
@@ -515,19 +546,19 @@ export class SpringCloudCustomizedAcceleratorGitRepositoryOutputReference extend
 }
 export interface SpringCloudCustomizedAcceleratorTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#create SpringCloudCustomizedAccelerator#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#create SpringCloudCustomizedAccelerator#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#delete SpringCloudCustomizedAccelerator#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#delete SpringCloudCustomizedAccelerator#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#read SpringCloudCustomizedAccelerator#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#read SpringCloudCustomizedAccelerator#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#update SpringCloudCustomizedAccelerator#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#update SpringCloudCustomizedAccelerator#update}
   */
   readonly update?: string;
 }
@@ -671,7 +702,7 @@ export class SpringCloudCustomizedAcceleratorTimeoutsOutputReference extends cdk
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator azurerm_spring_cloud_customized_accelerator}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator azurerm_spring_cloud_customized_accelerator}
 */
 export class SpringCloudCustomizedAccelerator extends cdktf.TerraformResource {
 
@@ -687,7 +718,7 @@ export class SpringCloudCustomizedAccelerator extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a SpringCloudCustomizedAccelerator resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the SpringCloudCustomizedAccelerator to import
-  * @param importFromId The id of the existing SpringCloudCustomizedAccelerator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing SpringCloudCustomizedAccelerator that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the SpringCloudCustomizedAccelerator to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -699,7 +730,7 @@ export class SpringCloudCustomizedAccelerator extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/spring_cloud_customized_accelerator azurerm_spring_cloud_customized_accelerator} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_customized_accelerator azurerm_spring_cloud_customized_accelerator} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -710,7 +741,7 @@ export class SpringCloudCustomizedAccelerator extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_spring_cloud_customized_accelerator',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.81.0',
+        providerVersion: '3.82.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -722,6 +753,7 @@ export class SpringCloudCustomizedAccelerator extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._acceleratorTags = config.acceleratorTags;
+    this._acceleratorType = config.acceleratorType;
     this._description = config.description;
     this._displayName = config.displayName;
     this._iconUrl = config.iconUrl;
@@ -750,6 +782,22 @@ export class SpringCloudCustomizedAccelerator extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get acceleratorTagsInput() {
     return this._acceleratorTags;
+  }
+
+  // accelerator_type - computed: false, optional: true, required: false
+  private _acceleratorType?: string; 
+  public get acceleratorType() {
+    return this.getStringAttribute('accelerator_type');
+  }
+  public set acceleratorType(value: string) {
+    this._acceleratorType = value;
+  }
+  public resetAcceleratorType() {
+    this._acceleratorType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get acceleratorTypeInput() {
+    return this._acceleratorType;
   }
 
   // description - computed: false, optional: true, required: false
@@ -878,6 +926,7 @@ export class SpringCloudCustomizedAccelerator extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       accelerator_tags: cdktf.listMapper(cdktf.stringToTerraform, false)(this._acceleratorTags),
+      accelerator_type: cdktf.stringToTerraform(this._acceleratorType),
       description: cdktf.stringToTerraform(this._description),
       display_name: cdktf.stringToTerraform(this._displayName),
       icon_url: cdktf.stringToTerraform(this._iconUrl),

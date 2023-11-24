@@ -91,6 +91,7 @@ export * as applicationInsightsWorkbook from './application-insights-workbook';
 export * as applicationInsightsWorkbookTemplate from './application-insights-workbook-template';
 export * as applicationLoadBalancer from './application-load-balancer';
 export * as applicationLoadBalancerFrontend from './application-load-balancer-frontend';
+export * as applicationLoadBalancerSubnetAssociation from './application-load-balancer-subnet-association';
 export * as applicationSecurityGroup from './application-security-group';
 export * as arcKubernetesCluster from './arc-kubernetes-cluster';
 export * as arcKubernetesClusterExtension from './arc-kubernetes-cluster-extension';
@@ -1230,6 +1231,7 @@ export * as dataAzurermMonitorDiagnosticCategories from './data-azurerm-monitor-
 export * as dataAzurermMonitorLogProfile from './data-azurerm-monitor-log-profile';
 export * as dataAzurermMonitorScheduledQueryRulesAlert from './data-azurerm-monitor-scheduled-query-rules-alert';
 export * as dataAzurermMonitorScheduledQueryRulesLog from './data-azurerm-monitor-scheduled-query-rules-log';
+export * as dataAzurermMonitorWorkspace from './data-azurerm-monitor-workspace';
 export * as dataAzurermMssqlDatabase from './data-azurerm-mssql-database';
 export * as dataAzurermMssqlElasticpool from './data-azurerm-mssql-elasticpool';
 export * as dataAzurermMssqlManagedInstance from './data-azurerm-mssql-managed-instance';

@@ -1,6 +1,6 @@
 # `azurerm_redis_linked_server`
 
-Refer to the Terraform Registory for docs: [`azurerm_redis_linked_server`](https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server).
+Refer to the Terraform Registory for docs: [`azurerm_redis_linked_server`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server).
 
 # `redisLinkedServer` Submodule <a name="`redisLinkedServer` Submodule" id="@cdktf/provider-azurerm.redisLinkedServer"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_redis_linked_server`](https
 
 ### RedisLinkedServer <a name="RedisLinkedServer" id="@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServer"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server azurerm_redis_linked_server}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server azurerm_redis_linked_server}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServer.Initializer"></a>
 
@@ -46,12 +46,12 @@ redisLinkedServer.RedisLinkedServer(
 | <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServer.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServer.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServer.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServer.Initializer.parameter.linkedRedisCacheId">linked_redis_cache_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#linked_redis_cache_id RedisLinkedServer#linked_redis_cache_id}. |
-| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServer.Initializer.parameter.linkedRedisCacheLocation">linked_redis_cache_location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#linked_redis_cache_location RedisLinkedServer#linked_redis_cache_location}. |
-| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServer.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#resource_group_name RedisLinkedServer#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServer.Initializer.parameter.serverRole">server_role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#server_role RedisLinkedServer#server_role}. |
-| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServer.Initializer.parameter.targetRedisCacheName">target_redis_cache_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#target_redis_cache_name RedisLinkedServer#target_redis_cache_name}. |
-| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServer.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#id RedisLinkedServer#id}. |
+| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServer.Initializer.parameter.linkedRedisCacheId">linked_redis_cache_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#linked_redis_cache_id RedisLinkedServer#linked_redis_cache_id}. |
+| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServer.Initializer.parameter.linkedRedisCacheLocation">linked_redis_cache_location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#linked_redis_cache_location RedisLinkedServer#linked_redis_cache_location}. |
+| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServer.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#resource_group_name RedisLinkedServer#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServer.Initializer.parameter.serverRole">server_role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#server_role RedisLinkedServer#server_role}. |
+| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServer.Initializer.parameter.targetRedisCacheName">target_redis_cache_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#target_redis_cache_name RedisLinkedServer#target_redis_cache_name}. |
+| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServer.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#id RedisLinkedServer#id}. |
 | <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServer.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeouts">RedisLinkedServerTimeouts</a></code> | timeouts block. |
 
 ---
@@ -120,7 +120,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#linked_redis_cache_id RedisLinkedServer#linked_redis_cache_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#linked_redis_cache_id RedisLinkedServer#linked_redis_cache_id}.
 
 ---
 
@@ -128,7 +128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#linked_redis_cache_location RedisLinkedServer#linked_redis_cache_location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#linked_redis_cache_location RedisLinkedServer#linked_redis_cache_location}.
 
 ---
 
@@ -136,7 +136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#resource_group_name RedisLinkedServer#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#resource_group_name RedisLinkedServer#resource_group_name}.
 
 ---
 
@@ -144,7 +144,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#server_role RedisLinkedServer#server_role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#server_role RedisLinkedServer#server_role}.
 
 ---
 
@@ -152,7 +152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#target_redis_cache_name RedisLinkedServer#target_redis_cache_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#target_redis_cache_name RedisLinkedServer#target_redis_cache_name}.
 
 ---
 
@@ -160,7 +160,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#id RedisLinkedServer#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#id RedisLinkedServer#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -173,7 +173,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#timeouts RedisLinkedServer#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#timeouts RedisLinkedServer#timeouts}
 
 ---
 
@@ -487,8 +487,7 @@ Optional The index corresponding to the key the resource is to appear in the for
 def put_timeouts(
   create: str = None,
   delete: str = None,
-  read: str = None,
-  update: str = None
+  read: str = None
 ) -> None
 ```
 
@@ -496,7 +495,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#create RedisLinkedServer#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#create RedisLinkedServer#create}.
 
 ---
 
@@ -504,7 +503,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#delete RedisLinkedServer#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#delete RedisLinkedServer#delete}.
 
 ---
 
@@ -512,15 +511,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#read RedisLinkedServer#read}.
-
----
-
-###### `update`<sup>Optional</sup> <a name="update" id="@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServer.putTimeouts.parameter.update"></a>
-
-- *Type:* str
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#update RedisLinkedServer#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#read RedisLinkedServer#read}.
 
 ---
 
@@ -650,7 +641,7 @@ The construct id used in the generated config for the RedisLinkedServer to impor
 
 The id of the existing RedisLinkedServer that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1046,12 +1037,12 @@ redisLinkedServer.RedisLinkedServerConfig(
 | <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerConfig.property.linkedRedisCacheId">linked_redis_cache_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#linked_redis_cache_id RedisLinkedServer#linked_redis_cache_id}. |
-| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerConfig.property.linkedRedisCacheLocation">linked_redis_cache_location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#linked_redis_cache_location RedisLinkedServer#linked_redis_cache_location}. |
-| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#resource_group_name RedisLinkedServer#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerConfig.property.serverRole">server_role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#server_role RedisLinkedServer#server_role}. |
-| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerConfig.property.targetRedisCacheName">target_redis_cache_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#target_redis_cache_name RedisLinkedServer#target_redis_cache_name}. |
-| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#id RedisLinkedServer#id}. |
+| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerConfig.property.linkedRedisCacheId">linked_redis_cache_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#linked_redis_cache_id RedisLinkedServer#linked_redis_cache_id}. |
+| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerConfig.property.linkedRedisCacheLocation">linked_redis_cache_location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#linked_redis_cache_location RedisLinkedServer#linked_redis_cache_location}. |
+| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#resource_group_name RedisLinkedServer#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerConfig.property.serverRole">server_role</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#server_role RedisLinkedServer#server_role}. |
+| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerConfig.property.targetRedisCacheName">target_redis_cache_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#target_redis_cache_name RedisLinkedServer#target_redis_cache_name}. |
+| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#id RedisLinkedServer#id}. |
 | <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeouts">RedisLinkedServerTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1134,7 +1125,7 @@ linked_redis_cache_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#linked_redis_cache_id RedisLinkedServer#linked_redis_cache_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#linked_redis_cache_id RedisLinkedServer#linked_redis_cache_id}.
 
 ---
 
@@ -1146,7 +1137,7 @@ linked_redis_cache_location: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#linked_redis_cache_location RedisLinkedServer#linked_redis_cache_location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#linked_redis_cache_location RedisLinkedServer#linked_redis_cache_location}.
 
 ---
 
@@ -1158,7 +1149,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#resource_group_name RedisLinkedServer#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#resource_group_name RedisLinkedServer#resource_group_name}.
 
 ---
 
@@ -1170,7 +1161,7 @@ server_role: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#server_role RedisLinkedServer#server_role}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#server_role RedisLinkedServer#server_role}.
 
 ---
 
@@ -1182,7 +1173,7 @@ target_redis_cache_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#target_redis_cache_name RedisLinkedServer#target_redis_cache_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#target_redis_cache_name RedisLinkedServer#target_redis_cache_name}.
 
 ---
 
@@ -1194,7 +1185,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#id RedisLinkedServer#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#id RedisLinkedServer#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1211,7 +1202,7 @@ timeouts: RedisLinkedServerTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#timeouts RedisLinkedServer#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#timeouts RedisLinkedServer#timeouts}
 
 ---
 
@@ -1225,8 +1216,7 @@ from cdktf_cdktf_provider_azurerm import redis_linked_server
 redisLinkedServer.RedisLinkedServerTimeouts(
   create: str = None,
   delete: str = None,
-  read: str = None,
-  update: str = None
+  read: str = None
 )
 ```
 
@@ -1234,10 +1224,9 @@ redisLinkedServer.RedisLinkedServerTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#create RedisLinkedServer#create}. |
-| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#delete RedisLinkedServer#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#read RedisLinkedServer#read}. |
-| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#update RedisLinkedServer#update}. |
+| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#create RedisLinkedServer#create}. |
+| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#delete RedisLinkedServer#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#read RedisLinkedServer#read}. |
 
 ---
 
@@ -1249,7 +1238,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#create RedisLinkedServer#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#create RedisLinkedServer#create}.
 
 ---
 
@@ -1261,7 +1250,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#delete RedisLinkedServer#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#delete RedisLinkedServer#delete}.
 
 ---
 
@@ -1273,19 +1262,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#read RedisLinkedServer#read}.
-
----
-
-##### `update`<sup>Optional</sup> <a name="update" id="@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeouts.property.update"></a>
-
-```python
-update: str
-```
-
-- *Type:* str
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/redis_linked_server#update RedisLinkedServer#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server#read RedisLinkedServer#read}.
 
 ---
 
@@ -1347,7 +1324,6 @@ The attribute on the parent resource this class is referencing.
 | <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeoutsOutputReference.resetCreate">reset_create</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeoutsOutputReference.resetDelete">reset_delete</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeoutsOutputReference.resetRead">reset_read</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeoutsOutputReference.resetUpdate">reset_update</a></code> | *No description.* |
 
 ---
 
@@ -1541,12 +1517,6 @@ def reset_delete() -> None
 def reset_read() -> None
 ```
 
-##### `reset_update` <a name="reset_update" id="@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeoutsOutputReference.resetUpdate"></a>
-
-```python
-def reset_update() -> None
-```
-
 
 #### Properties <a name="Properties" id="Properties"></a>
 
@@ -1557,11 +1527,9 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeoutsOutputReference.property.createInput">create_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeoutsOutputReference.property.deleteInput">delete_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeoutsOutputReference.property.readInput">read_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeoutsOutputReference.property.updateInput">update_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeoutsOutputReference.property.create">create</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeouts">RedisLinkedServerTimeouts</a>]</code> | *No description.* |
 
 ---
@@ -1620,16 +1588,6 @@ read_input: str
 
 ---
 
-##### `update_input`<sup>Optional</sup> <a name="update_input" id="@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeoutsOutputReference.property.updateInput"></a>
-
-```python
-update_input: str
-```
-
-- *Type:* str
-
----
-
 ##### `create`<sup>Required</sup> <a name="create" id="@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeoutsOutputReference.property.create"></a>
 
 ```python
@@ -1654,16 +1612,6 @@ delete: str
 
 ```python
 read: str
-```
-
-- *Type:* str
-
----
-
-##### `update`<sup>Required</sup> <a name="update" id="@cdktf/provider-azurerm.redisLinkedServer.RedisLinkedServerTimeoutsOutputReference.property.update"></a>
-
-```python
-update: str
 ```
 
 - *Type:* str

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_database
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_database
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,56 +13,52 @@ import * as cdktf from 'cdktf';
 
 export interface PostgresqlDatabaseConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_database#charset PostgresqlDatabase#charset}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_database#charset PostgresqlDatabase#charset}
   */
   readonly charset: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_database#collation PostgresqlDatabase#collation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_database#collation PostgresqlDatabase#collation}
   */
   readonly collation: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_database#id PostgresqlDatabase#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_database#id PostgresqlDatabase#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_database#name PostgresqlDatabase#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_database#name PostgresqlDatabase#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_database#resource_group_name PostgresqlDatabase#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_database#resource_group_name PostgresqlDatabase#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_database#server_name PostgresqlDatabase#server_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_database#server_name PostgresqlDatabase#server_name}
   */
   readonly serverName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_database#timeouts PostgresqlDatabase#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_database#timeouts PostgresqlDatabase#timeouts}
   */
   readonly timeouts?: PostgresqlDatabaseTimeouts;
 }
 export interface PostgresqlDatabaseTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_database#create PostgresqlDatabase#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_database#create PostgresqlDatabase#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_database#delete PostgresqlDatabase#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_database#delete PostgresqlDatabase#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_database#read PostgresqlDatabase#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_database#read PostgresqlDatabase#read}
   */
   readonly read?: string;
-  /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_database#update PostgresqlDatabase#update}
-  */
-  readonly update?: string;
 }
 
 export function postgresqlDatabaseTimeoutsToTerraform(struct?: PostgresqlDatabaseTimeouts | cdktf.IResolvable): any {
@@ -74,7 +70,6 @@ export function postgresqlDatabaseTimeoutsToTerraform(struct?: PostgresqlDatabas
     create: cdktf.stringToTerraform(struct!.create),
     delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
-    update: cdktf.stringToTerraform(struct!.update),
   }
 }
 
@@ -108,10 +103,6 @@ export class PostgresqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObje
       hasAnyValues = true;
       internalValueResult.read = this._read;
     }
-    if (this._update !== undefined) {
-      hasAnyValues = true;
-      internalValueResult.update = this._update;
-    }
     return hasAnyValues ? internalValueResult : undefined;
   }
 
@@ -122,7 +113,6 @@ export class PostgresqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObje
       this._create = undefined;
       this._delete = undefined;
       this._read = undefined;
-      this._update = undefined;
     }
     else if (cdktf.Tokenization.isResolvable(value)) {
       this.isEmptyObject = false;
@@ -134,7 +124,6 @@ export class PostgresqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObje
       this._create = value.create;
       this._delete = value.delete;
       this._read = value.read;
-      this._update = value.update;
     }
   }
 
@@ -185,26 +174,10 @@ export class PostgresqlDatabaseTimeoutsOutputReference extends cdktf.ComplexObje
   public get readInput() {
     return this._read;
   }
-
-  // update - computed: false, optional: true, required: false
-  private _update?: string; 
-  public get update() {
-    return this.getStringAttribute('update');
-  }
-  public set update(value: string) {
-    this._update = value;
-  }
-  public resetUpdate() {
-    this._update = undefined;
-  }
-  // Temporarily expose input value. Use with caution.
-  public get updateInput() {
-    return this._update;
-  }
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_database azurerm_postgresql_database}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_database azurerm_postgresql_database}
 */
 export class PostgresqlDatabase extends cdktf.TerraformResource {
 
@@ -220,7 +193,7 @@ export class PostgresqlDatabase extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a PostgresqlDatabase resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the PostgresqlDatabase to import
-  * @param importFromId The id of the existing PostgresqlDatabase that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_database#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing PostgresqlDatabase that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_database#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the PostgresqlDatabase to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -232,7 +205,7 @@ export class PostgresqlDatabase extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/postgresql_database azurerm_postgresql_database} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_database azurerm_postgresql_database} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -243,7 +216,7 @@ export class PostgresqlDatabase extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_postgresql_database',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.81.0',
+        providerVersion: '3.82.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

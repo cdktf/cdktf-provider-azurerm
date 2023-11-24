@@ -1,6 +1,6 @@
 # `azurerm_dev_center`
 
-Refer to the Terraform Registory for docs: [`azurerm_dev_center`](https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center).
+Refer to the Terraform Registory for docs: [`azurerm_dev_center`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center).
 
 # `devCenter` Submodule <a name="`devCenter` Submodule" id="@cdktf/provider-azurerm.devCenter"></a>
 
@@ -8,7 +8,7 @@ Refer to the Terraform Registory for docs: [`azurerm_dev_center`](https://regist
 
 ### DevCenter <a name="DevCenter" id="@cdktf/provider-azurerm.devCenter.DevCenter"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center azurerm_dev_center}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center azurerm_dev_center}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.devCenter.DevCenter.Initializer"></a>
 
@@ -475,7 +475,7 @@ The construct id used in the generated config for the DevCenter to import.
 
 The id of the existing DevCenter that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -856,12 +856,12 @@ const devCenterConfig: devCenter.DevCenterConfig = { ... }
 | <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center#location DevCenter#location}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center#name DevCenter#name}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center#resource_group_name DevCenter#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center#id DevCenter#id}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center#location DevCenter#location}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center#name DevCenter#name}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center#resource_group_name DevCenter#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center#id DevCenter#id}. |
 | <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterConfig.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterIdentity">DevCenterIdentity</a></code> | identity block. |
-| <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center#tags DevCenter#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center#tags DevCenter#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterTimeouts">DevCenterTimeouts</a></code> | timeouts block. |
 
 ---
@@ -944,7 +944,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center#location DevCenter#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center#location DevCenter#location}.
 
 ---
 
@@ -956,7 +956,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center#name DevCenter#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center#name DevCenter#name}.
 
 ---
 
@@ -968,7 +968,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center#resource_group_name DevCenter#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center#resource_group_name DevCenter#resource_group_name}.
 
 ---
 
@@ -980,7 +980,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center#id DevCenter#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center#id DevCenter#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -997,7 +997,7 @@ public readonly identity: DevCenterIdentity;
 
 identity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center#identity DevCenter#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center#identity DevCenter#identity}
 
 ---
 
@@ -1009,7 +1009,7 @@ public readonly tags: {[ key: string ]: string};
 
 - *Type:* {[ key: string ]: string}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center#tags DevCenter#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center#tags DevCenter#tags}.
 
 ---
 
@@ -1023,7 +1023,7 @@ public readonly timeouts: DevCenterTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center#timeouts DevCenter#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center#timeouts DevCenter#timeouts}
 
 ---
 
@@ -1041,8 +1041,8 @@ const devCenterIdentity: devCenter.DevCenterIdentity = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterIdentity.property.type">type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center#type DevCenter#type}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterIdentity.property.identityIds">identityIds</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center#identity_ids DevCenter#identity_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterIdentity.property.type">type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center#type DevCenter#type}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterIdentity.property.identityIds">identityIds</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center#identity_ids DevCenter#identity_ids}. |
 
 ---
 
@@ -1054,7 +1054,7 @@ public readonly type: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center#type DevCenter#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center#type DevCenter#type}.
 
 ---
 
@@ -1066,7 +1066,7 @@ public readonly identityIds: string[];
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center#identity_ids DevCenter#identity_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center#identity_ids DevCenter#identity_ids}.
 
 ---
 
@@ -1084,10 +1084,10 @@ const devCenterTimeouts: devCenter.DevCenterTimeouts = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center#create DevCenter#create}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center#delete DevCenter#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center#read DevCenter#read}. |
-| <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center#update DevCenter#update}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center#create DevCenter#create}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center#delete DevCenter#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center#read DevCenter#read}. |
+| <code><a href="#@cdktf/provider-azurerm.devCenter.DevCenterTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center#update DevCenter#update}. |
 
 ---
 
@@ -1099,7 +1099,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center#create DevCenter#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center#create DevCenter#create}.
 
 ---
 
@@ -1111,7 +1111,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center#delete DevCenter#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center#delete DevCenter#delete}.
 
 ---
 
@@ -1123,7 +1123,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center#read DevCenter#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center#read DevCenter#read}.
 
 ---
 
@@ -1135,7 +1135,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.81.0/docs/resources/dev_center#update DevCenter#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_center#update DevCenter#update}.
 
 ---
 
