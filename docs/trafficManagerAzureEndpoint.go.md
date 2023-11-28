@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.trafficManagerAzureEndpoint.TrafficManagerAzureEndpoint.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/trafficmanagerazureendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/trafficmanagerazureendpoint"
 
 trafficmanagerazureendpoint.NewTrafficManagerAzureEndpoint(scope Construct, id *string, config TrafficManagerAzureEndpointConfig) TrafficManagerAzureEndpoint
 ```
@@ -423,7 +423,7 @@ func ResetWeight()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.trafficManagerAzureEndpoint.TrafficManagerAzureEndpoint.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/trafficmanagerazureendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/trafficmanagerazureendpoint"
 
 trafficmanagerazureendpoint.TrafficManagerAzureEndpoint_IsConstruct(x interface{}) *bool
 ```
@@ -455,7 +455,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.trafficManagerAzureEndpoint.TrafficManagerAzureEndpoint.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/trafficmanagerazureendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/trafficmanagerazureendpoint"
 
 trafficmanagerazureendpoint.TrafficManagerAzureEndpoint_IsTerraformElement(x interface{}) *bool
 ```
@@ -469,7 +469,7 @@ trafficmanagerazureendpoint.TrafficManagerAzureEndpoint_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.trafficManagerAzureEndpoint.TrafficManagerAzureEndpoint.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/trafficmanagerazureendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/trafficmanagerazureendpoint"
 
 trafficmanagerazureendpoint.TrafficManagerAzureEndpoint_IsTerraformResource(x interface{}) *bool
 ```
@@ -483,7 +483,7 @@ trafficmanagerazureendpoint.TrafficManagerAzureEndpoint_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.trafficManagerAzureEndpoint.TrafficManagerAzureEndpoint.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/trafficmanagerazureendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/trafficmanagerazureendpoint"
 
 trafficmanagerazureendpoint.TrafficManagerAzureEndpoint_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -954,7 +954,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.trafficManagerAzureEndpoint.TrafficManagerAzureEndpointConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/trafficmanagerazureendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/trafficmanagerazureendpoint"
 
 &trafficmanagerazureendpoint.TrafficManagerAzureEndpointConfig {
 	Connection: interface{},
@@ -973,7 +973,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/trafficmanagerazureen
 	Id: *string,
 	Priority: *f64,
 	Subnet: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.trafficManagerAzureEndpoint.TrafficManagerAzureEndpointTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.trafficManagerAzureEndpoint.TrafficManagerAzureEndpointTimeouts,
 	Weight: *f64,
 }
 ```
@@ -1219,7 +1219,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.trafficManagerAzureEndpoint.TrafficManagerAzureEndpointCustomHeader.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/trafficmanagerazureendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/trafficmanagerazureendpoint"
 
 &trafficmanagerazureendpoint.TrafficManagerAzureEndpointCustomHeader {
 	Name: *string,
@@ -1265,7 +1265,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.trafficManagerAzureEndpoint.TrafficManagerAzureEndpointSubnet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/trafficmanagerazureendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/trafficmanagerazureendpoint"
 
 &trafficmanagerazureendpoint.TrafficManagerAzureEndpointSubnet {
 	First: *string,
@@ -1325,7 +1325,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.trafficManagerAzureEndpoint.TrafficManagerAzureEndpointTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/trafficmanagerazureendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/trafficmanagerazureendpoint"
 
 &trafficmanagerazureendpoint.TrafficManagerAzureEndpointTimeouts {
 	Create: *string,
@@ -1401,7 +1401,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.trafficManagerAzureEndpoint.TrafficManagerAzureEndpointCustomHeaderList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/trafficmanagerazureendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/trafficmanagerazureendpoint"
 
 trafficmanagerazureendpoint.NewTrafficManagerAzureEndpointCustomHeaderList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) TrafficManagerAzureEndpointCustomHeaderList
 ```
@@ -1544,7 +1544,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.trafficManagerAzureEndpoint.TrafficManagerAzureEndpointCustomHeaderOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/trafficmanagerazureendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/trafficmanagerazureendpoint"
 
 trafficmanagerazureendpoint.NewTrafficManagerAzureEndpointCustomHeaderOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) TrafficManagerAzureEndpointCustomHeaderOutputReference
 ```
@@ -1855,7 +1855,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.trafficManagerAzureEndpoint.TrafficManagerAzureEndpointSubnetList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/trafficmanagerazureendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/trafficmanagerazureendpoint"
 
 trafficmanagerazureendpoint.NewTrafficManagerAzureEndpointSubnetList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) TrafficManagerAzureEndpointSubnetList
 ```
@@ -1998,7 +1998,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.trafficManagerAzureEndpoint.TrafficManagerAzureEndpointSubnetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/trafficmanagerazureendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/trafficmanagerazureendpoint"
 
 trafficmanagerazureendpoint.NewTrafficManagerAzureEndpointSubnetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) TrafficManagerAzureEndpointSubnetOutputReference
 ```
@@ -2345,7 +2345,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.trafficManagerAzureEndpoint.TrafficManagerAzureEndpointTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/trafficmanagerazureendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/trafficmanagerazureendpoint"
 
 trafficmanagerazureendpoint.NewTrafficManagerAzureEndpointTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) TrafficManagerAzureEndpointTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedCustomService.DataFactoryLinkedCustomService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedcustomservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedcustomservice"
 
 datafactorylinkedcustomservice.NewDataFactoryLinkedCustomService(scope Construct, id *string, config DataFactoryLinkedCustomServiceConfig) DataFactoryLinkedCustomService
 ```
@@ -403,7 +403,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataFactoryLinkedCustomService.DataFactoryLinkedCustomService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedcustomservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedcustomservice"
 
 datafactorylinkedcustomservice.DataFactoryLinkedCustomService_IsConstruct(x interface{}) *bool
 ```
@@ -435,7 +435,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataFactoryLinkedCustomService.DataFactoryLinkedCustomService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedcustomservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedcustomservice"
 
 datafactorylinkedcustomservice.DataFactoryLinkedCustomService_IsTerraformElement(x interface{}) *bool
 ```
@@ -449,7 +449,7 @@ datafactorylinkedcustomservice.DataFactoryLinkedCustomService_IsTerraformElement
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataFactoryLinkedCustomService.DataFactoryLinkedCustomService.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedcustomservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedcustomservice"
 
 datafactorylinkedcustomservice.DataFactoryLinkedCustomService_IsTerraformResource(x interface{}) *bool
 ```
@@ -463,7 +463,7 @@ datafactorylinkedcustomservice.DataFactoryLinkedCustomService_IsTerraformResourc
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataFactoryLinkedCustomService.DataFactoryLinkedCustomService.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedcustomservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedcustomservice"
 
 datafactorylinkedcustomservice.DataFactoryLinkedCustomService_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -934,7 +934,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedCustomService.DataFactoryLinkedCustomServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedcustomservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedcustomservice"
 
 &datafactorylinkedcustomservice.DataFactoryLinkedCustomServiceConfig {
 	Connection: interface{},
@@ -952,9 +952,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedcust
 	Annotations: *[]*string,
 	Description: *string,
 	Id: *string,
-	IntegrationRuntime: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryLinkedCustomService.DataFactoryLinkedCustomServiceIntegrationRuntime,
+	IntegrationRuntime: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataFactoryLinkedCustomService.DataFactoryLinkedCustomServiceIntegrationRuntime,
 	Parameters: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryLinkedCustomService.DataFactoryLinkedCustomServiceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataFactoryLinkedCustomService.DataFactoryLinkedCustomServiceTimeouts,
 }
 ```
 
@@ -1197,7 +1197,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedCustomService.DataFactoryLinkedCustomServiceIntegrationRuntime.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedcustomservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedcustomservice"
 
 &datafactorylinkedcustomservice.DataFactoryLinkedCustomServiceIntegrationRuntime {
 	Name: *string,
@@ -1243,7 +1243,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedCustomService.DataFactoryLinkedCustomServiceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedcustomservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedcustomservice"
 
 &datafactorylinkedcustomservice.DataFactoryLinkedCustomServiceTimeouts {
 	Create: *string,
@@ -1319,7 +1319,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedCustomService.DataFactoryLinkedCustomServiceIntegrationRuntimeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedcustomservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedcustomservice"
 
 datafactorylinkedcustomservice.NewDataFactoryLinkedCustomServiceIntegrationRuntimeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryLinkedCustomServiceIntegrationRuntimeOutputReference
 ```
@@ -1619,7 +1619,7 @@ func InternalValue() DataFactoryLinkedCustomServiceIntegrationRuntime
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedCustomService.DataFactoryLinkedCustomServiceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorylinkedcustomservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedcustomservice"
 
 datafactorylinkedcustomservice.NewDataFactoryLinkedCustomServiceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryLinkedCustomServiceTimeoutsOutputReference
 ```

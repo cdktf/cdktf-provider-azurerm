@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.NewDataAzurermMonitorActionGroup(scope Construct, id *string, config DataAzurermMonitorActionGroupConfig) DataAzurermMonitorActionGroup
 ```
@@ -294,7 +294,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.DataAzurermMonitorActionGroup_IsConstruct(x interface{}) *bool
 ```
@@ -326,7 +326,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.DataAzurermMonitorActionGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -340,7 +340,7 @@ dataazurermmonitoractiongroup.DataAzurermMonitorActionGroup_IsTerraformElement(x
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroup.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.DataAzurermMonitorActionGroup_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -354,7 +354,7 @@ dataazurermmonitoractiongroup.DataAzurermMonitorActionGroup_IsTerraformDataSourc
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroup.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.DataAzurermMonitorActionGroup_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -792,7 +792,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupArmRoleReceiver.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 &dataazurermmonitoractiongroup.DataAzurermMonitorActionGroupArmRoleReceiver {
 
@@ -805,7 +805,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoract
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupAutomationRunbookReceiver.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 &dataazurermmonitoractiongroup.DataAzurermMonitorActionGroupAutomationRunbookReceiver {
 
@@ -818,7 +818,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoract
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupAzureAppPushReceiver.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 &dataazurermmonitoractiongroup.DataAzurermMonitorActionGroupAzureAppPushReceiver {
 
@@ -831,7 +831,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoract
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupAzureFunctionReceiver.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 &dataazurermmonitoractiongroup.DataAzurermMonitorActionGroupAzureFunctionReceiver {
 
@@ -844,7 +844,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoract
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 &dataazurermmonitoractiongroup.DataAzurermMonitorActionGroupConfig {
 	Connection: interface{},
@@ -857,7 +857,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoract
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupTimeouts,
 }
 ```
 
@@ -1007,7 +1007,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupEmailReceiver.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 &dataazurermmonitoractiongroup.DataAzurermMonitorActionGroupEmailReceiver {
 
@@ -1020,7 +1020,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoract
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupEventHubReceiver.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 &dataazurermmonitoractiongroup.DataAzurermMonitorActionGroupEventHubReceiver {
 
@@ -1033,7 +1033,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoract
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupItsmReceiver.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 &dataazurermmonitoractiongroup.DataAzurermMonitorActionGroupItsmReceiver {
 
@@ -1046,7 +1046,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoract
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupLogicAppReceiver.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 &dataazurermmonitoractiongroup.DataAzurermMonitorActionGroupLogicAppReceiver {
 
@@ -1059,7 +1059,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoract
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupSmsReceiver.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 &dataazurermmonitoractiongroup.DataAzurermMonitorActionGroupSmsReceiver {
 
@@ -1072,7 +1072,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoract
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 &dataazurermmonitoractiongroup.DataAzurermMonitorActionGroupTimeouts {
 	Read: *string,
@@ -1104,7 +1104,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupVoiceReceiver.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 &dataazurermmonitoractiongroup.DataAzurermMonitorActionGroupVoiceReceiver {
 
@@ -1117,7 +1117,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoract
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupWebhookReceiver.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 &dataazurermmonitoractiongroup.DataAzurermMonitorActionGroupWebhookReceiver {
 
@@ -1130,7 +1130,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoract
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupWebhookReceiverAadAuth.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 &dataazurermmonitoractiongroup.DataAzurermMonitorActionGroupWebhookReceiverAadAuth {
 
@@ -1145,7 +1145,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoract
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupArmRoleReceiverList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.NewDataAzurermMonitorActionGroupArmRoleReceiverList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorActionGroupArmRoleReceiverList
 ```
@@ -1277,7 +1277,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupArmRoleReceiverOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.NewDataAzurermMonitorActionGroupArmRoleReceiverOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorActionGroupArmRoleReceiverOutputReference
 ```
@@ -1577,7 +1577,7 @@ func InternalValue() DataAzurermMonitorActionGroupArmRoleReceiver
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupAutomationRunbookReceiverList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.NewDataAzurermMonitorActionGroupAutomationRunbookReceiverList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorActionGroupAutomationRunbookReceiverList
 ```
@@ -1709,7 +1709,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupAutomationRunbookReceiverOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.NewDataAzurermMonitorActionGroupAutomationRunbookReceiverOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorActionGroupAutomationRunbookReceiverOutputReference
 ```
@@ -2053,7 +2053,7 @@ func InternalValue() DataAzurermMonitorActionGroupAutomationRunbookReceiver
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupAzureAppPushReceiverList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.NewDataAzurermMonitorActionGroupAzureAppPushReceiverList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorActionGroupAzureAppPushReceiverList
 ```
@@ -2185,7 +2185,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupAzureAppPushReceiverOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.NewDataAzurermMonitorActionGroupAzureAppPushReceiverOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorActionGroupAzureAppPushReceiverOutputReference
 ```
@@ -2474,7 +2474,7 @@ func InternalValue() DataAzurermMonitorActionGroupAzureAppPushReceiver
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupAzureFunctionReceiverList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.NewDataAzurermMonitorActionGroupAzureFunctionReceiverList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorActionGroupAzureFunctionReceiverList
 ```
@@ -2606,7 +2606,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupAzureFunctionReceiverOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.NewDataAzurermMonitorActionGroupAzureFunctionReceiverOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorActionGroupAzureFunctionReceiverOutputReference
 ```
@@ -2928,7 +2928,7 @@ func InternalValue() DataAzurermMonitorActionGroupAzureFunctionReceiver
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupEmailReceiverList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.NewDataAzurermMonitorActionGroupEmailReceiverList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorActionGroupEmailReceiverList
 ```
@@ -3060,7 +3060,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupEmailReceiverOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.NewDataAzurermMonitorActionGroupEmailReceiverOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorActionGroupEmailReceiverOutputReference
 ```
@@ -3360,7 +3360,7 @@ func InternalValue() DataAzurermMonitorActionGroupEmailReceiver
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupEventHubReceiverList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.NewDataAzurermMonitorActionGroupEventHubReceiverList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorActionGroupEventHubReceiverList
 ```
@@ -3492,7 +3492,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupEventHubReceiverOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.NewDataAzurermMonitorActionGroupEventHubReceiverOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorActionGroupEventHubReceiverOutputReference
 ```
@@ -3836,7 +3836,7 @@ func InternalValue() DataAzurermMonitorActionGroupEventHubReceiver
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupItsmReceiverList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.NewDataAzurermMonitorActionGroupItsmReceiverList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorActionGroupItsmReceiverList
 ```
@@ -3968,7 +3968,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupItsmReceiverOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.NewDataAzurermMonitorActionGroupItsmReceiverOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorActionGroupItsmReceiverOutputReference
 ```
@@ -4290,7 +4290,7 @@ func InternalValue() DataAzurermMonitorActionGroupItsmReceiver
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupLogicAppReceiverList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.NewDataAzurermMonitorActionGroupLogicAppReceiverList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorActionGroupLogicAppReceiverList
 ```
@@ -4422,7 +4422,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupLogicAppReceiverOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.NewDataAzurermMonitorActionGroupLogicAppReceiverOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorActionGroupLogicAppReceiverOutputReference
 ```
@@ -4733,7 +4733,7 @@ func InternalValue() DataAzurermMonitorActionGroupLogicAppReceiver
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupSmsReceiverList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.NewDataAzurermMonitorActionGroupSmsReceiverList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorActionGroupSmsReceiverList
 ```
@@ -4865,7 +4865,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupSmsReceiverOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.NewDataAzurermMonitorActionGroupSmsReceiverOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorActionGroupSmsReceiverOutputReference
 ```
@@ -5165,7 +5165,7 @@ func InternalValue() DataAzurermMonitorActionGroupSmsReceiver
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.NewDataAzurermMonitorActionGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermMonitorActionGroupTimeoutsOutputReference
 ```
@@ -5443,7 +5443,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupVoiceReceiverList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.NewDataAzurermMonitorActionGroupVoiceReceiverList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorActionGroupVoiceReceiverList
 ```
@@ -5575,7 +5575,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupVoiceReceiverOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.NewDataAzurermMonitorActionGroupVoiceReceiverOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorActionGroupVoiceReceiverOutputReference
 ```
@@ -5875,7 +5875,7 @@ func InternalValue() DataAzurermMonitorActionGroupVoiceReceiver
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupWebhookReceiverAadAuthList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.NewDataAzurermMonitorActionGroupWebhookReceiverAadAuthList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorActionGroupWebhookReceiverAadAuthList
 ```
@@ -6007,7 +6007,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupWebhookReceiverAadAuthOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.NewDataAzurermMonitorActionGroupWebhookReceiverAadAuthOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorActionGroupWebhookReceiverAadAuthOutputReference
 ```
@@ -6307,7 +6307,7 @@ func InternalValue() DataAzurermMonitorActionGroupWebhookReceiverAadAuth
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupWebhookReceiverList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.NewDataAzurermMonitorActionGroupWebhookReceiverList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorActionGroupWebhookReceiverList
 ```
@@ -6439,7 +6439,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorActionGroup.DataAzurermMonitorActionGroupWebhookReceiverOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitoractiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitoractiongroup"
 
 dataazurermmonitoractiongroup.NewDataAzurermMonitorActionGroupWebhookReceiverOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorActionGroupWebhookReceiverOutputReference
 ```

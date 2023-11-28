@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelThreatIntelligenceIndicator.SentinelThreatIntelligenceIndicator.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelthreatintelligenceindicator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelthreatintelligenceindicator"
 
 sentinelthreatintelligenceindicator.NewSentinelThreatIntelligenceIndicator(scope Construct, id *string, config SentinelThreatIntelligenceIndicatorConfig) SentinelThreatIntelligenceIndicator
 ```
@@ -492,7 +492,7 @@ func ResetValidateUntilUtc()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.sentinelThreatIntelligenceIndicator.SentinelThreatIntelligenceIndicator.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelthreatintelligenceindicator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelthreatintelligenceindicator"
 
 sentinelthreatintelligenceindicator.SentinelThreatIntelligenceIndicator_IsConstruct(x interface{}) *bool
 ```
@@ -524,7 +524,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.sentinelThreatIntelligenceIndicator.SentinelThreatIntelligenceIndicator.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelthreatintelligenceindicator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelthreatintelligenceindicator"
 
 sentinelthreatintelligenceindicator.SentinelThreatIntelligenceIndicator_IsTerraformElement(x interface{}) *bool
 ```
@@ -538,7 +538,7 @@ sentinelthreatintelligenceindicator.SentinelThreatIntelligenceIndicator_IsTerraf
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.sentinelThreatIntelligenceIndicator.SentinelThreatIntelligenceIndicator.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelthreatintelligenceindicator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelthreatintelligenceindicator"
 
 sentinelthreatintelligenceindicator.SentinelThreatIntelligenceIndicator_IsTerraformResource(x interface{}) *bool
 ```
@@ -552,7 +552,7 @@ sentinelthreatintelligenceindicator.SentinelThreatIntelligenceIndicator_IsTerraf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.sentinelThreatIntelligenceIndicator.SentinelThreatIntelligenceIndicator.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelthreatintelligenceindicator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelthreatintelligenceindicator"
 
 sentinelthreatintelligenceindicator.SentinelThreatIntelligenceIndicator_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1353,7 +1353,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelThreatIntelligenceIndicator.SentinelThreatIntelligenceIndicatorConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelthreatintelligenceindicator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelthreatintelligenceindicator"
 
 &sentinelthreatintelligenceindicator.SentinelThreatIntelligenceIndicatorConfig {
 	Connection: interface{},
@@ -1383,7 +1383,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelthreatintelli
 	Revoked: interface{},
 	Tags: *[]*string,
 	ThreatTypes: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sentinelThreatIntelligenceIndicator.SentinelThreatIntelligenceIndicatorTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.sentinelThreatIntelligenceIndicator.SentinelThreatIntelligenceIndicatorTimeouts,
 	ValidateUntilUtc: *string,
 }
 ```
@@ -1774,7 +1774,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelThreatIntelligenceIndicator.SentinelThreatIntelligenceIndicatorExternalReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelthreatintelligenceindicator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelthreatintelligenceindicator"
 
 &sentinelthreatintelligenceindicator.SentinelThreatIntelligenceIndicatorExternalReference {
 	Description: *string,
@@ -1848,7 +1848,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelThreatIntelligenceIndicator.SentinelThreatIntelligenceIndicatorGranularMarking.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelthreatintelligenceindicator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelthreatintelligenceindicator"
 
 &sentinelthreatintelligenceindicator.SentinelThreatIntelligenceIndicatorGranularMarking {
 	Language: *string,
@@ -1908,7 +1908,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelThreatIntelligenceIndicator.SentinelThreatIntelligenceIndicatorKillChainPhase.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelthreatintelligenceindicator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelthreatintelligenceindicator"
 
 &sentinelthreatintelligenceindicator.SentinelThreatIntelligenceIndicatorKillChainPhase {
 	Name: *string,
@@ -1940,7 +1940,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelThreatIntelligenceIndicator.SentinelThreatIntelligenceIndicatorParsedPattern.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelthreatintelligenceindicator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelthreatintelligenceindicator"
 
 &sentinelthreatintelligenceindicator.SentinelThreatIntelligenceIndicatorParsedPattern {
 
@@ -1953,7 +1953,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelthreatintelli
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelThreatIntelligenceIndicator.SentinelThreatIntelligenceIndicatorParsedPatternPatternTypeValues.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelthreatintelligenceindicator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelthreatintelligenceindicator"
 
 &sentinelthreatintelligenceindicator.SentinelThreatIntelligenceIndicatorParsedPatternPatternTypeValues {
 
@@ -1966,7 +1966,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelthreatintelli
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelThreatIntelligenceIndicator.SentinelThreatIntelligenceIndicatorTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelthreatintelligenceindicator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelthreatintelligenceindicator"
 
 &sentinelthreatintelligenceindicator.SentinelThreatIntelligenceIndicatorTimeouts {
 	Create: *string,
@@ -2042,7 +2042,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelThreatIntelligenceIndicator.SentinelThreatIntelligenceIndicatorExternalReferenceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelthreatintelligenceindicator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelthreatintelligenceindicator"
 
 sentinelthreatintelligenceindicator.NewSentinelThreatIntelligenceIndicatorExternalReferenceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SentinelThreatIntelligenceIndicatorExternalReferenceList
 ```
@@ -2185,7 +2185,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelThreatIntelligenceIndicator.SentinelThreatIntelligenceIndicatorExternalReferenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelthreatintelligenceindicator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelthreatintelligenceindicator"
 
 sentinelthreatintelligenceindicator.NewSentinelThreatIntelligenceIndicatorExternalReferenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SentinelThreatIntelligenceIndicatorExternalReferenceOutputReference
 ```
@@ -2579,7 +2579,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelThreatIntelligenceIndicator.SentinelThreatIntelligenceIndicatorGranularMarkingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelthreatintelligenceindicator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelthreatintelligenceindicator"
 
 sentinelthreatintelligenceindicator.NewSentinelThreatIntelligenceIndicatorGranularMarkingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SentinelThreatIntelligenceIndicatorGranularMarkingList
 ```
@@ -2722,7 +2722,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelThreatIntelligenceIndicator.SentinelThreatIntelligenceIndicatorGranularMarkingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelthreatintelligenceindicator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelthreatintelligenceindicator"
 
 sentinelthreatintelligenceindicator.NewSentinelThreatIntelligenceIndicatorGranularMarkingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SentinelThreatIntelligenceIndicatorGranularMarkingOutputReference
 ```
@@ -3076,7 +3076,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelThreatIntelligenceIndicator.SentinelThreatIntelligenceIndicatorKillChainPhaseList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelthreatintelligenceindicator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelthreatintelligenceindicator"
 
 sentinelthreatintelligenceindicator.NewSentinelThreatIntelligenceIndicatorKillChainPhaseList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SentinelThreatIntelligenceIndicatorKillChainPhaseList
 ```
@@ -3219,7 +3219,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelThreatIntelligenceIndicator.SentinelThreatIntelligenceIndicatorKillChainPhaseOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelthreatintelligenceindicator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelthreatintelligenceindicator"
 
 sentinelthreatintelligenceindicator.NewSentinelThreatIntelligenceIndicatorKillChainPhaseOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SentinelThreatIntelligenceIndicatorKillChainPhaseOutputReference
 ```
@@ -3515,7 +3515,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelThreatIntelligenceIndicator.SentinelThreatIntelligenceIndicatorParsedPatternList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelthreatintelligenceindicator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelthreatintelligenceindicator"
 
 sentinelthreatintelligenceindicator.NewSentinelThreatIntelligenceIndicatorParsedPatternList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SentinelThreatIntelligenceIndicatorParsedPatternList
 ```
@@ -3647,7 +3647,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelThreatIntelligenceIndicator.SentinelThreatIntelligenceIndicatorParsedPatternOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelthreatintelligenceindicator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelthreatintelligenceindicator"
 
 sentinelthreatintelligenceindicator.NewSentinelThreatIntelligenceIndicatorParsedPatternOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SentinelThreatIntelligenceIndicatorParsedPatternOutputReference
 ```
@@ -3936,7 +3936,7 @@ func InternalValue() SentinelThreatIntelligenceIndicatorParsedPattern
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelThreatIntelligenceIndicator.SentinelThreatIntelligenceIndicatorParsedPatternPatternTypeValuesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelthreatintelligenceindicator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelthreatintelligenceindicator"
 
 sentinelthreatintelligenceindicator.NewSentinelThreatIntelligenceIndicatorParsedPatternPatternTypeValuesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SentinelThreatIntelligenceIndicatorParsedPatternPatternTypeValuesList
 ```
@@ -4068,7 +4068,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelThreatIntelligenceIndicator.SentinelThreatIntelligenceIndicatorParsedPatternPatternTypeValuesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelthreatintelligenceindicator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelthreatintelligenceindicator"
 
 sentinelthreatintelligenceindicator.NewSentinelThreatIntelligenceIndicatorParsedPatternPatternTypeValuesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SentinelThreatIntelligenceIndicatorParsedPatternPatternTypeValuesOutputReference
 ```
@@ -4357,7 +4357,7 @@ func InternalValue() SentinelThreatIntelligenceIndicatorParsedPatternPatternType
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelThreatIntelligenceIndicator.SentinelThreatIntelligenceIndicatorTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelthreatintelligenceindicator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelthreatintelligenceindicator"
 
 sentinelthreatintelligenceindicator.NewSentinelThreatIntelligenceIndicatorTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SentinelThreatIntelligenceIndicatorTimeoutsOutputReference
 ```

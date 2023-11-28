@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.billingAccountCostManagementExport.BillingAccountCostManagementExport.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/billingaccountcostmanagementexport"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/billingaccountcostmanagementexport"
 
 billingaccountcostmanagementexport.NewBillingAccountCostManagementExport(scope Construct, id *string, config BillingAccountCostManagementExportConfig) BillingAccountCostManagementExport
 ```
@@ -388,7 +388,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.billingAccountCostManagementExport.BillingAccountCostManagementExport.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/billingaccountcostmanagementexport"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/billingaccountcostmanagementexport"
 
 billingaccountcostmanagementexport.BillingAccountCostManagementExport_IsConstruct(x interface{}) *bool
 ```
@@ -420,7 +420,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.billingAccountCostManagementExport.BillingAccountCostManagementExport.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/billingaccountcostmanagementexport"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/billingaccountcostmanagementexport"
 
 billingaccountcostmanagementexport.BillingAccountCostManagementExport_IsTerraformElement(x interface{}) *bool
 ```
@@ -434,7 +434,7 @@ billingaccountcostmanagementexport.BillingAccountCostManagementExport_IsTerrafor
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.billingAccountCostManagementExport.BillingAccountCostManagementExport.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/billingaccountcostmanagementexport"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/billingaccountcostmanagementexport"
 
 billingaccountcostmanagementexport.BillingAccountCostManagementExport_IsTerraformResource(x interface{}) *bool
 ```
@@ -448,7 +448,7 @@ billingaccountcostmanagementexport.BillingAccountCostManagementExport_IsTerrafor
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.billingAccountCostManagementExport.BillingAccountCostManagementExport.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/billingaccountcostmanagementexport"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/billingaccountcostmanagementexport"
 
 billingaccountcostmanagementexport.BillingAccountCostManagementExport_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -897,7 +897,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.billingAccountCostManagementExport.BillingAccountCostManagementExportConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/billingaccountcostmanagementexport"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/billingaccountcostmanagementexport"
 
 &billingaccountcostmanagementexport.BillingAccountCostManagementExportConfig {
 	Connection: interface{},
@@ -908,15 +908,15 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/billingaccountcostman
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	BillingAccountId: *string,
-	ExportDataOptions: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.billingAccountCostManagementExport.BillingAccountCostManagementExportExportDataOptions,
-	ExportDataStorageLocation: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.billingAccountCostManagementExport.BillingAccountCostManagementExportExportDataStorageLocation,
+	ExportDataOptions: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.billingAccountCostManagementExport.BillingAccountCostManagementExportExportDataOptions,
+	ExportDataStorageLocation: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.billingAccountCostManagementExport.BillingAccountCostManagementExportExportDataStorageLocation,
 	Name: *string,
 	RecurrencePeriodEndDate: *string,
 	RecurrencePeriodStartDate: *string,
 	RecurrenceType: *string,
 	Active: interface{},
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.billingAccountCostManagementExport.BillingAccountCostManagementExportTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.billingAccountCostManagementExport.BillingAccountCostManagementExportTimeouts,
 }
 ```
 
@@ -1148,7 +1148,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.billingAccountCostManagementExport.BillingAccountCostManagementExportExportDataOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/billingaccountcostmanagementexport"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/billingaccountcostmanagementexport"
 
 &billingaccountcostmanagementexport.BillingAccountCostManagementExportExportDataOptions {
 	TimeFrame: *string,
@@ -1194,7 +1194,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.billingAccountCostManagementExport.BillingAccountCostManagementExportExportDataStorageLocation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/billingaccountcostmanagementexport"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/billingaccountcostmanagementexport"
 
 &billingaccountcostmanagementexport.BillingAccountCostManagementExportExportDataStorageLocation {
 	ContainerId: *string,
@@ -1240,7 +1240,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.billingAccountCostManagementExport.BillingAccountCostManagementExportTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/billingaccountcostmanagementexport"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/billingaccountcostmanagementexport"
 
 &billingaccountcostmanagementexport.BillingAccountCostManagementExportTimeouts {
 	Create: *string,
@@ -1316,7 +1316,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.billingAccountCostManagementExport.BillingAccountCostManagementExportExportDataOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/billingaccountcostmanagementexport"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/billingaccountcostmanagementexport"
 
 billingaccountcostmanagementexport.NewBillingAccountCostManagementExportExportDataOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BillingAccountCostManagementExportExportDataOptionsOutputReference
 ```
@@ -1609,7 +1609,7 @@ func InternalValue() BillingAccountCostManagementExportExportDataOptions
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.billingAccountCostManagementExport.BillingAccountCostManagementExportExportDataStorageLocationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/billingaccountcostmanagementexport"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/billingaccountcostmanagementexport"
 
 billingaccountcostmanagementexport.NewBillingAccountCostManagementExportExportDataStorageLocationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BillingAccountCostManagementExportExportDataStorageLocationOutputReference
 ```
@@ -1902,7 +1902,7 @@ func InternalValue() BillingAccountCostManagementExportExportDataStorageLocation
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.billingAccountCostManagementExport.BillingAccountCostManagementExportTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/billingaccountcostmanagementexport"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/billingaccountcostmanagementexport"
 
 billingaccountcostmanagementexport.NewBillingAccountCostManagementExportTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BillingAccountCostManagementExportTimeoutsOutputReference
 ```

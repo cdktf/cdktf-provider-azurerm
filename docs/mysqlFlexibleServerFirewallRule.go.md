@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlFlexibleServerFirewallRule.MysqlFlexibleServerFirewallRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserverfirewallrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqlflexibleserverfirewallrule"
 
 mysqlflexibleserverfirewallrule.NewMysqlFlexibleServerFirewallRule(scope Construct, id *string, config MysqlFlexibleServerFirewallRuleConfig) MysqlFlexibleServerFirewallRule
 ```
@@ -355,7 +355,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mysqlFlexibleServerFirewallRule.MysqlFlexibleServerFirewallRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserverfirewallrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqlflexibleserverfirewallrule"
 
 mysqlflexibleserverfirewallrule.MysqlFlexibleServerFirewallRule_IsConstruct(x interface{}) *bool
 ```
@@ -387,7 +387,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mysqlFlexibleServerFirewallRule.MysqlFlexibleServerFirewallRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserverfirewallrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqlflexibleserverfirewallrule"
 
 mysqlflexibleserverfirewallrule.MysqlFlexibleServerFirewallRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -401,7 +401,7 @@ mysqlflexibleserverfirewallrule.MysqlFlexibleServerFirewallRule_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mysqlFlexibleServerFirewallRule.MysqlFlexibleServerFirewallRule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserverfirewallrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqlflexibleserverfirewallrule"
 
 mysqlflexibleserverfirewallrule.MysqlFlexibleServerFirewallRule_IsTerraformResource(x interface{}) *bool
 ```
@@ -415,7 +415,7 @@ mysqlflexibleserverfirewallrule.MysqlFlexibleServerFirewallRule_IsTerraformResou
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.mysqlFlexibleServerFirewallRule.MysqlFlexibleServerFirewallRule.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserverfirewallrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqlflexibleserverfirewallrule"
 
 mysqlflexibleserverfirewallrule.MysqlFlexibleServerFirewallRule_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -798,7 +798,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mysqlFlexibleServerFirewallRule.MysqlFlexibleServerFirewallRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserverfirewallrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqlflexibleserverfirewallrule"
 
 &mysqlflexibleserverfirewallrule.MysqlFlexibleServerFirewallRuleConfig {
 	Connection: interface{},
@@ -814,7 +814,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserverfi
 	ServerName: *string,
 	StartIpAddress: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mysqlFlexibleServerFirewallRule.MysqlFlexibleServerFirewallRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mysqlFlexibleServerFirewallRule.MysqlFlexibleServerFirewallRuleTimeouts,
 }
 ```
 
@@ -1003,7 +1003,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mysqlFlexibleServerFirewallRule.MysqlFlexibleServerFirewallRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserverfirewallrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqlflexibleserverfirewallrule"
 
 &mysqlflexibleserverfirewallrule.MysqlFlexibleServerFirewallRuleTimeouts {
 	Create: *string,
@@ -1079,7 +1079,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlFlexibleServerFirewallRule.MysqlFlexibleServerFirewallRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlflexibleserverfirewallrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqlflexibleserverfirewallrule"
 
 mysqlflexibleserverfirewallrule.NewMysqlFlexibleServerFirewallRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MysqlFlexibleServerFirewallRuleTimeoutsOutputReference
 ```

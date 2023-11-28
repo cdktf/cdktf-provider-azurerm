@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorLogProfile.MonitorLogProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorlogprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorlogprofile"
 
 monitorlogprofile.NewMonitorLogProfile(scope Construct, id *string, config MonitorLogProfileConfig) MonitorLogProfile
 ```
@@ -382,7 +382,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.monitorLogProfile.MonitorLogProfile.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorlogprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorlogprofile"
 
 monitorlogprofile.MonitorLogProfile_IsConstruct(x interface{}) *bool
 ```
@@ -414,7 +414,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.monitorLogProfile.MonitorLogProfile.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorlogprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorlogprofile"
 
 monitorlogprofile.MonitorLogProfile_IsTerraformElement(x interface{}) *bool
 ```
@@ -428,7 +428,7 @@ monitorlogprofile.MonitorLogProfile_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.monitorLogProfile.MonitorLogProfile.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorlogprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorlogprofile"
 
 monitorlogprofile.MonitorLogProfile_IsTerraformResource(x interface{}) *bool
 ```
@@ -442,7 +442,7 @@ monitorlogprofile.MonitorLogProfile_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.monitorLogProfile.MonitorLogProfile.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorlogprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorlogprofile"
 
 monitorlogprofile.MonitorLogProfile_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -847,7 +847,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorLogProfile.MonitorLogProfileConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorlogprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorlogprofile"
 
 &monitorlogprofile.MonitorLogProfileConfig {
 	Connection: interface{},
@@ -860,11 +860,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorlogprofile"
 	Categories: *[]*string,
 	Locations: *[]*string,
 	Name: *string,
-	RetentionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorLogProfile.MonitorLogProfileRetentionPolicy,
+	RetentionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorLogProfile.MonitorLogProfileRetentionPolicy,
 	Id: *string,
 	ServicebusRuleId: *string,
 	StorageAccountId: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorLogProfile.MonitorLogProfileTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorLogProfile.MonitorLogProfileTimeouts,
 }
 ```
 
@@ -1068,7 +1068,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorLogProfile.MonitorLogProfileRetentionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorlogprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorlogprofile"
 
 &monitorlogprofile.MonitorLogProfileRetentionPolicy {
 	Enabled: interface{},
@@ -1114,7 +1114,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorLogProfile.MonitorLogProfileTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorlogprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorlogprofile"
 
 &monitorlogprofile.MonitorLogProfileTimeouts {
 	Create: *string,
@@ -1190,7 +1190,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorLogProfile.MonitorLogProfileRetentionPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorlogprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorlogprofile"
 
 monitorlogprofile.NewMonitorLogProfileRetentionPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorLogProfileRetentionPolicyOutputReference
 ```
@@ -1490,7 +1490,7 @@ func InternalValue() MonitorLogProfileRetentionPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorLogProfile.MonitorLogProfileTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorlogprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorlogprofile"
 
 monitorlogprofile.NewMonitorLogProfileTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorLogProfileTimeoutsOutputReference
 ```

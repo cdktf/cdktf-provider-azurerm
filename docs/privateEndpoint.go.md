@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpoint.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 privateendpoint.NewPrivateEndpoint(scope Construct, id *string, config PrivateEndpointConfig) PrivateEndpoint
 ```
@@ -422,7 +422,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpoint.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 privateendpoint.PrivateEndpoint_IsConstruct(x interface{}) *bool
 ```
@@ -454,7 +454,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpoint.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 privateendpoint.PrivateEndpoint_IsTerraformElement(x interface{}) *bool
 ```
@@ -468,7 +468,7 @@ privateendpoint.PrivateEndpoint_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpoint.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 privateendpoint.PrivateEndpoint_IsTerraformResource(x interface{}) *bool
 ```
@@ -482,7 +482,7 @@ privateendpoint.PrivateEndpoint_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpoint.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 privateendpoint.PrivateEndpoint_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -986,7 +986,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpointConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 &privateendpoint.PrivateEndpointConfig {
 	Connection: interface{},
@@ -998,15 +998,15 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
 	Provisioners: *[]interface{},
 	Location: *string,
 	Name: *string,
-	PrivateServiceConnection: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.privateEndpoint.PrivateEndpointPrivateServiceConnection,
+	PrivateServiceConnection: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.privateEndpoint.PrivateEndpointPrivateServiceConnection,
 	ResourceGroupName: *string,
 	SubnetId: *string,
 	CustomNetworkInterfaceName: *string,
 	Id: *string,
 	IpConfiguration: interface{},
-	PrivateDnsZoneGroup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.privateEndpoint.PrivateEndpointPrivateDnsZoneGroup,
+	PrivateDnsZoneGroup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.privateEndpoint.PrivateEndpointPrivateDnsZoneGroup,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.privateEndpoint.PrivateEndpointTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.privateEndpoint.PrivateEndpointTimeouts,
 }
 ```
 
@@ -1253,7 +1253,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpointCustomDnsConfigs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 &privateendpoint.PrivateEndpointCustomDnsConfigs {
 
@@ -1266,7 +1266,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpointIpConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 &privateendpoint.PrivateEndpointIpConfiguration {
 	Name: *string,
@@ -1340,7 +1340,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpointNetworkInterface.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 &privateendpoint.PrivateEndpointNetworkInterface {
 
@@ -1353,7 +1353,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpointPrivateDnsZoneConfigs.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 &privateendpoint.PrivateEndpointPrivateDnsZoneConfigs {
 
@@ -1366,7 +1366,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpointPrivateDnsZoneConfigsRecordSets.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 &privateendpoint.PrivateEndpointPrivateDnsZoneConfigsRecordSets {
 
@@ -1379,7 +1379,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpointPrivateDnsZoneGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 &privateendpoint.PrivateEndpointPrivateDnsZoneGroup {
 	Name: *string,
@@ -1425,7 +1425,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpointPrivateServiceConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 &privateendpoint.PrivateEndpointPrivateServiceConnection {
 	IsManualConnection: interface{},
@@ -1527,7 +1527,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpointTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 &privateendpoint.PrivateEndpointTimeouts {
 	Create: *string,
@@ -1603,7 +1603,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpointCustomDnsConfigsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 privateendpoint.NewPrivateEndpointCustomDnsConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) PrivateEndpointCustomDnsConfigsList
 ```
@@ -1735,7 +1735,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpointCustomDnsConfigsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 privateendpoint.NewPrivateEndpointCustomDnsConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) PrivateEndpointCustomDnsConfigsOutputReference
 ```
@@ -2024,7 +2024,7 @@ func InternalValue() PrivateEndpointCustomDnsConfigs
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpointIpConfigurationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 privateendpoint.NewPrivateEndpointIpConfigurationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) PrivateEndpointIpConfigurationList
 ```
@@ -2167,7 +2167,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpointIpConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 privateendpoint.NewPrivateEndpointIpConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) PrivateEndpointIpConfigurationOutputReference
 ```
@@ -2536,7 +2536,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpointNetworkInterfaceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 privateendpoint.NewPrivateEndpointNetworkInterfaceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) PrivateEndpointNetworkInterfaceList
 ```
@@ -2668,7 +2668,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpointNetworkInterfaceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 privateendpoint.NewPrivateEndpointNetworkInterfaceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) PrivateEndpointNetworkInterfaceOutputReference
 ```
@@ -2957,7 +2957,7 @@ func InternalValue() PrivateEndpointNetworkInterface
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpointPrivateDnsZoneConfigsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 privateendpoint.NewPrivateEndpointPrivateDnsZoneConfigsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) PrivateEndpointPrivateDnsZoneConfigsList
 ```
@@ -3089,7 +3089,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpointPrivateDnsZoneConfigsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 privateendpoint.NewPrivateEndpointPrivateDnsZoneConfigsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) PrivateEndpointPrivateDnsZoneConfigsOutputReference
 ```
@@ -3400,7 +3400,7 @@ func InternalValue() PrivateEndpointPrivateDnsZoneConfigs
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpointPrivateDnsZoneConfigsRecordSetsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 privateendpoint.NewPrivateEndpointPrivateDnsZoneConfigsRecordSetsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) PrivateEndpointPrivateDnsZoneConfigsRecordSetsList
 ```
@@ -3532,7 +3532,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpointPrivateDnsZoneConfigsRecordSetsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 privateendpoint.NewPrivateEndpointPrivateDnsZoneConfigsRecordSetsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) PrivateEndpointPrivateDnsZoneConfigsRecordSetsOutputReference
 ```
@@ -3854,7 +3854,7 @@ func InternalValue() PrivateEndpointPrivateDnsZoneConfigsRecordSets
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpointPrivateDnsZoneGroupOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 privateendpoint.NewPrivateEndpointPrivateDnsZoneGroupOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PrivateEndpointPrivateDnsZoneGroupOutputReference
 ```
@@ -4158,7 +4158,7 @@ func InternalValue() PrivateEndpointPrivateDnsZoneGroup
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpointPrivateServiceConnectionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 privateendpoint.NewPrivateEndpointPrivateServiceConnectionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PrivateEndpointPrivateServiceConnectionOutputReference
 ```
@@ -4578,7 +4578,7 @@ func InternalValue() PrivateEndpointPrivateServiceConnection
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.privateEndpoint.PrivateEndpointTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/privateendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privateendpoint"
 
 privateendpoint.NewPrivateEndpointTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PrivateEndpointTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryCustomDataset.DataFactoryCustomDataset.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorycustomdataset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorycustomdataset"
 
 datafactorycustomdataset.NewDataFactoryCustomDataset(scope Construct, id *string, config DataFactoryCustomDatasetConfig) DataFactoryCustomDataset
 ```
@@ -410,7 +410,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataFactoryCustomDataset.DataFactoryCustomDataset.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorycustomdataset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorycustomdataset"
 
 datafactorycustomdataset.DataFactoryCustomDataset_IsConstruct(x interface{}) *bool
 ```
@@ -442,7 +442,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataFactoryCustomDataset.DataFactoryCustomDataset.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorycustomdataset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorycustomdataset"
 
 datafactorycustomdataset.DataFactoryCustomDataset_IsTerraformElement(x interface{}) *bool
 ```
@@ -456,7 +456,7 @@ datafactorycustomdataset.DataFactoryCustomDataset_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataFactoryCustomDataset.DataFactoryCustomDataset.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorycustomdataset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorycustomdataset"
 
 datafactorycustomdataset.DataFactoryCustomDataset_IsTerraformResource(x interface{}) *bool
 ```
@@ -470,7 +470,7 @@ datafactorycustomdataset.DataFactoryCustomDataset_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataFactoryCustomDataset.DataFactoryCustomDataset.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorycustomdataset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorycustomdataset"
 
 datafactorycustomdataset.DataFactoryCustomDataset_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -985,7 +985,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryCustomDataset.DataFactoryCustomDatasetConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorycustomdataset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorycustomdataset"
 
 &datafactorycustomdataset.DataFactoryCustomDatasetConfig {
 	Connection: interface{},
@@ -996,7 +996,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorycustomdata
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	DataFactoryId: *string,
-	LinkedService: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryCustomDataset.DataFactoryCustomDatasetLinkedService,
+	LinkedService: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataFactoryCustomDataset.DataFactoryCustomDatasetLinkedService,
 	Name: *string,
 	Type: *string,
 	TypePropertiesJson: *string,
@@ -1007,7 +1007,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorycustomdata
 	Id: *string,
 	Parameters: *map[string]*string,
 	SchemaJson: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryCustomDataset.DataFactoryCustomDatasetTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataFactoryCustomDataset.DataFactoryCustomDatasetTimeouts,
 }
 ```
 
@@ -1276,7 +1276,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryCustomDataset.DataFactoryCustomDatasetLinkedService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorycustomdataset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorycustomdataset"
 
 &datafactorycustomdataset.DataFactoryCustomDatasetLinkedService {
 	Name: *string,
@@ -1322,7 +1322,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryCustomDataset.DataFactoryCustomDatasetTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorycustomdataset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorycustomdataset"
 
 &datafactorycustomdataset.DataFactoryCustomDatasetTimeouts {
 	Create: *string,
@@ -1398,7 +1398,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryCustomDataset.DataFactoryCustomDatasetLinkedServiceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorycustomdataset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorycustomdataset"
 
 datafactorycustomdataset.NewDataFactoryCustomDatasetLinkedServiceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryCustomDatasetLinkedServiceOutputReference
 ```
@@ -1698,7 +1698,7 @@ func InternalValue() DataFactoryCustomDatasetLinkedService
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryCustomDataset.DataFactoryCustomDatasetTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorycustomdataset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorycustomdataset"
 
 datafactorycustomdataset.NewDataFactoryCustomDatasetTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryCustomDatasetTimeoutsOutputReference
 ```

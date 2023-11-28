@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlDatabase.SqlDatabase.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqldatabase"
 
 sqldatabase.NewSqlDatabase(scope Construct, id *string, config SqlDatabaseConfig) SqlDatabase
 ```
@@ -493,7 +493,7 @@ func ResetZoneRedundant()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.sqlDatabase.SqlDatabase.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqldatabase"
 
 sqldatabase.SqlDatabase_IsConstruct(x interface{}) *bool
 ```
@@ -525,7 +525,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.sqlDatabase.SqlDatabase.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqldatabase"
 
 sqldatabase.SqlDatabase_IsTerraformElement(x interface{}) *bool
 ```
@@ -539,7 +539,7 @@ sqldatabase.SqlDatabase_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.sqlDatabase.SqlDatabase.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqldatabase"
 
 sqldatabase.SqlDatabase_IsTerraformResource(x interface{}) *bool
 ```
@@ -553,7 +553,7 @@ sqldatabase.SqlDatabase_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.sqlDatabase.SqlDatabase.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqldatabase"
 
 sqldatabase.SqlDatabase_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1299,7 +1299,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlDatabase.SqlDatabaseConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqldatabase"
 
 &sqldatabase.SqlDatabaseConfig {
 	Connection: interface{},
@@ -1318,7 +1318,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqldatabase"
 	Edition: *string,
 	ElasticPoolName: *string,
 	Id: *string,
-	Import: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sqlDatabase.SqlDatabaseImport,
+	Import: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.sqlDatabase.SqlDatabaseImport,
 	MaxSizeBytes: *string,
 	MaxSizeGb: *string,
 	ReadScale: interface{},
@@ -1328,8 +1328,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqldatabase"
 	SourceDatabaseDeletionDate: *string,
 	SourceDatabaseId: *string,
 	Tags: *map[string]*string,
-	ThreatDetectionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sqlDatabase.SqlDatabaseThreatDetectionPolicy,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sqlDatabase.SqlDatabaseTimeouts,
+	ThreatDetectionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.sqlDatabase.SqlDatabaseThreatDetectionPolicy,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.sqlDatabase.SqlDatabaseTimeouts,
 	ZoneRedundant: interface{},
 }
 ```
@@ -1718,7 +1718,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlDatabase.SqlDatabaseImport.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqldatabase"
 
 &sqldatabase.SqlDatabaseImport {
 	AdministratorLogin: *string,
@@ -1834,7 +1834,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlDatabase.SqlDatabaseThreatDetectionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqldatabase"
 
 &sqldatabase.SqlDatabaseThreatDetectionPolicy {
 	DisabledAlerts: *[]*string,
@@ -1950,7 +1950,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlDatabase.SqlDatabaseTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqldatabase"
 
 &sqldatabase.SqlDatabaseTimeouts {
 	Create: *string,
@@ -2026,7 +2026,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlDatabase.SqlDatabaseImportOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqldatabase"
 
 sqldatabase.NewSqlDatabaseImportOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlDatabaseImportOutputReference
 ```
@@ -2436,7 +2436,7 @@ func InternalValue() SqlDatabaseImport
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlDatabase.SqlDatabaseThreatDetectionPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqldatabase"
 
 sqldatabase.NewSqlDatabaseThreatDetectionPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlDatabaseThreatDetectionPolicyOutputReference
 ```
@@ -2888,7 +2888,7 @@ func InternalValue() SqlDatabaseThreatDetectionPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlDatabase.SqlDatabaseTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqldatabase"
 
 sqldatabase.NewSqlDatabaseTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlDatabaseTimeoutsOutputReference
 ```

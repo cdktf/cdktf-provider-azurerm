@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorCustomDomainAssociation.CdnFrontdoorCustomDomainAssociation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorcustomdomainassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorcustomdomainassociation"
 
 cdnfrontdoorcustomdomainassociation.NewCdnFrontdoorCustomDomainAssociation(scope Construct, id *string, config CdnFrontdoorCustomDomainAssociationConfig) CdnFrontdoorCustomDomainAssociation
 ```
@@ -355,7 +355,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.cdnFrontdoorCustomDomainAssociation.CdnFrontdoorCustomDomainAssociation.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorcustomdomainassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorcustomdomainassociation"
 
 cdnfrontdoorcustomdomainassociation.CdnFrontdoorCustomDomainAssociation_IsConstruct(x interface{}) *bool
 ```
@@ -387,7 +387,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.cdnFrontdoorCustomDomainAssociation.CdnFrontdoorCustomDomainAssociation.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorcustomdomainassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorcustomdomainassociation"
 
 cdnfrontdoorcustomdomainassociation.CdnFrontdoorCustomDomainAssociation_IsTerraformElement(x interface{}) *bool
 ```
@@ -401,7 +401,7 @@ cdnfrontdoorcustomdomainassociation.CdnFrontdoorCustomDomainAssociation_IsTerraf
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.cdnFrontdoorCustomDomainAssociation.CdnFrontdoorCustomDomainAssociation.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorcustomdomainassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorcustomdomainassociation"
 
 cdnfrontdoorcustomdomainassociation.CdnFrontdoorCustomDomainAssociation_IsTerraformResource(x interface{}) *bool
 ```
@@ -415,7 +415,7 @@ cdnfrontdoorcustomdomainassociation.CdnFrontdoorCustomDomainAssociation_IsTerraf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.cdnFrontdoorCustomDomainAssociation.CdnFrontdoorCustomDomainAssociation.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorcustomdomainassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorcustomdomainassociation"
 
 cdnfrontdoorcustomdomainassociation.CdnFrontdoorCustomDomainAssociation_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -732,7 +732,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnFrontdoorCustomDomainAssociation.CdnFrontdoorCustomDomainAssociationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorcustomdomainassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorcustomdomainassociation"
 
 &cdnfrontdoorcustomdomainassociation.CdnFrontdoorCustomDomainAssociationConfig {
 	Connection: interface{},
@@ -745,7 +745,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorcustomdom
 	CdnFrontdoorCustomDomainId: *string,
 	CdnFrontdoorRouteIds: *[]*string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cdnFrontdoorCustomDomainAssociation.CdnFrontdoorCustomDomainAssociationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.cdnFrontdoorCustomDomainAssociation.CdnFrontdoorCustomDomainAssociationTimeouts,
 }
 ```
 
@@ -895,7 +895,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnFrontdoorCustomDomainAssociation.CdnFrontdoorCustomDomainAssociationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorcustomdomainassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorcustomdomainassociation"
 
 &cdnfrontdoorcustomdomainassociation.CdnFrontdoorCustomDomainAssociationTimeouts {
 	Create: *string,
@@ -971,7 +971,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorCustomDomainAssociation.CdnFrontdoorCustomDomainAssociationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorcustomdomainassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorcustomdomainassociation"
 
 cdnfrontdoorcustomdomainassociation.NewCdnFrontdoorCustomDomainAssociationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CdnFrontdoorCustomDomainAssociationTimeoutsOutputReference
 ```

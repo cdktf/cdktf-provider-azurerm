@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionCostManagementExport.SubscriptionCostManagementExport.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementexport"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptioncostmanagementexport"
 
 subscriptioncostmanagementexport.NewSubscriptionCostManagementExport(scope Construct, id *string, config SubscriptionCostManagementExportConfig) SubscriptionCostManagementExport
 ```
@@ -388,7 +388,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.subscriptionCostManagementExport.SubscriptionCostManagementExport.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementexport"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptioncostmanagementexport"
 
 subscriptioncostmanagementexport.SubscriptionCostManagementExport_IsConstruct(x interface{}) *bool
 ```
@@ -420,7 +420,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.subscriptionCostManagementExport.SubscriptionCostManagementExport.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementexport"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptioncostmanagementexport"
 
 subscriptioncostmanagementexport.SubscriptionCostManagementExport_IsTerraformElement(x interface{}) *bool
 ```
@@ -434,7 +434,7 @@ subscriptioncostmanagementexport.SubscriptionCostManagementExport_IsTerraformEle
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.subscriptionCostManagementExport.SubscriptionCostManagementExport.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementexport"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptioncostmanagementexport"
 
 subscriptioncostmanagementexport.SubscriptionCostManagementExport_IsTerraformResource(x interface{}) *bool
 ```
@@ -448,7 +448,7 @@ subscriptioncostmanagementexport.SubscriptionCostManagementExport_IsTerraformRes
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.subscriptionCostManagementExport.SubscriptionCostManagementExport.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementexport"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptioncostmanagementexport"
 
 subscriptioncostmanagementexport.SubscriptionCostManagementExport_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -897,7 +897,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subscriptionCostManagementExport.SubscriptionCostManagementExportConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementexport"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptioncostmanagementexport"
 
 &subscriptioncostmanagementexport.SubscriptionCostManagementExportConfig {
 	Connection: interface{},
@@ -907,8 +907,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanag
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	ExportDataOptions: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.subscriptionCostManagementExport.SubscriptionCostManagementExportExportDataOptions,
-	ExportDataStorageLocation: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.subscriptionCostManagementExport.SubscriptionCostManagementExportExportDataStorageLocation,
+	ExportDataOptions: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.subscriptionCostManagementExport.SubscriptionCostManagementExportExportDataOptions,
+	ExportDataStorageLocation: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.subscriptionCostManagementExport.SubscriptionCostManagementExportExportDataStorageLocation,
 	Name: *string,
 	RecurrencePeriodEndDate: *string,
 	RecurrencePeriodStartDate: *string,
@@ -916,7 +916,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanag
 	SubscriptionId: *string,
 	Active: interface{},
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.subscriptionCostManagementExport.SubscriptionCostManagementExportTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.subscriptionCostManagementExport.SubscriptionCostManagementExportTimeouts,
 }
 ```
 
@@ -1148,7 +1148,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subscriptionCostManagementExport.SubscriptionCostManagementExportExportDataOptions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementexport"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptioncostmanagementexport"
 
 &subscriptioncostmanagementexport.SubscriptionCostManagementExportExportDataOptions {
 	TimeFrame: *string,
@@ -1194,7 +1194,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subscriptionCostManagementExport.SubscriptionCostManagementExportExportDataStorageLocation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementexport"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptioncostmanagementexport"
 
 &subscriptioncostmanagementexport.SubscriptionCostManagementExportExportDataStorageLocation {
 	ContainerId: *string,
@@ -1240,7 +1240,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subscriptionCostManagementExport.SubscriptionCostManagementExportTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementexport"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptioncostmanagementexport"
 
 &subscriptioncostmanagementexport.SubscriptionCostManagementExportTimeouts {
 	Create: *string,
@@ -1316,7 +1316,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionCostManagementExport.SubscriptionCostManagementExportExportDataOptionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementexport"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptioncostmanagementexport"
 
 subscriptioncostmanagementexport.NewSubscriptionCostManagementExportExportDataOptionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SubscriptionCostManagementExportExportDataOptionsOutputReference
 ```
@@ -1609,7 +1609,7 @@ func InternalValue() SubscriptionCostManagementExportExportDataOptions
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionCostManagementExport.SubscriptionCostManagementExportExportDataStorageLocationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementexport"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptioncostmanagementexport"
 
 subscriptioncostmanagementexport.NewSubscriptionCostManagementExportExportDataStorageLocationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SubscriptionCostManagementExportExportDataStorageLocationOutputReference
 ```
@@ -1902,7 +1902,7 @@ func InternalValue() SubscriptionCostManagementExportExportDataStorageLocation
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionCostManagementExport.SubscriptionCostManagementExportTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptioncostmanagementexport"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptioncostmanagementexport"
 
 subscriptioncostmanagementexport.NewSubscriptionCostManagementExportTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SubscriptionCostManagementExportTimeoutsOutputReference
 ```

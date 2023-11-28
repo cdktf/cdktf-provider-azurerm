@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageBlob.StorageBlob.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageblob"
 
 storageblob.NewStorageBlob(scope Construct, id *string, config StorageBlobConfig) StorageBlob
 ```
@@ -425,7 +425,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.storageBlob.StorageBlob.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageblob"
 
 storageblob.StorageBlob_IsConstruct(x interface{}) *bool
 ```
@@ -457,7 +457,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.storageBlob.StorageBlob.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageblob"
 
 storageblob.StorageBlob_IsTerraformElement(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ storageblob.StorageBlob_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.storageBlob.StorageBlob.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageblob"
 
 storageblob.StorageBlob_IsTerraformResource(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ storageblob.StorageBlob_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.storageBlob.StorageBlob.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageblob"
 
 storageblob.StorageBlob_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1077,7 +1077,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageBlob.StorageBlobConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageblob"
 
 &storageblob.StorageBlobConfig {
 	Connection: interface{},
@@ -1102,7 +1102,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageblob"
 	Source: *string,
 	SourceContent: *string,
 	SourceUri: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageBlob.StorageBlobTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageBlob.StorageBlobTimeouts,
 }
 ```
 
@@ -1408,7 +1408,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageBlob.StorageBlobTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageblob"
 
 &storageblob.StorageBlobTimeouts {
 	Create: *string,
@@ -1484,7 +1484,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageBlob.StorageBlobTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageblob"
 
 storageblob.NewStorageBlobTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageBlobTimeoutsOutputReference
 ```

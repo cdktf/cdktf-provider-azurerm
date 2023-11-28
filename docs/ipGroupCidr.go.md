@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidr.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/ipgroupcidr"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/ipgroupcidr"
 
 ipgroupcidr.NewIpGroupCidr(scope Construct, id *string, config IpGroupCidrConfig) IpGroupCidr
 ```
@@ -355,7 +355,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidr.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/ipgroupcidr"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/ipgroupcidr"
 
 ipgroupcidr.IpGroupCidr_IsConstruct(x interface{}) *bool
 ```
@@ -387,7 +387,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidr.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/ipgroupcidr"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/ipgroupcidr"
 
 ipgroupcidr.IpGroupCidr_IsTerraformElement(x interface{}) *bool
 ```
@@ -401,7 +401,7 @@ ipgroupcidr.IpGroupCidr_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidr.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/ipgroupcidr"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/ipgroupcidr"
 
 ipgroupcidr.IpGroupCidr_IsTerraformResource(x interface{}) *bool
 ```
@@ -415,7 +415,7 @@ ipgroupcidr.IpGroupCidr_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidr.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/ipgroupcidr"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/ipgroupcidr"
 
 ipgroupcidr.IpGroupCidr_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -732,7 +732,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/ipgroupcidr"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/ipgroupcidr"
 
 &ipgroupcidr.IpGroupCidrConfig {
 	Connection: interface{},
@@ -745,7 +745,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/ipgroupcidr"
 	Cidr: *string,
 	IpGroupId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.ipGroupCidr.IpGroupCidrTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.ipGroupCidr.IpGroupCidrTimeouts,
 }
 ```
 
@@ -895,7 +895,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/ipgroupcidr"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/ipgroupcidr"
 
 &ipgroupcidr.IpGroupCidrTimeouts {
 	Create: *string,
@@ -957,7 +957,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.ipGroupCidr.IpGroupCidrTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/ipgroupcidr"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/ipgroupcidr"
 
 ipgroupcidr.NewIpGroupCidrTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IpGroupCidrTimeoutsOutputReference
 ```
