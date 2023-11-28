@@ -1,7 +1,3 @@
-# `azurerm_cdn_frontdoor_origin_group`
-
-Refer to the Terraform Registory for docs: [`azurerm_cdn_frontdoor_origin_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_origin_group).
-
 # `cdnFrontdoorOriginGroup` Submodule <a name="`cdnFrontdoorOriginGroup` Submodule" id="@cdktf/provider-azurerm.cdnFrontdoorOriginGroup"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

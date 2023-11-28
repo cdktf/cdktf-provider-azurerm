@@ -1,7 +1,3 @@
-# `azurerm_iotcentral_application`
-
-Refer to the Terraform Registory for docs: [`azurerm_iotcentral_application`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iotcentral_application).
-
 # `iotcentralApplication` Submodule <a name="`iotcentralApplication` Submodule" id="@cdktf/provider-azurerm.iotcentralApplication"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

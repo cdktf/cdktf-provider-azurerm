@@ -1,7 +1,3 @@
-# `azurerm_api_management_redis_cache`
-
-Refer to the Terraform Registory for docs: [`azurerm_api_management_redis_cache`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_redis_cache).
-
 # `apiManagementRedisCache` Submodule <a name="`apiManagementRedisCache` Submodule" id="@cdktf/provider-azurerm.apiManagementRedisCache"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

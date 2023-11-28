@@ -1,7 +1,3 @@
-# `azurerm_automation_variable_object`
-
-Refer to the Terraform Registory for docs: [`azurerm_automation_variable_object`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_variable_object).
-
 # `automationVariableObject` Submodule <a name="`automationVariableObject` Submodule" id="@cdktf/provider-azurerm.automationVariableObject"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

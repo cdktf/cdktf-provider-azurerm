@@ -1,7 +1,3 @@
-# `data_azurerm_attestation_provider`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_attestation_provider`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/attestation_provider).
-
 # `dataAzurermAttestationProvider` Submodule <a name="`dataAzurermAttestationProvider` Submodule" id="@cdktf/provider-azurerm.dataAzurermAttestationProvider"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

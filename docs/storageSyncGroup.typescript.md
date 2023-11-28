@@ -1,7 +1,3 @@
-# `azurerm_storage_sync_group`
-
-Refer to the Terraform Registory for docs: [`azurerm_storage_sync_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/storage_sync_group).
-
 # `storageSyncGroup` Submodule <a name="`storageSyncGroup` Submodule" id="@cdktf/provider-azurerm.storageSyncGroup"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

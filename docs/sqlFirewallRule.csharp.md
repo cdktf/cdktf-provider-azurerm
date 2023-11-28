@@ -1,7 +1,3 @@
-# `azurerm_sql_firewall_rule`
-
-Refer to the Terraform Registory for docs: [`azurerm_sql_firewall_rule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_firewall_rule).
-
 # `sqlFirewallRule` Submodule <a name="`sqlFirewallRule` Submodule" id="@cdktf/provider-azurerm.sqlFirewallRule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

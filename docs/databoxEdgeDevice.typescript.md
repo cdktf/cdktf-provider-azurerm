@@ -1,7 +1,3 @@
-# `azurerm_databox_edge_device`
-
-Refer to the Terraform Registory for docs: [`azurerm_databox_edge_device`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device).
-
 # `databoxEdgeDevice` Submodule <a name="`databoxEdgeDevice` Submodule" id="@cdktf/provider-azurerm.databoxEdgeDevice"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

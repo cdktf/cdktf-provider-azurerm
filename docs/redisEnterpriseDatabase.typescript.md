@@ -1,7 +1,3 @@
-# `azurerm_redis_enterprise_database`
-
-Refer to the Terraform Registory for docs: [`azurerm_redis_enterprise_database`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_enterprise_database).
-
 # `redisEnterpriseDatabase` Submodule <a name="`redisEnterpriseDatabase` Submodule" id="@cdktf/provider-azurerm.redisEnterpriseDatabase"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

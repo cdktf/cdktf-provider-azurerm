@@ -1,7 +1,3 @@
-# `data_azurerm_images`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_images`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/images).
-
 # `dataAzurermImages` Submodule <a name="`dataAzurermImages` Submodule" id="@cdktf/provider-azurerm.dataAzurermImages"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

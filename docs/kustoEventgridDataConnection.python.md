@@ -1,7 +1,3 @@
-# `azurerm_kusto_eventgrid_data_connection`
-
-Refer to the Terraform Registory for docs: [`azurerm_kusto_eventgrid_data_connection`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/kusto_eventgrid_data_connection).
-
 # `kustoEventgridDataConnection` Submodule <a name="`kustoEventgridDataConnection` Submodule" id="@cdktf/provider-azurerm.kustoEventgridDataConnection"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

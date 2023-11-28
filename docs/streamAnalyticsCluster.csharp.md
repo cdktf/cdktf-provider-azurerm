@@ -1,7 +1,3 @@
-# `azurerm_stream_analytics_cluster`
-
-Refer to the Terraform Registory for docs: [`azurerm_stream_analytics_cluster`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/stream_analytics_cluster).
-
 # `streamAnalyticsCluster` Submodule <a name="`streamAnalyticsCluster` Submodule" id="@cdktf/provider-azurerm.streamAnalyticsCluster"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

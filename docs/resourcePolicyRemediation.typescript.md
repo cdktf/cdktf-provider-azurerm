@@ -1,7 +1,3 @@
-# `azurerm_resource_policy_remediation`
-
-Refer to the Terraform Registory for docs: [`azurerm_resource_policy_remediation`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/resource_policy_remediation).
-
 # `resourcePolicyRemediation` Submodule <a name="`resourcePolicyRemediation` Submodule" id="@cdktf/provider-azurerm.resourcePolicyRemediation"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

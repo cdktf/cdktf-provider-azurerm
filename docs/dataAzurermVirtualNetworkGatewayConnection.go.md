@@ -1,7 +1,3 @@
-# `data_azurerm_virtual_network_gateway_connection`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_virtual_network_gateway_connection`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/virtual_network_gateway_connection).
-
 # `dataAzurermVirtualNetworkGatewayConnection` Submodule <a name="`dataAzurermVirtualNetworkGatewayConnection` Submodule" id="@cdktf/provider-azurerm.dataAzurermVirtualNetworkGatewayConnection"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

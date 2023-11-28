@@ -1,7 +1,3 @@
-# `azurerm_sentinel_data_connector_office_atp`
-
-Refer to the Terraform Registory for docs: [`azurerm_sentinel_data_connector_office_atp`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sentinel_data_connector_office_atp).
-
 # `sentinelDataConnectorOfficeAtp` Submodule <a name="`sentinelDataConnectorOfficeAtp` Submodule" id="@cdktf/provider-azurerm.sentinelDataConnectorOfficeAtp"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

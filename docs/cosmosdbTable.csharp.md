@@ -1,7 +1,3 @@
-# `azurerm_cosmosdb_table`
-
-Refer to the Terraform Registory for docs: [`azurerm_cosmosdb_table`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cosmosdb_table).
-
 # `cosmosdbTable` Submodule <a name="`cosmosdbTable` Submodule" id="@cdktf/provider-azurerm.cosmosdbTable"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

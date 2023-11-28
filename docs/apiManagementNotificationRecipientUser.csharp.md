@@ -1,7 +1,3 @@
-# `azurerm_api_management_notification_recipient_user`
-
-Refer to the Terraform Registory for docs: [`azurerm_api_management_notification_recipient_user`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_notification_recipient_user).
-
 # `apiManagementNotificationRecipientUser` Submodule <a name="`apiManagementNotificationRecipientUser` Submodule" id="@cdktf/provider-azurerm.apiManagementNotificationRecipientUser"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

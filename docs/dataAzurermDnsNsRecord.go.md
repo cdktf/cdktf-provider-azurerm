@@ -1,7 +1,3 @@
-# `data_azurerm_dns_ns_record`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_dns_ns_record`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/dns_ns_record).
-
 # `dataAzurermDnsNsRecord` Submodule <a name="`dataAzurermDnsNsRecord` Submodule" id="@cdktf/provider-azurerm.dataAzurermDnsNsRecord"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

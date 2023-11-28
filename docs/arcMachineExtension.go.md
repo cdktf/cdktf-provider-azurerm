@@ -1,7 +1,3 @@
-# `azurerm_arc_machine_extension`
-
-Refer to the Terraform Registory for docs: [`azurerm_arc_machine_extension`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/arc_machine_extension).
-
 # `arcMachineExtension` Submodule <a name="`arcMachineExtension` Submodule" id="@cdktf/provider-azurerm.arcMachineExtension"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

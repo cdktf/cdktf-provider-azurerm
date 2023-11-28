@@ -1,7 +1,3 @@
-# `data_azurerm_ssh_public_key`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_ssh_public_key`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/ssh_public_key).
-
 # `dataAzurermSshPublicKey` Submodule <a name="`dataAzurermSshPublicKey` Submodule" id="@cdktf/provider-azurerm.dataAzurermSshPublicKey"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

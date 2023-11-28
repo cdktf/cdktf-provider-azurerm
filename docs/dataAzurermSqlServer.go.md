@@ -1,7 +1,3 @@
-# `data_azurerm_sql_server`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_sql_server`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/sql_server).
-
 # `dataAzurermSqlServer` Submodule <a name="`dataAzurermSqlServer` Submodule" id="@cdktf/provider-azurerm.dataAzurermSqlServer"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

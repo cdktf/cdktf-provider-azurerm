@@ -1,7 +1,3 @@
-# `data_azurerm_cosmosdb_account`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_cosmosdb_account`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/cosmosdb_account).
-
 # `dataAzurermCosmosdbAccount` Submodule <a name="`dataAzurermCosmosdbAccount` Submodule" id="@cdktf/provider-azurerm.dataAzurermCosmosdbAccount"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

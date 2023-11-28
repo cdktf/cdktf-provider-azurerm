@@ -1,7 +1,3 @@
-# `azurerm_disk_pool`
-
-Refer to the Terraform Registory for docs: [`azurerm_disk_pool`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_pool).
-
 # `diskPool` Submodule <a name="`diskPool` Submodule" id="@cdktf/provider-azurerm.diskPool"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

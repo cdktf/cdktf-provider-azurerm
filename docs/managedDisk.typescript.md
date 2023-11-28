@@ -1,7 +1,3 @@
-# `azurerm_managed_disk`
-
-Refer to the Terraform Registory for docs: [`azurerm_managed_disk`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/managed_disk).
-
 # `managedDisk` Submodule <a name="`managedDisk` Submodule" id="@cdktf/provider-azurerm.managedDisk"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

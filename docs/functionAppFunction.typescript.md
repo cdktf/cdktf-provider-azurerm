@@ -1,7 +1,3 @@
-# `azurerm_function_app_function`
-
-Refer to the Terraform Registory for docs: [`azurerm_function_app_function`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/function_app_function).
-
 # `functionAppFunction` Submodule <a name="`functionAppFunction` Submodule" id="@cdktf/provider-azurerm.functionAppFunction"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

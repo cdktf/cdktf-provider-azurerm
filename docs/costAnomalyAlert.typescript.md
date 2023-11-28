@@ -1,7 +1,3 @@
-# `azurerm_cost_anomaly_alert`
-
-Refer to the Terraform Registory for docs: [`azurerm_cost_anomaly_alert`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cost_anomaly_alert).
-
 # `costAnomalyAlert` Submodule <a name="`costAnomalyAlert` Submodule" id="@cdktf/provider-azurerm.costAnomalyAlert"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

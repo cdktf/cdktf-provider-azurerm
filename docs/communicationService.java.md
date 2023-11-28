@@ -1,7 +1,3 @@
-# `azurerm_communication_service`
-
-Refer to the Terraform Registory for docs: [`azurerm_communication_service`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/communication_service).
-
 # `communicationService` Submodule <a name="`communicationService` Submodule" id="@cdktf/provider-azurerm.communicationService"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

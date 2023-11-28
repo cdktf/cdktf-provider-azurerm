@@ -1,7 +1,3 @@
-# `data_azurerm_blueprint_definition`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_blueprint_definition`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/blueprint_definition).
-
 # `dataAzurermBlueprintDefinition` Submodule <a name="`dataAzurermBlueprintDefinition` Submodule" id="@cdktf/provider-azurerm.dataAzurermBlueprintDefinition"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

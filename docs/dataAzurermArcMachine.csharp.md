@@ -1,7 +1,3 @@
-# `data_azurerm_arc_machine`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_arc_machine`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/arc_machine).
-
 # `dataAzurermArcMachine` Submodule <a name="`dataAzurermArcMachine` Submodule" id="@cdktf/provider-azurerm.dataAzurermArcMachine"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

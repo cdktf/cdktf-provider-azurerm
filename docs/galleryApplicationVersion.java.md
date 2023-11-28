@@ -1,7 +1,3 @@
-# `azurerm_gallery_application_version`
-
-Refer to the Terraform Registory for docs: [`azurerm_gallery_application_version`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/gallery_application_version).
-
 # `galleryApplicationVersion` Submodule <a name="`galleryApplicationVersion` Submodule" id="@cdktf/provider-azurerm.galleryApplicationVersion"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `azurerm_bot_channel_sms`
-
-Refer to the Terraform Registory for docs: [`azurerm_bot_channel_sms`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/bot_channel_sms).
-
 # `botChannelSms` Submodule <a name="`botChannelSms` Submodule" id="@cdktf/provider-azurerm.botChannelSms"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

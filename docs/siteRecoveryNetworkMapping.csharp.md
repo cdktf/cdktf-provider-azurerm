@@ -1,7 +1,3 @@
-# `azurerm_site_recovery_network_mapping`
-
-Refer to the Terraform Registory for docs: [`azurerm_site_recovery_network_mapping`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/site_recovery_network_mapping).
-
 # `siteRecoveryNetworkMapping` Submodule <a name="`siteRecoveryNetworkMapping` Submodule" id="@cdktf/provider-azurerm.siteRecoveryNetworkMapping"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

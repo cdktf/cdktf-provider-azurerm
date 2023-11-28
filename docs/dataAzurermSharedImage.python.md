@@ -1,7 +1,3 @@
-# `data_azurerm_shared_image`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_shared_image`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/shared_image).
-
 # `dataAzurermSharedImage` Submodule <a name="`dataAzurermSharedImage` Submodule" id="@cdktf/provider-azurerm.dataAzurermSharedImage"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

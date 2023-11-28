@@ -1,7 +1,3 @@
-# `azurerm_orchestrated_virtual_machine_scale_set`
-
-Refer to the Terraform Registory for docs: [`azurerm_orchestrated_virtual_machine_scale_set`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/orchestrated_virtual_machine_scale_set).
-
 # `orchestratedVirtualMachineScaleSet` Submodule <a name="`orchestratedVirtualMachineScaleSet` Submodule" id="@cdktf/provider-azurerm.orchestratedVirtualMachineScaleSet"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `azurerm_disk_access`
-
-Refer to the Terraform Registory for docs: [`azurerm_disk_access`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access).
-
 # `diskAccess` Submodule <a name="`diskAccess` Submodule" id="@cdktf/provider-azurerm.diskAccess"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `azurerm_lb_probe`
-
-Refer to the Terraform Registory for docs: [`azurerm_lb_probe`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/lb_probe).
-
 # `lbProbe` Submodule <a name="`lbProbe` Submodule" id="@cdktf/provider-azurerm.lbProbe"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

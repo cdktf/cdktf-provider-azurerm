@@ -1,7 +1,3 @@
-# `azurerm_orbital_contact`
-
-Refer to the Terraform Registory for docs: [`azurerm_orbital_contact`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/orbital_contact).
-
 # `orbitalContact` Submodule <a name="`orbitalContact` Submodule" id="@cdktf/provider-azurerm.orbitalContact"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

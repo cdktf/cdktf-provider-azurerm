@@ -1,7 +1,3 @@
-# `azurerm_bot_web_app`
-
-Refer to the Terraform Registory for docs: [`azurerm_bot_web_app`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/bot_web_app).
-
 # `botWebApp` Submodule <a name="`botWebApp` Submodule" id="@cdktf/provider-azurerm.botWebApp"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

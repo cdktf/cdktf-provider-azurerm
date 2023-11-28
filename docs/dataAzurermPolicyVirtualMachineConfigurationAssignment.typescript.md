@@ -1,7 +1,3 @@
-# `data_azurerm_policy_virtual_machine_configuration_assignment`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_policy_virtual_machine_configuration_assignment`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/policy_virtual_machine_configuration_assignment).
-
 # `dataAzurermPolicyVirtualMachineConfigurationAssignment` Submodule <a name="`dataAzurermPolicyVirtualMachineConfigurationAssignment` Submodule" id="@cdktf/provider-azurerm.dataAzurermPolicyVirtualMachineConfigurationAssignment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

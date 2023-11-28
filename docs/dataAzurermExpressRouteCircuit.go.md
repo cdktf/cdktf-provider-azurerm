@@ -1,7 +1,3 @@
-# `data_azurerm_express_route_circuit`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_express_route_circuit`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/express_route_circuit).
-
 # `dataAzurermExpressRouteCircuit` Submodule <a name="`dataAzurermExpressRouteCircuit` Submodule" id="@cdktf/provider-azurerm.dataAzurermExpressRouteCircuit"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

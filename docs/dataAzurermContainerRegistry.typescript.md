@@ -1,7 +1,3 @@
-# `data_azurerm_container_registry`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_container_registry`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/container_registry).
-
 # `dataAzurermContainerRegistry` Submodule <a name="`dataAzurermContainerRegistry` Submodule" id="@cdktf/provider-azurerm.dataAzurermContainerRegistry"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

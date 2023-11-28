@@ -1,7 +1,3 @@
-# `azurerm_lb_nat_pool`
-
-Refer to the Terraform Registory for docs: [`azurerm_lb_nat_pool`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/lb_nat_pool).
-
 # `lbNatPool` Submodule <a name="`lbNatPool` Submodule" id="@cdktf/provider-azurerm.lbNatPool"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

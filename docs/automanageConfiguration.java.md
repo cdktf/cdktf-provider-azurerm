@@ -1,7 +1,3 @@
-# `azurerm_automanage_configuration`
-
-Refer to the Terraform Registory for docs: [`azurerm_automanage_configuration`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automanage_configuration).
-
 # `automanageConfiguration` Submodule <a name="`automanageConfiguration` Submodule" id="@cdktf/provider-azurerm.automanageConfiguration"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

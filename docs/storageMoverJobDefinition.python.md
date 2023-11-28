@@ -1,7 +1,3 @@
-# `azurerm_storage_mover_job_definition`
-
-Refer to the Terraform Registory for docs: [`azurerm_storage_mover_job_definition`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/storage_mover_job_definition).
-
 # `storageMoverJobDefinition` Submodule <a name="`storageMoverJobDefinition` Submodule" id="@cdktf/provider-azurerm.storageMoverJobDefinition"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

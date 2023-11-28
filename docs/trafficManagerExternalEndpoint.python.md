@@ -1,7 +1,3 @@
-# `azurerm_traffic_manager_external_endpoint`
-
-Refer to the Terraform Registory for docs: [`azurerm_traffic_manager_external_endpoint`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/traffic_manager_external_endpoint).
-
 # `trafficManagerExternalEndpoint` Submodule <a name="`trafficManagerExternalEndpoint` Submodule" id="@cdktf/provider-azurerm.trafficManagerExternalEndpoint"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

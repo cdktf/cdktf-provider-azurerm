@@ -1,7 +1,3 @@
-# `data_azurerm_servicebus_queue_authorization_rule`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_servicebus_queue_authorization_rule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/servicebus_queue_authorization_rule).
-
 # `dataAzurermServicebusQueueAuthorizationRule` Submodule <a name="`dataAzurermServicebusQueueAuthorizationRule` Submodule" id="@cdktf/provider-azurerm.dataAzurermServicebusQueueAuthorizationRule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

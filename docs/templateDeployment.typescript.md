@@ -1,7 +1,3 @@
-# `azurerm_template_deployment`
-
-Refer to the Terraform Registory for docs: [`azurerm_template_deployment`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/template_deployment).
-
 # `templateDeployment` Submodule <a name="`templateDeployment` Submodule" id="@cdktf/provider-azurerm.templateDeployment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

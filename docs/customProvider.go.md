@@ -1,7 +1,3 @@
-# `azurerm_custom_provider`
-
-Refer to the Terraform Registory for docs: [`azurerm_custom_provider`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/custom_provider).
-
 # `customProvider` Submodule <a name="`customProvider` Submodule" id="@cdktf/provider-azurerm.customProvider"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

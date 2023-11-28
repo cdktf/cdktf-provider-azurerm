@@ -1,7 +1,3 @@
-# `azurerm_sentinel_data_connector_azure_active_directory`
-
-Refer to the Terraform Registory for docs: [`azurerm_sentinel_data_connector_azure_active_directory`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sentinel_data_connector_azure_active_directory).
-
 # `sentinelDataConnectorAzureActiveDirectory` Submodule <a name="`sentinelDataConnectorAzureActiveDirectory` Submodule" id="@cdktf/provider-azurerm.sentinelDataConnectorAzureActiveDirectory"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

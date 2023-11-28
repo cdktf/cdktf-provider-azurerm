@@ -1,7 +1,3 @@
-# `azurerm_automation_software_update_configuration`
-
-Refer to the Terraform Registory for docs: [`azurerm_automation_software_update_configuration`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_software_update_configuration).
-
 # `automationSoftwareUpdateConfiguration` Submodule <a name="`automationSoftwareUpdateConfiguration` Submodule" id="@cdktf/provider-azurerm.automationSoftwareUpdateConfiguration"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `data_azurerm_digital_twins_instance`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_digital_twins_instance`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/digital_twins_instance).
-
 # `dataAzurermDigitalTwinsInstance` Submodule <a name="`dataAzurermDigitalTwinsInstance` Submodule" id="@cdktf/provider-azurerm.dataAzurermDigitalTwinsInstance"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

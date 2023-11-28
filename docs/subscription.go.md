@@ -1,7 +1,3 @@
-# `azurerm_subscription`
-
-Refer to the Terraform Registory for docs: [`azurerm_subscription`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/subscription).
-
 # `subscription` Submodule <a name="`subscription` Submodule" id="@cdktf/provider-azurerm.subscription"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `azurerm_relay_namespace`
-
-Refer to the Terraform Registory for docs: [`azurerm_relay_namespace`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/relay_namespace).
-
 # `relayNamespace` Submodule <a name="`relayNamespace` Submodule" id="@cdktf/provider-azurerm.relayNamespace"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

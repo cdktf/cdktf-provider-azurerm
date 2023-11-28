@@ -1,7 +1,3 @@
-# `azurerm_mssql_virtual_machine_group`
-
-Refer to the Terraform Registory for docs: [`azurerm_mssql_virtual_machine_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mssql_virtual_machine_group).
-
 # `mssqlVirtualMachineGroup` Submodule <a name="`mssqlVirtualMachineGroup` Submodule" id="@cdktf/provider-azurerm.mssqlVirtualMachineGroup"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

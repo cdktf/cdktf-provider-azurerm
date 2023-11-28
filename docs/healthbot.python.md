@@ -1,7 +1,3 @@
-# `azurerm_healthbot`
-
-Refer to the Terraform Registory for docs: [`azurerm_healthbot`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/healthbot).
-
 # `healthbot` Submodule <a name="`healthbot` Submodule" id="@cdktf/provider-azurerm.healthbot"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

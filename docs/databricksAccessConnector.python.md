@@ -1,7 +1,3 @@
-# `azurerm_databricks_access_connector`
-
-Refer to the Terraform Registory for docs: [`azurerm_databricks_access_connector`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databricks_access_connector).
-
 # `databricksAccessConnector` Submodule <a name="`databricksAccessConnector` Submodule" id="@cdktf/provider-azurerm.databricksAccessConnector"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

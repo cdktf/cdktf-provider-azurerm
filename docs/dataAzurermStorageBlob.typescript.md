@@ -1,7 +1,3 @@
-# `data_azurerm_storage_blob`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_storage_blob`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/storage_blob).
-
 # `dataAzurermStorageBlob` Submodule <a name="`dataAzurermStorageBlob` Submodule" id="@cdktf/provider-azurerm.dataAzurermStorageBlob"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

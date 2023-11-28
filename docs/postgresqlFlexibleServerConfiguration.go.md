@@ -1,7 +1,3 @@
-# `azurerm_postgresql_flexible_server_configuration`
-
-Refer to the Terraform Registory for docs: [`azurerm_postgresql_flexible_server_configuration`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/postgresql_flexible_server_configuration).
-
 # `postgresqlFlexibleServerConfiguration` Submodule <a name="`postgresqlFlexibleServerConfiguration` Submodule" id="@cdktf/provider-azurerm.postgresqlFlexibleServerConfiguration"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `azurerm_iot_time_series_insights_standard_environment`
-
-Refer to the Terraform Registory for docs: [`azurerm_iot_time_series_insights_standard_environment`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_time_series_insights_standard_environment).
-
 # `iotTimeSeriesInsightsStandardEnvironment` Submodule <a name="`iotTimeSeriesInsightsStandardEnvironment` Submodule" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsStandardEnvironment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

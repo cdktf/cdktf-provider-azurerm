@@ -1,7 +1,3 @@
-# `azurerm_security_center_auto_provisioning`
-
-Refer to the Terraform Registory for docs: [`azurerm_security_center_auto_provisioning`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/security_center_auto_provisioning).
-
 # `securityCenterAutoProvisioning` Submodule <a name="`securityCenterAutoProvisioning` Submodule" id="@cdktf/provider-azurerm.securityCenterAutoProvisioning"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `azurerm_site_recovery_replicated_vm`
-
-Refer to the Terraform Registory for docs: [`azurerm_site_recovery_replicated_vm`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/site_recovery_replicated_vm).
-
 # `siteRecoveryReplicatedVm` Submodule <a name="`siteRecoveryReplicatedVm` Submodule" id="@cdktf/provider-azurerm.siteRecoveryReplicatedVm"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

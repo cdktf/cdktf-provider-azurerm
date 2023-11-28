@@ -1,7 +1,3 @@
-# `data_azurerm_maps_account`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_maps_account`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/maps_account).
-
 # `dataAzurermMapsAccount` Submodule <a name="`dataAzurermMapsAccount` Submodule" id="@cdktf/provider-azurerm.dataAzurermMapsAccount"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

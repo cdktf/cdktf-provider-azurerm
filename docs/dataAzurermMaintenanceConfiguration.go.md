@@ -1,7 +1,3 @@
-# `data_azurerm_maintenance_configuration`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_maintenance_configuration`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/maintenance_configuration).
-
 # `dataAzurermMaintenanceConfiguration` Submodule <a name="`dataAzurermMaintenanceConfiguration` Submodule" id="@cdktf/provider-azurerm.dataAzurermMaintenanceConfiguration"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

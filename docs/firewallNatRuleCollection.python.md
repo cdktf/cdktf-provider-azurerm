@@ -1,7 +1,3 @@
-# `azurerm_firewall_nat_rule_collection`
-
-Refer to the Terraform Registory for docs: [`azurerm_firewall_nat_rule_collection`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/firewall_nat_rule_collection).
-
 # `firewallNatRuleCollection` Submodule <a name="`firewallNatRuleCollection` Submodule" id="@cdktf/provider-azurerm.firewallNatRuleCollection"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

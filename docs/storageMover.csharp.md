@@ -1,7 +1,3 @@
-# `azurerm_storage_mover`
-
-Refer to the Terraform Registory for docs: [`azurerm_storage_mover`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/storage_mover).
-
 # `storageMover` Submodule <a name="`storageMover` Submodule" id="@cdktf/provider-azurerm.storageMover"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `azurerm_api_management_diagnostic`
-
-Refer to the Terraform Registory for docs: [`azurerm_api_management_diagnostic`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_diagnostic).
-
 # `apiManagementDiagnostic` Submodule <a name="`apiManagementDiagnostic` Submodule" id="@cdktf/provider-azurerm.apiManagementDiagnostic"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

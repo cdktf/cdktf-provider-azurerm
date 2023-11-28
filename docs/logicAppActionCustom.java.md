@@ -1,7 +1,3 @@
-# `azurerm_logic_app_action_custom`
-
-Refer to the Terraform Registory for docs: [`azurerm_logic_app_action_custom`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_action_custom).
-
 # `logicAppActionCustom` Submodule <a name="`logicAppActionCustom` Submodule" id="@cdktf/provider-azurerm.logicAppActionCustom"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `azurerm_arc_private_link_scope`
-
-Refer to the Terraform Registory for docs: [`azurerm_arc_private_link_scope`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/arc_private_link_scope).
-
 # `arcPrivateLinkScope` Submodule <a name="`arcPrivateLinkScope` Submodule" id="@cdktf/provider-azurerm.arcPrivateLinkScope"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

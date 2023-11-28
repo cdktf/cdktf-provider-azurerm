@@ -1,7 +1,3 @@
-# `data_azurerm_kubernetes_service_versions`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_kubernetes_service_versions`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/kubernetes_service_versions).
-
 # `dataAzurermKubernetesServiceVersions` Submodule <a name="`dataAzurermKubernetesServiceVersions` Submodule" id="@cdktf/provider-azurerm.dataAzurermKubernetesServiceVersions"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

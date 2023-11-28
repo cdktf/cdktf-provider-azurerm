@@ -1,7 +1,3 @@
-# `azurerm_signalr_service_network_acl`
-
-Refer to the Terraform Registory for docs: [`azurerm_signalr_service_network_acl`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_network_acl).
-
 # `signalrServiceNetworkAcl` Submodule <a name="`signalrServiceNetworkAcl` Submodule" id="@cdktf/provider-azurerm.signalrServiceNetworkAcl"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

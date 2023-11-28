@@ -1,7 +1,3 @@
-# `data_azurerm_container_app_environment_certificate`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_container_app_environment_certificate`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/container_app_environment_certificate).
-
 # `dataAzurermContainerAppEnvironmentCertificate` Submodule <a name="`dataAzurermContainerAppEnvironmentCertificate` Submodule" id="@cdktf/provider-azurerm.dataAzurermContainerAppEnvironmentCertificate"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `azurerm_mobile_network_service`
-
-Refer to the Terraform Registory for docs: [`azurerm_mobile_network_service`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mobile_network_service).
-
 # `mobileNetworkService` Submodule <a name="`mobileNetworkService` Submodule" id="@cdktf/provider-azurerm.mobileNetworkService"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

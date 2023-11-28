@@ -1,7 +1,3 @@
-# `azurerm_logic_app_standard`
-
-Refer to the Terraform Registory for docs: [`azurerm_logic_app_standard`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_standard).
-
 # `logicAppStandard` Submodule <a name="`logicAppStandard` Submodule" id="@cdktf/provider-azurerm.logicAppStandard"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

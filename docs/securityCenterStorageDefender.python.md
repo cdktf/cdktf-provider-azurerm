@@ -1,7 +1,3 @@
-# `azurerm_security_center_storage_defender`
-
-Refer to the Terraform Registory for docs: [`azurerm_security_center_storage_defender`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/security_center_storage_defender).
-
 # `securityCenterStorageDefender` Submodule <a name="`securityCenterStorageDefender` Submodule" id="@cdktf/provider-azurerm.securityCenterStorageDefender"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

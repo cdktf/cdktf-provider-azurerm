@@ -1,7 +1,3 @@
-# `data_azurerm_ip_group`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_ip_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/ip_group).
-
 # `dataAzurermIpGroup` Submodule <a name="`dataAzurermIpGroup` Submodule" id="@cdktf/provider-azurerm.dataAzurermIpGroup"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `data_azurerm_confidential_ledger`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_confidential_ledger`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/confidential_ledger).
-
 # `dataAzurermConfidentialLedger` Submodule <a name="`dataAzurermConfidentialLedger` Submodule" id="@cdktf/provider-azurerm.dataAzurermConfidentialLedger"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

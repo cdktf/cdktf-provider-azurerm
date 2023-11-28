@@ -1,7 +1,3 @@
-# `data_azurerm_policy_assignment`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_policy_assignment`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/policy_assignment).
-
 # `dataAzurermPolicyAssignment` Submodule <a name="`dataAzurermPolicyAssignment` Submodule" id="@cdktf/provider-azurerm.dataAzurermPolicyAssignment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

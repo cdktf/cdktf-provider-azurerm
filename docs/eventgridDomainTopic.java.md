@@ -1,7 +1,3 @@
-# `azurerm_eventgrid_domain_topic`
-
-Refer to the Terraform Registory for docs: [`azurerm_eventgrid_domain_topic`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/eventgrid_domain_topic).
-
 # `eventgridDomainTopic` Submodule <a name="`eventgridDomainTopic` Submodule" id="@cdktf/provider-azurerm.eventgridDomainTopic"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

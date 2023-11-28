@@ -1,7 +1,3 @@
-# `azurerm_stream_analytics_output_table`
-
-Refer to the Terraform Registory for docs: [`azurerm_stream_analytics_output_table`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/stream_analytics_output_table).
-
 # `streamAnalyticsOutputTable` Submodule <a name="`streamAnalyticsOutputTable` Submodule" id="@cdktf/provider-azurerm.streamAnalyticsOutputTable"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

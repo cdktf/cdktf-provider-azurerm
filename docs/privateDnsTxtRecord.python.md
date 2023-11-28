@@ -1,7 +1,3 @@
-# `azurerm_private_dns_txt_record`
-
-Refer to the Terraform Registory for docs: [`azurerm_private_dns_txt_record`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/private_dns_txt_record).
-
 # `privateDnsTxtRecord` Submodule <a name="`privateDnsTxtRecord` Submodule" id="@cdktf/provider-azurerm.privateDnsTxtRecord"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

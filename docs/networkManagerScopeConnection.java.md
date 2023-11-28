@@ -1,7 +1,3 @@
-# `azurerm_network_manager_scope_connection`
-
-Refer to the Terraform Registory for docs: [`azurerm_network_manager_scope_connection`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/network_manager_scope_connection).
-
 # `networkManagerScopeConnection` Submodule <a name="`networkManagerScopeConnection` Submodule" id="@cdktf/provider-azurerm.networkManagerScopeConnection"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

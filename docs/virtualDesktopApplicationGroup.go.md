@@ -1,7 +1,3 @@
-# `azurerm_virtual_desktop_application_group`
-
-Refer to the Terraform Registory for docs: [`azurerm_virtual_desktop_application_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/virtual_desktop_application_group).
-
 # `virtualDesktopApplicationGroup` Submodule <a name="`virtualDesktopApplicationGroup` Submodule" id="@cdktf/provider-azurerm.virtualDesktopApplicationGroup"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

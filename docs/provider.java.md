@@ -1,7 +1,3 @@
-# `provider`
-
-Refer to the Terraform Registory for docs: [`azurerm`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs).
-
 # `provider` Submodule <a name="`provider` Submodule" id="@cdktf/provider-azurerm.provider"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

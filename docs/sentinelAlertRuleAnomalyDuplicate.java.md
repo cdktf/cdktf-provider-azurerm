@@ -1,7 +1,3 @@
-# `azurerm_sentinel_alert_rule_anomaly_duplicate`
-
-Refer to the Terraform Registory for docs: [`azurerm_sentinel_alert_rule_anomaly_duplicate`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sentinel_alert_rule_anomaly_duplicate).
-
 # `sentinelAlertRuleAnomalyDuplicate` Submodule <a name="`sentinelAlertRuleAnomalyDuplicate` Submodule" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyDuplicate"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

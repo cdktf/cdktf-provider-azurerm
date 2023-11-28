@@ -1,7 +1,3 @@
-# `data_azurerm_route_table`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_route_table`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/route_table).
-
 # `dataAzurermRouteTable` Submodule <a name="`dataAzurermRouteTable` Submodule" id="@cdktf/provider-azurerm.dataAzurermRouteTable"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

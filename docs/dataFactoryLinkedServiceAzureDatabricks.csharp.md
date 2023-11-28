@@ -1,7 +1,3 @@
-# `azurerm_data_factory_linked_service_azure_databricks`
-
-Refer to the Terraform Registory for docs: [`azurerm_data_factory_linked_service_azure_databricks`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/data_factory_linked_service_azure_databricks).
-
 # `dataFactoryLinkedServiceAzureDatabricks` Submodule <a name="`dataFactoryLinkedServiceAzureDatabricks` Submodule" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureDatabricks"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `data_azurerm_windows_web_app`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_windows_web_app`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/windows_web_app).
-
 # `dataAzurermWindowsWebApp` Submodule <a name="`dataAzurermWindowsWebApp` Submodule" id="@cdktf/provider-azurerm.dataAzurermWindowsWebApp"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

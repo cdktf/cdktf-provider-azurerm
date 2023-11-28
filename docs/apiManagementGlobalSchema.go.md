@@ -1,7 +1,3 @@
-# `azurerm_api_management_global_schema`
-
-Refer to the Terraform Registory for docs: [`azurerm_api_management_global_schema`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_global_schema).
-
 # `apiManagementGlobalSchema` Submodule <a name="`apiManagementGlobalSchema` Submodule" id="@cdktf/provider-azurerm.apiManagementGlobalSchema"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

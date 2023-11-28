@@ -1,7 +1,3 @@
-# `azurerm_machine_learning_compute_cluster`
-
-Refer to the Terraform Registory for docs: [`azurerm_machine_learning_compute_cluster`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/machine_learning_compute_cluster).
-
 # `machineLearningComputeCluster` Submodule <a name="`machineLearningComputeCluster` Submodule" id="@cdktf/provider-azurerm.machineLearningComputeCluster"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `azurerm_api_management_api_tag`
-
-Refer to the Terraform Registory for docs: [`azurerm_api_management_api_tag`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_api_tag).
-
 # `apiManagementApiTag` Submodule <a name="`apiManagementApiTag` Submodule" id="@cdktf/provider-azurerm.apiManagementApiTag"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `azurerm_application_insights_analytics_item`
-
-Refer to the Terraform Registory for docs: [`azurerm_application_insights_analytics_item`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/application_insights_analytics_item).
-
 # `applicationInsightsAnalyticsItem` Submodule <a name="`applicationInsightsAnalyticsItem` Submodule" id="@cdktf/provider-azurerm.applicationInsightsAnalyticsItem"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

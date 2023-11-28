@@ -1,7 +1,3 @@
-# `azurerm_bot_channel_directline`
-
-Refer to the Terraform Registory for docs: [`azurerm_bot_channel_directline`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/bot_channel_directline).
-
 # `botChannelDirectline` Submodule <a name="`botChannelDirectline` Submodule" id="@cdktf/provider-azurerm.botChannelDirectline"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

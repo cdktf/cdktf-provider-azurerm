@@ -1,7 +1,3 @@
-# `data_azurerm_netapp_pool`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_netapp_pool`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/netapp_pool).
-
 # `dataAzurermNetappPool` Submodule <a name="`dataAzurermNetappPool` Submodule" id="@cdktf/provider-azurerm.dataAzurermNetappPool"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

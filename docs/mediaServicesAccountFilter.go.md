@@ -1,7 +1,3 @@
-# `azurerm_media_services_account_filter`
-
-Refer to the Terraform Registory for docs: [`azurerm_media_services_account_filter`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_services_account_filter).
-
 # `mediaServicesAccountFilter` Submodule <a name="`mediaServicesAccountFilter` Submodule" id="@cdktf/provider-azurerm.mediaServicesAccountFilter"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

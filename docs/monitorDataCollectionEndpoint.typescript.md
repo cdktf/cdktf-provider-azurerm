@@ -1,7 +1,3 @@
-# `azurerm_monitor_data_collection_endpoint`
-
-Refer to the Terraform Registory for docs: [`azurerm_monitor_data_collection_endpoint`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_data_collection_endpoint).
-
 # `monitorDataCollectionEndpoint` Submodule <a name="`monitorDataCollectionEndpoint` Submodule" id="@cdktf/provider-azurerm.monitorDataCollectionEndpoint"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

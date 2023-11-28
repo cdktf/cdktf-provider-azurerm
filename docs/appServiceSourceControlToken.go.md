@@ -1,7 +1,3 @@
-# `azurerm_app_service_source_control_token`
-
-Refer to the Terraform Registory for docs: [`azurerm_app_service_source_control_token`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/app_service_source_control_token).
-
 # `appServiceSourceControlToken` Submodule <a name="`appServiceSourceControlToken` Submodule" id="@cdktf/provider-azurerm.appServiceSourceControlToken"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

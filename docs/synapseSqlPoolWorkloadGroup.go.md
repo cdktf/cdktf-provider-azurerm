@@ -1,7 +1,3 @@
-# `azurerm_synapse_sql_pool_workload_group`
-
-Refer to the Terraform Registory for docs: [`azurerm_synapse_sql_pool_workload_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/synapse_sql_pool_workload_group).
-
 # `synapseSqlPoolWorkloadGroup` Submodule <a name="`synapseSqlPoolWorkloadGroup` Submodule" id="@cdktf/provider-azurerm.synapseSqlPoolWorkloadGroup"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

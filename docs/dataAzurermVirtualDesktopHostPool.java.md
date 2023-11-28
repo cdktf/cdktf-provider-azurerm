@@ -1,7 +1,3 @@
-# `data_azurerm_virtual_desktop_host_pool`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_virtual_desktop_host_pool`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/virtual_desktop_host_pool).
-
 # `dataAzurermVirtualDesktopHostPool` Submodule <a name="`dataAzurermVirtualDesktopHostPool` Submodule" id="@cdktf/provider-azurerm.dataAzurermVirtualDesktopHostPool"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

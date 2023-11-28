@@ -1,7 +1,3 @@
-# `azurerm_graph_account`
-
-Refer to the Terraform Registory for docs: [`azurerm_graph_account`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/graph_account).
-
 # `graphAccount` Submodule <a name="`graphAccount` Submodule" id="@cdktf/provider-azurerm.graphAccount"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

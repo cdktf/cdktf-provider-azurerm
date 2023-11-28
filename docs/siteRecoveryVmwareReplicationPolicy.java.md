@@ -1,7 +1,3 @@
-# `azurerm_site_recovery_vmware_replication_policy`
-
-Refer to the Terraform Registory for docs: [`azurerm_site_recovery_vmware_replication_policy`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/site_recovery_vmware_replication_policy).
-
 # `siteRecoveryVmwareReplicationPolicy` Submodule <a name="`siteRecoveryVmwareReplicationPolicy` Submodule" id="@cdktf/provider-azurerm.siteRecoveryVmwareReplicationPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

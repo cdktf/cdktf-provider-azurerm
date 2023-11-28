@@ -1,7 +1,3 @@
-# `azurerm_mssql_elasticpool`
-
-Refer to the Terraform Registory for docs: [`azurerm_mssql_elasticpool`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mssql_elasticpool).
-
 # `mssqlElasticpool` Submodule <a name="`mssqlElasticpool` Submodule" id="@cdktf/provider-azurerm.mssqlElasticpool"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

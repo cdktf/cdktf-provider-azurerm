@@ -1,7 +1,3 @@
-# `data_azurerm_key_vault_secret`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_key_vault_secret`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/key_vault_secret).
-
 # `dataAzurermKeyVaultSecret` Submodule <a name="`dataAzurermKeyVaultSecret` Submodule" id="@cdktf/provider-azurerm.dataAzurermKeyVaultSecret"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

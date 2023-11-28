@@ -1,7 +1,3 @@
-# `azurerm_logic_app_integration_account_certificate`
-
-Refer to the Terraform Registory for docs: [`azurerm_logic_app_integration_account_certificate`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_certificate).
-
 # `logicAppIntegrationAccountCertificate` Submodule <a name="`logicAppIntegrationAccountCertificate` Submodule" id="@cdktf/provider-azurerm.logicAppIntegrationAccountCertificate"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

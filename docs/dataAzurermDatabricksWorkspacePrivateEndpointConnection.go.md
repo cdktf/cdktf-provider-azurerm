@@ -1,7 +1,3 @@
-# `data_azurerm_databricks_workspace_private_endpoint_connection`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_databricks_workspace_private_endpoint_connection`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/databricks_workspace_private_endpoint_connection).
-
 # `dataAzurermDatabricksWorkspacePrivateEndpointConnection` Submodule <a name="`dataAzurermDatabricksWorkspacePrivateEndpointConnection` Submodule" id="@cdktf/provider-azurerm.dataAzurermDatabricksWorkspacePrivateEndpointConnection"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

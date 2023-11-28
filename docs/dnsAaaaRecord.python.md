@@ -1,7 +1,3 @@
-# `azurerm_dns_aaaa_record`
-
-Refer to the Terraform Registory for docs: [`azurerm_dns_aaaa_record`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dns_aaaa_record).
-
 # `dnsAaaaRecord` Submodule <a name="`dnsAaaaRecord` Submodule" id="@cdktf/provider-azurerm.dnsAaaaRecord"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

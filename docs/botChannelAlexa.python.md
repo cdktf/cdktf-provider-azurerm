@@ -1,7 +1,3 @@
-# `azurerm_bot_channel_alexa`
-
-Refer to the Terraform Registory for docs: [`azurerm_bot_channel_alexa`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/bot_channel_alexa).
-
 # `botChannelAlexa` Submodule <a name="`botChannelAlexa` Submodule" id="@cdktf/provider-azurerm.botChannelAlexa"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

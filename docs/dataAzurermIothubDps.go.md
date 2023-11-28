@@ -1,7 +1,3 @@
-# `data_azurerm_iothub_dps`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_iothub_dps`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/iothub_dps).
-
 # `dataAzurermIothubDps` Submodule <a name="`dataAzurermIothubDps` Submodule" id="@cdktf/provider-azurerm.dataAzurermIothubDps"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

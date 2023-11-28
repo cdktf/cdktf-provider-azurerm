@@ -1,7 +1,3 @@
-# `azurerm_redis_linked_server`
-
-Refer to the Terraform Registory for docs: [`azurerm_redis_linked_server`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/redis_linked_server).
-
 # `redisLinkedServer` Submodule <a name="`redisLinkedServer` Submodule" id="@cdktf/provider-azurerm.redisLinkedServer"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

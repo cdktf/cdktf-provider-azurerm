@@ -1,7 +1,3 @@
-# `azurerm_vmware_cluster`
-
-Refer to the Terraform Registory for docs: [`azurerm_vmware_cluster`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/vmware_cluster).
-
 # `vmwareCluster` Submodule <a name="`vmwareCluster` Submodule" id="@cdktf/provider-azurerm.vmwareCluster"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
