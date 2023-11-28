@@ -1,7 +1,3 @@
-# `azurerm_virtual_hub_ip`
-
-Refer to the Terraform Registory for docs: [`azurerm_virtual_hub_ip`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/virtual_hub_ip).
-
 # `virtualHubIp` Submodule <a name="`virtualHubIp` Submodule" id="@cdktf/provider-azurerm.virtualHubIp"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualHubIp.VirtualHubIp.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualhubip"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualhubip"
 
 virtualhubip.NewVirtualHubIp(scope Construct, id *string, config VirtualHubIpConfig) VirtualHubIp
 ```
@@ -373,7 +369,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.virtualHubIp.VirtualHubIp.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualhubip"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualhubip"
 
 virtualhubip.VirtualHubIp_IsConstruct(x interface{}) *bool
 ```
@@ -405,7 +401,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.virtualHubIp.VirtualHubIp.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualhubip"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualhubip"
 
 virtualhubip.VirtualHubIp_IsTerraformElement(x interface{}) *bool
 ```
@@ -419,7 +415,7 @@ virtualhubip.VirtualHubIp_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.virtualHubIp.VirtualHubIp.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualhubip"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualhubip"
 
 virtualhubip.VirtualHubIp_IsTerraformResource(x interface{}) *bool
 ```
@@ -433,7 +429,7 @@ virtualhubip.VirtualHubIp_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.virtualHubIp.VirtualHubIp.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualhubip"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualhubip"
 
 virtualhubip.VirtualHubIp_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -838,7 +834,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualhubip"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualhubip"
 
 &virtualhubip.VirtualHubIpConfig {
 	Connection: interface{},
@@ -855,7 +851,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualhubip"
 	Id: *string,
 	PrivateIpAddress: *string,
 	PrivateIpAllocationMethod: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.virtualHubIp.VirtualHubIpTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.virtualHubIp.VirtualHubIpTimeouts,
 }
 ```
 
@@ -1057,7 +1053,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualhubip"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualhubip"
 
 &virtualhubip.VirtualHubIpTimeouts {
 	Create: *string,
@@ -1133,7 +1129,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualHubIp.VirtualHubIpTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualhubip"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualhubip"
 
 virtualhubip.NewVirtualHubIpTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VirtualHubIpTimeoutsOutputReference
 ```

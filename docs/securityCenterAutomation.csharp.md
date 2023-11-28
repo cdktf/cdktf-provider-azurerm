@@ -1,7 +1,3 @@
-# `azurerm_security_center_automation`
-
-Refer to the Terraform Registory for docs: [`azurerm_security_center_automation`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/security_center_automation).
-
 # `securityCenterAutomation` Submodule <a name="`securityCenterAutomation` Submodule" id="@cdktf/provider-azurerm.securityCenterAutomation"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

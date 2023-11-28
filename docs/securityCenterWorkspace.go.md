@@ -1,7 +1,3 @@
-# `azurerm_security_center_workspace`
-
-Refer to the Terraform Registory for docs: [`azurerm_security_center_workspace`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/security_center_workspace).
-
 # `securityCenterWorkspace` Submodule <a name="`securityCenterWorkspace` Submodule" id="@cdktf/provider-azurerm.securityCenterWorkspace"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspace.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/securitycenterworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/securitycenterworkspace"
 
 securitycenterworkspace.NewSecurityCenterWorkspace(scope Construct, id *string, config SecurityCenterWorkspaceConfig) SecurityCenterWorkspace
 ```
@@ -359,7 +355,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspace.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/securitycenterworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/securitycenterworkspace"
 
 securitycenterworkspace.SecurityCenterWorkspace_IsConstruct(x interface{}) *bool
 ```
@@ -391,7 +387,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspace.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/securitycenterworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/securitycenterworkspace"
 
 securitycenterworkspace.SecurityCenterWorkspace_IsTerraformElement(x interface{}) *bool
 ```
@@ -405,7 +401,7 @@ securitycenterworkspace.SecurityCenterWorkspace_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspace.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/securitycenterworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/securitycenterworkspace"
 
 securitycenterworkspace.SecurityCenterWorkspace_IsTerraformResource(x interface{}) *bool
 ```
@@ -419,7 +415,7 @@ securitycenterworkspace.SecurityCenterWorkspace_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspace.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/securitycenterworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/securitycenterworkspace"
 
 securitycenterworkspace.SecurityCenterWorkspace_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -736,7 +732,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/securitycenterworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/securitycenterworkspace"
 
 &securitycenterworkspace.SecurityCenterWorkspaceConfig {
 	Connection: interface{},
@@ -749,7 +745,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/securitycenterwor
 	Scope: *string,
 	WorkspaceId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.securityCenterWorkspace.SecurityCenterWorkspaceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.securityCenterWorkspace.SecurityCenterWorkspaceTimeouts,
 }
 ```
 
@@ -899,7 +895,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/securitycenterworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/securitycenterworkspace"
 
 &securitycenterworkspace.SecurityCenterWorkspaceTimeouts {
 	Create: *string,
@@ -975,7 +971,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/securitycenterworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/securitycenterworkspace"
 
 securitycenterworkspace.NewSecurityCenterWorkspaceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SecurityCenterWorkspaceTimeoutsOutputReference
 ```

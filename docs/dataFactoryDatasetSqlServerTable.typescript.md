@@ -1,7 +1,3 @@
-# `azurerm_data_factory_dataset_sql_server_table`
-
-Refer to the Terraform Registory for docs: [`azurerm_data_factory_dataset_sql_server_table`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/data_factory_dataset_sql_server_table).
-
 # `dataFactoryDatasetSqlServerTable` Submodule <a name="`dataFactoryDatasetSqlServerTable` Submodule" id="@cdktf/provider-azurerm.dataFactoryDatasetSqlServerTable"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

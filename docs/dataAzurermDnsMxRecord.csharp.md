@@ -1,7 +1,3 @@
-# `data_azurerm_dns_mx_record`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_dns_mx_record`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/dns_mx_record).
-
 # `dataAzurermDnsMxRecord` Submodule <a name="`dataAzurermDnsMxRecord` Submodule" id="@cdktf/provider-azurerm.dataAzurermDnsMxRecord"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

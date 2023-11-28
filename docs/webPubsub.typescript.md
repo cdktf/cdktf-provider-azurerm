@@ -1,7 +1,3 @@
-# `azurerm_web_pubsub`
-
-Refer to the Terraform Registory for docs: [`azurerm_web_pubsub`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/web_pubsub).
-
 # `webPubsub` Submodule <a name="`webPubsub` Submodule" id="@cdktf/provider-azurerm.webPubsub"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

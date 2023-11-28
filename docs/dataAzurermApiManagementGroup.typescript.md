@@ -1,7 +1,3 @@
-# `data_azurerm_api_management_group`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_api_management_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/api_management_group).
-
 # `dataAzurermApiManagementGroup` Submodule <a name="`dataAzurermApiManagementGroup` Submodule" id="@cdktf/provider-azurerm.dataAzurermApiManagementGroup"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

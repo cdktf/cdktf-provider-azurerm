@@ -1,7 +1,3 @@
-# `azurerm_cosmosdb_mongo_user_definition`
-
-Refer to the Terraform Registory for docs: [`azurerm_cosmosdb_mongo_user_definition`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cosmosdb_mongo_user_definition).
-
 # `cosmosdbMongoUserDefinition` Submodule <a name="`cosmosdbMongoUserDefinition` Submodule" id="@cdktf/provider-azurerm.cosmosdbMongoUserDefinition"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `azurerm_api_management_notification_recipient_email`
-
-Refer to the Terraform Registory for docs: [`azurerm_api_management_notification_recipient_email`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_notification_recipient_email).
-
 # `apiManagementNotificationRecipientEmail` Submodule <a name="`apiManagementNotificationRecipientEmail` Submodule" id="@cdktf/provider-azurerm.apiManagementNotificationRecipientEmail"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

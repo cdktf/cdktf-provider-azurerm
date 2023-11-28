@@ -1,7 +1,3 @@
-# `azurerm_monitor_action_rule_suppression`
-
-Refer to the Terraform Registory for docs: [`azurerm_monitor_action_rule_suppression`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_suppression).
-
 # `monitorActionRuleSuppression` Submodule <a name="`monitorActionRuleSuppression` Submodule" id="@cdktf/provider-azurerm.monitorActionRuleSuppression"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

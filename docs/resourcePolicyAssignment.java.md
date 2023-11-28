@@ -1,7 +1,3 @@
-# `azurerm_resource_policy_assignment`
-
-Refer to the Terraform Registory for docs: [`azurerm_resource_policy_assignment`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/resource_policy_assignment).
-
 # `resourcePolicyAssignment` Submodule <a name="`resourcePolicyAssignment` Submodule" id="@cdktf/provider-azurerm.resourcePolicyAssignment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

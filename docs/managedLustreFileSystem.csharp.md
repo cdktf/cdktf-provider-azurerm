@@ -1,7 +1,3 @@
-# `azurerm_managed_lustre_file_system`
-
-Refer to the Terraform Registory for docs: [`azurerm_managed_lustre_file_system`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/managed_lustre_file_system).
-
 # `managedLustreFileSystem` Submodule <a name="`managedLustreFileSystem` Submodule" id="@cdktf/provider-azurerm.managedLustreFileSystem"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

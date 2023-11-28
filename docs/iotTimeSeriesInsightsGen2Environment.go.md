@@ -1,7 +1,3 @@
-# `azurerm_iot_time_series_insights_gen2_environment`
-
-Refer to the Terraform Registory for docs: [`azurerm_iot_time_series_insights_gen2_environment`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_time_series_insights_gen2_environment).
-
 # `iotTimeSeriesInsightsGen2Environment` Submodule <a name="`iotTimeSeriesInsightsGen2Environment` Submodule" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsGen2Environment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsGen2Environment.IotTimeSeriesInsightsGen2Environment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iottimeseriesinsightsgen2environment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iottimeseriesinsightsgen2environment"
 
 iottimeseriesinsightsgen2environment.NewIotTimeSeriesInsightsGen2Environment(scope Construct, id *string, config IotTimeSeriesInsightsGen2EnvironmentConfig) IotTimeSeriesInsightsGen2Environment
 ```
@@ -386,7 +382,7 @@ func ResetWarmStoreDataRetentionTime()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsGen2Environment.IotTimeSeriesInsightsGen2Environment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iottimeseriesinsightsgen2environment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iottimeseriesinsightsgen2environment"
 
 iottimeseriesinsightsgen2environment.IotTimeSeriesInsightsGen2Environment_IsConstruct(x interface{}) *bool
 ```
@@ -418,7 +414,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsGen2Environment.IotTimeSeriesInsightsGen2Environment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iottimeseriesinsightsgen2environment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iottimeseriesinsightsgen2environment"
 
 iottimeseriesinsightsgen2environment.IotTimeSeriesInsightsGen2Environment_IsTerraformElement(x interface{}) *bool
 ```
@@ -432,7 +428,7 @@ iottimeseriesinsightsgen2environment.IotTimeSeriesInsightsGen2Environment_IsTerr
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsGen2Environment.IotTimeSeriesInsightsGen2Environment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iottimeseriesinsightsgen2environment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iottimeseriesinsightsgen2environment"
 
 iottimeseriesinsightsgen2environment.IotTimeSeriesInsightsGen2Environment_IsTerraformResource(x interface{}) *bool
 ```
@@ -446,7 +442,7 @@ iottimeseriesinsightsgen2environment.IotTimeSeriesInsightsGen2Environment_IsTerr
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsGen2Environment.IotTimeSeriesInsightsGen2Environment.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iottimeseriesinsightsgen2environment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iottimeseriesinsightsgen2environment"
 
 iottimeseriesinsightsgen2environment.IotTimeSeriesInsightsGen2Environment_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -906,7 +902,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsGen2Environment.IotTimeSeriesInsightsGen2EnvironmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iottimeseriesinsightsgen2environment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iottimeseriesinsightsgen2environment"
 
 &iottimeseriesinsightsgen2environment.IotTimeSeriesInsightsGen2EnvironmentConfig {
 	Connection: interface{},
@@ -921,10 +917,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iottimeseriesinsi
 	Name: *string,
 	ResourceGroupName: *string,
 	SkuName: *string,
-	Storage: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.iotTimeSeriesInsightsGen2Environment.IotTimeSeriesInsightsGen2EnvironmentStorage,
+	Storage: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.iotTimeSeriesInsightsGen2Environment.IotTimeSeriesInsightsGen2EnvironmentStorage,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.iotTimeSeriesInsightsGen2Environment.IotTimeSeriesInsightsGen2EnvironmentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.iotTimeSeriesInsightsGen2Environment.IotTimeSeriesInsightsGen2EnvironmentTimeouts,
 	WarmStoreDataRetentionTime: *string,
 }
 ```
@@ -1155,7 +1151,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsGen2Environment.IotTimeSeriesInsightsGen2EnvironmentStorage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iottimeseriesinsightsgen2environment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iottimeseriesinsightsgen2environment"
 
 &iottimeseriesinsightsgen2environment.IotTimeSeriesInsightsGen2EnvironmentStorage {
 	Key: *string,
@@ -1201,7 +1197,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsGen2Environment.IotTimeSeriesInsightsGen2EnvironmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iottimeseriesinsightsgen2environment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iottimeseriesinsightsgen2environment"
 
 &iottimeseriesinsightsgen2environment.IotTimeSeriesInsightsGen2EnvironmentTimeouts {
 	Create: *string,
@@ -1277,7 +1273,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsGen2Environment.IotTimeSeriesInsightsGen2EnvironmentStorageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iottimeseriesinsightsgen2environment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iottimeseriesinsightsgen2environment"
 
 iottimeseriesinsightsgen2environment.NewIotTimeSeriesInsightsGen2EnvironmentStorageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IotTimeSeriesInsightsGen2EnvironmentStorageOutputReference
 ```
@@ -1570,7 +1566,7 @@ func InternalValue() IotTimeSeriesInsightsGen2EnvironmentStorage
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iotTimeSeriesInsightsGen2Environment.IotTimeSeriesInsightsGen2EnvironmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iottimeseriesinsightsgen2environment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iottimeseriesinsightsgen2environment"
 
 iottimeseriesinsightsgen2environment.NewIotTimeSeriesInsightsGen2EnvironmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IotTimeSeriesInsightsGen2EnvironmentTimeoutsOutputReference
 ```

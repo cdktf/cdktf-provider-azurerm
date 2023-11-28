@@ -1,7 +1,3 @@
-# `azurerm_marketplace_agreement`
-
-Refer to the Terraform Registory for docs: [`azurerm_marketplace_agreement`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/marketplace_agreement).
-
 # `marketplaceAgreement` Submodule <a name="`marketplaceAgreement` Submodule" id="@cdktf/provider-azurerm.marketplaceAgreement"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.marketplaceAgreement.MarketplaceAgreement.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/marketplaceagreement"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/marketplaceagreement"
 
 marketplaceagreement.NewMarketplaceAgreement(scope Construct, id *string, config MarketplaceAgreementConfig) MarketplaceAgreement
 ```
@@ -359,7 +355,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.marketplaceAgreement.MarketplaceAgreement.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/marketplaceagreement"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/marketplaceagreement"
 
 marketplaceagreement.MarketplaceAgreement_IsConstruct(x interface{}) *bool
 ```
@@ -391,7 +387,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.marketplaceAgreement.MarketplaceAgreement.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/marketplaceagreement"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/marketplaceagreement"
 
 marketplaceagreement.MarketplaceAgreement_IsTerraformElement(x interface{}) *bool
 ```
@@ -405,7 +401,7 @@ marketplaceagreement.MarketplaceAgreement_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.marketplaceAgreement.MarketplaceAgreement.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/marketplaceagreement"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/marketplaceagreement"
 
 marketplaceagreement.MarketplaceAgreement_IsTerraformResource(x interface{}) *bool
 ```
@@ -419,7 +415,7 @@ marketplaceagreement.MarketplaceAgreement_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.marketplaceAgreement.MarketplaceAgreement.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/marketplaceagreement"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/marketplaceagreement"
 
 marketplaceagreement.MarketplaceAgreement_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -780,7 +776,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.marketplaceAgreement.MarketplaceAgreementConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/marketplaceagreement"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/marketplaceagreement"
 
 &marketplaceagreement.MarketplaceAgreementConfig {
 	Connection: interface{},
@@ -794,7 +790,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/marketplaceagreem
 	Plan: *string,
 	Publisher: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.marketplaceAgreement.MarketplaceAgreementTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.marketplaceAgreement.MarketplaceAgreementTimeouts,
 }
 ```
 
@@ -957,7 +953,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.marketplaceAgreement.MarketplaceAgreementTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/marketplaceagreement"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/marketplaceagreement"
 
 &marketplaceagreement.MarketplaceAgreementTimeouts {
 	Create: *string,
@@ -1019,7 +1015,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.marketplaceAgreement.MarketplaceAgreementTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/marketplaceagreement"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/marketplaceagreement"
 
 marketplaceagreement.NewMarketplaceAgreementTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MarketplaceAgreementTimeoutsOutputReference
 ```

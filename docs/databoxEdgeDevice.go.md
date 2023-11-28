@@ -1,7 +1,3 @@
-# `azurerm_databox_edge_device`
-
-Refer to the Terraform Registory for docs: [`azurerm_databox_edge_device`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device).
-
 # `databoxEdgeDevice` Submodule <a name="`databoxEdgeDevice` Submodule" id="@cdktf/provider-azurerm.databoxEdgeDevice"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgedevice"
 
 databoxedgedevice.NewDataboxEdgeDevice(scope Construct, id *string, config DataboxEdgeDeviceConfig) DataboxEdgeDevice
 ```
@@ -366,7 +362,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgedevice"
 
 databoxedgedevice.DataboxEdgeDevice_IsConstruct(x interface{}) *bool
 ```
@@ -398,7 +394,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgedevice"
 
 databoxedgedevice.DataboxEdgeDevice_IsTerraformElement(x interface{}) *bool
 ```
@@ -412,7 +408,7 @@ databoxedgedevice.DataboxEdgeDevice_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgedevice"
 
 databoxedgedevice.DataboxEdgeDevice_IsTerraformResource(x interface{}) *bool
 ```
@@ -426,7 +422,7 @@ databoxedgedevice.DataboxEdgeDevice_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgedevice"
 
 databoxedgedevice.DataboxEdgeDevice_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -820,7 +816,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgedevice"
 
 &databoxedgedevice.DataboxEdgeDeviceConfig {
 	Connection: interface{},
@@ -836,7 +832,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgedevice
 	SkuName: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.databoxEdgeDevice.DataboxEdgeDeviceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.databoxEdgeDevice.DataboxEdgeDeviceTimeouts,
 }
 ```
 
@@ -1025,7 +1021,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceDeviceProperties.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgedevice"
 
 &databoxedgedevice.DataboxEdgeDeviceDeviceProperties {
 
@@ -1038,7 +1034,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgedevice
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgedevice"
 
 &databoxedgedevice.DataboxEdgeDeviceTimeouts {
 	Create: *string,
@@ -1114,7 +1110,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceDevicePropertiesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgedevice"
 
 databoxedgedevice.NewDataboxEdgeDeviceDevicePropertiesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataboxEdgeDeviceDevicePropertiesList
 ```
@@ -1246,7 +1242,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceDevicePropertiesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgedevice"
 
 databoxedgedevice.NewDataboxEdgeDeviceDevicePropertiesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataboxEdgeDeviceDevicePropertiesOutputReference
 ```
@@ -1634,7 +1630,7 @@ func InternalValue() DataboxEdgeDeviceDeviceProperties
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databoxedgedevice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databoxedgedevice"
 
 databoxedgedevice.NewDataboxEdgeDeviceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataboxEdgeDeviceTimeoutsOutputReference
 ```

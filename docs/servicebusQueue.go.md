@@ -1,7 +1,3 @@
-# `azurerm_servicebus_queue`
-
-Refer to the Terraform Registory for docs: [`azurerm_servicebus_queue`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/servicebus_queue).
-
 # `servicebusQueue` Submodule <a name="`servicebusQueue` Submodule" id="@cdktf/provider-azurerm.servicebusQueue"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.servicebusQueue.ServicebusQueue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicebusqueue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicebusqueue"
 
 servicebusqueue.NewServicebusQueue(scope Construct, id *string, config ServicebusQueueConfig) ServicebusQueue
 ```
@@ -471,7 +467,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.servicebusQueue.ServicebusQueue.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicebusqueue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicebusqueue"
 
 servicebusqueue.ServicebusQueue_IsConstruct(x interface{}) *bool
 ```
@@ -503,7 +499,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.servicebusQueue.ServicebusQueue.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicebusqueue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicebusqueue"
 
 servicebusqueue.ServicebusQueue_IsTerraformElement(x interface{}) *bool
 ```
@@ -517,7 +513,7 @@ servicebusqueue.ServicebusQueue_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.servicebusQueue.ServicebusQueue.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicebusqueue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicebusqueue"
 
 servicebusqueue.ServicebusQueue_IsTerraformResource(x interface{}) *bool
 ```
@@ -531,7 +527,7 @@ servicebusqueue.ServicebusQueue_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.servicebusQueue.ServicebusQueue.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicebusqueue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicebusqueue"
 
 servicebusqueue.ServicebusQueue_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1200,7 +1196,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.servicebusQueue.ServicebusQueueConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicebusqueue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicebusqueue"
 
 &servicebusqueue.ServicebusQueueConfig {
 	Connection: interface{},
@@ -1229,7 +1225,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicebusqueue"
 	RequiresDuplicateDetection: interface{},
 	RequiresSession: interface{},
 	Status: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.servicebusQueue.ServicebusQueueTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.servicebusQueue.ServicebusQueueTimeouts,
 }
 ```
 
@@ -1587,7 +1583,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.servicebusQueue.ServicebusQueueTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicebusqueue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicebusqueue"
 
 &servicebusqueue.ServicebusQueueTimeouts {
 	Create: *string,
@@ -1663,7 +1659,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.servicebusQueue.ServicebusQueueTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicebusqueue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicebusqueue"
 
 servicebusqueue.NewServicebusQueueTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ServicebusQueueTimeoutsOutputReference
 ```

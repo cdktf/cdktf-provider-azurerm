@@ -1,7 +1,3 @@
-# `azurerm_sentinel_data_connector_dynamics_365`
-
-Refer to the Terraform Registory for docs: [`azurerm_sentinel_data_connector_dynamics_365`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sentinel_data_connector_dynamics_365).
-
 # `sentinelDataConnectorDynamics365` Submodule <a name="`sentinelDataConnectorDynamics365` Submodule" id="@cdktf/provider-azurerm.sentinelDataConnectorDynamics365"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

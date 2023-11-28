@@ -1,7 +1,3 @@
-# `azurerm_cosmosdb_postgresql_node_configuration`
-
-Refer to the Terraform Registory for docs: [`azurerm_cosmosdb_postgresql_node_configuration`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cosmosdb_postgresql_node_configuration).
-
 # `cosmosdbPostgresqlNodeConfiguration` Submodule <a name="`cosmosdbPostgresqlNodeConfiguration` Submodule" id="@cdktf/provider-azurerm.cosmosdbPostgresqlNodeConfiguration"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbPostgresqlNodeConfiguration.CosmosdbPostgresqlNodeConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbpostgresqlnodeconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbpostgresqlnodeconfiguration"
 
 cosmosdbpostgresqlnodeconfiguration.NewCosmosdbPostgresqlNodeConfiguration(scope Construct, id *string, config CosmosdbPostgresqlNodeConfigurationConfig) CosmosdbPostgresqlNodeConfiguration
 ```
@@ -359,7 +355,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.cosmosdbPostgresqlNodeConfiguration.CosmosdbPostgresqlNodeConfiguration.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbpostgresqlnodeconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbpostgresqlnodeconfiguration"
 
 cosmosdbpostgresqlnodeconfiguration.CosmosdbPostgresqlNodeConfiguration_IsConstruct(x interface{}) *bool
 ```
@@ -391,7 +387,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.cosmosdbPostgresqlNodeConfiguration.CosmosdbPostgresqlNodeConfiguration.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbpostgresqlnodeconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbpostgresqlnodeconfiguration"
 
 cosmosdbpostgresqlnodeconfiguration.CosmosdbPostgresqlNodeConfiguration_IsTerraformElement(x interface{}) *bool
 ```
@@ -405,7 +401,7 @@ cosmosdbpostgresqlnodeconfiguration.CosmosdbPostgresqlNodeConfiguration_IsTerraf
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.cosmosdbPostgresqlNodeConfiguration.CosmosdbPostgresqlNodeConfiguration.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbpostgresqlnodeconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbpostgresqlnodeconfiguration"
 
 cosmosdbpostgresqlnodeconfiguration.CosmosdbPostgresqlNodeConfiguration_IsTerraformResource(x interface{}) *bool
 ```
@@ -419,7 +415,7 @@ cosmosdbpostgresqlnodeconfiguration.CosmosdbPostgresqlNodeConfiguration_IsTerraf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.cosmosdbPostgresqlNodeConfiguration.CosmosdbPostgresqlNodeConfiguration.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbpostgresqlnodeconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbpostgresqlnodeconfiguration"
 
 cosmosdbpostgresqlnodeconfiguration.CosmosdbPostgresqlNodeConfiguration_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -758,7 +754,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbPostgresqlNodeConfiguration.CosmosdbPostgresqlNodeConfigurationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbpostgresqlnodeconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbpostgresqlnodeconfiguration"
 
 &cosmosdbpostgresqlnodeconfiguration.CosmosdbPostgresqlNodeConfigurationConfig {
 	Connection: interface{},
@@ -772,7 +768,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbpostgresq
 	Name: *string,
 	Value: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.cosmosdbPostgresqlNodeConfiguration.CosmosdbPostgresqlNodeConfigurationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbPostgresqlNodeConfiguration.CosmosdbPostgresqlNodeConfigurationTimeouts,
 }
 ```
 
@@ -935,7 +931,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbPostgresqlNodeConfiguration.CosmosdbPostgresqlNodeConfigurationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbpostgresqlnodeconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbpostgresqlnodeconfiguration"
 
 &cosmosdbpostgresqlnodeconfiguration.CosmosdbPostgresqlNodeConfigurationTimeouts {
 	Create: *string,
@@ -1011,7 +1007,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbPostgresqlNodeConfiguration.CosmosdbPostgresqlNodeConfigurationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbpostgresqlnodeconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbpostgresqlnodeconfiguration"
 
 cosmosdbpostgresqlnodeconfiguration.NewCosmosdbPostgresqlNodeConfigurationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbPostgresqlNodeConfigurationTimeoutsOutputReference
 ```

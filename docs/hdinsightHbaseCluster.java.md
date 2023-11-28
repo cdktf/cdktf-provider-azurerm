@@ -1,7 +1,3 @@
-# `azurerm_hdinsight_hbase_cluster`
-
-Refer to the Terraform Registory for docs: [`azurerm_hdinsight_hbase_cluster`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/hdinsight_hbase_cluster).
-
 # `hdinsightHbaseCluster` Submodule <a name="`hdinsightHbaseCluster` Submodule" id="@cdktf/provider-azurerm.hdinsightHbaseCluster"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `azurerm_storage_sync_group`
-
-Refer to the Terraform Registory for docs: [`azurerm_storage_sync_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/storage_sync_group).
-
 # `storageSyncGroup` Submodule <a name="`storageSyncGroup` Submodule" id="@cdktf/provider-azurerm.storageSyncGroup"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageSyncGroup.StorageSyncGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagesyncgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagesyncgroup"
 
 storagesyncgroup.NewStorageSyncGroup(scope Construct, id *string, config StorageSyncGroupConfig) StorageSyncGroup
 ```
@@ -359,7 +355,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.storageSyncGroup.StorageSyncGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagesyncgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagesyncgroup"
 
 storagesyncgroup.StorageSyncGroup_IsConstruct(x interface{}) *bool
 ```
@@ -391,7 +387,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.storageSyncGroup.StorageSyncGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagesyncgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagesyncgroup"
 
 storagesyncgroup.StorageSyncGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -405,7 +401,7 @@ storagesyncgroup.StorageSyncGroup_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.storageSyncGroup.StorageSyncGroup.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagesyncgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagesyncgroup"
 
 storagesyncgroup.StorageSyncGroup_IsTerraformResource(x interface{}) *bool
 ```
@@ -419,7 +415,7 @@ storagesyncgroup.StorageSyncGroup_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.storageSyncGroup.StorageSyncGroup.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagesyncgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagesyncgroup"
 
 storagesyncgroup.StorageSyncGroup_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -736,7 +732,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageSyncGroup.StorageSyncGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagesyncgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagesyncgroup"
 
 &storagesyncgroup.StorageSyncGroupConfig {
 	Connection: interface{},
@@ -749,7 +745,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagesyncgroup"
 	Name: *string,
 	StorageSyncId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageSyncGroup.StorageSyncGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageSyncGroup.StorageSyncGroupTimeouts,
 }
 ```
 
@@ -899,7 +895,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageSyncGroup.StorageSyncGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagesyncgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagesyncgroup"
 
 &storagesyncgroup.StorageSyncGroupTimeouts {
 	Create: *string,
@@ -961,7 +957,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageSyncGroup.StorageSyncGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagesyncgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagesyncgroup"
 
 storagesyncgroup.NewStorageSyncGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageSyncGroupTimeoutsOutputReference
 ```

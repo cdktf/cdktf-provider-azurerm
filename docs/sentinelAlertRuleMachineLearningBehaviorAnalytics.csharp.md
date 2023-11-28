@@ -1,7 +1,3 @@
-# `azurerm_sentinel_alert_rule_machine_learning_behavior_analytics`
-
-Refer to the Terraform Registory for docs: [`azurerm_sentinel_alert_rule_machine_learning_behavior_analytics`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sentinel_alert_rule_machine_learning_behavior_analytics).
-
 # `sentinelAlertRuleMachineLearningBehaviorAnalytics` Submodule <a name="`sentinelAlertRuleMachineLearningBehaviorAnalytics` Submodule" id="@cdktf/provider-azurerm.sentinelAlertRuleMachineLearningBehaviorAnalytics"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

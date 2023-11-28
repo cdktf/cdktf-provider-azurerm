@@ -1,7 +1,3 @@
-# `data_azurerm_dns_ptr_record`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_dns_ptr_record`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/dns_ptr_record).
-
 # `dataAzurermDnsPtrRecord` Submodule <a name="`dataAzurermDnsPtrRecord` Submodule" id="@cdktf/provider-azurerm.dataAzurermDnsPtrRecord"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

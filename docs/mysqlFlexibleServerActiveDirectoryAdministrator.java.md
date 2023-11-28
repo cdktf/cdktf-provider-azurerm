@@ -1,7 +1,3 @@
-# `azurerm_mysql_flexible_server_active_directory_administrator`
-
-Refer to the Terraform Registory for docs: [`azurerm_mysql_flexible_server_active_directory_administrator`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mysql_flexible_server_active_directory_administrator).
-
 # `mysqlFlexibleServerActiveDirectoryAdministrator` Submodule <a name="`mysqlFlexibleServerActiveDirectoryAdministrator` Submodule" id="@cdktf/provider-azurerm.mysqlFlexibleServerActiveDirectoryAdministrator"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

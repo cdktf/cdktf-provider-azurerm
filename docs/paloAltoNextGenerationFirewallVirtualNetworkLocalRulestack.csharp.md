@@ -1,7 +1,3 @@
-# `azurerm_palo_alto_next_generation_firewall_virtual_network_local_rulestack`
-
-Refer to the Terraform Registory for docs: [`azurerm_palo_alto_next_generation_firewall_virtual_network_local_rulestack`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/palo_alto_next_generation_firewall_virtual_network_local_rulestack).
-
 # `paloAltoNextGenerationFirewallVirtualNetworkLocalRulestack` Submodule <a name="`paloAltoNextGenerationFirewallVirtualNetworkLocalRulestack` Submodule" id="@cdktf/provider-azurerm.paloAltoNextGenerationFirewallVirtualNetworkLocalRulestack"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

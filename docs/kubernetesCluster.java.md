@@ -1,7 +1,3 @@
-# `azurerm_kubernetes_cluster`
-
-Refer to the Terraform Registory for docs: [`azurerm_kubernetes_cluster`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/kubernetes_cluster).
-
 # `kubernetesCluster` Submodule <a name="`kubernetesCluster` Submodule" id="@cdktf/provider-azurerm.kubernetesCluster"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

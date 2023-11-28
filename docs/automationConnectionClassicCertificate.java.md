@@ -1,7 +1,3 @@
-# `azurerm_automation_connection_classic_certificate`
-
-Refer to the Terraform Registory for docs: [`azurerm_automation_connection_classic_certificate`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_connection_classic_certificate).
-
 # `automationConnectionClassicCertificate` Submodule <a name="`automationConnectionClassicCertificate` Submodule" id="@cdktf/provider-azurerm.automationConnectionClassicCertificate"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

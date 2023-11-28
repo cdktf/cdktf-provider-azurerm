@@ -1,7 +1,3 @@
-# `data_azurerm_data_share`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_data_share`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/data_share).
-
 # `dataAzurermDataShare` Submodule <a name="`dataAzurermDataShare` Submodule" id="@cdktf/provider-azurerm.dataAzurermDataShare"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

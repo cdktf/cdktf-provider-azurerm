@@ -1,7 +1,3 @@
-# `azurerm_logic_app_integration_account_session`
-
-Refer to the Terraform Registory for docs: [`azurerm_logic_app_integration_account_session`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session).
-
 # `logicAppIntegrationAccountSession` Submodule <a name="`logicAppIntegrationAccountSession` Submodule" id="@cdktf/provider-azurerm.logicAppIntegrationAccountSession"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

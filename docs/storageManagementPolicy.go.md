@@ -1,7 +1,3 @@
-# `azurerm_storage_management_policy`
-
-Refer to the Terraform Registory for docs: [`azurerm_storage_management_policy`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/storage_management_policy).
-
 # `storageManagementPolicy` Submodule <a name="`storageManagementPolicy` Submodule" id="@cdktf/provider-azurerm.storageManagementPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.NewStorageManagementPolicy(scope Construct, id *string, config StorageManagementPolicyConfig) StorageManagementPolicy
 ```
@@ -379,7 +375,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.StorageManagementPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -411,7 +407,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.StorageManagementPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -425,7 +421,7 @@ storagemanagementpolicy.StorageManagementPolicy_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.StorageManagementPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -439,7 +435,7 @@ storagemanagementpolicy.StorageManagementPolicy_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.StorageManagementPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -756,7 +752,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 &storagemanagementpolicy.StorageManagementPolicyConfig {
 	Connection: interface{},
@@ -769,7 +765,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemanagement
 	StorageAccountId: *string,
 	Id: *string,
 	Rule: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageManagementPolicy.StorageManagementPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageManagementPolicy.StorageManagementPolicyTimeouts,
 }
 ```
 
@@ -921,12 +917,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 &storagemanagementpolicy.StorageManagementPolicyRule {
-	Actions: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageManagementPolicy.StorageManagementPolicyRuleActions,
+	Actions: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageManagementPolicy.StorageManagementPolicyRuleActions,
 	Enabled: interface{},
-	Filters: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageManagementPolicy.StorageManagementPolicyRuleFilters,
+	Filters: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageManagementPolicy.StorageManagementPolicyRuleFilters,
 	Name: *string,
 }
 ```
@@ -999,12 +995,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 &storagemanagementpolicy.StorageManagementPolicyRuleActions {
-	BaseBlob: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlob,
-	Snapshot: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageManagementPolicy.StorageManagementPolicyRuleActionsSnapshot,
-	Version: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageManagementPolicy.StorageManagementPolicyRuleActionsVersion,
+	BaseBlob: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlob,
+	Snapshot: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsSnapshot,
+	Version: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsVersion,
 }
 ```
 
@@ -1065,7 +1061,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlob.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 &storagemanagementpolicy.StorageManagementPolicyRuleActionsBaseBlob {
 	AutoTierToHotFromCoolEnabled: interface{},
@@ -1279,7 +1275,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsSnapshot.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 &storagemanagementpolicy.StorageManagementPolicyRuleActionsSnapshot {
 	ChangeTierToArchiveAfterDaysSinceCreation: *f64,
@@ -1367,7 +1363,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsVersion.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 &storagemanagementpolicy.StorageManagementPolicyRuleActionsVersion {
 	ChangeTierToArchiveAfterDaysSinceCreation: *f64,
@@ -1455,7 +1451,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleFilters.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 &storagemanagementpolicy.StorageManagementPolicyRuleFilters {
 	BlobTypes: *[]*string,
@@ -1517,7 +1513,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleFiltersMatchBlobIndexTag.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 &storagemanagementpolicy.StorageManagementPolicyRuleFiltersMatchBlobIndexTag {
 	Name: *string,
@@ -1577,7 +1573,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 &storagemanagementpolicy.StorageManagementPolicyTimeouts {
 	Create: *string,
@@ -1653,7 +1649,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsBaseBlobOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.NewStorageManagementPolicyRuleActionsBaseBlobOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageManagementPolicyRuleActionsBaseBlobOutputReference
 ```
@@ -2308,7 +2304,7 @@ func InternalValue() StorageManagementPolicyRuleActionsBaseBlob
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.NewStorageManagementPolicyRuleActionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageManagementPolicyRuleActionsOutputReference
 ```
@@ -2683,7 +2679,7 @@ func InternalValue() StorageManagementPolicyRuleActions
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsSnapshotOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.NewStorageManagementPolicyRuleActionsSnapshotOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageManagementPolicyRuleActionsSnapshotOutputReference
 ```
@@ -3077,7 +3073,7 @@ func InternalValue() StorageManagementPolicyRuleActionsSnapshot
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleActionsVersionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.NewStorageManagementPolicyRuleActionsVersionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageManagementPolicyRuleActionsVersionOutputReference
 ```
@@ -3471,7 +3467,7 @@ func InternalValue() StorageManagementPolicyRuleActionsVersion
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleFiltersMatchBlobIndexTagList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.NewStorageManagementPolicyRuleFiltersMatchBlobIndexTagList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) StorageManagementPolicyRuleFiltersMatchBlobIndexTagList
 ```
@@ -3614,7 +3610,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleFiltersMatchBlobIndexTagOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.NewStorageManagementPolicyRuleFiltersMatchBlobIndexTagOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) StorageManagementPolicyRuleFiltersMatchBlobIndexTagOutputReference
 ```
@@ -3954,7 +3950,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleFiltersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.NewStorageManagementPolicyRuleFiltersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageManagementPolicyRuleFiltersOutputReference
 ```
@@ -4296,7 +4292,7 @@ func InternalValue() StorageManagementPolicyRuleFilters
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.NewStorageManagementPolicyRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) StorageManagementPolicyRuleList
 ```
@@ -4439,7 +4435,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.NewStorageManagementPolicyRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) StorageManagementPolicyRuleOutputReference
 ```
@@ -4820,7 +4816,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageManagementPolicy.StorageManagementPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemanagementpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemanagementpolicy"
 
 storagemanagementpolicy.NewStorageManagementPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageManagementPolicyTimeoutsOutputReference
 ```

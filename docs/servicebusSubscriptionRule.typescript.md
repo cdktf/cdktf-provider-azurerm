@@ -1,7 +1,3 @@
-# `azurerm_servicebus_subscription_rule`
-
-Refer to the Terraform Registory for docs: [`azurerm_servicebus_subscription_rule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/servicebus_subscription_rule).
-
 # `servicebusSubscriptionRule` Submodule <a name="`servicebusSubscriptionRule` Submodule" id="@cdktf/provider-azurerm.servicebusSubscriptionRule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

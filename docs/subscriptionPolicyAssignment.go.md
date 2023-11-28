@@ -1,7 +1,3 @@
-# `azurerm_subscription_policy_assignment`
-
-Refer to the Terraform Registory for docs: [`azurerm_subscription_policy_assignment`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/subscription_policy_assignment).
-
 # `subscriptionPolicyAssignment` Submodule <a name="`subscriptionPolicyAssignment` Submodule" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptionpolicyassignment"
 
 subscriptionpolicyassignment.NewSubscriptionPolicyAssignment(scope Construct, id *string, config SubscriptionPolicyAssignmentConfig) SubscriptionPolicyAssignment
 ```
@@ -488,7 +484,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptionpolicyassignment"
 
 subscriptionpolicyassignment.SubscriptionPolicyAssignment_IsConstruct(x interface{}) *bool
 ```
@@ -520,7 +516,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptionpolicyassignment"
 
 subscriptionpolicyassignment.SubscriptionPolicyAssignment_IsTerraformElement(x interface{}) *bool
 ```
@@ -534,7 +530,7 @@ subscriptionpolicyassignment.SubscriptionPolicyAssignment_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptionpolicyassignment"
 
 subscriptionpolicyassignment.SubscriptionPolicyAssignment_IsTerraformResource(x interface{}) *bool
 ```
@@ -548,7 +544,7 @@ subscriptionpolicyassignment.SubscriptionPolicyAssignment_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignment.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptionpolicyassignment"
 
 subscriptionpolicyassignment.SubscriptionPolicyAssignment_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1129,7 +1125,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptionpolicyassignment"
 
 &subscriptionpolicyassignment.SubscriptionPolicyAssignmentConfig {
 	Connection: interface{},
@@ -1146,7 +1142,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolic
 	DisplayName: *string,
 	Enforce: interface{},
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.subscriptionPolicyAssignment.SubscriptionPolicyAssignmentIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignmentIdentity,
 	Location: *string,
 	Metadata: *string,
 	NonComplianceMessage: interface{},
@@ -1154,7 +1150,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolic
 	Overrides: interface{},
 	Parameters: *string,
 	ResourceSelectors: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.subscriptionPolicyAssignment.SubscriptionPolicyAssignmentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignmentTimeouts,
 }
 ```
 
@@ -1468,7 +1464,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignmentIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptionpolicyassignment"
 
 &subscriptionpolicyassignment.SubscriptionPolicyAssignmentIdentity {
 	Type: *string,
@@ -1514,7 +1510,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignmentNonComplianceMessage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptionpolicyassignment"
 
 &subscriptionpolicyassignment.SubscriptionPolicyAssignmentNonComplianceMessage {
 	Content: *string,
@@ -1560,7 +1556,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignmentOverrides.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptionpolicyassignment"
 
 &subscriptionpolicyassignment.SubscriptionPolicyAssignmentOverrides {
 	Value: *string,
@@ -1608,7 +1604,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignmentOverridesSelectors.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptionpolicyassignment"
 
 &subscriptionpolicyassignment.SubscriptionPolicyAssignmentOverridesSelectors {
 	In: *[]*string,
@@ -1654,7 +1650,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignmentResourceSelectors.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptionpolicyassignment"
 
 &subscriptionpolicyassignment.SubscriptionPolicyAssignmentResourceSelectors {
 	Selectors: interface{},
@@ -1702,7 +1698,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignmentResourceSelectorsSelectors.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptionpolicyassignment"
 
 &subscriptionpolicyassignment.SubscriptionPolicyAssignmentResourceSelectorsSelectors {
 	Kind: *string,
@@ -1762,7 +1758,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptionpolicyassignment"
 
 &subscriptionpolicyassignment.SubscriptionPolicyAssignmentTimeouts {
 	Create: *string,
@@ -1838,7 +1834,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignmentIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptionpolicyassignment"
 
 subscriptionpolicyassignment.NewSubscriptionPolicyAssignmentIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SubscriptionPolicyAssignmentIdentityOutputReference
 ```
@@ -2160,7 +2156,7 @@ func InternalValue() SubscriptionPolicyAssignmentIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignmentNonComplianceMessageList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptionpolicyassignment"
 
 subscriptionpolicyassignment.NewSubscriptionPolicyAssignmentNonComplianceMessageList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SubscriptionPolicyAssignmentNonComplianceMessageList
 ```
@@ -2303,7 +2299,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignmentNonComplianceMessageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptionpolicyassignment"
 
 subscriptionpolicyassignment.NewSubscriptionPolicyAssignmentNonComplianceMessageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SubscriptionPolicyAssignmentNonComplianceMessageOutputReference
 ```
@@ -2621,7 +2617,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignmentOverridesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptionpolicyassignment"
 
 subscriptionpolicyassignment.NewSubscriptionPolicyAssignmentOverridesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SubscriptionPolicyAssignmentOverridesList
 ```
@@ -2764,7 +2760,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignmentOverridesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptionpolicyassignment"
 
 subscriptionpolicyassignment.NewSubscriptionPolicyAssignmentOverridesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SubscriptionPolicyAssignmentOverridesOutputReference
 ```
@@ -3095,7 +3091,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignmentOverridesSelectorsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptionpolicyassignment"
 
 subscriptionpolicyassignment.NewSubscriptionPolicyAssignmentOverridesSelectorsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SubscriptionPolicyAssignmentOverridesSelectorsList
 ```
@@ -3238,7 +3234,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignmentOverridesSelectorsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptionpolicyassignment"
 
 subscriptionpolicyassignment.NewSubscriptionPolicyAssignmentOverridesSelectorsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SubscriptionPolicyAssignmentOverridesSelectorsOutputReference
 ```
@@ -3574,7 +3570,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignmentResourceSelectorsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptionpolicyassignment"
 
 subscriptionpolicyassignment.NewSubscriptionPolicyAssignmentResourceSelectorsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SubscriptionPolicyAssignmentResourceSelectorsList
 ```
@@ -3717,7 +3713,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignmentResourceSelectorsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptionpolicyassignment"
 
 subscriptionpolicyassignment.NewSubscriptionPolicyAssignmentResourceSelectorsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SubscriptionPolicyAssignmentResourceSelectorsOutputReference
 ```
@@ -4048,7 +4044,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignmentResourceSelectorsSelectorsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptionpolicyassignment"
 
 subscriptionpolicyassignment.NewSubscriptionPolicyAssignmentResourceSelectorsSelectorsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SubscriptionPolicyAssignmentResourceSelectorsSelectorsList
 ```
@@ -4191,7 +4187,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignmentResourceSelectorsSelectorsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptionpolicyassignment"
 
 subscriptionpolicyassignment.NewSubscriptionPolicyAssignmentResourceSelectorsSelectorsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SubscriptionPolicyAssignmentResourceSelectorsSelectorsOutputReference
 ```
@@ -4538,7 +4534,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.subscriptionPolicyAssignment.SubscriptionPolicyAssignmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/subscriptionpolicyassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/subscriptionpolicyassignment"
 
 subscriptionpolicyassignment.NewSubscriptionPolicyAssignmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SubscriptionPolicyAssignmentTimeoutsOutputReference
 ```

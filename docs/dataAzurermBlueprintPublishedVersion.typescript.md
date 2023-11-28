@@ -1,7 +1,3 @@
-# `data_azurerm_blueprint_published_version`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_blueprint_published_version`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/blueprint_published_version).
-
 # `dataAzurermBlueprintPublishedVersion` Submodule <a name="`dataAzurermBlueprintPublishedVersion` Submodule" id="@cdktf/provider-azurerm.dataAzurermBlueprintPublishedVersion"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

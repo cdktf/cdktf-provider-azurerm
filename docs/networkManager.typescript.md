@@ -1,7 +1,3 @@
-# `azurerm_network_manager`
-
-Refer to the Terraform Registory for docs: [`azurerm_network_manager`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/network_manager).
-
 # `networkManager` Submodule <a name="`networkManager` Submodule" id="@cdktf/provider-azurerm.networkManager"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

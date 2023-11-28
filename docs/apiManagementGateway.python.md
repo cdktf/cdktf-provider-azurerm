@@ -1,7 +1,3 @@
-# `azurerm_api_management_gateway`
-
-Refer to the Terraform Registory for docs: [`azurerm_api_management_gateway`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_gateway).
-
 # `apiManagementGateway` Submodule <a name="`apiManagementGateway` Submodule" id="@cdktf/provider-azurerm.apiManagementGateway"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

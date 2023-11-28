@@ -1,7 +1,3 @@
-# `azurerm_log_analytics_workspace`
-
-Refer to the Terraform Registory for docs: [`azurerm_log_analytics_workspace`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/log_analytics_workspace).
-
 # `logAnalyticsWorkspace` Submodule <a name="`logAnalyticsWorkspace` Submodule" id="@cdktf/provider-azurerm.logAnalyticsWorkspace"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

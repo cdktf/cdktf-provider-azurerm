@@ -1,7 +1,3 @@
-# `azurerm_app_configuration_key`
-
-Refer to the Terraform Registory for docs: [`azurerm_app_configuration_key`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/app_configuration_key).
-
 # `appConfigurationKey` Submodule <a name="`appConfigurationKey` Submodule" id="@cdktf/provider-azurerm.appConfigurationKey"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

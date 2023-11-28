@@ -1,7 +1,3 @@
-# `azurerm_data_factory_linked_service_snowflake`
-
-Refer to the Terraform Registory for docs: [`azurerm_data_factory_linked_service_snowflake`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/data_factory_linked_service_snowflake).
-
 # `dataFactoryLinkedServiceSnowflake` Submodule <a name="`dataFactoryLinkedServiceSnowflake` Submodule" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceSnowflake"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

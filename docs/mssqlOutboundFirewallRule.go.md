@@ -1,7 +1,3 @@
-# `azurerm_mssql_outbound_firewall_rule`
-
-Refer to the Terraform Registory for docs: [`azurerm_mssql_outbound_firewall_rule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mssql_outbound_firewall_rule).
-
 # `mssqlOutboundFirewallRule` Submodule <a name="`mssqlOutboundFirewallRule` Submodule" id="@cdktf/provider-azurerm.mssqlOutboundFirewallRule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlOutboundFirewallRule.MssqlOutboundFirewallRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqloutboundfirewallrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqloutboundfirewallrule"
 
 mssqloutboundfirewallrule.NewMssqlOutboundFirewallRule(scope Construct, id *string, config MssqlOutboundFirewallRuleConfig) MssqlOutboundFirewallRule
 ```
@@ -359,7 +355,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mssqlOutboundFirewallRule.MssqlOutboundFirewallRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqloutboundfirewallrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqloutboundfirewallrule"
 
 mssqloutboundfirewallrule.MssqlOutboundFirewallRule_IsConstruct(x interface{}) *bool
 ```
@@ -391,7 +387,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mssqlOutboundFirewallRule.MssqlOutboundFirewallRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqloutboundfirewallrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqloutboundfirewallrule"
 
 mssqloutboundfirewallrule.MssqlOutboundFirewallRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -405,7 +401,7 @@ mssqloutboundfirewallrule.MssqlOutboundFirewallRule_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mssqlOutboundFirewallRule.MssqlOutboundFirewallRule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqloutboundfirewallrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqloutboundfirewallrule"
 
 mssqloutboundfirewallrule.MssqlOutboundFirewallRule_IsTerraformResource(x interface{}) *bool
 ```
@@ -419,7 +415,7 @@ mssqloutboundfirewallrule.MssqlOutboundFirewallRule_IsTerraformResource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.mssqlOutboundFirewallRule.MssqlOutboundFirewallRule.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqloutboundfirewallrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqloutboundfirewallrule"
 
 mssqloutboundfirewallrule.MssqlOutboundFirewallRule_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -736,7 +732,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlOutboundFirewallRule.MssqlOutboundFirewallRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqloutboundfirewallrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqloutboundfirewallrule"
 
 &mssqloutboundfirewallrule.MssqlOutboundFirewallRuleConfig {
 	Connection: interface{},
@@ -749,7 +745,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqloutboundfire
 	Name: *string,
 	ServerId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mssqlOutboundFirewallRule.MssqlOutboundFirewallRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mssqlOutboundFirewallRule.MssqlOutboundFirewallRuleTimeouts,
 }
 ```
 
@@ -899,7 +895,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlOutboundFirewallRule.MssqlOutboundFirewallRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqloutboundfirewallrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqloutboundfirewallrule"
 
 &mssqloutboundfirewallrule.MssqlOutboundFirewallRuleTimeouts {
 	Create: *string,
@@ -961,7 +957,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlOutboundFirewallRule.MssqlOutboundFirewallRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqloutboundfirewallrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqloutboundfirewallrule"
 
 mssqloutboundfirewallrule.NewMssqlOutboundFirewallRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlOutboundFirewallRuleTimeoutsOutputReference
 ```

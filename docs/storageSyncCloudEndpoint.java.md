@@ -1,7 +1,3 @@
-# `azurerm_storage_sync_cloud_endpoint`
-
-Refer to the Terraform Registory for docs: [`azurerm_storage_sync_cloud_endpoint`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/storage_sync_cloud_endpoint).
-
 # `storageSyncCloudEndpoint` Submodule <a name="`storageSyncCloudEndpoint` Submodule" id="@cdktf/provider-azurerm.storageSyncCloudEndpoint"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

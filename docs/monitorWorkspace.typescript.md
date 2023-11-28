@@ -1,7 +1,3 @@
-# `azurerm_monitor_workspace`
-
-Refer to the Terraform Registory for docs: [`azurerm_monitor_workspace`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_workspace).
-
 # `monitorWorkspace` Submodule <a name="`monitorWorkspace` Submodule" id="@cdktf/provider-azurerm.monitorWorkspace"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

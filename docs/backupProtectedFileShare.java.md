@@ -1,7 +1,3 @@
-# `azurerm_backup_protected_file_share`
-
-Refer to the Terraform Registory for docs: [`azurerm_backup_protected_file_share`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/backup_protected_file_share).
-
 # `backupProtectedFileShare` Submodule <a name="`backupProtectedFileShare` Submodule" id="@cdktf/provider-azurerm.backupProtectedFileShare"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

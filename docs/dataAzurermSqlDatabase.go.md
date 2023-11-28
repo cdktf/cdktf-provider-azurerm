@@ -1,7 +1,3 @@
-# `data_azurerm_sql_database`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_sql_database`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/sql_database).
-
 # `dataAzurermSqlDatabase` Submodule <a name="`dataAzurermSqlDatabase` Submodule" id="@cdktf/provider-azurerm.dataAzurermSqlDatabase"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSqlDatabase.DataAzurermSqlDatabase.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsqldatabase"
 
 dataazurermsqldatabase.NewDataAzurermSqlDatabase(scope Construct, id *string, config DataAzurermSqlDatabaseConfig) DataAzurermSqlDatabase
 ```
@@ -305,7 +301,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermSqlDatabase.DataAzurermSqlDatabase.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsqldatabase"
 
 dataazurermsqldatabase.DataAzurermSqlDatabase_IsConstruct(x interface{}) *bool
 ```
@@ -337,7 +333,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermSqlDatabase.DataAzurermSqlDatabase.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsqldatabase"
 
 dataazurermsqldatabase.DataAzurermSqlDatabase_IsTerraformElement(x interface{}) *bool
 ```
@@ -351,7 +347,7 @@ dataazurermsqldatabase.DataAzurermSqlDatabase_IsTerraformElement(x interface{}) 
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermSqlDatabase.DataAzurermSqlDatabase.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsqldatabase"
 
 dataazurermsqldatabase.DataAzurermSqlDatabase_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -365,7 +361,7 @@ dataazurermsqldatabase.DataAzurermSqlDatabase_IsTerraformDataSource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermSqlDatabase.DataAzurermSqlDatabase.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsqldatabase"
 
 dataazurermsqldatabase.DataAzurermSqlDatabase_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -781,7 +777,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSqlDatabase.DataAzurermSqlDatabaseConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsqldatabase"
 
 &dataazurermsqldatabase.DataAzurermSqlDatabaseConfig {
 	Connection: interface{},
@@ -796,7 +792,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsqldat
 	ServerName: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermSqlDatabase.DataAzurermSqlDatabaseTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermSqlDatabase.DataAzurermSqlDatabaseTimeouts,
 }
 ```
 
@@ -972,7 +968,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSqlDatabase.DataAzurermSqlDatabaseTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsqldatabase"
 
 &dataazurermsqldatabase.DataAzurermSqlDatabaseTimeouts {
 	Read: *string,
@@ -1006,7 +1002,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSqlDatabase.DataAzurermSqlDatabaseTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsqldatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsqldatabase"
 
 dataazurermsqldatabase.NewDataAzurermSqlDatabaseTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermSqlDatabaseTimeoutsOutputReference
 ```

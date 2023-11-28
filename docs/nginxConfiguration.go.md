@@ -1,7 +1,3 @@
-# `azurerm_nginx_configuration`
-
-Refer to the Terraform Registory for docs: [`azurerm_nginx_configuration`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/nginx_configuration).
-
 # `nginxConfiguration` Submodule <a name="`nginxConfiguration` Submodule" id="@cdktf/provider-azurerm.nginxConfiguration"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.nginxConfiguration.NginxConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/nginxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxconfiguration"
 
 nginxconfiguration.NewNginxConfiguration(scope Construct, id *string, config NginxConfigurationConfig) NginxConfiguration
 ```
@@ -406,7 +402,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.nginxConfiguration.NginxConfiguration.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/nginxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxconfiguration"
 
 nginxconfiguration.NginxConfiguration_IsConstruct(x interface{}) *bool
 ```
@@ -438,7 +434,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.nginxConfiguration.NginxConfiguration.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/nginxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxconfiguration"
 
 nginxconfiguration.NginxConfiguration_IsTerraformElement(x interface{}) *bool
 ```
@@ -452,7 +448,7 @@ nginxconfiguration.NginxConfiguration_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.nginxConfiguration.NginxConfiguration.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/nginxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxconfiguration"
 
 nginxconfiguration.NginxConfiguration_IsTerraformResource(x interface{}) *bool
 ```
@@ -466,7 +462,7 @@ nginxconfiguration.NginxConfiguration_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.nginxConfiguration.NginxConfiguration.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/nginxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxconfiguration"
 
 nginxconfiguration.NginxConfiguration_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -849,7 +845,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.nginxConfiguration.NginxConfigurationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/nginxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxconfiguration"
 
 &nginxconfiguration.NginxConfigurationConfig {
 	Connection: interface{},
@@ -865,7 +861,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/nginxconfiguratio
 	Id: *string,
 	PackageData: *string,
 	ProtectedFile: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.nginxConfiguration.NginxConfigurationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.nginxConfiguration.NginxConfigurationTimeouts,
 }
 ```
 
@@ -1058,7 +1054,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.nginxConfiguration.NginxConfigurationConfigFile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/nginxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxconfiguration"
 
 &nginxconfiguration.NginxConfigurationConfigFile {
 	Content: *string,
@@ -1104,7 +1100,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.nginxConfiguration.NginxConfigurationProtectedFile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/nginxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxconfiguration"
 
 &nginxconfiguration.NginxConfigurationProtectedFile {
 	Content: *string,
@@ -1150,7 +1146,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.nginxConfiguration.NginxConfigurationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/nginxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxconfiguration"
 
 &nginxconfiguration.NginxConfigurationTimeouts {
 	Create: *string,
@@ -1226,7 +1222,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.nginxConfiguration.NginxConfigurationConfigFileList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/nginxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxconfiguration"
 
 nginxconfiguration.NewNginxConfigurationConfigFileList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NginxConfigurationConfigFileList
 ```
@@ -1369,7 +1365,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.nginxConfiguration.NginxConfigurationConfigFileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/nginxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxconfiguration"
 
 nginxconfiguration.NewNginxConfigurationConfigFileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NginxConfigurationConfigFileOutputReference
 ```
@@ -1680,7 +1676,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.nginxConfiguration.NginxConfigurationProtectedFileList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/nginxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxconfiguration"
 
 nginxconfiguration.NewNginxConfigurationProtectedFileList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) NginxConfigurationProtectedFileList
 ```
@@ -1823,7 +1819,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.nginxConfiguration.NginxConfigurationProtectedFileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/nginxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxconfiguration"
 
 nginxconfiguration.NewNginxConfigurationProtectedFileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) NginxConfigurationProtectedFileOutputReference
 ```
@@ -2134,7 +2130,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.nginxConfiguration.NginxConfigurationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/nginxconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/nginxconfiguration"
 
 nginxconfiguration.NewNginxConfigurationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NginxConfigurationTimeoutsOutputReference
 ```

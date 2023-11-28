@@ -1,7 +1,3 @@
-# `data_azurerm_vpn_gateway`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_vpn_gateway`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/vpn_gateway).
-
 # `dataAzurermVpnGateway` Submodule <a name="`dataAzurermVpnGateway` Submodule" id="@cdktf/provider-azurerm.dataAzurermVpnGateway"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

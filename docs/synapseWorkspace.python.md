@@ -1,7 +1,3 @@
-# `azurerm_synapse_workspace`
-
-Refer to the Terraform Registory for docs: [`azurerm_synapse_workspace`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/synapse_workspace).
-
 # `synapseWorkspace` Submodule <a name="`synapseWorkspace` Submodule" id="@cdktf/provider-azurerm.synapseWorkspace"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

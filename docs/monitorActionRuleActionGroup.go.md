@@ -1,7 +1,3 @@
-# `azurerm_monitor_action_rule_action_group`
-
-Refer to the Terraform Registory for docs: [`azurerm_monitor_action_rule_action_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group).
-
 # `monitorActionRuleActionGroup` Submodule <a name="`monitorActionRuleActionGroup` Submodule" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.NewMonitorActionRuleActionGroup(scope Construct, id *string, config MonitorActionRuleActionGroupConfig) MonitorActionRuleActionGroup
 ```
@@ -420,7 +416,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.MonitorActionRuleActionGroup_IsConstruct(x interface{}) *bool
 ```
@@ -452,7 +448,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.MonitorActionRuleActionGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -466,7 +462,7 @@ monitoractionruleactiongroup.MonitorActionRuleActionGroup_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroup.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.MonitorActionRuleActionGroup_IsTerraformResource(x interface{}) *bool
 ```
@@ -480,7 +476,7 @@ monitoractionruleactiongroup.MonitorActionRuleActionGroup_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroup.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.MonitorActionRuleActionGroup_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -929,16 +925,16 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 &monitoractionruleactiongroup.MonitorActionRuleActionGroupCondition {
-	AlertContext: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionAlertContext,
-	AlertRuleId: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionAlertRuleId,
-	Description: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionDescription,
-	Monitor: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionMonitor,
-	MonitorService: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionMonitorService,
-	Severity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionSeverity,
-	TargetResourceType: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionTargetResourceType,
+	AlertContext: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionAlertContext,
+	AlertRuleId: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionAlertRuleId,
+	Description: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionDescription,
+	Monitor: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionMonitor,
+	MonitorService: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionMonitorService,
+	Severity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionSeverity,
+	TargetResourceType: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionTargetResourceType,
 }
 ```
 
@@ -1059,7 +1055,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionAlertContext.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 &monitoractionruleactiongroup.MonitorActionRuleActionGroupConditionAlertContext {
 	Operator: *string,
@@ -1105,7 +1101,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionAlertRuleId.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 &monitoractionruleactiongroup.MonitorActionRuleActionGroupConditionAlertRuleId {
 	Operator: *string,
@@ -1151,7 +1147,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionDescription.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 &monitoractionruleactiongroup.MonitorActionRuleActionGroupConditionDescription {
 	Operator: *string,
@@ -1197,7 +1193,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionMonitor.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 &monitoractionruleactiongroup.MonitorActionRuleActionGroupConditionMonitor {
 	Operator: *string,
@@ -1243,7 +1239,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionMonitorService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 &monitoractionruleactiongroup.MonitorActionRuleActionGroupConditionMonitorService {
 	Operator: *string,
@@ -1289,7 +1285,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionSeverity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 &monitoractionruleactiongroup.MonitorActionRuleActionGroupConditionSeverity {
 	Operator: *string,
@@ -1335,7 +1331,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionTargetResourceType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 &monitoractionruleactiongroup.MonitorActionRuleActionGroupConditionTargetResourceType {
 	Operator: *string,
@@ -1381,7 +1377,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 &monitoractionruleactiongroup.MonitorActionRuleActionGroupConfig {
 	Connection: interface{},
@@ -1394,13 +1390,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrule
 	ActionGroupId: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	Condition: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleActionGroup.MonitorActionRuleActionGroupCondition,
+	Condition: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupCondition,
 	Description: *string,
 	Enabled: interface{},
 	Id: *string,
-	Scope: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleActionGroup.MonitorActionRuleActionGroupScope,
+	Scope: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupScope,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleActionGroup.MonitorActionRuleActionGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupTimeouts,
 }
 ```
 
@@ -1632,7 +1628,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupScope.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 &monitoractionruleactiongroup.MonitorActionRuleActionGroupScope {
 	ResourceIds: *[]*string,
@@ -1678,7 +1674,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 &monitoractionruleactiongroup.MonitorActionRuleActionGroupTimeouts {
 	Create: *string,
@@ -1754,7 +1750,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionAlertContextOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.NewMonitorActionRuleActionGroupConditionAlertContextOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleActionGroupConditionAlertContextOutputReference
 ```
@@ -2047,7 +2043,7 @@ func InternalValue() MonitorActionRuleActionGroupConditionAlertContext
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionAlertRuleIdOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.NewMonitorActionRuleActionGroupConditionAlertRuleIdOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleActionGroupConditionAlertRuleIdOutputReference
 ```
@@ -2340,7 +2336,7 @@ func InternalValue() MonitorActionRuleActionGroupConditionAlertRuleId
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionDescriptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.NewMonitorActionRuleActionGroupConditionDescriptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleActionGroupConditionDescriptionOutputReference
 ```
@@ -2633,7 +2629,7 @@ func InternalValue() MonitorActionRuleActionGroupConditionDescription
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionMonitorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.NewMonitorActionRuleActionGroupConditionMonitorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleActionGroupConditionMonitorOutputReference
 ```
@@ -2926,7 +2922,7 @@ func InternalValue() MonitorActionRuleActionGroupConditionMonitor
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionMonitorServiceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.NewMonitorActionRuleActionGroupConditionMonitorServiceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleActionGroupConditionMonitorServiceOutputReference
 ```
@@ -3219,7 +3215,7 @@ func InternalValue() MonitorActionRuleActionGroupConditionMonitorService
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.NewMonitorActionRuleActionGroupConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleActionGroupConditionOutputReference
 ```
@@ -3762,7 +3758,7 @@ func InternalValue() MonitorActionRuleActionGroupCondition
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionSeverityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.NewMonitorActionRuleActionGroupConditionSeverityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleActionGroupConditionSeverityOutputReference
 ```
@@ -4055,7 +4051,7 @@ func InternalValue() MonitorActionRuleActionGroupConditionSeverity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionTargetResourceTypeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.NewMonitorActionRuleActionGroupConditionTargetResourceTypeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleActionGroupConditionTargetResourceTypeOutputReference
 ```
@@ -4348,7 +4344,7 @@ func InternalValue() MonitorActionRuleActionGroupConditionTargetResourceType
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupScopeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.NewMonitorActionRuleActionGroupScopeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleActionGroupScopeOutputReference
 ```
@@ -4641,7 +4637,7 @@ func InternalValue() MonitorActionRuleActionGroupScope
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.NewMonitorActionRuleActionGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleActionGroupTimeoutsOutputReference
 ```

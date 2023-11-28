@@ -1,7 +1,3 @@
-# `data_azurerm_eventhub_authorization_rule`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_eventhub_authorization_rule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/eventhub_authorization_rule).
-
 # `dataAzurermEventhubAuthorizationRule` Submodule <a name="`dataAzurermEventhubAuthorizationRule` Submodule" id="@cdktf/provider-azurerm.dataAzurermEventhubAuthorizationRule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

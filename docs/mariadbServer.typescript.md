@@ -1,7 +1,3 @@
-# `azurerm_mariadb_server`
-
-Refer to the Terraform Registory for docs: [`azurerm_mariadb_server`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mariadb_server).
-
 # `mariadbServer` Submodule <a name="`mariadbServer` Submodule" id="@cdktf/provider-azurerm.mariadbServer"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

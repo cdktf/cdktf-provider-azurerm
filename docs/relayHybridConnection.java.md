@@ -1,7 +1,3 @@
-# `azurerm_relay_hybrid_connection`
-
-Refer to the Terraform Registory for docs: [`azurerm_relay_hybrid_connection`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/relay_hybrid_connection).
-
 # `relayHybridConnection` Submodule <a name="`relayHybridConnection` Submodule" id="@cdktf/provider-azurerm.relayHybridConnection"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

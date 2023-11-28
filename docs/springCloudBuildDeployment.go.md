@@ -1,7 +1,3 @@
-# `azurerm_spring_cloud_build_deployment`
-
-Refer to the Terraform Registory for docs: [`azurerm_spring_cloud_build_deployment`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_build_deployment).
-
 # `springCloudBuildDeployment` Submodule <a name="`springCloudBuildDeployment` Submodule" id="@cdktf/provider-azurerm.springCloudBuildDeployment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudBuildDeployment.SpringCloudBuildDeployment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudbuilddeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudbuilddeployment"
 
 springcloudbuilddeployment.NewSpringCloudBuildDeployment(scope Construct, id *string, config SpringCloudBuildDeploymentConfig) SpringCloudBuildDeployment
 ```
@@ -400,7 +396,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.springCloudBuildDeployment.SpringCloudBuildDeployment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudbuilddeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudbuilddeployment"
 
 springcloudbuilddeployment.SpringCloudBuildDeployment_IsConstruct(x interface{}) *bool
 ```
@@ -432,7 +428,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.springCloudBuildDeployment.SpringCloudBuildDeployment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudbuilddeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudbuilddeployment"
 
 springcloudbuilddeployment.SpringCloudBuildDeployment_IsTerraformElement(x interface{}) *bool
 ```
@@ -446,7 +442,7 @@ springcloudbuilddeployment.SpringCloudBuildDeployment_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.springCloudBuildDeployment.SpringCloudBuildDeployment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudbuilddeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudbuilddeployment"
 
 springcloudbuilddeployment.SpringCloudBuildDeployment_IsTerraformResource(x interface{}) *bool
 ```
@@ -460,7 +456,7 @@ springcloudbuilddeployment.SpringCloudBuildDeployment_IsTerraformResource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.springCloudBuildDeployment.SpringCloudBuildDeployment.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudbuilddeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudbuilddeployment"
 
 springcloudbuilddeployment.SpringCloudBuildDeployment_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -887,7 +883,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudBuildDeployment.SpringCloudBuildDeploymentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudbuilddeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudbuilddeployment"
 
 &springcloudbuilddeployment.SpringCloudBuildDeploymentConfig {
 	Connection: interface{},
@@ -904,8 +900,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudbuildd
 	EnvironmentVariables: *map[string]*string,
 	Id: *string,
 	InstanceCount: *f64,
-	Quota: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.springCloudBuildDeployment.SpringCloudBuildDeploymentQuota,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.springCloudBuildDeployment.SpringCloudBuildDeploymentTimeouts,
+	Quota: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.springCloudBuildDeployment.SpringCloudBuildDeploymentQuota,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.springCloudBuildDeployment.SpringCloudBuildDeploymentTimeouts,
 }
 ```
 
@@ -1122,7 +1118,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudBuildDeployment.SpringCloudBuildDeploymentQuota.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudbuilddeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudbuilddeployment"
 
 &springcloudbuilddeployment.SpringCloudBuildDeploymentQuota {
 	Cpu: *string,
@@ -1168,7 +1164,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudBuildDeployment.SpringCloudBuildDeploymentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudbuilddeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudbuilddeployment"
 
 &springcloudbuilddeployment.SpringCloudBuildDeploymentTimeouts {
 	Create: *string,
@@ -1244,7 +1240,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudBuildDeployment.SpringCloudBuildDeploymentQuotaOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudbuilddeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudbuilddeployment"
 
 springcloudbuilddeployment.NewSpringCloudBuildDeploymentQuotaOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudBuildDeploymentQuotaOutputReference
 ```
@@ -1551,7 +1547,7 @@ func InternalValue() SpringCloudBuildDeploymentQuota
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudBuildDeployment.SpringCloudBuildDeploymentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudbuilddeployment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudbuilddeployment"
 
 springcloudbuilddeployment.NewSpringCloudBuildDeploymentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudBuildDeploymentTimeoutsOutputReference
 ```

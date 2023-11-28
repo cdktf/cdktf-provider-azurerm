@@ -1,7 +1,3 @@
-# `data_azurerm_dev_test_lab`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_dev_test_lab`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/dev_test_lab).
-
 # `dataAzurermDevTestLab` Submodule <a name="`dataAzurermDevTestLab` Submodule" id="@cdktf/provider-azurerm.dataAzurermDevTestLab"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

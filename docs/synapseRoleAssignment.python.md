@@ -1,7 +1,3 @@
-# `azurerm_synapse_role_assignment`
-
-Refer to the Terraform Registory for docs: [`azurerm_synapse_role_assignment`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/synapse_role_assignment).
-
 # `synapseRoleAssignment` Submodule <a name="`synapseRoleAssignment` Submodule" id="@cdktf/provider-azurerm.synapseRoleAssignment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `azurerm_vpn_site`
-
-Refer to the Terraform Registory for docs: [`azurerm_vpn_site`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/vpn_site).
-
 # `vpnSite` Submodule <a name="`vpnSite` Submodule" id="@cdktf/provider-azurerm.vpnSite"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

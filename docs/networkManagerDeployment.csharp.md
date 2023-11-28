@@ -1,7 +1,3 @@
-# `azurerm_network_manager_deployment`
-
-Refer to the Terraform Registory for docs: [`azurerm_network_manager_deployment`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/network_manager_deployment).
-
 # `networkManagerDeployment` Submodule <a name="`networkManagerDeployment` Submodule" id="@cdktf/provider-azurerm.networkManagerDeployment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `data_azurerm_private_dns_zone_virtual_network_link`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_private_dns_zone_virtual_network_link`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/private_dns_zone_virtual_network_link).
-
 # `dataAzurermPrivateDnsZoneVirtualNetworkLink` Submodule <a name="`dataAzurermPrivateDnsZoneVirtualNetworkLink` Submodule" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsZoneVirtualNetworkLink"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsZoneVirtualNetworkLink.DataAzurermPrivateDnsZoneVirtualNetworkLink.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermprivatednszonevirtualnetworklink"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermprivatednszonevirtualnetworklink"
 
 dataazurermprivatednszonevirtualnetworklink.NewDataAzurermPrivateDnsZoneVirtualNetworkLink(scope Construct, id *string, config DataAzurermPrivateDnsZoneVirtualNetworkLinkConfig) DataAzurermPrivateDnsZoneVirtualNetworkLink
 ```
@@ -298,7 +294,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsZoneVirtualNetworkLink.DataAzurermPrivateDnsZoneVirtualNetworkLink.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermprivatednszonevirtualnetworklink"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermprivatednszonevirtualnetworklink"
 
 dataazurermprivatednszonevirtualnetworklink.DataAzurermPrivateDnsZoneVirtualNetworkLink_IsConstruct(x interface{}) *bool
 ```
@@ -330,7 +326,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsZoneVirtualNetworkLink.DataAzurermPrivateDnsZoneVirtualNetworkLink.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermprivatednszonevirtualnetworklink"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermprivatednszonevirtualnetworklink"
 
 dataazurermprivatednszonevirtualnetworklink.DataAzurermPrivateDnsZoneVirtualNetworkLink_IsTerraformElement(x interface{}) *bool
 ```
@@ -344,7 +340,7 @@ dataazurermprivatednszonevirtualnetworklink.DataAzurermPrivateDnsZoneVirtualNetw
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsZoneVirtualNetworkLink.DataAzurermPrivateDnsZoneVirtualNetworkLink.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermprivatednszonevirtualnetworklink"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermprivatednszonevirtualnetworklink"
 
 dataazurermprivatednszonevirtualnetworklink.DataAzurermPrivateDnsZoneVirtualNetworkLink_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -358,7 +354,7 @@ dataazurermprivatednszonevirtualnetworklink.DataAzurermPrivateDnsZoneVirtualNetw
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsZoneVirtualNetworkLink.DataAzurermPrivateDnsZoneVirtualNetworkLink.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermprivatednszonevirtualnetworklink"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermprivatednszonevirtualnetworklink"
 
 dataazurermprivatednszonevirtualnetworklink.DataAzurermPrivateDnsZoneVirtualNetworkLink_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -708,7 +704,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsZoneVirtualNetworkLink.DataAzurermPrivateDnsZoneVirtualNetworkLinkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermprivatednszonevirtualnetworklink"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermprivatednszonevirtualnetworklink"
 
 &dataazurermprivatednszonevirtualnetworklink.DataAzurermPrivateDnsZoneVirtualNetworkLinkConfig {
 	Connection: interface{},
@@ -722,7 +718,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermprivat
 	PrivateDnsZoneName: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermPrivateDnsZoneVirtualNetworkLink.DataAzurermPrivateDnsZoneVirtualNetworkLinkTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermPrivateDnsZoneVirtualNetworkLink.DataAzurermPrivateDnsZoneVirtualNetworkLinkTimeouts,
 }
 ```
 
@@ -885,7 +881,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsZoneVirtualNetworkLink.DataAzurermPrivateDnsZoneVirtualNetworkLinkTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermprivatednszonevirtualnetworklink"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermprivatednszonevirtualnetworklink"
 
 &dataazurermprivatednszonevirtualnetworklink.DataAzurermPrivateDnsZoneVirtualNetworkLinkTimeouts {
 	Read: *string,
@@ -919,7 +915,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermPrivateDnsZoneVirtualNetworkLink.DataAzurermPrivateDnsZoneVirtualNetworkLinkTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermprivatednszonevirtualnetworklink"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermprivatednszonevirtualnetworklink"
 
 dataazurermprivatednszonevirtualnetworklink.NewDataAzurermPrivateDnsZoneVirtualNetworkLinkTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermPrivateDnsZoneVirtualNetworkLinkTimeoutsOutputReference
 ```

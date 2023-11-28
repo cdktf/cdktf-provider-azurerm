@@ -1,7 +1,3 @@
-# `azurerm_recovery_services_vault_resource_guard_association`
-
-Refer to the Terraform Registory for docs: [`azurerm_recovery_services_vault_resource_guard_association`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/recovery_services_vault_resource_guard_association).
-
 # `recoveryServicesVaultResourceGuardAssociation` Submodule <a name="`recoveryServicesVaultResourceGuardAssociation` Submodule" id="@cdktf/provider-azurerm.recoveryServicesVaultResourceGuardAssociation"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.recoveryServicesVaultResourceGuardAssociation.RecoveryServicesVaultResourceGuardAssociation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/recoveryservicesvaultresourceguardassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/recoveryservicesvaultresourceguardassociation"
 
 recoveryservicesvaultresourceguardassociation.NewRecoveryServicesVaultResourceGuardAssociation(scope Construct, id *string, config RecoveryServicesVaultResourceGuardAssociationConfig) RecoveryServicesVaultResourceGuardAssociation
 ```
@@ -366,7 +362,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.recoveryServicesVaultResourceGuardAssociation.RecoveryServicesVaultResourceGuardAssociation.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/recoveryservicesvaultresourceguardassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/recoveryservicesvaultresourceguardassociation"
 
 recoveryservicesvaultresourceguardassociation.RecoveryServicesVaultResourceGuardAssociation_IsConstruct(x interface{}) *bool
 ```
@@ -398,7 +394,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.recoveryServicesVaultResourceGuardAssociation.RecoveryServicesVaultResourceGuardAssociation.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/recoveryservicesvaultresourceguardassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/recoveryservicesvaultresourceguardassociation"
 
 recoveryservicesvaultresourceguardassociation.RecoveryServicesVaultResourceGuardAssociation_IsTerraformElement(x interface{}) *bool
 ```
@@ -412,7 +408,7 @@ recoveryservicesvaultresourceguardassociation.RecoveryServicesVaultResourceGuard
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.recoveryServicesVaultResourceGuardAssociation.RecoveryServicesVaultResourceGuardAssociation.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/recoveryservicesvaultresourceguardassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/recoveryservicesvaultresourceguardassociation"
 
 recoveryservicesvaultresourceguardassociation.RecoveryServicesVaultResourceGuardAssociation_IsTerraformResource(x interface{}) *bool
 ```
@@ -426,7 +422,7 @@ recoveryservicesvaultresourceguardassociation.RecoveryServicesVaultResourceGuard
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.recoveryServicesVaultResourceGuardAssociation.RecoveryServicesVaultResourceGuardAssociation.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/recoveryservicesvaultresourceguardassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/recoveryservicesvaultresourceguardassociation"
 
 recoveryservicesvaultresourceguardassociation.RecoveryServicesVaultResourceGuardAssociation_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -765,7 +761,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.recoveryServicesVaultResourceGuardAssociation.RecoveryServicesVaultResourceGuardAssociationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/recoveryservicesvaultresourceguardassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/recoveryservicesvaultresourceguardassociation"
 
 &recoveryservicesvaultresourceguardassociation.RecoveryServicesVaultResourceGuardAssociationConfig {
 	Connection: interface{},
@@ -779,7 +775,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/recoveryservicesv
 	VaultId: *string,
 	Id: *string,
 	Name: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.recoveryServicesVaultResourceGuardAssociation.RecoveryServicesVaultResourceGuardAssociationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.recoveryServicesVaultResourceGuardAssociation.RecoveryServicesVaultResourceGuardAssociationTimeouts,
 }
 ```
 
@@ -942,7 +938,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.recoveryServicesVaultResourceGuardAssociation.RecoveryServicesVaultResourceGuardAssociationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/recoveryservicesvaultresourceguardassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/recoveryservicesvaultresourceguardassociation"
 
 &recoveryservicesvaultresourceguardassociation.RecoveryServicesVaultResourceGuardAssociationTimeouts {
 	Create: *string,
@@ -1004,7 +1000,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.recoveryServicesVaultResourceGuardAssociation.RecoveryServicesVaultResourceGuardAssociationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/recoveryservicesvaultresourceguardassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/recoveryservicesvaultresourceguardassociation"
 
 recoveryservicesvaultresourceguardassociation.NewRecoveryServicesVaultResourceGuardAssociationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) RecoveryServicesVaultResourceGuardAssociationTimeoutsOutputReference
 ```

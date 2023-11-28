@@ -1,7 +1,3 @@
-# `azurerm_maintenance_assignment_virtual_machine_scale_set`
-
-Refer to the Terraform Registory for docs: [`azurerm_maintenance_assignment_virtual_machine_scale_set`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/maintenance_assignment_virtual_machine_scale_set).
-
 # `maintenanceAssignmentVirtualMachineScaleSet` Submodule <a name="`maintenanceAssignmentVirtualMachineScaleSet` Submodule" id="@cdktf/provider-azurerm.maintenanceAssignmentVirtualMachineScaleSet"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

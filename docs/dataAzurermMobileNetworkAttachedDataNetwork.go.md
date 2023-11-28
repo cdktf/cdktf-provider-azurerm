@@ -1,7 +1,3 @@
-# `data_azurerm_mobile_network_attached_data_network`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_mobile_network_attached_data_network`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/mobile_network_attached_data_network).
-
 # `dataAzurermMobileNetworkAttachedDataNetwork` Submodule <a name="`dataAzurermMobileNetworkAttachedDataNetwork` Submodule" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkAttachedDataNetwork"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkAttachedDataNetwork.DataAzurermMobileNetworkAttachedDataNetwork.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkattacheddatanetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkattacheddatanetwork"
 
 dataazurermmobilenetworkattacheddatanetwork.NewDataAzurermMobileNetworkAttachedDataNetwork(scope Construct, id *string, config DataAzurermMobileNetworkAttachedDataNetworkConfig) DataAzurermMobileNetworkAttachedDataNetwork
 ```
@@ -298,7 +294,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkAttachedDataNetwork.DataAzurermMobileNetworkAttachedDataNetwork.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkattacheddatanetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkattacheddatanetwork"
 
 dataazurermmobilenetworkattacheddatanetwork.DataAzurermMobileNetworkAttachedDataNetwork_IsConstruct(x interface{}) *bool
 ```
@@ -330,7 +326,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkAttachedDataNetwork.DataAzurermMobileNetworkAttachedDataNetwork.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkattacheddatanetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkattacheddatanetwork"
 
 dataazurermmobilenetworkattacheddatanetwork.DataAzurermMobileNetworkAttachedDataNetwork_IsTerraformElement(x interface{}) *bool
 ```
@@ -344,7 +340,7 @@ dataazurermmobilenetworkattacheddatanetwork.DataAzurermMobileNetworkAttachedData
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkAttachedDataNetwork.DataAzurermMobileNetworkAttachedDataNetwork.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkattacheddatanetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkattacheddatanetwork"
 
 dataazurermmobilenetworkattacheddatanetwork.DataAzurermMobileNetworkAttachedDataNetwork_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -358,7 +354,7 @@ dataazurermmobilenetworkattacheddatanetwork.DataAzurermMobileNetworkAttachedData
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkAttachedDataNetwork.DataAzurermMobileNetworkAttachedDataNetwork.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkattacheddatanetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkattacheddatanetwork"
 
 dataazurermmobilenetworkattacheddatanetwork.DataAzurermMobileNetworkAttachedDataNetwork_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -763,7 +759,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkAttachedDataNetwork.DataAzurermMobileNetworkAttachedDataNetworkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkattacheddatanetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkattacheddatanetwork"
 
 &dataazurermmobilenetworkattacheddatanetwork.DataAzurermMobileNetworkAttachedDataNetworkConfig {
 	Connection: interface{},
@@ -776,7 +772,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobile
 	MobileNetworkDataNetworkName: *string,
 	MobileNetworkPacketCoreDataPlaneId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermMobileNetworkAttachedDataNetwork.DataAzurermMobileNetworkAttachedDataNetworkTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermMobileNetworkAttachedDataNetwork.DataAzurermMobileNetworkAttachedDataNetworkTimeouts,
 }
 ```
 
@@ -926,7 +922,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkAttachedDataNetwork.DataAzurermMobileNetworkAttachedDataNetworkNetworkAddressPortTranslation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkattacheddatanetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkattacheddatanetwork"
 
 &dataazurermmobilenetworkattacheddatanetwork.DataAzurermMobileNetworkAttachedDataNetworkNetworkAddressPortTranslation {
 
@@ -939,7 +935,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobile
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkAttachedDataNetwork.DataAzurermMobileNetworkAttachedDataNetworkNetworkAddressPortTranslationPortRange.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkattacheddatanetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkattacheddatanetwork"
 
 &dataazurermmobilenetworkattacheddatanetwork.DataAzurermMobileNetworkAttachedDataNetworkNetworkAddressPortTranslationPortRange {
 
@@ -952,7 +948,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobile
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkAttachedDataNetwork.DataAzurermMobileNetworkAttachedDataNetworkTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkattacheddatanetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkattacheddatanetwork"
 
 &dataazurermmobilenetworkattacheddatanetwork.DataAzurermMobileNetworkAttachedDataNetworkTimeouts {
 	Read: *string,
@@ -986,7 +982,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkAttachedDataNetwork.DataAzurermMobileNetworkAttachedDataNetworkNetworkAddressPortTranslationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkattacheddatanetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkattacheddatanetwork"
 
 dataazurermmobilenetworkattacheddatanetwork.NewDataAzurermMobileNetworkAttachedDataNetworkNetworkAddressPortTranslationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMobileNetworkAttachedDataNetworkNetworkAddressPortTranslationList
 ```
@@ -1118,7 +1114,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkAttachedDataNetwork.DataAzurermMobileNetworkAttachedDataNetworkNetworkAddressPortTranslationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkattacheddatanetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkattacheddatanetwork"
 
 dataazurermmobilenetworkattacheddatanetwork.NewDataAzurermMobileNetworkAttachedDataNetworkNetworkAddressPortTranslationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMobileNetworkAttachedDataNetworkNetworkAddressPortTranslationOutputReference
 ```
@@ -1462,7 +1458,7 @@ func InternalValue() DataAzurermMobileNetworkAttachedDataNetworkNetworkAddressPo
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkAttachedDataNetwork.DataAzurermMobileNetworkAttachedDataNetworkNetworkAddressPortTranslationPortRangeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkattacheddatanetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkattacheddatanetwork"
 
 dataazurermmobilenetworkattacheddatanetwork.NewDataAzurermMobileNetworkAttachedDataNetworkNetworkAddressPortTranslationPortRangeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMobileNetworkAttachedDataNetworkNetworkAddressPortTranslationPortRangeList
 ```
@@ -1594,7 +1590,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkAttachedDataNetwork.DataAzurermMobileNetworkAttachedDataNetworkNetworkAddressPortTranslationPortRangeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkattacheddatanetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkattacheddatanetwork"
 
 dataazurermmobilenetworkattacheddatanetwork.NewDataAzurermMobileNetworkAttachedDataNetworkNetworkAddressPortTranslationPortRangeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMobileNetworkAttachedDataNetworkNetworkAddressPortTranslationPortRangeOutputReference
 ```
@@ -1883,7 +1879,7 @@ func InternalValue() DataAzurermMobileNetworkAttachedDataNetworkNetworkAddressPo
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkAttachedDataNetwork.DataAzurermMobileNetworkAttachedDataNetworkTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkattacheddatanetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkattacheddatanetwork"
 
 dataazurermmobilenetworkattacheddatanetwork.NewDataAzurermMobileNetworkAttachedDataNetworkTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermMobileNetworkAttachedDataNetworkTimeoutsOutputReference
 ```

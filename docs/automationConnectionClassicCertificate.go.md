@@ -1,7 +1,3 @@
-# `azurerm_automation_connection_classic_certificate`
-
-Refer to the Terraform Registory for docs: [`azurerm_automation_connection_classic_certificate`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_connection_classic_certificate).
-
 # `automationConnectionClassicCertificate` Submodule <a name="`automationConnectionClassicCertificate` Submodule" id="@cdktf/provider-azurerm.automationConnectionClassicCertificate"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationConnectionClassicCertificate.AutomationConnectionClassicCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationconnectionclassiccertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationconnectionclassiccertificate"
 
 automationconnectionclassiccertificate.NewAutomationConnectionClassicCertificate(scope Construct, id *string, config AutomationConnectionClassicCertificateConfig) AutomationConnectionClassicCertificate
 ```
@@ -366,7 +362,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.automationConnectionClassicCertificate.AutomationConnectionClassicCertificate.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationconnectionclassiccertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationconnectionclassiccertificate"
 
 automationconnectionclassiccertificate.AutomationConnectionClassicCertificate_IsConstruct(x interface{}) *bool
 ```
@@ -398,7 +394,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.automationConnectionClassicCertificate.AutomationConnectionClassicCertificate.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationconnectionclassiccertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationconnectionclassiccertificate"
 
 automationconnectionclassiccertificate.AutomationConnectionClassicCertificate_IsTerraformElement(x interface{}) *bool
 ```
@@ -412,7 +408,7 @@ automationconnectionclassiccertificate.AutomationConnectionClassicCertificate_Is
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.automationConnectionClassicCertificate.AutomationConnectionClassicCertificate.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationconnectionclassiccertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationconnectionclassiccertificate"
 
 automationconnectionclassiccertificate.AutomationConnectionClassicCertificate_IsTerraformResource(x interface{}) *bool
 ```
@@ -426,7 +422,7 @@ automationconnectionclassiccertificate.AutomationConnectionClassicCertificate_Is
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.automationConnectionClassicCertificate.AutomationConnectionClassicCertificate.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationconnectionclassiccertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationconnectionclassiccertificate"
 
 automationconnectionclassiccertificate.AutomationConnectionClassicCertificate_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -853,7 +849,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationConnectionClassicCertificate.AutomationConnectionClassicCertificateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationconnectionclassiccertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationconnectionclassiccertificate"
 
 &automationconnectionclassiccertificate.AutomationConnectionClassicCertificateConfig {
 	Connection: interface{},
@@ -871,7 +867,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationconnect
 	SubscriptionName: *string,
 	Description: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.automationConnectionClassicCertificate.AutomationConnectionClassicCertificateTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automationConnectionClassicCertificate.AutomationConnectionClassicCertificateTimeouts,
 }
 ```
 
@@ -1086,7 +1082,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationConnectionClassicCertificate.AutomationConnectionClassicCertificateTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationconnectionclassiccertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationconnectionclassiccertificate"
 
 &automationconnectionclassiccertificate.AutomationConnectionClassicCertificateTimeouts {
 	Create: *string,
@@ -1162,7 +1158,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationConnectionClassicCertificate.AutomationConnectionClassicCertificateTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationconnectionclassiccertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automationconnectionclassiccertificate"
 
 automationconnectionclassiccertificate.NewAutomationConnectionClassicCertificateTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationConnectionClassicCertificateTimeoutsOutputReference
 ```

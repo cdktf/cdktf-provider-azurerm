@@ -1,7 +1,3 @@
-# `azurerm_dedicated_host`
-
-Refer to the Terraform Registory for docs: [`azurerm_dedicated_host`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dedicated_host).
-
 # `dedicatedHost` Submodule <a name="`dedicatedHost` Submodule" id="@cdktf/provider-azurerm.dedicatedHost"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dedicatedHost.DedicatedHost.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dedicatedhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dedicatedhost"
 
 dedicatedhost.NewDedicatedHost(scope Construct, id *string, config DedicatedHostConfig) DedicatedHost
 ```
@@ -380,7 +376,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dedicatedHost.DedicatedHost.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dedicatedhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dedicatedhost"
 
 dedicatedhost.DedicatedHost_IsConstruct(x interface{}) *bool
 ```
@@ -412,7 +408,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dedicatedHost.DedicatedHost.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dedicatedhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dedicatedhost"
 
 dedicatedhost.DedicatedHost_IsTerraformElement(x interface{}) *bool
 ```
@@ -426,7 +422,7 @@ dedicatedhost.DedicatedHost_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dedicatedHost.DedicatedHost.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dedicatedhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dedicatedhost"
 
 dedicatedhost.DedicatedHost_IsTerraformResource(x interface{}) *bool
 ```
@@ -440,7 +436,7 @@ dedicatedhost.DedicatedHost_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dedicatedHost.DedicatedHost.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dedicatedhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dedicatedhost"
 
 dedicatedhost.DedicatedHost_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -889,7 +885,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dedicatedHost.DedicatedHostConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dedicatedhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dedicatedhost"
 
 &dedicatedhost.DedicatedHostConfig {
 	Connection: interface{},
@@ -908,7 +904,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dedicatedhost"
 	Id: *string,
 	LicenseType: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dedicatedHost.DedicatedHostTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dedicatedHost.DedicatedHostTimeouts,
 }
 ```
 
@@ -1136,7 +1132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dedicatedHost.DedicatedHostTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dedicatedhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dedicatedhost"
 
 &dedicatedhost.DedicatedHostTimeouts {
 	Create: *string,
@@ -1212,7 +1208,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dedicatedHost.DedicatedHostTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dedicatedhost"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dedicatedhost"
 
 dedicatedhost.NewDedicatedHostTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DedicatedHostTimeoutsOutputReference
 ```

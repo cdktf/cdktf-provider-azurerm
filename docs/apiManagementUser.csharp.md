@@ -1,7 +1,3 @@
-# `azurerm_api_management_user`
-
-Refer to the Terraform Registory for docs: [`azurerm_api_management_user`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_user).
-
 # `apiManagementUser` Submodule <a name="`apiManagementUser` Submodule" id="@cdktf/provider-azurerm.apiManagementUser"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

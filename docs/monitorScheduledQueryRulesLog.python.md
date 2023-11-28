@@ -1,7 +1,3 @@
-# `azurerm_monitor_scheduled_query_rules_log`
-
-Refer to the Terraform Registory for docs: [`azurerm_monitor_scheduled_query_rules_log`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_scheduled_query_rules_log).
-
 # `monitorScheduledQueryRulesLog` Submodule <a name="`monitorScheduledQueryRulesLog` Submodule" id="@cdktf/provider-azurerm.monitorScheduledQueryRulesLog"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

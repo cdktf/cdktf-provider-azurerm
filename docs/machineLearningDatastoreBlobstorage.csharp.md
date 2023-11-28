@@ -1,7 +1,3 @@
-# `azurerm_machine_learning_datastore_blobstorage`
-
-Refer to the Terraform Registory for docs: [`azurerm_machine_learning_datastore_blobstorage`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/machine_learning_datastore_blobstorage).
-
 # `machineLearningDatastoreBlobstorage` Submodule <a name="`machineLearningDatastoreBlobstorage` Submodule" id="@cdktf/provider-azurerm.machineLearningDatastoreBlobstorage"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `azurerm_firewall_policy`
-
-Refer to the Terraform Registory for docs: [`azurerm_firewall_policy`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/firewall_policy).
-
 # `firewallPolicy` Submodule <a name="`firewallPolicy` Submodule" id="@cdktf/provider-azurerm.firewallPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `azurerm_spring_cloud_gateway_custom_domain`
-
-Refer to the Terraform Registory for docs: [`azurerm_spring_cloud_gateway_custom_domain`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/spring_cloud_gateway_custom_domain).
-
 # `springCloudGatewayCustomDomain` Submodule <a name="`springCloudGatewayCustomDomain` Submodule" id="@cdktf/provider-azurerm.springCloudGatewayCustomDomain"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

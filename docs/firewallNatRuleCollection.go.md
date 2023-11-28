@@ -1,7 +1,3 @@
-# `azurerm_firewall_nat_rule_collection`
-
-Refer to the Terraform Registory for docs: [`azurerm_firewall_nat_rule_collection`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/firewall_nat_rule_collection).
-
 # `firewallNatRuleCollection` Submodule <a name="`firewallNatRuleCollection` Submodule" id="@cdktf/provider-azurerm.firewallNatRuleCollection"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallNatRuleCollection.FirewallNatRuleCollection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallnatrulecollection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallnatrulecollection"
 
 firewallnatrulecollection.NewFirewallNatRuleCollection(scope Construct, id *string, config FirewallNatRuleCollectionConfig) FirewallNatRuleCollection
 ```
@@ -372,7 +368,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.firewallNatRuleCollection.FirewallNatRuleCollection.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallnatrulecollection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallnatrulecollection"
 
 firewallnatrulecollection.FirewallNatRuleCollection_IsConstruct(x interface{}) *bool
 ```
@@ -404,7 +400,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.firewallNatRuleCollection.FirewallNatRuleCollection.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallnatrulecollection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallnatrulecollection"
 
 firewallnatrulecollection.FirewallNatRuleCollection_IsTerraformElement(x interface{}) *bool
 ```
@@ -418,7 +414,7 @@ firewallnatrulecollection.FirewallNatRuleCollection_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.firewallNatRuleCollection.FirewallNatRuleCollection.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallnatrulecollection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallnatrulecollection"
 
 firewallnatrulecollection.FirewallNatRuleCollection_IsTerraformResource(x interface{}) *bool
 ```
@@ -432,7 +428,7 @@ firewallnatrulecollection.FirewallNatRuleCollection_IsTerraformResource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.firewallNatRuleCollection.FirewallNatRuleCollection.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallnatrulecollection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallnatrulecollection"
 
 firewallnatrulecollection.FirewallNatRuleCollection_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -837,7 +833,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewallNatRuleCollection.FirewallNatRuleCollectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallnatrulecollection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallnatrulecollection"
 
 &firewallnatrulecollection.FirewallNatRuleCollectionConfig {
 	Connection: interface{},
@@ -854,7 +850,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallnatruleco
 	ResourceGroupName: *string,
 	Rule: interface{},
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.firewallNatRuleCollection.FirewallNatRuleCollectionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.firewallNatRuleCollection.FirewallNatRuleCollectionTimeouts,
 }
 ```
 
@@ -1058,7 +1054,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewallNatRuleCollection.FirewallNatRuleCollectionRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallnatrulecollection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallnatrulecollection"
 
 &firewallnatrulecollection.FirewallNatRuleCollectionRule {
 	DestinationAddresses: *[]*string,
@@ -1202,7 +1198,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewallNatRuleCollection.FirewallNatRuleCollectionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallnatrulecollection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallnatrulecollection"
 
 &firewallnatrulecollection.FirewallNatRuleCollectionTimeouts {
 	Create: *string,
@@ -1278,7 +1274,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallNatRuleCollection.FirewallNatRuleCollectionRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallnatrulecollection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallnatrulecollection"
 
 firewallnatrulecollection.NewFirewallNatRuleCollectionRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FirewallNatRuleCollectionRuleList
 ```
@@ -1421,7 +1417,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallNatRuleCollection.FirewallNatRuleCollectionRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallnatrulecollection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallnatrulecollection"
 
 firewallnatrulecollection.NewFirewallNatRuleCollectionRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FirewallNatRuleCollectionRuleOutputReference
 ```
@@ -1907,7 +1903,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewallNatRuleCollection.FirewallNatRuleCollectionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewallnatrulecollection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewallnatrulecollection"
 
 firewallnatrulecollection.NewFirewallNatRuleCollectionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirewallNatRuleCollectionTimeoutsOutputReference
 ```

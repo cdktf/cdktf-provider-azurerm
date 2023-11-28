@@ -1,7 +1,3 @@
-# `azurerm_monitor_smart_detector_alert_rule`
-
-Refer to the Terraform Registory for docs: [`azurerm_monitor_smart_detector_alert_rule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_smart_detector_alert_rule).
-
 # `monitorSmartDetectorAlertRule` Submodule <a name="`monitorSmartDetectorAlertRule` Submodule" id="@cdktf/provider-azurerm.monitorSmartDetectorAlertRule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorSmartDetectorAlertRule.MonitorSmartDetectorAlertRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorsmartdetectoralertrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorsmartdetectoralertrule"
 
 monitorsmartdetectoralertrule.NewMonitorSmartDetectorAlertRule(scope Construct, id *string, config MonitorSmartDetectorAlertRuleConfig) MonitorSmartDetectorAlertRule
 ```
@@ -400,7 +396,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.monitorSmartDetectorAlertRule.MonitorSmartDetectorAlertRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorsmartdetectoralertrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorsmartdetectoralertrule"
 
 monitorsmartdetectoralertrule.MonitorSmartDetectorAlertRule_IsConstruct(x interface{}) *bool
 ```
@@ -432,7 +428,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.monitorSmartDetectorAlertRule.MonitorSmartDetectorAlertRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorsmartdetectoralertrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorsmartdetectoralertrule"
 
 monitorsmartdetectoralertrule.MonitorSmartDetectorAlertRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -446,7 +442,7 @@ monitorsmartdetectoralertrule.MonitorSmartDetectorAlertRule_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.monitorSmartDetectorAlertRule.MonitorSmartDetectorAlertRule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorsmartdetectoralertrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorsmartdetectoralertrule"
 
 monitorsmartdetectoralertrule.MonitorSmartDetectorAlertRule_IsTerraformResource(x interface{}) *bool
 ```
@@ -460,7 +456,7 @@ monitorsmartdetectoralertrule.MonitorSmartDetectorAlertRule_IsTerraformResource(
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.monitorSmartDetectorAlertRule.MonitorSmartDetectorAlertRule.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorsmartdetectoralertrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorsmartdetectoralertrule"
 
 monitorsmartdetectoralertrule.MonitorSmartDetectorAlertRule_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -975,7 +971,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorSmartDetectorAlertRule.MonitorSmartDetectorAlertRuleActionGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorsmartdetectoralertrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorsmartdetectoralertrule"
 
 &monitorsmartdetectoralertrule.MonitorSmartDetectorAlertRuleActionGroup {
 	Ids: *[]*string,
@@ -1035,7 +1031,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorSmartDetectorAlertRule.MonitorSmartDetectorAlertRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorsmartdetectoralertrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorsmartdetectoralertrule"
 
 &monitorsmartdetectoralertrule.MonitorSmartDetectorAlertRuleConfig {
 	Connection: interface{},
@@ -1045,7 +1041,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorsmartdetec
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	ActionGroup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorSmartDetectorAlertRule.MonitorSmartDetectorAlertRuleActionGroup,
+	ActionGroup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorSmartDetectorAlertRule.MonitorSmartDetectorAlertRuleActionGroup,
 	DetectorType: *string,
 	Frequency: *string,
 	Name: *string,
@@ -1057,7 +1053,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorsmartdetec
 	Id: *string,
 	Tags: *map[string]*string,
 	ThrottlingDuration: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorSmartDetectorAlertRule.MonitorSmartDetectorAlertRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorSmartDetectorAlertRule.MonitorSmartDetectorAlertRuleTimeouts,
 }
 ```
 
@@ -1326,7 +1322,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorSmartDetectorAlertRule.MonitorSmartDetectorAlertRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorsmartdetectoralertrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorsmartdetectoralertrule"
 
 &monitorsmartdetectoralertrule.MonitorSmartDetectorAlertRuleTimeouts {
 	Create: *string,
@@ -1402,7 +1398,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorSmartDetectorAlertRule.MonitorSmartDetectorAlertRuleActionGroupOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorsmartdetectoralertrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorsmartdetectoralertrule"
 
 monitorsmartdetectoralertrule.NewMonitorSmartDetectorAlertRuleActionGroupOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorSmartDetectorAlertRuleActionGroupOutputReference
 ```
@@ -1731,7 +1727,7 @@ func InternalValue() MonitorSmartDetectorAlertRuleActionGroup
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorSmartDetectorAlertRule.MonitorSmartDetectorAlertRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorsmartdetectoralertrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorsmartdetectoralertrule"
 
 monitorsmartdetectoralertrule.NewMonitorSmartDetectorAlertRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorSmartDetectorAlertRuleTimeoutsOutputReference
 ```

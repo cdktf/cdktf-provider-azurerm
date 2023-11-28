@@ -1,7 +1,3 @@
-# `data_azurerm_spring_cloud_app`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_spring_cloud_app`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/spring_cloud_app).
-
 # `dataAzurermSpringCloudApp` Submodule <a name="`dataAzurermSpringCloudApp` Submodule" id="@cdktf/provider-azurerm.dataAzurermSpringCloudApp"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSpringCloudApp.DataAzurermSpringCloudApp.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermspringcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermspringcloudapp"
 
 dataazurermspringcloudapp.NewDataAzurermSpringCloudApp(scope Construct, id *string, config DataAzurermSpringCloudAppConfig) DataAzurermSpringCloudApp
 ```
@@ -298,7 +294,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermSpringCloudApp.DataAzurermSpringCloudApp.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermspringcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermspringcloudapp"
 
 dataazurermspringcloudapp.DataAzurermSpringCloudApp_IsConstruct(x interface{}) *bool
 ```
@@ -330,7 +326,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermSpringCloudApp.DataAzurermSpringCloudApp.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermspringcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermspringcloudapp"
 
 dataazurermspringcloudapp.DataAzurermSpringCloudApp_IsTerraformElement(x interface{}) *bool
 ```
@@ -344,7 +340,7 @@ dataazurermspringcloudapp.DataAzurermSpringCloudApp_IsTerraformElement(x interfa
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermSpringCloudApp.DataAzurermSpringCloudApp.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermspringcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermspringcloudapp"
 
 dataazurermspringcloudapp.DataAzurermSpringCloudApp_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -358,7 +354,7 @@ dataazurermspringcloudapp.DataAzurermSpringCloudApp_IsTerraformDataSource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermSpringCloudApp.DataAzurermSpringCloudApp.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermspringcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermspringcloudapp"
 
 dataazurermspringcloudapp.DataAzurermSpringCloudApp_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -752,7 +748,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSpringCloudApp.DataAzurermSpringCloudAppConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermspringcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermspringcloudapp"
 
 &dataazurermspringcloudapp.DataAzurermSpringCloudAppConfig {
 	Connection: interface{},
@@ -766,7 +762,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermspring
 	ResourceGroupName: *string,
 	ServiceName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermSpringCloudApp.DataAzurermSpringCloudAppTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermSpringCloudApp.DataAzurermSpringCloudAppTimeouts,
 }
 ```
 
@@ -929,7 +925,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSpringCloudApp.DataAzurermSpringCloudAppIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermspringcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermspringcloudapp"
 
 &dataazurermspringcloudapp.DataAzurermSpringCloudAppIdentity {
 
@@ -942,7 +938,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermspring
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSpringCloudApp.DataAzurermSpringCloudAppPersistentDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermspringcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermspringcloudapp"
 
 &dataazurermspringcloudapp.DataAzurermSpringCloudAppPersistentDisk {
 
@@ -955,7 +951,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermspring
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSpringCloudApp.DataAzurermSpringCloudAppTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermspringcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermspringcloudapp"
 
 &dataazurermspringcloudapp.DataAzurermSpringCloudAppTimeouts {
 	Read: *string,
@@ -989,7 +985,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSpringCloudApp.DataAzurermSpringCloudAppIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermspringcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermspringcloudapp"
 
 dataazurermspringcloudapp.NewDataAzurermSpringCloudAppIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermSpringCloudAppIdentityList
 ```
@@ -1121,7 +1117,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSpringCloudApp.DataAzurermSpringCloudAppIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermspringcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermspringcloudapp"
 
 dataazurermspringcloudapp.NewDataAzurermSpringCloudAppIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermSpringCloudAppIdentityOutputReference
 ```
@@ -1432,7 +1428,7 @@ func InternalValue() DataAzurermSpringCloudAppIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSpringCloudApp.DataAzurermSpringCloudAppPersistentDiskList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermspringcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermspringcloudapp"
 
 dataazurermspringcloudapp.NewDataAzurermSpringCloudAppPersistentDiskList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermSpringCloudAppPersistentDiskList
 ```
@@ -1564,7 +1560,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSpringCloudApp.DataAzurermSpringCloudAppPersistentDiskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermspringcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermspringcloudapp"
 
 dataazurermspringcloudapp.NewDataAzurermSpringCloudAppPersistentDiskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermSpringCloudAppPersistentDiskOutputReference
 ```
@@ -1853,7 +1849,7 @@ func InternalValue() DataAzurermSpringCloudAppPersistentDisk
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSpringCloudApp.DataAzurermSpringCloudAppTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermspringcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermspringcloudapp"
 
 dataazurermspringcloudapp.NewDataAzurermSpringCloudAppTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermSpringCloudAppTimeoutsOutputReference
 ```

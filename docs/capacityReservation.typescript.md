@@ -1,7 +1,3 @@
-# `azurerm_capacity_reservation`
-
-Refer to the Terraform Registory for docs: [`azurerm_capacity_reservation`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/capacity_reservation).
-
 # `capacityReservation` Submodule <a name="`capacityReservation` Submodule" id="@cdktf/provider-azurerm.capacityReservation"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

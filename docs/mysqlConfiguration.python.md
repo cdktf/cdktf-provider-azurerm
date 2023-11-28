@@ -1,7 +1,3 @@
-# `azurerm_mysql_configuration`
-
-Refer to the Terraform Registory for docs: [`azurerm_mysql_configuration`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mysql_configuration).
-
 # `mysqlConfiguration` Submodule <a name="`mysqlConfiguration` Submodule" id="@cdktf/provider-azurerm.mysqlConfiguration"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

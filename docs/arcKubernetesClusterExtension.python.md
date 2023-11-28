@@ -1,7 +1,3 @@
-# `azurerm_arc_kubernetes_cluster_extension`
-
-Refer to the Terraform Registory for docs: [`azurerm_arc_kubernetes_cluster_extension`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/arc_kubernetes_cluster_extension).
-
 # `arcKubernetesClusterExtension` Submodule <a name="`arcKubernetesClusterExtension` Submodule" id="@cdktf/provider-azurerm.arcKubernetesClusterExtension"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

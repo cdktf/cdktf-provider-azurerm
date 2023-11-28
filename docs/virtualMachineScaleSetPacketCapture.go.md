@@ -1,7 +1,3 @@
-# `azurerm_virtual_machine_scale_set_packet_capture`
-
-Refer to the Terraform Registory for docs: [`azurerm_virtual_machine_scale_set_packet_capture`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/virtual_machine_scale_set_packet_capture).
-
 # `virtualMachineScaleSetPacketCapture` Submodule <a name="`virtualMachineScaleSetPacketCapture` Submodule" id="@cdktf/provider-azurerm.virtualMachineScaleSetPacketCapture"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualMachineScaleSetPacketCapture.VirtualMachineScaleSetPacketCapture.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualmachinescalesetpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinescalesetpacketcapture"
 
 virtualmachinescalesetpacketcapture.NewVirtualMachineScaleSetPacketCapture(scope Construct, id *string, config VirtualMachineScaleSetPacketCaptureConfig) VirtualMachineScaleSetPacketCapture
 ```
@@ -433,7 +429,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.virtualMachineScaleSetPacketCapture.VirtualMachineScaleSetPacketCapture.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualmachinescalesetpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinescalesetpacketcapture"
 
 virtualmachinescalesetpacketcapture.VirtualMachineScaleSetPacketCapture_IsConstruct(x interface{}) *bool
 ```
@@ -465,7 +461,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.virtualMachineScaleSetPacketCapture.VirtualMachineScaleSetPacketCapture.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualmachinescalesetpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinescalesetpacketcapture"
 
 virtualmachinescalesetpacketcapture.VirtualMachineScaleSetPacketCapture_IsTerraformElement(x interface{}) *bool
 ```
@@ -479,7 +475,7 @@ virtualmachinescalesetpacketcapture.VirtualMachineScaleSetPacketCapture_IsTerraf
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.virtualMachineScaleSetPacketCapture.VirtualMachineScaleSetPacketCapture.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualmachinescalesetpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinescalesetpacketcapture"
 
 virtualmachinescalesetpacketcapture.VirtualMachineScaleSetPacketCapture_IsTerraformResource(x interface{}) *bool
 ```
@@ -493,7 +489,7 @@ virtualmachinescalesetpacketcapture.VirtualMachineScaleSetPacketCapture_IsTerraf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.virtualMachineScaleSetPacketCapture.VirtualMachineScaleSetPacketCapture.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualmachinescalesetpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinescalesetpacketcapture"
 
 virtualmachinescalesetpacketcapture.VirtualMachineScaleSetPacketCapture_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -964,7 +960,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualMachineScaleSetPacketCapture.VirtualMachineScaleSetPacketCaptureConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualmachinescalesetpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinescalesetpacketcapture"
 
 &virtualmachinescalesetpacketcapture.VirtualMachineScaleSetPacketCaptureConfig {
 	Connection: interface{},
@@ -976,15 +972,15 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualmachinesca
 	Provisioners: *[]interface{},
 	Name: *string,
 	NetworkWatcherId: *string,
-	StorageLocation: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.virtualMachineScaleSetPacketCapture.VirtualMachineScaleSetPacketCaptureStorageLocation,
+	StorageLocation: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.virtualMachineScaleSetPacketCapture.VirtualMachineScaleSetPacketCaptureStorageLocation,
 	VirtualMachineScaleSetId: *string,
 	Filter: interface{},
 	Id: *string,
-	MachineScope: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.virtualMachineScaleSetPacketCapture.VirtualMachineScaleSetPacketCaptureMachineScope,
+	MachineScope: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.virtualMachineScaleSetPacketCapture.VirtualMachineScaleSetPacketCaptureMachineScope,
 	MaximumBytesPerPacket: *f64,
 	MaximumBytesPerSession: *f64,
 	MaximumCaptureDurationInSeconds: *f64,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.virtualMachineScaleSetPacketCapture.VirtualMachineScaleSetPacketCaptureTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.virtualMachineScaleSetPacketCapture.VirtualMachineScaleSetPacketCaptureTimeouts,
 }
 ```
 
@@ -1231,7 +1227,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualMachineScaleSetPacketCapture.VirtualMachineScaleSetPacketCaptureFilter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualmachinescalesetpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinescalesetpacketcapture"
 
 &virtualmachinescalesetpacketcapture.VirtualMachineScaleSetPacketCaptureFilter {
 	Protocol: *string,
@@ -1319,7 +1315,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualMachineScaleSetPacketCapture.VirtualMachineScaleSetPacketCaptureMachineScope.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualmachinescalesetpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinescalesetpacketcapture"
 
 &virtualmachinescalesetpacketcapture.VirtualMachineScaleSetPacketCaptureMachineScope {
 	ExcludeInstanceIds: *[]*string,
@@ -1365,7 +1361,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualMachineScaleSetPacketCapture.VirtualMachineScaleSetPacketCaptureStorageLocation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualmachinescalesetpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinescalesetpacketcapture"
 
 &virtualmachinescalesetpacketcapture.VirtualMachineScaleSetPacketCaptureStorageLocation {
 	FilePath: *string,
@@ -1411,7 +1407,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualMachineScaleSetPacketCapture.VirtualMachineScaleSetPacketCaptureTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualmachinescalesetpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinescalesetpacketcapture"
 
 &virtualmachinescalesetpacketcapture.VirtualMachineScaleSetPacketCaptureTimeouts {
 	Create: *string,
@@ -1473,7 +1469,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualMachineScaleSetPacketCapture.VirtualMachineScaleSetPacketCaptureFilterList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualmachinescalesetpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinescalesetpacketcapture"
 
 virtualmachinescalesetpacketcapture.NewVirtualMachineScaleSetPacketCaptureFilterList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VirtualMachineScaleSetPacketCaptureFilterList
 ```
@@ -1616,7 +1612,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualMachineScaleSetPacketCapture.VirtualMachineScaleSetPacketCaptureFilterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualmachinescalesetpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinescalesetpacketcapture"
 
 virtualmachinescalesetpacketcapture.NewVirtualMachineScaleSetPacketCaptureFilterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VirtualMachineScaleSetPacketCaptureFilterOutputReference
 ```
@@ -2021,7 +2017,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualMachineScaleSetPacketCapture.VirtualMachineScaleSetPacketCaptureMachineScopeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualmachinescalesetpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinescalesetpacketcapture"
 
 virtualmachinescalesetpacketcapture.NewVirtualMachineScaleSetPacketCaptureMachineScopeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VirtualMachineScaleSetPacketCaptureMachineScopeOutputReference
 ```
@@ -2328,7 +2324,7 @@ func InternalValue() VirtualMachineScaleSetPacketCaptureMachineScope
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualMachineScaleSetPacketCapture.VirtualMachineScaleSetPacketCaptureStorageLocationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualmachinescalesetpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinescalesetpacketcapture"
 
 virtualmachinescalesetpacketcapture.NewVirtualMachineScaleSetPacketCaptureStorageLocationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VirtualMachineScaleSetPacketCaptureStorageLocationOutputReference
 ```
@@ -2646,7 +2642,7 @@ func InternalValue() VirtualMachineScaleSetPacketCaptureStorageLocation
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualMachineScaleSetPacketCapture.VirtualMachineScaleSetPacketCaptureTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualmachinescalesetpacketcapture"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualmachinescalesetpacketcapture"
 
 virtualmachinescalesetpacketcapture.NewVirtualMachineScaleSetPacketCaptureTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VirtualMachineScaleSetPacketCaptureTimeoutsOutputReference
 ```

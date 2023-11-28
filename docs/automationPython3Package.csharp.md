@@ -1,7 +1,3 @@
-# `azurerm_automation_python3_package`
-
-Refer to the Terraform Registory for docs: [`azurerm_automation_python3_package`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_python3_package).
-
 # `automationPython3Package` Submodule <a name="`automationPython3Package` Submodule" id="@cdktf/provider-azurerm.automationPython3Package"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

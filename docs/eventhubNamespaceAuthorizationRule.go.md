@@ -1,7 +1,3 @@
-# `azurerm_eventhub_namespace_authorization_rule`
-
-Refer to the Terraform Registory for docs: [`azurerm_eventhub_namespace_authorization_rule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/eventhub_namespace_authorization_rule).
-
 # `eventhubNamespaceAuthorizationRule` Submodule <a name="`eventhubNamespaceAuthorizationRule` Submodule" id="@cdktf/provider-azurerm.eventhubNamespaceAuthorizationRule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventhubNamespaceAuthorizationRule.EventhubNamespaceAuthorizationRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhubnamespaceauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhubnamespaceauthorizationrule"
 
 eventhubnamespaceauthorizationrule.NewEventhubNamespaceAuthorizationRule(scope Construct, id *string, config EventhubNamespaceAuthorizationRuleConfig) EventhubNamespaceAuthorizationRule
 ```
@@ -380,7 +376,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.eventhubNamespaceAuthorizationRule.EventhubNamespaceAuthorizationRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhubnamespaceauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhubnamespaceauthorizationrule"
 
 eventhubnamespaceauthorizationrule.EventhubNamespaceAuthorizationRule_IsConstruct(x interface{}) *bool
 ```
@@ -412,7 +408,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.eventhubNamespaceAuthorizationRule.EventhubNamespaceAuthorizationRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhubnamespaceauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhubnamespaceauthorizationrule"
 
 eventhubnamespaceauthorizationrule.EventhubNamespaceAuthorizationRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -426,7 +422,7 @@ eventhubnamespaceauthorizationrule.EventhubNamespaceAuthorizationRule_IsTerrafor
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.eventhubNamespaceAuthorizationRule.EventhubNamespaceAuthorizationRule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhubnamespaceauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhubnamespaceauthorizationrule"
 
 eventhubnamespaceauthorizationrule.EventhubNamespaceAuthorizationRule_IsTerraformResource(x interface{}) *bool
 ```
@@ -440,7 +436,7 @@ eventhubnamespaceauthorizationrule.EventhubNamespaceAuthorizationRule_IsTerrafor
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.eventhubNamespaceAuthorizationRule.EventhubNamespaceAuthorizationRule.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhubnamespaceauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhubnamespaceauthorizationrule"
 
 eventhubnamespaceauthorizationrule.EventhubNamespaceAuthorizationRule_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -911,7 +907,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventhubNamespaceAuthorizationRule.EventhubNamespaceAuthorizationRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhubnamespaceauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhubnamespaceauthorizationrule"
 
 &eventhubnamespaceauthorizationrule.EventhubNamespaceAuthorizationRuleConfig {
 	Connection: interface{},
@@ -928,7 +924,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhubnamespace
 	Listen: interface{},
 	Manage: interface{},
 	Send: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.eventhubNamespaceAuthorizationRule.EventhubNamespaceAuthorizationRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.eventhubNamespaceAuthorizationRule.EventhubNamespaceAuthorizationRuleTimeouts,
 }
 ```
 
@@ -1130,7 +1126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventhubNamespaceAuthorizationRule.EventhubNamespaceAuthorizationRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhubnamespaceauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhubnamespaceauthorizationrule"
 
 &eventhubnamespaceauthorizationrule.EventhubNamespaceAuthorizationRuleTimeouts {
 	Create: *string,
@@ -1206,7 +1202,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventhubNamespaceAuthorizationRule.EventhubNamespaceAuthorizationRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhubnamespaceauthorizationrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhubnamespaceauthorizationrule"
 
 eventhubnamespaceauthorizationrule.NewEventhubNamespaceAuthorizationRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventhubNamespaceAuthorizationRuleTimeoutsOutputReference
 ```

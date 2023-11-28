@@ -1,7 +1,3 @@
-# `azurerm_data_factory_linked_service_azure_search`
-
-Refer to the Terraform Registory for docs: [`azurerm_data_factory_linked_service_azure_search`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/data_factory_linked_service_azure_search).
-
 # `dataFactoryLinkedServiceAzureSearch` Submodule <a name="`dataFactoryLinkedServiceAzureSearch` Submodule" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureSearch"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

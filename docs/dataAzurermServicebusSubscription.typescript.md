@@ -1,7 +1,3 @@
-# `data_azurerm_servicebus_subscription`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_servicebus_subscription`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/servicebus_subscription).
-
 # `dataAzurermServicebusSubscription` Submodule <a name="`dataAzurermServicebusSubscription` Submodule" id="@cdktf/provider-azurerm.dataAzurermServicebusSubscription"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

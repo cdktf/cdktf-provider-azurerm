@@ -1,7 +1,3 @@
-# `azurerm_lab_service_schedule`
-
-Refer to the Terraform Registory for docs: [`azurerm_lab_service_schedule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/lab_service_schedule).
-
 # `labServiceSchedule` Submodule <a name="`labServiceSchedule` Submodule" id="@cdktf/provider-azurerm.labServiceSchedule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServiceSchedule.LabServiceSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/labserviceschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceschedule"
 
 labserviceschedule.NewLabServiceSchedule(scope Construct, id *string, config LabServiceScheduleConfig) LabServiceSchedule
 ```
@@ -393,7 +389,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.labServiceSchedule.LabServiceSchedule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/labserviceschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceschedule"
 
 labserviceschedule.LabServiceSchedule_IsConstruct(x interface{}) *bool
 ```
@@ -425,7 +421,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.labServiceSchedule.LabServiceSchedule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/labserviceschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceschedule"
 
 labserviceschedule.LabServiceSchedule_IsTerraformElement(x interface{}) *bool
 ```
@@ -439,7 +435,7 @@ labserviceschedule.LabServiceSchedule_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.labServiceSchedule.LabServiceSchedule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/labserviceschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceschedule"
 
 labserviceschedule.LabServiceSchedule_IsTerraformResource(x interface{}) *bool
 ```
@@ -453,7 +449,7 @@ labserviceschedule.LabServiceSchedule_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.labServiceSchedule.LabServiceSchedule.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/labserviceschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceschedule"
 
 labserviceschedule.LabServiceSchedule_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -880,7 +876,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServiceSchedule.LabServiceScheduleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/labserviceschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceschedule"
 
 &labserviceschedule.LabServiceScheduleConfig {
 	Connection: interface{},
@@ -896,9 +892,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/labserviceschedul
 	TimeZone: *string,
 	Id: *string,
 	Notes: *string,
-	Recurrence: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.labServiceSchedule.LabServiceScheduleRecurrence,
+	Recurrence: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.labServiceSchedule.LabServiceScheduleRecurrence,
 	StartTime: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.labServiceSchedule.LabServiceScheduleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.labServiceSchedule.LabServiceScheduleTimeouts,
 }
 ```
 
@@ -1115,7 +1111,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServiceSchedule.LabServiceScheduleRecurrence.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/labserviceschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceschedule"
 
 &labserviceschedule.LabServiceScheduleRecurrence {
 	ExpirationDate: *string,
@@ -1189,7 +1185,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.labServiceSchedule.LabServiceScheduleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/labserviceschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceschedule"
 
 &labserviceschedule.LabServiceScheduleTimeouts {
 	Create: *string,
@@ -1265,7 +1261,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServiceSchedule.LabServiceScheduleRecurrenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/labserviceschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceschedule"
 
 labserviceschedule.NewLabServiceScheduleRecurrenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LabServiceScheduleRecurrenceOutputReference
 ```
@@ -1616,7 +1612,7 @@ func InternalValue() LabServiceScheduleRecurrence
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.labServiceSchedule.LabServiceScheduleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/labserviceschedule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/labserviceschedule"
 
 labserviceschedule.NewLabServiceScheduleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LabServiceScheduleTimeoutsOutputReference
 ```

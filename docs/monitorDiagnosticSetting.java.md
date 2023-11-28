@@ -1,7 +1,3 @@
-# `azurerm_monitor_diagnostic_setting`
-
-Refer to the Terraform Registory for docs: [`azurerm_monitor_diagnostic_setting`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_diagnostic_setting).
-
 # `monitorDiagnosticSetting` Submodule <a name="`monitorDiagnosticSetting` Submodule" id="@cdktf/provider-azurerm.monitorDiagnosticSetting"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `azurerm_dev_test_schedule`
-
-Refer to the Terraform Registory for docs: [`azurerm_dev_test_schedule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dev_test_schedule).
-
 # `devTestSchedule` Submodule <a name="`devTestSchedule` Submodule" id="@cdktf/provider-azurerm.devTestSchedule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

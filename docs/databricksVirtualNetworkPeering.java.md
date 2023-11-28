@@ -1,7 +1,3 @@
-# `azurerm_databricks_virtual_network_peering`
-
-Refer to the Terraform Registory for docs: [`azurerm_databricks_virtual_network_peering`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databricks_virtual_network_peering).
-
 # `databricksVirtualNetworkPeering` Submodule <a name="`databricksVirtualNetworkPeering` Submodule" id="@cdktf/provider-azurerm.databricksVirtualNetworkPeering"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

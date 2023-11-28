@@ -1,7 +1,3 @@
-# `azurerm_kubernetes_fleet_manager`
-
-Refer to the Terraform Registory for docs: [`azurerm_kubernetes_fleet_manager`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/kubernetes_fleet_manager).
-
 # `kubernetesFleetManager` Submodule <a name="`kubernetesFleetManager` Submodule" id="@cdktf/provider-azurerm.kubernetesFleetManager"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

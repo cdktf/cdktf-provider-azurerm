@@ -1,7 +1,3 @@
-# `data_azurerm_netapp_snapshot`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_netapp_snapshot`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/netapp_snapshot).
-
 # `dataAzurermNetappSnapshot` Submodule <a name="`dataAzurermNetappSnapshot` Submodule" id="@cdktf/provider-azurerm.dataAzurermNetappSnapshot"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshot.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnetappsnapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappsnapshot"
 
 dataazurermnetappsnapshot.NewDataAzurermNetappSnapshot(scope Construct, id *string, config DataAzurermNetappSnapshotConfig) DataAzurermNetappSnapshot
 ```
@@ -298,7 +294,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshot.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnetappsnapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappsnapshot"
 
 dataazurermnetappsnapshot.DataAzurermNetappSnapshot_IsConstruct(x interface{}) *bool
 ```
@@ -330,7 +326,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshot.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnetappsnapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappsnapshot"
 
 dataazurermnetappsnapshot.DataAzurermNetappSnapshot_IsTerraformElement(x interface{}) *bool
 ```
@@ -344,7 +340,7 @@ dataazurermnetappsnapshot.DataAzurermNetappSnapshot_IsTerraformElement(x interfa
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshot.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnetappsnapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappsnapshot"
 
 dataazurermnetappsnapshot.DataAzurermNetappSnapshot_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -358,7 +354,7 @@ dataazurermnetappsnapshot.DataAzurermNetappSnapshot_IsTerraformDataSource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshot.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnetappsnapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappsnapshot"
 
 dataazurermnetappsnapshot.DataAzurermNetappSnapshot_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -730,7 +726,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshotConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnetappsnapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappsnapshot"
 
 &dataazurermnetappsnapshot.DataAzurermNetappSnapshotConfig {
 	Connection: interface{},
@@ -746,7 +742,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnetapp
 	ResourceGroupName: *string,
 	VolumeName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermNetappSnapshot.DataAzurermNetappSnapshotTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshotTimeouts,
 }
 ```
 
@@ -935,7 +931,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshotTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnetappsnapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappsnapshot"
 
 &dataazurermnetappsnapshot.DataAzurermNetappSnapshotTimeouts {
 	Read: *string,
@@ -969,7 +965,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshotTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnetappsnapshot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappsnapshot"
 
 dataazurermnetappsnapshot.NewDataAzurermNetappSnapshotTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermNetappSnapshotTimeoutsOutputReference
 ```

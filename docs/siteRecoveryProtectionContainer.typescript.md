@@ -1,7 +1,3 @@
-# `azurerm_site_recovery_protection_container`
-
-Refer to the Terraform Registory for docs: [`azurerm_site_recovery_protection_container`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/site_recovery_protection_container).
-
 # `siteRecoveryProtectionContainer` Submodule <a name="`siteRecoveryProtectionContainer` Submodule" id="@cdktf/provider-azurerm.siteRecoveryProtectionContainer"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

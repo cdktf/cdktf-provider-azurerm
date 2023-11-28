@@ -1,7 +1,3 @@
-# `data_azurerm_key_vault_certificates`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_key_vault_certificates`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/key_vault_certificates).
-
 # `dataAzurermKeyVaultCertificates` Submodule <a name="`dataAzurermKeyVaultCertificates` Submodule" id="@cdktf/provider-azurerm.dataAzurermKeyVaultCertificates"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

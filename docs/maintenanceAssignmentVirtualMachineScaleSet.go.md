@@ -1,7 +1,3 @@
-# `azurerm_maintenance_assignment_virtual_machine_scale_set`
-
-Refer to the Terraform Registory for docs: [`azurerm_maintenance_assignment_virtual_machine_scale_set`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/maintenance_assignment_virtual_machine_scale_set).
-
 # `maintenanceAssignmentVirtualMachineScaleSet` Submodule <a name="`maintenanceAssignmentVirtualMachineScaleSet` Submodule" id="@cdktf/provider-azurerm.maintenanceAssignmentVirtualMachineScaleSet"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.maintenanceAssignmentVirtualMachineScaleSet.MaintenanceAssignmentVirtualMachineScaleSet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/maintenanceassignmentvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/maintenanceassignmentvirtualmachinescaleset"
 
 maintenanceassignmentvirtualmachinescaleset.NewMaintenanceAssignmentVirtualMachineScaleSet(scope Construct, id *string, config MaintenanceAssignmentVirtualMachineScaleSetConfig) MaintenanceAssignmentVirtualMachineScaleSet
 ```
@@ -359,7 +355,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.maintenanceAssignmentVirtualMachineScaleSet.MaintenanceAssignmentVirtualMachineScaleSet.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/maintenanceassignmentvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/maintenanceassignmentvirtualmachinescaleset"
 
 maintenanceassignmentvirtualmachinescaleset.MaintenanceAssignmentVirtualMachineScaleSet_IsConstruct(x interface{}) *bool
 ```
@@ -391,7 +387,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.maintenanceAssignmentVirtualMachineScaleSet.MaintenanceAssignmentVirtualMachineScaleSet.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/maintenanceassignmentvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/maintenanceassignmentvirtualmachinescaleset"
 
 maintenanceassignmentvirtualmachinescaleset.MaintenanceAssignmentVirtualMachineScaleSet_IsTerraformElement(x interface{}) *bool
 ```
@@ -405,7 +401,7 @@ maintenanceassignmentvirtualmachinescaleset.MaintenanceAssignmentVirtualMachineS
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.maintenanceAssignmentVirtualMachineScaleSet.MaintenanceAssignmentVirtualMachineScaleSet.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/maintenanceassignmentvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/maintenanceassignmentvirtualmachinescaleset"
 
 maintenanceassignmentvirtualmachinescaleset.MaintenanceAssignmentVirtualMachineScaleSet_IsTerraformResource(x interface{}) *bool
 ```
@@ -419,7 +415,7 @@ maintenanceassignmentvirtualmachinescaleset.MaintenanceAssignmentVirtualMachineS
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.maintenanceAssignmentVirtualMachineScaleSet.MaintenanceAssignmentVirtualMachineScaleSet.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/maintenanceassignmentvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/maintenanceassignmentvirtualmachinescaleset"
 
 maintenanceassignmentvirtualmachinescaleset.MaintenanceAssignmentVirtualMachineScaleSet_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -758,7 +754,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.maintenanceAssignmentVirtualMachineScaleSet.MaintenanceAssignmentVirtualMachineScaleSetConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/maintenanceassignmentvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/maintenanceassignmentvirtualmachinescaleset"
 
 &maintenanceassignmentvirtualmachinescaleset.MaintenanceAssignmentVirtualMachineScaleSetConfig {
 	Connection: interface{},
@@ -772,7 +768,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/maintenanceassign
 	MaintenanceConfigurationId: *string,
 	VirtualMachineScaleSetId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.maintenanceAssignmentVirtualMachineScaleSet.MaintenanceAssignmentVirtualMachineScaleSetTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.maintenanceAssignmentVirtualMachineScaleSet.MaintenanceAssignmentVirtualMachineScaleSetTimeouts,
 }
 ```
 
@@ -935,7 +931,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.maintenanceAssignmentVirtualMachineScaleSet.MaintenanceAssignmentVirtualMachineScaleSetTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/maintenanceassignmentvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/maintenanceassignmentvirtualmachinescaleset"
 
 &maintenanceassignmentvirtualmachinescaleset.MaintenanceAssignmentVirtualMachineScaleSetTimeouts {
 	Create: *string,
@@ -997,7 +993,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.maintenanceAssignmentVirtualMachineScaleSet.MaintenanceAssignmentVirtualMachineScaleSetTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/maintenanceassignmentvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/maintenanceassignmentvirtualmachinescaleset"
 
 maintenanceassignmentvirtualmachinescaleset.NewMaintenanceAssignmentVirtualMachineScaleSetTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MaintenanceAssignmentVirtualMachineScaleSetTimeoutsOutputReference
 ```

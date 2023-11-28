@@ -1,7 +1,3 @@
-# `data_azurerm_api_management_gateway`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_api_management_gateway`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/api_management_gateway).
-
 # `dataAzurermApiManagementGateway` Submodule <a name="`dataAzurermApiManagementGateway` Submodule" id="@cdktf/provider-azurerm.dataAzurermApiManagementGateway"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermApiManagementGateway.DataAzurermApiManagementGateway.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermapimanagementgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermapimanagementgateway"
 
 dataazurermapimanagementgateway.NewDataAzurermApiManagementGateway(scope Construct, id *string, config DataAzurermApiManagementGatewayConfig) DataAzurermApiManagementGateway
 ```
@@ -298,7 +294,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermApiManagementGateway.DataAzurermApiManagementGateway.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermapimanagementgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermapimanagementgateway"
 
 dataazurermapimanagementgateway.DataAzurermApiManagementGateway_IsConstruct(x interface{}) *bool
 ```
@@ -330,7 +326,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermApiManagementGateway.DataAzurermApiManagementGateway.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermapimanagementgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermapimanagementgateway"
 
 dataazurermapimanagementgateway.DataAzurermApiManagementGateway_IsTerraformElement(x interface{}) *bool
 ```
@@ -344,7 +340,7 @@ dataazurermapimanagementgateway.DataAzurermApiManagementGateway_IsTerraformEleme
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermApiManagementGateway.DataAzurermApiManagementGateway.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermapimanagementgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermapimanagementgateway"
 
 dataazurermapimanagementgateway.DataAzurermApiManagementGateway_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -358,7 +354,7 @@ dataazurermapimanagementgateway.DataAzurermApiManagementGateway_IsTerraformDataS
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermApiManagementGateway.DataAzurermApiManagementGateway.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermapimanagementgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermapimanagementgateway"
 
 dataazurermapimanagementgateway.DataAzurermApiManagementGateway_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -675,7 +671,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermApiManagementGateway.DataAzurermApiManagementGatewayConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermapimanagementgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermapimanagementgateway"
 
 &dataazurermapimanagementgateway.DataAzurermApiManagementGatewayConfig {
 	Connection: interface{},
@@ -688,7 +684,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermapiman
 	ApiManagementId: *string,
 	Name: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermApiManagementGateway.DataAzurermApiManagementGatewayTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermApiManagementGateway.DataAzurermApiManagementGatewayTimeouts,
 }
 ```
 
@@ -838,7 +834,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermApiManagementGateway.DataAzurermApiManagementGatewayLocationData.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermapimanagementgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermapimanagementgateway"
 
 &dataazurermapimanagementgateway.DataAzurermApiManagementGatewayLocationData {
 
@@ -851,7 +847,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermapiman
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermApiManagementGateway.DataAzurermApiManagementGatewayTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermapimanagementgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermapimanagementgateway"
 
 &dataazurermapimanagementgateway.DataAzurermApiManagementGatewayTimeouts {
 	Read: *string,
@@ -885,7 +881,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermApiManagementGateway.DataAzurermApiManagementGatewayLocationDataList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermapimanagementgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermapimanagementgateway"
 
 dataazurermapimanagementgateway.NewDataAzurermApiManagementGatewayLocationDataList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermApiManagementGatewayLocationDataList
 ```
@@ -1017,7 +1013,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermApiManagementGateway.DataAzurermApiManagementGatewayLocationDataOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermapimanagementgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermapimanagementgateway"
 
 dataazurermapimanagementgateway.NewDataAzurermApiManagementGatewayLocationDataOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermApiManagementGatewayLocationDataOutputReference
 ```
@@ -1328,7 +1324,7 @@ func InternalValue() DataAzurermApiManagementGatewayLocationData
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermApiManagementGateway.DataAzurermApiManagementGatewayTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermapimanagementgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermapimanagementgateway"
 
 dataazurermapimanagementgateway.NewDataAzurermApiManagementGatewayTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermApiManagementGatewayTimeoutsOutputReference
 ```

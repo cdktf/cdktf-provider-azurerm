@@ -1,7 +1,3 @@
-# `azurerm_cdn_frontdoor_firewall_policy`
-
-Refer to the Terraform Registory for docs: [`azurerm_cdn_frontdoor_firewall_policy`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_firewall_policy).
-
 # `cdnFrontdoorFirewallPolicy` Submodule <a name="`cdnFrontdoorFirewallPolicy` Submodule" id="@cdktf/provider-azurerm.cdnFrontdoorFirewallPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

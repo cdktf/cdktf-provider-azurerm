@@ -1,7 +1,3 @@
-# `azurerm_sql_virtual_network_rule`
-
-Refer to the Terraform Registory for docs: [`azurerm_sql_virtual_network_rule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/sql_virtual_network_rule).
-
 # `sqlVirtualNetworkRule` Submodule <a name="`sqlVirtualNetworkRule` Submodule" id="@cdktf/provider-azurerm.sqlVirtualNetworkRule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

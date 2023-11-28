@@ -1,7 +1,3 @@
-# `azurerm_arc_kubernetes_flux_configuration`
-
-Refer to the Terraform Registory for docs: [`azurerm_arc_kubernetes_flux_configuration`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/arc_kubernetes_flux_configuration).
-
 # `arcKubernetesFluxConfiguration` Submodule <a name="`arcKubernetesFluxConfiguration` Submodule" id="@cdktf/provider-azurerm.arcKubernetesFluxConfiguration"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

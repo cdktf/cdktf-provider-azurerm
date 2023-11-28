@@ -1,7 +1,3 @@
-# `data_azurerm_netapp_volume`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_netapp_volume`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/netapp_volume).
-
 # `dataAzurermNetappVolume` Submodule <a name="`dataAzurermNetappVolume` Submodule" id="@cdktf/provider-azurerm.dataAzurermNetappVolume"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNetappVolume.DataAzurermNetappVolume.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnetappvolume"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappvolume"
 
 dataazurermnetappvolume.NewDataAzurermNetappVolume(scope Construct, id *string, config DataAzurermNetappVolumeConfig) DataAzurermNetappVolume
 ```
@@ -305,7 +301,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermNetappVolume.DataAzurermNetappVolume.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnetappvolume"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappvolume"
 
 dataazurermnetappvolume.DataAzurermNetappVolume_IsConstruct(x interface{}) *bool
 ```
@@ -337,7 +333,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermNetappVolume.DataAzurermNetappVolume.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnetappvolume"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappvolume"
 
 dataazurermnetappvolume.DataAzurermNetappVolume_IsTerraformElement(x interface{}) *bool
 ```
@@ -351,7 +347,7 @@ dataazurermnetappvolume.DataAzurermNetappVolume_IsTerraformElement(x interface{}
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermNetappVolume.DataAzurermNetappVolume.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnetappvolume"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappvolume"
 
 dataazurermnetappvolume.DataAzurermNetappVolume_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -365,7 +361,7 @@ dataazurermnetappvolume.DataAzurermNetappVolume_IsTerraformDataSource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermNetappVolume.DataAzurermNetappVolume.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnetappvolume"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappvolume"
 
 dataazurermnetappvolume.DataAzurermNetappVolume_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -836,7 +832,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNetappVolume.DataAzurermNetappVolumeConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnetappvolume"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappvolume"
 
 &dataazurermnetappvolume.DataAzurermNetappVolumeConfig {
 	Connection: interface{},
@@ -852,7 +848,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnetapp
 	ResourceGroupName: *string,
 	Id: *string,
 	SecurityStyle: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermNetappVolume.DataAzurermNetappVolumeTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermNetappVolume.DataAzurermNetappVolumeTimeouts,
 }
 ```
 
@@ -1041,7 +1037,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNetappVolume.DataAzurermNetappVolumeDataProtectionReplication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnetappvolume"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappvolume"
 
 &dataazurermnetappvolume.DataAzurermNetappVolumeDataProtectionReplication {
 
@@ -1054,7 +1050,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnetapp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNetappVolume.DataAzurermNetappVolumeTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnetappvolume"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappvolume"
 
 &dataazurermnetappvolume.DataAzurermNetappVolumeTimeouts {
 	Read: *string,
@@ -1088,7 +1084,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNetappVolume.DataAzurermNetappVolumeDataProtectionReplicationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnetappvolume"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappvolume"
 
 dataazurermnetappvolume.NewDataAzurermNetappVolumeDataProtectionReplicationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermNetappVolumeDataProtectionReplicationList
 ```
@@ -1220,7 +1216,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNetappVolume.DataAzurermNetappVolumeDataProtectionReplicationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnetappvolume"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappvolume"
 
 dataazurermnetappvolume.NewDataAzurermNetappVolumeDataProtectionReplicationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermNetappVolumeDataProtectionReplicationOutputReference
 ```
@@ -1531,7 +1527,7 @@ func InternalValue() DataAzurermNetappVolumeDataProtectionReplication
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNetappVolume.DataAzurermNetappVolumeTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnetappvolume"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnetappvolume"
 
 dataazurermnetappvolume.NewDataAzurermNetappVolumeTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermNetappVolumeTimeoutsOutputReference
 ```

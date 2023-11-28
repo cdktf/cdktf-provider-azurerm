@@ -1,7 +1,3 @@
-# `data_azurerm_storage_management_policy`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_storage_management_policy`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/storage_management_policy).
-
 # `dataAzurermStorageManagementPolicy` Submodule <a name="`dataAzurermStorageManagementPolicy` Submodule" id="@cdktf/provider-azurerm.dataAzurermStorageManagementPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

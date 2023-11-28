@@ -1,7 +1,3 @@
-# `azurerm_iothub_route`
-
-Refer to the Terraform Registory for docs: [`azurerm_iothub_route`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iothub_route).
-
 # `iothubRoute` Submodule <a name="`iothubRoute` Submodule" id="@cdktf/provider-azurerm.iothubRoute"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothubRoute.IothubRouteA.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubroute"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubroute"
 
 iothubroute.NewIothubRouteA(scope Construct, id *string, config IothubRouteAConfig) IothubRouteA
 ```
@@ -366,7 +362,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.iothubRoute.IothubRouteA.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubroute"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubroute"
 
 iothubroute.IothubRouteA_IsConstruct(x interface{}) *bool
 ```
@@ -398,7 +394,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.iothubRoute.IothubRouteA.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubroute"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubroute"
 
 iothubroute.IothubRouteA_IsTerraformElement(x interface{}) *bool
 ```
@@ -412,7 +408,7 @@ iothubroute.IothubRouteA_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.iothubRoute.IothubRouteA.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubroute"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubroute"
 
 iothubroute.IothubRouteA_IsTerraformResource(x interface{}) *bool
 ```
@@ -426,7 +422,7 @@ iothubroute.IothubRouteA_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.iothubRoute.IothubRouteA.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubroute"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubroute"
 
 iothubroute.IothubRouteA_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -853,7 +849,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothubRoute.IothubRouteAConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubroute"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubroute"
 
 &iothubroute.IothubRouteAConfig {
 	Connection: interface{},
@@ -871,7 +867,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubroute"
 	Source: *string,
 	Condition: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.iothubRoute.IothubRouteTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.iothubRoute.IothubRouteTimeouts,
 }
 ```
 
@@ -1086,7 +1082,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothubRoute.IothubRouteTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubroute"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubroute"
 
 &iothubroute.IothubRouteTimeouts {
 	Create: *string,
@@ -1162,7 +1158,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothubRoute.IothubRouteTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubroute"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubroute"
 
 iothubroute.NewIothubRouteTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IothubRouteTimeoutsOutputReference
 ```

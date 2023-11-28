@@ -1,7 +1,3 @@
-# `azurerm_data_protection_resource_guard`
-
-Refer to the Terraform Registory for docs: [`azurerm_data_protection_resource_guard`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/data_protection_resource_guard).
-
 # `dataProtectionResourceGuard` Submodule <a name="`dataProtectionResourceGuard` Submodule" id="@cdktf/provider-azurerm.dataProtectionResourceGuard"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionresourceguard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionresourceguard"
 
 dataprotectionresourceguard.NewDataProtectionResourceGuard(scope Construct, id *string, config DataProtectionResourceGuardConfig) DataProtectionResourceGuard
 ```
@@ -373,7 +369,7 @@ func ResetVaultCriticalOperationExclusionList()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionresourceguard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionresourceguard"
 
 dataprotectionresourceguard.DataProtectionResourceGuard_IsConstruct(x interface{}) *bool
 ```
@@ -405,7 +401,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionresourceguard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionresourceguard"
 
 dataprotectionresourceguard.DataProtectionResourceGuard_IsTerraformElement(x interface{}) *bool
 ```
@@ -419,7 +415,7 @@ dataprotectionresourceguard.DataProtectionResourceGuard_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionresourceguard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionresourceguard"
 
 dataprotectionresourceguard.DataProtectionResourceGuard_IsTerraformResource(x interface{}) *bool
 ```
@@ -433,7 +429,7 @@ dataprotectionresourceguard.DataProtectionResourceGuard_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuard.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionresourceguard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionresourceguard"
 
 dataprotectionresourceguard.DataProtectionResourceGuard_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -816,7 +812,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionresourceguard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionresourceguard"
 
 &dataprotectionresourceguard.DataProtectionResourceGuardConfig {
 	Connection: interface{},
@@ -831,7 +827,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionres
 	ResourceGroupName: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataProtectionResourceGuard.DataProtectionResourceGuardTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardTimeouts,
 	VaultCriticalOperationExclusionList: *[]*string,
 }
 ```
@@ -1021,7 +1017,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionresourceguard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionresourceguard"
 
 &dataprotectionresourceguard.DataProtectionResourceGuardTimeouts {
 	Create: *string,
@@ -1097,7 +1093,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionResourceGuard.DataProtectionResourceGuardTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionresourceguard"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionresourceguard"
 
 dataprotectionresourceguard.NewDataProtectionResourceGuardTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataProtectionResourceGuardTimeoutsOutputReference
 ```

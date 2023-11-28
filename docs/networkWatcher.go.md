@@ -1,7 +1,3 @@
-# `azurerm_network_watcher`
-
-Refer to the Terraform Registory for docs: [`azurerm_network_watcher`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/network_watcher).
-
 # `networkWatcher` Submodule <a name="`networkWatcher` Submodule" id="@cdktf/provider-azurerm.networkWatcher"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkwatcher"
 
 networkwatcher.NewNetworkWatcher(scope Construct, id *string, config NetworkWatcherConfig) NetworkWatcher
 ```
@@ -366,7 +362,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkwatcher"
 
 networkwatcher.NetworkWatcher_IsConstruct(x interface{}) *bool
 ```
@@ -398,7 +394,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkwatcher"
 
 networkwatcher.NetworkWatcher_IsTerraformElement(x interface{}) *bool
 ```
@@ -412,7 +408,7 @@ networkwatcher.NetworkWatcher_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkwatcher"
 
 networkwatcher.NetworkWatcher_IsTerraformResource(x interface{}) *bool
 ```
@@ -426,7 +422,7 @@ networkwatcher.NetworkWatcher_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkwatcher"
 
 networkwatcher.NetworkWatcher_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -787,7 +783,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkWatcher.NetworkWatcherConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkwatcher"
 
 &networkwatcher.NetworkWatcherConfig {
 	Connection: interface{},
@@ -802,7 +798,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkwatcher"
 	ResourceGroupName: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.networkWatcher.NetworkWatcherTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.networkWatcher.NetworkWatcherTimeouts,
 }
 ```
 
@@ -978,7 +974,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkWatcher.NetworkWatcherTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkwatcher"
 
 &networkwatcher.NetworkWatcherTimeouts {
 	Create: *string,
@@ -1054,7 +1050,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkWatcher.NetworkWatcherTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkwatcher"
 
 networkwatcher.NewNetworkWatcherTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkWatcherTimeoutsOutputReference
 ```

@@ -1,7 +1,3 @@
-# `azurerm_confidential_ledger`
-
-Refer to the Terraform Registory for docs: [`azurerm_confidential_ledger`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/confidential_ledger).
-
 # `confidentialLedger` Submodule <a name="`confidentialLedger` Submodule" id="@cdktf/provider-azurerm.confidentialLedger"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.confidentialLedger.ConfidentialLedger.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/confidentialledger"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/confidentialledger"
 
 confidentialledger.NewConfidentialLedger(scope Construct, id *string, config ConfidentialLedgerConfig) ConfidentialLedger
 ```
@@ -399,7 +395,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.confidentialLedger.ConfidentialLedger.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/confidentialledger"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/confidentialledger"
 
 confidentialledger.ConfidentialLedger_IsConstruct(x interface{}) *bool
 ```
@@ -431,7 +427,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.confidentialLedger.ConfidentialLedger.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/confidentialledger"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/confidentialledger"
 
 confidentialledger.ConfidentialLedger_IsTerraformElement(x interface{}) *bool
 ```
@@ -445,7 +441,7 @@ confidentialledger.ConfidentialLedger_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.confidentialLedger.ConfidentialLedger.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/confidentialledger"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/confidentialledger"
 
 confidentialledger.ConfidentialLedger_IsTerraformResource(x interface{}) *bool
 ```
@@ -459,7 +455,7 @@ confidentialledger.ConfidentialLedger_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.confidentialLedger.ConfidentialLedger.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/confidentialledger"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/confidentialledger"
 
 confidentialledger.ConfidentialLedger_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -908,7 +904,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.confidentialLedger.ConfidentialLedgerAzureadBasedServicePrincipal.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/confidentialledger"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/confidentialledger"
 
 &confidentialledger.ConfidentialLedgerAzureadBasedServicePrincipal {
 	LedgerRoleName: *string,
@@ -968,7 +964,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.confidentialLedger.ConfidentialLedgerCertificateBasedSecurityPrincipal.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/confidentialledger"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/confidentialledger"
 
 &confidentialledger.ConfidentialLedgerCertificateBasedSecurityPrincipal {
 	LedgerRoleName: *string,
@@ -1014,7 +1010,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.confidentialLedger.ConfidentialLedgerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/confidentialledger"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/confidentialledger"
 
 &confidentialledger.ConfidentialLedgerConfig {
 	Connection: interface{},
@@ -1032,7 +1028,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/confidentialledge
 	CertificateBasedSecurityPrincipal: interface{},
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.confidentialLedger.ConfidentialLedgerTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.confidentialLedger.ConfidentialLedgerTimeouts,
 }
 ```
 
@@ -1251,7 +1247,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.confidentialLedger.ConfidentialLedgerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/confidentialledger"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/confidentialledger"
 
 &confidentialledger.ConfidentialLedgerTimeouts {
 	Create: *string,
@@ -1327,7 +1323,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.confidentialLedger.ConfidentialLedgerAzureadBasedServicePrincipalList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/confidentialledger"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/confidentialledger"
 
 confidentialledger.NewConfidentialLedgerAzureadBasedServicePrincipalList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ConfidentialLedgerAzureadBasedServicePrincipalList
 ```
@@ -1470,7 +1466,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.confidentialLedger.ConfidentialLedgerAzureadBasedServicePrincipalOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/confidentialledger"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/confidentialledger"
 
 confidentialledger.NewConfidentialLedgerAzureadBasedServicePrincipalOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ConfidentialLedgerAzureadBasedServicePrincipalOutputReference
 ```
@@ -1803,7 +1799,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.confidentialLedger.ConfidentialLedgerCertificateBasedSecurityPrincipalList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/confidentialledger"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/confidentialledger"
 
 confidentialledger.NewConfidentialLedgerCertificateBasedSecurityPrincipalList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ConfidentialLedgerCertificateBasedSecurityPrincipalList
 ```
@@ -1946,7 +1942,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.confidentialLedger.ConfidentialLedgerCertificateBasedSecurityPrincipalOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/confidentialledger"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/confidentialledger"
 
 confidentialledger.NewConfidentialLedgerCertificateBasedSecurityPrincipalOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ConfidentialLedgerCertificateBasedSecurityPrincipalOutputReference
 ```
@@ -2257,7 +2253,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.confidentialLedger.ConfidentialLedgerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/confidentialledger"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/confidentialledger"
 
 confidentialledger.NewConfidentialLedgerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ConfidentialLedgerTimeoutsOutputReference
 ```

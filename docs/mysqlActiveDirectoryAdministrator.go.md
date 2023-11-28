@@ -1,7 +1,3 @@
-# `azurerm_mysql_active_directory_administrator`
-
-Refer to the Terraform Registory for docs: [`azurerm_mysql_active_directory_administrator`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/mysql_active_directory_administrator).
-
 # `mysqlActiveDirectoryAdministrator` Submodule <a name="`mysqlActiveDirectoryAdministrator` Submodule" id="@cdktf/provider-azurerm.mysqlActiveDirectoryAdministrator"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlActiveDirectoryAdministrator.MysqlActiveDirectoryAdministrator.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqlactivedirectoryadministrator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlactivedirectoryadministrator"
 
 mysqlactivedirectoryadministrator.NewMysqlActiveDirectoryAdministrator(scope Construct, id *string, config MysqlActiveDirectoryAdministratorConfig) MysqlActiveDirectoryAdministrator
 ```
@@ -359,7 +355,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mysqlActiveDirectoryAdministrator.MysqlActiveDirectoryAdministrator.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqlactivedirectoryadministrator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlactivedirectoryadministrator"
 
 mysqlactivedirectoryadministrator.MysqlActiveDirectoryAdministrator_IsConstruct(x interface{}) *bool
 ```
@@ -391,7 +387,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mysqlActiveDirectoryAdministrator.MysqlActiveDirectoryAdministrator.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqlactivedirectoryadministrator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlactivedirectoryadministrator"
 
 mysqlactivedirectoryadministrator.MysqlActiveDirectoryAdministrator_IsTerraformElement(x interface{}) *bool
 ```
@@ -405,7 +401,7 @@ mysqlactivedirectoryadministrator.MysqlActiveDirectoryAdministrator_IsTerraformE
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mysqlActiveDirectoryAdministrator.MysqlActiveDirectoryAdministrator.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqlactivedirectoryadministrator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlactivedirectoryadministrator"
 
 mysqlactivedirectoryadministrator.MysqlActiveDirectoryAdministrator_IsTerraformResource(x interface{}) *bool
 ```
@@ -419,7 +415,7 @@ mysqlactivedirectoryadministrator.MysqlActiveDirectoryAdministrator_IsTerraformR
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.mysqlActiveDirectoryAdministrator.MysqlActiveDirectoryAdministrator.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqlactivedirectoryadministrator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlactivedirectoryadministrator"
 
 mysqlactivedirectoryadministrator.MysqlActiveDirectoryAdministrator_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -802,7 +798,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mysqlActiveDirectoryAdministrator.MysqlActiveDirectoryAdministratorConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqlactivedirectoryadministrator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlactivedirectoryadministrator"
 
 &mysqlactivedirectoryadministrator.MysqlActiveDirectoryAdministratorConfig {
 	Connection: interface{},
@@ -818,7 +814,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqlactivedirect
 	ServerName: *string,
 	TenantId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mysqlActiveDirectoryAdministrator.MysqlActiveDirectoryAdministratorTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mysqlActiveDirectoryAdministrator.MysqlActiveDirectoryAdministratorTimeouts,
 }
 ```
 
@@ -1007,7 +1003,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mysqlActiveDirectoryAdministrator.MysqlActiveDirectoryAdministratorTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqlactivedirectoryadministrator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlactivedirectoryadministrator"
 
 &mysqlactivedirectoryadministrator.MysqlActiveDirectoryAdministratorTimeouts {
 	Create: *string,
@@ -1083,7 +1079,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlActiveDirectoryAdministrator.MysqlActiveDirectoryAdministratorTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqlactivedirectoryadministrator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlactivedirectoryadministrator"
 
 mysqlactivedirectoryadministrator.NewMysqlActiveDirectoryAdministratorTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MysqlActiveDirectoryAdministratorTimeoutsOutputReference
 ```

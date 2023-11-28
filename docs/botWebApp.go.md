@@ -1,7 +1,3 @@
-# `azurerm_bot_web_app`
-
-Refer to the Terraform Registory for docs: [`azurerm_bot_web_app`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/bot_web_app).
-
 # `botWebApp` Submodule <a name="`botWebApp` Submodule" id="@cdktf/provider-azurerm.botWebApp"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.botWebApp.BotWebApp.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botwebapp"
 
 botwebapp.NewBotWebApp(scope Construct, id *string, config BotWebAppConfig) BotWebApp
 ```
@@ -415,7 +411,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.botWebApp.BotWebApp.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botwebapp"
 
 botwebapp.BotWebApp_IsConstruct(x interface{}) *bool
 ```
@@ -447,7 +443,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.botWebApp.BotWebApp.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botwebapp"
 
 botwebapp.BotWebApp_IsTerraformElement(x interface{}) *bool
 ```
@@ -461,7 +457,7 @@ botwebapp.BotWebApp_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.botWebApp.BotWebApp.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botwebapp"
 
 botwebapp.BotWebApp_IsTerraformResource(x interface{}) *bool
 ```
@@ -475,7 +471,7 @@ botwebapp.BotWebApp_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.botWebApp.BotWebApp.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botwebapp"
 
 botwebapp.BotWebApp_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1034,7 +1030,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.botWebApp.BotWebAppConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botwebapp"
 
 &botwebapp.BotWebAppConfig {
 	Connection: interface{},
@@ -1058,7 +1054,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botwebapp"
 	LuisAppIds: *[]*string,
 	LuisKey: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.botWebApp.BotWebAppTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.botWebApp.BotWebAppTimeouts,
 }
 ```
 
@@ -1351,7 +1347,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.botWebApp.BotWebAppTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botwebapp"
 
 &botwebapp.BotWebAppTimeouts {
 	Create: *string,
@@ -1427,7 +1423,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.botWebApp.BotWebAppTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botwebapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botwebapp"
 
 botwebapp.NewBotWebAppTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BotWebAppTimeoutsOutputReference
 ```

@@ -1,7 +1,3 @@
-# `azurerm_media_live_event`
-
-Refer to the Terraform Registory for docs: [`azurerm_media_live_event`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_live_event).
-
 # `mediaLiveEvent` Submodule <a name="`mediaLiveEvent` Submodule" id="@cdktf/provider-azurerm.mediaLiveEvent"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

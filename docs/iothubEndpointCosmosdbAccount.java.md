@@ -1,7 +1,3 @@
-# `azurerm_iothub_endpoint_cosmosdb_account`
-
-Refer to the Terraform Registory for docs: [`azurerm_iothub_endpoint_cosmosdb_account`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iothub_endpoint_cosmosdb_account).
-
 # `iothubEndpointCosmosdbAccount` Submodule <a name="`iothubEndpointCosmosdbAccount` Submodule" id="@cdktf/provider-azurerm.iothubEndpointCosmosdbAccount"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

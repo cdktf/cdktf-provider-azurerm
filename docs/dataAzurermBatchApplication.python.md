@@ -1,7 +1,3 @@
-# `data_azurerm_batch_application`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_batch_application`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/batch_application).
-
 # `dataAzurermBatchApplication` Submodule <a name="`dataAzurermBatchApplication` Submodule" id="@cdktf/provider-azurerm.dataAzurermBatchApplication"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

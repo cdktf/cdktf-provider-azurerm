@@ -1,7 +1,3 @@
-# `azurerm_network_packet_capture`
-
-Refer to the Terraform Registory for docs: [`azurerm_network_packet_capture`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/network_packet_capture).
-
 # `networkPacketCapture` Submodule <a name="`networkPacketCapture` Submodule" id="@cdktf/provider-azurerm.networkPacketCapture"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

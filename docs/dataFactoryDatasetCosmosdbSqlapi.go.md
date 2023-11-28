@@ -1,7 +1,3 @@
-# `azurerm_data_factory_dataset_cosmosdb_sqlapi`
-
-Refer to the Terraform Registory for docs: [`azurerm_data_factory_dataset_cosmosdb_sqlapi`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/data_factory_dataset_cosmosdb_sqlapi).
-
 # `dataFactoryDatasetCosmosdbSqlapi` Submodule <a name="`dataFactoryDatasetCosmosdbSqlapi` Submodule" id="@cdktf/provider-azurerm.dataFactoryDatasetCosmosdbSqlapi"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryDatasetCosmosdbSqlapi.DataFactoryDatasetCosmosdbSqlapi.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorydatasetcosmosdbsqlapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetcosmosdbsqlapi"
 
 datafactorydatasetcosmosdbsqlapi.NewDataFactoryDatasetCosmosdbSqlapi(scope Construct, id *string, config DataFactoryDatasetCosmosdbSqlapiConfig) DataFactoryDatasetCosmosdbSqlapi
 ```
@@ -421,7 +417,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataFactoryDatasetCosmosdbSqlapi.DataFactoryDatasetCosmosdbSqlapi.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorydatasetcosmosdbsqlapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetcosmosdbsqlapi"
 
 datafactorydatasetcosmosdbsqlapi.DataFactoryDatasetCosmosdbSqlapi_IsConstruct(x interface{}) *bool
 ```
@@ -453,7 +449,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataFactoryDatasetCosmosdbSqlapi.DataFactoryDatasetCosmosdbSqlapi.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorydatasetcosmosdbsqlapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetcosmosdbsqlapi"
 
 datafactorydatasetcosmosdbsqlapi.DataFactoryDatasetCosmosdbSqlapi_IsTerraformElement(x interface{}) *bool
 ```
@@ -467,7 +463,7 @@ datafactorydatasetcosmosdbsqlapi.DataFactoryDatasetCosmosdbSqlapi_IsTerraformEle
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataFactoryDatasetCosmosdbSqlapi.DataFactoryDatasetCosmosdbSqlapi.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorydatasetcosmosdbsqlapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetcosmosdbsqlapi"
 
 datafactorydatasetcosmosdbsqlapi.DataFactoryDatasetCosmosdbSqlapi_IsTerraformResource(x interface{}) *bool
 ```
@@ -481,7 +477,7 @@ datafactorydatasetcosmosdbsqlapi.DataFactoryDatasetCosmosdbSqlapi_IsTerraformRes
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataFactoryDatasetCosmosdbSqlapi.DataFactoryDatasetCosmosdbSqlapi.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorydatasetcosmosdbsqlapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetcosmosdbsqlapi"
 
 datafactorydatasetcosmosdbsqlapi.DataFactoryDatasetCosmosdbSqlapi_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -974,7 +970,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryDatasetCosmosdbSqlapi.DataFactoryDatasetCosmosdbSqlapiConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorydatasetcosmosdbsqlapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetcosmosdbsqlapi"
 
 &datafactorydatasetcosmosdbsqlapi.DataFactoryDatasetCosmosdbSqlapiConfig {
 	Connection: interface{},
@@ -995,7 +991,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorydatase
 	Id: *string,
 	Parameters: *map[string]*string,
 	SchemaColumn: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataFactoryDatasetCosmosdbSqlapi.DataFactoryDatasetCosmosdbSqlapiTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataFactoryDatasetCosmosdbSqlapi.DataFactoryDatasetCosmosdbSqlapiTimeouts,
 }
 ```
 
@@ -1251,7 +1247,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryDatasetCosmosdbSqlapi.DataFactoryDatasetCosmosdbSqlapiSchemaColumn.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorydatasetcosmosdbsqlapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetcosmosdbsqlapi"
 
 &datafactorydatasetcosmosdbsqlapi.DataFactoryDatasetCosmosdbSqlapiSchemaColumn {
 	Name: *string,
@@ -1311,7 +1307,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryDatasetCosmosdbSqlapi.DataFactoryDatasetCosmosdbSqlapiTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorydatasetcosmosdbsqlapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetcosmosdbsqlapi"
 
 &datafactorydatasetcosmosdbsqlapi.DataFactoryDatasetCosmosdbSqlapiTimeouts {
 	Create: *string,
@@ -1387,7 +1383,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryDatasetCosmosdbSqlapi.DataFactoryDatasetCosmosdbSqlapiSchemaColumnList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorydatasetcosmosdbsqlapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetcosmosdbsqlapi"
 
 datafactorydatasetcosmosdbsqlapi.NewDataFactoryDatasetCosmosdbSqlapiSchemaColumnList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataFactoryDatasetCosmosdbSqlapiSchemaColumnList
 ```
@@ -1530,7 +1526,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryDatasetCosmosdbSqlapi.DataFactoryDatasetCosmosdbSqlapiSchemaColumnOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorydatasetcosmosdbsqlapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetcosmosdbsqlapi"
 
 datafactorydatasetcosmosdbsqlapi.NewDataFactoryDatasetCosmosdbSqlapiSchemaColumnOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataFactoryDatasetCosmosdbSqlapiSchemaColumnOutputReference
 ```
@@ -1877,7 +1873,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryDatasetCosmosdbSqlapi.DataFactoryDatasetCosmosdbSqlapiTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorydatasetcosmosdbsqlapi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/datafactorydatasetcosmosdbsqlapi"
 
 datafactorydatasetcosmosdbsqlapi.NewDataFactoryDatasetCosmosdbSqlapiTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryDatasetCosmosdbSqlapiTimeoutsOutputReference
 ```

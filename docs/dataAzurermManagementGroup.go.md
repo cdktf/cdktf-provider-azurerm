@@ -1,7 +1,3 @@
-# `data_azurerm_management_group`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_management_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/management_group).
-
 # `dataAzurermManagementGroup` Submodule <a name="`dataAzurermManagementGroup` Submodule" id="@cdktf/provider-azurerm.dataAzurermManagementGroup"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermManagementGroup.DataAzurermManagementGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmanagementgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmanagementgroup"
 
 dataazurermmanagementgroup.NewDataAzurermManagementGroup(scope Construct, id *string, config DataAzurermManagementGroupConfig) DataAzurermManagementGroup
 ```
@@ -312,7 +308,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermManagementGroup.DataAzurermManagementGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmanagementgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmanagementgroup"
 
 dataazurermmanagementgroup.DataAzurermManagementGroup_IsConstruct(x interface{}) *bool
 ```
@@ -344,7 +340,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermManagementGroup.DataAzurermManagementGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmanagementgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmanagementgroup"
 
 dataazurermmanagementgroup.DataAzurermManagementGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -358,7 +354,7 @@ dataazurermmanagementgroup.DataAzurermManagementGroup_IsTerraformElement(x inter
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermManagementGroup.DataAzurermManagementGroup.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmanagementgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmanagementgroup"
 
 dataazurermmanagementgroup.DataAzurermManagementGroup_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -372,7 +368,7 @@ dataazurermmanagementgroup.DataAzurermManagementGroup_IsTerraformDataSource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermManagementGroup.DataAzurermManagementGroup.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmanagementgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmanagementgroup"
 
 dataazurermmanagementgroup.DataAzurermManagementGroup_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -722,7 +718,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermManagementGroup.DataAzurermManagementGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmanagementgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmanagementgroup"
 
 &dataazurermmanagementgroup.DataAzurermManagementGroupConfig {
 	Connection: interface{},
@@ -735,7 +731,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmanage
 	DisplayName: *string,
 	Id: *string,
 	Name: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermManagementGroup.DataAzurermManagementGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermManagementGroup.DataAzurermManagementGroupTimeouts,
 }
 ```
 
@@ -885,7 +881,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermManagementGroup.DataAzurermManagementGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmanagementgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmanagementgroup"
 
 &dataazurermmanagementgroup.DataAzurermManagementGroupTimeouts {
 	Read: *string,
@@ -919,7 +915,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermManagementGroup.DataAzurermManagementGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmanagementgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmanagementgroup"
 
 dataazurermmanagementgroup.NewDataAzurermManagementGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermManagementGroupTimeoutsOutputReference
 ```

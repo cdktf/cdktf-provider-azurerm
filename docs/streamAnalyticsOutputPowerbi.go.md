@@ -1,7 +1,3 @@
-# `azurerm_stream_analytics_output_powerbi`
-
-Refer to the Terraform Registory for docs: [`azurerm_stream_analytics_output_powerbi`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/stream_analytics_output_powerbi).
-
 # `streamAnalyticsOutputPowerbi` Submodule <a name="`streamAnalyticsOutputPowerbi` Submodule" id="@cdktf/provider-azurerm.streamAnalyticsOutputPowerbi"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsOutputPowerbi.StreamAnalyticsOutputPowerbi.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsoutputpowerbi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputpowerbi"
 
 streamanalyticsoutputpowerbi.NewStreamAnalyticsOutputPowerbi(scope Construct, id *string, config StreamAnalyticsOutputPowerbiConfig) StreamAnalyticsOutputPowerbi
 ```
@@ -373,7 +369,7 @@ func ResetTokenUserPrincipalName()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.streamAnalyticsOutputPowerbi.StreamAnalyticsOutputPowerbi.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsoutputpowerbi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputpowerbi"
 
 streamanalyticsoutputpowerbi.StreamAnalyticsOutputPowerbi_IsConstruct(x interface{}) *bool
 ```
@@ -405,7 +401,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.streamAnalyticsOutputPowerbi.StreamAnalyticsOutputPowerbi.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsoutputpowerbi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputpowerbi"
 
 streamanalyticsoutputpowerbi.StreamAnalyticsOutputPowerbi_IsTerraformElement(x interface{}) *bool
 ```
@@ -419,7 +415,7 @@ streamanalyticsoutputpowerbi.StreamAnalyticsOutputPowerbi_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.streamAnalyticsOutputPowerbi.StreamAnalyticsOutputPowerbi.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsoutputpowerbi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputpowerbi"
 
 streamanalyticsoutputpowerbi.StreamAnalyticsOutputPowerbi_IsTerraformResource(x interface{}) *bool
 ```
@@ -433,7 +429,7 @@ streamanalyticsoutputpowerbi.StreamAnalyticsOutputPowerbi_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.streamAnalyticsOutputPowerbi.StreamAnalyticsOutputPowerbi.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsoutputpowerbi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputpowerbi"
 
 streamanalyticsoutputpowerbi.StreamAnalyticsOutputPowerbi_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -882,7 +878,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsOutputPowerbi.StreamAnalyticsOutputPowerbiConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsoutputpowerbi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputpowerbi"
 
 &streamanalyticsoutputpowerbi.StreamAnalyticsOutputPowerbiConfig {
 	Connection: interface{},
@@ -899,7 +895,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsou
 	StreamAnalyticsJobId: *string,
 	Table: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.streamAnalyticsOutputPowerbi.StreamAnalyticsOutputPowerbiTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.streamAnalyticsOutputPowerbi.StreamAnalyticsOutputPowerbiTimeouts,
 	TokenUserDisplayName: *string,
 	TokenUserPrincipalName: *string,
 }
@@ -1129,7 +1125,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsOutputPowerbi.StreamAnalyticsOutputPowerbiTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsoutputpowerbi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputpowerbi"
 
 &streamanalyticsoutputpowerbi.StreamAnalyticsOutputPowerbiTimeouts {
 	Create: *string,
@@ -1205,7 +1201,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsOutputPowerbi.StreamAnalyticsOutputPowerbiTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsoutputpowerbi"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputpowerbi"
 
 streamanalyticsoutputpowerbi.NewStreamAnalyticsOutputPowerbiTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StreamAnalyticsOutputPowerbiTimeoutsOutputReference
 ```

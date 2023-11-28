@@ -1,7 +1,3 @@
-# `data_azurerm_cdn_frontdoor_firewall_policy`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_cdn_frontdoor_firewall_policy`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/cdn_frontdoor_firewall_policy).
-
 # `dataAzurermCdnFrontdoorFirewallPolicy` Submodule <a name="`dataAzurermCdnFrontdoorFirewallPolicy` Submodule" id="@cdktf/provider-azurerm.dataAzurermCdnFrontdoorFirewallPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermCdnFrontdoorFirewallPolicy.DataAzurermCdnFrontdoorFirewallPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcdnfrontdoorfirewallpolicy"
 
 dataazurermcdnfrontdoorfirewallpolicy.NewDataAzurermCdnFrontdoorFirewallPolicy(scope Construct, id *string, config DataAzurermCdnFrontdoorFirewallPolicyConfig) DataAzurermCdnFrontdoorFirewallPolicy
 ```
@@ -298,7 +294,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermCdnFrontdoorFirewallPolicy.DataAzurermCdnFrontdoorFirewallPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcdnfrontdoorfirewallpolicy"
 
 dataazurermcdnfrontdoorfirewallpolicy.DataAzurermCdnFrontdoorFirewallPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -330,7 +326,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermCdnFrontdoorFirewallPolicy.DataAzurermCdnFrontdoorFirewallPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcdnfrontdoorfirewallpolicy"
 
 dataazurermcdnfrontdoorfirewallpolicy.DataAzurermCdnFrontdoorFirewallPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -344,7 +340,7 @@ dataazurermcdnfrontdoorfirewallpolicy.DataAzurermCdnFrontdoorFirewallPolicy_IsTe
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermCdnFrontdoorFirewallPolicy.DataAzurermCdnFrontdoorFirewallPolicy.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcdnfrontdoorfirewallpolicy"
 
 dataazurermcdnfrontdoorfirewallpolicy.DataAzurermCdnFrontdoorFirewallPolicy_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -358,7 +354,7 @@ dataazurermcdnfrontdoorfirewallpolicy.DataAzurermCdnFrontdoorFirewallPolicy_IsTe
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermCdnFrontdoorFirewallPolicy.DataAzurermCdnFrontdoorFirewallPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcdnfrontdoorfirewallpolicy"
 
 dataazurermcdnfrontdoorfirewallpolicy.DataAzurermCdnFrontdoorFirewallPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -708,7 +704,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermCdnFrontdoorFirewallPolicy.DataAzurermCdnFrontdoorFirewallPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcdnfrontdoorfirewallpolicy"
 
 &dataazurermcdnfrontdoorfirewallpolicy.DataAzurermCdnFrontdoorFirewallPolicyConfig {
 	Connection: interface{},
@@ -721,7 +717,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcdnfro
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermCdnFrontdoorFirewallPolicy.DataAzurermCdnFrontdoorFirewallPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermCdnFrontdoorFirewallPolicy.DataAzurermCdnFrontdoorFirewallPolicyTimeouts,
 }
 ```
 
@@ -871,7 +867,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermCdnFrontdoorFirewallPolicy.DataAzurermCdnFrontdoorFirewallPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcdnfrontdoorfirewallpolicy"
 
 &dataazurermcdnfrontdoorfirewallpolicy.DataAzurermCdnFrontdoorFirewallPolicyTimeouts {
 	Read: *string,
@@ -905,7 +901,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermCdnFrontdoorFirewallPolicy.DataAzurermCdnFrontdoorFirewallPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcdnfrontdoorfirewallpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcdnfrontdoorfirewallpolicy"
 
 dataazurermcdnfrontdoorfirewallpolicy.NewDataAzurermCdnFrontdoorFirewallPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermCdnFrontdoorFirewallPolicyTimeoutsOutputReference
 ```

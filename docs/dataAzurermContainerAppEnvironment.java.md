@@ -1,7 +1,3 @@
-# `data_azurerm_container_app_environment`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_container_app_environment`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/container_app_environment).
-
 # `dataAzurermContainerAppEnvironment` Submodule <a name="`dataAzurermContainerAppEnvironment` Submodule" id="@cdktf/provider-azurerm.dataAzurermContainerAppEnvironment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

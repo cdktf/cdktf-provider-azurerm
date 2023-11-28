@@ -1,7 +1,3 @@
-# `azurerm_cdn_frontdoor_endpoint`
-
-Refer to the Terraform Registory for docs: [`azurerm_cdn_frontdoor_endpoint`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_endpoint).
-
 # `cdnFrontdoorEndpoint` Submodule <a name="`cdnFrontdoorEndpoint` Submodule" id="@cdktf/provider-azurerm.cdnFrontdoorEndpoint"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

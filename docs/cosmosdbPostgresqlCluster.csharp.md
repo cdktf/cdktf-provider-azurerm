@@ -1,7 +1,3 @@
-# `azurerm_cosmosdb_postgresql_cluster`
-
-Refer to the Terraform Registory for docs: [`azurerm_cosmosdb_postgresql_cluster`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cosmosdb_postgresql_cluster).
-
 # `cosmosdbPostgresqlCluster` Submodule <a name="`cosmosdbPostgresqlCluster` Submodule" id="@cdktf/provider-azurerm.cosmosdbPostgresqlCluster"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

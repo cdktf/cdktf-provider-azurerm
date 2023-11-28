@@ -1,7 +1,3 @@
-# `data_azurerm_cosmosdb_mongo_database`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_cosmosdb_mongo_database`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/cosmosdb_mongo_database).
-
 # `dataAzurermCosmosdbMongoDatabase` Submodule <a name="`dataAzurermCosmosdbMongoDatabase` Submodule" id="@cdktf/provider-azurerm.dataAzurermCosmosdbMongoDatabase"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

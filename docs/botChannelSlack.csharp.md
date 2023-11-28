@@ -1,7 +1,3 @@
-# `azurerm_bot_channel_slack`
-
-Refer to the Terraform Registory for docs: [`azurerm_bot_channel_slack`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/bot_channel_slack).
-
 # `botChannelSlack` Submodule <a name="`botChannelSlack` Submodule" id="@cdktf/provider-azurerm.botChannelSlack"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

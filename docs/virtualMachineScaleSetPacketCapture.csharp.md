@@ -1,7 +1,3 @@
-# `azurerm_virtual_machine_scale_set_packet_capture`
-
-Refer to the Terraform Registory for docs: [`azurerm_virtual_machine_scale_set_packet_capture`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/virtual_machine_scale_set_packet_capture).
-
 # `virtualMachineScaleSetPacketCapture` Submodule <a name="`virtualMachineScaleSetPacketCapture` Submodule" id="@cdktf/provider-azurerm.virtualMachineScaleSetPacketCapture"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `azurerm_synapse_workspace_security_alert_policy`
-
-Refer to the Terraform Registory for docs: [`azurerm_synapse_workspace_security_alert_policy`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/synapse_workspace_security_alert_policy).
-
 # `synapseWorkspaceSecurityAlertPolicy` Submodule <a name="`synapseWorkspaceSecurityAlertPolicy` Submodule" id="@cdktf/provider-azurerm.synapseWorkspaceSecurityAlertPolicy"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

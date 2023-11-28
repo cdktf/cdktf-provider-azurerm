@@ -1,7 +1,3 @@
-# `azurerm_eventgrid_system_topic_event_subscription`
-
-Refer to the Terraform Registory for docs: [`azurerm_eventgrid_system_topic_event_subscription`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/eventgrid_system_topic_event_subscription).
-
 # `eventgridSystemTopicEventSubscription` Submodule <a name="`eventgridSystemTopicEventSubscription` Submodule" id="@cdktf/provider-azurerm.eventgridSystemTopicEventSubscription"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

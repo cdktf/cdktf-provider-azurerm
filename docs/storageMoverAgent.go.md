@@ -1,7 +1,3 @@
-# `azurerm_storage_mover_agent`
-
-Refer to the Terraform Registory for docs: [`azurerm_storage_mover_agent`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/storage_mover_agent).
-
 # `storageMoverAgent` Submodule <a name="`storageMoverAgent` Submodule" id="@cdktf/provider-azurerm.storageMoverAgent"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageMoverAgent.StorageMoverAgent.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemoveragent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemoveragent"
 
 storagemoveragent.NewStorageMoverAgent(scope Construct, id *string, config StorageMoverAgentConfig) StorageMoverAgent
 ```
@@ -366,7 +362,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.storageMoverAgent.StorageMoverAgent.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemoveragent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemoveragent"
 
 storagemoveragent.StorageMoverAgent_IsConstruct(x interface{}) *bool
 ```
@@ -398,7 +394,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.storageMoverAgent.StorageMoverAgent.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemoveragent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemoveragent"
 
 storagemoveragent.StorageMoverAgent_IsTerraformElement(x interface{}) *bool
 ```
@@ -412,7 +408,7 @@ storagemoveragent.StorageMoverAgent_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.storageMoverAgent.StorageMoverAgent.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemoveragent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemoveragent"
 
 storagemoveragent.StorageMoverAgent_IsTerraformResource(x interface{}) *bool
 ```
@@ -426,7 +422,7 @@ storagemoveragent.StorageMoverAgent_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.storageMoverAgent.StorageMoverAgent.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemoveragent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemoveragent"
 
 storagemoveragent.StorageMoverAgent_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -809,7 +805,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageMoverAgent.StorageMoverAgentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemoveragent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemoveragent"
 
 &storagemoveragent.StorageMoverAgentConfig {
 	Connection: interface{},
@@ -825,7 +821,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemoveragent
 	StorageMoverId: *string,
 	Description: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageMoverAgent.StorageMoverAgentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageMoverAgent.StorageMoverAgentTimeouts,
 }
 ```
 
@@ -1014,7 +1010,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageMoverAgent.StorageMoverAgentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemoveragent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemoveragent"
 
 &storagemoveragent.StorageMoverAgentTimeouts {
 	Create: *string,
@@ -1090,7 +1086,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageMoverAgent.StorageMoverAgentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagemoveragent"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagemoveragent"
 
 storagemoveragent.NewStorageMoverAgentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageMoverAgentTimeoutsOutputReference
 ```

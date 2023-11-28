@@ -1,7 +1,3 @@
-# `data_azurerm_lb_rule`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_lb_rule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/lb_rule).
-
 # `dataAzurermLbRule` Submodule <a name="`dataAzurermLbRule` Submodule" id="@cdktf/provider-azurerm.dataAzurermLbRule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

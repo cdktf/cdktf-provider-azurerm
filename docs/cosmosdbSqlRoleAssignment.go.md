@@ -1,7 +1,3 @@
-# `azurerm_cosmosdb_sql_role_assignment`
-
-Refer to the Terraform Registory for docs: [`azurerm_cosmosdb_sql_role_assignment`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cosmosdb_sql_role_assignment).
-
 # `cosmosdbSqlRoleAssignment` Submodule <a name="`cosmosdbSqlRoleAssignment` Submodule" id="@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbsqlroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlroleassignment"
 
 cosmosdbsqlroleassignment.NewCosmosdbSqlRoleAssignment(scope Construct, id *string, config CosmosdbSqlRoleAssignmentConfig) CosmosdbSqlRoleAssignment
 ```
@@ -366,7 +362,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbsqlroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlroleassignment"
 
 cosmosdbsqlroleassignment.CosmosdbSqlRoleAssignment_IsConstruct(x interface{}) *bool
 ```
@@ -398,7 +394,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbsqlroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlroleassignment"
 
 cosmosdbsqlroleassignment.CosmosdbSqlRoleAssignment_IsTerraformElement(x interface{}) *bool
 ```
@@ -412,7 +408,7 @@ cosmosdbsqlroleassignment.CosmosdbSqlRoleAssignment_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbsqlroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlroleassignment"
 
 cosmosdbsqlroleassignment.CosmosdbSqlRoleAssignment_IsTerraformResource(x interface{}) *bool
 ```
@@ -426,7 +422,7 @@ cosmosdbsqlroleassignment.CosmosdbSqlRoleAssignment_IsTerraformResource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignment.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbsqlroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlroleassignment"
 
 cosmosdbsqlroleassignment.CosmosdbSqlRoleAssignment_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -831,7 +827,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbsqlroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlroleassignment"
 
 &cosmosdbsqlroleassignment.CosmosdbSqlRoleAssignmentConfig {
 	Connection: interface{},
@@ -848,7 +844,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbsqlroleas
 	Scope: *string,
 	Id: *string,
 	Name: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignmentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignmentTimeouts,
 }
 ```
 
@@ -1050,7 +1046,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbsqlroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlroleassignment"
 
 &cosmosdbsqlroleassignment.CosmosdbSqlRoleAssignmentTimeouts {
 	Create: *string,
@@ -1126,7 +1122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbSqlRoleAssignment.CosmosdbSqlRoleAssignmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbsqlroleassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqlroleassignment"
 
 cosmosdbsqlroleassignment.NewCosmosdbSqlRoleAssignmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbSqlRoleAssignmentTimeoutsOutputReference
 ```

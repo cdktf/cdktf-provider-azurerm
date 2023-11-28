@@ -1,7 +1,3 @@
-# `data_azurerm_nat_gateway`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_nat_gateway`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/nat_gateway).
-
 # `dataAzurermNatGateway` Submodule <a name="`dataAzurermNatGateway` Submodule" id="@cdktf/provider-azurerm.dataAzurermNatGateway"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNatGateway.DataAzurermNatGateway.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnatgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnatgateway"
 
 dataazurermnatgateway.NewDataAzurermNatGateway(scope Construct, id *string, config DataAzurermNatGatewayConfig) DataAzurermNatGateway
 ```
@@ -312,7 +308,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermNatGateway.DataAzurermNatGateway.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnatgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnatgateway"
 
 dataazurermnatgateway.DataAzurermNatGateway_IsConstruct(x interface{}) *bool
 ```
@@ -344,7 +340,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermNatGateway.DataAzurermNatGateway.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnatgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnatgateway"
 
 dataazurermnatgateway.DataAzurermNatGateway_IsTerraformElement(x interface{}) *bool
 ```
@@ -358,7 +354,7 @@ dataazurermnatgateway.DataAzurermNatGateway_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermNatGateway.DataAzurermNatGateway.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnatgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnatgateway"
 
 dataazurermnatgateway.DataAzurermNatGateway_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -372,7 +368,7 @@ dataazurermnatgateway.DataAzurermNatGateway_IsTerraformDataSource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermNatGateway.DataAzurermNatGateway.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnatgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnatgateway"
 
 dataazurermnatgateway.DataAzurermNatGateway_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -777,7 +773,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNatGateway.DataAzurermNatGatewayConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnatgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnatgateway"
 
 &dataazurermnatgateway.DataAzurermNatGatewayConfig {
 	Connection: interface{},
@@ -792,7 +788,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnatgat
 	Id: *string,
 	PublicIpAddressIds: *[]*string,
 	PublicIpPrefixIds: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermNatGateway.DataAzurermNatGatewayTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermNatGateway.DataAzurermNatGatewayTimeouts,
 }
 ```
 
@@ -968,7 +964,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNatGateway.DataAzurermNatGatewayTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnatgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnatgateway"
 
 &dataazurermnatgateway.DataAzurermNatGatewayTimeouts {
 	Read: *string,
@@ -1002,7 +998,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNatGateway.DataAzurermNatGatewayTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnatgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnatgateway"
 
 dataazurermnatgateway.NewDataAzurermNatGatewayTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermNatGatewayTimeoutsOutputReference
 ```

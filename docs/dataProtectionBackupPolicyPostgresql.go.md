@@ -1,7 +1,3 @@
-# `azurerm_data_protection_backup_policy_postgresql`
-
-Refer to the Terraform Registory for docs: [`azurerm_data_protection_backup_policy_postgresql`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/data_protection_backup_policy_postgresql).
-
 # `dataProtectionBackupPolicyPostgresql` Submodule <a name="`dataProtectionBackupPolicyPostgresql` Submodule" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresql"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresql.DataProtectionBackupPolicyPostgresql.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionbackuppolicypostgresql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresql"
 
 dataprotectionbackuppolicypostgresql.NewDataProtectionBackupPolicyPostgresql(scope Construct, id *string, config DataProtectionBackupPolicyPostgresqlConfig) DataProtectionBackupPolicyPostgresql
 ```
@@ -379,7 +375,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresql.DataProtectionBackupPolicyPostgresql.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionbackuppolicypostgresql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresql"
 
 dataprotectionbackuppolicypostgresql.DataProtectionBackupPolicyPostgresql_IsConstruct(x interface{}) *bool
 ```
@@ -411,7 +407,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresql.DataProtectionBackupPolicyPostgresql.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionbackuppolicypostgresql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresql"
 
 dataprotectionbackuppolicypostgresql.DataProtectionBackupPolicyPostgresql_IsTerraformElement(x interface{}) *bool
 ```
@@ -425,7 +421,7 @@ dataprotectionbackuppolicypostgresql.DataProtectionBackupPolicyPostgresql_IsTerr
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresql.DataProtectionBackupPolicyPostgresql.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionbackuppolicypostgresql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresql"
 
 dataprotectionbackuppolicypostgresql.DataProtectionBackupPolicyPostgresql_IsTerraformResource(x interface{}) *bool
 ```
@@ -439,7 +435,7 @@ dataprotectionbackuppolicypostgresql.DataProtectionBackupPolicyPostgresql_IsTerr
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresql.DataProtectionBackupPolicyPostgresql.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionbackuppolicypostgresql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresql"
 
 dataprotectionbackuppolicypostgresql.DataProtectionBackupPolicyPostgresql_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -844,7 +840,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresql.DataProtectionBackupPolicyPostgresqlConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionbackuppolicypostgresql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresql"
 
 &dataprotectionbackuppolicypostgresql.DataProtectionBackupPolicyPostgresqlConfig {
 	Connection: interface{},
@@ -861,7 +857,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionbac
 	VaultName: *string,
 	Id: *string,
 	RetentionRule: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataProtectionBackupPolicyPostgresql.DataProtectionBackupPolicyPostgresqlTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataProtectionBackupPolicyPostgresql.DataProtectionBackupPolicyPostgresqlTimeouts,
 }
 ```
 
@@ -1065,10 +1061,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresql.DataProtectionBackupPolicyPostgresqlRetentionRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionbackuppolicypostgresql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresql"
 
 &dataprotectionbackuppolicypostgresql.DataProtectionBackupPolicyPostgresqlRetentionRule {
-	Criteria: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataProtectionBackupPolicyPostgresql.DataProtectionBackupPolicyPostgresqlRetentionRuleCriteria,
+	Criteria: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataProtectionBackupPolicyPostgresql.DataProtectionBackupPolicyPostgresqlRetentionRuleCriteria,
 	Duration: *string,
 	Name: *string,
 	Priority: *f64,
@@ -1141,7 +1137,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresql.DataProtectionBackupPolicyPostgresqlRetentionRuleCriteria.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionbackuppolicypostgresql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresql"
 
 &dataprotectionbackuppolicypostgresql.DataProtectionBackupPolicyPostgresqlRetentionRuleCriteria {
 	AbsoluteCriteria: *string,
@@ -1229,7 +1225,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresql.DataProtectionBackupPolicyPostgresqlTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionbackuppolicypostgresql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresql"
 
 &dataprotectionbackuppolicypostgresql.DataProtectionBackupPolicyPostgresqlTimeouts {
 	Create: *string,
@@ -1291,7 +1287,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresql.DataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionbackuppolicypostgresql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresql"
 
 dataprotectionbackuppolicypostgresql.NewDataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaOutputReference
 ```
@@ -1685,7 +1681,7 @@ func InternalValue() DataProtectionBackupPolicyPostgresqlRetentionRuleCriteria
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresql.DataProtectionBackupPolicyPostgresqlRetentionRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionbackuppolicypostgresql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresql"
 
 dataprotectionbackuppolicypostgresql.NewDataProtectionBackupPolicyPostgresqlRetentionRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataProtectionBackupPolicyPostgresqlRetentionRuleList
 ```
@@ -1828,7 +1824,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresql.DataProtectionBackupPolicyPostgresqlRetentionRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionbackuppolicypostgresql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresql"
 
 dataprotectionbackuppolicypostgresql.NewDataProtectionBackupPolicyPostgresqlRetentionRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataProtectionBackupPolicyPostgresqlRetentionRuleOutputReference
 ```
@@ -2196,7 +2192,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionBackupPolicyPostgresql.DataProtectionBackupPolicyPostgresqlTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionbackuppolicypostgresql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataprotectionbackuppolicypostgresql"
 
 dataprotectionbackuppolicypostgresql.NewDataProtectionBackupPolicyPostgresqlTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataProtectionBackupPolicyPostgresqlTimeoutsOutputReference
 ```

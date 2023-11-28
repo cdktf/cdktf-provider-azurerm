@@ -1,7 +1,3 @@
-# `azurerm_new_relic_monitor`
-
-Refer to the Terraform Registory for docs: [`azurerm_new_relic_monitor`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/new_relic_monitor).
-
 # `newRelicMonitor` Submodule <a name="`newRelicMonitor` Submodule" id="@cdktf/provider-azurerm.newRelicMonitor"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `azurerm_cdn_frontdoor_rule_set`
-
-Refer to the Terraform Registory for docs: [`azurerm_cdn_frontdoor_rule_set`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_rule_set).
-
 # `cdnFrontdoorRuleSet` Submodule <a name="`cdnFrontdoorRuleSet` Submodule" id="@cdktf/provider-azurerm.cdnFrontdoorRuleSet"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorRuleSet.CdnFrontdoorRuleSet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorruleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorruleset"
 
 cdnfrontdoorruleset.NewCdnFrontdoorRuleSet(scope Construct, id *string, config CdnFrontdoorRuleSetConfig) CdnFrontdoorRuleSet
 ```
@@ -359,7 +355,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.cdnFrontdoorRuleSet.CdnFrontdoorRuleSet.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorruleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorruleset"
 
 cdnfrontdoorruleset.CdnFrontdoorRuleSet_IsConstruct(x interface{}) *bool
 ```
@@ -391,7 +387,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.cdnFrontdoorRuleSet.CdnFrontdoorRuleSet.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorruleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorruleset"
 
 cdnfrontdoorruleset.CdnFrontdoorRuleSet_IsTerraformElement(x interface{}) *bool
 ```
@@ -405,7 +401,7 @@ cdnfrontdoorruleset.CdnFrontdoorRuleSet_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.cdnFrontdoorRuleSet.CdnFrontdoorRuleSet.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorruleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorruleset"
 
 cdnfrontdoorruleset.CdnFrontdoorRuleSet_IsTerraformResource(x interface{}) *bool
 ```
@@ -419,7 +415,7 @@ cdnfrontdoorruleset.CdnFrontdoorRuleSet_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.cdnFrontdoorRuleSet.CdnFrontdoorRuleSet.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorruleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorruleset"
 
 cdnfrontdoorruleset.CdnFrontdoorRuleSet_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -736,7 +732,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnFrontdoorRuleSet.CdnFrontdoorRuleSetConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorruleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorruleset"
 
 &cdnfrontdoorruleset.CdnFrontdoorRuleSetConfig {
 	Connection: interface{},
@@ -749,7 +745,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorrules
 	CdnFrontdoorProfileId: *string,
 	Name: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.cdnFrontdoorRuleSet.CdnFrontdoorRuleSetTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cdnFrontdoorRuleSet.CdnFrontdoorRuleSetTimeouts,
 }
 ```
 
@@ -899,7 +895,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnFrontdoorRuleSet.CdnFrontdoorRuleSetTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorruleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorruleset"
 
 &cdnfrontdoorruleset.CdnFrontdoorRuleSetTimeouts {
 	Create: *string,
@@ -961,7 +957,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorRuleSet.CdnFrontdoorRuleSetTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorruleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorruleset"
 
 cdnfrontdoorruleset.NewCdnFrontdoorRuleSetTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CdnFrontdoorRuleSetTimeoutsOutputReference
 ```

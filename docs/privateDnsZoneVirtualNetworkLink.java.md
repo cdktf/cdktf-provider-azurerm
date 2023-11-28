@@ -1,7 +1,3 @@
-# `azurerm_private_dns_zone_virtual_network_link`
-
-Refer to the Terraform Registory for docs: [`azurerm_private_dns_zone_virtual_network_link`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/private_dns_zone_virtual_network_link).
-
 # `privateDnsZoneVirtualNetworkLink` Submodule <a name="`privateDnsZoneVirtualNetworkLink` Submodule" id="@cdktf/provider-azurerm.privateDnsZoneVirtualNetworkLink"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

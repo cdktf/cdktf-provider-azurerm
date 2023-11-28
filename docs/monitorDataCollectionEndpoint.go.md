@@ -1,7 +1,3 @@
-# `azurerm_monitor_data_collection_endpoint`
-
-Refer to the Terraform Registory for docs: [`azurerm_monitor_data_collection_endpoint`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_data_collection_endpoint).
-
 # `monitorDataCollectionEndpoint` Submodule <a name="`monitorDataCollectionEndpoint` Submodule" id="@cdktf/provider-azurerm.monitorDataCollectionEndpoint"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorDataCollectionEndpoint.MonitorDataCollectionEndpoint.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordatacollectionendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordatacollectionendpoint"
 
 monitordatacollectionendpoint.NewMonitorDataCollectionEndpoint(scope Construct, id *string, config MonitorDataCollectionEndpointConfig) MonitorDataCollectionEndpoint
 ```
@@ -387,7 +383,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.monitorDataCollectionEndpoint.MonitorDataCollectionEndpoint.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordatacollectionendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordatacollectionendpoint"
 
 monitordatacollectionendpoint.MonitorDataCollectionEndpoint_IsConstruct(x interface{}) *bool
 ```
@@ -419,7 +415,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.monitorDataCollectionEndpoint.MonitorDataCollectionEndpoint.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordatacollectionendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordatacollectionendpoint"
 
 monitordatacollectionendpoint.MonitorDataCollectionEndpoint_IsTerraformElement(x interface{}) *bool
 ```
@@ -433,7 +429,7 @@ monitordatacollectionendpoint.MonitorDataCollectionEndpoint_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.monitorDataCollectionEndpoint.MonitorDataCollectionEndpoint.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordatacollectionendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordatacollectionendpoint"
 
 monitordatacollectionendpoint.MonitorDataCollectionEndpoint_IsTerraformResource(x interface{}) *bool
 ```
@@ -447,7 +443,7 @@ monitordatacollectionendpoint.MonitorDataCollectionEndpoint_IsTerraformResource(
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.monitorDataCollectionEndpoint.MonitorDataCollectionEndpoint.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordatacollectionendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordatacollectionendpoint"
 
 monitordatacollectionendpoint.MonitorDataCollectionEndpoint_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -896,7 +892,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorDataCollectionEndpoint.MonitorDataCollectionEndpointConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordatacollectionendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordatacollectionendpoint"
 
 &monitordatacollectionendpoint.MonitorDataCollectionEndpointConfig {
 	Connection: interface{},
@@ -914,7 +910,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordatacollec
 	Kind: *string,
 	PublicNetworkAccessEnabled: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorDataCollectionEndpoint.MonitorDataCollectionEndpointTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorDataCollectionEndpoint.MonitorDataCollectionEndpointTimeouts,
 }
 ```
 
@@ -1129,7 +1125,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorDataCollectionEndpoint.MonitorDataCollectionEndpointTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordatacollectionendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordatacollectionendpoint"
 
 &monitordatacollectionendpoint.MonitorDataCollectionEndpointTimeouts {
 	Create: *string,
@@ -1205,7 +1201,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorDataCollectionEndpoint.MonitorDataCollectionEndpointTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitordatacollectionendpoint"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitordatacollectionendpoint"
 
 monitordatacollectionendpoint.NewMonitorDataCollectionEndpointTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorDataCollectionEndpointTimeoutsOutputReference
 ```

@@ -1,7 +1,3 @@
-# `azurerm_application_insights_smart_detection_rule`
-
-Refer to the Terraform Registory for docs: [`azurerm_application_insights_smart_detection_rule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/application_insights_smart_detection_rule).
-
 # `applicationInsightsSmartDetectionRule` Submodule <a name="`applicationInsightsSmartDetectionRule` Submodule" id="@cdktf/provider-azurerm.applicationInsightsSmartDetectionRule"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

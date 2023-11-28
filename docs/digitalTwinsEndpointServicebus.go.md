@@ -1,7 +1,3 @@
-# `azurerm_digital_twins_endpoint_servicebus`
-
-Refer to the Terraform Registory for docs: [`azurerm_digital_twins_endpoint_servicebus`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/digital_twins_endpoint_servicebus).
-
 # `digitalTwinsEndpointServicebus` Submodule <a name="`digitalTwinsEndpointServicebus` Submodule" id="@cdktf/provider-azurerm.digitalTwinsEndpointServicebus"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.digitalTwinsEndpointServicebus.DigitalTwinsEndpointServicebus.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/digitaltwinsendpointservicebus"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/digitaltwinsendpointservicebus"
 
 digitaltwinsendpointservicebus.NewDigitalTwinsEndpointServicebus(scope Construct, id *string, config DigitalTwinsEndpointServicebusConfig) DigitalTwinsEndpointServicebus
 ```
@@ -366,7 +362,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.digitalTwinsEndpointServicebus.DigitalTwinsEndpointServicebus.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/digitaltwinsendpointservicebus"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/digitaltwinsendpointservicebus"
 
 digitaltwinsendpointservicebus.DigitalTwinsEndpointServicebus_IsConstruct(x interface{}) *bool
 ```
@@ -398,7 +394,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.digitalTwinsEndpointServicebus.DigitalTwinsEndpointServicebus.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/digitaltwinsendpointservicebus"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/digitaltwinsendpointservicebus"
 
 digitaltwinsendpointservicebus.DigitalTwinsEndpointServicebus_IsTerraformElement(x interface{}) *bool
 ```
@@ -412,7 +408,7 @@ digitaltwinsendpointservicebus.DigitalTwinsEndpointServicebus_IsTerraformElement
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.digitalTwinsEndpointServicebus.DigitalTwinsEndpointServicebus.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/digitaltwinsendpointservicebus"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/digitaltwinsendpointservicebus"
 
 digitaltwinsendpointservicebus.DigitalTwinsEndpointServicebus_IsTerraformResource(x interface{}) *bool
 ```
@@ -426,7 +422,7 @@ digitaltwinsendpointservicebus.DigitalTwinsEndpointServicebus_IsTerraformResourc
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.digitalTwinsEndpointServicebus.DigitalTwinsEndpointServicebus.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/digitaltwinsendpointservicebus"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/digitaltwinsendpointservicebus"
 
 digitaltwinsendpointservicebus.DigitalTwinsEndpointServicebus_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -809,7 +805,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.digitalTwinsEndpointServicebus.DigitalTwinsEndpointServicebusConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/digitaltwinsendpointservicebus"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/digitaltwinsendpointservicebus"
 
 &digitaltwinsendpointservicebus.DigitalTwinsEndpointServicebusConfig {
 	Connection: interface{},
@@ -825,7 +821,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/digitaltwinsendpo
 	ServicebusSecondaryConnectionString: *string,
 	DeadLetterStorageSecret: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.digitalTwinsEndpointServicebus.DigitalTwinsEndpointServicebusTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.digitalTwinsEndpointServicebus.DigitalTwinsEndpointServicebusTimeouts,
 }
 ```
 
@@ -1014,7 +1010,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.digitalTwinsEndpointServicebus.DigitalTwinsEndpointServicebusTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/digitaltwinsendpointservicebus"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/digitaltwinsendpointservicebus"
 
 &digitaltwinsendpointservicebus.DigitalTwinsEndpointServicebusTimeouts {
 	Create: *string,
@@ -1090,7 +1086,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.digitalTwinsEndpointServicebus.DigitalTwinsEndpointServicebusTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/digitaltwinsendpointservicebus"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/digitaltwinsendpointservicebus"
 
 digitaltwinsendpointservicebus.NewDigitalTwinsEndpointServicebusTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DigitalTwinsEndpointServicebusTimeoutsOutputReference
 ```

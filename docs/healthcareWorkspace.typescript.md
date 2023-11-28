@@ -1,7 +1,3 @@
-# `azurerm_healthcare_workspace`
-
-Refer to the Terraform Registory for docs: [`azurerm_healthcare_workspace`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/healthcare_workspace).
-
 # `healthcareWorkspace` Submodule <a name="`healthcareWorkspace` Submodule" id="@cdktf/provider-azurerm.healthcareWorkspace"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

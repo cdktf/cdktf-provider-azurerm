@@ -1,7 +1,3 @@
-# `azurerm_automanage_configuration`
-
-Refer to the Terraform Registory for docs: [`azurerm_automanage_configuration`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automanage_configuration).
-
 # `automanageConfiguration` Submodule <a name="`automanageConfiguration` Submodule" id="@cdktf/provider-azurerm.automanageConfiguration"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
@@ -13,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 automanageconfiguration.NewAutomanageConfiguration(scope Construct, id *string, config AutomanageConfigurationConfig) AutomanageConfiguration
 ```
@@ -468,7 +464,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfiguration.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 automanageconfiguration.AutomanageConfiguration_IsConstruct(x interface{}) *bool
 ```
@@ -500,7 +496,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfiguration.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 automanageconfiguration.AutomanageConfiguration_IsTerraformElement(x interface{}) *bool
 ```
@@ -514,7 +510,7 @@ automanageconfiguration.AutomanageConfiguration_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfiguration.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 automanageconfiguration.AutomanageConfiguration_IsTerraformResource(x interface{}) *bool
 ```
@@ -528,7 +524,7 @@ automanageconfiguration.AutomanageConfiguration_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfiguration.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 automanageconfiguration.AutomanageConfiguration_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1087,10 +1083,10 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationAntimalware.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 &automanageconfiguration.AutomanageConfigurationAntimalware {
-	Exclusions: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.automanageConfiguration.AutomanageConfigurationAntimalwareExclusions,
+	Exclusions: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automanageConfiguration.AutomanageConfigurationAntimalwareExclusions,
 	RealTimeProtectionEnabled: interface{},
 	ScheduledScanDay: *f64,
 	ScheduledScanEnabled: interface{},
@@ -1191,7 +1187,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationAntimalwareExclusions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 &automanageconfiguration.AutomanageConfigurationAntimalwareExclusions {
 	Extensions: *string,
@@ -1251,7 +1247,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationAzureSecurityBaseline.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 &automanageconfiguration.AutomanageConfigurationAzureSecurityBaseline {
 	AssignmentType: *string,
@@ -1283,13 +1279,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationBackup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 &automanageconfiguration.AutomanageConfigurationBackup {
 	InstantRpRetentionRangeInDays: *f64,
 	PolicyName: *string,
-	RetentionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.automanageConfiguration.AutomanageConfigurationBackupRetentionPolicy,
-	SchedulePolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.automanageConfiguration.AutomanageConfigurationBackupSchedulePolicy,
+	RetentionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automanageConfiguration.AutomanageConfigurationBackupRetentionPolicy,
+	SchedulePolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automanageConfiguration.AutomanageConfigurationBackupSchedulePolicy,
 	TimeZone: *string,
 }
 ```
@@ -1375,12 +1371,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationBackupRetentionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 &automanageconfiguration.AutomanageConfigurationBackupRetentionPolicy {
-	DailySchedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.automanageConfiguration.AutomanageConfigurationBackupRetentionPolicyDailySchedule,
+	DailySchedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automanageConfiguration.AutomanageConfigurationBackupRetentionPolicyDailySchedule,
 	RetentionPolicyType: *string,
-	WeeklySchedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.automanageConfiguration.AutomanageConfigurationBackupRetentionPolicyWeeklySchedule,
+	WeeklySchedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automanageConfiguration.AutomanageConfigurationBackupRetentionPolicyWeeklySchedule,
 }
 ```
 
@@ -1439,10 +1435,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationBackupRetentionPolicyDailySchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 &automanageconfiguration.AutomanageConfigurationBackupRetentionPolicyDailySchedule {
-	RetentionDuration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.automanageConfiguration.AutomanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDuration,
+	RetentionDuration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automanageConfiguration.AutomanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDuration,
 	RetentionTimes: *[]*string,
 }
 ```
@@ -1487,7 +1483,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDuration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 &automanageconfiguration.AutomanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDuration {
 	Count: *f64,
@@ -1533,10 +1529,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationBackupRetentionPolicyWeeklySchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 &automanageconfiguration.AutomanageConfigurationBackupRetentionPolicyWeeklySchedule {
-	RetentionDuration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.automanageConfiguration.AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDuration,
+	RetentionDuration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automanageConfiguration.AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDuration,
 	RetentionTimes: *[]*string,
 }
 ```
@@ -1581,7 +1577,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDuration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 &automanageconfiguration.AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDuration {
 	Count: *f64,
@@ -1627,7 +1623,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationBackupSchedulePolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 &automanageconfiguration.AutomanageConfigurationBackupSchedulePolicy {
 	SchedulePolicyType: *string,
@@ -1701,7 +1697,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 &automanageconfiguration.AutomanageConfigurationConfig {
 	Connection: interface{},
@@ -1714,10 +1710,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfigu
 	Location: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	Antimalware: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.automanageConfiguration.AutomanageConfigurationAntimalware,
+	Antimalware: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automanageConfiguration.AutomanageConfigurationAntimalware,
 	AutomationAccountEnabled: interface{},
-	AzureSecurityBaseline: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.automanageConfiguration.AutomanageConfigurationAzureSecurityBaseline,
-	Backup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.automanageConfiguration.AutomanageConfigurationBackup,
+	AzureSecurityBaseline: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automanageConfiguration.AutomanageConfigurationAzureSecurityBaseline,
+	Backup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automanageConfiguration.AutomanageConfigurationBackup,
 	BootDiagnosticsEnabled: interface{},
 	DefenderForCloudEnabled: interface{},
 	GuestConfigurationEnabled: interface{},
@@ -1725,7 +1721,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfigu
 	LogAnalyticsEnabled: interface{},
 	StatusChangeAlertEnabled: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.automanageConfiguration.AutomanageConfigurationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.automanageConfiguration.AutomanageConfigurationTimeouts,
 }
 ```
 
@@ -2024,7 +2020,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 &automanageconfiguration.AutomanageConfigurationTimeouts {
 	Create: *string,
@@ -2100,7 +2096,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationAntimalwareExclusionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 automanageconfiguration.NewAutomanageConfigurationAntimalwareExclusionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomanageConfigurationAntimalwareExclusionsOutputReference
 ```
@@ -2436,7 +2432,7 @@ func InternalValue() AutomanageConfigurationAntimalwareExclusions
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationAntimalwareOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 automanageconfiguration.NewAutomanageConfigurationAntimalwareOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomanageConfigurationAntimalwareOutputReference
 ```
@@ -2872,7 +2868,7 @@ func InternalValue() AutomanageConfigurationAntimalware
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationAzureSecurityBaselineOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 automanageconfiguration.NewAutomanageConfigurationAzureSecurityBaselineOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomanageConfigurationAzureSecurityBaselineOutputReference
 ```
@@ -3150,7 +3146,7 @@ func InternalValue() AutomanageConfigurationAzureSecurityBaseline
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationBackupOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 automanageconfiguration.NewAutomanageConfigurationBackupOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomanageConfigurationBackupOutputReference
 ```
@@ -3570,7 +3566,7 @@ func InternalValue() AutomanageConfigurationBackup
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationBackupRetentionPolicyDailyScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 automanageconfiguration.NewAutomanageConfigurationBackupRetentionPolicyDailyScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomanageConfigurationBackupRetentionPolicyDailyScheduleOutputReference
 ```
@@ -3890,7 +3886,7 @@ func InternalValue() AutomanageConfigurationBackupRetentionPolicyDailySchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 automanageconfiguration.NewAutomanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDurationOutputReference
 ```
@@ -4197,7 +4193,7 @@ func InternalValue() AutomanageConfigurationBackupRetentionPolicyDailyScheduleRe
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationBackupRetentionPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 automanageconfiguration.NewAutomanageConfigurationBackupRetentionPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomanageConfigurationBackupRetentionPolicyOutputReference
 ```
@@ -4559,7 +4555,7 @@ func InternalValue() AutomanageConfigurationBackupRetentionPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 automanageconfiguration.NewAutomanageConfigurationBackupRetentionPolicyWeeklyScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleOutputReference
 ```
@@ -4879,7 +4875,7 @@ func InternalValue() AutomanageConfigurationBackupRetentionPolicyWeeklySchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 automanageconfiguration.NewAutomanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDurationOutputReference
 ```
@@ -5186,7 +5182,7 @@ func InternalValue() AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleR
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationBackupSchedulePolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 automanageconfiguration.NewAutomanageConfigurationBackupSchedulePolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomanageConfigurationBackupSchedulePolicyOutputReference
 ```
@@ -5551,7 +5547,7 @@ func InternalValue() AutomanageConfigurationBackupSchedulePolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automanageConfiguration.AutomanageConfigurationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automanageconfiguration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/automanageconfiguration"
 
 automanageconfiguration.NewAutomanageConfigurationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomanageConfigurationTimeoutsOutputReference
 ```

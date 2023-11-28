@@ -1,7 +1,3 @@
-# `data_azurerm_resource_group`
-
-Refer to the Terraform Registory for docs: [`data_azurerm_resource_group`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/resource_group).
-
 # `dataAzurermResourceGroup` Submodule <a name="`dataAzurermResourceGroup` Submodule" id="@cdktf/provider-azurerm.dataAzurermResourceGroup"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

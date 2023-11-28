@@ -1,7 +1,3 @@
-# `azurerm_shared_image_version`
-
-Refer to the Terraform Registory for docs: [`azurerm_shared_image_version`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/shared_image_version).
-
 # `sharedImageVersion` Submodule <a name="`sharedImageVersion` Submodule" id="@cdktf/provider-azurerm.sharedImageVersion"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

@@ -1,7 +1,3 @@
-# `azurerm_media_streaming_endpoint`
-
-Refer to the Terraform Registory for docs: [`azurerm_media_streaming_endpoint`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_streaming_endpoint).
-
 # `mediaStreamingEndpoint` Submodule <a name="`mediaStreamingEndpoint` Submodule" id="@cdktf/provider-azurerm.mediaStreamingEndpoint"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>

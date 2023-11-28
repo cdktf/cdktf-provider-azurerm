@@ -1,7 +1,3 @@
-# `azurerm_network_interface`
-
-Refer to the Terraform Registory for docs: [`azurerm_network_interface`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/network_interface).
-
 # `networkInterface` Submodule <a name="`networkInterface` Submodule" id="@cdktf/provider-azurerm.networkInterface"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
