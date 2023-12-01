@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/natgatewaypublicipassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/natgatewaypublicipassociation"
 
 natgatewaypublicipassociation.NewNatGatewayPublicIpAssociation(scope Construct, id *string, config NatGatewayPublicIpAssociationConfig) NatGatewayPublicIpAssociation
 ```
@@ -355,7 +355,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociation.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/natgatewaypublicipassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/natgatewaypublicipassociation"
 
 natgatewaypublicipassociation.NatGatewayPublicIpAssociation_IsConstruct(x interface{}) *bool
 ```
@@ -387,7 +387,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociation.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/natgatewaypublicipassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/natgatewaypublicipassociation"
 
 natgatewaypublicipassociation.NatGatewayPublicIpAssociation_IsTerraformElement(x interface{}) *bool
 ```
@@ -401,7 +401,7 @@ natgatewaypublicipassociation.NatGatewayPublicIpAssociation_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociation.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/natgatewaypublicipassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/natgatewaypublicipassociation"
 
 natgatewaypublicipassociation.NatGatewayPublicIpAssociation_IsTerraformResource(x interface{}) *bool
 ```
@@ -415,7 +415,7 @@ natgatewaypublicipassociation.NatGatewayPublicIpAssociation_IsTerraformResource(
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociation.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/natgatewaypublicipassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/natgatewaypublicipassociation"
 
 natgatewaypublicipassociation.NatGatewayPublicIpAssociation_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -732,7 +732,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/natgatewaypublicipassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/natgatewaypublicipassociation"
 
 &natgatewaypublicipassociation.NatGatewayPublicIpAssociationConfig {
 	Connection: interface{},
@@ -745,7 +745,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/natgatewaypublicipass
 	NatGatewayId: *string,
 	PublicIpAddressId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationTimeouts,
 }
 ```
 
@@ -895,7 +895,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/natgatewaypublicipassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/natgatewaypublicipassociation"
 
 &natgatewaypublicipassociation.NatGatewayPublicIpAssociationTimeouts {
 	Create: *string,
@@ -957,7 +957,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.natGatewayPublicIpAssociation.NatGatewayPublicIpAssociationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/natgatewaypublicipassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/natgatewaypublicipassociation"
 
 natgatewaypublicipassociation.NewNatGatewayPublicIpAssociationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NatGatewayPublicIpAssociationTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnSite.VpnSite.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
 
 vpnsite.NewVpnSite(scope Construct, id *string, config VpnSiteConfig) VpnSite
 ```
@@ -423,7 +423,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.vpnSite.VpnSite.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
 
 vpnsite.VpnSite_IsConstruct(x interface{}) *bool
 ```
@@ -455,7 +455,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.vpnSite.VpnSite.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
 
 vpnsite.VpnSite_IsTerraformElement(x interface{}) *bool
 ```
@@ -469,7 +469,7 @@ vpnsite.VpnSite_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.vpnSite.VpnSite.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
 
 vpnsite.VpnSite_IsTerraformResource(x interface{}) *bool
 ```
@@ -483,7 +483,7 @@ vpnsite.VpnSite_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.vpnSite.VpnSite.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
 
 vpnsite.VpnSite_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -976,7 +976,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnSite.VpnSiteConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
 
 &vpnsite.VpnSiteConfig {
 	Connection: interface{},
@@ -995,9 +995,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
 	DeviceVendor: *string,
 	Id: *string,
 	Link: interface{},
-	O365Policy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.vpnSite.VpnSiteO365Policy,
+	O365Policy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.vpnSite.VpnSiteO365Policy,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.vpnSite.VpnSiteTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.vpnSite.VpnSiteTimeouts,
 }
 ```
 
@@ -1255,11 +1255,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnSite.VpnSiteLink.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
 
 &vpnsite.VpnSiteLink {
 	Name: *string,
-	Bgp: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.vpnSite.VpnSiteLinkBgp,
+	Bgp: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.vpnSite.VpnSiteLinkBgp,
 	Fqdn: *string,
 	IpAddress: *string,
 	ProviderName: *string,
@@ -1359,7 +1359,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnSite.VpnSiteLinkBgp.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
 
 &vpnsite.VpnSiteLinkBgp {
 	Asn: *f64,
@@ -1405,10 +1405,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnSite.VpnSiteO365Policy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
 
 &vpnsite.VpnSiteO365Policy {
-	TrafficCategory: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.vpnSite.VpnSiteO365PolicyTrafficCategory,
+	TrafficCategory: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.vpnSite.VpnSiteO365PolicyTrafficCategory,
 }
 ```
 
@@ -1439,7 +1439,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnSite.VpnSiteO365PolicyTrafficCategory.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
 
 &vpnsite.VpnSiteO365PolicyTrafficCategory {
 	AllowEndpointEnabled: interface{},
@@ -1499,7 +1499,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.vpnSite.VpnSiteTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
 
 &vpnsite.VpnSiteTimeouts {
 	Create: *string,
@@ -1575,7 +1575,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnSite.VpnSiteLinkBgpOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
 
 vpnsite.NewVpnSiteLinkBgpOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VpnSiteLinkBgpOutputReference
 ```
@@ -1868,7 +1868,7 @@ func InternalValue() VpnSiteLinkBgp
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnSite.VpnSiteLinkList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
 
 vpnsite.NewVpnSiteLinkList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VpnSiteLinkList
 ```
@@ -2011,7 +2011,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnSite.VpnSiteLinkOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
 
 vpnsite.NewVpnSiteLinkOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VpnSiteLinkOutputReference
 ```
@@ -2469,7 +2469,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnSite.VpnSiteO365PolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
 
 vpnsite.NewVpnSiteO365PolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VpnSiteO365PolicyOutputReference
 ```
@@ -2760,7 +2760,7 @@ func InternalValue() VpnSiteO365Policy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnSite.VpnSiteO365PolicyTrafficCategoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
 
 vpnsite.NewVpnSiteO365PolicyTrafficCategoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VpnSiteO365PolicyTrafficCategoryOutputReference
 ```
@@ -3096,7 +3096,7 @@ func InternalValue() VpnSiteO365PolicyTrafficCategory
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.vpnSite.VpnSiteTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/vpnsite"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/vpnsite"
 
 vpnsite.NewVpnSiteTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VpnSiteTimeoutsOutputReference
 ```

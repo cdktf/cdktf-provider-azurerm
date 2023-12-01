@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 mediacontentkeypolicy.NewMediaContentKeyPolicy(scope Construct, id *string, config MediaContentKeyPolicyConfig) MediaContentKeyPolicy
 ```
@@ -375,7 +375,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 mediacontentkeypolicy.MediaContentKeyPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -407,7 +407,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 mediacontentkeypolicy.MediaContentKeyPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -421,7 +421,7 @@ mediacontentkeypolicy.MediaContentKeyPolicy_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 mediacontentkeypolicy.MediaContentKeyPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -435,7 +435,7 @@ mediacontentkeypolicy.MediaContentKeyPolicy_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 mediacontentkeypolicy.MediaContentKeyPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -818,7 +818,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 &mediacontentkeypolicy.MediaContentKeyPolicyConfig {
 	Connection: interface{},
@@ -834,7 +834,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy
 	ResourceGroupName: *string,
 	Description: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaContentKeyPolicy.MediaContentKeyPolicyTimeouts,
 }
 ```
 
@@ -1025,16 +1025,16 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 &mediacontentkeypolicy.MediaContentKeyPolicyPolicyOption {
 	Name: *string,
 	ClearKeyConfigurationEnabled: interface{},
-	FairplayConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionFairplayConfiguration,
+	FairplayConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionFairplayConfiguration,
 	OpenRestrictionEnabled: interface{},
 	PlayreadyConfigurationLicense: interface{},
 	PlayreadyResponseCustomData: *string,
-	TokenRestriction: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionTokenRestriction,
+	TokenRestriction: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionTokenRestriction,
 	WidevineConfigurationTemplate: *string,
 }
 ```
@@ -1161,11 +1161,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionFairplayConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 &mediacontentkeypolicy.MediaContentKeyPolicyPolicyOptionFairplayConfiguration {
 	Ask: *string,
-	OfflineRentalConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfiguration,
+	OfflineRentalConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfiguration,
 	Pfx: *string,
 	PfxPassword: *string,
 	RentalAndLeaseKeyType: *string,
@@ -1265,7 +1265,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 &mediacontentkeypolicy.MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfiguration {
 	PlaybackDurationSeconds: *f64,
@@ -1311,7 +1311,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicense.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 &mediacontentkeypolicy.MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicense {
 	AllowTestDevices: interface{},
@@ -1322,7 +1322,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy
 	ExpirationDate: *string,
 	GracePeriod: *string,
 	LicenseType: *string,
-	PlayRight: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRight,
+	PlayRight: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRight,
 	RelativeBeginDate: *string,
 	RelativeExpirationDate: *string,
 	SecurityLevel: *string,
@@ -1499,7 +1499,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRight.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 &mediacontentkeypolicy.MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRight {
 	AgcAndColorStripeRestriction: *f64,
@@ -1508,7 +1508,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy
 	CompressedDigitalAudioOpl: *f64,
 	CompressedDigitalVideoOpl: *f64,
 	DigitalVideoOnlyContentRestriction: interface{},
-	ExplicitAnalogTelevisionOutputRestriction: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightExplicitAnalogTelevisionOutputRestriction,
+	ExplicitAnalogTelevisionOutputRestriction: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightExplicitAnalogTelevisionOutputRestriction,
 	FirstPlayExpiration: *string,
 	ImageConstraintForAnalogComponentVideoRestriction: interface{},
 	ImageConstraintForAnalogComputerMonitorRestriction: interface{},
@@ -1701,7 +1701,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightExplicitAnalogTelevisionOutputRestriction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 &mediacontentkeypolicy.MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightExplicitAnalogTelevisionOutputRestriction {
 	ControlBits: *f64,
@@ -1747,7 +1747,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionTokenRestriction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 &mediacontentkeypolicy.MediaContentKeyPolicyPolicyOptionTokenRestriction {
 	AlternateKey: interface{},
@@ -1909,7 +1909,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionTokenRestrictionAlternateKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 &mediacontentkeypolicy.MediaContentKeyPolicyPolicyOptionTokenRestrictionAlternateKey {
 	RsaTokenKeyExponent: *string,
@@ -1983,7 +1983,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 &mediacontentkeypolicy.MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaim {
 	Type: *string,
@@ -2029,7 +2029,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 &mediacontentkeypolicy.MediaContentKeyPolicyTimeouts {
 	Create: *string,
@@ -2105,7 +2105,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 mediacontentkeypolicy.NewMediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaContentKeyPolicyPolicyOptionFairplayConfigurationOfflineRentalConfigurationOutputReference
 ```
@@ -2412,7 +2412,7 @@ func InternalValue() MediaContentKeyPolicyPolicyOptionFairplayConfigurationOffli
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionFairplayConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 mediacontentkeypolicy.NewMediaContentKeyPolicyPolicyOptionFairplayConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaContentKeyPolicyPolicyOptionFairplayConfigurationOutputReference
 ```
@@ -2848,7 +2848,7 @@ func InternalValue() MediaContentKeyPolicyPolicyOptionFairplayConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 mediacontentkeypolicy.NewMediaContentKeyPolicyPolicyOptionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaContentKeyPolicyPolicyOptionList
 ```
@@ -2991,7 +2991,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 mediacontentkeypolicy.NewMediaContentKeyPolicyPolicyOptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaContentKeyPolicyPolicyOptionOutputReference
 ```
@@ -3522,7 +3522,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 mediacontentkeypolicy.NewMediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseList
 ```
@@ -3665,7 +3665,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 mediacontentkeypolicy.NewMediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicenseOutputReference
 ```
@@ -4293,7 +4293,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightExplicitAnalogTelevisionOutputRestrictionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 mediacontentkeypolicy.NewMediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightExplicitAnalogTelevisionOutputRestrictionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightExplicitAnalogTelevisionOutputRestrictionOutputReference
 ```
@@ -4593,7 +4593,7 @@ func InternalValue() MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLice
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 mediacontentkeypolicy.NewMediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLicensePlayRightOutputReference
 ```
@@ -5232,7 +5232,7 @@ func InternalValue() MediaContentKeyPolicyPolicyOptionPlayreadyConfigurationLice
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionTokenRestrictionAlternateKeyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 mediacontentkeypolicy.NewMediaContentKeyPolicyPolicyOptionTokenRestrictionAlternateKeyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaContentKeyPolicyPolicyOptionTokenRestrictionAlternateKeyList
 ```
@@ -5375,7 +5375,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionTokenRestrictionAlternateKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 mediacontentkeypolicy.NewMediaContentKeyPolicyPolicyOptionTokenRestrictionAlternateKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaContentKeyPolicyPolicyOptionTokenRestrictionAlternateKeyOutputReference
 ```
@@ -5758,7 +5758,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 mediacontentkeypolicy.NewMediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaContentKeyPolicyPolicyOptionTokenRestrictionOutputReference
 ```
@@ -6323,7 +6323,7 @@ func InternalValue() MediaContentKeyPolicyPolicyOptionTokenRestriction
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaimList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 mediacontentkeypolicy.NewMediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaimList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaimList
 ```
@@ -6466,7 +6466,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaimOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 mediacontentkeypolicy.NewMediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaimOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaContentKeyPolicyPolicyOptionTokenRestrictionRequiredClaimOutputReference
 ```
@@ -6791,7 +6791,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaContentKeyPolicy.MediaContentKeyPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediacontentkeypolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediacontentkeypolicy"
 
 mediacontentkeypolicy.NewMediaContentKeyPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaContentKeyPolicyTimeoutsOutputReference
 ```

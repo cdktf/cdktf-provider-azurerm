@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mobileNetwork.MobileNetwork.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetwork"
 
 mobilenetwork.NewMobileNetwork(scope Construct, id *string, config MobileNetworkConfig) MobileNetwork
 ```
@@ -362,7 +362,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mobileNetwork.MobileNetwork.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetwork"
 
 mobilenetwork.MobileNetwork_IsConstruct(x interface{}) *bool
 ```
@@ -394,7 +394,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mobileNetwork.MobileNetwork.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetwork"
 
 mobilenetwork.MobileNetwork_IsTerraformElement(x interface{}) *bool
 ```
@@ -408,7 +408,7 @@ mobilenetwork.MobileNetwork_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mobileNetwork.MobileNetwork.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetwork"
 
 mobilenetwork.MobileNetwork_IsTerraformResource(x interface{}) *bool
 ```
@@ -422,7 +422,7 @@ mobilenetwork.MobileNetwork_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.mobileNetwork.MobileNetwork.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetwork"
 
 mobilenetwork.MobileNetwork_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -838,7 +838,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mobileNetwork.MobileNetworkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetwork"
 
 &mobilenetwork.MobileNetworkConfig {
 	Connection: interface{},
@@ -855,7 +855,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetwork"
 	ResourceGroupName: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mobileNetwork.MobileNetworkTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mobileNetwork.MobileNetworkTimeouts,
 }
 ```
 
@@ -1057,7 +1057,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mobileNetwork.MobileNetworkTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetwork"
 
 &mobilenetwork.MobileNetworkTimeouts {
 	Create: *string,
@@ -1133,7 +1133,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mobileNetwork.MobileNetworkTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetwork"
 
 mobilenetwork.NewMobileNetworkTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MobileNetworkTimeoutsOutputReference
 ```

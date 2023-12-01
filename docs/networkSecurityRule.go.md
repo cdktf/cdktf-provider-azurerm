@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networksecurityrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networksecurityrule"
 
 networksecurityrule.NewNetworkSecurityRule(scope Construct, id *string, config NetworkSecurityRuleConfig) NetworkSecurityRule
 ```
@@ -432,7 +432,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networksecurityrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networksecurityrule"
 
 networksecurityrule.NetworkSecurityRule_IsConstruct(x interface{}) *bool
 ```
@@ -464,7 +464,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networksecurityrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networksecurityrule"
 
 networksecurityrule.NetworkSecurityRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -478,7 +478,7 @@ networksecurityrule.NetworkSecurityRule_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networksecurityrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networksecurityrule"
 
 networksecurityrule.NetworkSecurityRule_IsTerraformResource(x interface{}) *bool
 ```
@@ -492,7 +492,7 @@ networksecurityrule.NetworkSecurityRule_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRule.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networksecurityrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networksecurityrule"
 
 networksecurityrule.NetworkSecurityRule_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1161,7 +1161,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networksecurityrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networksecurityrule"
 
 &networksecurityrule.NetworkSecurityRuleConfig {
 	Connection: interface{},
@@ -1190,7 +1190,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networksecurityrule"
 	SourceApplicationSecurityGroupIds: *[]*string,
 	SourcePortRange: *string,
 	SourcePortRanges: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.networkSecurityRule.NetworkSecurityRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.networkSecurityRule.NetworkSecurityRuleTimeouts,
 }
 ```
 
@@ -1548,7 +1548,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networksecurityrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networksecurityrule"
 
 &networksecurityrule.NetworkSecurityRuleTimeouts {
 	Create: *string,
@@ -1624,7 +1624,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkSecurityRule.NetworkSecurityRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networksecurityrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networksecurityrule"
 
 networksecurityrule.NewNetworkSecurityRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkSecurityRuleTimeoutsOutputReference
 ```

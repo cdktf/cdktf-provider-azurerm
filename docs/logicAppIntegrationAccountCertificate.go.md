@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppIntegrationAccountCertificate.LogicAppIntegrationAccountCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappintegrationaccountcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logicappintegrationaccountcertificate"
 
 logicappintegrationaccountcertificate.NewLogicAppIntegrationAccountCertificate(scope Construct, id *string, config LogicAppIntegrationAccountCertificateConfig) LogicAppIntegrationAccountCertificate
 ```
@@ -389,7 +389,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.logicAppIntegrationAccountCertificate.LogicAppIntegrationAccountCertificate.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappintegrationaccountcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logicappintegrationaccountcertificate"
 
 logicappintegrationaccountcertificate.LogicAppIntegrationAccountCertificate_IsConstruct(x interface{}) *bool
 ```
@@ -421,7 +421,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.logicAppIntegrationAccountCertificate.LogicAppIntegrationAccountCertificate.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappintegrationaccountcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logicappintegrationaccountcertificate"
 
 logicappintegrationaccountcertificate.LogicAppIntegrationAccountCertificate_IsTerraformElement(x interface{}) *bool
 ```
@@ -435,7 +435,7 @@ logicappintegrationaccountcertificate.LogicAppIntegrationAccountCertificate_IsTe
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.logicAppIntegrationAccountCertificate.LogicAppIntegrationAccountCertificate.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappintegrationaccountcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logicappintegrationaccountcertificate"
 
 logicappintegrationaccountcertificate.LogicAppIntegrationAccountCertificate_IsTerraformResource(x interface{}) *bool
 ```
@@ -449,7 +449,7 @@ logicappintegrationaccountcertificate.LogicAppIntegrationAccountCertificate_IsTe
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.logicAppIntegrationAccountCertificate.LogicAppIntegrationAccountCertificate.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappintegrationaccountcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logicappintegrationaccountcertificate"
 
 logicappintegrationaccountcertificate.LogicAppIntegrationAccountCertificate_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -854,7 +854,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppIntegrationAccountCertificate.LogicAppIntegrationAccountCertificateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappintegrationaccountcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logicappintegrationaccountcertificate"
 
 &logicappintegrationaccountcertificate.LogicAppIntegrationAccountCertificateConfig {
 	Connection: interface{},
@@ -868,10 +868,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappintegrationac
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	KeyVaultKey: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.logicAppIntegrationAccountCertificate.LogicAppIntegrationAccountCertificateKeyVaultKey,
+	KeyVaultKey: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.logicAppIntegrationAccountCertificate.LogicAppIntegrationAccountCertificateKeyVaultKey,
 	Metadata: *string,
 	PublicCertificate: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.logicAppIntegrationAccountCertificate.LogicAppIntegrationAccountCertificateTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.logicAppIntegrationAccountCertificate.LogicAppIntegrationAccountCertificateTimeouts,
 }
 ```
 
@@ -1075,7 +1075,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppIntegrationAccountCertificate.LogicAppIntegrationAccountCertificateKeyVaultKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappintegrationaccountcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logicappintegrationaccountcertificate"
 
 &logicappintegrationaccountcertificate.LogicAppIntegrationAccountCertificateKeyVaultKey {
 	KeyName: *string,
@@ -1135,7 +1135,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logicAppIntegrationAccountCertificate.LogicAppIntegrationAccountCertificateTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappintegrationaccountcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logicappintegrationaccountcertificate"
 
 &logicappintegrationaccountcertificate.LogicAppIntegrationAccountCertificateTimeouts {
 	Create: *string,
@@ -1211,7 +1211,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppIntegrationAccountCertificate.LogicAppIntegrationAccountCertificateKeyVaultKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappintegrationaccountcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logicappintegrationaccountcertificate"
 
 logicappintegrationaccountcertificate.NewLogicAppIntegrationAccountCertificateKeyVaultKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogicAppIntegrationAccountCertificateKeyVaultKeyOutputReference
 ```
@@ -1533,7 +1533,7 @@ func InternalValue() LogicAppIntegrationAccountCertificateKeyVaultKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppIntegrationAccountCertificate.LogicAppIntegrationAccountCertificateTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/logicappintegrationaccountcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/logicappintegrationaccountcertificate"
 
 logicappintegrationaccountcertificate.NewLogicAppIntegrationAccountCertificateTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogicAppIntegrationAccountCertificateTimeoutsOutputReference
 ```

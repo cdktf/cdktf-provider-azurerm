@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbPostgresqlCluster.CosmosdbPostgresqlCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbpostgresqlcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbpostgresqlcluster"
 
 cosmosdbpostgresqlcluster.NewCosmosdbPostgresqlCluster(scope Construct, id *string, config CosmosdbPostgresqlClusterConfig) CosmosdbPostgresqlCluster
 ```
@@ -501,7 +501,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.cosmosdbPostgresqlCluster.CosmosdbPostgresqlCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbpostgresqlcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbpostgresqlcluster"
 
 cosmosdbpostgresqlcluster.CosmosdbPostgresqlCluster_IsConstruct(x interface{}) *bool
 ```
@@ -533,7 +533,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.cosmosdbPostgresqlCluster.CosmosdbPostgresqlCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbpostgresqlcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbpostgresqlcluster"
 
 cosmosdbpostgresqlcluster.CosmosdbPostgresqlCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -547,7 +547,7 @@ cosmosdbpostgresqlcluster.CosmosdbPostgresqlCluster_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.cosmosdbPostgresqlCluster.CosmosdbPostgresqlCluster.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbpostgresqlcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbpostgresqlcluster"
 
 cosmosdbpostgresqlcluster.CosmosdbPostgresqlCluster_IsTerraformResource(x interface{}) *bool
 ```
@@ -561,7 +561,7 @@ cosmosdbpostgresqlcluster.CosmosdbPostgresqlCluster_IsTerraformResource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.cosmosdbPostgresqlCluster.CosmosdbPostgresqlCluster.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbpostgresqlcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbpostgresqlcluster"
 
 cosmosdbpostgresqlcluster.CosmosdbPostgresqlCluster_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1351,7 +1351,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbPostgresqlCluster.CosmosdbPostgresqlClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbpostgresqlcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbpostgresqlcluster"
 
 &cosmosdbpostgresqlcluster.CosmosdbPostgresqlClusterConfig {
 	Connection: interface{},
@@ -1373,7 +1373,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbpostgresqlclu
 	CoordinatorVcoreCount: *f64,
 	HaEnabled: interface{},
 	Id: *string,
-	MaintenanceWindow: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbPostgresqlCluster.CosmosdbPostgresqlClusterMaintenanceWindow,
+	MaintenanceWindow: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.cosmosdbPostgresqlCluster.CosmosdbPostgresqlClusterMaintenanceWindow,
 	NodePublicIpAccessEnabled: interface{},
 	NodeServerEdition: *string,
 	NodeStorageQuotaInMb: *f64,
@@ -1385,7 +1385,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbpostgresqlclu
 	SourceResourceId: *string,
 	SqlVersion: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbPostgresqlCluster.CosmosdbPostgresqlClusterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.cosmosdbPostgresqlCluster.CosmosdbPostgresqlClusterTimeouts,
 }
 ```
 
@@ -1810,7 +1810,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbPostgresqlCluster.CosmosdbPostgresqlClusterMaintenanceWindow.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbpostgresqlcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbpostgresqlcluster"
 
 &cosmosdbpostgresqlcluster.CosmosdbPostgresqlClusterMaintenanceWindow {
 	DayOfWeek: *f64,
@@ -1870,7 +1870,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbPostgresqlCluster.CosmosdbPostgresqlClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbpostgresqlcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbpostgresqlcluster"
 
 &cosmosdbpostgresqlcluster.CosmosdbPostgresqlClusterTimeouts {
 	Create: *string,
@@ -1946,7 +1946,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbPostgresqlCluster.CosmosdbPostgresqlClusterMaintenanceWindowOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbpostgresqlcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbpostgresqlcluster"
 
 cosmosdbpostgresqlcluster.NewCosmosdbPostgresqlClusterMaintenanceWindowOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbPostgresqlClusterMaintenanceWindowOutputReference
 ```
@@ -2282,7 +2282,7 @@ func InternalValue() CosmosdbPostgresqlClusterMaintenanceWindow
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbPostgresqlCluster.CosmosdbPostgresqlClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbpostgresqlcluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbpostgresqlcluster"
 
 cosmosdbpostgresqlcluster.NewCosmosdbPostgresqlClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbPostgresqlClusterTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databricksWorkspace.DatabricksWorkspace.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databricksworkspace"
 
 databricksworkspace.NewDatabricksWorkspace(scope Construct, id *string, config DatabricksWorkspaceConfig) DatabricksWorkspace
 ```
@@ -445,7 +445,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.databricksWorkspace.DatabricksWorkspace.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databricksworkspace"
 
 databricksworkspace.DatabricksWorkspace_IsConstruct(x interface{}) *bool
 ```
@@ -477,7 +477,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.databricksWorkspace.DatabricksWorkspace.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databricksworkspace"
 
 databricksworkspace.DatabricksWorkspace_IsTerraformElement(x interface{}) *bool
 ```
@@ -491,7 +491,7 @@ databricksworkspace.DatabricksWorkspace_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.databricksWorkspace.DatabricksWorkspace.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databricksworkspace"
 
 databricksworkspace.DatabricksWorkspace_IsTerraformResource(x interface{}) *bool
 ```
@@ -505,7 +505,7 @@ databricksworkspace.DatabricksWorkspace_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.databricksWorkspace.DatabricksWorkspace.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databricksworkspace"
 
 databricksworkspace.DatabricksWorkspace_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1174,7 +1174,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databricksWorkspace.DatabricksWorkspaceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databricksworkspace"
 
 &databricksworkspace.DatabricksWorkspaceConfig {
 	Connection: interface{},
@@ -1189,7 +1189,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksworkspace"
 	ResourceGroupName: *string,
 	Sku: *string,
 	CustomerManagedKeyEnabled: interface{},
-	CustomParameters: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.databricksWorkspace.DatabricksWorkspaceCustomParameters,
+	CustomParameters: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.databricksWorkspace.DatabricksWorkspaceCustomParameters,
 	Id: *string,
 	InfrastructureEncryptionEnabled: interface{},
 	LoadBalancerBackendAddressPoolId: *string,
@@ -1200,7 +1200,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksworkspace"
 	NetworkSecurityGroupRulesRequired: *string,
 	PublicNetworkAccessEnabled: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.databricksWorkspace.DatabricksWorkspaceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.databricksWorkspace.DatabricksWorkspaceTimeouts,
 }
 ```
 
@@ -1521,7 +1521,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databricksWorkspace.DatabricksWorkspaceCustomParameters.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databricksworkspace"
 
 &databricksworkspace.DatabricksWorkspaceCustomParameters {
 	MachineLearningWorkspaceId: *string,
@@ -1707,7 +1707,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databricksWorkspace.DatabricksWorkspaceManagedDiskIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databricksworkspace"
 
 &databricksworkspace.DatabricksWorkspaceManagedDiskIdentity {
 
@@ -1720,7 +1720,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksworkspace"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databricksWorkspace.DatabricksWorkspaceStorageAccountIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databricksworkspace"
 
 &databricksworkspace.DatabricksWorkspaceStorageAccountIdentity {
 
@@ -1733,7 +1733,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksworkspace"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databricksWorkspace.DatabricksWorkspaceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databricksworkspace"
 
 &databricksworkspace.DatabricksWorkspaceTimeouts {
 	Create: *string,
@@ -1809,7 +1809,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databricksWorkspace.DatabricksWorkspaceCustomParametersOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databricksworkspace"
 
 databricksworkspace.NewDatabricksWorkspaceCustomParametersOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DatabricksWorkspaceCustomParametersOutputReference
 ```
@@ -2406,7 +2406,7 @@ func InternalValue() DatabricksWorkspaceCustomParameters
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databricksWorkspace.DatabricksWorkspaceManagedDiskIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databricksworkspace"
 
 databricksworkspace.NewDatabricksWorkspaceManagedDiskIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DatabricksWorkspaceManagedDiskIdentityList
 ```
@@ -2538,7 +2538,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databricksWorkspace.DatabricksWorkspaceManagedDiskIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databricksworkspace"
 
 databricksworkspace.NewDatabricksWorkspaceManagedDiskIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DatabricksWorkspaceManagedDiskIdentityOutputReference
 ```
@@ -2838,7 +2838,7 @@ func InternalValue() DatabricksWorkspaceManagedDiskIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databricksWorkspace.DatabricksWorkspaceStorageAccountIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databricksworkspace"
 
 databricksworkspace.NewDatabricksWorkspaceStorageAccountIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DatabricksWorkspaceStorageAccountIdentityList
 ```
@@ -2970,7 +2970,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databricksWorkspace.DatabricksWorkspaceStorageAccountIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databricksworkspace"
 
 databricksworkspace.NewDatabricksWorkspaceStorageAccountIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DatabricksWorkspaceStorageAccountIdentityOutputReference
 ```
@@ -3270,7 +3270,7 @@ func InternalValue() DatabricksWorkspaceStorageAccountIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databricksWorkspace.DatabricksWorkspaceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksworkspace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databricksworkspace"
 
 databricksworkspace.NewDatabricksWorkspaceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DatabricksWorkspaceTimeoutsOutputReference
 ```

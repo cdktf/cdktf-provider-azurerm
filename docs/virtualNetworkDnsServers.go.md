@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualNetworkDnsServers.VirtualNetworkDnsServers.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetworkdnsservers"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualnetworkdnsservers"
 
 virtualnetworkdnsservers.NewVirtualNetworkDnsServers(scope Construct, id *string, config VirtualNetworkDnsServersConfig) VirtualNetworkDnsServers
 ```
@@ -362,7 +362,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.virtualNetworkDnsServers.VirtualNetworkDnsServers.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetworkdnsservers"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualnetworkdnsservers"
 
 virtualnetworkdnsservers.VirtualNetworkDnsServers_IsConstruct(x interface{}) *bool
 ```
@@ -394,7 +394,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.virtualNetworkDnsServers.VirtualNetworkDnsServers.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetworkdnsservers"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualnetworkdnsservers"
 
 virtualnetworkdnsservers.VirtualNetworkDnsServers_IsTerraformElement(x interface{}) *bool
 ```
@@ -408,7 +408,7 @@ virtualnetworkdnsservers.VirtualNetworkDnsServers_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.virtualNetworkDnsServers.VirtualNetworkDnsServers.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetworkdnsservers"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualnetworkdnsservers"
 
 virtualnetworkdnsservers.VirtualNetworkDnsServers_IsTerraformResource(x interface{}) *bool
 ```
@@ -422,7 +422,7 @@ virtualnetworkdnsservers.VirtualNetworkDnsServers_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.virtualNetworkDnsServers.VirtualNetworkDnsServers.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetworkdnsservers"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualnetworkdnsservers"
 
 virtualnetworkdnsservers.VirtualNetworkDnsServers_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -739,7 +739,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualNetworkDnsServers.VirtualNetworkDnsServersConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetworkdnsservers"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualnetworkdnsservers"
 
 &virtualnetworkdnsservers.VirtualNetworkDnsServersConfig {
 	Connection: interface{},
@@ -752,7 +752,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetworkdnsserv
 	VirtualNetworkId: *string,
 	DnsServers: *[]*string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.virtualNetworkDnsServers.VirtualNetworkDnsServersTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.virtualNetworkDnsServers.VirtualNetworkDnsServersTimeouts,
 }
 ```
 
@@ -902,7 +902,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualNetworkDnsServers.VirtualNetworkDnsServersTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetworkdnsservers"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualnetworkdnsservers"
 
 &virtualnetworkdnsservers.VirtualNetworkDnsServersTimeouts {
 	Create: *string,
@@ -978,7 +978,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualNetworkDnsServers.VirtualNetworkDnsServersTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetworkdnsservers"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualnetworkdnsservers"
 
 virtualnetworkdnsservers.NewVirtualNetworkDnsServersTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VirtualNetworkDnsServersTimeoutsOutputReference
 ```

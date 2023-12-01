@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.NewServiceFabricCluster(scope Construct, id *string, config ServiceFabricClusterConfig) ServiceFabricCluster
 ```
@@ -603,7 +603,7 @@ func ResetVmssZonalUpgradeMode()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.ServiceFabricCluster_IsConstruct(x interface{}) *bool
 ```
@@ -635,7 +635,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.ServiceFabricCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -649,7 +649,7 @@ servicefabriccluster.ServiceFabricCluster_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricCluster.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.ServiceFabricCluster_IsTerraformResource(x interface{}) *bool
 ```
@@ -663,7 +663,7 @@ servicefabriccluster.ServiceFabricCluster_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricCluster.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.ServiceFabricCluster_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1453,7 +1453,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterAzureActiveDirectory.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 &servicefabriccluster.ServiceFabricClusterAzureActiveDirectory {
 	ClientApplicationId: *string,
@@ -1513,7 +1513,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 &servicefabriccluster.ServiceFabricClusterCertificate {
 	Thumbprint: *string,
@@ -1573,7 +1573,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterCertificateCommonNames.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 &servicefabriccluster.ServiceFabricClusterCertificateCommonNames {
 	CommonNames: interface{},
@@ -1621,7 +1621,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterCertificateCommonNamesCommonNames.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 &servicefabriccluster.ServiceFabricClusterCertificateCommonNamesCommonNames {
 	CertificateCommonName: *string,
@@ -1667,7 +1667,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterClientCertificateCommonName.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 &servicefabriccluster.ServiceFabricClusterClientCertificateCommonName {
 	CommonName: *string,
@@ -1727,7 +1727,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterClientCertificateThumbprint.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 &servicefabriccluster.ServiceFabricClusterClientCertificateThumbprint {
 	IsAdmin: interface{},
@@ -1773,7 +1773,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 &servicefabriccluster.ServiceFabricClusterConfig {
 	Connection: interface{},
@@ -1792,21 +1792,21 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
 	UpgradeMode: *string,
 	VmImage: *string,
 	AddOnFeatures: *[]*string,
-	AzureActiveDirectory: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.serviceFabricCluster.ServiceFabricClusterAzureActiveDirectory,
-	Certificate: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.serviceFabricCluster.ServiceFabricClusterCertificate,
-	CertificateCommonNames: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.serviceFabricCluster.ServiceFabricClusterCertificateCommonNames,
+	AzureActiveDirectory: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.serviceFabricCluster.ServiceFabricClusterAzureActiveDirectory,
+	Certificate: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.serviceFabricCluster.ServiceFabricClusterCertificate,
+	CertificateCommonNames: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.serviceFabricCluster.ServiceFabricClusterCertificateCommonNames,
 	ClientCertificateCommonName: interface{},
 	ClientCertificateThumbprint: interface{},
 	ClusterCodeVersion: *string,
-	DiagnosticsConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.serviceFabricCluster.ServiceFabricClusterDiagnosticsConfig,
+	DiagnosticsConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.serviceFabricCluster.ServiceFabricClusterDiagnosticsConfig,
 	FabricSettings: interface{},
 	Id: *string,
-	ReverseProxyCertificate: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.serviceFabricCluster.ServiceFabricClusterReverseProxyCertificate,
-	ReverseProxyCertificateCommonNames: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.serviceFabricCluster.ServiceFabricClusterReverseProxyCertificateCommonNames,
+	ReverseProxyCertificate: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.serviceFabricCluster.ServiceFabricClusterReverseProxyCertificate,
+	ReverseProxyCertificateCommonNames: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.serviceFabricCluster.ServiceFabricClusterReverseProxyCertificateCommonNames,
 	ServiceFabricZonalUpgradeMode: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.serviceFabricCluster.ServiceFabricClusterTimeouts,
-	UpgradePolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.serviceFabricCluster.ServiceFabricClusterUpgradePolicy,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.serviceFabricCluster.ServiceFabricClusterTimeouts,
+	UpgradePolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.serviceFabricCluster.ServiceFabricClusterUpgradePolicy,
 	VmssZonalUpgradeMode: *string,
 }
 ```
@@ -2252,7 +2252,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterDiagnosticsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 &servicefabriccluster.ServiceFabricClusterDiagnosticsConfig {
 	BlobEndpoint: *string,
@@ -2340,7 +2340,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterFabricSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 &servicefabriccluster.ServiceFabricClusterFabricSettings {
 	Name: *string,
@@ -2386,7 +2386,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterNodeType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 &servicefabriccluster.ServiceFabricClusterNodeType {
 	ClientEndpointPort: *f64,
@@ -2394,10 +2394,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
 	InstanceCount: *f64,
 	IsPrimary: interface{},
 	Name: *string,
-	ApplicationPorts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.serviceFabricCluster.ServiceFabricClusterNodeTypeApplicationPorts,
+	ApplicationPorts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.serviceFabricCluster.ServiceFabricClusterNodeTypeApplicationPorts,
 	Capacities: *map[string]*string,
 	DurabilityLevel: *string,
-	EphemeralPorts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.serviceFabricCluster.ServiceFabricClusterNodeTypeEphemeralPorts,
+	EphemeralPorts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.serviceFabricCluster.ServiceFabricClusterNodeTypeEphemeralPorts,
 	IsStateless: interface{},
 	MultipleAvailabilityZones: interface{},
 	PlacementProperties: *map[string]*string,
@@ -2590,7 +2590,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterNodeTypeApplicationPorts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 &servicefabriccluster.ServiceFabricClusterNodeTypeApplicationPorts {
 	EndPort: *f64,
@@ -2636,7 +2636,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterNodeTypeEphemeralPorts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 &servicefabriccluster.ServiceFabricClusterNodeTypeEphemeralPorts {
 	EndPort: *f64,
@@ -2682,7 +2682,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterReverseProxyCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 &servicefabriccluster.ServiceFabricClusterReverseProxyCertificate {
 	Thumbprint: *string,
@@ -2742,7 +2742,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterReverseProxyCertificateCommonNames.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 &servicefabriccluster.ServiceFabricClusterReverseProxyCertificateCommonNames {
 	CommonNames: interface{},
@@ -2790,7 +2790,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterReverseProxyCertificateCommonNamesCommonNames.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 &servicefabriccluster.ServiceFabricClusterReverseProxyCertificateCommonNamesCommonNames {
 	CertificateCommonName: *string,
@@ -2836,7 +2836,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 &servicefabriccluster.ServiceFabricClusterTimeouts {
 	Create: *string,
@@ -2910,15 +2910,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterUpgradePolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 &servicefabriccluster.ServiceFabricClusterUpgradePolicy {
-	DeltaHealthPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.serviceFabricCluster.ServiceFabricClusterUpgradePolicyDeltaHealthPolicy,
+	DeltaHealthPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.serviceFabricCluster.ServiceFabricClusterUpgradePolicyDeltaHealthPolicy,
 	ForceRestartEnabled: interface{},
 	HealthCheckRetryTimeout: *string,
 	HealthCheckStableDuration: *string,
 	HealthCheckWaitDuration: *string,
-	HealthPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.serviceFabricCluster.ServiceFabricClusterUpgradePolicyHealthPolicy,
+	HealthPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.serviceFabricCluster.ServiceFabricClusterUpgradePolicyHealthPolicy,
 	UpgradeDomainTimeout: *string,
 	UpgradeReplicaSetCheckTimeout: *string,
 	UpgradeTimeout: *string,
@@ -3058,7 +3058,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterUpgradePolicyDeltaHealthPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 &servicefabriccluster.ServiceFabricClusterUpgradePolicyDeltaHealthPolicy {
 	MaxDeltaUnhealthyApplicationsPercent: *f64,
@@ -3118,7 +3118,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterUpgradePolicyHealthPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 &servicefabriccluster.ServiceFabricClusterUpgradePolicyHealthPolicy {
 	MaxUnhealthyApplicationsPercent: *f64,
@@ -3166,7 +3166,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterAzureActiveDirectoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.NewServiceFabricClusterAzureActiveDirectoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ServiceFabricClusterAzureActiveDirectoryOutputReference
 ```
@@ -3481,7 +3481,7 @@ func InternalValue() ServiceFabricClusterAzureActiveDirectory
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterCertificateCommonNamesCommonNamesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.NewServiceFabricClusterCertificateCommonNamesCommonNamesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ServiceFabricClusterCertificateCommonNamesCommonNamesList
 ```
@@ -3624,7 +3624,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterCertificateCommonNamesCommonNamesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.NewServiceFabricClusterCertificateCommonNamesCommonNamesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ServiceFabricClusterCertificateCommonNamesCommonNamesOutputReference
 ```
@@ -3942,7 +3942,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterCertificateCommonNamesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.NewServiceFabricClusterCertificateCommonNamesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ServiceFabricClusterCertificateCommonNamesOutputReference
 ```
@@ -4248,7 +4248,7 @@ func InternalValue() ServiceFabricClusterCertificateCommonNames
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterCertificateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.NewServiceFabricClusterCertificateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ServiceFabricClusterCertificateOutputReference
 ```
@@ -4570,7 +4570,7 @@ func InternalValue() ServiceFabricClusterCertificate
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterClientCertificateCommonNameList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.NewServiceFabricClusterClientCertificateCommonNameList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ServiceFabricClusterClientCertificateCommonNameList
 ```
@@ -4713,7 +4713,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterClientCertificateCommonNameOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.NewServiceFabricClusterClientCertificateCommonNameOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ServiceFabricClusterClientCertificateCommonNameOutputReference
 ```
@@ -5053,7 +5053,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterClientCertificateThumbprintList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.NewServiceFabricClusterClientCertificateThumbprintList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ServiceFabricClusterClientCertificateThumbprintList
 ```
@@ -5196,7 +5196,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterClientCertificateThumbprintOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.NewServiceFabricClusterClientCertificateThumbprintOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ServiceFabricClusterClientCertificateThumbprintOutputReference
 ```
@@ -5507,7 +5507,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterDiagnosticsConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.NewServiceFabricClusterDiagnosticsConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ServiceFabricClusterDiagnosticsConfigOutputReference
 ```
@@ -5866,7 +5866,7 @@ func InternalValue() ServiceFabricClusterDiagnosticsConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterFabricSettingsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.NewServiceFabricClusterFabricSettingsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ServiceFabricClusterFabricSettingsList
 ```
@@ -6009,7 +6009,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterFabricSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.NewServiceFabricClusterFabricSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ServiceFabricClusterFabricSettingsOutputReference
 ```
@@ -6327,7 +6327,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterNodeTypeApplicationPortsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.NewServiceFabricClusterNodeTypeApplicationPortsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ServiceFabricClusterNodeTypeApplicationPortsOutputReference
 ```
@@ -6620,7 +6620,7 @@ func InternalValue() ServiceFabricClusterNodeTypeApplicationPorts
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterNodeTypeEphemeralPortsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.NewServiceFabricClusterNodeTypeEphemeralPortsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ServiceFabricClusterNodeTypeEphemeralPortsOutputReference
 ```
@@ -6913,7 +6913,7 @@ func InternalValue() ServiceFabricClusterNodeTypeEphemeralPorts
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterNodeTypeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.NewServiceFabricClusterNodeTypeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ServiceFabricClusterNodeTypeList
 ```
@@ -7056,7 +7056,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterNodeTypeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.NewServiceFabricClusterNodeTypeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ServiceFabricClusterNodeTypeOutputReference
 ```
@@ -7691,7 +7691,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterReverseProxyCertificateCommonNamesCommonNamesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.NewServiceFabricClusterReverseProxyCertificateCommonNamesCommonNamesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ServiceFabricClusterReverseProxyCertificateCommonNamesCommonNamesList
 ```
@@ -7834,7 +7834,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterReverseProxyCertificateCommonNamesCommonNamesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.NewServiceFabricClusterReverseProxyCertificateCommonNamesCommonNamesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ServiceFabricClusterReverseProxyCertificateCommonNamesCommonNamesOutputReference
 ```
@@ -8152,7 +8152,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterReverseProxyCertificateCommonNamesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.NewServiceFabricClusterReverseProxyCertificateCommonNamesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ServiceFabricClusterReverseProxyCertificateCommonNamesOutputReference
 ```
@@ -8458,7 +8458,7 @@ func InternalValue() ServiceFabricClusterReverseProxyCertificateCommonNames
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterReverseProxyCertificateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.NewServiceFabricClusterReverseProxyCertificateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ServiceFabricClusterReverseProxyCertificateOutputReference
 ```
@@ -8780,7 +8780,7 @@ func InternalValue() ServiceFabricClusterReverseProxyCertificate
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.NewServiceFabricClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ServiceFabricClusterTimeoutsOutputReference
 ```
@@ -9145,7 +9145,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterUpgradePolicyDeltaHealthPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.NewServiceFabricClusterUpgradePolicyDeltaHealthPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ServiceFabricClusterUpgradePolicyDeltaHealthPolicyOutputReference
 ```
@@ -9481,7 +9481,7 @@ func InternalValue() ServiceFabricClusterUpgradePolicyDeltaHealthPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterUpgradePolicyHealthPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.NewServiceFabricClusterUpgradePolicyHealthPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ServiceFabricClusterUpgradePolicyHealthPolicyOutputReference
 ```
@@ -9788,7 +9788,7 @@ func InternalValue() ServiceFabricClusterUpgradePolicyHealthPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.serviceFabricCluster.ServiceFabricClusterUpgradePolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/servicefabriccluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicefabriccluster"
 
 servicefabriccluster.NewServiceFabricClusterUpgradePolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ServiceFabricClusterUpgradePolicyOutputReference
 ```

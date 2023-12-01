@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlManagedInstanceActiveDirectoryAdministrator.SqlManagedInstanceActiveDirectoryAdministrator.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanagedinstanceactivedirectoryadministrator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqlmanagedinstanceactivedirectoryadministrator"
 
 sqlmanagedinstanceactivedirectoryadministrator.NewSqlManagedInstanceActiveDirectoryAdministrator(scope Construct, id *string, config SqlManagedInstanceActiveDirectoryAdministratorConfig) SqlManagedInstanceActiveDirectoryAdministrator
 ```
@@ -362,7 +362,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.sqlManagedInstanceActiveDirectoryAdministrator.SqlManagedInstanceActiveDirectoryAdministrator.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanagedinstanceactivedirectoryadministrator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqlmanagedinstanceactivedirectoryadministrator"
 
 sqlmanagedinstanceactivedirectoryadministrator.SqlManagedInstanceActiveDirectoryAdministrator_IsConstruct(x interface{}) *bool
 ```
@@ -394,7 +394,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.sqlManagedInstanceActiveDirectoryAdministrator.SqlManagedInstanceActiveDirectoryAdministrator.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanagedinstanceactivedirectoryadministrator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqlmanagedinstanceactivedirectoryadministrator"
 
 sqlmanagedinstanceactivedirectoryadministrator.SqlManagedInstanceActiveDirectoryAdministrator_IsTerraformElement(x interface{}) *bool
 ```
@@ -408,7 +408,7 @@ sqlmanagedinstanceactivedirectoryadministrator.SqlManagedInstanceActiveDirectory
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.sqlManagedInstanceActiveDirectoryAdministrator.SqlManagedInstanceActiveDirectoryAdministrator.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanagedinstanceactivedirectoryadministrator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqlmanagedinstanceactivedirectoryadministrator"
 
 sqlmanagedinstanceactivedirectoryadministrator.SqlManagedInstanceActiveDirectoryAdministrator_IsTerraformResource(x interface{}) *bool
 ```
@@ -422,7 +422,7 @@ sqlmanagedinstanceactivedirectoryadministrator.SqlManagedInstanceActiveDirectory
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.sqlManagedInstanceActiveDirectoryAdministrator.SqlManagedInstanceActiveDirectoryAdministrator.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanagedinstanceactivedirectoryadministrator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqlmanagedinstanceactivedirectoryadministrator"
 
 sqlmanagedinstanceactivedirectoryadministrator.SqlManagedInstanceActiveDirectoryAdministrator_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -827,7 +827,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlManagedInstanceActiveDirectoryAdministrator.SqlManagedInstanceActiveDirectoryAdministratorConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanagedinstanceactivedirectoryadministrator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqlmanagedinstanceactivedirectoryadministrator"
 
 &sqlmanagedinstanceactivedirectoryadministrator.SqlManagedInstanceActiveDirectoryAdministratorConfig {
 	Connection: interface{},
@@ -844,7 +844,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanagedinstanceact
 	TenantId: *string,
 	AzureadAuthenticationOnly: interface{},
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sqlManagedInstanceActiveDirectoryAdministrator.SqlManagedInstanceActiveDirectoryAdministratorTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.sqlManagedInstanceActiveDirectoryAdministrator.SqlManagedInstanceActiveDirectoryAdministratorTimeouts,
 }
 ```
 
@@ -1046,7 +1046,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sqlManagedInstanceActiveDirectoryAdministrator.SqlManagedInstanceActiveDirectoryAdministratorTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanagedinstanceactivedirectoryadministrator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqlmanagedinstanceactivedirectoryadministrator"
 
 &sqlmanagedinstanceactivedirectoryadministrator.SqlManagedInstanceActiveDirectoryAdministratorTimeouts {
 	Create: *string,
@@ -1122,7 +1122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sqlManagedInstanceActiveDirectoryAdministrator.SqlManagedInstanceActiveDirectoryAdministratorTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sqlmanagedinstanceactivedirectoryadministrator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sqlmanagedinstanceactivedirectoryadministrator"
 
 sqlmanagedinstanceactivedirectoryadministrator.NewSqlManagedInstanceActiveDirectoryAdministratorTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SqlManagedInstanceActiveDirectoryAdministratorTimeoutsOutputReference
 ```

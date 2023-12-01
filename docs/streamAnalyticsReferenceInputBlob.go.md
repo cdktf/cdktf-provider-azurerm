@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsReferenceInputBlob.StreamAnalyticsReferenceInputBlob.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsreferenceinputblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsreferenceinputblob"
 
 streamanalyticsreferenceinputblob.NewStreamAnalyticsReferenceInputBlob(scope Construct, id *string, config StreamAnalyticsReferenceInputBlobConfig) StreamAnalyticsReferenceInputBlob
 ```
@@ -382,7 +382,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.streamAnalyticsReferenceInputBlob.StreamAnalyticsReferenceInputBlob.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsreferenceinputblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsreferenceinputblob"
 
 streamanalyticsreferenceinputblob.StreamAnalyticsReferenceInputBlob_IsConstruct(x interface{}) *bool
 ```
@@ -414,7 +414,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.streamAnalyticsReferenceInputBlob.StreamAnalyticsReferenceInputBlob.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsreferenceinputblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsreferenceinputblob"
 
 streamanalyticsreferenceinputblob.StreamAnalyticsReferenceInputBlob_IsTerraformElement(x interface{}) *bool
 ```
@@ -428,7 +428,7 @@ streamanalyticsreferenceinputblob.StreamAnalyticsReferenceInputBlob_IsTerraformE
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.streamAnalyticsReferenceInputBlob.StreamAnalyticsReferenceInputBlob.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsreferenceinputblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsreferenceinputblob"
 
 streamanalyticsreferenceinputblob.StreamAnalyticsReferenceInputBlob_IsTerraformResource(x interface{}) *bool
 ```
@@ -442,7 +442,7 @@ streamanalyticsreferenceinputblob.StreamAnalyticsReferenceInputBlob_IsTerraformR
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.streamAnalyticsReferenceInputBlob.StreamAnalyticsReferenceInputBlob.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsreferenceinputblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsreferenceinputblob"
 
 streamanalyticsreferenceinputblob.StreamAnalyticsReferenceInputBlob_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -957,7 +957,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsReferenceInputBlob.StreamAnalyticsReferenceInputBlobConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsreferenceinputblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsreferenceinputblob"
 
 &streamanalyticsreferenceinputblob.StreamAnalyticsReferenceInputBlobConfig {
 	Connection: interface{},
@@ -971,7 +971,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsrefere
 	Name: *string,
 	PathPattern: *string,
 	ResourceGroupName: *string,
-	Serialization: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.streamAnalyticsReferenceInputBlob.StreamAnalyticsReferenceInputBlobSerialization,
+	Serialization: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.streamAnalyticsReferenceInputBlob.StreamAnalyticsReferenceInputBlobSerialization,
 	StorageAccountName: *string,
 	StorageContainerName: *string,
 	StreamAnalyticsJobName: *string,
@@ -979,7 +979,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsrefere
 	AuthenticationMode: *string,
 	Id: *string,
 	StorageAccountKey: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.streamAnalyticsReferenceInputBlob.StreamAnalyticsReferenceInputBlobTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.streamAnalyticsReferenceInputBlob.StreamAnalyticsReferenceInputBlobTimeouts,
 }
 ```
 
@@ -1248,7 +1248,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsReferenceInputBlob.StreamAnalyticsReferenceInputBlobSerialization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsreferenceinputblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsreferenceinputblob"
 
 &streamanalyticsreferenceinputblob.StreamAnalyticsReferenceInputBlobSerialization {
 	Type: *string,
@@ -1308,7 +1308,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsReferenceInputBlob.StreamAnalyticsReferenceInputBlobTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsreferenceinputblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsreferenceinputblob"
 
 &streamanalyticsreferenceinputblob.StreamAnalyticsReferenceInputBlobTimeouts {
 	Create: *string,
@@ -1384,7 +1384,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsReferenceInputBlob.StreamAnalyticsReferenceInputBlobSerializationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsreferenceinputblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsreferenceinputblob"
 
 streamanalyticsreferenceinputblob.NewStreamAnalyticsReferenceInputBlobSerializationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StreamAnalyticsReferenceInputBlobSerializationOutputReference
 ```
@@ -1713,7 +1713,7 @@ func InternalValue() StreamAnalyticsReferenceInputBlobSerialization
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsReferenceInputBlob.StreamAnalyticsReferenceInputBlobTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsreferenceinputblob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsreferenceinputblob"
 
 streamanalyticsreferenceinputblob.NewStreamAnalyticsReferenceInputBlobTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StreamAnalyticsReferenceInputBlobTimeoutsOutputReference
 ```

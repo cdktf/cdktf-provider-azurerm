@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsOutputMssql.StreamAnalyticsOutputMssql.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputmssql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsoutputmssql"
 
 streamanalyticsoutputmssql.NewStreamAnalyticsOutputMssql(scope Construct, id *string, config StreamAnalyticsOutputMssqlConfig) StreamAnalyticsOutputMssql
 ```
@@ -390,7 +390,7 @@ func ResetUser()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.streamAnalyticsOutputMssql.StreamAnalyticsOutputMssql.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputmssql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsoutputmssql"
 
 streamanalyticsoutputmssql.StreamAnalyticsOutputMssql_IsConstruct(x interface{}) *bool
 ```
@@ -422,7 +422,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.streamAnalyticsOutputMssql.StreamAnalyticsOutputMssql.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputmssql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsoutputmssql"
 
 streamanalyticsoutputmssql.StreamAnalyticsOutputMssql_IsTerraformElement(x interface{}) *bool
 ```
@@ -436,7 +436,7 @@ streamanalyticsoutputmssql.StreamAnalyticsOutputMssql_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.streamAnalyticsOutputMssql.StreamAnalyticsOutputMssql.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputmssql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsoutputmssql"
 
 streamanalyticsoutputmssql.StreamAnalyticsOutputMssql_IsTerraformResource(x interface{}) *bool
 ```
@@ -450,7 +450,7 @@ streamanalyticsoutputmssql.StreamAnalyticsOutputMssql_IsTerraformResource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.streamAnalyticsOutputMssql.StreamAnalyticsOutputMssql.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputmssql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsoutputmssql"
 
 streamanalyticsoutputmssql.StreamAnalyticsOutputMssql_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -965,7 +965,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsOutputMssql.StreamAnalyticsOutputMssqlConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputmssql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsoutputmssql"
 
 &streamanalyticsoutputmssql.StreamAnalyticsOutputMssqlConfig {
 	Connection: interface{},
@@ -986,7 +986,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutput
 	MaxBatchCount: *f64,
 	MaxWriterCount: *f64,
 	Password: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.streamAnalyticsOutputMssql.StreamAnalyticsOutputMssqlTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.streamAnalyticsOutputMssql.StreamAnalyticsOutputMssqlTimeouts,
 	User: *string,
 }
 ```
@@ -1254,7 +1254,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsOutputMssql.StreamAnalyticsOutputMssqlTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputmssql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsoutputmssql"
 
 &streamanalyticsoutputmssql.StreamAnalyticsOutputMssqlTimeouts {
 	Create: *string,
@@ -1330,7 +1330,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsOutputMssql.StreamAnalyticsOutputMssqlTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputmssql"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsoutputmssql"
 
 streamanalyticsoutputmssql.NewStreamAnalyticsOutputMssqlTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StreamAnalyticsOutputMssqlTimeoutsOutputReference
 ```
