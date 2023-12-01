@@ -4,7 +4,7 @@
 
 ### DnsNsRecord <a name="DnsNsRecord" id="@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecord"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dns_ns_record azurerm_dns_ns_record}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/dns_ns_record azurerm_dns_ns_record}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecord.Initializer"></a>
 
@@ -451,7 +451,7 @@ The construct id used in the generated config for the DnsNsRecord to import.
 
 The id of the existing DnsNsRecord that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dns_ns_record#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/dns_ns_record#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -870,13 +870,13 @@ new DnsNsRecordConfig {
 | <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dns_ns_record#name DnsNsRecord#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordConfig.property.records">Records</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dns_ns_record#records DnsNsRecord#records}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dns_ns_record#resource_group_name DnsNsRecord#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordConfig.property.ttl">Ttl</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dns_ns_record#ttl DnsNsRecord#ttl}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordConfig.property.zoneName">ZoneName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dns_ns_record#zone_name DnsNsRecord#zone_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dns_ns_record#id DnsNsRecord#id}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dns_ns_record#tags DnsNsRecord#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/dns_ns_record#name DnsNsRecord#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordConfig.property.records">Records</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/dns_ns_record#records DnsNsRecord#records}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/dns_ns_record#resource_group_name DnsNsRecord#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordConfig.property.ttl">Ttl</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/dns_ns_record#ttl DnsNsRecord#ttl}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordConfig.property.zoneName">ZoneName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/dns_ns_record#zone_name DnsNsRecord#zone_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/dns_ns_record#id DnsNsRecord#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/dns_ns_record#tags DnsNsRecord#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordTimeouts">DnsNsRecordTimeouts</a></code> | timeouts block. |
 
 ---
@@ -959,7 +959,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dns_ns_record#name DnsNsRecord#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/dns_ns_record#name DnsNsRecord#name}.
 
 ---
 
@@ -971,7 +971,7 @@ public string[] Records { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dns_ns_record#records DnsNsRecord#records}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/dns_ns_record#records DnsNsRecord#records}.
 
 ---
 
@@ -983,7 +983,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dns_ns_record#resource_group_name DnsNsRecord#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/dns_ns_record#resource_group_name DnsNsRecord#resource_group_name}.
 
 ---
 
@@ -995,7 +995,7 @@ public double Ttl { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dns_ns_record#ttl DnsNsRecord#ttl}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/dns_ns_record#ttl DnsNsRecord#ttl}.
 
 ---
 
@@ -1007,7 +1007,7 @@ public string ZoneName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dns_ns_record#zone_name DnsNsRecord#zone_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/dns_ns_record#zone_name DnsNsRecord#zone_name}.
 
 ---
 
@@ -1019,7 +1019,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dns_ns_record#id DnsNsRecord#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/dns_ns_record#id DnsNsRecord#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1034,7 +1034,7 @@ public System.Collections.Generic.IDictionary<string, string> Tags { get; set; }
 
 - *Type:* System.Collections.Generic.IDictionary<string, string>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dns_ns_record#tags DnsNsRecord#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/dns_ns_record#tags DnsNsRecord#tags}.
 
 ---
 
@@ -1048,7 +1048,7 @@ public DnsNsRecordTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dns_ns_record#timeouts DnsNsRecord#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/dns_ns_record#timeouts DnsNsRecord#timeouts}
 
 ---
 
@@ -1071,10 +1071,10 @@ new DnsNsRecordTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dns_ns_record#create DnsNsRecord#create}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dns_ns_record#delete DnsNsRecord#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dns_ns_record#read DnsNsRecord#read}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dns_ns_record#update DnsNsRecord#update}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/dns_ns_record#create DnsNsRecord#create}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/dns_ns_record#delete DnsNsRecord#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/dns_ns_record#read DnsNsRecord#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dnsNsRecord.DnsNsRecordTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/dns_ns_record#update DnsNsRecord#update}. |
 
 ---
 
@@ -1086,7 +1086,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dns_ns_record#create DnsNsRecord#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/dns_ns_record#create DnsNsRecord#create}.
 
 ---
 
@@ -1098,7 +1098,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dns_ns_record#delete DnsNsRecord#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/dns_ns_record#delete DnsNsRecord#delete}.
 
 ---
 
@@ -1110,7 +1110,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dns_ns_record#read DnsNsRecord#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/dns_ns_record#read DnsNsRecord#read}.
 
 ---
 
@@ -1122,7 +1122,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/dns_ns_record#update DnsNsRecord#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/dns_ns_record#update DnsNsRecord#update}.
 
 ---
 

@@ -1,3 +1,3 @@
 # `data_azurerm_logic_app_standard`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_logic_app_standard`](https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/logic_app_standard).
+Refer to the Terraform Registory for docs: [`data_azurerm_logic_app_standard`](https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/logic_app_standard).

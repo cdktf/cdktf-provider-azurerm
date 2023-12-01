@@ -514,6 +514,7 @@ The following submodules are available:
 - [dataAzurermSqlManagedInstance](./dataAzurermSqlManagedInstance.python.md)
 - [dataAzurermSqlServer](./dataAzurermSqlServer.python.md)
 - [dataAzurermSshPublicKey](./dataAzurermSshPublicKey.python.md)
+- [dataAzurermStackHciCluster](./dataAzurermStackHciCluster.python.md)
 - [dataAzurermStorageAccount](./dataAzurermStorageAccount.python.md)
 - [dataAzurermStorageAccountBlobContainerSas](./dataAzurermStorageAccountBlobContainerSas.python.md)
 - [dataAzurermStorageAccountSas](./dataAzurermStorageAccountSas.python.md)

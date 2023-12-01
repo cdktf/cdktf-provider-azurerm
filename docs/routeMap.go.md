@@ -4,7 +4,7 @@
 
 ### RouteMap <a name="RouteMap" id="@cdktf/provider-azurerm.routeMap.RouteMap"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map azurerm_route_map}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map azurerm_route_map}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.routeMap.RouteMap.Initializer"></a>
 
@@ -464,7 +464,7 @@ The construct id used in the generated config for the RouteMap to import.
 
 The id of the existing RouteMap that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -803,9 +803,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/routemap"
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#name RouteMap#name}. |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.virtualHubId">VirtualHubId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#virtual_hub_id RouteMap#virtual_hub_id}. |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#id RouteMap#id}. |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#name RouteMap#name}. |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.virtualHubId">VirtualHubId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#virtual_hub_id RouteMap#virtual_hub_id}. |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#id RouteMap#id}. |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.rule">Rule</a></code> | <code>interface{}</code> | rule block. |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapTimeouts">RouteMapTimeouts</a></code> | timeouts block. |
 
@@ -889,7 +889,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#name RouteMap#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#name RouteMap#name}.
 
 ---
 
@@ -901,7 +901,7 @@ VirtualHubId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#virtual_hub_id RouteMap#virtual_hub_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#virtual_hub_id RouteMap#virtual_hub_id}.
 
 ---
 
@@ -913,7 +913,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#id RouteMap#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#id RouteMap#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -930,7 +930,7 @@ Rule interface{}
 
 rule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#rule RouteMap#rule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#rule RouteMap#rule}
 
 ---
 
@@ -944,7 +944,7 @@ Timeouts RouteMapTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#timeouts RouteMap#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#timeouts RouteMap#timeouts}
 
 ---
 
@@ -967,10 +967,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/routemap"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#name RouteMap#name}. |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#name RouteMap#name}. |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule.property.action">Action</a></code> | <code>interface{}</code> | action block. |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule.property.matchCriterion">MatchCriterion</a></code> | <code>interface{}</code> | match_criterion block. |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule.property.nextStepIfMatched">NextStepIfMatched</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#next_step_if_matched RouteMap#next_step_if_matched}. |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule.property.nextStepIfMatched">NextStepIfMatched</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#next_step_if_matched RouteMap#next_step_if_matched}. |
 
 ---
 
@@ -982,7 +982,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#name RouteMap#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#name RouteMap#name}.
 
 ---
 
@@ -996,7 +996,7 @@ Action interface{}
 
 action block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#action RouteMap#action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#action RouteMap#action}
 
 ---
 
@@ -1010,7 +1010,7 @@ MatchCriterion interface{}
 
 match_criterion block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#match_criterion RouteMap#match_criterion}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#match_criterion RouteMap#match_criterion}
 
 ---
 
@@ -1022,7 +1022,7 @@ NextStepIfMatched *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#next_step_if_matched RouteMap#next_step_if_matched}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#next_step_if_matched RouteMap#next_step_if_matched}.
 
 ---
 
@@ -1044,7 +1044,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/routemap"
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleAction.property.parameter">Parameter</a></code> | <code>interface{}</code> | parameter block. |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleAction.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#type RouteMap#type}. |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleAction.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#type RouteMap#type}. |
 
 ---
 
@@ -1058,7 +1058,7 @@ Parameter interface{}
 
 parameter block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#parameter RouteMap#parameter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#parameter RouteMap#parameter}
 
 ---
 
@@ -1070,7 +1070,7 @@ Type *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#type RouteMap#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#type RouteMap#type}.
 
 ---
 
@@ -1092,9 +1092,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/routemap"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameter.property.asPath">AsPath</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#as_path RouteMap#as_path}. |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameter.property.community">Community</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#community RouteMap#community}. |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameter.property.routePrefix">RoutePrefix</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#route_prefix RouteMap#route_prefix}. |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameter.property.asPath">AsPath</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#as_path RouteMap#as_path}. |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameter.property.community">Community</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#community RouteMap#community}. |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameter.property.routePrefix">RoutePrefix</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#route_prefix RouteMap#route_prefix}. |
 
 ---
 
@@ -1106,7 +1106,7 @@ AsPath *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#as_path RouteMap#as_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#as_path RouteMap#as_path}.
 
 ---
 
@@ -1118,7 +1118,7 @@ Community *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#community RouteMap#community}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#community RouteMap#community}.
 
 ---
 
@@ -1130,7 +1130,7 @@ RoutePrefix *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#route_prefix RouteMap#route_prefix}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#route_prefix RouteMap#route_prefix}.
 
 ---
 
@@ -1153,10 +1153,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/routemap"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterion.property.matchCondition">MatchCondition</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#match_condition RouteMap#match_condition}. |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterion.property.asPath">AsPath</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#as_path RouteMap#as_path}. |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterion.property.community">Community</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#community RouteMap#community}. |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterion.property.routePrefix">RoutePrefix</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#route_prefix RouteMap#route_prefix}. |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterion.property.matchCondition">MatchCondition</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#match_condition RouteMap#match_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterion.property.asPath">AsPath</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#as_path RouteMap#as_path}. |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterion.property.community">Community</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#community RouteMap#community}. |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterion.property.routePrefix">RoutePrefix</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#route_prefix RouteMap#route_prefix}. |
 
 ---
 
@@ -1168,7 +1168,7 @@ MatchCondition *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#match_condition RouteMap#match_condition}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#match_condition RouteMap#match_condition}.
 
 ---
 
@@ -1180,7 +1180,7 @@ AsPath *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#as_path RouteMap#as_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#as_path RouteMap#as_path}.
 
 ---
 
@@ -1192,7 +1192,7 @@ Community *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#community RouteMap#community}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#community RouteMap#community}.
 
 ---
 
@@ -1204,7 +1204,7 @@ RoutePrefix *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#route_prefix RouteMap#route_prefix}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#route_prefix RouteMap#route_prefix}.
 
 ---
 
@@ -1227,10 +1227,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/routemap"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#create RouteMap#create}. |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#delete RouteMap#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#read RouteMap#read}. |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#update RouteMap#update}. |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#create RouteMap#create}. |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#delete RouteMap#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#read RouteMap#read}. |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#update RouteMap#update}. |
 
 ---
 
@@ -1242,7 +1242,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#create RouteMap#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#create RouteMap#create}.
 
 ---
 
@@ -1254,7 +1254,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#delete RouteMap#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#delete RouteMap#delete}.
 
 ---
 
@@ -1266,7 +1266,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#read RouteMap#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#read RouteMap#read}.
 
 ---
 
@@ -1278,7 +1278,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/route_map#update RouteMap#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/route_map#update RouteMap#update}.
 
 ---
 

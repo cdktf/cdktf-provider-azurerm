@@ -4,7 +4,7 @@
 
 ### MapsCreator <a name="MapsCreator" id="@cdktf/provider-azurerm.mapsCreator.MapsCreator"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/maps_creator azurerm_maps_creator}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/maps_creator azurerm_maps_creator}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mapsCreator.MapsCreator.Initializer"></a>
 
@@ -451,7 +451,7 @@ The construct id used in the generated config for the MapsCreator to import.
 
 The id of the existing MapsCreator that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/maps_creator#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/maps_creator#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -821,12 +821,12 @@ const mapsCreatorConfig: mapsCreator.MapsCreatorConfig = { ... }
 | <code><a href="#@cdktf/provider-azurerm.mapsCreator.MapsCreatorConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mapsCreator.MapsCreatorConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mapsCreator.MapsCreatorConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mapsCreator.MapsCreatorConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/maps_creator#location MapsCreator#location}. |
-| <code><a href="#@cdktf/provider-azurerm.mapsCreator.MapsCreatorConfig.property.mapsAccountId">mapsAccountId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/maps_creator#maps_account_id MapsCreator#maps_account_id}. |
-| <code><a href="#@cdktf/provider-azurerm.mapsCreator.MapsCreatorConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/maps_creator#name MapsCreator#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mapsCreator.MapsCreatorConfig.property.storageUnits">storageUnits</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/maps_creator#storage_units MapsCreator#storage_units}. |
-| <code><a href="#@cdktf/provider-azurerm.mapsCreator.MapsCreatorConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/maps_creator#id MapsCreator#id}. |
-| <code><a href="#@cdktf/provider-azurerm.mapsCreator.MapsCreatorConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/maps_creator#tags MapsCreator#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.mapsCreator.MapsCreatorConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/maps_creator#location MapsCreator#location}. |
+| <code><a href="#@cdktf/provider-azurerm.mapsCreator.MapsCreatorConfig.property.mapsAccountId">mapsAccountId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/maps_creator#maps_account_id MapsCreator#maps_account_id}. |
+| <code><a href="#@cdktf/provider-azurerm.mapsCreator.MapsCreatorConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/maps_creator#name MapsCreator#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mapsCreator.MapsCreatorConfig.property.storageUnits">storageUnits</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/maps_creator#storage_units MapsCreator#storage_units}. |
+| <code><a href="#@cdktf/provider-azurerm.mapsCreator.MapsCreatorConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/maps_creator#id MapsCreator#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mapsCreator.MapsCreatorConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/maps_creator#tags MapsCreator#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.mapsCreator.MapsCreatorConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mapsCreator.MapsCreatorTimeouts">MapsCreatorTimeouts</a></code> | timeouts block. |
 
 ---
@@ -909,7 +909,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/maps_creator#location MapsCreator#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/maps_creator#location MapsCreator#location}.
 
 ---
 
@@ -921,7 +921,7 @@ public readonly mapsAccountId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/maps_creator#maps_account_id MapsCreator#maps_account_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/maps_creator#maps_account_id MapsCreator#maps_account_id}.
 
 ---
 
@@ -933,7 +933,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/maps_creator#name MapsCreator#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/maps_creator#name MapsCreator#name}.
 
 ---
 
@@ -945,7 +945,7 @@ public readonly storageUnits: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/maps_creator#storage_units MapsCreator#storage_units}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/maps_creator#storage_units MapsCreator#storage_units}.
 
 ---
 
@@ -957,7 +957,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/maps_creator#id MapsCreator#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/maps_creator#id MapsCreator#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -972,7 +972,7 @@ public readonly tags: {[ key: string ]: string};
 
 - *Type:* {[ key: string ]: string}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/maps_creator#tags MapsCreator#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/maps_creator#tags MapsCreator#tags}.
 
 ---
 
@@ -986,7 +986,7 @@ public readonly timeouts: MapsCreatorTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/maps_creator#timeouts MapsCreator#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/maps_creator#timeouts MapsCreator#timeouts}
 
 ---
 
@@ -1004,10 +1004,10 @@ const mapsCreatorTimeouts: mapsCreator.MapsCreatorTimeouts = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mapsCreator.MapsCreatorTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/maps_creator#create MapsCreator#create}. |
-| <code><a href="#@cdktf/provider-azurerm.mapsCreator.MapsCreatorTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/maps_creator#delete MapsCreator#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.mapsCreator.MapsCreatorTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/maps_creator#read MapsCreator#read}. |
-| <code><a href="#@cdktf/provider-azurerm.mapsCreator.MapsCreatorTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/maps_creator#update MapsCreator#update}. |
+| <code><a href="#@cdktf/provider-azurerm.mapsCreator.MapsCreatorTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/maps_creator#create MapsCreator#create}. |
+| <code><a href="#@cdktf/provider-azurerm.mapsCreator.MapsCreatorTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/maps_creator#delete MapsCreator#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.mapsCreator.MapsCreatorTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/maps_creator#read MapsCreator#read}. |
+| <code><a href="#@cdktf/provider-azurerm.mapsCreator.MapsCreatorTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/maps_creator#update MapsCreator#update}. |
 
 ---
 
@@ -1019,7 +1019,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/maps_creator#create MapsCreator#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/maps_creator#create MapsCreator#create}.
 
 ---
 
@@ -1031,7 +1031,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/maps_creator#delete MapsCreator#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/maps_creator#delete MapsCreator#delete}.
 
 ---
 
@@ -1043,7 +1043,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/maps_creator#read MapsCreator#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/maps_creator#read MapsCreator#read}.
 
 ---
 
@@ -1055,7 +1055,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/maps_creator#update MapsCreator#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/maps_creator#update MapsCreator#update}.
 
 ---
 

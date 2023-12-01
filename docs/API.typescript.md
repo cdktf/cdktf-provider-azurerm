@@ -514,6 +514,7 @@ The following submodules are available:
 - [dataAzurermSqlManagedInstance](./dataAzurermSqlManagedInstance.typescript.md)
 - [dataAzurermSqlServer](./dataAzurermSqlServer.typescript.md)
 - [dataAzurermSshPublicKey](./dataAzurermSshPublicKey.typescript.md)
+- [dataAzurermStackHciCluster](./dataAzurermStackHciCluster.typescript.md)
 - [dataAzurermStorageAccount](./dataAzurermStorageAccount.typescript.md)
 - [dataAzurermStorageAccountBlobContainerSas](./dataAzurermStorageAccountBlobContainerSas.typescript.md)
 - [dataAzurermStorageAccountSas](./dataAzurermStorageAccountSas.typescript.md)

@@ -4,7 +4,7 @@
 
 ### DataboxEdgeDevice <a name="DataboxEdgeDevice" id="@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device azurerm_databox_edge_device}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device azurerm_databox_edge_device}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.Initializer"></a>
 
@@ -44,12 +44,12 @@ DataboxEdgeDevice.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#location DataboxEdgeDevice#location}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#name DataboxEdgeDevice#name}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#resource_group_name DataboxEdgeDevice#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.Initializer.parameter.skuName">skuName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#sku_name DataboxEdgeDevice#sku_name}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#id DataboxEdgeDevice#id}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#tags DataboxEdgeDevice#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#location DataboxEdgeDevice#location}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#name DataboxEdgeDevice#name}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#resource_group_name DataboxEdgeDevice#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.Initializer.parameter.skuName">skuName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#sku_name DataboxEdgeDevice#sku_name}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#id DataboxEdgeDevice#id}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#tags DataboxEdgeDevice#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDevice.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceTimeouts">DataboxEdgeDeviceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -118,7 +118,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#location DataboxEdgeDevice#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#location DataboxEdgeDevice#location}.
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#name DataboxEdgeDevice#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#name DataboxEdgeDevice#name}.
 
 ---
 
@@ -134,7 +134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#resource_group_name DataboxEdgeDevice#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#resource_group_name DataboxEdgeDevice#resource_group_name}.
 
 ---
 
@@ -142,7 +142,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#sku_name DataboxEdgeDevice#sku_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#sku_name DataboxEdgeDevice#sku_name}.
 
 ---
 
@@ -150,7 +150,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#id DataboxEdgeDevice#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#id DataboxEdgeDevice#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -161,7 +161,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#tags DataboxEdgeDevice#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#tags DataboxEdgeDevice#tags}.
 
 ---
 
@@ -171,7 +171,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#timeouts DataboxEdgeDevice#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#timeouts DataboxEdgeDevice#timeouts}
 
 ---
 
@@ -582,7 +582,7 @@ The construct id used in the generated config for the DataboxEdgeDevice to impor
 
 The id of the existing DataboxEdgeDevice that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -982,12 +982,12 @@ DataboxEdgeDeviceConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#location DataboxEdgeDevice#location}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#name DataboxEdgeDevice#name}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#resource_group_name DataboxEdgeDevice#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.skuName">skuName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#sku_name DataboxEdgeDevice#sku_name}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#id DataboxEdgeDevice#id}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#tags DataboxEdgeDevice#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#location DataboxEdgeDevice#location}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#name DataboxEdgeDevice#name}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#resource_group_name DataboxEdgeDevice#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.skuName">skuName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#sku_name DataboxEdgeDevice#sku_name}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#id DataboxEdgeDevice#id}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#tags DataboxEdgeDevice#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceTimeouts">DataboxEdgeDeviceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1070,7 +1070,7 @@ public java.lang.String getLocation();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#location DataboxEdgeDevice#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#location DataboxEdgeDevice#location}.
 
 ---
 
@@ -1082,7 +1082,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#name DataboxEdgeDevice#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#name DataboxEdgeDevice#name}.
 
 ---
 
@@ -1094,7 +1094,7 @@ public java.lang.String getResourceGroupName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#resource_group_name DataboxEdgeDevice#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#resource_group_name DataboxEdgeDevice#resource_group_name}.
 
 ---
 
@@ -1106,7 +1106,7 @@ public java.lang.String getSkuName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#sku_name DataboxEdgeDevice#sku_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#sku_name DataboxEdgeDevice#sku_name}.
 
 ---
 
@@ -1118,7 +1118,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#id DataboxEdgeDevice#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#id DataboxEdgeDevice#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1133,7 +1133,7 @@ public java.util.Map<java.lang.String, java.lang.String> getTags();
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#tags DataboxEdgeDevice#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#tags DataboxEdgeDevice#tags}.
 
 ---
 
@@ -1147,7 +1147,7 @@ public DataboxEdgeDeviceTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#timeouts DataboxEdgeDevice#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#timeouts DataboxEdgeDevice#timeouts}
 
 ---
 
@@ -1182,10 +1182,10 @@ DataboxEdgeDeviceTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#create DataboxEdgeDevice#create}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#delete DataboxEdgeDevice#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#read DataboxEdgeDevice#read}. |
-| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#update DataboxEdgeDevice#update}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#create DataboxEdgeDevice#create}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#delete DataboxEdgeDevice#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#read DataboxEdgeDevice#read}. |
+| <code><a href="#@cdktf/provider-azurerm.databoxEdgeDevice.DataboxEdgeDeviceTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#update DataboxEdgeDevice#update}. |
 
 ---
 
@@ -1197,7 +1197,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#create DataboxEdgeDevice#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#create DataboxEdgeDevice#create}.
 
 ---
 
@@ -1209,7 +1209,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#delete DataboxEdgeDevice#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#delete DataboxEdgeDevice#delete}.
 
 ---
 
@@ -1221,7 +1221,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#read DataboxEdgeDevice#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#read DataboxEdgeDevice#read}.
 
 ---
 
@@ -1233,7 +1233,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/databox_edge_device#update DataboxEdgeDevice#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/databox_edge_device#update DataboxEdgeDevice#update}.
 
 ---
 

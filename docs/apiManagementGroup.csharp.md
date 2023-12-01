@@ -4,7 +4,7 @@
 
 ### ApiManagementGroup <a name="ApiManagementGroup" id="@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroup"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group azurerm_api_management_group}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group azurerm_api_management_group}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroup.Initializer"></a>
 
@@ -465,7 +465,7 @@ The construct id used in the generated config for the ApiManagementGroup to impo
 
 The id of the existing ApiManagementGroup that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -896,15 +896,15 @@ new ApiManagementGroupConfig {
 | <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupConfig.property.apiManagementName">ApiManagementName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group#api_management_name ApiManagementGroup#api_management_name}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupConfig.property.displayName">DisplayName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group#display_name ApiManagementGroup#display_name}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group#name ApiManagementGroup#name}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group#resource_group_name ApiManagementGroup#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupConfig.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group#description ApiManagementGroup#description}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupConfig.property.externalId">ExternalId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group#external_id ApiManagementGroup#external_id}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group#id ApiManagementGroup#id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupConfig.property.apiManagementName">ApiManagementName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group#api_management_name ApiManagementGroup#api_management_name}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupConfig.property.displayName">DisplayName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group#display_name ApiManagementGroup#display_name}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group#name ApiManagementGroup#name}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group#resource_group_name ApiManagementGroup#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupConfig.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group#description ApiManagementGroup#description}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupConfig.property.externalId">ExternalId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group#external_id ApiManagementGroup#external_id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group#id ApiManagementGroup#id}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupTimeouts">ApiManagementGroupTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupConfig.property.type">Type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group#type ApiManagementGroup#type}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupConfig.property.type">Type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group#type ApiManagementGroup#type}. |
 
 ---
 
@@ -986,7 +986,7 @@ public string ApiManagementName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group#api_management_name ApiManagementGroup#api_management_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group#api_management_name ApiManagementGroup#api_management_name}.
 
 ---
 
@@ -998,7 +998,7 @@ public string DisplayName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group#display_name ApiManagementGroup#display_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group#display_name ApiManagementGroup#display_name}.
 
 ---
 
@@ -1010,7 +1010,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group#name ApiManagementGroup#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group#name ApiManagementGroup#name}.
 
 ---
 
@@ -1022,7 +1022,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group#resource_group_name ApiManagementGroup#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group#resource_group_name ApiManagementGroup#resource_group_name}.
 
 ---
 
@@ -1034,7 +1034,7 @@ public string Description { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group#description ApiManagementGroup#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group#description ApiManagementGroup#description}.
 
 ---
 
@@ -1046,7 +1046,7 @@ public string ExternalId { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group#external_id ApiManagementGroup#external_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group#external_id ApiManagementGroup#external_id}.
 
 ---
 
@@ -1058,7 +1058,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group#id ApiManagementGroup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group#id ApiManagementGroup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1075,7 +1075,7 @@ public ApiManagementGroupTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group#timeouts ApiManagementGroup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group#timeouts ApiManagementGroup#timeouts}
 
 ---
 
@@ -1087,7 +1087,7 @@ public string Type { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group#type ApiManagementGroup#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group#type ApiManagementGroup#type}.
 
 ---
 
@@ -1110,10 +1110,10 @@ new ApiManagementGroupTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group#create ApiManagementGroup#create}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group#delete ApiManagementGroup#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group#read ApiManagementGroup#read}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group#update ApiManagementGroup#update}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group#create ApiManagementGroup#create}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group#delete ApiManagementGroup#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group#read ApiManagementGroup#read}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementGroup.ApiManagementGroupTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group#update ApiManagementGroup#update}. |
 
 ---
 
@@ -1125,7 +1125,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group#create ApiManagementGroup#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group#create ApiManagementGroup#create}.
 
 ---
 
@@ -1137,7 +1137,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group#delete ApiManagementGroup#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group#delete ApiManagementGroup#delete}.
 
 ---
 
@@ -1149,7 +1149,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group#read ApiManagementGroup#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group#read ApiManagementGroup#read}.
 
 ---
 
@@ -1161,7 +1161,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_group#update ApiManagementGroup#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_group#update ApiManagementGroup#update}.
 
 ---
 

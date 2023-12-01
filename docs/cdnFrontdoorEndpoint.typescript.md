@@ -4,7 +4,7 @@
 
 ### CdnFrontdoorEndpoint <a name="CdnFrontdoorEndpoint" id="@cdktf/provider-azurerm.cdnFrontdoorEndpoint.CdnFrontdoorEndpoint"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_endpoint azurerm_cdn_frontdoor_endpoint}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/cdn_frontdoor_endpoint azurerm_cdn_frontdoor_endpoint}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorEndpoint.CdnFrontdoorEndpoint.Initializer"></a>
 
@@ -458,7 +458,7 @@ The construct id used in the generated config for the CdnFrontdoorEndpoint to im
 
 The id of the existing CdnFrontdoorEndpoint that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_endpoint#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/cdn_frontdoor_endpoint#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -817,11 +817,11 @@ const cdnFrontdoorEndpointConfig: cdnFrontdoorEndpoint.CdnFrontdoorEndpointConfi
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorEndpoint.CdnFrontdoorEndpointConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorEndpoint.CdnFrontdoorEndpointConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorEndpoint.CdnFrontdoorEndpointConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorEndpoint.CdnFrontdoorEndpointConfig.property.cdnFrontdoorProfileId">cdnFrontdoorProfileId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_endpoint#cdn_frontdoor_profile_id CdnFrontdoorEndpoint#cdn_frontdoor_profile_id}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorEndpoint.CdnFrontdoorEndpointConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_endpoint#name CdnFrontdoorEndpoint#name}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorEndpoint.CdnFrontdoorEndpointConfig.property.enabled">enabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_endpoint#enabled CdnFrontdoorEndpoint#enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorEndpoint.CdnFrontdoorEndpointConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_endpoint#id CdnFrontdoorEndpoint#id}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorEndpoint.CdnFrontdoorEndpointConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_endpoint#tags CdnFrontdoorEndpoint#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorEndpoint.CdnFrontdoorEndpointConfig.property.cdnFrontdoorProfileId">cdnFrontdoorProfileId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/cdn_frontdoor_endpoint#cdn_frontdoor_profile_id CdnFrontdoorEndpoint#cdn_frontdoor_profile_id}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorEndpoint.CdnFrontdoorEndpointConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/cdn_frontdoor_endpoint#name CdnFrontdoorEndpoint#name}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorEndpoint.CdnFrontdoorEndpointConfig.property.enabled">enabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/cdn_frontdoor_endpoint#enabled CdnFrontdoorEndpoint#enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorEndpoint.CdnFrontdoorEndpointConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/cdn_frontdoor_endpoint#id CdnFrontdoorEndpoint#id}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorEndpoint.CdnFrontdoorEndpointConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/cdn_frontdoor_endpoint#tags CdnFrontdoorEndpoint#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorEndpoint.CdnFrontdoorEndpointConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorEndpoint.CdnFrontdoorEndpointTimeouts">CdnFrontdoorEndpointTimeouts</a></code> | timeouts block. |
 
 ---
@@ -904,7 +904,7 @@ public readonly cdnFrontdoorProfileId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_endpoint#cdn_frontdoor_profile_id CdnFrontdoorEndpoint#cdn_frontdoor_profile_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/cdn_frontdoor_endpoint#cdn_frontdoor_profile_id CdnFrontdoorEndpoint#cdn_frontdoor_profile_id}.
 
 ---
 
@@ -916,7 +916,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_endpoint#name CdnFrontdoorEndpoint#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/cdn_frontdoor_endpoint#name CdnFrontdoorEndpoint#name}.
 
 ---
 
@@ -928,7 +928,7 @@ public readonly enabled: boolean | IResolvable;
 
 - *Type:* boolean | cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_endpoint#enabled CdnFrontdoorEndpoint#enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/cdn_frontdoor_endpoint#enabled CdnFrontdoorEndpoint#enabled}.
 
 ---
 
@@ -940,7 +940,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_endpoint#id CdnFrontdoorEndpoint#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/cdn_frontdoor_endpoint#id CdnFrontdoorEndpoint#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -955,7 +955,7 @@ public readonly tags: {[ key: string ]: string};
 
 - *Type:* {[ key: string ]: string}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_endpoint#tags CdnFrontdoorEndpoint#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/cdn_frontdoor_endpoint#tags CdnFrontdoorEndpoint#tags}.
 
 ---
 
@@ -969,7 +969,7 @@ public readonly timeouts: CdnFrontdoorEndpointTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_endpoint#timeouts CdnFrontdoorEndpoint#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/cdn_frontdoor_endpoint#timeouts CdnFrontdoorEndpoint#timeouts}
 
 ---
 
@@ -987,10 +987,10 @@ const cdnFrontdoorEndpointTimeouts: cdnFrontdoorEndpoint.CdnFrontdoorEndpointTim
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorEndpoint.CdnFrontdoorEndpointTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_endpoint#create CdnFrontdoorEndpoint#create}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorEndpoint.CdnFrontdoorEndpointTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_endpoint#delete CdnFrontdoorEndpoint#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorEndpoint.CdnFrontdoorEndpointTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_endpoint#read CdnFrontdoorEndpoint#read}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorEndpoint.CdnFrontdoorEndpointTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_endpoint#update CdnFrontdoorEndpoint#update}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorEndpoint.CdnFrontdoorEndpointTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/cdn_frontdoor_endpoint#create CdnFrontdoorEndpoint#create}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorEndpoint.CdnFrontdoorEndpointTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/cdn_frontdoor_endpoint#delete CdnFrontdoorEndpoint#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorEndpoint.CdnFrontdoorEndpointTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/cdn_frontdoor_endpoint#read CdnFrontdoorEndpoint#read}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorEndpoint.CdnFrontdoorEndpointTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/cdn_frontdoor_endpoint#update CdnFrontdoorEndpoint#update}. |
 
 ---
 
@@ -1002,7 +1002,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_endpoint#create CdnFrontdoorEndpoint#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/cdn_frontdoor_endpoint#create CdnFrontdoorEndpoint#create}.
 
 ---
 
@@ -1014,7 +1014,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_endpoint#delete CdnFrontdoorEndpoint#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/cdn_frontdoor_endpoint#delete CdnFrontdoorEndpoint#delete}.
 
 ---
 
@@ -1026,7 +1026,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_endpoint#read CdnFrontdoorEndpoint#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/cdn_frontdoor_endpoint#read CdnFrontdoorEndpoint#read}.
 
 ---
 
@@ -1038,7 +1038,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/cdn_frontdoor_endpoint#update CdnFrontdoorEndpoint#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/cdn_frontdoor_endpoint#update CdnFrontdoorEndpoint#update}.
 
 ---
 

@@ -4,7 +4,7 @@
 
 ### PrivateDnsResolver <a name="PrivateDnsResolver" id="@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolver"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/private_dns_resolver azurerm_private_dns_resolver}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/private_dns_resolver azurerm_private_dns_resolver}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolver.Initializer"></a>
 
@@ -451,7 +451,7 @@ The construct id used in the generated config for the PrivateDnsResolver to impo
 
 The id of the existing PrivateDnsResolver that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/private_dns_resolver#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/private_dns_resolver#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -821,12 +821,12 @@ const privateDnsResolverConfig: privateDnsResolver.PrivateDnsResolverConfig = { 
 | <code><a href="#@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/private_dns_resolver#location PrivateDnsResolver#location}. |
-| <code><a href="#@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/private_dns_resolver#name PrivateDnsResolver#name}. |
-| <code><a href="#@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/private_dns_resolver#resource_group_name PrivateDnsResolver#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverConfig.property.virtualNetworkId">virtualNetworkId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/private_dns_resolver#virtual_network_id PrivateDnsResolver#virtual_network_id}. |
-| <code><a href="#@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/private_dns_resolver#id PrivateDnsResolver#id}. |
-| <code><a href="#@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/private_dns_resolver#tags PrivateDnsResolver#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/private_dns_resolver#location PrivateDnsResolver#location}. |
+| <code><a href="#@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/private_dns_resolver#name PrivateDnsResolver#name}. |
+| <code><a href="#@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/private_dns_resolver#resource_group_name PrivateDnsResolver#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverConfig.property.virtualNetworkId">virtualNetworkId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/private_dns_resolver#virtual_network_id PrivateDnsResolver#virtual_network_id}. |
+| <code><a href="#@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/private_dns_resolver#id PrivateDnsResolver#id}. |
+| <code><a href="#@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/private_dns_resolver#tags PrivateDnsResolver#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverTimeouts">PrivateDnsResolverTimeouts</a></code> | timeouts block. |
 
 ---
@@ -909,7 +909,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/private_dns_resolver#location PrivateDnsResolver#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/private_dns_resolver#location PrivateDnsResolver#location}.
 
 ---
 
@@ -921,7 +921,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/private_dns_resolver#name PrivateDnsResolver#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/private_dns_resolver#name PrivateDnsResolver#name}.
 
 ---
 
@@ -933,7 +933,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/private_dns_resolver#resource_group_name PrivateDnsResolver#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/private_dns_resolver#resource_group_name PrivateDnsResolver#resource_group_name}.
 
 ---
 
@@ -945,7 +945,7 @@ public readonly virtualNetworkId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/private_dns_resolver#virtual_network_id PrivateDnsResolver#virtual_network_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/private_dns_resolver#virtual_network_id PrivateDnsResolver#virtual_network_id}.
 
 ---
 
@@ -957,7 +957,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/private_dns_resolver#id PrivateDnsResolver#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/private_dns_resolver#id PrivateDnsResolver#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -972,7 +972,7 @@ public readonly tags: {[ key: string ]: string};
 
 - *Type:* {[ key: string ]: string}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/private_dns_resolver#tags PrivateDnsResolver#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/private_dns_resolver#tags PrivateDnsResolver#tags}.
 
 ---
 
@@ -986,7 +986,7 @@ public readonly timeouts: PrivateDnsResolverTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/private_dns_resolver#timeouts PrivateDnsResolver#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/private_dns_resolver#timeouts PrivateDnsResolver#timeouts}
 
 ---
 
@@ -1004,10 +1004,10 @@ const privateDnsResolverTimeouts: privateDnsResolver.PrivateDnsResolverTimeouts 
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/private_dns_resolver#create PrivateDnsResolver#create}. |
-| <code><a href="#@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/private_dns_resolver#delete PrivateDnsResolver#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/private_dns_resolver#read PrivateDnsResolver#read}. |
-| <code><a href="#@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/private_dns_resolver#update PrivateDnsResolver#update}. |
+| <code><a href="#@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/private_dns_resolver#create PrivateDnsResolver#create}. |
+| <code><a href="#@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/private_dns_resolver#delete PrivateDnsResolver#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/private_dns_resolver#read PrivateDnsResolver#read}. |
+| <code><a href="#@cdktf/provider-azurerm.privateDnsResolver.PrivateDnsResolverTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/private_dns_resolver#update PrivateDnsResolver#update}. |
 
 ---
 
@@ -1019,7 +1019,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/private_dns_resolver#create PrivateDnsResolver#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/private_dns_resolver#create PrivateDnsResolver#create}.
 
 ---
 
@@ -1031,7 +1031,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/private_dns_resolver#delete PrivateDnsResolver#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/private_dns_resolver#delete PrivateDnsResolver#delete}.
 
 ---
 
@@ -1043,7 +1043,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/private_dns_resolver#read PrivateDnsResolver#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/private_dns_resolver#read PrivateDnsResolver#read}.
 
 ---
 
@@ -1055,7 +1055,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/private_dns_resolver#update PrivateDnsResolver#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/private_dns_resolver#update PrivateDnsResolver#update}.
 
 ---
 

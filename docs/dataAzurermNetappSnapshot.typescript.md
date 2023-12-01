@@ -4,7 +4,7 @@
 
 ### DataAzurermNetappSnapshot <a name="DataAzurermNetappSnapshot" id="@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshot"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/netapp_snapshot azurerm_netapp_snapshot}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/netapp_snapshot azurerm_netapp_snapshot}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshot.Initializer"></a>
 
@@ -383,7 +383,7 @@ The construct id used in the generated config for the DataAzurermNetappSnapshot 
 
 The id of the existing DataAzurermNetappSnapshot that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/netapp_snapshot#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/netapp_snapshot#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -742,12 +742,12 @@ const dataAzurermNetappSnapshotConfig: dataAzurermNetappSnapshot.DataAzurermNeta
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshotConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshotConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshotConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshotConfig.property.accountName">accountName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/netapp_snapshot#account_name DataAzurermNetappSnapshot#account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshotConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/netapp_snapshot#name DataAzurermNetappSnapshot#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshotConfig.property.poolName">poolName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/netapp_snapshot#pool_name DataAzurermNetappSnapshot#pool_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshotConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/netapp_snapshot#resource_group_name DataAzurermNetappSnapshot#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshotConfig.property.volumeName">volumeName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/netapp_snapshot#volume_name DataAzurermNetappSnapshot#volume_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshotConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/netapp_snapshot#id DataAzurermNetappSnapshot#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshotConfig.property.accountName">accountName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/netapp_snapshot#account_name DataAzurermNetappSnapshot#account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshotConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/netapp_snapshot#name DataAzurermNetappSnapshot#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshotConfig.property.poolName">poolName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/netapp_snapshot#pool_name DataAzurermNetappSnapshot#pool_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshotConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/netapp_snapshot#resource_group_name DataAzurermNetappSnapshot#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshotConfig.property.volumeName">volumeName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/netapp_snapshot#volume_name DataAzurermNetappSnapshot#volume_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshotConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/netapp_snapshot#id DataAzurermNetappSnapshot#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshotConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshotTimeouts">DataAzurermNetappSnapshotTimeouts</a></code> | timeouts block. |
 
 ---
@@ -830,7 +830,7 @@ public readonly accountName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/netapp_snapshot#account_name DataAzurermNetappSnapshot#account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/netapp_snapshot#account_name DataAzurermNetappSnapshot#account_name}.
 
 ---
 
@@ -842,7 +842,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/netapp_snapshot#name DataAzurermNetappSnapshot#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/netapp_snapshot#name DataAzurermNetappSnapshot#name}.
 
 ---
 
@@ -854,7 +854,7 @@ public readonly poolName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/netapp_snapshot#pool_name DataAzurermNetappSnapshot#pool_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/netapp_snapshot#pool_name DataAzurermNetappSnapshot#pool_name}.
 
 ---
 
@@ -866,7 +866,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/netapp_snapshot#resource_group_name DataAzurermNetappSnapshot#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/netapp_snapshot#resource_group_name DataAzurermNetappSnapshot#resource_group_name}.
 
 ---
 
@@ -878,7 +878,7 @@ public readonly volumeName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/netapp_snapshot#volume_name DataAzurermNetappSnapshot#volume_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/netapp_snapshot#volume_name DataAzurermNetappSnapshot#volume_name}.
 
 ---
 
@@ -890,7 +890,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/netapp_snapshot#id DataAzurermNetappSnapshot#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/netapp_snapshot#id DataAzurermNetappSnapshot#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -907,7 +907,7 @@ public readonly timeouts: DataAzurermNetappSnapshotTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/netapp_snapshot#timeouts DataAzurermNetappSnapshot#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/netapp_snapshot#timeouts DataAzurermNetappSnapshot#timeouts}
 
 ---
 
@@ -925,7 +925,7 @@ const dataAzurermNetappSnapshotTimeouts: dataAzurermNetappSnapshot.DataAzurermNe
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshotTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/netapp_snapshot#read DataAzurermNetappSnapshot#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNetappSnapshot.DataAzurermNetappSnapshotTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/netapp_snapshot#read DataAzurermNetappSnapshot#read}. |
 
 ---
 
@@ -937,7 +937,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/netapp_snapshot#read DataAzurermNetappSnapshot#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/netapp_snapshot#read DataAzurermNetappSnapshot#read}.
 
 ---
 

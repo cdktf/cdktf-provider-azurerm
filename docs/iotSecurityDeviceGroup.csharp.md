@@ -4,7 +4,7 @@
 
 ### IotSecurityDeviceGroup <a name="IotSecurityDeviceGroup" id="@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroup"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group azurerm_iot_security_device_group}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group azurerm_iot_security_device_group}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroup.Initializer"></a>
 
@@ -484,7 +484,7 @@ The construct id used in the generated config for the IotSecurityDeviceGroup to 
 
 The id of the existing IotSecurityDeviceGroup that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -830,10 +830,10 @@ new IotSecurityDeviceGroupAllowRule {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupAllowRule.property.connectionFromIpsNotAllowed">ConnectionFromIpsNotAllowed</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#connection_from_ips_not_allowed IotSecurityDeviceGroup#connection_from_ips_not_allowed}. |
-| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupAllowRule.property.connectionToIpsNotAllowed">ConnectionToIpsNotAllowed</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#connection_to_ips_not_allowed IotSecurityDeviceGroup#connection_to_ips_not_allowed}. |
-| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupAllowRule.property.localUsersNotAllowed">LocalUsersNotAllowed</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#local_users_not_allowed IotSecurityDeviceGroup#local_users_not_allowed}. |
-| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupAllowRule.property.processesNotAllowed">ProcessesNotAllowed</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#processes_not_allowed IotSecurityDeviceGroup#processes_not_allowed}. |
+| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupAllowRule.property.connectionFromIpsNotAllowed">ConnectionFromIpsNotAllowed</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#connection_from_ips_not_allowed IotSecurityDeviceGroup#connection_from_ips_not_allowed}. |
+| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupAllowRule.property.connectionToIpsNotAllowed">ConnectionToIpsNotAllowed</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#connection_to_ips_not_allowed IotSecurityDeviceGroup#connection_to_ips_not_allowed}. |
+| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupAllowRule.property.localUsersNotAllowed">LocalUsersNotAllowed</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#local_users_not_allowed IotSecurityDeviceGroup#local_users_not_allowed}. |
+| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupAllowRule.property.processesNotAllowed">ProcessesNotAllowed</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#processes_not_allowed IotSecurityDeviceGroup#processes_not_allowed}. |
 
 ---
 
@@ -845,7 +845,7 @@ public string[] ConnectionFromIpsNotAllowed { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#connection_from_ips_not_allowed IotSecurityDeviceGroup#connection_from_ips_not_allowed}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#connection_from_ips_not_allowed IotSecurityDeviceGroup#connection_from_ips_not_allowed}.
 
 ---
 
@@ -857,7 +857,7 @@ public string[] ConnectionToIpsNotAllowed { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#connection_to_ips_not_allowed IotSecurityDeviceGroup#connection_to_ips_not_allowed}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#connection_to_ips_not_allowed IotSecurityDeviceGroup#connection_to_ips_not_allowed}.
 
 ---
 
@@ -869,7 +869,7 @@ public string[] LocalUsersNotAllowed { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#local_users_not_allowed IotSecurityDeviceGroup#local_users_not_allowed}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#local_users_not_allowed IotSecurityDeviceGroup#local_users_not_allowed}.
 
 ---
 
@@ -881,7 +881,7 @@ public string[] ProcessesNotAllowed { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#processes_not_allowed IotSecurityDeviceGroup#processes_not_allowed}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#processes_not_allowed IotSecurityDeviceGroup#processes_not_allowed}.
 
 ---
 
@@ -920,10 +920,10 @@ new IotSecurityDeviceGroupConfig {
 | <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupConfig.property.iothubId">IothubId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#iothub_id IotSecurityDeviceGroup#iothub_id}. |
-| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#name IotSecurityDeviceGroup#name}. |
+| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupConfig.property.iothubId">IothubId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#iothub_id IotSecurityDeviceGroup#iothub_id}. |
+| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#name IotSecurityDeviceGroup#name}. |
 | <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupConfig.property.allowRule">AllowRule</a></code> | <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupAllowRule">IotSecurityDeviceGroupAllowRule</a></code> | allow_rule block. |
-| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#id IotSecurityDeviceGroup#id}. |
+| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#id IotSecurityDeviceGroup#id}. |
 | <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupConfig.property.rangeRule">RangeRule</a></code> | <code>object</code> | range_rule block. |
 | <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupTimeouts">IotSecurityDeviceGroupTimeouts</a></code> | timeouts block. |
 
@@ -1007,7 +1007,7 @@ public string IothubId { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#iothub_id IotSecurityDeviceGroup#iothub_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#iothub_id IotSecurityDeviceGroup#iothub_id}.
 
 ---
 
@@ -1019,7 +1019,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#name IotSecurityDeviceGroup#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#name IotSecurityDeviceGroup#name}.
 
 ---
 
@@ -1033,7 +1033,7 @@ public IotSecurityDeviceGroupAllowRule AllowRule { get; set; }
 
 allow_rule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#allow_rule IotSecurityDeviceGroup#allow_rule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#allow_rule IotSecurityDeviceGroup#allow_rule}
 
 ---
 
@@ -1045,7 +1045,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#id IotSecurityDeviceGroup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#id IotSecurityDeviceGroup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1062,7 +1062,7 @@ public object RangeRule { get; set; }
 
 range_rule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#range_rule IotSecurityDeviceGroup#range_rule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#range_rule IotSecurityDeviceGroup#range_rule}
 
 ---
 
@@ -1076,7 +1076,7 @@ public IotSecurityDeviceGroupTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#timeouts IotSecurityDeviceGroup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#timeouts IotSecurityDeviceGroup#timeouts}
 
 ---
 
@@ -1099,10 +1099,10 @@ new IotSecurityDeviceGroupRangeRule {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupRangeRule.property.duration">Duration</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#duration IotSecurityDeviceGroup#duration}. |
-| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupRangeRule.property.max">Max</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#max IotSecurityDeviceGroup#max}. |
-| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupRangeRule.property.min">Min</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#min IotSecurityDeviceGroup#min}. |
-| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupRangeRule.property.type">Type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#type IotSecurityDeviceGroup#type}. |
+| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupRangeRule.property.duration">Duration</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#duration IotSecurityDeviceGroup#duration}. |
+| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupRangeRule.property.max">Max</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#max IotSecurityDeviceGroup#max}. |
+| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupRangeRule.property.min">Min</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#min IotSecurityDeviceGroup#min}. |
+| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupRangeRule.property.type">Type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#type IotSecurityDeviceGroup#type}. |
 
 ---
 
@@ -1114,7 +1114,7 @@ public string Duration { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#duration IotSecurityDeviceGroup#duration}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#duration IotSecurityDeviceGroup#duration}.
 
 ---
 
@@ -1126,7 +1126,7 @@ public double Max { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#max IotSecurityDeviceGroup#max}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#max IotSecurityDeviceGroup#max}.
 
 ---
 
@@ -1138,7 +1138,7 @@ public double Min { get; set; }
 
 - *Type:* double
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#min IotSecurityDeviceGroup#min}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#min IotSecurityDeviceGroup#min}.
 
 ---
 
@@ -1150,7 +1150,7 @@ public string Type { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#type IotSecurityDeviceGroup#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#type IotSecurityDeviceGroup#type}.
 
 ---
 
@@ -1173,10 +1173,10 @@ new IotSecurityDeviceGroupTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#create IotSecurityDeviceGroup#create}. |
-| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#delete IotSecurityDeviceGroup#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#read IotSecurityDeviceGroup#read}. |
-| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#update IotSecurityDeviceGroup#update}. |
+| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#create IotSecurityDeviceGroup#create}. |
+| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#delete IotSecurityDeviceGroup#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#read IotSecurityDeviceGroup#read}. |
+| <code><a href="#@cdktf/provider-azurerm.iotSecurityDeviceGroup.IotSecurityDeviceGroupTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#update IotSecurityDeviceGroup#update}. |
 
 ---
 
@@ -1188,7 +1188,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#create IotSecurityDeviceGroup#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#create IotSecurityDeviceGroup#create}.
 
 ---
 
@@ -1200,7 +1200,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#delete IotSecurityDeviceGroup#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#delete IotSecurityDeviceGroup#delete}.
 
 ---
 
@@ -1212,7 +1212,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#read IotSecurityDeviceGroup#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#read IotSecurityDeviceGroup#read}.
 
 ---
 
@@ -1224,7 +1224,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/iot_security_device_group#update IotSecurityDeviceGroup#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/iot_security_device_group#update IotSecurityDeviceGroup#update}.
 
 ---
 

@@ -514,6 +514,7 @@ The following submodules are available:
 - [dataAzurermSqlManagedInstance](./dataAzurermSqlManagedInstance.csharp.md)
 - [dataAzurermSqlServer](./dataAzurermSqlServer.csharp.md)
 - [dataAzurermSshPublicKey](./dataAzurermSshPublicKey.csharp.md)
+- [dataAzurermStackHciCluster](./dataAzurermStackHciCluster.csharp.md)
 - [dataAzurermStorageAccount](./dataAzurermStorageAccount.csharp.md)
 - [dataAzurermStorageAccountBlobContainerSas](./dataAzurermStorageAccountBlobContainerSas.csharp.md)
 - [dataAzurermStorageAccountSas](./dataAzurermStorageAccountSas.csharp.md)

@@ -4,7 +4,7 @@
 
 ### MediaAsset <a name="MediaAsset" id="@cdktf/provider-azurerm.mediaAsset.MediaAsset"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset azurerm_media_asset}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset azurerm_media_asset}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaAsset.MediaAsset.Initializer"></a>
 
@@ -44,14 +44,14 @@ mediaAsset.MediaAsset(
 | <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAsset.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAsset.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAsset.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAsset.Initializer.parameter.mediaServicesAccountName">media_services_account_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#media_services_account_name MediaAsset#media_services_account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAsset.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#name MediaAsset#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAsset.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#resource_group_name MediaAsset#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAsset.Initializer.parameter.alternateId">alternate_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#alternate_id MediaAsset#alternate_id}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAsset.Initializer.parameter.container">container</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#container MediaAsset#container}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAsset.Initializer.parameter.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#description MediaAsset#description}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAsset.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#id MediaAsset#id}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAsset.Initializer.parameter.storageAccountName">storage_account_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#storage_account_name MediaAsset#storage_account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAsset.Initializer.parameter.mediaServicesAccountName">media_services_account_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#media_services_account_name MediaAsset#media_services_account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAsset.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#name MediaAsset#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAsset.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#resource_group_name MediaAsset#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAsset.Initializer.parameter.alternateId">alternate_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#alternate_id MediaAsset#alternate_id}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAsset.Initializer.parameter.container">container</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#container MediaAsset#container}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAsset.Initializer.parameter.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#description MediaAsset#description}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAsset.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#id MediaAsset#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAsset.Initializer.parameter.storageAccountName">storage_account_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#storage_account_name MediaAsset#storage_account_name}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAsset.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetTimeouts">MediaAssetTimeouts</a></code> | timeouts block. |
 
 ---
@@ -120,7 +120,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#media_services_account_name MediaAsset#media_services_account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#media_services_account_name MediaAsset#media_services_account_name}.
 
 ---
 
@@ -128,7 +128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#name MediaAsset#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#name MediaAsset#name}.
 
 ---
 
@@ -136,7 +136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#resource_group_name MediaAsset#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#resource_group_name MediaAsset#resource_group_name}.
 
 ---
 
@@ -144,7 +144,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#alternate_id MediaAsset#alternate_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#alternate_id MediaAsset#alternate_id}.
 
 ---
 
@@ -152,7 +152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#container MediaAsset#container}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#container MediaAsset#container}.
 
 ---
 
@@ -160,7 +160,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#description MediaAsset#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#description MediaAsset#description}.
 
 ---
 
@@ -168,7 +168,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#id MediaAsset#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#id MediaAsset#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -179,7 +179,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#storage_account_name MediaAsset#storage_account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#storage_account_name MediaAsset#storage_account_name}.
 
 ---
 
@@ -189,7 +189,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#timeouts MediaAsset#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#timeouts MediaAsset#timeouts}
 
 ---
 
@@ -516,7 +516,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#create MediaAsset#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#create MediaAsset#create}.
 
 ---
 
@@ -524,7 +524,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#delete MediaAsset#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#delete MediaAsset#delete}.
 
 ---
 
@@ -532,7 +532,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#read MediaAsset#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#read MediaAsset#read}.
 
 ---
 
@@ -540,7 +540,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#update MediaAsset#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#update MediaAsset#update}.
 
 ---
 
@@ -694,7 +694,7 @@ The construct id used in the generated config for the MediaAsset to import.
 
 The id of the existing MediaAsset that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1125,14 +1125,14 @@ mediaAsset.MediaAssetConfig(
 | <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetConfig.property.mediaServicesAccountName">media_services_account_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#media_services_account_name MediaAsset#media_services_account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#name MediaAsset#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#resource_group_name MediaAsset#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetConfig.property.alternateId">alternate_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#alternate_id MediaAsset#alternate_id}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetConfig.property.container">container</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#container MediaAsset#container}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetConfig.property.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#description MediaAsset#description}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#id MediaAsset#id}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetConfig.property.storageAccountName">storage_account_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#storage_account_name MediaAsset#storage_account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetConfig.property.mediaServicesAccountName">media_services_account_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#media_services_account_name MediaAsset#media_services_account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#name MediaAsset#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#resource_group_name MediaAsset#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetConfig.property.alternateId">alternate_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#alternate_id MediaAsset#alternate_id}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetConfig.property.container">container</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#container MediaAsset#container}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetConfig.property.description">description</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#description MediaAsset#description}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#id MediaAsset#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetConfig.property.storageAccountName">storage_account_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#storage_account_name MediaAsset#storage_account_name}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetTimeouts">MediaAssetTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1215,7 +1215,7 @@ media_services_account_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#media_services_account_name MediaAsset#media_services_account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#media_services_account_name MediaAsset#media_services_account_name}.
 
 ---
 
@@ -1227,7 +1227,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#name MediaAsset#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#name MediaAsset#name}.
 
 ---
 
@@ -1239,7 +1239,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#resource_group_name MediaAsset#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#resource_group_name MediaAsset#resource_group_name}.
 
 ---
 
@@ -1251,7 +1251,7 @@ alternate_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#alternate_id MediaAsset#alternate_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#alternate_id MediaAsset#alternate_id}.
 
 ---
 
@@ -1263,7 +1263,7 @@ container: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#container MediaAsset#container}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#container MediaAsset#container}.
 
 ---
 
@@ -1275,7 +1275,7 @@ description: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#description MediaAsset#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#description MediaAsset#description}.
 
 ---
 
@@ -1287,7 +1287,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#id MediaAsset#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#id MediaAsset#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1302,7 +1302,7 @@ storage_account_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#storage_account_name MediaAsset#storage_account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#storage_account_name MediaAsset#storage_account_name}.
 
 ---
 
@@ -1316,7 +1316,7 @@ timeouts: MediaAssetTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#timeouts MediaAsset#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#timeouts MediaAsset#timeouts}
 
 ---
 
@@ -1339,10 +1339,10 @@ mediaAsset.MediaAssetTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#create MediaAsset#create}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#delete MediaAsset#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#read MediaAsset#read}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#update MediaAsset#update}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#create MediaAsset#create}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#delete MediaAsset#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#read MediaAsset#read}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaAsset.MediaAssetTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#update MediaAsset#update}. |
 
 ---
 
@@ -1354,7 +1354,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#create MediaAsset#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#create MediaAsset#create}.
 
 ---
 
@@ -1366,7 +1366,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#delete MediaAsset#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#delete MediaAsset#delete}.
 
 ---
 
@@ -1378,7 +1378,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#read MediaAsset#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#read MediaAsset#read}.
 
 ---
 
@@ -1390,7 +1390,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_asset#update MediaAsset#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_asset#update MediaAsset#update}.
 
 ---
 

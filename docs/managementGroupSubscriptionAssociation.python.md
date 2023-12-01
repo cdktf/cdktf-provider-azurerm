@@ -4,7 +4,7 @@
 
 ### ManagementGroupSubscriptionAssociation <a name="ManagementGroupSubscriptionAssociation" id="@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociation"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/management_group_subscription_association azurerm_management_group_subscription_association}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/management_group_subscription_association azurerm_management_group_subscription_association}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociation.Initializer"></a>
 
@@ -39,9 +39,9 @@ managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociation(
 | <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociation.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociation.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociation.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociation.Initializer.parameter.managementGroupId">management_group_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/management_group_subscription_association#management_group_id ManagementGroupSubscriptionAssociation#management_group_id}. |
-| <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociation.Initializer.parameter.subscriptionId">subscription_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/management_group_subscription_association#subscription_id ManagementGroupSubscriptionAssociation#subscription_id}. |
-| <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociation.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/management_group_subscription_association#id ManagementGroupSubscriptionAssociation#id}. |
+| <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociation.Initializer.parameter.managementGroupId">management_group_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/management_group_subscription_association#management_group_id ManagementGroupSubscriptionAssociation#management_group_id}. |
+| <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociation.Initializer.parameter.subscriptionId">subscription_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/management_group_subscription_association#subscription_id ManagementGroupSubscriptionAssociation#subscription_id}. |
+| <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociation.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/management_group_subscription_association#id ManagementGroupSubscriptionAssociation#id}. |
 | <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociation.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociationTimeouts">ManagementGroupSubscriptionAssociationTimeouts</a></code> | timeouts block. |
 
 ---
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/management_group_subscription_association#management_group_id ManagementGroupSubscriptionAssociation#management_group_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/management_group_subscription_association#management_group_id ManagementGroupSubscriptionAssociation#management_group_id}.
 
 ---
 
@@ -118,7 +118,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/management_group_subscription_association#subscription_id ManagementGroupSubscriptionAssociation#subscription_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/management_group_subscription_association#subscription_id ManagementGroupSubscriptionAssociation#subscription_id}.
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/management_group_subscription_association#id ManagementGroupSubscriptionAssociation#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/management_group_subscription_association#id ManagementGroupSubscriptionAssociation#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -139,7 +139,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/management_group_subscription_association#timeouts ManagementGroupSubscriptionAssociation#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/management_group_subscription_association#timeouts ManagementGroupSubscriptionAssociation#timeouts}
 
 ---
 
@@ -461,7 +461,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/management_group_subscription_association#create ManagementGroupSubscriptionAssociation#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/management_group_subscription_association#create ManagementGroupSubscriptionAssociation#create}.
 
 ---
 
@@ -469,7 +469,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/management_group_subscription_association#delete ManagementGroupSubscriptionAssociation#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/management_group_subscription_association#delete ManagementGroupSubscriptionAssociation#delete}.
 
 ---
 
@@ -477,7 +477,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/management_group_subscription_association#read ManagementGroupSubscriptionAssociation#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/management_group_subscription_association#read ManagementGroupSubscriptionAssociation#read}.
 
 ---
 
@@ -607,7 +607,7 @@ The construct id used in the generated config for the ManagementGroupSubscriptio
 
 The id of the existing ManagementGroupSubscriptionAssociation that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/management_group_subscription_association#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/management_group_subscription_association#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -923,9 +923,9 @@ managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociationCon
 | <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociationConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociationConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociationConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociationConfig.property.managementGroupId">management_group_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/management_group_subscription_association#management_group_id ManagementGroupSubscriptionAssociation#management_group_id}. |
-| <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociationConfig.property.subscriptionId">subscription_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/management_group_subscription_association#subscription_id ManagementGroupSubscriptionAssociation#subscription_id}. |
-| <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociationConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/management_group_subscription_association#id ManagementGroupSubscriptionAssociation#id}. |
+| <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociationConfig.property.managementGroupId">management_group_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/management_group_subscription_association#management_group_id ManagementGroupSubscriptionAssociation#management_group_id}. |
+| <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociationConfig.property.subscriptionId">subscription_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/management_group_subscription_association#subscription_id ManagementGroupSubscriptionAssociation#subscription_id}. |
+| <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociationConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/management_group_subscription_association#id ManagementGroupSubscriptionAssociation#id}. |
 | <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociationConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociationTimeouts">ManagementGroupSubscriptionAssociationTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1008,7 +1008,7 @@ management_group_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/management_group_subscription_association#management_group_id ManagementGroupSubscriptionAssociation#management_group_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/management_group_subscription_association#management_group_id ManagementGroupSubscriptionAssociation#management_group_id}.
 
 ---
 
@@ -1020,7 +1020,7 @@ subscription_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/management_group_subscription_association#subscription_id ManagementGroupSubscriptionAssociation#subscription_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/management_group_subscription_association#subscription_id ManagementGroupSubscriptionAssociation#subscription_id}.
 
 ---
 
@@ -1032,7 +1032,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/management_group_subscription_association#id ManagementGroupSubscriptionAssociation#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/management_group_subscription_association#id ManagementGroupSubscriptionAssociation#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1049,7 +1049,7 @@ timeouts: ManagementGroupSubscriptionAssociationTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/management_group_subscription_association#timeouts ManagementGroupSubscriptionAssociation#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/management_group_subscription_association#timeouts ManagementGroupSubscriptionAssociation#timeouts}
 
 ---
 
@@ -1071,9 +1071,9 @@ managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociationTim
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociationTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/management_group_subscription_association#create ManagementGroupSubscriptionAssociation#create}. |
-| <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociationTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/management_group_subscription_association#delete ManagementGroupSubscriptionAssociation#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociationTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/management_group_subscription_association#read ManagementGroupSubscriptionAssociation#read}. |
+| <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociationTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/management_group_subscription_association#create ManagementGroupSubscriptionAssociation#create}. |
+| <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociationTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/management_group_subscription_association#delete ManagementGroupSubscriptionAssociation#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.managementGroupSubscriptionAssociation.ManagementGroupSubscriptionAssociationTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/management_group_subscription_association#read ManagementGroupSubscriptionAssociation#read}. |
 
 ---
 
@@ -1085,7 +1085,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/management_group_subscription_association#create ManagementGroupSubscriptionAssociation#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/management_group_subscription_association#create ManagementGroupSubscriptionAssociation#create}.
 
 ---
 
@@ -1097,7 +1097,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/management_group_subscription_association#delete ManagementGroupSubscriptionAssociation#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/management_group_subscription_association#delete ManagementGroupSubscriptionAssociation#delete}.
 
 ---
 
@@ -1109,7 +1109,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/management_group_subscription_association#read ManagementGroupSubscriptionAssociation#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/management_group_subscription_association#read ManagementGroupSubscriptionAssociation#read}.
 
 ---
 

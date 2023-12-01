@@ -4,7 +4,7 @@
 
 ### SignalrServiceCustomDomain <a name="SignalrServiceCustomDomain" id="@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomain"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain azurerm_signalr_service_custom_domain}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain azurerm_signalr_service_custom_domain}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomain.Initializer"></a>
 
@@ -41,11 +41,11 @@ signalrServiceCustomDomain.SignalrServiceCustomDomain(
 | <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomain.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomain.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomain.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomain.Initializer.parameter.domainName">domain_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#domain_name SignalrServiceCustomDomain#domain_name}. |
-| <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomain.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#name SignalrServiceCustomDomain#name}. |
-| <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomain.Initializer.parameter.signalrCustomCertificateId">signalr_custom_certificate_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#signalr_custom_certificate_id SignalrServiceCustomDomain#signalr_custom_certificate_id}. |
-| <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomain.Initializer.parameter.signalrServiceId">signalr_service_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#signalr_service_id SignalrServiceCustomDomain#signalr_service_id}. |
-| <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomain.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#id SignalrServiceCustomDomain#id}. |
+| <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomain.Initializer.parameter.domainName">domain_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#domain_name SignalrServiceCustomDomain#domain_name}. |
+| <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomain.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#name SignalrServiceCustomDomain#name}. |
+| <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomain.Initializer.parameter.signalrCustomCertificateId">signalr_custom_certificate_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#signalr_custom_certificate_id SignalrServiceCustomDomain#signalr_custom_certificate_id}. |
+| <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomain.Initializer.parameter.signalrServiceId">signalr_service_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#signalr_service_id SignalrServiceCustomDomain#signalr_service_id}. |
+| <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomain.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#id SignalrServiceCustomDomain#id}. |
 | <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomain.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomainTimeouts">SignalrServiceCustomDomainTimeouts</a></code> | timeouts block. |
 
 ---
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#domain_name SignalrServiceCustomDomain#domain_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#domain_name SignalrServiceCustomDomain#domain_name}.
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#name SignalrServiceCustomDomain#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#name SignalrServiceCustomDomain#name}.
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#signalr_custom_certificate_id SignalrServiceCustomDomain#signalr_custom_certificate_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#signalr_custom_certificate_id SignalrServiceCustomDomain#signalr_custom_certificate_id}.
 
 ---
 
@@ -138,7 +138,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#signalr_service_id SignalrServiceCustomDomain#signalr_service_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#signalr_service_id SignalrServiceCustomDomain#signalr_service_id}.
 
 ---
 
@@ -146,7 +146,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#id SignalrServiceCustomDomain#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#id SignalrServiceCustomDomain#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -159,7 +159,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#timeouts SignalrServiceCustomDomain#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#timeouts SignalrServiceCustomDomain#timeouts}
 
 ---
 
@@ -481,7 +481,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#create SignalrServiceCustomDomain#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#create SignalrServiceCustomDomain#create}.
 
 ---
 
@@ -489,7 +489,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#delete SignalrServiceCustomDomain#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#delete SignalrServiceCustomDomain#delete}.
 
 ---
 
@@ -497,7 +497,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#read SignalrServiceCustomDomain#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#read SignalrServiceCustomDomain#read}.
 
 ---
 
@@ -627,7 +627,7 @@ The construct id used in the generated config for the SignalrServiceCustomDomain
 
 The id of the existing SignalrServiceCustomDomain that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -989,11 +989,11 @@ signalrServiceCustomDomain.SignalrServiceCustomDomainConfig(
 | <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomainConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomainConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomainConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomainConfig.property.domainName">domain_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#domain_name SignalrServiceCustomDomain#domain_name}. |
-| <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomainConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#name SignalrServiceCustomDomain#name}. |
-| <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomainConfig.property.signalrCustomCertificateId">signalr_custom_certificate_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#signalr_custom_certificate_id SignalrServiceCustomDomain#signalr_custom_certificate_id}. |
-| <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomainConfig.property.signalrServiceId">signalr_service_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#signalr_service_id SignalrServiceCustomDomain#signalr_service_id}. |
-| <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomainConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#id SignalrServiceCustomDomain#id}. |
+| <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomainConfig.property.domainName">domain_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#domain_name SignalrServiceCustomDomain#domain_name}. |
+| <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomainConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#name SignalrServiceCustomDomain#name}. |
+| <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomainConfig.property.signalrCustomCertificateId">signalr_custom_certificate_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#signalr_custom_certificate_id SignalrServiceCustomDomain#signalr_custom_certificate_id}. |
+| <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomainConfig.property.signalrServiceId">signalr_service_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#signalr_service_id SignalrServiceCustomDomain#signalr_service_id}. |
+| <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomainConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#id SignalrServiceCustomDomain#id}. |
 | <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomainConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomainTimeouts">SignalrServiceCustomDomainTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1076,7 +1076,7 @@ domain_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#domain_name SignalrServiceCustomDomain#domain_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#domain_name SignalrServiceCustomDomain#domain_name}.
 
 ---
 
@@ -1088,7 +1088,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#name SignalrServiceCustomDomain#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#name SignalrServiceCustomDomain#name}.
 
 ---
 
@@ -1100,7 +1100,7 @@ signalr_custom_certificate_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#signalr_custom_certificate_id SignalrServiceCustomDomain#signalr_custom_certificate_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#signalr_custom_certificate_id SignalrServiceCustomDomain#signalr_custom_certificate_id}.
 
 ---
 
@@ -1112,7 +1112,7 @@ signalr_service_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#signalr_service_id SignalrServiceCustomDomain#signalr_service_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#signalr_service_id SignalrServiceCustomDomain#signalr_service_id}.
 
 ---
 
@@ -1124,7 +1124,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#id SignalrServiceCustomDomain#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#id SignalrServiceCustomDomain#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1141,7 +1141,7 @@ timeouts: SignalrServiceCustomDomainTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#timeouts SignalrServiceCustomDomain#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#timeouts SignalrServiceCustomDomain#timeouts}
 
 ---
 
@@ -1163,9 +1163,9 @@ signalrServiceCustomDomain.SignalrServiceCustomDomainTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomainTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#create SignalrServiceCustomDomain#create}. |
-| <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomainTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#delete SignalrServiceCustomDomain#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomainTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#read SignalrServiceCustomDomain#read}. |
+| <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomainTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#create SignalrServiceCustomDomain#create}. |
+| <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomainTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#delete SignalrServiceCustomDomain#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.signalrServiceCustomDomain.SignalrServiceCustomDomainTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#read SignalrServiceCustomDomain#read}. |
 
 ---
 
@@ -1177,7 +1177,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#create SignalrServiceCustomDomain#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#create SignalrServiceCustomDomain#create}.
 
 ---
 
@@ -1189,7 +1189,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#delete SignalrServiceCustomDomain#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#delete SignalrServiceCustomDomain#delete}.
 
 ---
 
@@ -1201,7 +1201,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/signalr_service_custom_domain#read SignalrServiceCustomDomain#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/signalr_service_custom_domain#read SignalrServiceCustomDomain#read}.
 
 ---
 

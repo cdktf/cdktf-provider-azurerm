@@ -4,7 +4,7 @@
 
 ### MediaTransform <a name="MediaTransform" id="@cdktf/provider-azurerm.mediaTransform.MediaTransform"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform azurerm_media_transform}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform azurerm_media_transform}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransform.Initializer"></a>
 
@@ -471,7 +471,7 @@ The construct id used in the generated config for the MediaTransform to import.
 
 The id of the existing MediaTransform that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -856,11 +856,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.mediaServicesAccountName">MediaServicesAccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#media_services_account_name MediaTransform#media_services_account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#name MediaTransform#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#resource_group_name MediaTransform#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#description MediaTransform#description}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#id MediaTransform#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.mediaServicesAccountName">MediaServicesAccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#media_services_account_name MediaTransform#media_services_account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#name MediaTransform#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#resource_group_name MediaTransform#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#description MediaTransform#description}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#id MediaTransform#id}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.output">Output</a></code> | <code>interface{}</code> | output block. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts">MediaTransformTimeouts</a></code> | timeouts block. |
 
@@ -944,7 +944,7 @@ MediaServicesAccountName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#media_services_account_name MediaTransform#media_services_account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#media_services_account_name MediaTransform#media_services_account_name}.
 
 ---
 
@@ -956,7 +956,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#name MediaTransform#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#name MediaTransform#name}.
 
 ---
 
@@ -968,7 +968,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#resource_group_name MediaTransform#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#resource_group_name MediaTransform#resource_group_name}.
 
 ---
 
@@ -980,7 +980,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#description MediaTransform#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#description MediaTransform#description}.
 
 ---
 
@@ -992,7 +992,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#id MediaTransform#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#id MediaTransform#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1009,7 +1009,7 @@ Output interface{}
 
 output block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#output MediaTransform#output}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#output MediaTransform#output}
 
 ---
 
@@ -1023,7 +1023,7 @@ Timeouts MediaTransformTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#timeouts MediaTransform#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#timeouts MediaTransform#timeouts}
 
 ---
 
@@ -1053,8 +1053,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutput.property.builtinPreset">BuiltinPreset</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPreset">MediaTransformOutputBuiltinPreset</a></code> | builtin_preset block. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutput.property.customPreset">CustomPreset</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPreset">MediaTransformOutputCustomPreset</a></code> | custom_preset block. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutput.property.faceDetectorPreset">FaceDetectorPreset</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputFaceDetectorPreset">MediaTransformOutputFaceDetectorPreset</a></code> | face_detector_preset block. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutput.property.onErrorAction">OnErrorAction</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#on_error_action MediaTransform#on_error_action}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutput.property.relativePriority">RelativePriority</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#relative_priority MediaTransform#relative_priority}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutput.property.onErrorAction">OnErrorAction</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#on_error_action MediaTransform#on_error_action}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutput.property.relativePriority">RelativePriority</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#relative_priority MediaTransform#relative_priority}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutput.property.videoAnalyzerPreset">VideoAnalyzerPreset</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputVideoAnalyzerPreset">MediaTransformOutputVideoAnalyzerPreset</a></code> | video_analyzer_preset block. |
 
 ---
@@ -1069,7 +1069,7 @@ AudioAnalyzerPreset MediaTransformOutputAudioAnalyzerPreset
 
 audio_analyzer_preset block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#audio_analyzer_preset MediaTransform#audio_analyzer_preset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#audio_analyzer_preset MediaTransform#audio_analyzer_preset}
 
 ---
 
@@ -1083,7 +1083,7 @@ BuiltinPreset MediaTransformOutputBuiltinPreset
 
 builtin_preset block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#builtin_preset MediaTransform#builtin_preset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#builtin_preset MediaTransform#builtin_preset}
 
 ---
 
@@ -1097,7 +1097,7 @@ CustomPreset MediaTransformOutputCustomPreset
 
 custom_preset block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#custom_preset MediaTransform#custom_preset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#custom_preset MediaTransform#custom_preset}
 
 ---
 
@@ -1111,7 +1111,7 @@ FaceDetectorPreset MediaTransformOutputFaceDetectorPreset
 
 face_detector_preset block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#face_detector_preset MediaTransform#face_detector_preset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#face_detector_preset MediaTransform#face_detector_preset}
 
 ---
 
@@ -1123,7 +1123,7 @@ OnErrorAction *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#on_error_action MediaTransform#on_error_action}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#on_error_action MediaTransform#on_error_action}.
 
 ---
 
@@ -1135,7 +1135,7 @@ RelativePriority *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#relative_priority MediaTransform#relative_priority}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#relative_priority MediaTransform#relative_priority}.
 
 ---
 
@@ -1149,7 +1149,7 @@ VideoAnalyzerPreset MediaTransformOutputVideoAnalyzerPreset
 
 video_analyzer_preset block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#video_analyzer_preset MediaTransform#video_analyzer_preset}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#video_analyzer_preset MediaTransform#video_analyzer_preset}
 
 ---
 
@@ -1171,9 +1171,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputAudioAnalyzerPreset.property.audioAnalysisMode">AudioAnalysisMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#audio_analysis_mode MediaTransform#audio_analysis_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputAudioAnalyzerPreset.property.audioLanguage">AudioLanguage</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#audio_language MediaTransform#audio_language}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputAudioAnalyzerPreset.property.experimentalOptions">ExperimentalOptions</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputAudioAnalyzerPreset.property.audioAnalysisMode">AudioAnalysisMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#audio_analysis_mode MediaTransform#audio_analysis_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputAudioAnalyzerPreset.property.audioLanguage">AudioLanguage</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#audio_language MediaTransform#audio_language}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputAudioAnalyzerPreset.property.experimentalOptions">ExperimentalOptions</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}. |
 
 ---
 
@@ -1185,7 +1185,7 @@ AudioAnalysisMode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#audio_analysis_mode MediaTransform#audio_analysis_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#audio_analysis_mode MediaTransform#audio_analysis_mode}.
 
 ---
 
@@ -1197,7 +1197,7 @@ AudioLanguage *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#audio_language MediaTransform#audio_language}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#audio_language MediaTransform#audio_language}.
 
 ---
 
@@ -1209,7 +1209,7 @@ ExperimentalOptions *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}.
 
 ---
 
@@ -1230,7 +1230,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPreset.property.presetName">PresetName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#preset_name MediaTransform#preset_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPreset.property.presetName">PresetName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#preset_name MediaTransform#preset_name}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPreset.property.presetConfiguration">PresetConfiguration</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration">MediaTransformOutputBuiltinPresetPresetConfiguration</a></code> | preset_configuration block. |
 
 ---
@@ -1243,7 +1243,7 @@ PresetName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#preset_name MediaTransform#preset_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#preset_name MediaTransform#preset_name}.
 
 ---
 
@@ -1257,7 +1257,7 @@ PresetConfiguration MediaTransformOutputBuiltinPresetPresetConfiguration
 
 preset_configuration block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#preset_configuration MediaTransform#preset_configuration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#preset_configuration MediaTransform#preset_configuration}
 
 ---
 
@@ -1284,14 +1284,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.complexity">Complexity</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#complexity MediaTransform#complexity}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.interleaveOutput">InterleaveOutput</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#interleave_output MediaTransform#interleave_output}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.keyFrameIntervalInSeconds">KeyFrameIntervalInSeconds</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#key_frame_interval_in_seconds MediaTransform#key_frame_interval_in_seconds}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.maxBitrateBps">MaxBitrateBps</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#max_bitrate_bps MediaTransform#max_bitrate_bps}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.maxHeight">MaxHeight</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#max_height MediaTransform#max_height}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.maxLayers">MaxLayers</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#max_layers MediaTransform#max_layers}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.minBitrateBps">MinBitrateBps</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#min_bitrate_bps MediaTransform#min_bitrate_bps}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.minHeight">MinHeight</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#min_height MediaTransform#min_height}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.complexity">Complexity</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#complexity MediaTransform#complexity}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.interleaveOutput">InterleaveOutput</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#interleave_output MediaTransform#interleave_output}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.keyFrameIntervalInSeconds">KeyFrameIntervalInSeconds</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#key_frame_interval_in_seconds MediaTransform#key_frame_interval_in_seconds}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.maxBitrateBps">MaxBitrateBps</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#max_bitrate_bps MediaTransform#max_bitrate_bps}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.maxHeight">MaxHeight</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#max_height MediaTransform#max_height}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.maxLayers">MaxLayers</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#max_layers MediaTransform#max_layers}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.minBitrateBps">MinBitrateBps</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#min_bitrate_bps MediaTransform#min_bitrate_bps}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.property.minHeight">MinHeight</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#min_height MediaTransform#min_height}. |
 
 ---
 
@@ -1303,7 +1303,7 @@ Complexity *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#complexity MediaTransform#complexity}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#complexity MediaTransform#complexity}.
 
 ---
 
@@ -1315,7 +1315,7 @@ InterleaveOutput *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#interleave_output MediaTransform#interleave_output}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#interleave_output MediaTransform#interleave_output}.
 
 ---
 
@@ -1327,7 +1327,7 @@ KeyFrameIntervalInSeconds *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#key_frame_interval_in_seconds MediaTransform#key_frame_interval_in_seconds}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#key_frame_interval_in_seconds MediaTransform#key_frame_interval_in_seconds}.
 
 ---
 
@@ -1339,7 +1339,7 @@ MaxBitrateBps *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#max_bitrate_bps MediaTransform#max_bitrate_bps}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#max_bitrate_bps MediaTransform#max_bitrate_bps}.
 
 ---
 
@@ -1351,7 +1351,7 @@ MaxHeight *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#max_height MediaTransform#max_height}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#max_height MediaTransform#max_height}.
 
 ---
 
@@ -1363,7 +1363,7 @@ MaxLayers *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#max_layers MediaTransform#max_layers}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#max_layers MediaTransform#max_layers}.
 
 ---
 
@@ -1375,7 +1375,7 @@ MinBitrateBps *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#min_bitrate_bps MediaTransform#min_bitrate_bps}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#min_bitrate_bps MediaTransform#min_bitrate_bps}.
 
 ---
 
@@ -1387,7 +1387,7 @@ MinHeight *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#min_height MediaTransform#min_height}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#min_height MediaTransform#min_height}.
 
 ---
 
@@ -1412,7 +1412,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPreset.property.codec">Codec</a></code> | <code>interface{}</code> | codec block. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPreset.property.format">Format</a></code> | <code>interface{}</code> | format block. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPreset.property.experimentalOptions">ExperimentalOptions</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPreset.property.experimentalOptions">ExperimentalOptions</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPreset.property.filter">Filter</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilter">MediaTransformOutputCustomPresetFilter</a></code> | filter block. |
 
 ---
@@ -1427,7 +1427,7 @@ Codec interface{}
 
 codec block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#codec MediaTransform#codec}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#codec MediaTransform#codec}
 
 ---
 
@@ -1441,7 +1441,7 @@ Format interface{}
 
 format block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#format MediaTransform#format}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#format MediaTransform#format}
 
 ---
 
@@ -1453,7 +1453,7 @@ ExperimentalOptions *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}.
 
 ---
 
@@ -1467,7 +1467,7 @@ Filter MediaTransformOutputCustomPresetFilter
 
 filter block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#filter MediaTransform#filter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#filter MediaTransform#filter}
 
 ---
 
@@ -1515,7 +1515,7 @@ AacAudio MediaTransformOutputCustomPresetCodecAacAudio
 
 aac_audio block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#aac_audio MediaTransform#aac_audio}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#aac_audio MediaTransform#aac_audio}
 
 ---
 
@@ -1529,7 +1529,7 @@ CopyAudio MediaTransformOutputCustomPresetCodecCopyAudio
 
 copy_audio block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#copy_audio MediaTransform#copy_audio}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#copy_audio MediaTransform#copy_audio}
 
 ---
 
@@ -1543,7 +1543,7 @@ CopyVideo MediaTransformOutputCustomPresetCodecCopyVideo
 
 copy_video block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#copy_video MediaTransform#copy_video}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#copy_video MediaTransform#copy_video}
 
 ---
 
@@ -1557,7 +1557,7 @@ DdAudio MediaTransformOutputCustomPresetCodecDdAudio
 
 dd_audio block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#dd_audio MediaTransform#dd_audio}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#dd_audio MediaTransform#dd_audio}
 
 ---
 
@@ -1571,7 +1571,7 @@ H264Video MediaTransformOutputCustomPresetCodecH264Video
 
 h264_video block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#h264_video MediaTransform#h264_video}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#h264_video MediaTransform#h264_video}
 
 ---
 
@@ -1585,7 +1585,7 @@ H265Video MediaTransformOutputCustomPresetCodecH265Video
 
 h265_video block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#h265_video MediaTransform#h265_video}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#h265_video MediaTransform#h265_video}
 
 ---
 
@@ -1599,7 +1599,7 @@ JpgImage MediaTransformOutputCustomPresetCodecJpgImage
 
 jpg_image block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#jpg_image MediaTransform#jpg_image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#jpg_image MediaTransform#jpg_image}
 
 ---
 
@@ -1613,7 +1613,7 @@ PngImage MediaTransformOutputCustomPresetCodecPngImage
 
 png_image block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#png_image MediaTransform#png_image}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#png_image MediaTransform#png_image}
 
 ---
 
@@ -1637,11 +1637,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecAacAudio.property.bitrate">Bitrate</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecAacAudio.property.channels">Channels</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#channels MediaTransform#channels}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecAacAudio.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#label MediaTransform#label}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecAacAudio.property.profile">Profile</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#profile MediaTransform#profile}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecAacAudio.property.samplingRate">SamplingRate</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#sampling_rate MediaTransform#sampling_rate}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecAacAudio.property.bitrate">Bitrate</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecAacAudio.property.channels">Channels</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#channels MediaTransform#channels}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecAacAudio.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#label MediaTransform#label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecAacAudio.property.profile">Profile</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#profile MediaTransform#profile}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecAacAudio.property.samplingRate">SamplingRate</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#sampling_rate MediaTransform#sampling_rate}. |
 
 ---
 
@@ -1653,7 +1653,7 @@ Bitrate *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}.
 
 ---
 
@@ -1665,7 +1665,7 @@ Channels *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#channels MediaTransform#channels}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#channels MediaTransform#channels}.
 
 ---
 
@@ -1677,7 +1677,7 @@ Label *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#label MediaTransform#label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#label MediaTransform#label}.
 
 ---
 
@@ -1689,7 +1689,7 @@ Profile *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#profile MediaTransform#profile}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#profile MediaTransform#profile}.
 
 ---
 
@@ -1701,7 +1701,7 @@ SamplingRate *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#sampling_rate MediaTransform#sampling_rate}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#sampling_rate MediaTransform#sampling_rate}.
 
 ---
 
@@ -1721,7 +1721,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecCopyAudio.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#label MediaTransform#label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecCopyAudio.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#label MediaTransform#label}. |
 
 ---
 
@@ -1733,7 +1733,7 @@ Label *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#label MediaTransform#label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#label MediaTransform#label}.
 
 ---
 
@@ -1753,7 +1753,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecCopyVideo.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#label MediaTransform#label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecCopyVideo.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#label MediaTransform#label}. |
 
 ---
 
@@ -1765,7 +1765,7 @@ Label *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#label MediaTransform#label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#label MediaTransform#label}.
 
 ---
 
@@ -1788,10 +1788,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecDdAudio.property.bitrate">Bitrate</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecDdAudio.property.channels">Channels</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#channels MediaTransform#channels}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecDdAudio.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#label MediaTransform#label}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecDdAudio.property.samplingRate">SamplingRate</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#sampling_rate MediaTransform#sampling_rate}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecDdAudio.property.bitrate">Bitrate</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecDdAudio.property.channels">Channels</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#channels MediaTransform#channels}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecDdAudio.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#label MediaTransform#label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecDdAudio.property.samplingRate">SamplingRate</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#sampling_rate MediaTransform#sampling_rate}. |
 
 ---
 
@@ -1803,7 +1803,7 @@ Bitrate *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}.
 
 ---
 
@@ -1815,7 +1815,7 @@ Channels *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#channels MediaTransform#channels}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#channels MediaTransform#channels}.
 
 ---
 
@@ -1827,7 +1827,7 @@ Label *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#label MediaTransform#label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#label MediaTransform#label}.
 
 ---
 
@@ -1839,7 +1839,7 @@ SamplingRate *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#sampling_rate MediaTransform#sampling_rate}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#sampling_rate MediaTransform#sampling_rate}.
 
 ---
 
@@ -1866,14 +1866,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.complexity">Complexity</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#complexity MediaTransform#complexity}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.keyFrameInterval">KeyFrameInterval</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#label MediaTransform#label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.complexity">Complexity</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#complexity MediaTransform#complexity}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.keyFrameInterval">KeyFrameInterval</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#label MediaTransform#label}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.layer">Layer</a></code> | <code>interface{}</code> | layer block. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.rateControlMode">RateControlMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#rate_control_mode MediaTransform#rate_control_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.sceneChangeDetectionEnabled">SceneChangeDetectionEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#scene_change_detection_enabled MediaTransform#scene_change_detection_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.stretchMode">StretchMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.syncMode">SyncMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.rateControlMode">RateControlMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#rate_control_mode MediaTransform#rate_control_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.sceneChangeDetectionEnabled">SceneChangeDetectionEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#scene_change_detection_enabled MediaTransform#scene_change_detection_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.stretchMode">StretchMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.property.syncMode">SyncMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}. |
 
 ---
 
@@ -1885,7 +1885,7 @@ Complexity *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#complexity MediaTransform#complexity}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#complexity MediaTransform#complexity}.
 
 ---
 
@@ -1897,7 +1897,7 @@ KeyFrameInterval *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}.
 
 ---
 
@@ -1909,7 +1909,7 @@ Label *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#label MediaTransform#label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#label MediaTransform#label}.
 
 ---
 
@@ -1923,7 +1923,7 @@ Layer interface{}
 
 layer block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#layer MediaTransform#layer}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#layer MediaTransform#layer}
 
 ---
 
@@ -1935,7 +1935,7 @@ RateControlMode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#rate_control_mode MediaTransform#rate_control_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#rate_control_mode MediaTransform#rate_control_mode}.
 
 ---
 
@@ -1947,7 +1947,7 @@ SceneChangeDetectionEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#scene_change_detection_enabled MediaTransform#scene_change_detection_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#scene_change_detection_enabled MediaTransform#scene_change_detection_enabled}.
 
 ---
 
@@ -1959,7 +1959,7 @@ StretchMode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}.
 
 ---
 
@@ -1971,7 +1971,7 @@ SyncMode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}.
 
 ---
 
@@ -2005,21 +2005,21 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.bitrate">Bitrate</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.adaptiveBFrameEnabled">AdaptiveBFrameEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#adaptive_b_frame_enabled MediaTransform#adaptive_b_frame_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.bFrames">BFrames</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#b_frames MediaTransform#b_frames}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.bufferWindow">BufferWindow</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#buffer_window MediaTransform#buffer_window}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.crf">Crf</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#crf MediaTransform#crf}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.entropyMode">EntropyMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#entropy_mode MediaTransform#entropy_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.frameRate">FrameRate</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#frame_rate MediaTransform#frame_rate}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.height">Height</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#height MediaTransform#height}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#label MediaTransform#label}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.level">Level</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#level MediaTransform#level}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.maxBitrate">MaxBitrate</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#max_bitrate MediaTransform#max_bitrate}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.profile">Profile</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#profile MediaTransform#profile}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.referenceFrames">ReferenceFrames</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#reference_frames MediaTransform#reference_frames}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.slices">Slices</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#slices MediaTransform#slices}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.width">Width</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#width MediaTransform#width}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.bitrate">Bitrate</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.adaptiveBFrameEnabled">AdaptiveBFrameEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#adaptive_b_frame_enabled MediaTransform#adaptive_b_frame_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.bFrames">BFrames</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#b_frames MediaTransform#b_frames}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.bufferWindow">BufferWindow</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#buffer_window MediaTransform#buffer_window}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.crf">Crf</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#crf MediaTransform#crf}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.entropyMode">EntropyMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#entropy_mode MediaTransform#entropy_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.frameRate">FrameRate</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#frame_rate MediaTransform#frame_rate}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.height">Height</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#height MediaTransform#height}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#label MediaTransform#label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.level">Level</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#level MediaTransform#level}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.maxBitrate">MaxBitrate</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#max_bitrate MediaTransform#max_bitrate}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.profile">Profile</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#profile MediaTransform#profile}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.referenceFrames">ReferenceFrames</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#reference_frames MediaTransform#reference_frames}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.slices">Slices</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#slices MediaTransform#slices}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.property.width">Width</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#width MediaTransform#width}. |
 
 ---
 
@@ -2031,7 +2031,7 @@ Bitrate *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}.
 
 ---
 
@@ -2043,7 +2043,7 @@ AdaptiveBFrameEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#adaptive_b_frame_enabled MediaTransform#adaptive_b_frame_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#adaptive_b_frame_enabled MediaTransform#adaptive_b_frame_enabled}.
 
 ---
 
@@ -2055,7 +2055,7 @@ BFrames *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#b_frames MediaTransform#b_frames}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#b_frames MediaTransform#b_frames}.
 
 ---
 
@@ -2067,7 +2067,7 @@ BufferWindow *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#buffer_window MediaTransform#buffer_window}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#buffer_window MediaTransform#buffer_window}.
 
 ---
 
@@ -2079,7 +2079,7 @@ Crf *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#crf MediaTransform#crf}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#crf MediaTransform#crf}.
 
 ---
 
@@ -2091,7 +2091,7 @@ EntropyMode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#entropy_mode MediaTransform#entropy_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#entropy_mode MediaTransform#entropy_mode}.
 
 ---
 
@@ -2103,7 +2103,7 @@ FrameRate *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#frame_rate MediaTransform#frame_rate}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#frame_rate MediaTransform#frame_rate}.
 
 ---
 
@@ -2115,7 +2115,7 @@ Height *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#height MediaTransform#height}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#height MediaTransform#height}.
 
 ---
 
@@ -2127,7 +2127,7 @@ Label *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#label MediaTransform#label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#label MediaTransform#label}.
 
 ---
 
@@ -2139,7 +2139,7 @@ Level *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#level MediaTransform#level}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#level MediaTransform#level}.
 
 ---
 
@@ -2151,7 +2151,7 @@ MaxBitrate *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#max_bitrate MediaTransform#max_bitrate}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#max_bitrate MediaTransform#max_bitrate}.
 
 ---
 
@@ -2163,7 +2163,7 @@ Profile *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#profile MediaTransform#profile}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#profile MediaTransform#profile}.
 
 ---
 
@@ -2175,7 +2175,7 @@ ReferenceFrames *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#reference_frames MediaTransform#reference_frames}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#reference_frames MediaTransform#reference_frames}.
 
 ---
 
@@ -2187,7 +2187,7 @@ Slices *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#slices MediaTransform#slices}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#slices MediaTransform#slices}.
 
 ---
 
@@ -2199,7 +2199,7 @@ Width *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#width MediaTransform#width}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#width MediaTransform#width}.
 
 ---
 
@@ -2225,13 +2225,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.property.complexity">Complexity</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#complexity MediaTransform#complexity}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.property.keyFrameInterval">KeyFrameInterval</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#label MediaTransform#label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.property.complexity">Complexity</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#complexity MediaTransform#complexity}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.property.keyFrameInterval">KeyFrameInterval</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#label MediaTransform#label}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.property.layer">Layer</a></code> | <code>interface{}</code> | layer block. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.property.sceneChangeDetectionEnabled">SceneChangeDetectionEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#scene_change_detection_enabled MediaTransform#scene_change_detection_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.property.stretchMode">StretchMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.property.syncMode">SyncMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.property.sceneChangeDetectionEnabled">SceneChangeDetectionEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#scene_change_detection_enabled MediaTransform#scene_change_detection_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.property.stretchMode">StretchMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.property.syncMode">SyncMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}. |
 
 ---
 
@@ -2243,7 +2243,7 @@ Complexity *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#complexity MediaTransform#complexity}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#complexity MediaTransform#complexity}.
 
 ---
 
@@ -2255,7 +2255,7 @@ KeyFrameInterval *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}.
 
 ---
 
@@ -2267,7 +2267,7 @@ Label *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#label MediaTransform#label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#label MediaTransform#label}.
 
 ---
 
@@ -2281,7 +2281,7 @@ Layer interface{}
 
 layer block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#layer MediaTransform#layer}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#layer MediaTransform#layer}
 
 ---
 
@@ -2293,7 +2293,7 @@ SceneChangeDetectionEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#scene_change_detection_enabled MediaTransform#scene_change_detection_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#scene_change_detection_enabled MediaTransform#scene_change_detection_enabled}.
 
 ---
 
@@ -2305,7 +2305,7 @@ StretchMode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}.
 
 ---
 
@@ -2317,7 +2317,7 @@ SyncMode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}.
 
 ---
 
@@ -2350,20 +2350,20 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.bitrate">Bitrate</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.adaptiveBFrameEnabled">AdaptiveBFrameEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#adaptive_b_frame_enabled MediaTransform#adaptive_b_frame_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.bFrames">BFrames</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#b_frames MediaTransform#b_frames}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.bufferWindow">BufferWindow</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#buffer_window MediaTransform#buffer_window}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.crf">Crf</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#crf MediaTransform#crf}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.frameRate">FrameRate</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#frame_rate MediaTransform#frame_rate}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.height">Height</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#height MediaTransform#height}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#label MediaTransform#label}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.level">Level</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#level MediaTransform#level}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.maxBitrate">MaxBitrate</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#max_bitrate MediaTransform#max_bitrate}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.profile">Profile</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#profile MediaTransform#profile}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.referenceFrames">ReferenceFrames</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#reference_frames MediaTransform#reference_frames}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.slices">Slices</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#slices MediaTransform#slices}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.width">Width</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#width MediaTransform#width}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.bitrate">Bitrate</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.adaptiveBFrameEnabled">AdaptiveBFrameEnabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#adaptive_b_frame_enabled MediaTransform#adaptive_b_frame_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.bFrames">BFrames</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#b_frames MediaTransform#b_frames}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.bufferWindow">BufferWindow</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#buffer_window MediaTransform#buffer_window}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.crf">Crf</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#crf MediaTransform#crf}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.frameRate">FrameRate</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#frame_rate MediaTransform#frame_rate}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.height">Height</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#height MediaTransform#height}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#label MediaTransform#label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.level">Level</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#level MediaTransform#level}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.maxBitrate">MaxBitrate</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#max_bitrate MediaTransform#max_bitrate}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.profile">Profile</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#profile MediaTransform#profile}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.referenceFrames">ReferenceFrames</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#reference_frames MediaTransform#reference_frames}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.slices">Slices</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#slices MediaTransform#slices}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.property.width">Width</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#width MediaTransform#width}. |
 
 ---
 
@@ -2375,7 +2375,7 @@ Bitrate *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#bitrate MediaTransform#bitrate}.
 
 ---
 
@@ -2387,7 +2387,7 @@ AdaptiveBFrameEnabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#adaptive_b_frame_enabled MediaTransform#adaptive_b_frame_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#adaptive_b_frame_enabled MediaTransform#adaptive_b_frame_enabled}.
 
 ---
 
@@ -2399,7 +2399,7 @@ BFrames *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#b_frames MediaTransform#b_frames}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#b_frames MediaTransform#b_frames}.
 
 ---
 
@@ -2411,7 +2411,7 @@ BufferWindow *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#buffer_window MediaTransform#buffer_window}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#buffer_window MediaTransform#buffer_window}.
 
 ---
 
@@ -2423,7 +2423,7 @@ Crf *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#crf MediaTransform#crf}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#crf MediaTransform#crf}.
 
 ---
 
@@ -2435,7 +2435,7 @@ FrameRate *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#frame_rate MediaTransform#frame_rate}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#frame_rate MediaTransform#frame_rate}.
 
 ---
 
@@ -2447,7 +2447,7 @@ Height *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#height MediaTransform#height}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#height MediaTransform#height}.
 
 ---
 
@@ -2459,7 +2459,7 @@ Label *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#label MediaTransform#label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#label MediaTransform#label}.
 
 ---
 
@@ -2471,7 +2471,7 @@ Level *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#level MediaTransform#level}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#level MediaTransform#level}.
 
 ---
 
@@ -2483,7 +2483,7 @@ MaxBitrate *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#max_bitrate MediaTransform#max_bitrate}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#max_bitrate MediaTransform#max_bitrate}.
 
 ---
 
@@ -2495,7 +2495,7 @@ Profile *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#profile MediaTransform#profile}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#profile MediaTransform#profile}.
 
 ---
 
@@ -2507,7 +2507,7 @@ ReferenceFrames *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#reference_frames MediaTransform#reference_frames}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#reference_frames MediaTransform#reference_frames}.
 
 ---
 
@@ -2519,7 +2519,7 @@ Slices *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#slices MediaTransform#slices}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#slices MediaTransform#slices}.
 
 ---
 
@@ -2531,7 +2531,7 @@ Width *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#width MediaTransform#width}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#width MediaTransform#width}.
 
 ---
 
@@ -2559,15 +2559,15 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.start">Start</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#start MediaTransform#start}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.keyFrameInterval">KeyFrameInterval</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#label MediaTransform#label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.start">Start</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#start MediaTransform#start}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.keyFrameInterval">KeyFrameInterval</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#label MediaTransform#label}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.layer">Layer</a></code> | <code>interface{}</code> | layer block. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.range">Range</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#range MediaTransform#range}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.spriteColumn">SpriteColumn</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#sprite_column MediaTransform#sprite_column}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.step">Step</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#step MediaTransform#step}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.stretchMode">StretchMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.syncMode">SyncMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.range">Range</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#range MediaTransform#range}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.spriteColumn">SpriteColumn</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#sprite_column MediaTransform#sprite_column}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.step">Step</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#step MediaTransform#step}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.stretchMode">StretchMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.property.syncMode">SyncMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}. |
 
 ---
 
@@ -2579,7 +2579,7 @@ Start *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#start MediaTransform#start}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#start MediaTransform#start}.
 
 ---
 
@@ -2591,7 +2591,7 @@ KeyFrameInterval *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}.
 
 ---
 
@@ -2603,7 +2603,7 @@ Label *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#label MediaTransform#label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#label MediaTransform#label}.
 
 ---
 
@@ -2617,7 +2617,7 @@ Layer interface{}
 
 layer block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#layer MediaTransform#layer}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#layer MediaTransform#layer}
 
 ---
 
@@ -2629,7 +2629,7 @@ Range *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#range MediaTransform#range}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#range MediaTransform#range}.
 
 ---
 
@@ -2641,7 +2641,7 @@ SpriteColumn *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#sprite_column MediaTransform#sprite_column}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#sprite_column MediaTransform#sprite_column}.
 
 ---
 
@@ -2653,7 +2653,7 @@ Step *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#step MediaTransform#step}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#step MediaTransform#step}.
 
 ---
 
@@ -2665,7 +2665,7 @@ StretchMode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}.
 
 ---
 
@@ -2677,7 +2677,7 @@ SyncMode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}.
 
 ---
 
@@ -2700,10 +2700,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayer.property.height">Height</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#height MediaTransform#height}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayer.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#label MediaTransform#label}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayer.property.quality">Quality</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#quality MediaTransform#quality}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayer.property.width">Width</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#width MediaTransform#width}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayer.property.height">Height</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#height MediaTransform#height}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayer.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#label MediaTransform#label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayer.property.quality">Quality</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#quality MediaTransform#quality}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayer.property.width">Width</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#width MediaTransform#width}. |
 
 ---
 
@@ -2715,7 +2715,7 @@ Height *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#height MediaTransform#height}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#height MediaTransform#height}.
 
 ---
 
@@ -2727,7 +2727,7 @@ Label *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#label MediaTransform#label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#label MediaTransform#label}.
 
 ---
 
@@ -2739,7 +2739,7 @@ Quality *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#quality MediaTransform#quality}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#quality MediaTransform#quality}.
 
 ---
 
@@ -2751,7 +2751,7 @@ Width *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#width MediaTransform#width}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#width MediaTransform#width}.
 
 ---
 
@@ -2778,14 +2778,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.start">Start</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#start MediaTransform#start}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.keyFrameInterval">KeyFrameInterval</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#label MediaTransform#label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.start">Start</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#start MediaTransform#start}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.keyFrameInterval">KeyFrameInterval</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#label MediaTransform#label}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.layer">Layer</a></code> | <code>interface{}</code> | layer block. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.range">Range</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#range MediaTransform#range}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.step">Step</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#step MediaTransform#step}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.stretchMode">StretchMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.syncMode">SyncMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.range">Range</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#range MediaTransform#range}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.step">Step</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#step MediaTransform#step}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.stretchMode">StretchMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.property.syncMode">SyncMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}. |
 
 ---
 
@@ -2797,7 +2797,7 @@ Start *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#start MediaTransform#start}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#start MediaTransform#start}.
 
 ---
 
@@ -2809,7 +2809,7 @@ KeyFrameInterval *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#key_frame_interval MediaTransform#key_frame_interval}.
 
 ---
 
@@ -2821,7 +2821,7 @@ Label *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#label MediaTransform#label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#label MediaTransform#label}.
 
 ---
 
@@ -2835,7 +2835,7 @@ Layer interface{}
 
 layer block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#layer MediaTransform#layer}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#layer MediaTransform#layer}
 
 ---
 
@@ -2847,7 +2847,7 @@ Range *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#range MediaTransform#range}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#range MediaTransform#range}.
 
 ---
 
@@ -2859,7 +2859,7 @@ Step *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#step MediaTransform#step}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#step MediaTransform#step}.
 
 ---
 
@@ -2871,7 +2871,7 @@ StretchMode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#stretch_mode MediaTransform#stretch_mode}.
 
 ---
 
@@ -2883,7 +2883,7 @@ SyncMode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#sync_mode MediaTransform#sync_mode}.
 
 ---
 
@@ -2905,9 +2905,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayer.property.height">Height</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#height MediaTransform#height}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayer.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#label MediaTransform#label}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayer.property.width">Width</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#width MediaTransform#width}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayer.property.height">Height</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#height MediaTransform#height}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayer.property.label">Label</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#label MediaTransform#label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayer.property.width">Width</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#width MediaTransform#width}. |
 
 ---
 
@@ -2919,7 +2919,7 @@ Height *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#height MediaTransform#height}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#height MediaTransform#height}.
 
 ---
 
@@ -2931,7 +2931,7 @@ Label *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#label MediaTransform#label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#label MediaTransform#label}.
 
 ---
 
@@ -2943,7 +2943,7 @@ Width *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#width MediaTransform#width}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#width MediaTransform#width}.
 
 ---
 
@@ -2973,7 +2973,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilter.property.fadeIn">FadeIn</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeIn">MediaTransformOutputCustomPresetFilterFadeIn</a></code> | fade_in block. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilter.property.fadeOut">FadeOut</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeOut">MediaTransformOutputCustomPresetFilterFadeOut</a></code> | fade_out block. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilter.property.overlay">Overlay</a></code> | <code>interface{}</code> | overlay block. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilter.property.rotation">Rotation</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#rotation MediaTransform#rotation}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilter.property.rotation">Rotation</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#rotation MediaTransform#rotation}. |
 
 ---
 
@@ -2987,7 +2987,7 @@ CropRectangle MediaTransformOutputCustomPresetFilterCropRectangle
 
 crop_rectangle block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#crop_rectangle MediaTransform#crop_rectangle}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#crop_rectangle MediaTransform#crop_rectangle}
 
 ---
 
@@ -3001,7 +3001,7 @@ Deinterlace MediaTransformOutputCustomPresetFilterDeinterlace
 
 deinterlace block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#deinterlace MediaTransform#deinterlace}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#deinterlace MediaTransform#deinterlace}
 
 ---
 
@@ -3015,7 +3015,7 @@ FadeIn MediaTransformOutputCustomPresetFilterFadeIn
 
 fade_in block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#fade_in MediaTransform#fade_in}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#fade_in MediaTransform#fade_in}
 
 ---
 
@@ -3029,7 +3029,7 @@ FadeOut MediaTransformOutputCustomPresetFilterFadeOut
 
 fade_out block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#fade_out MediaTransform#fade_out}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#fade_out MediaTransform#fade_out}
 
 ---
 
@@ -3043,7 +3043,7 @@ Overlay interface{}
 
 overlay block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#overlay MediaTransform#overlay}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#overlay MediaTransform#overlay}
 
 ---
 
@@ -3055,7 +3055,7 @@ Rotation *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#rotation MediaTransform#rotation}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#rotation MediaTransform#rotation}.
 
 ---
 
@@ -3078,10 +3078,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterCropRectangle.property.height">Height</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#height MediaTransform#height}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterCropRectangle.property.left">Left</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#left MediaTransform#left}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterCropRectangle.property.top">Top</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#top MediaTransform#top}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterCropRectangle.property.width">Width</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#width MediaTransform#width}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterCropRectangle.property.height">Height</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#height MediaTransform#height}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterCropRectangle.property.left">Left</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#left MediaTransform#left}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterCropRectangle.property.top">Top</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#top MediaTransform#top}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterCropRectangle.property.width">Width</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#width MediaTransform#width}. |
 
 ---
 
@@ -3093,7 +3093,7 @@ Height *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#height MediaTransform#height}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#height MediaTransform#height}.
 
 ---
 
@@ -3105,7 +3105,7 @@ Left *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#left MediaTransform#left}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#left MediaTransform#left}.
 
 ---
 
@@ -3117,7 +3117,7 @@ Top *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#top MediaTransform#top}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#top MediaTransform#top}.
 
 ---
 
@@ -3129,7 +3129,7 @@ Width *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#width MediaTransform#width}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#width MediaTransform#width}.
 
 ---
 
@@ -3150,8 +3150,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterDeinterlace.property.mode">Mode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#mode MediaTransform#mode}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterDeinterlace.property.parity">Parity</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#parity MediaTransform#parity}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterDeinterlace.property.mode">Mode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#mode MediaTransform#mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterDeinterlace.property.parity">Parity</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#parity MediaTransform#parity}. |
 
 ---
 
@@ -3163,7 +3163,7 @@ Mode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#mode MediaTransform#mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#mode MediaTransform#mode}.
 
 ---
 
@@ -3175,7 +3175,7 @@ Parity *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#parity MediaTransform#parity}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#parity MediaTransform#parity}.
 
 ---
 
@@ -3197,9 +3197,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeIn.property.duration">Duration</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#duration MediaTransform#duration}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeIn.property.fadeColor">FadeColor</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#fade_color MediaTransform#fade_color}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeIn.property.start">Start</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#start MediaTransform#start}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeIn.property.duration">Duration</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#duration MediaTransform#duration}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeIn.property.fadeColor">FadeColor</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#fade_color MediaTransform#fade_color}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeIn.property.start">Start</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#start MediaTransform#start}. |
 
 ---
 
@@ -3211,7 +3211,7 @@ Duration *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#duration MediaTransform#duration}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#duration MediaTransform#duration}.
 
 ---
 
@@ -3223,7 +3223,7 @@ FadeColor *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#fade_color MediaTransform#fade_color}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#fade_color MediaTransform#fade_color}.
 
 ---
 
@@ -3235,7 +3235,7 @@ Start *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#start MediaTransform#start}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#start MediaTransform#start}.
 
 ---
 
@@ -3257,9 +3257,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeOut.property.duration">Duration</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#duration MediaTransform#duration}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeOut.property.fadeColor">FadeColor</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#fade_color MediaTransform#fade_color}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeOut.property.start">Start</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#start MediaTransform#start}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeOut.property.duration">Duration</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#duration MediaTransform#duration}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeOut.property.fadeColor">FadeColor</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#fade_color MediaTransform#fade_color}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeOut.property.start">Start</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#start MediaTransform#start}. |
 
 ---
 
@@ -3271,7 +3271,7 @@ Duration *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#duration MediaTransform#duration}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#duration MediaTransform#duration}.
 
 ---
 
@@ -3283,7 +3283,7 @@ FadeColor *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#fade_color MediaTransform#fade_color}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#fade_color MediaTransform#fade_color}.
 
 ---
 
@@ -3295,7 +3295,7 @@ Start *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#start MediaTransform#start}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#start MediaTransform#start}.
 
 ---
 
@@ -3331,7 +3331,7 @@ Audio MediaTransformOutputCustomPresetFilterOverlayAudio
 
 audio block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#audio MediaTransform#audio}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#audio MediaTransform#audio}
 
 ---
 
@@ -3345,7 +3345,7 @@ Video MediaTransformOutputCustomPresetFilterOverlayVideo
 
 video block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#video MediaTransform#video}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#video MediaTransform#video}
 
 ---
 
@@ -3370,12 +3370,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio.property.inputLabel">InputLabel</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#input_label MediaTransform#input_label}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio.property.audioGainLevel">AudioGainLevel</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#audio_gain_level MediaTransform#audio_gain_level}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio.property.end">End</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#end MediaTransform#end}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio.property.fadeInDuration">FadeInDuration</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#fade_in_duration MediaTransform#fade_in_duration}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio.property.fadeOutDuration">FadeOutDuration</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#fade_out_duration MediaTransform#fade_out_duration}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio.property.start">Start</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#start MediaTransform#start}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio.property.inputLabel">InputLabel</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#input_label MediaTransform#input_label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio.property.audioGainLevel">AudioGainLevel</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#audio_gain_level MediaTransform#audio_gain_level}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio.property.end">End</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#end MediaTransform#end}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio.property.fadeInDuration">FadeInDuration</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#fade_in_duration MediaTransform#fade_in_duration}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio.property.fadeOutDuration">FadeOutDuration</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#fade_out_duration MediaTransform#fade_out_duration}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio.property.start">Start</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#start MediaTransform#start}. |
 
 ---
 
@@ -3387,7 +3387,7 @@ InputLabel *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#input_label MediaTransform#input_label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#input_label MediaTransform#input_label}.
 
 ---
 
@@ -3399,7 +3399,7 @@ AudioGainLevel *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#audio_gain_level MediaTransform#audio_gain_level}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#audio_gain_level MediaTransform#audio_gain_level}.
 
 ---
 
@@ -3411,7 +3411,7 @@ End *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#end MediaTransform#end}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#end MediaTransform#end}.
 
 ---
 
@@ -3423,7 +3423,7 @@ FadeInDuration *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#fade_in_duration MediaTransform#fade_in_duration}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#fade_in_duration MediaTransform#fade_in_duration}.
 
 ---
 
@@ -3435,7 +3435,7 @@ FadeOutDuration *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#fade_out_duration MediaTransform#fade_out_duration}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#fade_out_duration MediaTransform#fade_out_duration}.
 
 ---
 
@@ -3447,7 +3447,7 @@ Start *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#start MediaTransform#start}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#start MediaTransform#start}.
 
 ---
 
@@ -3475,15 +3475,15 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.inputLabel">InputLabel</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#input_label MediaTransform#input_label}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.audioGainLevel">AudioGainLevel</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#audio_gain_level MediaTransform#audio_gain_level}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.inputLabel">InputLabel</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#input_label MediaTransform#input_label}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.audioGainLevel">AudioGainLevel</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#audio_gain_level MediaTransform#audio_gain_level}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.cropRectangle">CropRectangle</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle">MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle</a></code> | crop_rectangle block. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.end">End</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#end MediaTransform#end}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.fadeInDuration">FadeInDuration</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#fade_in_duration MediaTransform#fade_in_duration}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.fadeOutDuration">FadeOutDuration</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#fade_out_duration MediaTransform#fade_out_duration}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.opacity">Opacity</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#opacity MediaTransform#opacity}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.end">End</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#end MediaTransform#end}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.fadeInDuration">FadeInDuration</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#fade_in_duration MediaTransform#fade_in_duration}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.fadeOutDuration">FadeOutDuration</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#fade_out_duration MediaTransform#fade_out_duration}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.opacity">Opacity</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#opacity MediaTransform#opacity}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.position">Position</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoPosition">MediaTransformOutputCustomPresetFilterOverlayVideoPosition</a></code> | position block. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.start">Start</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#start MediaTransform#start}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.property.start">Start</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#start MediaTransform#start}. |
 
 ---
 
@@ -3495,7 +3495,7 @@ InputLabel *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#input_label MediaTransform#input_label}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#input_label MediaTransform#input_label}.
 
 ---
 
@@ -3507,7 +3507,7 @@ AudioGainLevel *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#audio_gain_level MediaTransform#audio_gain_level}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#audio_gain_level MediaTransform#audio_gain_level}.
 
 ---
 
@@ -3521,7 +3521,7 @@ CropRectangle MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle
 
 crop_rectangle block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#crop_rectangle MediaTransform#crop_rectangle}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#crop_rectangle MediaTransform#crop_rectangle}
 
 ---
 
@@ -3533,7 +3533,7 @@ End *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#end MediaTransform#end}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#end MediaTransform#end}.
 
 ---
 
@@ -3545,7 +3545,7 @@ FadeInDuration *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#fade_in_duration MediaTransform#fade_in_duration}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#fade_in_duration MediaTransform#fade_in_duration}.
 
 ---
 
@@ -3557,7 +3557,7 @@ FadeOutDuration *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#fade_out_duration MediaTransform#fade_out_duration}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#fade_out_duration MediaTransform#fade_out_duration}.
 
 ---
 
@@ -3569,7 +3569,7 @@ Opacity *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#opacity MediaTransform#opacity}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#opacity MediaTransform#opacity}.
 
 ---
 
@@ -3583,7 +3583,7 @@ Position MediaTransformOutputCustomPresetFilterOverlayVideoPosition
 
 position block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#position MediaTransform#position}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#position MediaTransform#position}
 
 ---
 
@@ -3595,7 +3595,7 @@ Start *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#start MediaTransform#start}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#start MediaTransform#start}.
 
 ---
 
@@ -3618,10 +3618,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle.property.height">Height</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#height MediaTransform#height}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle.property.left">Left</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#left MediaTransform#left}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle.property.top">Top</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#top MediaTransform#top}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle.property.width">Width</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#width MediaTransform#width}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle.property.height">Height</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#height MediaTransform#height}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle.property.left">Left</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#left MediaTransform#left}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle.property.top">Top</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#top MediaTransform#top}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle.property.width">Width</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#width MediaTransform#width}. |
 
 ---
 
@@ -3633,7 +3633,7 @@ Height *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#height MediaTransform#height}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#height MediaTransform#height}.
 
 ---
 
@@ -3645,7 +3645,7 @@ Left *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#left MediaTransform#left}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#left MediaTransform#left}.
 
 ---
 
@@ -3657,7 +3657,7 @@ Top *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#top MediaTransform#top}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#top MediaTransform#top}.
 
 ---
 
@@ -3669,7 +3669,7 @@ Width *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#width MediaTransform#width}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#width MediaTransform#width}.
 
 ---
 
@@ -3692,10 +3692,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoPosition.property.height">Height</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#height MediaTransform#height}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoPosition.property.left">Left</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#left MediaTransform#left}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoPosition.property.top">Top</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#top MediaTransform#top}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoPosition.property.width">Width</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#width MediaTransform#width}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoPosition.property.height">Height</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#height MediaTransform#height}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoPosition.property.left">Left</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#left MediaTransform#left}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoPosition.property.top">Top</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#top MediaTransform#top}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoPosition.property.width">Width</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#width MediaTransform#width}. |
 
 ---
 
@@ -3707,7 +3707,7 @@ Height *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#height MediaTransform#height}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#height MediaTransform#height}.
 
 ---
 
@@ -3719,7 +3719,7 @@ Left *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#left MediaTransform#left}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#left MediaTransform#left}.
 
 ---
 
@@ -3731,7 +3731,7 @@ Top *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#top MediaTransform#top}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#top MediaTransform#top}.
 
 ---
 
@@ -3743,7 +3743,7 @@ Width *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#width MediaTransform#width}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#width MediaTransform#width}.
 
 ---
 
@@ -3783,7 +3783,7 @@ Jpg MediaTransformOutputCustomPresetFormatJpg
 
 jpg block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#jpg MediaTransform#jpg}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#jpg MediaTransform#jpg}
 
 ---
 
@@ -3797,7 +3797,7 @@ Mp4 MediaTransformOutputCustomPresetFormatMp4
 
 mp4 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#mp4 MediaTransform#mp4}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#mp4 MediaTransform#mp4}
 
 ---
 
@@ -3811,7 +3811,7 @@ Png MediaTransformOutputCustomPresetFormatPng
 
 png block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#png MediaTransform#png}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#png MediaTransform#png}
 
 ---
 
@@ -3825,7 +3825,7 @@ TransportStream MediaTransformOutputCustomPresetFormatTransportStream
 
 transport_stream block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#transport_stream MediaTransform#transport_stream}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#transport_stream MediaTransform#transport_stream}
 
 ---
 
@@ -3845,7 +3845,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpg.property.filenamePattern">FilenamePattern</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpg.property.filenamePattern">FilenamePattern</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}. |
 
 ---
 
@@ -3857,7 +3857,7 @@ FilenamePattern *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}.
 
 ---
 
@@ -3878,7 +3878,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4.property.filenamePattern">FilenamePattern</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4.property.filenamePattern">FilenamePattern</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4.property.outputFile">OutputFile</a></code> | <code>interface{}</code> | output_file block. |
 
 ---
@@ -3891,7 +3891,7 @@ FilenamePattern *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}.
 
 ---
 
@@ -3905,7 +3905,7 @@ OutputFile interface{}
 
 output_file block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#output_file MediaTransform#output_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#output_file MediaTransform#output_file}
 
 ---
 
@@ -3925,7 +3925,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputFile.property.labels">Labels</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#labels MediaTransform#labels}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputFile.property.labels">Labels</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#labels MediaTransform#labels}. |
 
 ---
 
@@ -3937,7 +3937,7 @@ Labels *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#labels MediaTransform#labels}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#labels MediaTransform#labels}.
 
 ---
 
@@ -3957,7 +3957,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPng.property.filenamePattern">FilenamePattern</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPng.property.filenamePattern">FilenamePattern</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}. |
 
 ---
 
@@ -3969,7 +3969,7 @@ FilenamePattern *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}.
 
 ---
 
@@ -3990,7 +3990,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStream.property.filenamePattern">FilenamePattern</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStream.property.filenamePattern">FilenamePattern</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStream.property.outputFile">OutputFile</a></code> | <code>interface{}</code> | output_file block. |
 
 ---
@@ -4003,7 +4003,7 @@ FilenamePattern *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#filename_pattern MediaTransform#filename_pattern}.
 
 ---
 
@@ -4017,7 +4017,7 @@ OutputFile interface{}
 
 output_file block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#output_file MediaTransform#output_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#output_file MediaTransform#output_file}
 
 ---
 
@@ -4037,7 +4037,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputFile.property.labels">Labels</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#labels MediaTransform#labels}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputFile.property.labels">Labels</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#labels MediaTransform#labels}. |
 
 ---
 
@@ -4049,7 +4049,7 @@ Labels *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#labels MediaTransform#labels}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#labels MediaTransform#labels}.
 
 ---
 
@@ -4072,10 +4072,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputFaceDetectorPreset.property.analysisResolution">AnalysisResolution</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#analysis_resolution MediaTransform#analysis_resolution}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputFaceDetectorPreset.property.blurType">BlurType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#blur_type MediaTransform#blur_type}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputFaceDetectorPreset.property.experimentalOptions">ExperimentalOptions</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputFaceDetectorPreset.property.faceRedactorMode">FaceRedactorMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#face_redactor_mode MediaTransform#face_redactor_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputFaceDetectorPreset.property.analysisResolution">AnalysisResolution</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#analysis_resolution MediaTransform#analysis_resolution}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputFaceDetectorPreset.property.blurType">BlurType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#blur_type MediaTransform#blur_type}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputFaceDetectorPreset.property.experimentalOptions">ExperimentalOptions</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputFaceDetectorPreset.property.faceRedactorMode">FaceRedactorMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#face_redactor_mode MediaTransform#face_redactor_mode}. |
 
 ---
 
@@ -4087,7 +4087,7 @@ AnalysisResolution *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#analysis_resolution MediaTransform#analysis_resolution}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#analysis_resolution MediaTransform#analysis_resolution}.
 
 ---
 
@@ -4099,7 +4099,7 @@ BlurType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#blur_type MediaTransform#blur_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#blur_type MediaTransform#blur_type}.
 
 ---
 
@@ -4111,7 +4111,7 @@ ExperimentalOptions *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}.
 
 ---
 
@@ -4123,7 +4123,7 @@ FaceRedactorMode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#face_redactor_mode MediaTransform#face_redactor_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#face_redactor_mode MediaTransform#face_redactor_mode}.
 
 ---
 
@@ -4146,10 +4146,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputVideoAnalyzerPreset.property.audioAnalysisMode">AudioAnalysisMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#audio_analysis_mode MediaTransform#audio_analysis_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputVideoAnalyzerPreset.property.audioLanguage">AudioLanguage</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#audio_language MediaTransform#audio_language}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputVideoAnalyzerPreset.property.experimentalOptions">ExperimentalOptions</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputVideoAnalyzerPreset.property.insightsType">InsightsType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#insights_type MediaTransform#insights_type}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputVideoAnalyzerPreset.property.audioAnalysisMode">AudioAnalysisMode</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#audio_analysis_mode MediaTransform#audio_analysis_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputVideoAnalyzerPreset.property.audioLanguage">AudioLanguage</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#audio_language MediaTransform#audio_language}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputVideoAnalyzerPreset.property.experimentalOptions">ExperimentalOptions</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputVideoAnalyzerPreset.property.insightsType">InsightsType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#insights_type MediaTransform#insights_type}. |
 
 ---
 
@@ -4161,7 +4161,7 @@ AudioAnalysisMode *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#audio_analysis_mode MediaTransform#audio_analysis_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#audio_analysis_mode MediaTransform#audio_analysis_mode}.
 
 ---
 
@@ -4173,7 +4173,7 @@ AudioLanguage *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#audio_language MediaTransform#audio_language}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#audio_language MediaTransform#audio_language}.
 
 ---
 
@@ -4185,7 +4185,7 @@ ExperimentalOptions *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#experimental_options MediaTransform#experimental_options}.
 
 ---
 
@@ -4197,7 +4197,7 @@ InsightsType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#insights_type MediaTransform#insights_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#insights_type MediaTransform#insights_type}.
 
 ---
 
@@ -4220,10 +4220,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#create MediaTransform#create}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#delete MediaTransform#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#read MediaTransform#read}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#update MediaTransform#update}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#create MediaTransform#create}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#delete MediaTransform#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#read MediaTransform#read}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#update MediaTransform#update}. |
 
 ---
 
@@ -4235,7 +4235,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#create MediaTransform#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#create MediaTransform#create}.
 
 ---
 
@@ -4247,7 +4247,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#delete MediaTransform#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#delete MediaTransform#delete}.
 
 ---
 
@@ -4259,7 +4259,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#read MediaTransform#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#read MediaTransform#read}.
 
 ---
 
@@ -4271,7 +4271,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/media_transform#update MediaTransform#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/media_transform#update MediaTransform#update}.
 
 ---
 

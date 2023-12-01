@@ -4,7 +4,7 @@
 
 ### LogicAppIntegrationAccountSession <a name="LogicAppIntegrationAccountSession" id="@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session azurerm_logic_app_integration_account_session}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session azurerm_logic_app_integration_account_session}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.Initializer"></a>
 
@@ -41,11 +41,11 @@ logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession(
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.Initializer.parameter.content">content</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#content LogicAppIntegrationAccountSession#content}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.Initializer.parameter.integrationAccountName">integration_account_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#integration_account_name LogicAppIntegrationAccountSession#integration_account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#name LogicAppIntegrationAccountSession#name}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#resource_group_name LogicAppIntegrationAccountSession#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#id LogicAppIntegrationAccountSession#id}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.Initializer.parameter.content">content</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#content LogicAppIntegrationAccountSession#content}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.Initializer.parameter.integrationAccountName">integration_account_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#integration_account_name LogicAppIntegrationAccountSession#integration_account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#name LogicAppIntegrationAccountSession#name}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#resource_group_name LogicAppIntegrationAccountSession#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#id LogicAppIntegrationAccountSession#id}. |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSession.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts">LogicAppIntegrationAccountSessionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#content LogicAppIntegrationAccountSession#content}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#content LogicAppIntegrationAccountSession#content}.
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#integration_account_name LogicAppIntegrationAccountSession#integration_account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#integration_account_name LogicAppIntegrationAccountSession#integration_account_name}.
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#name LogicAppIntegrationAccountSession#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#name LogicAppIntegrationAccountSession#name}.
 
 ---
 
@@ -138,7 +138,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#resource_group_name LogicAppIntegrationAccountSession#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#resource_group_name LogicAppIntegrationAccountSession#resource_group_name}.
 
 ---
 
@@ -146,7 +146,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#id LogicAppIntegrationAccountSession#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#id LogicAppIntegrationAccountSession#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -159,7 +159,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#timeouts LogicAppIntegrationAccountSession#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#timeouts LogicAppIntegrationAccountSession#timeouts}
 
 ---
 
@@ -482,7 +482,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#create LogicAppIntegrationAccountSession#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#create LogicAppIntegrationAccountSession#create}.
 
 ---
 
@@ -490,7 +490,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#delete LogicAppIntegrationAccountSession#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#delete LogicAppIntegrationAccountSession#delete}.
 
 ---
 
@@ -498,7 +498,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#read LogicAppIntegrationAccountSession#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#read LogicAppIntegrationAccountSession#read}.
 
 ---
 
@@ -506,7 +506,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#update LogicAppIntegrationAccountSession#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#update LogicAppIntegrationAccountSession#update}.
 
 ---
 
@@ -636,7 +636,7 @@ The construct id used in the generated config for the LogicAppIntegrationAccount
 
 The id of the existing LogicAppIntegrationAccountSession that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -998,11 +998,11 @@ logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionConfig(
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionConfig.property.content">content</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#content LogicAppIntegrationAccountSession#content}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionConfig.property.integrationAccountName">integration_account_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#integration_account_name LogicAppIntegrationAccountSession#integration_account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#name LogicAppIntegrationAccountSession#name}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#resource_group_name LogicAppIntegrationAccountSession#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#id LogicAppIntegrationAccountSession#id}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionConfig.property.content">content</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#content LogicAppIntegrationAccountSession#content}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionConfig.property.integrationAccountName">integration_account_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#integration_account_name LogicAppIntegrationAccountSession#integration_account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#name LogicAppIntegrationAccountSession#name}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#resource_group_name LogicAppIntegrationAccountSession#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#id LogicAppIntegrationAccountSession#id}. |
 | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts">LogicAppIntegrationAccountSessionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1085,7 +1085,7 @@ content: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#content LogicAppIntegrationAccountSession#content}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#content LogicAppIntegrationAccountSession#content}.
 
 ---
 
@@ -1097,7 +1097,7 @@ integration_account_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#integration_account_name LogicAppIntegrationAccountSession#integration_account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#integration_account_name LogicAppIntegrationAccountSession#integration_account_name}.
 
 ---
 
@@ -1109,7 +1109,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#name LogicAppIntegrationAccountSession#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#name LogicAppIntegrationAccountSession#name}.
 
 ---
 
@@ -1121,7 +1121,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#resource_group_name LogicAppIntegrationAccountSession#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#resource_group_name LogicAppIntegrationAccountSession#resource_group_name}.
 
 ---
 
@@ -1133,7 +1133,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#id LogicAppIntegrationAccountSession#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#id LogicAppIntegrationAccountSession#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1150,7 +1150,7 @@ timeouts: LogicAppIntegrationAccountSessionTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#timeouts LogicAppIntegrationAccountSession#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#timeouts LogicAppIntegrationAccountSession#timeouts}
 
 ---
 
@@ -1173,10 +1173,10 @@ logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#create LogicAppIntegrationAccountSession#create}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#delete LogicAppIntegrationAccountSession#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#read LogicAppIntegrationAccountSession#read}. |
-| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#update LogicAppIntegrationAccountSession#update}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#create LogicAppIntegrationAccountSession#create}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#delete LogicAppIntegrationAccountSession#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#read LogicAppIntegrationAccountSession#read}. |
+| <code><a href="#@cdktf/provider-azurerm.logicAppIntegrationAccountSession.LogicAppIntegrationAccountSessionTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#update LogicAppIntegrationAccountSession#update}. |
 
 ---
 
@@ -1188,7 +1188,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#create LogicAppIntegrationAccountSession#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#create LogicAppIntegrationAccountSession#create}.
 
 ---
 
@@ -1200,7 +1200,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#delete LogicAppIntegrationAccountSession#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#delete LogicAppIntegrationAccountSession#delete}.
 
 ---
 
@@ -1212,7 +1212,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#read LogicAppIntegrationAccountSession#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#read LogicAppIntegrationAccountSession#read}.
 
 ---
 
@@ -1224,7 +1224,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/logic_app_integration_account_session#update LogicAppIntegrationAccountSession#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/logic_app_integration_account_session#update LogicAppIntegrationAccountSession#update}.
 
 ---
 

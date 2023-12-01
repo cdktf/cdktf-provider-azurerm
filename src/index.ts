@@ -1329,6 +1329,7 @@ export * as dataAzurermSqlDatabase from './data-azurerm-sql-database';
 export * as dataAzurermSqlManagedInstance from './data-azurerm-sql-managed-instance';
 export * as dataAzurermSqlServer from './data-azurerm-sql-server';
 export * as dataAzurermSshPublicKey from './data-azurerm-ssh-public-key';
+export * as dataAzurermStackHciCluster from './data-azurerm-stack-hci-cluster';
 export * as dataAzurermStorageAccount from './data-azurerm-storage-account';
 export * as dataAzurermStorageAccountBlobContainerSas from './data-azurerm-storage-account-blob-container-sas';
 export * as dataAzurermStorageAccountSas from './data-azurerm-storage-account-sas';

@@ -4,7 +4,7 @@
 
 ### DiskAccess <a name="DiskAccess" id="@cdktf/provider-azurerm.diskAccess.DiskAccess"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access azurerm_disk_access}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access azurerm_disk_access}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.diskAccess.DiskAccess.Initializer"></a>
 
@@ -41,11 +41,11 @@ diskAccess.DiskAccess(
 | <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccess.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccess.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccess.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccess.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#location DiskAccess#location}. |
-| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccess.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#name DiskAccess#name}. |
-| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccess.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#resource_group_name DiskAccess#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccess.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#id DiskAccess#id}. |
-| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccess.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#tags DiskAccess#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccess.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#location DiskAccess#location}. |
+| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccess.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#name DiskAccess#name}. |
+| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccess.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#resource_group_name DiskAccess#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccess.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#id DiskAccess#id}. |
+| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccess.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#tags DiskAccess#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccess.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccessTimeouts">DiskAccessTimeouts</a></code> | timeouts block. |
 
 ---
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#location DiskAccess#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#location DiskAccess#location}.
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#name DiskAccess#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#name DiskAccess#name}.
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#resource_group_name DiskAccess#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#resource_group_name DiskAccess#resource_group_name}.
 
 ---
 
@@ -138,7 +138,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#id DiskAccess#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#id DiskAccess#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -149,7 +149,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#tags DiskAccess#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#tags DiskAccess#tags}.
 
 ---
 
@@ -159,7 +159,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#timeouts DiskAccess#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#timeouts DiskAccess#timeouts}
 
 ---
 
@@ -483,7 +483,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#create DiskAccess#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#create DiskAccess#create}.
 
 ---
 
@@ -491,7 +491,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#delete DiskAccess#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#delete DiskAccess#delete}.
 
 ---
 
@@ -499,7 +499,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#read DiskAccess#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#read DiskAccess#read}.
 
 ---
 
@@ -507,7 +507,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#update DiskAccess#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#update DiskAccess#update}.
 
 ---
 
@@ -643,7 +643,7 @@ The construct id used in the generated config for the DiskAccess to import.
 
 The id of the existing DiskAccess that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1005,11 +1005,11 @@ diskAccess.DiskAccessConfig(
 | <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccessConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccessConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccessConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccessConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#location DiskAccess#location}. |
-| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccessConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#name DiskAccess#name}. |
-| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccessConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#resource_group_name DiskAccess#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccessConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#id DiskAccess#id}. |
-| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccessConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#tags DiskAccess#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccessConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#location DiskAccess#location}. |
+| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccessConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#name DiskAccess#name}. |
+| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccessConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#resource_group_name DiskAccess#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccessConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#id DiskAccess#id}. |
+| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccessConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#tags DiskAccess#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccessConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccessTimeouts">DiskAccessTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1092,7 +1092,7 @@ location: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#location DiskAccess#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#location DiskAccess#location}.
 
 ---
 
@@ -1104,7 +1104,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#name DiskAccess#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#name DiskAccess#name}.
 
 ---
 
@@ -1116,7 +1116,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#resource_group_name DiskAccess#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#resource_group_name DiskAccess#resource_group_name}.
 
 ---
 
@@ -1128,7 +1128,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#id DiskAccess#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#id DiskAccess#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1143,7 +1143,7 @@ tags: typing.Mapping[str]
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#tags DiskAccess#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#tags DiskAccess#tags}.
 
 ---
 
@@ -1157,7 +1157,7 @@ timeouts: DiskAccessTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#timeouts DiskAccess#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#timeouts DiskAccess#timeouts}
 
 ---
 
@@ -1180,10 +1180,10 @@ diskAccess.DiskAccessTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccessTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#create DiskAccess#create}. |
-| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccessTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#delete DiskAccess#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccessTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#read DiskAccess#read}. |
-| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccessTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#update DiskAccess#update}. |
+| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccessTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#create DiskAccess#create}. |
+| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccessTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#delete DiskAccess#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccessTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#read DiskAccess#read}. |
+| <code><a href="#@cdktf/provider-azurerm.diskAccess.DiskAccessTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#update DiskAccess#update}. |
 
 ---
 
@@ -1195,7 +1195,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#create DiskAccess#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#create DiskAccess#create}.
 
 ---
 
@@ -1207,7 +1207,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#delete DiskAccess#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#delete DiskAccess#delete}.
 
 ---
 
@@ -1219,7 +1219,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#read DiskAccess#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#read DiskAccess#read}.
 
 ---
 
@@ -1231,7 +1231,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/disk_access#update DiskAccess#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/disk_access#update DiskAccess#update}.
 
 ---
 

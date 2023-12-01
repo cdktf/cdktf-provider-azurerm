@@ -1329,6 +1329,7 @@ Object.defineProperty(exports, 'dataAzurermSqlDatabase', { get: function () { re
 Object.defineProperty(exports, 'dataAzurermSqlManagedInstance', { get: function () { return require('./data-azurerm-sql-managed-instance'); } });
 Object.defineProperty(exports, 'dataAzurermSqlServer', { get: function () { return require('./data-azurerm-sql-server'); } });
 Object.defineProperty(exports, 'dataAzurermSshPublicKey', { get: function () { return require('./data-azurerm-ssh-public-key'); } });
+Object.defineProperty(exports, 'dataAzurermStackHciCluster', { get: function () { return require('./data-azurerm-stack-hci-cluster'); } });
 Object.defineProperty(exports, 'dataAzurermStorageAccount', { get: function () { return require('./data-azurerm-storage-account'); } });
 Object.defineProperty(exports, 'dataAzurermStorageAccountBlobContainerSas', { get: function () { return require('./data-azurerm-storage-account-blob-container-sas'); } });
 Object.defineProperty(exports, 'dataAzurermStorageAccountSas', { get: function () { return require('./data-azurerm-storage-account-sas'); } });

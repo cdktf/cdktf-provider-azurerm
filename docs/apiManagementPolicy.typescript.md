@@ -4,7 +4,7 @@
 
 ### ApiManagementPolicyA <a name="ApiManagementPolicyA" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_policy azurerm_api_management_policy}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_policy azurerm_api_management_policy}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyA.Initializer"></a>
 
@@ -458,7 +458,7 @@ The construct id used in the generated config for the ApiManagementPolicyA to im
 
 The id of the existing ApiManagementPolicyA that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_policy#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_policy#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -784,11 +784,11 @@ const apiManagementPolicyAConfig: apiManagementPolicy.ApiManagementPolicyAConfig
 | <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.apiManagementId">apiManagementId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_policy#api_management_id ApiManagementPolicyA#api_management_id}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_policy#id ApiManagementPolicyA#id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.apiManagementId">apiManagementId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_policy#api_management_id ApiManagementPolicyA#api_management_id}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_policy#id ApiManagementPolicyA#id}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeouts">ApiManagementPolicyTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.xmlContent">xmlContent</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_policy#xml_content ApiManagementPolicyA#xml_content}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.xmlLink">xmlLink</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_policy#xml_link ApiManagementPolicyA#xml_link}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.xmlContent">xmlContent</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_policy#xml_content ApiManagementPolicyA#xml_content}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyAConfig.property.xmlLink">xmlLink</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_policy#xml_link ApiManagementPolicyA#xml_link}. |
 
 ---
 
@@ -870,7 +870,7 @@ public readonly apiManagementId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_policy#api_management_id ApiManagementPolicyA#api_management_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_policy#api_management_id ApiManagementPolicyA#api_management_id}.
 
 ---
 
@@ -882,7 +882,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_policy#id ApiManagementPolicyA#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_policy#id ApiManagementPolicyA#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -899,7 +899,7 @@ public readonly timeouts: ApiManagementPolicyTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_policy#timeouts ApiManagementPolicyA#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_policy#timeouts ApiManagementPolicyA#timeouts}
 
 ---
 
@@ -911,7 +911,7 @@ public readonly xmlContent: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_policy#xml_content ApiManagementPolicyA#xml_content}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_policy#xml_content ApiManagementPolicyA#xml_content}.
 
 ---
 
@@ -923,7 +923,7 @@ public readonly xmlLink: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_policy#xml_link ApiManagementPolicyA#xml_link}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_policy#xml_link ApiManagementPolicyA#xml_link}.
 
 ---
 
@@ -941,10 +941,10 @@ const apiManagementPolicyTimeouts: apiManagementPolicy.ApiManagementPolicyTimeou
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_policy#create ApiManagementPolicyA#create}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_policy#delete ApiManagementPolicyA#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_policy#read ApiManagementPolicyA#read}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_policy#update ApiManagementPolicyA#update}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_policy#create ApiManagementPolicyA#create}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_policy#delete ApiManagementPolicyA#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_policy#read ApiManagementPolicyA#read}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementPolicy.ApiManagementPolicyTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_policy#update ApiManagementPolicyA#update}. |
 
 ---
 
@@ -956,7 +956,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_policy#create ApiManagementPolicyA#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_policy#create ApiManagementPolicyA#create}.
 
 ---
 
@@ -968,7 +968,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_policy#delete ApiManagementPolicyA#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_policy#delete ApiManagementPolicyA#delete}.
 
 ---
 
@@ -980,7 +980,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_policy#read ApiManagementPolicyA#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_policy#read ApiManagementPolicyA#read}.
 
 ---
 
@@ -992,7 +992,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/api_management_policy#update ApiManagementPolicyA#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/api_management_policy#update ApiManagementPolicyA#update}.
 
 ---
 
