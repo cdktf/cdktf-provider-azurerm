@@ -514,6 +514,7 @@ The following submodules are available:
 - [dataAzurermSqlManagedInstance](./dataAzurermSqlManagedInstance.java.md)
 - [dataAzurermSqlServer](./dataAzurermSqlServer.java.md)
 - [dataAzurermSshPublicKey](./dataAzurermSshPublicKey.java.md)
+- [dataAzurermStackHciCluster](./dataAzurermStackHciCluster.java.md)
 - [dataAzurermStorageAccount](./dataAzurermStorageAccount.java.md)
 - [dataAzurermStorageAccountBlobContainerSas](./dataAzurermStorageAccountBlobContainerSas.java.md)
 - [dataAzurermStorageAccountSas](./dataAzurermStorageAccountSas.java.md)

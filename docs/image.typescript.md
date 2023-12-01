@@ -4,7 +4,7 @@
 
 ### Image <a name="Image" id="@cdktf/provider-azurerm.image.Image"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image azurerm_image}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image azurerm_image}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.image.Image.Initializer"></a>
 
@@ -512,7 +512,7 @@ The construct id used in the generated config for the Image to import.
 
 The id of the existing Image that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -970,17 +970,17 @@ const imageConfig: image.ImageConfig = { ... }
 | <code><a href="#@cdktf/provider-azurerm.image.ImageConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.image.ImageConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.image.ImageConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.image.ImageConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#location Image#location}. |
-| <code><a href="#@cdktf/provider-azurerm.image.ImageConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#name Image#name}. |
-| <code><a href="#@cdktf/provider-azurerm.image.ImageConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#resource_group_name Image#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.image.ImageConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#location Image#location}. |
+| <code><a href="#@cdktf/provider-azurerm.image.ImageConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#name Image#name}. |
+| <code><a href="#@cdktf/provider-azurerm.image.ImageConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#resource_group_name Image#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.image.ImageConfig.property.dataDisk">dataDisk</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.image.ImageDataDisk">ImageDataDisk</a>[]</code> | data_disk block. |
-| <code><a href="#@cdktf/provider-azurerm.image.ImageConfig.property.hyperVGeneration">hyperVGeneration</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#hyper_v_generation Image#hyper_v_generation}. |
-| <code><a href="#@cdktf/provider-azurerm.image.ImageConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#id Image#id}. |
+| <code><a href="#@cdktf/provider-azurerm.image.ImageConfig.property.hyperVGeneration">hyperVGeneration</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#hyper_v_generation Image#hyper_v_generation}. |
+| <code><a href="#@cdktf/provider-azurerm.image.ImageConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#id Image#id}. |
 | <code><a href="#@cdktf/provider-azurerm.image.ImageConfig.property.osDisk">osDisk</a></code> | <code><a href="#@cdktf/provider-azurerm.image.ImageOsDisk">ImageOsDisk</a></code> | os_disk block. |
-| <code><a href="#@cdktf/provider-azurerm.image.ImageConfig.property.sourceVirtualMachineId">sourceVirtualMachineId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#source_virtual_machine_id Image#source_virtual_machine_id}. |
-| <code><a href="#@cdktf/provider-azurerm.image.ImageConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#tags Image#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.image.ImageConfig.property.sourceVirtualMachineId">sourceVirtualMachineId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#source_virtual_machine_id Image#source_virtual_machine_id}. |
+| <code><a href="#@cdktf/provider-azurerm.image.ImageConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#tags Image#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.image.ImageConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.image.ImageTimeouts">ImageTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.image.ImageConfig.property.zoneResilient">zoneResilient</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#zone_resilient Image#zone_resilient}. |
+| <code><a href="#@cdktf/provider-azurerm.image.ImageConfig.property.zoneResilient">zoneResilient</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#zone_resilient Image#zone_resilient}. |
 
 ---
 
@@ -1062,7 +1062,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#location Image#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#location Image#location}.
 
 ---
 
@@ -1074,7 +1074,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#name Image#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#name Image#name}.
 
 ---
 
@@ -1086,7 +1086,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#resource_group_name Image#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#resource_group_name Image#resource_group_name}.
 
 ---
 
@@ -1100,7 +1100,7 @@ public readonly dataDisk: IResolvable | ImageDataDisk[];
 
 data_disk block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#data_disk Image#data_disk}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#data_disk Image#data_disk}
 
 ---
 
@@ -1112,7 +1112,7 @@ public readonly hyperVGeneration: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#hyper_v_generation Image#hyper_v_generation}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#hyper_v_generation Image#hyper_v_generation}.
 
 ---
 
@@ -1124,7 +1124,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#id Image#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#id Image#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1141,7 +1141,7 @@ public readonly osDisk: ImageOsDisk;
 
 os_disk block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#os_disk Image#os_disk}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#os_disk Image#os_disk}
 
 ---
 
@@ -1153,7 +1153,7 @@ public readonly sourceVirtualMachineId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#source_virtual_machine_id Image#source_virtual_machine_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#source_virtual_machine_id Image#source_virtual_machine_id}.
 
 ---
 
@@ -1165,7 +1165,7 @@ public readonly tags: {[ key: string ]: string};
 
 - *Type:* {[ key: string ]: string}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#tags Image#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#tags Image#tags}.
 
 ---
 
@@ -1179,7 +1179,7 @@ public readonly timeouts: ImageTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#timeouts Image#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#timeouts Image#timeouts}
 
 ---
 
@@ -1191,7 +1191,7 @@ public readonly zoneResilient: boolean | IResolvable;
 
 - *Type:* boolean | cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#zone_resilient Image#zone_resilient}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#zone_resilient Image#zone_resilient}.
 
 ---
 
@@ -1209,11 +1209,11 @@ const imageDataDisk: image.ImageDataDisk = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.image.ImageDataDisk.property.blobUri">blobUri</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#blob_uri Image#blob_uri}. |
-| <code><a href="#@cdktf/provider-azurerm.image.ImageDataDisk.property.caching">caching</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#caching Image#caching}. |
-| <code><a href="#@cdktf/provider-azurerm.image.ImageDataDisk.property.lun">lun</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#lun Image#lun}. |
-| <code><a href="#@cdktf/provider-azurerm.image.ImageDataDisk.property.managedDiskId">managedDiskId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#managed_disk_id Image#managed_disk_id}. |
-| <code><a href="#@cdktf/provider-azurerm.image.ImageDataDisk.property.sizeGb">sizeGb</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#size_gb Image#size_gb}. |
+| <code><a href="#@cdktf/provider-azurerm.image.ImageDataDisk.property.blobUri">blobUri</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#blob_uri Image#blob_uri}. |
+| <code><a href="#@cdktf/provider-azurerm.image.ImageDataDisk.property.caching">caching</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#caching Image#caching}. |
+| <code><a href="#@cdktf/provider-azurerm.image.ImageDataDisk.property.lun">lun</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#lun Image#lun}. |
+| <code><a href="#@cdktf/provider-azurerm.image.ImageDataDisk.property.managedDiskId">managedDiskId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#managed_disk_id Image#managed_disk_id}. |
+| <code><a href="#@cdktf/provider-azurerm.image.ImageDataDisk.property.sizeGb">sizeGb</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#size_gb Image#size_gb}. |
 
 ---
 
@@ -1225,7 +1225,7 @@ public readonly blobUri: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#blob_uri Image#blob_uri}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#blob_uri Image#blob_uri}.
 
 ---
 
@@ -1237,7 +1237,7 @@ public readonly caching: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#caching Image#caching}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#caching Image#caching}.
 
 ---
 
@@ -1249,7 +1249,7 @@ public readonly lun: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#lun Image#lun}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#lun Image#lun}.
 
 ---
 
@@ -1261,7 +1261,7 @@ public readonly managedDiskId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#managed_disk_id Image#managed_disk_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#managed_disk_id Image#managed_disk_id}.
 
 ---
 
@@ -1273,7 +1273,7 @@ public readonly sizeGb: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#size_gb Image#size_gb}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#size_gb Image#size_gb}.
 
 ---
 
@@ -1291,13 +1291,13 @@ const imageOsDisk: image.ImageOsDisk = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.image.ImageOsDisk.property.blobUri">blobUri</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#blob_uri Image#blob_uri}. |
-| <code><a href="#@cdktf/provider-azurerm.image.ImageOsDisk.property.caching">caching</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#caching Image#caching}. |
-| <code><a href="#@cdktf/provider-azurerm.image.ImageOsDisk.property.diskEncryptionSetId">diskEncryptionSetId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#disk_encryption_set_id Image#disk_encryption_set_id}. |
-| <code><a href="#@cdktf/provider-azurerm.image.ImageOsDisk.property.managedDiskId">managedDiskId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#managed_disk_id Image#managed_disk_id}. |
-| <code><a href="#@cdktf/provider-azurerm.image.ImageOsDisk.property.osState">osState</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#os_state Image#os_state}. |
-| <code><a href="#@cdktf/provider-azurerm.image.ImageOsDisk.property.osType">osType</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#os_type Image#os_type}. |
-| <code><a href="#@cdktf/provider-azurerm.image.ImageOsDisk.property.sizeGb">sizeGb</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#size_gb Image#size_gb}. |
+| <code><a href="#@cdktf/provider-azurerm.image.ImageOsDisk.property.blobUri">blobUri</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#blob_uri Image#blob_uri}. |
+| <code><a href="#@cdktf/provider-azurerm.image.ImageOsDisk.property.caching">caching</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#caching Image#caching}. |
+| <code><a href="#@cdktf/provider-azurerm.image.ImageOsDisk.property.diskEncryptionSetId">diskEncryptionSetId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#disk_encryption_set_id Image#disk_encryption_set_id}. |
+| <code><a href="#@cdktf/provider-azurerm.image.ImageOsDisk.property.managedDiskId">managedDiskId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#managed_disk_id Image#managed_disk_id}. |
+| <code><a href="#@cdktf/provider-azurerm.image.ImageOsDisk.property.osState">osState</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#os_state Image#os_state}. |
+| <code><a href="#@cdktf/provider-azurerm.image.ImageOsDisk.property.osType">osType</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#os_type Image#os_type}. |
+| <code><a href="#@cdktf/provider-azurerm.image.ImageOsDisk.property.sizeGb">sizeGb</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#size_gb Image#size_gb}. |
 
 ---
 
@@ -1309,7 +1309,7 @@ public readonly blobUri: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#blob_uri Image#blob_uri}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#blob_uri Image#blob_uri}.
 
 ---
 
@@ -1321,7 +1321,7 @@ public readonly caching: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#caching Image#caching}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#caching Image#caching}.
 
 ---
 
@@ -1333,7 +1333,7 @@ public readonly diskEncryptionSetId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#disk_encryption_set_id Image#disk_encryption_set_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#disk_encryption_set_id Image#disk_encryption_set_id}.
 
 ---
 
@@ -1345,7 +1345,7 @@ public readonly managedDiskId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#managed_disk_id Image#managed_disk_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#managed_disk_id Image#managed_disk_id}.
 
 ---
 
@@ -1357,7 +1357,7 @@ public readonly osState: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#os_state Image#os_state}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#os_state Image#os_state}.
 
 ---
 
@@ -1369,7 +1369,7 @@ public readonly osType: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#os_type Image#os_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#os_type Image#os_type}.
 
 ---
 
@@ -1381,7 +1381,7 @@ public readonly sizeGb: number;
 
 - *Type:* number
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#size_gb Image#size_gb}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#size_gb Image#size_gb}.
 
 ---
 
@@ -1399,10 +1399,10 @@ const imageTimeouts: image.ImageTimeouts = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.image.ImageTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#create Image#create}. |
-| <code><a href="#@cdktf/provider-azurerm.image.ImageTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#delete Image#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.image.ImageTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#read Image#read}. |
-| <code><a href="#@cdktf/provider-azurerm.image.ImageTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#update Image#update}. |
+| <code><a href="#@cdktf/provider-azurerm.image.ImageTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#create Image#create}. |
+| <code><a href="#@cdktf/provider-azurerm.image.ImageTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#delete Image#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.image.ImageTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#read Image#read}. |
+| <code><a href="#@cdktf/provider-azurerm.image.ImageTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#update Image#update}. |
 
 ---
 
@@ -1414,7 +1414,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#create Image#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#create Image#create}.
 
 ---
 
@@ -1426,7 +1426,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#delete Image#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#delete Image#delete}.
 
 ---
 
@@ -1438,7 +1438,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#read Image#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#read Image#read}.
 
 ---
 
@@ -1450,7 +1450,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/image#update Image#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/image#update Image#update}.
 
 ---
 

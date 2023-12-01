@@ -4,7 +4,7 @@
 
 ### AutomationDscConfiguration <a name="AutomationDscConfiguration" id="@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfiguration"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration azurerm_automation_dsc_configuration}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration azurerm_automation_dsc_configuration}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfiguration.Initializer"></a>
 
@@ -465,7 +465,7 @@ The construct id used in the generated config for the AutomationDscConfiguration
 
 The id of the existing AutomationDscConfiguration that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -912,15 +912,15 @@ const automationDscConfigurationConfig: automationDscConfiguration.AutomationDsc
 | <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationConfig.property.automationAccountName">automationAccountName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#automation_account_name AutomationDscConfiguration#automation_account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationConfig.property.contentEmbedded">contentEmbedded</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#content_embedded AutomationDscConfiguration#content_embedded}. |
-| <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#location AutomationDscConfiguration#location}. |
-| <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#name AutomationDscConfiguration#name}. |
-| <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#resource_group_name AutomationDscConfiguration#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationConfig.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#description AutomationDscConfiguration#description}. |
-| <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#id AutomationDscConfiguration#id}. |
-| <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationConfig.property.logVerbose">logVerbose</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#log_verbose AutomationDscConfiguration#log_verbose}. |
-| <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#tags AutomationDscConfiguration#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationConfig.property.automationAccountName">automationAccountName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#automation_account_name AutomationDscConfiguration#automation_account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationConfig.property.contentEmbedded">contentEmbedded</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#content_embedded AutomationDscConfiguration#content_embedded}. |
+| <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#location AutomationDscConfiguration#location}. |
+| <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#name AutomationDscConfiguration#name}. |
+| <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#resource_group_name AutomationDscConfiguration#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationConfig.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#description AutomationDscConfiguration#description}. |
+| <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#id AutomationDscConfiguration#id}. |
+| <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationConfig.property.logVerbose">logVerbose</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#log_verbose AutomationDscConfiguration#log_verbose}. |
+| <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#tags AutomationDscConfiguration#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationTimeouts">AutomationDscConfigurationTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1003,7 +1003,7 @@ public readonly automationAccountName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#automation_account_name AutomationDscConfiguration#automation_account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#automation_account_name AutomationDscConfiguration#automation_account_name}.
 
 ---
 
@@ -1015,7 +1015,7 @@ public readonly contentEmbedded: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#content_embedded AutomationDscConfiguration#content_embedded}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#content_embedded AutomationDscConfiguration#content_embedded}.
 
 ---
 
@@ -1027,7 +1027,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#location AutomationDscConfiguration#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#location AutomationDscConfiguration#location}.
 
 ---
 
@@ -1039,7 +1039,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#name AutomationDscConfiguration#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#name AutomationDscConfiguration#name}.
 
 ---
 
@@ -1051,7 +1051,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#resource_group_name AutomationDscConfiguration#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#resource_group_name AutomationDscConfiguration#resource_group_name}.
 
 ---
 
@@ -1063,7 +1063,7 @@ public readonly description: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#description AutomationDscConfiguration#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#description AutomationDscConfiguration#description}.
 
 ---
 
@@ -1075,7 +1075,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#id AutomationDscConfiguration#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#id AutomationDscConfiguration#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1090,7 +1090,7 @@ public readonly logVerbose: boolean | IResolvable;
 
 - *Type:* boolean | cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#log_verbose AutomationDscConfiguration#log_verbose}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#log_verbose AutomationDscConfiguration#log_verbose}.
 
 ---
 
@@ -1102,7 +1102,7 @@ public readonly tags: {[ key: string ]: string};
 
 - *Type:* {[ key: string ]: string}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#tags AutomationDscConfiguration#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#tags AutomationDscConfiguration#tags}.
 
 ---
 
@@ -1116,7 +1116,7 @@ public readonly timeouts: AutomationDscConfigurationTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#timeouts AutomationDscConfiguration#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#timeouts AutomationDscConfiguration#timeouts}
 
 ---
 
@@ -1134,10 +1134,10 @@ const automationDscConfigurationTimeouts: automationDscConfiguration.AutomationD
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#create AutomationDscConfiguration#create}. |
-| <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#delete AutomationDscConfiguration#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#read AutomationDscConfiguration#read}. |
-| <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#update AutomationDscConfiguration#update}. |
+| <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#create AutomationDscConfiguration#create}. |
+| <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#delete AutomationDscConfiguration#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#read AutomationDscConfiguration#read}. |
+| <code><a href="#@cdktf/provider-azurerm.automationDscConfiguration.AutomationDscConfigurationTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#update AutomationDscConfiguration#update}. |
 
 ---
 
@@ -1149,7 +1149,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#create AutomationDscConfiguration#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#create AutomationDscConfiguration#create}.
 
 ---
 
@@ -1161,7 +1161,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#delete AutomationDscConfiguration#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#delete AutomationDscConfiguration#delete}.
 
 ---
 
@@ -1173,7 +1173,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#read AutomationDscConfiguration#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#read AutomationDscConfiguration#read}.
 
 ---
 
@@ -1185,7 +1185,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/automation_dsc_configuration#update AutomationDscConfiguration#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/automation_dsc_configuration#update AutomationDscConfiguration#update}.
 
 ---
 

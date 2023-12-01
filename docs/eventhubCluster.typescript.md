@@ -4,7 +4,7 @@
 
 ### EventhubCluster <a name="EventhubCluster" id="@cdktf/provider-azurerm.eventhubCluster.EventhubCluster"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/eventhub_cluster azurerm_eventhub_cluster}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_cluster azurerm_eventhub_cluster}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventhubCluster.EventhubCluster.Initializer"></a>
 
@@ -451,7 +451,7 @@ The construct id used in the generated config for the EventhubCluster to import.
 
 The id of the existing EventhubCluster that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/eventhub_cluster#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_cluster#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -821,12 +821,12 @@ const eventhubClusterConfig: eventhubCluster.EventhubClusterConfig = { ... }
 | <code><a href="#@cdktf/provider-azurerm.eventhubCluster.EventhubClusterConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhubCluster.EventhubClusterConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhubCluster.EventhubClusterConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventhubCluster.EventhubClusterConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/eventhub_cluster#location EventhubCluster#location}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubCluster.EventhubClusterConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/eventhub_cluster#name EventhubCluster#name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubCluster.EventhubClusterConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/eventhub_cluster#resource_group_name EventhubCluster#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubCluster.EventhubClusterConfig.property.skuName">skuName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/eventhub_cluster#sku_name EventhubCluster#sku_name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubCluster.EventhubClusterConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/eventhub_cluster#id EventhubCluster#id}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubCluster.EventhubClusterConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/eventhub_cluster#tags EventhubCluster#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubCluster.EventhubClusterConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_cluster#location EventhubCluster#location}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubCluster.EventhubClusterConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_cluster#name EventhubCluster#name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubCluster.EventhubClusterConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_cluster#resource_group_name EventhubCluster#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubCluster.EventhubClusterConfig.property.skuName">skuName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_cluster#sku_name EventhubCluster#sku_name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubCluster.EventhubClusterConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_cluster#id EventhubCluster#id}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubCluster.EventhubClusterConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_cluster#tags EventhubCluster#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.eventhubCluster.EventhubClusterConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.eventhubCluster.EventhubClusterTimeouts">EventhubClusterTimeouts</a></code> | timeouts block. |
 
 ---
@@ -909,7 +909,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/eventhub_cluster#location EventhubCluster#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_cluster#location EventhubCluster#location}.
 
 ---
 
@@ -921,7 +921,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/eventhub_cluster#name EventhubCluster#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_cluster#name EventhubCluster#name}.
 
 ---
 
@@ -933,7 +933,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/eventhub_cluster#resource_group_name EventhubCluster#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_cluster#resource_group_name EventhubCluster#resource_group_name}.
 
 ---
 
@@ -945,7 +945,7 @@ public readonly skuName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/eventhub_cluster#sku_name EventhubCluster#sku_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_cluster#sku_name EventhubCluster#sku_name}.
 
 ---
 
@@ -957,7 +957,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/eventhub_cluster#id EventhubCluster#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_cluster#id EventhubCluster#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -972,7 +972,7 @@ public readonly tags: {[ key: string ]: string};
 
 - *Type:* {[ key: string ]: string}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/eventhub_cluster#tags EventhubCluster#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_cluster#tags EventhubCluster#tags}.
 
 ---
 
@@ -986,7 +986,7 @@ public readonly timeouts: EventhubClusterTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/eventhub_cluster#timeouts EventhubCluster#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_cluster#timeouts EventhubCluster#timeouts}
 
 ---
 
@@ -1004,10 +1004,10 @@ const eventhubClusterTimeouts: eventhubCluster.EventhubClusterTimeouts = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.eventhubCluster.EventhubClusterTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/eventhub_cluster#create EventhubCluster#create}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubCluster.EventhubClusterTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/eventhub_cluster#delete EventhubCluster#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubCluster.EventhubClusterTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/eventhub_cluster#read EventhubCluster#read}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubCluster.EventhubClusterTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/eventhub_cluster#update EventhubCluster#update}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubCluster.EventhubClusterTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_cluster#create EventhubCluster#create}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubCluster.EventhubClusterTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_cluster#delete EventhubCluster#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubCluster.EventhubClusterTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_cluster#read EventhubCluster#read}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubCluster.EventhubClusterTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_cluster#update EventhubCluster#update}. |
 
 ---
 
@@ -1019,7 +1019,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/eventhub_cluster#create EventhubCluster#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_cluster#create EventhubCluster#create}.
 
 ---
 
@@ -1031,7 +1031,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/eventhub_cluster#delete EventhubCluster#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_cluster#delete EventhubCluster#delete}.
 
 ---
 
@@ -1043,7 +1043,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/eventhub_cluster#read EventhubCluster#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_cluster#read EventhubCluster#read}.
 
 ---
 
@@ -1055,7 +1055,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/eventhub_cluster#update EventhubCluster#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_cluster#update EventhubCluster#update}.
 
 ---
 

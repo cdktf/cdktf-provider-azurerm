@@ -4,7 +4,7 @@
 
 ### DataAzurermEventhubNamespace <a name="DataAzurermEventhubNamespace" id="@cdktf/provider-azurerm.dataAzurermEventhubNamespace.DataAzurermEventhubNamespace"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/eventhub_namespace azurerm_eventhub_namespace}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/eventhub_namespace azurerm_eventhub_namespace}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermEventhubNamespace.DataAzurermEventhubNamespace.Initializer"></a>
 
@@ -383,7 +383,7 @@ The construct id used in the generated config for the DataAzurermEventhubNamespa
 
 The id of the existing DataAzurermEventhubNamespace that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/eventhub_namespace#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/eventhub_namespace#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -830,9 +830,9 @@ const dataAzurermEventhubNamespaceConfig: dataAzurermEventhubNamespace.DataAzure
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubNamespace.DataAzurermEventhubNamespaceConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubNamespace.DataAzurermEventhubNamespaceConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubNamespace.DataAzurermEventhubNamespaceConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubNamespace.DataAzurermEventhubNamespaceConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/eventhub_namespace#name DataAzurermEventhubNamespace#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubNamespace.DataAzurermEventhubNamespaceConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/eventhub_namespace#resource_group_name DataAzurermEventhubNamespace#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubNamespace.DataAzurermEventhubNamespaceConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/eventhub_namespace#id DataAzurermEventhubNamespace#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubNamespace.DataAzurermEventhubNamespaceConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/eventhub_namespace#name DataAzurermEventhubNamespace#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubNamespace.DataAzurermEventhubNamespaceConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/eventhub_namespace#resource_group_name DataAzurermEventhubNamespace#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubNamespace.DataAzurermEventhubNamespaceConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/eventhub_namespace#id DataAzurermEventhubNamespace#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubNamespace.DataAzurermEventhubNamespaceConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubNamespace.DataAzurermEventhubNamespaceTimeouts">DataAzurermEventhubNamespaceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -915,7 +915,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/eventhub_namespace#name DataAzurermEventhubNamespace#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/eventhub_namespace#name DataAzurermEventhubNamespace#name}.
 
 ---
 
@@ -927,7 +927,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/eventhub_namespace#resource_group_name DataAzurermEventhubNamespace#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/eventhub_namespace#resource_group_name DataAzurermEventhubNamespace#resource_group_name}.
 
 ---
 
@@ -939,7 +939,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/eventhub_namespace#id DataAzurermEventhubNamespace#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/eventhub_namespace#id DataAzurermEventhubNamespace#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -956,7 +956,7 @@ public readonly timeouts: DataAzurermEventhubNamespaceTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/eventhub_namespace#timeouts DataAzurermEventhubNamespace#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/eventhub_namespace#timeouts DataAzurermEventhubNamespace#timeouts}
 
 ---
 
@@ -974,7 +974,7 @@ const dataAzurermEventhubNamespaceTimeouts: dataAzurermEventhubNamespace.DataAzu
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubNamespace.DataAzurermEventhubNamespaceTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/eventhub_namespace#read DataAzurermEventhubNamespace#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventhubNamespace.DataAzurermEventhubNamespaceTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/eventhub_namespace#read DataAzurermEventhubNamespace#read}. |
 
 ---
 
@@ -986,7 +986,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/data-sources/eventhub_namespace#read DataAzurermEventhubNamespace#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/eventhub_namespace#read DataAzurermEventhubNamespace#read}.
 
 ---
 

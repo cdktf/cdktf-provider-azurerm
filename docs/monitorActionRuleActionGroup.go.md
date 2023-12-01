@@ -4,12 +4,12 @@
 
 ### MonitorActionRuleActionGroup <a name="MonitorActionRuleActionGroup" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroup"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group azurerm_monitor_action_rule_action_group}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group azurerm_monitor_action_rule_action_group}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.NewMonitorActionRuleActionGroup(scope Construct, id *string, config MonitorActionRuleActionGroupConfig) MonitorActionRuleActionGroup
 ```
@@ -416,7 +416,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.MonitorActionRuleActionGroup_IsConstruct(x interface{}) *bool
 ```
@@ -448,7 +448,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.MonitorActionRuleActionGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -462,7 +462,7 @@ monitoractionruleactiongroup.MonitorActionRuleActionGroup_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroup.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.MonitorActionRuleActionGroup_IsTerraformResource(x interface{}) *bool
 ```
@@ -476,7 +476,7 @@ monitoractionruleactiongroup.MonitorActionRuleActionGroup_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroup.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.MonitorActionRuleActionGroup_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -505,7 +505,7 @@ The construct id used in the generated config for the MonitorActionRuleActionGro
 
 The id of the existing MonitorActionRuleActionGroup that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -925,16 +925,16 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 &monitoractionruleactiongroup.MonitorActionRuleActionGroupCondition {
-	AlertContext: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionAlertContext,
-	AlertRuleId: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionAlertRuleId,
-	Description: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionDescription,
-	Monitor: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionMonitor,
-	MonitorService: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionMonitorService,
-	Severity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionSeverity,
-	TargetResourceType: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionTargetResourceType,
+	AlertContext: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionAlertContext,
+	AlertRuleId: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionAlertRuleId,
+	Description: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionDescription,
+	Monitor: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionMonitor,
+	MonitorService: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionMonitorService,
+	Severity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionSeverity,
+	TargetResourceType: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionTargetResourceType,
 }
 ```
 
@@ -962,7 +962,7 @@ AlertContext MonitorActionRuleActionGroupConditionAlertContext
 
 alert_context block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#alert_context MonitorActionRuleActionGroup#alert_context}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#alert_context MonitorActionRuleActionGroup#alert_context}
 
 ---
 
@@ -976,7 +976,7 @@ AlertRuleId MonitorActionRuleActionGroupConditionAlertRuleId
 
 alert_rule_id block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#alert_rule_id MonitorActionRuleActionGroup#alert_rule_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#alert_rule_id MonitorActionRuleActionGroup#alert_rule_id}
 
 ---
 
@@ -990,7 +990,7 @@ Description MonitorActionRuleActionGroupConditionDescription
 
 description block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#description MonitorActionRuleActionGroup#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#description MonitorActionRuleActionGroup#description}
 
 ---
 
@@ -1004,7 +1004,7 @@ Monitor MonitorActionRuleActionGroupConditionMonitor
 
 monitor block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#monitor MonitorActionRuleActionGroup#monitor}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#monitor MonitorActionRuleActionGroup#monitor}
 
 ---
 
@@ -1018,7 +1018,7 @@ MonitorService MonitorActionRuleActionGroupConditionMonitorService
 
 monitor_service block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#monitor_service MonitorActionRuleActionGroup#monitor_service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#monitor_service MonitorActionRuleActionGroup#monitor_service}
 
 ---
 
@@ -1032,7 +1032,7 @@ Severity MonitorActionRuleActionGroupConditionSeverity
 
 severity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#severity MonitorActionRuleActionGroup#severity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#severity MonitorActionRuleActionGroup#severity}
 
 ---
 
@@ -1046,7 +1046,7 @@ TargetResourceType MonitorActionRuleActionGroupConditionTargetResourceType
 
 target_resource_type block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#target_resource_type MonitorActionRuleActionGroup#target_resource_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#target_resource_type MonitorActionRuleActionGroup#target_resource_type}
 
 ---
 
@@ -1055,7 +1055,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionAlertContext.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 &monitoractionruleactiongroup.MonitorActionRuleActionGroupConditionAlertContext {
 	Operator: *string,
@@ -1067,8 +1067,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrule
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionAlertContext.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionAlertContext.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionAlertContext.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionAlertContext.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}. |
 
 ---
 
@@ -1080,7 +1080,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}.
 
 ---
 
@@ -1092,7 +1092,7 @@ Values *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}.
 
 ---
 
@@ -1101,7 +1101,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionAlertRuleId.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 &monitoractionruleactiongroup.MonitorActionRuleActionGroupConditionAlertRuleId {
 	Operator: *string,
@@ -1113,8 +1113,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrule
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionAlertRuleId.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionAlertRuleId.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionAlertRuleId.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionAlertRuleId.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}. |
 
 ---
 
@@ -1126,7 +1126,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}.
 
 ---
 
@@ -1138,7 +1138,7 @@ Values *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}.
 
 ---
 
@@ -1147,7 +1147,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionDescription.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 &monitoractionruleactiongroup.MonitorActionRuleActionGroupConditionDescription {
 	Operator: *string,
@@ -1159,8 +1159,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrule
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionDescription.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionDescription.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionDescription.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionDescription.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}. |
 
 ---
 
@@ -1172,7 +1172,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}.
 
 ---
 
@@ -1184,7 +1184,7 @@ Values *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}.
 
 ---
 
@@ -1193,7 +1193,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionMonitor.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 &monitoractionruleactiongroup.MonitorActionRuleActionGroupConditionMonitor {
 	Operator: *string,
@@ -1205,8 +1205,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrule
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionMonitor.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionMonitor.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionMonitor.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionMonitor.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}. |
 
 ---
 
@@ -1218,7 +1218,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}.
 
 ---
 
@@ -1230,7 +1230,7 @@ Values *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}.
 
 ---
 
@@ -1239,7 +1239,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionMonitorService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 &monitoractionruleactiongroup.MonitorActionRuleActionGroupConditionMonitorService {
 	Operator: *string,
@@ -1251,8 +1251,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrule
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionMonitorService.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionMonitorService.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionMonitorService.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionMonitorService.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}. |
 
 ---
 
@@ -1264,7 +1264,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}.
 
 ---
 
@@ -1276,7 +1276,7 @@ Values *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}.
 
 ---
 
@@ -1285,7 +1285,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionSeverity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 &monitoractionruleactiongroup.MonitorActionRuleActionGroupConditionSeverity {
 	Operator: *string,
@@ -1297,8 +1297,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrule
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionSeverity.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionSeverity.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionSeverity.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionSeverity.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}. |
 
 ---
 
@@ -1310,7 +1310,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}.
 
 ---
 
@@ -1322,7 +1322,7 @@ Values *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}.
 
 ---
 
@@ -1331,7 +1331,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionTargetResourceType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 &monitoractionruleactiongroup.MonitorActionRuleActionGroupConditionTargetResourceType {
 	Operator: *string,
@@ -1343,8 +1343,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrule
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionTargetResourceType.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionTargetResourceType.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionTargetResourceType.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionTargetResourceType.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}. |
 
 ---
 
@@ -1356,7 +1356,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#operator MonitorActionRuleActionGroup#operator}.
 
 ---
 
@@ -1368,7 +1368,7 @@ Values *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#values MonitorActionRuleActionGroup#values}.
 
 ---
 
@@ -1377,7 +1377,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 &monitoractionruleactiongroup.MonitorActionRuleActionGroupConfig {
 	Connection: interface{},
@@ -1390,13 +1390,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrule
 	ActionGroupId: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	Condition: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleActionGroup.MonitorActionRuleActionGroupCondition,
+	Condition: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupCondition,
 	Description: *string,
 	Enabled: interface{},
 	Id: *string,
-	Scope: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleActionGroup.MonitorActionRuleActionGroupScope,
+	Scope: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupScope,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleActionGroup.MonitorActionRuleActionGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupTimeouts,
 }
 ```
 
@@ -1411,15 +1411,15 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrule
 | <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConfig.property.actionGroupId">ActionGroupId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#action_group_id MonitorActionRuleActionGroup#action_group_id}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#name MonitorActionRuleActionGroup#name}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#resource_group_name MonitorActionRuleActionGroup#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConfig.property.actionGroupId">ActionGroupId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#action_group_id MonitorActionRuleActionGroup#action_group_id}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#name MonitorActionRuleActionGroup#name}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#resource_group_name MonitorActionRuleActionGroup#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupCondition">MonitorActionRuleActionGroupCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConfig.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#description MonitorActionRuleActionGroup#description}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConfig.property.enabled">Enabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#enabled MonitorActionRuleActionGroup#enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#id MonitorActionRuleActionGroup#id}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConfig.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#description MonitorActionRuleActionGroup#description}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConfig.property.enabled">Enabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#enabled MonitorActionRuleActionGroup#enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#id MonitorActionRuleActionGroup#id}. |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConfig.property.scope">Scope</a></code> | <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupScope">MonitorActionRuleActionGroupScope</a></code> | scope block. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#tags MonitorActionRuleActionGroup#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#tags MonitorActionRuleActionGroup#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupTimeouts">MonitorActionRuleActionGroupTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1502,7 +1502,7 @@ ActionGroupId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#action_group_id MonitorActionRuleActionGroup#action_group_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#action_group_id MonitorActionRuleActionGroup#action_group_id}.
 
 ---
 
@@ -1514,7 +1514,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#name MonitorActionRuleActionGroup#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#name MonitorActionRuleActionGroup#name}.
 
 ---
 
@@ -1526,7 +1526,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#resource_group_name MonitorActionRuleActionGroup#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#resource_group_name MonitorActionRuleActionGroup#resource_group_name}.
 
 ---
 
@@ -1540,7 +1540,7 @@ Condition MonitorActionRuleActionGroupCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#condition MonitorActionRuleActionGroup#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#condition MonitorActionRuleActionGroup#condition}
 
 ---
 
@@ -1552,7 +1552,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#description MonitorActionRuleActionGroup#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#description MonitorActionRuleActionGroup#description}.
 
 ---
 
@@ -1564,7 +1564,7 @@ Enabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#enabled MonitorActionRuleActionGroup#enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#enabled MonitorActionRuleActionGroup#enabled}.
 
 ---
 
@@ -1576,7 +1576,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#id MonitorActionRuleActionGroup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#id MonitorActionRuleActionGroup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1593,7 +1593,7 @@ Scope MonitorActionRuleActionGroupScope
 
 scope block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#scope MonitorActionRuleActionGroup#scope}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#scope MonitorActionRuleActionGroup#scope}
 
 ---
 
@@ -1605,7 +1605,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#tags MonitorActionRuleActionGroup#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#tags MonitorActionRuleActionGroup#tags}.
 
 ---
 
@@ -1619,7 +1619,7 @@ Timeouts MonitorActionRuleActionGroupTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#timeouts MonitorActionRuleActionGroup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#timeouts MonitorActionRuleActionGroup#timeouts}
 
 ---
 
@@ -1628,7 +1628,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupScope.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 &monitoractionruleactiongroup.MonitorActionRuleActionGroupScope {
 	ResourceIds: *[]*string,
@@ -1640,8 +1640,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrule
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupScope.property.resourceIds">ResourceIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#resource_ids MonitorActionRuleActionGroup#resource_ids}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupScope.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#type MonitorActionRuleActionGroup#type}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupScope.property.resourceIds">ResourceIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#resource_ids MonitorActionRuleActionGroup#resource_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupScope.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#type MonitorActionRuleActionGroup#type}. |
 
 ---
 
@@ -1653,7 +1653,7 @@ ResourceIds *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#resource_ids MonitorActionRuleActionGroup#resource_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#resource_ids MonitorActionRuleActionGroup#resource_ids}.
 
 ---
 
@@ -1665,7 +1665,7 @@ Type *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#type MonitorActionRuleActionGroup#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#type MonitorActionRuleActionGroup#type}.
 
 ---
 
@@ -1674,7 +1674,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 &monitoractionruleactiongroup.MonitorActionRuleActionGroupTimeouts {
 	Create: *string,
@@ -1688,10 +1688,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrule
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#create MonitorActionRuleActionGroup#create}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#delete MonitorActionRuleActionGroup#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#read MonitorActionRuleActionGroup#read}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#update MonitorActionRuleActionGroup#update}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#create MonitorActionRuleActionGroup#create}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#delete MonitorActionRuleActionGroup#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#read MonitorActionRuleActionGroup#read}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#update MonitorActionRuleActionGroup#update}. |
 
 ---
 
@@ -1703,7 +1703,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#create MonitorActionRuleActionGroup#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#create MonitorActionRuleActionGroup#create}.
 
 ---
 
@@ -1715,7 +1715,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#delete MonitorActionRuleActionGroup#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#delete MonitorActionRuleActionGroup#delete}.
 
 ---
 
@@ -1727,7 +1727,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#read MonitorActionRuleActionGroup#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#read MonitorActionRuleActionGroup#read}.
 
 ---
 
@@ -1739,7 +1739,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.82.0/docs/resources/monitor_action_rule_action_group#update MonitorActionRuleActionGroup#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/monitor_action_rule_action_group#update MonitorActionRuleActionGroup#update}.
 
 ---
 
@@ -1750,7 +1750,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionAlertContextOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.NewMonitorActionRuleActionGroupConditionAlertContextOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleActionGroupConditionAlertContextOutputReference
 ```
@@ -2043,7 +2043,7 @@ func InternalValue() MonitorActionRuleActionGroupConditionAlertContext
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionAlertRuleIdOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.NewMonitorActionRuleActionGroupConditionAlertRuleIdOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleActionGroupConditionAlertRuleIdOutputReference
 ```
@@ -2336,7 +2336,7 @@ func InternalValue() MonitorActionRuleActionGroupConditionAlertRuleId
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionDescriptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.NewMonitorActionRuleActionGroupConditionDescriptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleActionGroupConditionDescriptionOutputReference
 ```
@@ -2629,7 +2629,7 @@ func InternalValue() MonitorActionRuleActionGroupConditionDescription
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionMonitorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.NewMonitorActionRuleActionGroupConditionMonitorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleActionGroupConditionMonitorOutputReference
 ```
@@ -2922,7 +2922,7 @@ func InternalValue() MonitorActionRuleActionGroupConditionMonitor
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionMonitorServiceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.NewMonitorActionRuleActionGroupConditionMonitorServiceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleActionGroupConditionMonitorServiceOutputReference
 ```
@@ -3215,7 +3215,7 @@ func InternalValue() MonitorActionRuleActionGroupConditionMonitorService
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.NewMonitorActionRuleActionGroupConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleActionGroupConditionOutputReference
 ```
@@ -3758,7 +3758,7 @@ func InternalValue() MonitorActionRuleActionGroupCondition
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionSeverityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.NewMonitorActionRuleActionGroupConditionSeverityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleActionGroupConditionSeverityOutputReference
 ```
@@ -4051,7 +4051,7 @@ func InternalValue() MonitorActionRuleActionGroupConditionSeverity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupConditionTargetResourceTypeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.NewMonitorActionRuleActionGroupConditionTargetResourceTypeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleActionGroupConditionTargetResourceTypeOutputReference
 ```
@@ -4344,7 +4344,7 @@ func InternalValue() MonitorActionRuleActionGroupConditionTargetResourceType
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupScopeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.NewMonitorActionRuleActionGroupScopeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleActionGroupScopeOutputReference
 ```
@@ -4637,7 +4637,7 @@ func InternalValue() MonitorActionRuleActionGroupScope
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleActionGroup.MonitorActionRuleActionGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionruleactiongroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionruleactiongroup"
 
 monitoractionruleactiongroup.NewMonitorActionRuleActionGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleActionGroupTimeoutsOutputReference
 ```
