@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrt.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 sentinelalertrulenrt.NewSentinelAlertRuleNrt(scope Construct, id *string, config SentinelAlertRuleNrtConfig) SentinelAlertRuleNrt
 ```
@@ -561,7 +561,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrt.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 sentinelalertrulenrt.SentinelAlertRuleNrt_IsConstruct(x interface{}) *bool
 ```
@@ -593,7 +593,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrt.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 sentinelalertrulenrt.SentinelAlertRuleNrt_IsTerraformElement(x interface{}) *bool
 ```
@@ -607,7 +607,7 @@ sentinelalertrulenrt.SentinelAlertRuleNrt_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrt.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 sentinelalertrulenrt.SentinelAlertRuleNrt_IsTerraformResource(x interface{}) *bool
 ```
@@ -621,7 +621,7 @@ sentinelalertrulenrt.SentinelAlertRuleNrt_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrt.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 sentinelalertrulenrt.SentinelAlertRuleNrt_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1312,7 +1312,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtAlertDetailsOverride.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 &sentinelalertrulenrt.SentinelAlertRuleNrtAlertDetailsOverride {
 	DescriptionFormat: *string,
@@ -1402,7 +1402,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtAlertDetailsOverrideDynamicProperty.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 &sentinelalertrulenrt.SentinelAlertRuleNrtAlertDetailsOverrideDynamicProperty {
 	Name: *string,
@@ -1448,7 +1448,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 &sentinelalertrulenrt.SentinelAlertRuleNrtConfig {
 	Connection: interface{},
@@ -1470,15 +1470,15 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrule
 	Description: *string,
 	Enabled: interface{},
 	EntityMapping: interface{},
-	EventGrouping: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.sentinelAlertRuleNrt.SentinelAlertRuleNrtEventGrouping,
+	EventGrouping: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtEventGrouping,
 	Id: *string,
-	Incident: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.sentinelAlertRuleNrt.SentinelAlertRuleNrtIncident,
+	Incident: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtIncident,
 	SentinelEntityMapping: interface{},
 	SuppressionDuration: *string,
 	SuppressionEnabled: interface{},
 	Tactics: *[]*string,
 	Techniques: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.sentinelAlertRuleNrt.SentinelAlertRuleNrtTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtTimeouts,
 }
 ```
 
@@ -1859,7 +1859,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtEntityMapping.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 &sentinelalertrulenrt.SentinelAlertRuleNrtEntityMapping {
 	EntityType: *string,
@@ -1907,7 +1907,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtEntityMappingFieldMapping.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 &sentinelalertrulenrt.SentinelAlertRuleNrtEntityMappingFieldMapping {
 	ColumnName: *string,
@@ -1953,7 +1953,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtEventGrouping.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 &sentinelalertrulenrt.SentinelAlertRuleNrtEventGrouping {
 	AggregationMethod: *string,
@@ -1985,11 +1985,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtIncident.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 &sentinelalertrulenrt.SentinelAlertRuleNrtIncident {
 	CreateIncidentEnabled: interface{},
-	Grouping: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.sentinelAlertRuleNrt.SentinelAlertRuleNrtIncidentGrouping,
+	Grouping: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtIncidentGrouping,
 }
 ```
 
@@ -2033,7 +2033,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtIncidentGrouping.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 &sentinelalertrulenrt.SentinelAlertRuleNrtIncidentGrouping {
 	ByAlertDetails: *[]*string,
@@ -2149,7 +2149,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtSentinelEntityMapping.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 &sentinelalertrulenrt.SentinelAlertRuleNrtSentinelEntityMapping {
 	ColumnName: *string,
@@ -2181,7 +2181,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 &sentinelalertrulenrt.SentinelAlertRuleNrtTimeouts {
 	Create: *string,
@@ -2257,7 +2257,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtAlertDetailsOverrideDynamicPropertyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 sentinelalertrulenrt.NewSentinelAlertRuleNrtAlertDetailsOverrideDynamicPropertyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SentinelAlertRuleNrtAlertDetailsOverrideDynamicPropertyList
 ```
@@ -2400,7 +2400,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtAlertDetailsOverrideDynamicPropertyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 sentinelalertrulenrt.NewSentinelAlertRuleNrtAlertDetailsOverrideDynamicPropertyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SentinelAlertRuleNrtAlertDetailsOverrideDynamicPropertyOutputReference
 ```
@@ -2711,7 +2711,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtAlertDetailsOverrideList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 sentinelalertrulenrt.NewSentinelAlertRuleNrtAlertDetailsOverrideList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SentinelAlertRuleNrtAlertDetailsOverrideList
 ```
@@ -2854,7 +2854,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtAlertDetailsOverrideOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 sentinelalertrulenrt.NewSentinelAlertRuleNrtAlertDetailsOverrideOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SentinelAlertRuleNrtAlertDetailsOverrideOutputReference
 ```
@@ -3279,7 +3279,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtEntityMappingFieldMappingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 sentinelalertrulenrt.NewSentinelAlertRuleNrtEntityMappingFieldMappingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SentinelAlertRuleNrtEntityMappingFieldMappingList
 ```
@@ -3422,7 +3422,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtEntityMappingFieldMappingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 sentinelalertrulenrt.NewSentinelAlertRuleNrtEntityMappingFieldMappingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SentinelAlertRuleNrtEntityMappingFieldMappingOutputReference
 ```
@@ -3733,7 +3733,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtEntityMappingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 sentinelalertrulenrt.NewSentinelAlertRuleNrtEntityMappingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SentinelAlertRuleNrtEntityMappingList
 ```
@@ -3876,7 +3876,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtEntityMappingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 sentinelalertrulenrt.NewSentinelAlertRuleNrtEntityMappingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SentinelAlertRuleNrtEntityMappingOutputReference
 ```
@@ -4200,7 +4200,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtEventGroupingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 sentinelalertrulenrt.NewSentinelAlertRuleNrtEventGroupingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SentinelAlertRuleNrtEventGroupingOutputReference
 ```
@@ -4471,7 +4471,7 @@ func InternalValue() SentinelAlertRuleNrtEventGrouping
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtIncidentGroupingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 sentinelalertrulenrt.NewSentinelAlertRuleNrtIncidentGroupingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SentinelAlertRuleNrtIncidentGroupingOutputReference
 ```
@@ -4923,7 +4923,7 @@ func InternalValue() SentinelAlertRuleNrtIncidentGrouping
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtIncidentOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 sentinelalertrulenrt.NewSentinelAlertRuleNrtIncidentOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SentinelAlertRuleNrtIncidentOutputReference
 ```
@@ -5229,7 +5229,7 @@ func InternalValue() SentinelAlertRuleNrtIncident
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtSentinelEntityMappingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 sentinelalertrulenrt.NewSentinelAlertRuleNrtSentinelEntityMappingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SentinelAlertRuleNrtSentinelEntityMappingList
 ```
@@ -5372,7 +5372,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtSentinelEntityMappingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 sentinelalertrulenrt.NewSentinelAlertRuleNrtSentinelEntityMappingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SentinelAlertRuleNrtSentinelEntityMappingOutputReference
 ```
@@ -5661,7 +5661,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleNrt.SentinelAlertRuleNrtTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrulenrt"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertrulenrt"
 
 sentinelalertrulenrt.NewSentinelAlertRuleNrtTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SentinelAlertRuleNrtTimeoutsOutputReference
 ```
