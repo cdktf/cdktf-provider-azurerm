@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermCosmosdbRestorableDatabaseAccounts.DataAzurermCosmosdbRestorableDatabaseAccounts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcosmosdbrestorabledatabaseaccounts"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcosmosdbrestorabledatabaseaccounts"
 
 dataazurermcosmosdbrestorabledatabaseaccounts.NewDataAzurermCosmosdbRestorableDatabaseAccounts(scope Construct, id *string, config DataAzurermCosmosdbRestorableDatabaseAccountsConfig) DataAzurermCosmosdbRestorableDatabaseAccounts
 ```
@@ -294,7 +294,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermCosmosdbRestorableDatabaseAccounts.DataAzurermCosmosdbRestorableDatabaseAccounts.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcosmosdbrestorabledatabaseaccounts"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcosmosdbrestorabledatabaseaccounts"
 
 dataazurermcosmosdbrestorabledatabaseaccounts.DataAzurermCosmosdbRestorableDatabaseAccounts_IsConstruct(x interface{}) *bool
 ```
@@ -326,7 +326,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermCosmosdbRestorableDatabaseAccounts.DataAzurermCosmosdbRestorableDatabaseAccounts.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcosmosdbrestorabledatabaseaccounts"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcosmosdbrestorabledatabaseaccounts"
 
 dataazurermcosmosdbrestorabledatabaseaccounts.DataAzurermCosmosdbRestorableDatabaseAccounts_IsTerraformElement(x interface{}) *bool
 ```
@@ -340,7 +340,7 @@ dataazurermcosmosdbrestorabledatabaseaccounts.DataAzurermCosmosdbRestorableDatab
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermCosmosdbRestorableDatabaseAccounts.DataAzurermCosmosdbRestorableDatabaseAccounts.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcosmosdbrestorabledatabaseaccounts"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcosmosdbrestorabledatabaseaccounts"
 
 dataazurermcosmosdbrestorabledatabaseaccounts.DataAzurermCosmosdbRestorableDatabaseAccounts_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -354,7 +354,7 @@ dataazurermcosmosdbrestorabledatabaseaccounts.DataAzurermCosmosdbRestorableDatab
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermCosmosdbRestorableDatabaseAccounts.DataAzurermCosmosdbRestorableDatabaseAccounts.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcosmosdbrestorabledatabaseaccounts"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcosmosdbrestorabledatabaseaccounts"
 
 dataazurermcosmosdbrestorabledatabaseaccounts.DataAzurermCosmosdbRestorableDatabaseAccounts_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -660,7 +660,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermCosmosdbRestorableDatabaseAccounts.DataAzurermCosmosdbRestorableDatabaseAccountsAccounts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcosmosdbrestorabledatabaseaccounts"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcosmosdbrestorabledatabaseaccounts"
 
 &dataazurermcosmosdbrestorabledatabaseaccounts.DataAzurermCosmosdbRestorableDatabaseAccountsAccounts {
 
@@ -673,7 +673,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcosmosdbre
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermCosmosdbRestorableDatabaseAccounts.DataAzurermCosmosdbRestorableDatabaseAccountsAccountsRestorableLocations.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcosmosdbrestorabledatabaseaccounts"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcosmosdbrestorabledatabaseaccounts"
 
 &dataazurermcosmosdbrestorabledatabaseaccounts.DataAzurermCosmosdbRestorableDatabaseAccountsAccountsRestorableLocations {
 
@@ -686,7 +686,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcosmosdbre
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermCosmosdbRestorableDatabaseAccounts.DataAzurermCosmosdbRestorableDatabaseAccountsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcosmosdbrestorabledatabaseaccounts"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcosmosdbrestorabledatabaseaccounts"
 
 &dataazurermcosmosdbrestorabledatabaseaccounts.DataAzurermCosmosdbRestorableDatabaseAccountsConfig {
 	Connection: interface{},
@@ -699,7 +699,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcosmosdbre
 	Location: *string,
 	Name: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermCosmosdbRestorableDatabaseAccounts.DataAzurermCosmosdbRestorableDatabaseAccountsTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermCosmosdbRestorableDatabaseAccounts.DataAzurermCosmosdbRestorableDatabaseAccountsTimeouts,
 }
 ```
 
@@ -849,7 +849,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermCosmosdbRestorableDatabaseAccounts.DataAzurermCosmosdbRestorableDatabaseAccountsTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcosmosdbrestorabledatabaseaccounts"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcosmosdbrestorabledatabaseaccounts"
 
 &dataazurermcosmosdbrestorabledatabaseaccounts.DataAzurermCosmosdbRestorableDatabaseAccountsTimeouts {
 	Read: *string,
@@ -883,7 +883,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermCosmosdbRestorableDatabaseAccounts.DataAzurermCosmosdbRestorableDatabaseAccountsAccountsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcosmosdbrestorabledatabaseaccounts"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcosmosdbrestorabledatabaseaccounts"
 
 dataazurermcosmosdbrestorabledatabaseaccounts.NewDataAzurermCosmosdbRestorableDatabaseAccountsAccountsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermCosmosdbRestorableDatabaseAccountsAccountsList
 ```
@@ -1015,7 +1015,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermCosmosdbRestorableDatabaseAccounts.DataAzurermCosmosdbRestorableDatabaseAccountsAccountsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcosmosdbrestorabledatabaseaccounts"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcosmosdbrestorabledatabaseaccounts"
 
 dataazurermcosmosdbrestorabledatabaseaccounts.NewDataAzurermCosmosdbRestorableDatabaseAccountsAccountsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermCosmosdbRestorableDatabaseAccountsAccountsOutputReference
 ```
@@ -1337,7 +1337,7 @@ func InternalValue() DataAzurermCosmosdbRestorableDatabaseAccountsAccounts
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermCosmosdbRestorableDatabaseAccounts.DataAzurermCosmosdbRestorableDatabaseAccountsAccountsRestorableLocationsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcosmosdbrestorabledatabaseaccounts"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcosmosdbrestorabledatabaseaccounts"
 
 dataazurermcosmosdbrestorabledatabaseaccounts.NewDataAzurermCosmosdbRestorableDatabaseAccountsAccountsRestorableLocationsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermCosmosdbRestorableDatabaseAccountsAccountsRestorableLocationsList
 ```
@@ -1469,7 +1469,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermCosmosdbRestorableDatabaseAccounts.DataAzurermCosmosdbRestorableDatabaseAccountsAccountsRestorableLocationsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcosmosdbrestorabledatabaseaccounts"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcosmosdbrestorabledatabaseaccounts"
 
 dataazurermcosmosdbrestorabledatabaseaccounts.NewDataAzurermCosmosdbRestorableDatabaseAccountsAccountsRestorableLocationsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermCosmosdbRestorableDatabaseAccountsAccountsRestorableLocationsOutputReference
 ```
@@ -1780,7 +1780,7 @@ func InternalValue() DataAzurermCosmosdbRestorableDatabaseAccountsAccountsRestor
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermCosmosdbRestorableDatabaseAccounts.DataAzurermCosmosdbRestorableDatabaseAccountsTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcosmosdbrestorabledatabaseaccounts"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcosmosdbrestorabledatabaseaccounts"
 
 dataazurermcosmosdbrestorabledatabaseaccounts.NewDataAzurermCosmosdbRestorableDatabaseAccountsTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermCosmosdbRestorableDatabaseAccountsTimeoutsOutputReference
 ```
