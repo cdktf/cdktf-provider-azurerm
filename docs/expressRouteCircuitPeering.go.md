@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeering.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutecircuitpeering"
 
 expressroutecircuitpeering.NewExpressRouteCircuitPeering(scope Construct, id *string, config ExpressRouteCircuitPeeringConfig) ExpressRouteCircuitPeering
 ```
@@ -480,7 +480,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeering.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutecircuitpeering"
 
 expressroutecircuitpeering.ExpressRouteCircuitPeering_IsConstruct(x interface{}) *bool
 ```
@@ -512,7 +512,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeering.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutecircuitpeering"
 
 expressroutecircuitpeering.ExpressRouteCircuitPeering_IsTerraformElement(x interface{}) *bool
 ```
@@ -526,7 +526,7 @@ expressroutecircuitpeering.ExpressRouteCircuitPeering_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeering.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutecircuitpeering"
 
 expressroutecircuitpeering.ExpressRouteCircuitPeering_IsTerraformResource(x interface{}) *bool
 ```
@@ -540,7 +540,7 @@ expressroutecircuitpeering.ExpressRouteCircuitPeering_IsTerraformResource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeering.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutecircuitpeering"
 
 expressroutecircuitpeering.ExpressRouteCircuitPeering_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1121,7 +1121,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutecircuitpeering"
 
 &expressroutecircuitpeering.ExpressRouteCircuitPeeringConfig {
 	Connection: interface{},
@@ -1137,14 +1137,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpe
 	VlanId: *f64,
 	Id: *string,
 	Ipv4Enabled: interface{},
-	Ipv6: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6,
-	MicrosoftPeeringConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfig,
+	Ipv6: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6,
+	MicrosoftPeeringConfig: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfig,
 	PeerAsn: *f64,
 	PrimaryPeerAddressPrefix: *string,
 	RouteFilterId: *string,
 	SecondaryPeerAddressPrefix: *string,
 	SharedKey: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.expressRouteCircuitPeering.ExpressRouteCircuitPeeringTimeouts,
 }
 ```
 
@@ -1428,13 +1428,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutecircuitpeering"
 
 &expressroutecircuitpeering.ExpressRouteCircuitPeeringIpv6 {
 	PrimaryPeerAddressPrefix: *string,
 	SecondaryPeerAddressPrefix: *string,
 	Enabled: interface{},
-	MicrosoftPeering: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeering,
+	MicrosoftPeering: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeering,
 	RouteFilterId: *string,
 }
 ```
@@ -1518,7 +1518,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeering.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutecircuitpeering"
 
 &expressroutecircuitpeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeering {
 	AdvertisedCommunities: *[]*string,
@@ -1592,7 +1592,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutecircuitpeering"
 
 &expressroutecircuitpeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfig {
 	AdvertisedPublicPrefixes: *[]*string,
@@ -1666,7 +1666,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutecircuitpeering"
 
 &expressroutecircuitpeering.ExpressRouteCircuitPeeringTimeouts {
 	Create: *string,
@@ -1742,7 +1742,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutecircuitpeering"
 
 expressroutecircuitpeering.NewExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference
 ```
@@ -2107,7 +2107,7 @@ func InternalValue() ExpressRouteCircuitPeeringIpv6MicrosoftPeering
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringIpv6OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutecircuitpeering"
 
 expressroutecircuitpeering.NewExpressRouteCircuitPeeringIpv6OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ExpressRouteCircuitPeeringIpv6OutputReference
 ```
@@ -2500,7 +2500,7 @@ func InternalValue() ExpressRouteCircuitPeeringIpv6
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutecircuitpeering"
 
 expressroutecircuitpeering.NewExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference
 ```
@@ -2858,7 +2858,7 @@ func InternalValue() ExpressRouteCircuitPeeringMicrosoftPeeringConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.expressRouteCircuitPeering.ExpressRouteCircuitPeeringTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/expressroutecircuitpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutecircuitpeering"
 
 expressroutecircuitpeering.NewExpressRouteCircuitPeeringTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ExpressRouteCircuitPeeringTimeoutsOutputReference
 ```

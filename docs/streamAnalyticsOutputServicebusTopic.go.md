@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsOutputServicebusTopic.StreamAnalyticsOutputServicebusTopic.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputservicebustopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsoutputservicebustopic"
 
 streamanalyticsoutputservicebustopic.NewStreamAnalyticsOutputServicebusTopic(scope Construct, id *string, config StreamAnalyticsOutputServicebusTopicConfig) StreamAnalyticsOutputServicebusTopic
 ```
@@ -446,7 +446,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.streamAnalyticsOutputServicebusTopic.StreamAnalyticsOutputServicebusTopic.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputservicebustopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsoutputservicebustopic"
 
 streamanalyticsoutputservicebustopic.StreamAnalyticsOutputServicebusTopic_IsConstruct(x interface{}) *bool
 ```
@@ -478,7 +478,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.streamAnalyticsOutputServicebusTopic.StreamAnalyticsOutputServicebusTopic.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputservicebustopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsoutputservicebustopic"
 
 streamanalyticsoutputservicebustopic.StreamAnalyticsOutputServicebusTopic_IsTerraformElement(x interface{}) *bool
 ```
@@ -492,7 +492,7 @@ streamanalyticsoutputservicebustopic.StreamAnalyticsOutputServicebusTopic_IsTerr
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.streamAnalyticsOutputServicebusTopic.StreamAnalyticsOutputServicebusTopic.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputservicebustopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsoutputservicebustopic"
 
 streamanalyticsoutputservicebustopic.StreamAnalyticsOutputServicebusTopic_IsTerraformResource(x interface{}) *bool
 ```
@@ -506,7 +506,7 @@ streamanalyticsoutputservicebustopic.StreamAnalyticsOutputServicebusTopic_IsTerr
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.streamAnalyticsOutputServicebusTopic.StreamAnalyticsOutputServicebusTopic.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputservicebustopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsoutputservicebustopic"
 
 streamanalyticsoutputservicebustopic.StreamAnalyticsOutputServicebusTopic_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1021,7 +1021,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsOutputServicebusTopic.StreamAnalyticsOutputServicebusTopicConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputservicebustopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsoutputservicebustopic"
 
 &streamanalyticsoutputservicebustopic.StreamAnalyticsOutputServicebusTopicConfig {
 	Connection: interface{},
@@ -1033,7 +1033,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutput
 	Provisioners: *[]interface{},
 	Name: *string,
 	ResourceGroupName: *string,
-	Serialization: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.streamAnalyticsOutputServicebusTopic.StreamAnalyticsOutputServicebusTopicSerialization,
+	Serialization: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.streamAnalyticsOutputServicebusTopic.StreamAnalyticsOutputServicebusTopicSerialization,
 	ServicebusNamespace: *string,
 	StreamAnalyticsJobName: *string,
 	TopicName: *string,
@@ -1043,7 +1043,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutput
 	SharedAccessPolicyKey: *string,
 	SharedAccessPolicyName: *string,
 	SystemPropertyColumns: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.streamAnalyticsOutputServicebusTopic.StreamAnalyticsOutputServicebusTopicTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.streamAnalyticsOutputServicebusTopic.StreamAnalyticsOutputServicebusTopicTimeouts,
 }
 ```
 
@@ -1312,7 +1312,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsOutputServicebusTopic.StreamAnalyticsOutputServicebusTopicSerialization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputservicebustopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsoutputservicebustopic"
 
 &streamanalyticsoutputservicebustopic.StreamAnalyticsOutputServicebusTopicSerialization {
 	Type: *string,
@@ -1386,7 +1386,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsOutputServicebusTopic.StreamAnalyticsOutputServicebusTopicTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputservicebustopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsoutputservicebustopic"
 
 &streamanalyticsoutputservicebustopic.StreamAnalyticsOutputServicebusTopicTimeouts {
 	Create: *string,
@@ -1462,7 +1462,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsOutputServicebusTopic.StreamAnalyticsOutputServicebusTopicSerializationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputservicebustopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsoutputservicebustopic"
 
 streamanalyticsoutputservicebustopic.NewStreamAnalyticsOutputServicebusTopicSerializationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StreamAnalyticsOutputServicebusTopicSerializationOutputReference
 ```
@@ -1820,7 +1820,7 @@ func InternalValue() StreamAnalyticsOutputServicebusTopicSerialization
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsOutputServicebusTopic.StreamAnalyticsOutputServicebusTopicTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsoutputservicebustopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsoutputservicebustopic"
 
 streamanalyticsoutputservicebustopic.NewStreamAnalyticsOutputServicebusTopicTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StreamAnalyticsOutputServicebusTopicTimeoutsOutputReference
 ```

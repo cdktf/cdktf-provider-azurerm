@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothubEndpointServicebusQueue.IothubEndpointServicebusQueue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointservicebusqueue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointservicebusqueue"
 
 iothubendpointservicebusqueue.NewIothubEndpointServicebusQueue(scope Construct, id *string, config IothubEndpointServicebusQueueConfig) IothubEndpointServicebusQueue
 ```
@@ -433,7 +433,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.iothubEndpointServicebusQueue.IothubEndpointServicebusQueue.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointservicebusqueue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointservicebusqueue"
 
 iothubendpointservicebusqueue.IothubEndpointServicebusQueue_IsConstruct(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.iothubEndpointServicebusQueue.IothubEndpointServicebusQueue.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointservicebusqueue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointservicebusqueue"
 
 iothubendpointservicebusqueue.IothubEndpointServicebusQueue_IsTerraformElement(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ iothubendpointservicebusqueue.IothubEndpointServicebusQueue_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.iothubEndpointServicebusQueue.IothubEndpointServicebusQueue.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointservicebusqueue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointservicebusqueue"
 
 iothubendpointservicebusqueue.IothubEndpointServicebusQueue_IsTerraformResource(x interface{}) *bool
 ```
@@ -493,7 +493,7 @@ iothubendpointservicebusqueue.IothubEndpointServicebusQueue_IsTerraformResource(
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.iothubEndpointServicebusQueue.IothubEndpointServicebusQueue.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointservicebusqueue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointservicebusqueue"
 
 iothubendpointservicebusqueue.IothubEndpointServicebusQueue_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -942,7 +942,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothubEndpointServicebusQueue.IothubEndpointServicebusQueueConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointservicebusqueue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointservicebusqueue"
 
 &iothubendpointservicebusqueue.IothubEndpointServicebusQueueConfig {
 	Connection: interface{},
@@ -961,7 +961,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointservice
 	EntityPath: *string,
 	Id: *string,
 	IdentityId: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.iothubEndpointServicebusQueue.IothubEndpointServicebusQueueTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.iothubEndpointServicebusQueue.IothubEndpointServicebusQueueTimeouts,
 }
 ```
 
@@ -1189,7 +1189,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothubEndpointServicebusQueue.IothubEndpointServicebusQueueTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointservicebusqueue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointservicebusqueue"
 
 &iothubendpointservicebusqueue.IothubEndpointServicebusQueueTimeouts {
 	Create: *string,
@@ -1265,7 +1265,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothubEndpointServicebusQueue.IothubEndpointServicebusQueueTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointservicebusqueue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/iothubendpointservicebusqueue"
 
 iothubendpointservicebusqueue.NewIothubEndpointServicebusQueueTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IothubEndpointServicebusQueueTimeoutsOutputReference
 ```
