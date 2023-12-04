@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewall.Firewall.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewall"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewall"
 
 firewall.NewFirewall(scope Construct, id *string, config FirewallConfig) Firewall
 ```
@@ -500,7 +500,7 @@ func ResetZones()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.firewall.Firewall.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewall"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewall"
 
 firewall.Firewall_IsConstruct(x interface{}) *bool
 ```
@@ -532,7 +532,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.firewall.Firewall.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewall"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewall"
 
 firewall.Firewall_IsTerraformElement(x interface{}) *bool
 ```
@@ -546,7 +546,7 @@ firewall.Firewall_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.firewall.Firewall.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewall"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewall"
 
 firewall.Firewall_IsTerraformResource(x interface{}) *bool
 ```
@@ -560,7 +560,7 @@ firewall.Firewall_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.firewall.Firewall.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewall"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewall"
 
 firewall.Firewall_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1141,7 +1141,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewall.FirewallConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewall"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewall"
 
 &firewall.FirewallConfig {
 	Connection: interface{},
@@ -1160,12 +1160,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewall"
 	FirewallPolicyId: *string,
 	Id: *string,
 	IpConfiguration: interface{},
-	ManagementIpConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.firewall.FirewallManagementIpConfiguration,
+	ManagementIpConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.firewall.FirewallManagementIpConfiguration,
 	PrivateIpRanges: *[]*string,
 	Tags: *map[string]*string,
 	ThreatIntelMode: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.firewall.FirewallTimeouts,
-	VirtualHub: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.firewall.FirewallVirtualHub,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.firewall.FirewallTimeouts,
+	VirtualHub: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.firewall.FirewallVirtualHub,
 	Zones: *[]*string,
 }
 ```
@@ -1478,7 +1478,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewall.FirewallIpConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewall"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewall"
 
 &firewall.FirewallIpConfiguration {
 	Name: *string,
@@ -1538,7 +1538,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewall.FirewallManagementIpConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewall"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewall"
 
 &firewall.FirewallManagementIpConfiguration {
 	Name: *string,
@@ -1598,7 +1598,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewall.FirewallTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewall"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewall"
 
 &firewall.FirewallTimeouts {
 	Create: *string,
@@ -1672,7 +1672,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.firewall.FirewallVirtualHub.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewall"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewall"
 
 &firewall.FirewallVirtualHub {
 	VirtualHubId: *string,
@@ -1720,7 +1720,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewall.FirewallIpConfigurationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewall"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewall"
 
 firewall.NewFirewallIpConfigurationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) FirewallIpConfigurationList
 ```
@@ -1863,7 +1863,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewall.FirewallIpConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewall"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewall"
 
 firewall.NewFirewallIpConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) FirewallIpConfigurationOutputReference
 ```
@@ -2221,7 +2221,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewall.FirewallManagementIpConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewall"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewall"
 
 firewall.NewFirewallManagementIpConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirewallManagementIpConfigurationOutputReference
 ```
@@ -2547,7 +2547,7 @@ func InternalValue() FirewallManagementIpConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewall.FirewallTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewall"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewall"
 
 firewall.NewFirewallTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirewallTimeoutsOutputReference
 ```
@@ -2912,7 +2912,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.firewall.FirewallVirtualHubOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/firewall"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/firewall"
 
 firewall.NewFirewallVirtualHubOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FirewallVirtualHubOutputReference
 ```

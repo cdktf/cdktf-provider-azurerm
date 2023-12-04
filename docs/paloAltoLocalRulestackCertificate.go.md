@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.paloAltoLocalRulestackCertificate.PaloAltoLocalRulestackCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltolocalrulestackcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltolocalrulestackcertificate"
 
 paloaltolocalrulestackcertificate.NewPaloAltoLocalRulestackCertificate(scope Construct, id *string, config PaloAltoLocalRulestackCertificateConfig) PaloAltoLocalRulestackCertificate
 ```
@@ -426,7 +426,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.paloAltoLocalRulestackCertificate.PaloAltoLocalRulestackCertificate.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltolocalrulestackcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltolocalrulestackcertificate"
 
 paloaltolocalrulestackcertificate.PaloAltoLocalRulestackCertificate_IsConstruct(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.paloAltoLocalRulestackCertificate.PaloAltoLocalRulestackCertificate.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltolocalrulestackcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltolocalrulestackcertificate"
 
 paloaltolocalrulestackcertificate.PaloAltoLocalRulestackCertificate_IsTerraformElement(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ paloaltolocalrulestackcertificate.PaloAltoLocalRulestackCertificate_IsTerraformE
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.paloAltoLocalRulestackCertificate.PaloAltoLocalRulestackCertificate.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltolocalrulestackcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltolocalrulestackcertificate"
 
 paloaltolocalrulestackcertificate.PaloAltoLocalRulestackCertificate_IsTerraformResource(x interface{}) *bool
 ```
@@ -486,7 +486,7 @@ paloaltolocalrulestackcertificate.PaloAltoLocalRulestackCertificate_IsTerraformR
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.paloAltoLocalRulestackCertificate.PaloAltoLocalRulestackCertificate.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltolocalrulestackcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltolocalrulestackcertificate"
 
 paloaltolocalrulestackcertificate.PaloAltoLocalRulestackCertificate_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -891,7 +891,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.paloAltoLocalRulestackCertificate.PaloAltoLocalRulestackCertificateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltolocalrulestackcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltolocalrulestackcertificate"
 
 &paloaltolocalrulestackcertificate.PaloAltoLocalRulestackCertificateConfig {
 	Connection: interface{},
@@ -908,7 +908,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltolocalrulestac
 	Id: *string,
 	KeyVaultCertificateId: *string,
 	SelfSigned: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.paloAltoLocalRulestackCertificate.PaloAltoLocalRulestackCertificateTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.paloAltoLocalRulestackCertificate.PaloAltoLocalRulestackCertificateTimeouts,
 }
 ```
 
@@ -1110,7 +1110,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.paloAltoLocalRulestackCertificate.PaloAltoLocalRulestackCertificateTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltolocalrulestackcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltolocalrulestackcertificate"
 
 &paloaltolocalrulestackcertificate.PaloAltoLocalRulestackCertificateTimeouts {
 	Create: *string,
@@ -1186,7 +1186,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.paloAltoLocalRulestackCertificate.PaloAltoLocalRulestackCertificateTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/paloaltolocalrulestackcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltolocalrulestackcertificate"
 
 paloaltolocalrulestackcertificate.NewPaloAltoLocalRulestackCertificateTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PaloAltoLocalRulestackCertificateTimeoutsOutputReference
 ```
