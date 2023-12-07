@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.botServiceAzureBot.BotServiceAzureBot.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botserviceazurebot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botserviceazurebot"
 
 botserviceazurebot.NewBotServiceAzureBot(scope Construct, id *string, config BotServiceAzureBotConfig) BotServiceAzureBot
 ```
@@ -496,7 +496,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.botServiceAzureBot.BotServiceAzureBot.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botserviceazurebot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botserviceazurebot"
 
 botserviceazurebot.BotServiceAzureBot_IsConstruct(x interface{}) *bool
 ```
@@ -528,7 +528,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.botServiceAzureBot.BotServiceAzureBot.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botserviceazurebot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botserviceazurebot"
 
 botserviceazurebot.BotServiceAzureBot_IsTerraformElement(x interface{}) *bool
 ```
@@ -542,7 +542,7 @@ botserviceazurebot.BotServiceAzureBot_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.botServiceAzureBot.BotServiceAzureBot.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botserviceazurebot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botserviceazurebot"
 
 botserviceazurebot.BotServiceAzureBot_IsTerraformResource(x interface{}) *bool
 ```
@@ -556,7 +556,7 @@ botserviceazurebot.BotServiceAzureBot_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.botServiceAzureBot.BotServiceAzureBot.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botserviceazurebot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botserviceazurebot"
 
 botserviceazurebot.BotServiceAzureBot_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1247,7 +1247,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.botServiceAzureBot.BotServiceAzureBotConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botserviceazurebot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botserviceazurebot"
 
 &botserviceazurebot.BotServiceAzureBotConfig {
 	Connection: interface{},
@@ -1277,7 +1277,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botserviceazurebot"
 	MicrosoftAppType: *string,
 	StreamingEndpointEnabled: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.botServiceAzureBot.BotServiceAzureBotTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.botServiceAzureBot.BotServiceAzureBotTimeouts,
 }
 ```
 
@@ -1648,7 +1648,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.botServiceAzureBot.BotServiceAzureBotTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botserviceazurebot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botserviceazurebot"
 
 &botserviceazurebot.BotServiceAzureBotTimeouts {
 	Create: *string,
@@ -1724,7 +1724,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.botServiceAzureBot.BotServiceAzureBotTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botserviceazurebot"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botserviceazurebot"
 
 botserviceazurebot.NewBotServiceAzureBotTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BotServiceAzureBotTimeoutsOutputReference
 ```
