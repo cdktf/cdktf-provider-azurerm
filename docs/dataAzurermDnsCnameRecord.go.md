@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDnsCnameRecord.DataAzurermDnsCnameRecord.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdnscnamerecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnscnamerecord"
 
 dataazurermdnscnamerecord.NewDataAzurermDnsCnameRecord(scope Construct, id *string, config DataAzurermDnsCnameRecordConfig) DataAzurermDnsCnameRecord
 ```
@@ -294,7 +294,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermDnsCnameRecord.DataAzurermDnsCnameRecord.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdnscnamerecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnscnamerecord"
 
 dataazurermdnscnamerecord.DataAzurermDnsCnameRecord_IsConstruct(x interface{}) *bool
 ```
@@ -326,7 +326,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermDnsCnameRecord.DataAzurermDnsCnameRecord.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdnscnamerecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnscnamerecord"
 
 dataazurermdnscnamerecord.DataAzurermDnsCnameRecord_IsTerraformElement(x interface{}) *bool
 ```
@@ -340,7 +340,7 @@ dataazurermdnscnamerecord.DataAzurermDnsCnameRecord_IsTerraformElement(x interfa
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermDnsCnameRecord.DataAzurermDnsCnameRecord.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdnscnamerecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnscnamerecord"
 
 dataazurermdnscnamerecord.DataAzurermDnsCnameRecord_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -354,7 +354,7 @@ dataazurermdnscnamerecord.DataAzurermDnsCnameRecord_IsTerraformDataSource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermDnsCnameRecord.DataAzurermDnsCnameRecord.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdnscnamerecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnscnamerecord"
 
 dataazurermdnscnamerecord.DataAzurermDnsCnameRecord_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -726,7 +726,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDnsCnameRecord.DataAzurermDnsCnameRecordConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdnscnamerecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnscnamerecord"
 
 &dataazurermdnscnamerecord.DataAzurermDnsCnameRecordConfig {
 	Connection: interface{},
@@ -740,7 +740,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdnscna
 	ResourceGroupName: *string,
 	ZoneName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermDnsCnameRecord.DataAzurermDnsCnameRecordTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermDnsCnameRecord.DataAzurermDnsCnameRecordTimeouts,
 }
 ```
 
@@ -903,7 +903,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDnsCnameRecord.DataAzurermDnsCnameRecordTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdnscnamerecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnscnamerecord"
 
 &dataazurermdnscnamerecord.DataAzurermDnsCnameRecordTimeouts {
 	Read: *string,
@@ -937,7 +937,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDnsCnameRecord.DataAzurermDnsCnameRecordTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdnscnamerecord"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdnscnamerecord"
 
 dataazurermdnscnamerecord.NewDataAzurermDnsCnameRecordTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermDnsCnameRecordTimeoutsOutputReference
 ```
