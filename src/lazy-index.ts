@@ -337,6 +337,7 @@ Object.defineProperty(exports, 'dnsSrvRecord', { get: function () { return requi
 Object.defineProperty(exports, 'dnsTxtRecord', { get: function () { return require('./dns-txt-record'); } });
 Object.defineProperty(exports, 'dnsZone', { get: function () { return require('./dns-zone'); } });
 Object.defineProperty(exports, 'elasticCloudElasticsearch', { get: function () { return require('./elastic-cloud-elasticsearch'); } });
+Object.defineProperty(exports, 'elasticSan', { get: function () { return require('./elastic-san'); } });
 Object.defineProperty(exports, 'emailCommunicationService', { get: function () { return require('./email-communication-service'); } });
 Object.defineProperty(exports, 'eventgridDomain', { get: function () { return require('./eventgrid-domain'); } });
 Object.defineProperty(exports, 'eventgridDomainTopic', { get: function () { return require('./eventgrid-domain-topic'); } });
@@ -439,6 +440,8 @@ Object.defineProperty(exports, 'keyVaultCertificateContacts', { get: function ()
 Object.defineProperty(exports, 'keyVaultCertificateIssuer', { get: function () { return require('./key-vault-certificate-issuer'); } });
 Object.defineProperty(exports, 'keyVaultKey', { get: function () { return require('./key-vault-key'); } });
 Object.defineProperty(exports, 'keyVaultManagedHardwareSecurityModule', { get: function () { return require('./key-vault-managed-hardware-security-module'); } });
+Object.defineProperty(exports, 'keyVaultManagedHardwareSecurityModuleRoleAssignment', { get: function () { return require('./key-vault-managed-hardware-security-module-role-assignment'); } });
+Object.defineProperty(exports, 'keyVaultManagedHardwareSecurityModuleRoleDefinition', { get: function () { return require('./key-vault-managed-hardware-security-module-role-definition'); } });
 Object.defineProperty(exports, 'keyVaultManagedStorageAccount', { get: function () { return require('./key-vault-managed-storage-account'); } });
 Object.defineProperty(exports, 'keyVaultManagedStorageAccountSasTokenDefinition', { get: function () { return require('./key-vault-managed-storage-account-sas-token-definition'); } });
 Object.defineProperty(exports, 'keyVaultSecret', { get: function () { return require('./key-vault-secret'); } });
@@ -1184,6 +1187,7 @@ Object.defineProperty(exports, 'dataAzurermKeyVaultCertificates', { get: functio
 Object.defineProperty(exports, 'dataAzurermKeyVaultEncryptedValue', { get: function () { return require('./data-azurerm-key-vault-encrypted-value'); } });
 Object.defineProperty(exports, 'dataAzurermKeyVaultKey', { get: function () { return require('./data-azurerm-key-vault-key'); } });
 Object.defineProperty(exports, 'dataAzurermKeyVaultManagedHardwareSecurityModule', { get: function () { return require('./data-azurerm-key-vault-managed-hardware-security-module'); } });
+Object.defineProperty(exports, 'dataAzurermKeyVaultManagedHardwareSecurityModuleRoleDefinition', { get: function () { return require('./data-azurerm-key-vault-managed-hardware-security-module-role-definition'); } });
 Object.defineProperty(exports, 'dataAzurermKeyVaultSecret', { get: function () { return require('./data-azurerm-key-vault-secret'); } });
 Object.defineProperty(exports, 'dataAzurermKeyVaultSecrets', { get: function () { return require('./data-azurerm-key-vault-secrets'); } });
 Object.defineProperty(exports, 'dataAzurermKubernetesCluster', { get: function () { return require('./data-azurerm-kubernetes-cluster'); } });
@@ -1335,6 +1339,7 @@ Object.defineProperty(exports, 'dataAzurermStorageAccountBlobContainerSas', { ge
 Object.defineProperty(exports, 'dataAzurermStorageAccountSas', { get: function () { return require('./data-azurerm-storage-account-sas'); } });
 Object.defineProperty(exports, 'dataAzurermStorageBlob', { get: function () { return require('./data-azurerm-storage-blob'); } });
 Object.defineProperty(exports, 'dataAzurermStorageContainer', { get: function () { return require('./data-azurerm-storage-container'); } });
+Object.defineProperty(exports, 'dataAzurermStorageContainers', { get: function () { return require('./data-azurerm-storage-containers'); } });
 Object.defineProperty(exports, 'dataAzurermStorageEncryptionScope', { get: function () { return require('./data-azurerm-storage-encryption-scope'); } });
 Object.defineProperty(exports, 'dataAzurermStorageManagementPolicy', { get: function () { return require('./data-azurerm-storage-management-policy'); } });
 Object.defineProperty(exports, 'dataAzurermStorageShare', { get: function () { return require('./data-azurerm-storage-share'); } });

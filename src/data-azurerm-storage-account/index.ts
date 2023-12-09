@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,28 +13,28 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermStorageAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#id DataAzurermStorageAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#id DataAzurermStorageAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#min_tls_version DataAzurermStorageAccount#min_tls_version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#min_tls_version DataAzurermStorageAccount#min_tls_version}
   */
   readonly minTlsVersion?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#name DataAzurermStorageAccount#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#name DataAzurermStorageAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#resource_group_name DataAzurermStorageAccount#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#resource_group_name DataAzurermStorageAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#timeouts DataAzurermStorageAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#timeouts DataAzurermStorageAccount#timeouts}
   */
   readonly timeouts?: DataAzurermStorageAccountTimeouts;
 }
@@ -342,7 +342,7 @@ export class DataAzurermStorageAccountIdentityList extends cdktf.ComplexList {
 }
 export interface DataAzurermStorageAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#read DataAzurermStorageAccount#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#read DataAzurermStorageAccount#read}
   */
   readonly read?: string;
 }
@@ -417,7 +417,7 @@ export class DataAzurermStorageAccountTimeoutsOutputReference extends cdktf.Comp
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account azurerm_storage_account}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account azurerm_storage_account}
 */
 export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
 
@@ -433,7 +433,7 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermStorageAccount resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermStorageAccount to import
-  * @param importFromId The id of the existing DataAzurermStorageAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermStorageAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermStorageAccount to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -445,7 +445,7 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account azurerm_storage_account} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account azurerm_storage_account} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -456,7 +456,7 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_storage_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.83.0',
+        providerVersion: '3.84.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -611,6 +611,26 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
     return this.getStringAttribute('primary_blob_host');
   }
 
+  // primary_blob_internet_endpoint - computed: true, optional: false, required: false
+  public get primaryBlobInternetEndpoint() {
+    return this.getStringAttribute('primary_blob_internet_endpoint');
+  }
+
+  // primary_blob_internet_host - computed: true, optional: false, required: false
+  public get primaryBlobInternetHost() {
+    return this.getStringAttribute('primary_blob_internet_host');
+  }
+
+  // primary_blob_microsoft_endpoint - computed: true, optional: false, required: false
+  public get primaryBlobMicrosoftEndpoint() {
+    return this.getStringAttribute('primary_blob_microsoft_endpoint');
+  }
+
+  // primary_blob_microsoft_host - computed: true, optional: false, required: false
+  public get primaryBlobMicrosoftHost() {
+    return this.getStringAttribute('primary_blob_microsoft_host');
+  }
+
   // primary_connection_string - computed: true, optional: false, required: false
   public get primaryConnectionString() {
     return this.getStringAttribute('primary_connection_string');
@@ -626,6 +646,26 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
     return this.getStringAttribute('primary_dfs_host');
   }
 
+  // primary_dfs_internet_endpoint - computed: true, optional: false, required: false
+  public get primaryDfsInternetEndpoint() {
+    return this.getStringAttribute('primary_dfs_internet_endpoint');
+  }
+
+  // primary_dfs_internet_host - computed: true, optional: false, required: false
+  public get primaryDfsInternetHost() {
+    return this.getStringAttribute('primary_dfs_internet_host');
+  }
+
+  // primary_dfs_microsoft_endpoint - computed: true, optional: false, required: false
+  public get primaryDfsMicrosoftEndpoint() {
+    return this.getStringAttribute('primary_dfs_microsoft_endpoint');
+  }
+
+  // primary_dfs_microsoft_host - computed: true, optional: false, required: false
+  public get primaryDfsMicrosoftHost() {
+    return this.getStringAttribute('primary_dfs_microsoft_host');
+  }
+
   // primary_file_endpoint - computed: true, optional: false, required: false
   public get primaryFileEndpoint() {
     return this.getStringAttribute('primary_file_endpoint');
@@ -634,6 +674,26 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
   // primary_file_host - computed: true, optional: false, required: false
   public get primaryFileHost() {
     return this.getStringAttribute('primary_file_host');
+  }
+
+  // primary_file_internet_endpoint - computed: true, optional: false, required: false
+  public get primaryFileInternetEndpoint() {
+    return this.getStringAttribute('primary_file_internet_endpoint');
+  }
+
+  // primary_file_internet_host - computed: true, optional: false, required: false
+  public get primaryFileInternetHost() {
+    return this.getStringAttribute('primary_file_internet_host');
+  }
+
+  // primary_file_microsoft_endpoint - computed: true, optional: false, required: false
+  public get primaryFileMicrosoftEndpoint() {
+    return this.getStringAttribute('primary_file_microsoft_endpoint');
+  }
+
+  // primary_file_microsoft_host - computed: true, optional: false, required: false
+  public get primaryFileMicrosoftHost() {
+    return this.getStringAttribute('primary_file_microsoft_host');
   }
 
   // primary_location - computed: true, optional: false, required: false
@@ -651,6 +711,16 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
     return this.getStringAttribute('primary_queue_host');
   }
 
+  // primary_queue_microsoft_endpoint - computed: true, optional: false, required: false
+  public get primaryQueueMicrosoftEndpoint() {
+    return this.getStringAttribute('primary_queue_microsoft_endpoint');
+  }
+
+  // primary_queue_microsoft_host - computed: true, optional: false, required: false
+  public get primaryQueueMicrosoftHost() {
+    return this.getStringAttribute('primary_queue_microsoft_host');
+  }
+
   // primary_table_endpoint - computed: true, optional: false, required: false
   public get primaryTableEndpoint() {
     return this.getStringAttribute('primary_table_endpoint');
@@ -661,6 +731,16 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
     return this.getStringAttribute('primary_table_host');
   }
 
+  // primary_table_microsoft_endpoint - computed: true, optional: false, required: false
+  public get primaryTableMicrosoftEndpoint() {
+    return this.getStringAttribute('primary_table_microsoft_endpoint');
+  }
+
+  // primary_table_microsoft_host - computed: true, optional: false, required: false
+  public get primaryTableMicrosoftHost() {
+    return this.getStringAttribute('primary_table_microsoft_host');
+  }
+
   // primary_web_endpoint - computed: true, optional: false, required: false
   public get primaryWebEndpoint() {
     return this.getStringAttribute('primary_web_endpoint');
@@ -669,6 +749,26 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
   // primary_web_host - computed: true, optional: false, required: false
   public get primaryWebHost() {
     return this.getStringAttribute('primary_web_host');
+  }
+
+  // primary_web_internet_endpoint - computed: true, optional: false, required: false
+  public get primaryWebInternetEndpoint() {
+    return this.getStringAttribute('primary_web_internet_endpoint');
+  }
+
+  // primary_web_internet_host - computed: true, optional: false, required: false
+  public get primaryWebInternetHost() {
+    return this.getStringAttribute('primary_web_internet_host');
+  }
+
+  // primary_web_microsoft_endpoint - computed: true, optional: false, required: false
+  public get primaryWebMicrosoftEndpoint() {
+    return this.getStringAttribute('primary_web_microsoft_endpoint');
+  }
+
+  // primary_web_microsoft_host - computed: true, optional: false, required: false
+  public get primaryWebMicrosoftHost() {
+    return this.getStringAttribute('primary_web_microsoft_host');
   }
 
   // queue_encryption_key_type - computed: true, optional: false, required: false
@@ -709,6 +809,26 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
     return this.getStringAttribute('secondary_blob_host');
   }
 
+  // secondary_blob_internet_endpoint - computed: true, optional: false, required: false
+  public get secondaryBlobInternetEndpoint() {
+    return this.getStringAttribute('secondary_blob_internet_endpoint');
+  }
+
+  // secondary_blob_internet_host - computed: true, optional: false, required: false
+  public get secondaryBlobInternetHost() {
+    return this.getStringAttribute('secondary_blob_internet_host');
+  }
+
+  // secondary_blob_microsoft_endpoint - computed: true, optional: false, required: false
+  public get secondaryBlobMicrosoftEndpoint() {
+    return this.getStringAttribute('secondary_blob_microsoft_endpoint');
+  }
+
+  // secondary_blob_microsoft_host - computed: true, optional: false, required: false
+  public get secondaryBlobMicrosoftHost() {
+    return this.getStringAttribute('secondary_blob_microsoft_host');
+  }
+
   // secondary_connection_string - computed: true, optional: false, required: false
   public get secondaryConnectionString() {
     return this.getStringAttribute('secondary_connection_string');
@@ -724,6 +844,26 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
     return this.getStringAttribute('secondary_dfs_host');
   }
 
+  // secondary_dfs_internet_endpoint - computed: true, optional: false, required: false
+  public get secondaryDfsInternetEndpoint() {
+    return this.getStringAttribute('secondary_dfs_internet_endpoint');
+  }
+
+  // secondary_dfs_internet_host - computed: true, optional: false, required: false
+  public get secondaryDfsInternetHost() {
+    return this.getStringAttribute('secondary_dfs_internet_host');
+  }
+
+  // secondary_dfs_microsoft_endpoint - computed: true, optional: false, required: false
+  public get secondaryDfsMicrosoftEndpoint() {
+    return this.getStringAttribute('secondary_dfs_microsoft_endpoint');
+  }
+
+  // secondary_dfs_microsoft_host - computed: true, optional: false, required: false
+  public get secondaryDfsMicrosoftHost() {
+    return this.getStringAttribute('secondary_dfs_microsoft_host');
+  }
+
   // secondary_file_endpoint - computed: true, optional: false, required: false
   public get secondaryFileEndpoint() {
     return this.getStringAttribute('secondary_file_endpoint');
@@ -732,6 +872,26 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
   // secondary_file_host - computed: true, optional: false, required: false
   public get secondaryFileHost() {
     return this.getStringAttribute('secondary_file_host');
+  }
+
+  // secondary_file_internet_endpoint - computed: true, optional: false, required: false
+  public get secondaryFileInternetEndpoint() {
+    return this.getStringAttribute('secondary_file_internet_endpoint');
+  }
+
+  // secondary_file_internet_host - computed: true, optional: false, required: false
+  public get secondaryFileInternetHost() {
+    return this.getStringAttribute('secondary_file_internet_host');
+  }
+
+  // secondary_file_microsoft_endpoint - computed: true, optional: false, required: false
+  public get secondaryFileMicrosoftEndpoint() {
+    return this.getStringAttribute('secondary_file_microsoft_endpoint');
+  }
+
+  // secondary_file_microsoft_host - computed: true, optional: false, required: false
+  public get secondaryFileMicrosoftHost() {
+    return this.getStringAttribute('secondary_file_microsoft_host');
   }
 
   // secondary_location - computed: true, optional: false, required: false
@@ -749,6 +909,16 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
     return this.getStringAttribute('secondary_queue_host');
   }
 
+  // secondary_queue_microsoft_endpoint - computed: true, optional: false, required: false
+  public get secondaryQueueMicrosoftEndpoint() {
+    return this.getStringAttribute('secondary_queue_microsoft_endpoint');
+  }
+
+  // secondary_queue_microsoft_host - computed: true, optional: false, required: false
+  public get secondaryQueueMicrosoftHost() {
+    return this.getStringAttribute('secondary_queue_microsoft_host');
+  }
+
   // secondary_table_endpoint - computed: true, optional: false, required: false
   public get secondaryTableEndpoint() {
     return this.getStringAttribute('secondary_table_endpoint');
@@ -759,6 +929,16 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
     return this.getStringAttribute('secondary_table_host');
   }
 
+  // secondary_table_microsoft_endpoint - computed: true, optional: false, required: false
+  public get secondaryTableMicrosoftEndpoint() {
+    return this.getStringAttribute('secondary_table_microsoft_endpoint');
+  }
+
+  // secondary_table_microsoft_host - computed: true, optional: false, required: false
+  public get secondaryTableMicrosoftHost() {
+    return this.getStringAttribute('secondary_table_microsoft_host');
+  }
+
   // secondary_web_endpoint - computed: true, optional: false, required: false
   public get secondaryWebEndpoint() {
     return this.getStringAttribute('secondary_web_endpoint');
@@ -767,6 +947,26 @@ export class DataAzurermStorageAccount extends cdktf.TerraformDataSource {
   // secondary_web_host - computed: true, optional: false, required: false
   public get secondaryWebHost() {
     return this.getStringAttribute('secondary_web_host');
+  }
+
+  // secondary_web_internet_endpoint - computed: true, optional: false, required: false
+  public get secondaryWebInternetEndpoint() {
+    return this.getStringAttribute('secondary_web_internet_endpoint');
+  }
+
+  // secondary_web_internet_host - computed: true, optional: false, required: false
+  public get secondaryWebInternetHost() {
+    return this.getStringAttribute('secondary_web_internet_host');
+  }
+
+  // secondary_web_microsoft_endpoint - computed: true, optional: false, required: false
+  public get secondaryWebMicrosoftEndpoint() {
+    return this.getStringAttribute('secondary_web_microsoft_endpoint');
+  }
+
+  // secondary_web_microsoft_host - computed: true, optional: false, required: false
+  public get secondaryWebMicrosoftHost() {
+    return this.getStringAttribute('secondary_web_microsoft_host');
   }
 
   // table_encryption_key_type - computed: true, optional: false, required: false
