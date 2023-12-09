@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/firewall
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/firewall
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +8,28 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermFirewallConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/firewall#id DataAzurermFirewall#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/firewall#dns_proxy_enabled DataAzurermFirewall#dns_proxy_enabled}
+  */
+  readonly dnsProxyEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/firewall#id DataAzurermFirewall#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/firewall#name DataAzurermFirewall#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/firewall#name DataAzurermFirewall#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/firewall#resource_group_name DataAzurermFirewall#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/firewall#resource_group_name DataAzurermFirewall#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/firewall#timeouts DataAzurermFirewall#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/firewall#timeouts DataAzurermFirewall#timeouts}
   */
   readonly timeouts?: DataAzurermFirewallTimeouts;
 }
@@ -273,7 +272,7 @@ export class DataAzurermFirewallVirtualHubList extends cdktf.ComplexList {
 }
 export interface DataAzurermFirewallTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/firewall#read DataAzurermFirewall#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/firewall#read DataAzurermFirewall#read}
   */
   readonly read?: string;
 }
@@ -348,7 +347,7 @@ export class DataAzurermFirewallTimeoutsOutputReference extends cdktf.ComplexObj
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/firewall azurerm_firewall}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/firewall azurerm_firewall}
 */
 export class DataAzurermFirewall extends cdktf.TerraformDataSource {
 
@@ -364,7 +363,7 @@ export class DataAzurermFirewall extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermFirewall resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermFirewall to import
-  * @param importFromId The id of the existing DataAzurermFirewall that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/firewall#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermFirewall that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/firewall#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermFirewall to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -376,7 +375,7 @@ export class DataAzurermFirewall extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/firewall azurerm_firewall} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/firewall azurerm_firewall} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -387,7 +386,7 @@ export class DataAzurermFirewall extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_firewall',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.83.0',
+        providerVersion: '3.84.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -398,6 +397,7 @@ export class DataAzurermFirewall extends cdktf.TerraformDataSource {
       connection: config.connection,
       forEach: config.forEach
     });
+    this._dnsProxyEnabled = config.dnsProxyEnabled;
     this._id = config.id;
     this._name = config.name;
     this._resourceGroupName = config.resourceGroupName;
@@ -407,6 +407,22 @@ export class DataAzurermFirewall extends cdktf.TerraformDataSource {
   // ==========
   // ATTRIBUTES
   // ==========
+
+  // dns_proxy_enabled - computed: true, optional: true, required: false
+  private _dnsProxyEnabled?: boolean | cdktf.IResolvable; 
+  public get dnsProxyEnabled() {
+    return this.getBooleanAttribute('dns_proxy_enabled');
+  }
+  public set dnsProxyEnabled(value: boolean | cdktf.IResolvable) {
+    this._dnsProxyEnabled = value;
+  }
+  public resetDnsProxyEnabled() {
+    this._dnsProxyEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dnsProxyEnabledInput() {
+    return this._dnsProxyEnabled;
+  }
 
   // dns_servers - computed: true, optional: false, required: false
   public get dnsServers() {
@@ -531,6 +547,7 @@ export class DataAzurermFirewall extends cdktf.TerraformDataSource {
 
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
+      dns_proxy_enabled: cdktf.booleanToTerraform(this._dnsProxyEnabled),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),

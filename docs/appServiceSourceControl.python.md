@@ -4,7 +4,7 @@
 
 ### AppServiceSourceControlA <a name="AppServiceSourceControlA" id="@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlA"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control azurerm_app_service_source_control}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control azurerm_app_service_source_control}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlA.Initializer"></a>
 
@@ -48,7 +48,7 @@ appServiceSourceControl.AppServiceSourceControlA(
 | <code><a href="#@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlA.Initializer.parameter.appId">app_id</a></code> | <code>str</code> | The ID of the Windows or Linux Web App. |
 | <code><a href="#@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlA.Initializer.parameter.branch">branch</a></code> | <code>str</code> | The branch name to use for deployments. |
 | <code><a href="#@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlA.Initializer.parameter.githubActionConfiguration">github_action_configuration</a></code> | <code><a href="#@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlGithubActionConfiguration">AppServiceSourceControlGithubActionConfiguration</a></code> | github_action_configuration block. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlA.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#id AppServiceSourceControlA#id}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlA.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#id AppServiceSourceControlA#id}. |
 | <code><a href="#@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlA.Initializer.parameter.repoUrl">repo_url</a></code> | <code>str</code> | The URL for the repository. |
 | <code><a href="#@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlA.Initializer.parameter.rollbackEnabled">rollback_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the Deployment Rollback be enabled? Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlA.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlTimeouts">AppServiceSourceControlTimeouts</a></code> | timeouts block. |
@@ -124,7 +124,7 @@ Must be unique amongst siblings in the same scope
 
 The ID of the Windows or Linux Web App.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#app_id AppServiceSourceControlA#app_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#app_id AppServiceSourceControlA#app_id}
 
 ---
 
@@ -134,7 +134,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The branch name to use for deployments.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#branch AppServiceSourceControlA#branch}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#branch AppServiceSourceControlA#branch}
 
 ---
 
@@ -144,7 +144,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 github_action_configuration block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#github_action_configuration AppServiceSourceControlA#github_action_configuration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#github_action_configuration AppServiceSourceControlA#github_action_configuration}
 
 ---
 
@@ -152,7 +152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#id AppServiceSourceControlA#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#id AppServiceSourceControlA#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -165,7 +165,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 The URL for the repository.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#repo_url AppServiceSourceControlA#repo_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#repo_url AppServiceSourceControlA#repo_url}
 
 ---
 
@@ -175,7 +175,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Should the Deployment Rollback be enabled? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#rollback_enabled AppServiceSourceControlA#rollback_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#rollback_enabled AppServiceSourceControlA#rollback_enabled}
 
 ---
 
@@ -185,7 +185,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#timeouts AppServiceSourceControlA#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#timeouts AppServiceSourceControlA#timeouts}
 
 ---
 
@@ -195,7 +195,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Should the App use local Git configuration.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#use_local_git AppServiceSourceControlA#use_local_git}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#use_local_git AppServiceSourceControlA#use_local_git}
 
 ---
 
@@ -207,7 +207,7 @@ Should code be deployed manually.
 
 Set to `false` to enable continuous integration, such as webhooks into online repos such as GitHub. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#use_manual_integration AppServiceSourceControlA#use_manual_integration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#use_manual_integration AppServiceSourceControlA#use_manual_integration}
 
 ---
 
@@ -217,7 +217,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The repository specified is Mercurial. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#use_mercurial AppServiceSourceControlA#use_mercurial}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#use_mercurial AppServiceSourceControlA#use_mercurial}
 
 ---
 
@@ -596,7 +596,7 @@ def put_github_action_configuration(
 
 code_configuration block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#code_configuration AppServiceSourceControlA#code_configuration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#code_configuration AppServiceSourceControlA#code_configuration}
 
 ---
 
@@ -606,7 +606,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 container_configuration block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#container_configuration AppServiceSourceControlA#container_configuration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#container_configuration AppServiceSourceControlA#container_configuration}
 
 ---
 
@@ -616,7 +616,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Should the service generate the GitHub Action Workflow file. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#generate_workflow_file AppServiceSourceControlA#generate_workflow_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#generate_workflow_file AppServiceSourceControlA#generate_workflow_file}
 
 ---
 
@@ -634,7 +634,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#create AppServiceSourceControlA#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#create AppServiceSourceControlA#create}.
 
 ---
 
@@ -642,7 +642,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#delete AppServiceSourceControlA#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#delete AppServiceSourceControlA#delete}.
 
 ---
 
@@ -650,7 +650,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#read AppServiceSourceControlA#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#read AppServiceSourceControlA#read}.
 
 ---
 
@@ -822,7 +822,7 @@ The construct id used in the generated config for the AppServiceSourceControlA t
 
 The id of the existing AppServiceSourceControlA that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1301,7 +1301,7 @@ appServiceSourceControl.AppServiceSourceControlAConfig(
 | <code><a href="#@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlAConfig.property.appId">app_id</a></code> | <code>str</code> | The ID of the Windows or Linux Web App. |
 | <code><a href="#@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlAConfig.property.branch">branch</a></code> | <code>str</code> | The branch name to use for deployments. |
 | <code><a href="#@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlAConfig.property.githubActionConfiguration">github_action_configuration</a></code> | <code><a href="#@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlGithubActionConfiguration">AppServiceSourceControlGithubActionConfiguration</a></code> | github_action_configuration block. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlAConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#id AppServiceSourceControlA#id}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlAConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#id AppServiceSourceControlA#id}. |
 | <code><a href="#@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlAConfig.property.repoUrl">repo_url</a></code> | <code>str</code> | The URL for the repository. |
 | <code><a href="#@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlAConfig.property.rollbackEnabled">rollback_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the Deployment Rollback be enabled? Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlAConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlTimeouts">AppServiceSourceControlTimeouts</a></code> | timeouts block. |
@@ -1391,7 +1391,7 @@ app_id: str
 
 The ID of the Windows or Linux Web App.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#app_id AppServiceSourceControlA#app_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#app_id AppServiceSourceControlA#app_id}
 
 ---
 
@@ -1405,7 +1405,7 @@ branch: str
 
 The branch name to use for deployments.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#branch AppServiceSourceControlA#branch}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#branch AppServiceSourceControlA#branch}
 
 ---
 
@@ -1419,7 +1419,7 @@ github_action_configuration: AppServiceSourceControlGithubActionConfiguration
 
 github_action_configuration block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#github_action_configuration AppServiceSourceControlA#github_action_configuration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#github_action_configuration AppServiceSourceControlA#github_action_configuration}
 
 ---
 
@@ -1431,7 +1431,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#id AppServiceSourceControlA#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#id AppServiceSourceControlA#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1448,7 +1448,7 @@ repo_url: str
 
 The URL for the repository.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#repo_url AppServiceSourceControlA#repo_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#repo_url AppServiceSourceControlA#repo_url}
 
 ---
 
@@ -1462,7 +1462,7 @@ rollback_enabled: typing.Union[bool, IResolvable]
 
 Should the Deployment Rollback be enabled? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#rollback_enabled AppServiceSourceControlA#rollback_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#rollback_enabled AppServiceSourceControlA#rollback_enabled}
 
 ---
 
@@ -1476,7 +1476,7 @@ timeouts: AppServiceSourceControlTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#timeouts AppServiceSourceControlA#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#timeouts AppServiceSourceControlA#timeouts}
 
 ---
 
@@ -1490,7 +1490,7 @@ use_local_git: typing.Union[bool, IResolvable]
 
 Should the App use local Git configuration.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#use_local_git AppServiceSourceControlA#use_local_git}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#use_local_git AppServiceSourceControlA#use_local_git}
 
 ---
 
@@ -1506,7 +1506,7 @@ Should code be deployed manually.
 
 Set to `false` to enable continuous integration, such as webhooks into online repos such as GitHub. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#use_manual_integration AppServiceSourceControlA#use_manual_integration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#use_manual_integration AppServiceSourceControlA#use_manual_integration}
 
 ---
 
@@ -1520,7 +1520,7 @@ use_mercurial: typing.Union[bool, IResolvable]
 
 The repository specified is Mercurial. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#use_mercurial AppServiceSourceControlA#use_mercurial}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#use_mercurial AppServiceSourceControlA#use_mercurial}
 
 ---
 
@@ -1558,7 +1558,7 @@ code_configuration: AppServiceSourceControlGithubActionConfigurationCodeConfigur
 
 code_configuration block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#code_configuration AppServiceSourceControlA#code_configuration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#code_configuration AppServiceSourceControlA#code_configuration}
 
 ---
 
@@ -1572,7 +1572,7 @@ container_configuration: AppServiceSourceControlGithubActionConfigurationContain
 
 container_configuration block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#container_configuration AppServiceSourceControlA#container_configuration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#container_configuration AppServiceSourceControlA#container_configuration}
 
 ---
 
@@ -1586,7 +1586,7 @@ generate_workflow_file: typing.Union[bool, IResolvable]
 
 Should the service generate the GitHub Action Workflow file. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#generate_workflow_file AppServiceSourceControlA#generate_workflow_file}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#generate_workflow_file AppServiceSourceControlA#generate_workflow_file}
 
 ---
 
@@ -1622,7 +1622,7 @@ runtime_stack: str
 
 The value to use for the Runtime Stack in the workflow file content for code base apps.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#runtime_stack AppServiceSourceControlA#runtime_stack}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#runtime_stack AppServiceSourceControlA#runtime_stack}
 
 ---
 
@@ -1636,7 +1636,7 @@ runtime_version: str
 
 The value to use for the Runtime Version in the workflow file content for code base apps.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#runtime_version AppServiceSourceControlA#runtime_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#runtime_version AppServiceSourceControlA#runtime_version}
 
 ---
 
@@ -1676,7 +1676,7 @@ image_name: str
 
 The image name for the build.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#image_name AppServiceSourceControlA#image_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#image_name AppServiceSourceControlA#image_name}
 
 ---
 
@@ -1690,7 +1690,7 @@ registry_url: str
 
 The server URL for the container registry where the build will be hosted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#registry_url AppServiceSourceControlA#registry_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#registry_url AppServiceSourceControlA#registry_url}
 
 ---
 
@@ -1704,7 +1704,7 @@ registry_password: str
 
 The password used to upload the image to the container registry.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#registry_password AppServiceSourceControlA#registry_password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#registry_password AppServiceSourceControlA#registry_password}
 
 ---
 
@@ -1718,7 +1718,7 @@ registry_username: str
 
 The username used to upload the image to the container registry.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#registry_username AppServiceSourceControlA#registry_username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#registry_username AppServiceSourceControlA#registry_username}
 
 ---
 
@@ -1740,9 +1740,9 @@ appServiceSourceControl.AppServiceSourceControlTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#create AppServiceSourceControlA#create}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#delete AppServiceSourceControlA#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#read AppServiceSourceControlA#read}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#create AppServiceSourceControlA#create}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#delete AppServiceSourceControlA#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceSourceControl.AppServiceSourceControlTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#read AppServiceSourceControlA#read}. |
 
 ---
 
@@ -1754,7 +1754,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#create AppServiceSourceControlA#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#create AppServiceSourceControlA#create}.
 
 ---
 
@@ -1766,7 +1766,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#delete AppServiceSourceControlA#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#delete AppServiceSourceControlA#delete}.
 
 ---
 
@@ -1778,7 +1778,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#read AppServiceSourceControlA#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#read AppServiceSourceControlA#read}.
 
 ---
 
@@ -2726,7 +2726,7 @@ def put_code_configuration(
 
 The value to use for the Runtime Stack in the workflow file content for code base apps.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#runtime_stack AppServiceSourceControlA#runtime_stack}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#runtime_stack AppServiceSourceControlA#runtime_stack}
 
 ---
 
@@ -2736,7 +2736,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The value to use for the Runtime Version in the workflow file content for code base apps.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#runtime_version AppServiceSourceControlA#runtime_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#runtime_version AppServiceSourceControlA#runtime_version}
 
 ---
 
@@ -2757,7 +2757,7 @@ def put_container_configuration(
 
 The image name for the build.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#image_name AppServiceSourceControlA#image_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#image_name AppServiceSourceControlA#image_name}
 
 ---
 
@@ -2767,7 +2767,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The server URL for the container registry where the build will be hosted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#registry_url AppServiceSourceControlA#registry_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#registry_url AppServiceSourceControlA#registry_url}
 
 ---
 
@@ -2777,7 +2777,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The password used to upload the image to the container registry.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#registry_password AppServiceSourceControlA#registry_password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#registry_password AppServiceSourceControlA#registry_password}
 
 ---
 
@@ -2787,7 +2787,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The username used to upload the image to the container registry.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/app_service_source_control#registry_username AppServiceSourceControlA#registry_username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/app_service_source_control#registry_username AppServiceSourceControlA#registry_username}
 
 ---
 

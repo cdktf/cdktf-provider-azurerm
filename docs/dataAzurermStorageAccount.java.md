@@ -4,7 +4,7 @@
 
 ### DataAzurermStorageAccount <a name="DataAzurermStorageAccount" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account azurerm_storage_account}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account azurerm_storage_account}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.Initializer"></a>
 
@@ -42,10 +42,10 @@ DataAzurermStorageAccount.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#name DataAzurermStorageAccount#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#resource_group_name DataAzurermStorageAccount#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#id DataAzurermStorageAccount#id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.Initializer.parameter.minTlsVersion">minTlsVersion</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#min_tls_version DataAzurermStorageAccount#min_tls_version}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#name DataAzurermStorageAccount#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#resource_group_name DataAzurermStorageAccount#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#id DataAzurermStorageAccount#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.Initializer.parameter.minTlsVersion">minTlsVersion</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#min_tls_version DataAzurermStorageAccount#min_tls_version}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountTimeouts">DataAzurermStorageAccountTimeouts</a></code> | timeouts block. |
 
 ---
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#name DataAzurermStorageAccount#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#name DataAzurermStorageAccount#name}.
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#resource_group_name DataAzurermStorageAccount#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#resource_group_name DataAzurermStorageAccount#resource_group_name}.
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#id DataAzurermStorageAccount#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#id DataAzurermStorageAccount#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -141,7 +141,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#min_tls_version DataAzurermStorageAccount#min_tls_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#min_tls_version DataAzurermStorageAccount#min_tls_version}.
 
 ---
 
@@ -151,7 +151,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#timeouts DataAzurermStorageAccount#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#timeouts DataAzurermStorageAccount#timeouts}
 
 ---
 
@@ -499,7 +499,7 @@ The construct id used in the generated config for the DataAzurermStorageAccount 
 
 The id of the existing DataAzurermStorageAccount that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -544,35 +544,75 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryBlobConnectionString">primaryBlobConnectionString</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryBlobEndpoint">primaryBlobEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryBlobHost">primaryBlobHost</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryBlobInternetEndpoint">primaryBlobInternetEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryBlobInternetHost">primaryBlobInternetHost</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryBlobMicrosoftEndpoint">primaryBlobMicrosoftEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryBlobMicrosoftHost">primaryBlobMicrosoftHost</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryConnectionString">primaryConnectionString</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryDfsEndpoint">primaryDfsEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryDfsHost">primaryDfsHost</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryDfsInternetEndpoint">primaryDfsInternetEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryDfsInternetHost">primaryDfsInternetHost</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryDfsMicrosoftEndpoint">primaryDfsMicrosoftEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryDfsMicrosoftHost">primaryDfsMicrosoftHost</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryFileEndpoint">primaryFileEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryFileHost">primaryFileHost</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryFileInternetEndpoint">primaryFileInternetEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryFileInternetHost">primaryFileInternetHost</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryFileMicrosoftEndpoint">primaryFileMicrosoftEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryFileMicrosoftHost">primaryFileMicrosoftHost</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryLocation">primaryLocation</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryQueueEndpoint">primaryQueueEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryQueueHost">primaryQueueHost</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryQueueMicrosoftEndpoint">primaryQueueMicrosoftEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryQueueMicrosoftHost">primaryQueueMicrosoftHost</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryTableEndpoint">primaryTableEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryTableHost">primaryTableHost</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryTableMicrosoftEndpoint">primaryTableMicrosoftEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryTableMicrosoftHost">primaryTableMicrosoftHost</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryWebEndpoint">primaryWebEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryWebHost">primaryWebHost</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryWebInternetEndpoint">primaryWebInternetEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryWebInternetHost">primaryWebInternetHost</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryWebMicrosoftEndpoint">primaryWebMicrosoftEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryWebMicrosoftHost">primaryWebMicrosoftHost</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.queueEncryptionKeyType">queueEncryptionKeyType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryAccessKey">secondaryAccessKey</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryBlobConnectionString">secondaryBlobConnectionString</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryBlobEndpoint">secondaryBlobEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryBlobHost">secondaryBlobHost</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryBlobInternetEndpoint">secondaryBlobInternetEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryBlobInternetHost">secondaryBlobInternetHost</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryBlobMicrosoftEndpoint">secondaryBlobMicrosoftEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryBlobMicrosoftHost">secondaryBlobMicrosoftHost</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryConnectionString">secondaryConnectionString</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryDfsEndpoint">secondaryDfsEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryDfsHost">secondaryDfsHost</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryDfsInternetEndpoint">secondaryDfsInternetEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryDfsInternetHost">secondaryDfsInternetHost</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryDfsMicrosoftEndpoint">secondaryDfsMicrosoftEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryDfsMicrosoftHost">secondaryDfsMicrosoftHost</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryFileEndpoint">secondaryFileEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryFileHost">secondaryFileHost</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryFileInternetEndpoint">secondaryFileInternetEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryFileInternetHost">secondaryFileInternetHost</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryFileMicrosoftEndpoint">secondaryFileMicrosoftEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryFileMicrosoftHost">secondaryFileMicrosoftHost</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryLocation">secondaryLocation</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryQueueEndpoint">secondaryQueueEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryQueueHost">secondaryQueueHost</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryQueueMicrosoftEndpoint">secondaryQueueMicrosoftEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryQueueMicrosoftHost">secondaryQueueMicrosoftHost</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryTableEndpoint">secondaryTableEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryTableHost">secondaryTableHost</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryTableMicrosoftEndpoint">secondaryTableMicrosoftEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryTableMicrosoftHost">secondaryTableMicrosoftHost</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryWebEndpoint">secondaryWebEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryWebHost">secondaryWebHost</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryWebInternetEndpoint">secondaryWebInternetEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryWebInternetHost">secondaryWebInternetHost</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryWebMicrosoftEndpoint">secondaryWebMicrosoftEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryWebMicrosoftHost">secondaryWebMicrosoftHost</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.tableEncryptionKeyType">tableEncryptionKeyType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.tags">tags</a></code> | <code>com.hashicorp.cdktf.StringMap</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountTimeoutsOutputReference">DataAzurermStorageAccountTimeoutsOutputReference</a></code> | *No description.* |
@@ -880,6 +920,46 @@ public java.lang.String getPrimaryBlobHost();
 
 ---
 
+##### `primaryBlobInternetEndpoint`<sup>Required</sup> <a name="primaryBlobInternetEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryBlobInternetEndpoint"></a>
+
+```java
+public java.lang.String getPrimaryBlobInternetEndpoint();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `primaryBlobInternetHost`<sup>Required</sup> <a name="primaryBlobInternetHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryBlobInternetHost"></a>
+
+```java
+public java.lang.String getPrimaryBlobInternetHost();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `primaryBlobMicrosoftEndpoint`<sup>Required</sup> <a name="primaryBlobMicrosoftEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryBlobMicrosoftEndpoint"></a>
+
+```java
+public java.lang.String getPrimaryBlobMicrosoftEndpoint();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `primaryBlobMicrosoftHost`<sup>Required</sup> <a name="primaryBlobMicrosoftHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryBlobMicrosoftHost"></a>
+
+```java
+public java.lang.String getPrimaryBlobMicrosoftHost();
+```
+
+- *Type:* java.lang.String
+
+---
+
 ##### `primaryConnectionString`<sup>Required</sup> <a name="primaryConnectionString" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryConnectionString"></a>
 
 ```java
@@ -910,6 +990,46 @@ public java.lang.String getPrimaryDfsHost();
 
 ---
 
+##### `primaryDfsInternetEndpoint`<sup>Required</sup> <a name="primaryDfsInternetEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryDfsInternetEndpoint"></a>
+
+```java
+public java.lang.String getPrimaryDfsInternetEndpoint();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `primaryDfsInternetHost`<sup>Required</sup> <a name="primaryDfsInternetHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryDfsInternetHost"></a>
+
+```java
+public java.lang.String getPrimaryDfsInternetHost();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `primaryDfsMicrosoftEndpoint`<sup>Required</sup> <a name="primaryDfsMicrosoftEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryDfsMicrosoftEndpoint"></a>
+
+```java
+public java.lang.String getPrimaryDfsMicrosoftEndpoint();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `primaryDfsMicrosoftHost`<sup>Required</sup> <a name="primaryDfsMicrosoftHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryDfsMicrosoftHost"></a>
+
+```java
+public java.lang.String getPrimaryDfsMicrosoftHost();
+```
+
+- *Type:* java.lang.String
+
+---
+
 ##### `primaryFileEndpoint`<sup>Required</sup> <a name="primaryFileEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryFileEndpoint"></a>
 
 ```java
@@ -924,6 +1044,46 @@ public java.lang.String getPrimaryFileEndpoint();
 
 ```java
 public java.lang.String getPrimaryFileHost();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `primaryFileInternetEndpoint`<sup>Required</sup> <a name="primaryFileInternetEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryFileInternetEndpoint"></a>
+
+```java
+public java.lang.String getPrimaryFileInternetEndpoint();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `primaryFileInternetHost`<sup>Required</sup> <a name="primaryFileInternetHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryFileInternetHost"></a>
+
+```java
+public java.lang.String getPrimaryFileInternetHost();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `primaryFileMicrosoftEndpoint`<sup>Required</sup> <a name="primaryFileMicrosoftEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryFileMicrosoftEndpoint"></a>
+
+```java
+public java.lang.String getPrimaryFileMicrosoftEndpoint();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `primaryFileMicrosoftHost`<sup>Required</sup> <a name="primaryFileMicrosoftHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryFileMicrosoftHost"></a>
+
+```java
+public java.lang.String getPrimaryFileMicrosoftHost();
 ```
 
 - *Type:* java.lang.String
@@ -960,6 +1120,26 @@ public java.lang.String getPrimaryQueueHost();
 
 ---
 
+##### `primaryQueueMicrosoftEndpoint`<sup>Required</sup> <a name="primaryQueueMicrosoftEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryQueueMicrosoftEndpoint"></a>
+
+```java
+public java.lang.String getPrimaryQueueMicrosoftEndpoint();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `primaryQueueMicrosoftHost`<sup>Required</sup> <a name="primaryQueueMicrosoftHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryQueueMicrosoftHost"></a>
+
+```java
+public java.lang.String getPrimaryQueueMicrosoftHost();
+```
+
+- *Type:* java.lang.String
+
+---
+
 ##### `primaryTableEndpoint`<sup>Required</sup> <a name="primaryTableEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryTableEndpoint"></a>
 
 ```java
@@ -980,6 +1160,26 @@ public java.lang.String getPrimaryTableHost();
 
 ---
 
+##### `primaryTableMicrosoftEndpoint`<sup>Required</sup> <a name="primaryTableMicrosoftEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryTableMicrosoftEndpoint"></a>
+
+```java
+public java.lang.String getPrimaryTableMicrosoftEndpoint();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `primaryTableMicrosoftHost`<sup>Required</sup> <a name="primaryTableMicrosoftHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryTableMicrosoftHost"></a>
+
+```java
+public java.lang.String getPrimaryTableMicrosoftHost();
+```
+
+- *Type:* java.lang.String
+
+---
+
 ##### `primaryWebEndpoint`<sup>Required</sup> <a name="primaryWebEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryWebEndpoint"></a>
 
 ```java
@@ -994,6 +1194,46 @@ public java.lang.String getPrimaryWebEndpoint();
 
 ```java
 public java.lang.String getPrimaryWebHost();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `primaryWebInternetEndpoint`<sup>Required</sup> <a name="primaryWebInternetEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryWebInternetEndpoint"></a>
+
+```java
+public java.lang.String getPrimaryWebInternetEndpoint();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `primaryWebInternetHost`<sup>Required</sup> <a name="primaryWebInternetHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryWebInternetHost"></a>
+
+```java
+public java.lang.String getPrimaryWebInternetHost();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `primaryWebMicrosoftEndpoint`<sup>Required</sup> <a name="primaryWebMicrosoftEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryWebMicrosoftEndpoint"></a>
+
+```java
+public java.lang.String getPrimaryWebMicrosoftEndpoint();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `primaryWebMicrosoftHost`<sup>Required</sup> <a name="primaryWebMicrosoftHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryWebMicrosoftHost"></a>
+
+```java
+public java.lang.String getPrimaryWebMicrosoftHost();
 ```
 
 - *Type:* java.lang.String
@@ -1050,6 +1290,46 @@ public java.lang.String getSecondaryBlobHost();
 
 ---
 
+##### `secondaryBlobInternetEndpoint`<sup>Required</sup> <a name="secondaryBlobInternetEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryBlobInternetEndpoint"></a>
+
+```java
+public java.lang.String getSecondaryBlobInternetEndpoint();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `secondaryBlobInternetHost`<sup>Required</sup> <a name="secondaryBlobInternetHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryBlobInternetHost"></a>
+
+```java
+public java.lang.String getSecondaryBlobInternetHost();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `secondaryBlobMicrosoftEndpoint`<sup>Required</sup> <a name="secondaryBlobMicrosoftEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryBlobMicrosoftEndpoint"></a>
+
+```java
+public java.lang.String getSecondaryBlobMicrosoftEndpoint();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `secondaryBlobMicrosoftHost`<sup>Required</sup> <a name="secondaryBlobMicrosoftHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryBlobMicrosoftHost"></a>
+
+```java
+public java.lang.String getSecondaryBlobMicrosoftHost();
+```
+
+- *Type:* java.lang.String
+
+---
+
 ##### `secondaryConnectionString`<sup>Required</sup> <a name="secondaryConnectionString" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryConnectionString"></a>
 
 ```java
@@ -1080,6 +1360,46 @@ public java.lang.String getSecondaryDfsHost();
 
 ---
 
+##### `secondaryDfsInternetEndpoint`<sup>Required</sup> <a name="secondaryDfsInternetEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryDfsInternetEndpoint"></a>
+
+```java
+public java.lang.String getSecondaryDfsInternetEndpoint();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `secondaryDfsInternetHost`<sup>Required</sup> <a name="secondaryDfsInternetHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryDfsInternetHost"></a>
+
+```java
+public java.lang.String getSecondaryDfsInternetHost();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `secondaryDfsMicrosoftEndpoint`<sup>Required</sup> <a name="secondaryDfsMicrosoftEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryDfsMicrosoftEndpoint"></a>
+
+```java
+public java.lang.String getSecondaryDfsMicrosoftEndpoint();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `secondaryDfsMicrosoftHost`<sup>Required</sup> <a name="secondaryDfsMicrosoftHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryDfsMicrosoftHost"></a>
+
+```java
+public java.lang.String getSecondaryDfsMicrosoftHost();
+```
+
+- *Type:* java.lang.String
+
+---
+
 ##### `secondaryFileEndpoint`<sup>Required</sup> <a name="secondaryFileEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryFileEndpoint"></a>
 
 ```java
@@ -1094,6 +1414,46 @@ public java.lang.String getSecondaryFileEndpoint();
 
 ```java
 public java.lang.String getSecondaryFileHost();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `secondaryFileInternetEndpoint`<sup>Required</sup> <a name="secondaryFileInternetEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryFileInternetEndpoint"></a>
+
+```java
+public java.lang.String getSecondaryFileInternetEndpoint();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `secondaryFileInternetHost`<sup>Required</sup> <a name="secondaryFileInternetHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryFileInternetHost"></a>
+
+```java
+public java.lang.String getSecondaryFileInternetHost();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `secondaryFileMicrosoftEndpoint`<sup>Required</sup> <a name="secondaryFileMicrosoftEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryFileMicrosoftEndpoint"></a>
+
+```java
+public java.lang.String getSecondaryFileMicrosoftEndpoint();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `secondaryFileMicrosoftHost`<sup>Required</sup> <a name="secondaryFileMicrosoftHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryFileMicrosoftHost"></a>
+
+```java
+public java.lang.String getSecondaryFileMicrosoftHost();
 ```
 
 - *Type:* java.lang.String
@@ -1130,6 +1490,26 @@ public java.lang.String getSecondaryQueueHost();
 
 ---
 
+##### `secondaryQueueMicrosoftEndpoint`<sup>Required</sup> <a name="secondaryQueueMicrosoftEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryQueueMicrosoftEndpoint"></a>
+
+```java
+public java.lang.String getSecondaryQueueMicrosoftEndpoint();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `secondaryQueueMicrosoftHost`<sup>Required</sup> <a name="secondaryQueueMicrosoftHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryQueueMicrosoftHost"></a>
+
+```java
+public java.lang.String getSecondaryQueueMicrosoftHost();
+```
+
+- *Type:* java.lang.String
+
+---
+
 ##### `secondaryTableEndpoint`<sup>Required</sup> <a name="secondaryTableEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryTableEndpoint"></a>
 
 ```java
@@ -1150,6 +1530,26 @@ public java.lang.String getSecondaryTableHost();
 
 ---
 
+##### `secondaryTableMicrosoftEndpoint`<sup>Required</sup> <a name="secondaryTableMicrosoftEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryTableMicrosoftEndpoint"></a>
+
+```java
+public java.lang.String getSecondaryTableMicrosoftEndpoint();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `secondaryTableMicrosoftHost`<sup>Required</sup> <a name="secondaryTableMicrosoftHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryTableMicrosoftHost"></a>
+
+```java
+public java.lang.String getSecondaryTableMicrosoftHost();
+```
+
+- *Type:* java.lang.String
+
+---
+
 ##### `secondaryWebEndpoint`<sup>Required</sup> <a name="secondaryWebEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryWebEndpoint"></a>
 
 ```java
@@ -1164,6 +1564,46 @@ public java.lang.String getSecondaryWebEndpoint();
 
 ```java
 public java.lang.String getSecondaryWebHost();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `secondaryWebInternetEndpoint`<sup>Required</sup> <a name="secondaryWebInternetEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryWebInternetEndpoint"></a>
+
+```java
+public java.lang.String getSecondaryWebInternetEndpoint();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `secondaryWebInternetHost`<sup>Required</sup> <a name="secondaryWebInternetHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryWebInternetHost"></a>
+
+```java
+public java.lang.String getSecondaryWebInternetHost();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `secondaryWebMicrosoftEndpoint`<sup>Required</sup> <a name="secondaryWebMicrosoftEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryWebMicrosoftEndpoint"></a>
+
+```java
+public java.lang.String getSecondaryWebMicrosoftEndpoint();
+```
+
+- *Type:* java.lang.String
+
+---
+
+##### `secondaryWebMicrosoftHost`<sup>Required</sup> <a name="secondaryWebMicrosoftHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryWebMicrosoftHost"></a>
+
+```java
+public java.lang.String getSecondaryWebMicrosoftHost();
 ```
 
 - *Type:* java.lang.String
@@ -1372,10 +1812,10 @@ DataAzurermStorageAccountConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#name DataAzurermStorageAccount#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#resource_group_name DataAzurermStorageAccount#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#id DataAzurermStorageAccount#id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountConfig.property.minTlsVersion">minTlsVersion</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#min_tls_version DataAzurermStorageAccount#min_tls_version}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#name DataAzurermStorageAccount#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#resource_group_name DataAzurermStorageAccount#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#id DataAzurermStorageAccount#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountConfig.property.minTlsVersion">minTlsVersion</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#min_tls_version DataAzurermStorageAccount#min_tls_version}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountTimeouts">DataAzurermStorageAccountTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1458,7 +1898,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#name DataAzurermStorageAccount#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#name DataAzurermStorageAccount#name}.
 
 ---
 
@@ -1470,7 +1910,7 @@ public java.lang.String getResourceGroupName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#resource_group_name DataAzurermStorageAccount#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#resource_group_name DataAzurermStorageAccount#resource_group_name}.
 
 ---
 
@@ -1482,7 +1922,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#id DataAzurermStorageAccount#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#id DataAzurermStorageAccount#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1497,7 +1937,7 @@ public java.lang.String getMinTlsVersion();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#min_tls_version DataAzurermStorageAccount#min_tls_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#min_tls_version DataAzurermStorageAccount#min_tls_version}.
 
 ---
 
@@ -1511,7 +1951,7 @@ public DataAzurermStorageAccountTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#timeouts DataAzurermStorageAccount#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#timeouts DataAzurermStorageAccount#timeouts}
 
 ---
 
@@ -1555,7 +1995,7 @@ DataAzurermStorageAccountTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#read DataAzurermStorageAccount#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#read DataAzurermStorageAccount#read}. |
 
 ---
 
@@ -1567,7 +2007,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#read DataAzurermStorageAccount#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#read DataAzurermStorageAccount#read}.
 
 ---
 

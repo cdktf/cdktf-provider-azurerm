@@ -4,7 +4,7 @@
 
 ### VirtualDesktopApplicationGroup <a name="VirtualDesktopApplicationGroup" id="@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroup"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group azurerm_virtual_desktop_application_group}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group azurerm_virtual_desktop_application_group}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroup.Initializer"></a>
 
@@ -515,7 +515,7 @@ The construct id used in the generated config for the VirtualDesktopApplicationG
 
 The id of the existing VirtualDesktopApplicationGroup that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -973,16 +973,16 @@ const virtualDesktopApplicationGroupConfig: virtualDesktopApplicationGroup.Virtu
 | <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupConfig.property.hostPoolId">hostPoolId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#host_pool_id VirtualDesktopApplicationGroup#host_pool_id}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#location VirtualDesktopApplicationGroup#location}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#name VirtualDesktopApplicationGroup#name}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#resource_group_name VirtualDesktopApplicationGroup#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupConfig.property.type">type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#type VirtualDesktopApplicationGroup#type}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupConfig.property.defaultDesktopDisplayName">defaultDesktopDisplayName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#default_desktop_display_name VirtualDesktopApplicationGroup#default_desktop_display_name}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupConfig.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#description VirtualDesktopApplicationGroup#description}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupConfig.property.friendlyName">friendlyName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#friendly_name VirtualDesktopApplicationGroup#friendly_name}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#id VirtualDesktopApplicationGroup#id}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#tags VirtualDesktopApplicationGroup#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupConfig.property.hostPoolId">hostPoolId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#host_pool_id VirtualDesktopApplicationGroup#host_pool_id}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupConfig.property.location">location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#location VirtualDesktopApplicationGroup#location}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#name VirtualDesktopApplicationGroup#name}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#resource_group_name VirtualDesktopApplicationGroup#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupConfig.property.type">type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#type VirtualDesktopApplicationGroup#type}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupConfig.property.defaultDesktopDisplayName">defaultDesktopDisplayName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#default_desktop_display_name VirtualDesktopApplicationGroup#default_desktop_display_name}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupConfig.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#description VirtualDesktopApplicationGroup#description}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupConfig.property.friendlyName">friendlyName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#friendly_name VirtualDesktopApplicationGroup#friendly_name}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#id VirtualDesktopApplicationGroup#id}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupConfig.property.tags">tags</a></code> | <code>{[ key: string ]: string}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#tags VirtualDesktopApplicationGroup#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupTimeouts">VirtualDesktopApplicationGroupTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1065,7 +1065,7 @@ public readonly hostPoolId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#host_pool_id VirtualDesktopApplicationGroup#host_pool_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#host_pool_id VirtualDesktopApplicationGroup#host_pool_id}.
 
 ---
 
@@ -1077,7 +1077,7 @@ public readonly location: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#location VirtualDesktopApplicationGroup#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#location VirtualDesktopApplicationGroup#location}.
 
 ---
 
@@ -1089,7 +1089,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#name VirtualDesktopApplicationGroup#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#name VirtualDesktopApplicationGroup#name}.
 
 ---
 
@@ -1101,7 +1101,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#resource_group_name VirtualDesktopApplicationGroup#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#resource_group_name VirtualDesktopApplicationGroup#resource_group_name}.
 
 ---
 
@@ -1113,7 +1113,7 @@ public readonly type: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#type VirtualDesktopApplicationGroup#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#type VirtualDesktopApplicationGroup#type}.
 
 ---
 
@@ -1125,7 +1125,7 @@ public readonly defaultDesktopDisplayName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#default_desktop_display_name VirtualDesktopApplicationGroup#default_desktop_display_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#default_desktop_display_name VirtualDesktopApplicationGroup#default_desktop_display_name}.
 
 ---
 
@@ -1137,7 +1137,7 @@ public readonly description: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#description VirtualDesktopApplicationGroup#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#description VirtualDesktopApplicationGroup#description}.
 
 ---
 
@@ -1149,7 +1149,7 @@ public readonly friendlyName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#friendly_name VirtualDesktopApplicationGroup#friendly_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#friendly_name VirtualDesktopApplicationGroup#friendly_name}.
 
 ---
 
@@ -1161,7 +1161,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#id VirtualDesktopApplicationGroup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#id VirtualDesktopApplicationGroup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1176,7 +1176,7 @@ public readonly tags: {[ key: string ]: string};
 
 - *Type:* {[ key: string ]: string}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#tags VirtualDesktopApplicationGroup#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#tags VirtualDesktopApplicationGroup#tags}.
 
 ---
 
@@ -1190,7 +1190,7 @@ public readonly timeouts: VirtualDesktopApplicationGroupTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#timeouts VirtualDesktopApplicationGroup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#timeouts VirtualDesktopApplicationGroup#timeouts}
 
 ---
 
@@ -1208,10 +1208,10 @@ const virtualDesktopApplicationGroupTimeouts: virtualDesktopApplicationGroup.Vir
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#create VirtualDesktopApplicationGroup#create}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#delete VirtualDesktopApplicationGroup#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#read VirtualDesktopApplicationGroup#read}. |
-| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#update VirtualDesktopApplicationGroup#update}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#create VirtualDesktopApplicationGroup#create}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#delete VirtualDesktopApplicationGroup#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#read VirtualDesktopApplicationGroup#read}. |
+| <code><a href="#@cdktf/provider-azurerm.virtualDesktopApplicationGroup.VirtualDesktopApplicationGroupTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#update VirtualDesktopApplicationGroup#update}. |
 
 ---
 
@@ -1223,7 +1223,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#create VirtualDesktopApplicationGroup#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#create VirtualDesktopApplicationGroup#create}.
 
 ---
 
@@ -1235,7 +1235,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#delete VirtualDesktopApplicationGroup#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#delete VirtualDesktopApplicationGroup#delete}.
 
 ---
 
@@ -1247,7 +1247,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#read VirtualDesktopApplicationGroup#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#read VirtualDesktopApplicationGroup#read}.
 
 ---
 
@@ -1259,7 +1259,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_desktop_application_group#update VirtualDesktopApplicationGroup#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_desktop_application_group#update VirtualDesktopApplicationGroup#update}.
 
 ---
 

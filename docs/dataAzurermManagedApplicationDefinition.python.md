@@ -4,7 +4,7 @@
 
 ### DataAzurermManagedApplicationDefinition <a name="DataAzurermManagedApplicationDefinition" id="@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/managed_application_definition azurerm_managed_application_definition}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/managed_application_definition azurerm_managed_application_definition}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition.Initializer"></a>
 
@@ -39,9 +39,9 @@ dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition(
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/managed_application_definition#name DataAzurermManagedApplicationDefinition#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/managed_application_definition#resource_group_name DataAzurermManagedApplicationDefinition#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/managed_application_definition#id DataAzurermManagedApplicationDefinition#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/managed_application_definition#name DataAzurermManagedApplicationDefinition#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/managed_application_definition#resource_group_name DataAzurermManagedApplicationDefinition#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/managed_application_definition#id DataAzurermManagedApplicationDefinition#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinition.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionTimeouts">DataAzurermManagedApplicationDefinitionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/managed_application_definition#name DataAzurermManagedApplicationDefinition#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/managed_application_definition#name DataAzurermManagedApplicationDefinition#name}.
 
 ---
 
@@ -118,7 +118,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/managed_application_definition#resource_group_name DataAzurermManagedApplicationDefinition#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/managed_application_definition#resource_group_name DataAzurermManagedApplicationDefinition#resource_group_name}.
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/managed_application_definition#id DataAzurermManagedApplicationDefinition#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/managed_application_definition#id DataAzurermManagedApplicationDefinition#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -139,7 +139,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/managed_application_definition#timeouts DataAzurermManagedApplicationDefinition#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/managed_application_definition#timeouts DataAzurermManagedApplicationDefinition#timeouts}
 
 ---
 
@@ -390,7 +390,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/managed_application_definition#read DataAzurermManagedApplicationDefinition#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/managed_application_definition#read DataAzurermManagedApplicationDefinition#read}.
 
 ---
 
@@ -520,7 +520,7 @@ The construct id used in the generated config for the DataAzurermManagedApplicat
 
 The id of the existing DataAzurermManagedApplicationDefinition that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/managed_application_definition#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/managed_application_definition#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -825,9 +825,9 @@ dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionC
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/managed_application_definition#name DataAzurermManagedApplicationDefinition#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/managed_application_definition#resource_group_name DataAzurermManagedApplicationDefinition#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/managed_application_definition#id DataAzurermManagedApplicationDefinition#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/managed_application_definition#name DataAzurermManagedApplicationDefinition#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/managed_application_definition#resource_group_name DataAzurermManagedApplicationDefinition#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/managed_application_definition#id DataAzurermManagedApplicationDefinition#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionTimeouts">DataAzurermManagedApplicationDefinitionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -910,7 +910,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/managed_application_definition#name DataAzurermManagedApplicationDefinition#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/managed_application_definition#name DataAzurermManagedApplicationDefinition#name}.
 
 ---
 
@@ -922,7 +922,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/managed_application_definition#resource_group_name DataAzurermManagedApplicationDefinition#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/managed_application_definition#resource_group_name DataAzurermManagedApplicationDefinition#resource_group_name}.
 
 ---
 
@@ -934,7 +934,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/managed_application_definition#id DataAzurermManagedApplicationDefinition#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/managed_application_definition#id DataAzurermManagedApplicationDefinition#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -951,7 +951,7 @@ timeouts: DataAzurermManagedApplicationDefinitionTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/managed_application_definition#timeouts DataAzurermManagedApplicationDefinition#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/managed_application_definition#timeouts DataAzurermManagedApplicationDefinition#timeouts}
 
 ---
 
@@ -971,7 +971,7 @@ dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionT
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/managed_application_definition#read DataAzurermManagedApplicationDefinition#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermManagedApplicationDefinition.DataAzurermManagedApplicationDefinitionTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/managed_application_definition#read DataAzurermManagedApplicationDefinition#read}. |
 
 ---
 
@@ -983,7 +983,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/managed_application_definition#read DataAzurermManagedApplicationDefinition#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/managed_application_definition#read DataAzurermManagedApplicationDefinition#read}.
 
 ---
 

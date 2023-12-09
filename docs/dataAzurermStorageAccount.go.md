@@ -4,12 +4,12 @@
 
 ### DataAzurermStorageAccount <a name="DataAzurermStorageAccount" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account azurerm_storage_account}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account azurerm_storage_account}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstorageaccount"
 
 dataazurermstorageaccount.NewDataAzurermStorageAccount(scope Construct, id *string, config DataAzurermStorageAccountConfig) DataAzurermStorageAccount
 ```
@@ -301,7 +301,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstorageaccount"
 
 dataazurermstorageaccount.DataAzurermStorageAccount_IsConstruct(x interface{}) *bool
 ```
@@ -333,7 +333,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstorageaccount"
 
 dataazurermstorageaccount.DataAzurermStorageAccount_IsTerraformElement(x interface{}) *bool
 ```
@@ -347,7 +347,7 @@ dataazurermstorageaccount.DataAzurermStorageAccount_IsTerraformElement(x interfa
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstorageaccount"
 
 dataazurermstorageaccount.DataAzurermStorageAccount_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -361,7 +361,7 @@ dataazurermstorageaccount.DataAzurermStorageAccount_IsTerraformDataSource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstorageaccount"
 
 dataazurermstorageaccount.DataAzurermStorageAccount_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -390,7 +390,7 @@ The construct id used in the generated config for the DataAzurermStorageAccount 
 
 The id of the existing DataAzurermStorageAccount that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -435,35 +435,75 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryBlobConnectionString">PrimaryBlobConnectionString</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryBlobEndpoint">PrimaryBlobEndpoint</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryBlobHost">PrimaryBlobHost</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryBlobInternetEndpoint">PrimaryBlobInternetEndpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryBlobInternetHost">PrimaryBlobInternetHost</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryBlobMicrosoftEndpoint">PrimaryBlobMicrosoftEndpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryBlobMicrosoftHost">PrimaryBlobMicrosoftHost</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryConnectionString">PrimaryConnectionString</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryDfsEndpoint">PrimaryDfsEndpoint</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryDfsHost">PrimaryDfsHost</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryDfsInternetEndpoint">PrimaryDfsInternetEndpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryDfsInternetHost">PrimaryDfsInternetHost</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryDfsMicrosoftEndpoint">PrimaryDfsMicrosoftEndpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryDfsMicrosoftHost">PrimaryDfsMicrosoftHost</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryFileEndpoint">PrimaryFileEndpoint</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryFileHost">PrimaryFileHost</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryFileInternetEndpoint">PrimaryFileInternetEndpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryFileInternetHost">PrimaryFileInternetHost</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryFileMicrosoftEndpoint">PrimaryFileMicrosoftEndpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryFileMicrosoftHost">PrimaryFileMicrosoftHost</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryLocation">PrimaryLocation</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryQueueEndpoint">PrimaryQueueEndpoint</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryQueueHost">PrimaryQueueHost</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryQueueMicrosoftEndpoint">PrimaryQueueMicrosoftEndpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryQueueMicrosoftHost">PrimaryQueueMicrosoftHost</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryTableEndpoint">PrimaryTableEndpoint</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryTableHost">PrimaryTableHost</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryTableMicrosoftEndpoint">PrimaryTableMicrosoftEndpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryTableMicrosoftHost">PrimaryTableMicrosoftHost</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryWebEndpoint">PrimaryWebEndpoint</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryWebHost">PrimaryWebHost</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryWebInternetEndpoint">PrimaryWebInternetEndpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryWebInternetHost">PrimaryWebInternetHost</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryWebMicrosoftEndpoint">PrimaryWebMicrosoftEndpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryWebMicrosoftHost">PrimaryWebMicrosoftHost</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.queueEncryptionKeyType">QueueEncryptionKeyType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryAccessKey">SecondaryAccessKey</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryBlobConnectionString">SecondaryBlobConnectionString</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryBlobEndpoint">SecondaryBlobEndpoint</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryBlobHost">SecondaryBlobHost</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryBlobInternetEndpoint">SecondaryBlobInternetEndpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryBlobInternetHost">SecondaryBlobInternetHost</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryBlobMicrosoftEndpoint">SecondaryBlobMicrosoftEndpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryBlobMicrosoftHost">SecondaryBlobMicrosoftHost</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryConnectionString">SecondaryConnectionString</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryDfsEndpoint">SecondaryDfsEndpoint</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryDfsHost">SecondaryDfsHost</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryDfsInternetEndpoint">SecondaryDfsInternetEndpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryDfsInternetHost">SecondaryDfsInternetHost</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryDfsMicrosoftEndpoint">SecondaryDfsMicrosoftEndpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryDfsMicrosoftHost">SecondaryDfsMicrosoftHost</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryFileEndpoint">SecondaryFileEndpoint</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryFileHost">SecondaryFileHost</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryFileInternetEndpoint">SecondaryFileInternetEndpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryFileInternetHost">SecondaryFileInternetHost</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryFileMicrosoftEndpoint">SecondaryFileMicrosoftEndpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryFileMicrosoftHost">SecondaryFileMicrosoftHost</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryLocation">SecondaryLocation</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryQueueEndpoint">SecondaryQueueEndpoint</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryQueueHost">SecondaryQueueHost</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryQueueMicrosoftEndpoint">SecondaryQueueMicrosoftEndpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryQueueMicrosoftHost">SecondaryQueueMicrosoftHost</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryTableEndpoint">SecondaryTableEndpoint</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryTableHost">SecondaryTableHost</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryTableMicrosoftEndpoint">SecondaryTableMicrosoftEndpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryTableMicrosoftHost">SecondaryTableMicrosoftHost</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryWebEndpoint">SecondaryWebEndpoint</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryWebHost">SecondaryWebHost</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryWebInternetEndpoint">SecondaryWebInternetEndpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryWebInternetHost">SecondaryWebInternetHost</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryWebMicrosoftEndpoint">SecondaryWebMicrosoftEndpoint</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryWebMicrosoftHost">SecondaryWebMicrosoftHost</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.tableEncryptionKeyType">TableEncryptionKeyType</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.tags">Tags</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.StringMap</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountTimeoutsOutputReference">DataAzurermStorageAccountTimeoutsOutputReference</a></code> | *No description.* |
@@ -771,6 +811,46 @@ func PrimaryBlobHost() *string
 
 ---
 
+##### `PrimaryBlobInternetEndpoint`<sup>Required</sup> <a name="PrimaryBlobInternetEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryBlobInternetEndpoint"></a>
+
+```go
+func PrimaryBlobInternetEndpoint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `PrimaryBlobInternetHost`<sup>Required</sup> <a name="PrimaryBlobInternetHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryBlobInternetHost"></a>
+
+```go
+func PrimaryBlobInternetHost() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `PrimaryBlobMicrosoftEndpoint`<sup>Required</sup> <a name="PrimaryBlobMicrosoftEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryBlobMicrosoftEndpoint"></a>
+
+```go
+func PrimaryBlobMicrosoftEndpoint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `PrimaryBlobMicrosoftHost`<sup>Required</sup> <a name="PrimaryBlobMicrosoftHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryBlobMicrosoftHost"></a>
+
+```go
+func PrimaryBlobMicrosoftHost() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `PrimaryConnectionString`<sup>Required</sup> <a name="PrimaryConnectionString" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryConnectionString"></a>
 
 ```go
@@ -801,6 +881,46 @@ func PrimaryDfsHost() *string
 
 ---
 
+##### `PrimaryDfsInternetEndpoint`<sup>Required</sup> <a name="PrimaryDfsInternetEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryDfsInternetEndpoint"></a>
+
+```go
+func PrimaryDfsInternetEndpoint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `PrimaryDfsInternetHost`<sup>Required</sup> <a name="PrimaryDfsInternetHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryDfsInternetHost"></a>
+
+```go
+func PrimaryDfsInternetHost() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `PrimaryDfsMicrosoftEndpoint`<sup>Required</sup> <a name="PrimaryDfsMicrosoftEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryDfsMicrosoftEndpoint"></a>
+
+```go
+func PrimaryDfsMicrosoftEndpoint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `PrimaryDfsMicrosoftHost`<sup>Required</sup> <a name="PrimaryDfsMicrosoftHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryDfsMicrosoftHost"></a>
+
+```go
+func PrimaryDfsMicrosoftHost() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `PrimaryFileEndpoint`<sup>Required</sup> <a name="PrimaryFileEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryFileEndpoint"></a>
 
 ```go
@@ -815,6 +935,46 @@ func PrimaryFileEndpoint() *string
 
 ```go
 func PrimaryFileHost() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `PrimaryFileInternetEndpoint`<sup>Required</sup> <a name="PrimaryFileInternetEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryFileInternetEndpoint"></a>
+
+```go
+func PrimaryFileInternetEndpoint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `PrimaryFileInternetHost`<sup>Required</sup> <a name="PrimaryFileInternetHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryFileInternetHost"></a>
+
+```go
+func PrimaryFileInternetHost() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `PrimaryFileMicrosoftEndpoint`<sup>Required</sup> <a name="PrimaryFileMicrosoftEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryFileMicrosoftEndpoint"></a>
+
+```go
+func PrimaryFileMicrosoftEndpoint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `PrimaryFileMicrosoftHost`<sup>Required</sup> <a name="PrimaryFileMicrosoftHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryFileMicrosoftHost"></a>
+
+```go
+func PrimaryFileMicrosoftHost() *string
 ```
 
 - *Type:* *string
@@ -851,6 +1011,26 @@ func PrimaryQueueHost() *string
 
 ---
 
+##### `PrimaryQueueMicrosoftEndpoint`<sup>Required</sup> <a name="PrimaryQueueMicrosoftEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryQueueMicrosoftEndpoint"></a>
+
+```go
+func PrimaryQueueMicrosoftEndpoint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `PrimaryQueueMicrosoftHost`<sup>Required</sup> <a name="PrimaryQueueMicrosoftHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryQueueMicrosoftHost"></a>
+
+```go
+func PrimaryQueueMicrosoftHost() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `PrimaryTableEndpoint`<sup>Required</sup> <a name="PrimaryTableEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryTableEndpoint"></a>
 
 ```go
@@ -871,6 +1051,26 @@ func PrimaryTableHost() *string
 
 ---
 
+##### `PrimaryTableMicrosoftEndpoint`<sup>Required</sup> <a name="PrimaryTableMicrosoftEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryTableMicrosoftEndpoint"></a>
+
+```go
+func PrimaryTableMicrosoftEndpoint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `PrimaryTableMicrosoftHost`<sup>Required</sup> <a name="PrimaryTableMicrosoftHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryTableMicrosoftHost"></a>
+
+```go
+func PrimaryTableMicrosoftHost() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `PrimaryWebEndpoint`<sup>Required</sup> <a name="PrimaryWebEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryWebEndpoint"></a>
 
 ```go
@@ -885,6 +1085,46 @@ func PrimaryWebEndpoint() *string
 
 ```go
 func PrimaryWebHost() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `PrimaryWebInternetEndpoint`<sup>Required</sup> <a name="PrimaryWebInternetEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryWebInternetEndpoint"></a>
+
+```go
+func PrimaryWebInternetEndpoint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `PrimaryWebInternetHost`<sup>Required</sup> <a name="PrimaryWebInternetHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryWebInternetHost"></a>
+
+```go
+func PrimaryWebInternetHost() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `PrimaryWebMicrosoftEndpoint`<sup>Required</sup> <a name="PrimaryWebMicrosoftEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryWebMicrosoftEndpoint"></a>
+
+```go
+func PrimaryWebMicrosoftEndpoint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `PrimaryWebMicrosoftHost`<sup>Required</sup> <a name="PrimaryWebMicrosoftHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.primaryWebMicrosoftHost"></a>
+
+```go
+func PrimaryWebMicrosoftHost() *string
 ```
 
 - *Type:* *string
@@ -941,6 +1181,46 @@ func SecondaryBlobHost() *string
 
 ---
 
+##### `SecondaryBlobInternetEndpoint`<sup>Required</sup> <a name="SecondaryBlobInternetEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryBlobInternetEndpoint"></a>
+
+```go
+func SecondaryBlobInternetEndpoint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `SecondaryBlobInternetHost`<sup>Required</sup> <a name="SecondaryBlobInternetHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryBlobInternetHost"></a>
+
+```go
+func SecondaryBlobInternetHost() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `SecondaryBlobMicrosoftEndpoint`<sup>Required</sup> <a name="SecondaryBlobMicrosoftEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryBlobMicrosoftEndpoint"></a>
+
+```go
+func SecondaryBlobMicrosoftEndpoint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `SecondaryBlobMicrosoftHost`<sup>Required</sup> <a name="SecondaryBlobMicrosoftHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryBlobMicrosoftHost"></a>
+
+```go
+func SecondaryBlobMicrosoftHost() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `SecondaryConnectionString`<sup>Required</sup> <a name="SecondaryConnectionString" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryConnectionString"></a>
 
 ```go
@@ -971,6 +1251,46 @@ func SecondaryDfsHost() *string
 
 ---
 
+##### `SecondaryDfsInternetEndpoint`<sup>Required</sup> <a name="SecondaryDfsInternetEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryDfsInternetEndpoint"></a>
+
+```go
+func SecondaryDfsInternetEndpoint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `SecondaryDfsInternetHost`<sup>Required</sup> <a name="SecondaryDfsInternetHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryDfsInternetHost"></a>
+
+```go
+func SecondaryDfsInternetHost() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `SecondaryDfsMicrosoftEndpoint`<sup>Required</sup> <a name="SecondaryDfsMicrosoftEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryDfsMicrosoftEndpoint"></a>
+
+```go
+func SecondaryDfsMicrosoftEndpoint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `SecondaryDfsMicrosoftHost`<sup>Required</sup> <a name="SecondaryDfsMicrosoftHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryDfsMicrosoftHost"></a>
+
+```go
+func SecondaryDfsMicrosoftHost() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `SecondaryFileEndpoint`<sup>Required</sup> <a name="SecondaryFileEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryFileEndpoint"></a>
 
 ```go
@@ -985,6 +1305,46 @@ func SecondaryFileEndpoint() *string
 
 ```go
 func SecondaryFileHost() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `SecondaryFileInternetEndpoint`<sup>Required</sup> <a name="SecondaryFileInternetEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryFileInternetEndpoint"></a>
+
+```go
+func SecondaryFileInternetEndpoint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `SecondaryFileInternetHost`<sup>Required</sup> <a name="SecondaryFileInternetHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryFileInternetHost"></a>
+
+```go
+func SecondaryFileInternetHost() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `SecondaryFileMicrosoftEndpoint`<sup>Required</sup> <a name="SecondaryFileMicrosoftEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryFileMicrosoftEndpoint"></a>
+
+```go
+func SecondaryFileMicrosoftEndpoint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `SecondaryFileMicrosoftHost`<sup>Required</sup> <a name="SecondaryFileMicrosoftHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryFileMicrosoftHost"></a>
+
+```go
+func SecondaryFileMicrosoftHost() *string
 ```
 
 - *Type:* *string
@@ -1021,6 +1381,26 @@ func SecondaryQueueHost() *string
 
 ---
 
+##### `SecondaryQueueMicrosoftEndpoint`<sup>Required</sup> <a name="SecondaryQueueMicrosoftEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryQueueMicrosoftEndpoint"></a>
+
+```go
+func SecondaryQueueMicrosoftEndpoint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `SecondaryQueueMicrosoftHost`<sup>Required</sup> <a name="SecondaryQueueMicrosoftHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryQueueMicrosoftHost"></a>
+
+```go
+func SecondaryQueueMicrosoftHost() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `SecondaryTableEndpoint`<sup>Required</sup> <a name="SecondaryTableEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryTableEndpoint"></a>
 
 ```go
@@ -1041,6 +1421,26 @@ func SecondaryTableHost() *string
 
 ---
 
+##### `SecondaryTableMicrosoftEndpoint`<sup>Required</sup> <a name="SecondaryTableMicrosoftEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryTableMicrosoftEndpoint"></a>
+
+```go
+func SecondaryTableMicrosoftEndpoint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `SecondaryTableMicrosoftHost`<sup>Required</sup> <a name="SecondaryTableMicrosoftHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryTableMicrosoftHost"></a>
+
+```go
+func SecondaryTableMicrosoftHost() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `SecondaryWebEndpoint`<sup>Required</sup> <a name="SecondaryWebEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryWebEndpoint"></a>
 
 ```go
@@ -1055,6 +1455,46 @@ func SecondaryWebEndpoint() *string
 
 ```go
 func SecondaryWebHost() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `SecondaryWebInternetEndpoint`<sup>Required</sup> <a name="SecondaryWebInternetEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryWebInternetEndpoint"></a>
+
+```go
+func SecondaryWebInternetEndpoint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `SecondaryWebInternetHost`<sup>Required</sup> <a name="SecondaryWebInternetHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryWebInternetHost"></a>
+
+```go
+func SecondaryWebInternetHost() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `SecondaryWebMicrosoftEndpoint`<sup>Required</sup> <a name="SecondaryWebMicrosoftEndpoint" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryWebMicrosoftEndpoint"></a>
+
+```go
+func SecondaryWebMicrosoftEndpoint() *string
+```
+
+- *Type:* *string
+
+---
+
+##### `SecondaryWebMicrosoftHost`<sup>Required</sup> <a name="SecondaryWebMicrosoftHost" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccount.property.secondaryWebMicrosoftHost"></a>
+
+```go
+func SecondaryWebMicrosoftHost() *string
 ```
 
 - *Type:* *string
@@ -1206,7 +1646,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountAzureFilesAuthentication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstorageaccount"
 
 &dataazurermstorageaccount.DataAzurermStorageAccountAzureFilesAuthentication {
 
@@ -1219,7 +1659,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorag
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountAzureFilesAuthenticationActiveDirectory.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstorageaccount"
 
 &dataazurermstorageaccount.DataAzurermStorageAccountAzureFilesAuthenticationActiveDirectory {
 
@@ -1232,7 +1672,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorag
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstorageaccount"
 
 &dataazurermstorageaccount.DataAzurermStorageAccountConfig {
 	Connection: interface{},
@@ -1246,7 +1686,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorag
 	ResourceGroupName: *string,
 	Id: *string,
 	MinTlsVersion: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermStorageAccount.DataAzurermStorageAccountTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountTimeouts,
 }
 ```
 
@@ -1261,10 +1701,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorag
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#name DataAzurermStorageAccount#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#resource_group_name DataAzurermStorageAccount#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#id DataAzurermStorageAccount#id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountConfig.property.minTlsVersion">MinTlsVersion</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#min_tls_version DataAzurermStorageAccount#min_tls_version}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#name DataAzurermStorageAccount#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#resource_group_name DataAzurermStorageAccount#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#id DataAzurermStorageAccount#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountConfig.property.minTlsVersion">MinTlsVersion</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#min_tls_version DataAzurermStorageAccount#min_tls_version}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountTimeouts">DataAzurermStorageAccountTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1347,7 +1787,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#name DataAzurermStorageAccount#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#name DataAzurermStorageAccount#name}.
 
 ---
 
@@ -1359,7 +1799,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#resource_group_name DataAzurermStorageAccount#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#resource_group_name DataAzurermStorageAccount#resource_group_name}.
 
 ---
 
@@ -1371,7 +1811,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#id DataAzurermStorageAccount#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#id DataAzurermStorageAccount#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1386,7 +1826,7 @@ MinTlsVersion *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#min_tls_version DataAzurermStorageAccount#min_tls_version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#min_tls_version DataAzurermStorageAccount#min_tls_version}.
 
 ---
 
@@ -1400,7 +1840,7 @@ Timeouts DataAzurermStorageAccountTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#timeouts DataAzurermStorageAccount#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#timeouts DataAzurermStorageAccount#timeouts}
 
 ---
 
@@ -1409,7 +1849,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountCustomDomain.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstorageaccount"
 
 &dataazurermstorageaccount.DataAzurermStorageAccountCustomDomain {
 
@@ -1422,7 +1862,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorag
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstorageaccount"
 
 &dataazurermstorageaccount.DataAzurermStorageAccountIdentity {
 
@@ -1435,7 +1875,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorag
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstorageaccount"
 
 &dataazurermstorageaccount.DataAzurermStorageAccountTimeouts {
 	Read: *string,
@@ -1446,7 +1886,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorag
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#read DataAzurermStorageAccount#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#read DataAzurermStorageAccount#read}. |
 
 ---
 
@@ -1458,7 +1898,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/storage_account#read DataAzurermStorageAccount#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_account#read DataAzurermStorageAccount#read}.
 
 ---
 
@@ -1469,7 +1909,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountAzureFilesAuthenticationActiveDirectoryList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstorageaccount"
 
 dataazurermstorageaccount.NewDataAzurermStorageAccountAzureFilesAuthenticationActiveDirectoryList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermStorageAccountAzureFilesAuthenticationActiveDirectoryList
 ```
@@ -1601,7 +2041,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountAzureFilesAuthenticationActiveDirectoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstorageaccount"
 
 dataazurermstorageaccount.NewDataAzurermStorageAccountAzureFilesAuthenticationActiveDirectoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermStorageAccountAzureFilesAuthenticationActiveDirectoryOutputReference
 ```
@@ -1934,7 +2374,7 @@ func InternalValue() DataAzurermStorageAccountAzureFilesAuthenticationActiveDire
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountAzureFilesAuthenticationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstorageaccount"
 
 dataazurermstorageaccount.NewDataAzurermStorageAccountAzureFilesAuthenticationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermStorageAccountAzureFilesAuthenticationList
 ```
@@ -2066,7 +2506,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountAzureFilesAuthenticationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstorageaccount"
 
 dataazurermstorageaccount.NewDataAzurermStorageAccountAzureFilesAuthenticationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermStorageAccountAzureFilesAuthenticationOutputReference
 ```
@@ -2355,7 +2795,7 @@ func InternalValue() DataAzurermStorageAccountAzureFilesAuthentication
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountCustomDomainList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstorageaccount"
 
 dataazurermstorageaccount.NewDataAzurermStorageAccountCustomDomainList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermStorageAccountCustomDomainList
 ```
@@ -2487,7 +2927,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountCustomDomainOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstorageaccount"
 
 dataazurermstorageaccount.NewDataAzurermStorageAccountCustomDomainOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermStorageAccountCustomDomainOutputReference
 ```
@@ -2765,7 +3205,7 @@ func InternalValue() DataAzurermStorageAccountCustomDomain
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstorageaccount"
 
 dataazurermstorageaccount.NewDataAzurermStorageAccountIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermStorageAccountIdentityList
 ```
@@ -2897,7 +3337,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstorageaccount"
 
 dataazurermstorageaccount.NewDataAzurermStorageAccountIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermStorageAccountIdentityOutputReference
 ```
@@ -3208,7 +3648,7 @@ func InternalValue() DataAzurermStorageAccountIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStorageAccount.DataAzurermStorageAccountTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstorageaccount"
 
 dataazurermstorageaccount.NewDataAzurermStorageAccountTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermStorageAccountTimeoutsOutputReference
 ```

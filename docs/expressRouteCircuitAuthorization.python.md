@@ -4,7 +4,7 @@
 
 ### ExpressRouteCircuitAuthorization <a name="ExpressRouteCircuitAuthorization" id="@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorization"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization azurerm_express_route_circuit_authorization}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization azurerm_express_route_circuit_authorization}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorization.Initializer"></a>
 
@@ -40,10 +40,10 @@ expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorization(
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorization.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorization.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorization.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorization.Initializer.parameter.expressRouteCircuitName">express_route_circuit_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#express_route_circuit_name ExpressRouteCircuitAuthorization#express_route_circuit_name}. |
-| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorization.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#name ExpressRouteCircuitAuthorization#name}. |
-| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorization.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#resource_group_name ExpressRouteCircuitAuthorization#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorization.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#id ExpressRouteCircuitAuthorization#id}. |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorization.Initializer.parameter.expressRouteCircuitName">express_route_circuit_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#express_route_circuit_name ExpressRouteCircuitAuthorization#express_route_circuit_name}. |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorization.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#name ExpressRouteCircuitAuthorization#name}. |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorization.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#resource_group_name ExpressRouteCircuitAuthorization#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorization.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#id ExpressRouteCircuitAuthorization#id}. |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorization.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorizationTimeouts">ExpressRouteCircuitAuthorizationTimeouts</a></code> | timeouts block. |
 
 ---
@@ -112,7 +112,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#express_route_circuit_name ExpressRouteCircuitAuthorization#express_route_circuit_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#express_route_circuit_name ExpressRouteCircuitAuthorization#express_route_circuit_name}.
 
 ---
 
@@ -120,7 +120,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#name ExpressRouteCircuitAuthorization#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#name ExpressRouteCircuitAuthorization#name}.
 
 ---
 
@@ -128,7 +128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#resource_group_name ExpressRouteCircuitAuthorization#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#resource_group_name ExpressRouteCircuitAuthorization#resource_group_name}.
 
 ---
 
@@ -136,7 +136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#id ExpressRouteCircuitAuthorization#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#id ExpressRouteCircuitAuthorization#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -149,7 +149,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#timeouts ExpressRouteCircuitAuthorization#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#timeouts ExpressRouteCircuitAuthorization#timeouts}
 
 ---
 
@@ -518,7 +518,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#create ExpressRouteCircuitAuthorization#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#create ExpressRouteCircuitAuthorization#create}.
 
 ---
 
@@ -526,7 +526,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#delete ExpressRouteCircuitAuthorization#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#delete ExpressRouteCircuitAuthorization#delete}.
 
 ---
 
@@ -534,7 +534,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#read ExpressRouteCircuitAuthorization#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#read ExpressRouteCircuitAuthorization#read}.
 
 ---
 
@@ -664,7 +664,7 @@ The construct id used in the generated config for the ExpressRouteCircuitAuthori
 
 The id of the existing ExpressRouteCircuitAuthorization that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1025,10 +1025,10 @@ expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorizationConfig(
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorizationConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorizationConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorizationConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorizationConfig.property.expressRouteCircuitName">express_route_circuit_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#express_route_circuit_name ExpressRouteCircuitAuthorization#express_route_circuit_name}. |
-| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorizationConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#name ExpressRouteCircuitAuthorization#name}. |
-| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorizationConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#resource_group_name ExpressRouteCircuitAuthorization#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorizationConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#id ExpressRouteCircuitAuthorization#id}. |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorizationConfig.property.expressRouteCircuitName">express_route_circuit_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#express_route_circuit_name ExpressRouteCircuitAuthorization#express_route_circuit_name}. |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorizationConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#name ExpressRouteCircuitAuthorization#name}. |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorizationConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#resource_group_name ExpressRouteCircuitAuthorization#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorizationConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#id ExpressRouteCircuitAuthorization#id}. |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorizationConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorizationTimeouts">ExpressRouteCircuitAuthorizationTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1111,7 +1111,7 @@ express_route_circuit_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#express_route_circuit_name ExpressRouteCircuitAuthorization#express_route_circuit_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#express_route_circuit_name ExpressRouteCircuitAuthorization#express_route_circuit_name}.
 
 ---
 
@@ -1123,7 +1123,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#name ExpressRouteCircuitAuthorization#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#name ExpressRouteCircuitAuthorization#name}.
 
 ---
 
@@ -1135,7 +1135,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#resource_group_name ExpressRouteCircuitAuthorization#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#resource_group_name ExpressRouteCircuitAuthorization#resource_group_name}.
 
 ---
 
@@ -1147,7 +1147,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#id ExpressRouteCircuitAuthorization#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#id ExpressRouteCircuitAuthorization#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1164,7 +1164,7 @@ timeouts: ExpressRouteCircuitAuthorizationTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#timeouts ExpressRouteCircuitAuthorization#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#timeouts ExpressRouteCircuitAuthorization#timeouts}
 
 ---
 
@@ -1186,9 +1186,9 @@ expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorizationTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorizationTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#create ExpressRouteCircuitAuthorization#create}. |
-| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorizationTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#delete ExpressRouteCircuitAuthorization#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorizationTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#read ExpressRouteCircuitAuthorization#read}. |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorizationTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#create ExpressRouteCircuitAuthorization#create}. |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorizationTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#delete ExpressRouteCircuitAuthorization#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteCircuitAuthorization.ExpressRouteCircuitAuthorizationTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#read ExpressRouteCircuitAuthorization#read}. |
 
 ---
 
@@ -1200,7 +1200,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#create ExpressRouteCircuitAuthorization#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#create ExpressRouteCircuitAuthorization#create}.
 
 ---
 
@@ -1212,7 +1212,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#delete ExpressRouteCircuitAuthorization#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#delete ExpressRouteCircuitAuthorization#delete}.
 
 ---
 
@@ -1224,7 +1224,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/express_route_circuit_authorization#read ExpressRouteCircuitAuthorization#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/express_route_circuit_authorization#read ExpressRouteCircuitAuthorization#read}.
 
 ---
 

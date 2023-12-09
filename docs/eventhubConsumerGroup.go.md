@@ -4,12 +4,12 @@
 
 ### EventhubConsumerGroup <a name="EventhubConsumerGroup" id="@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_consumer_group azurerm_eventhub_consumer_group}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/eventhub_consumer_group azurerm_eventhub_consumer_group}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhubconsumergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhubconsumergroup"
 
 eventhubconsumergroup.NewEventhubConsumerGroup(scope Construct, id *string, config EventhubConsumerGroupConfig) EventhubConsumerGroup
 ```
@@ -405,7 +405,7 @@ func ResetUserMetadata()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhubconsumergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhubconsumergroup"
 
 eventhubconsumergroup.EventhubConsumerGroup_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhubconsumergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhubconsumergroup"
 
 eventhubconsumergroup.EventhubConsumerGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ eventhubconsumergroup.EventhubConsumerGroup_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhubconsumergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhubconsumergroup"
 
 eventhubconsumergroup.EventhubConsumerGroup_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ eventhubconsumergroup.EventhubConsumerGroup_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroup.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhubconsumergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhubconsumergroup"
 
 eventhubconsumergroup.EventhubConsumerGroup_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -494,7 +494,7 @@ The construct id used in the generated config for the EventhubConsumerGroup to i
 
 The id of the existing EventhubConsumerGroup that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_consumer_group#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/eventhub_consumer_group#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -848,7 +848,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhubconsumergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhubconsumergroup"
 
 &eventhubconsumergroup.EventhubConsumerGroupConfig {
 	Connection: interface{},
@@ -863,7 +863,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhubconsumerg
 	NamespaceName: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.eventhubConsumerGroup.EventhubConsumerGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.eventhubConsumerGroup.EventhubConsumerGroupTimeouts,
 	UserMetadata: *string,
 }
 ```
@@ -879,13 +879,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhubconsumerg
 | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.eventhubName">EventhubName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_consumer_group#eventhub_name EventhubConsumerGroup#eventhub_name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_consumer_group#name EventhubConsumerGroup#name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.namespaceName">NamespaceName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_consumer_group#namespace_name EventhubConsumerGroup#namespace_name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_consumer_group#resource_group_name EventhubConsumerGroup#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_consumer_group#id EventhubConsumerGroup#id}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.eventhubName">EventhubName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/eventhub_consumer_group#eventhub_name EventhubConsumerGroup#eventhub_name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/eventhub_consumer_group#name EventhubConsumerGroup#name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.namespaceName">NamespaceName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/eventhub_consumer_group#namespace_name EventhubConsumerGroup#namespace_name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/eventhub_consumer_group#resource_group_name EventhubConsumerGroup#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/eventhub_consumer_group#id EventhubConsumerGroup#id}. |
 | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupTimeouts">EventhubConsumerGroupTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.userMetadata">UserMetadata</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_consumer_group#user_metadata EventhubConsumerGroup#user_metadata}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupConfig.property.userMetadata">UserMetadata</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/eventhub_consumer_group#user_metadata EventhubConsumerGroup#user_metadata}. |
 
 ---
 
@@ -967,7 +967,7 @@ EventhubName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_consumer_group#eventhub_name EventhubConsumerGroup#eventhub_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/eventhub_consumer_group#eventhub_name EventhubConsumerGroup#eventhub_name}.
 
 ---
 
@@ -979,7 +979,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_consumer_group#name EventhubConsumerGroup#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/eventhub_consumer_group#name EventhubConsumerGroup#name}.
 
 ---
 
@@ -991,7 +991,7 @@ NamespaceName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_consumer_group#namespace_name EventhubConsumerGroup#namespace_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/eventhub_consumer_group#namespace_name EventhubConsumerGroup#namespace_name}.
 
 ---
 
@@ -1003,7 +1003,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_consumer_group#resource_group_name EventhubConsumerGroup#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/eventhub_consumer_group#resource_group_name EventhubConsumerGroup#resource_group_name}.
 
 ---
 
@@ -1015,7 +1015,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_consumer_group#id EventhubConsumerGroup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/eventhub_consumer_group#id EventhubConsumerGroup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1032,7 +1032,7 @@ Timeouts EventhubConsumerGroupTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_consumer_group#timeouts EventhubConsumerGroup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/eventhub_consumer_group#timeouts EventhubConsumerGroup#timeouts}
 
 ---
 
@@ -1044,7 +1044,7 @@ UserMetadata *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_consumer_group#user_metadata EventhubConsumerGroup#user_metadata}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/eventhub_consumer_group#user_metadata EventhubConsumerGroup#user_metadata}.
 
 ---
 
@@ -1053,7 +1053,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhubconsumergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhubconsumergroup"
 
 &eventhubconsumergroup.EventhubConsumerGroupTimeouts {
 	Create: *string,
@@ -1067,10 +1067,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhubconsumerg
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_consumer_group#create EventhubConsumerGroup#create}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_consumer_group#delete EventhubConsumerGroup#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_consumer_group#read EventhubConsumerGroup#read}. |
-| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_consumer_group#update EventhubConsumerGroup#update}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/eventhub_consumer_group#create EventhubConsumerGroup#create}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/eventhub_consumer_group#delete EventhubConsumerGroup#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/eventhub_consumer_group#read EventhubConsumerGroup#read}. |
+| <code><a href="#@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/eventhub_consumer_group#update EventhubConsumerGroup#update}. |
 
 ---
 
@@ -1082,7 +1082,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_consumer_group#create EventhubConsumerGroup#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/eventhub_consumer_group#create EventhubConsumerGroup#create}.
 
 ---
 
@@ -1094,7 +1094,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_consumer_group#delete EventhubConsumerGroup#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/eventhub_consumer_group#delete EventhubConsumerGroup#delete}.
 
 ---
 
@@ -1106,7 +1106,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_consumer_group#read EventhubConsumerGroup#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/eventhub_consumer_group#read EventhubConsumerGroup#read}.
 
 ---
 
@@ -1118,7 +1118,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/eventhub_consumer_group#update EventhubConsumerGroup#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/eventhub_consumer_group#update EventhubConsumerGroup#update}.
 
 ---
 
@@ -1129,7 +1129,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventhubConsumerGroup.EventhubConsumerGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhubconsumergroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhubconsumergroup"
 
 eventhubconsumergroup.NewEventhubConsumerGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventhubConsumerGroupTimeoutsOutputReference
 ```

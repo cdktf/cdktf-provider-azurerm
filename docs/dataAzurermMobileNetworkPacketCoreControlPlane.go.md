@@ -4,12 +4,12 @@
 
 ### DataAzurermMobileNetworkPacketCoreControlPlane <a name="DataAzurermMobileNetworkPacketCoreControlPlane" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlane"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/mobile_network_packet_core_control_plane azurerm_mobile_network_packet_core_control_plane}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/mobile_network_packet_core_control_plane azurerm_mobile_network_packet_core_control_plane}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlane.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkpacketcorecontrolplane"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkpacketcorecontrolplane"
 
 dataazurermmobilenetworkpacketcorecontrolplane.NewDataAzurermMobileNetworkPacketCoreControlPlane(scope Construct, id *string, config DataAzurermMobileNetworkPacketCoreControlPlaneConfig) DataAzurermMobileNetworkPacketCoreControlPlane
 ```
@@ -294,7 +294,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlane.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkpacketcorecontrolplane"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkpacketcorecontrolplane"
 
 dataazurermmobilenetworkpacketcorecontrolplane.DataAzurermMobileNetworkPacketCoreControlPlane_IsConstruct(x interface{}) *bool
 ```
@@ -326,7 +326,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlane.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkpacketcorecontrolplane"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkpacketcorecontrolplane"
 
 dataazurermmobilenetworkpacketcorecontrolplane.DataAzurermMobileNetworkPacketCoreControlPlane_IsTerraformElement(x interface{}) *bool
 ```
@@ -340,7 +340,7 @@ dataazurermmobilenetworkpacketcorecontrolplane.DataAzurermMobileNetworkPacketCor
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlane.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkpacketcorecontrolplane"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkpacketcorecontrolplane"
 
 dataazurermmobilenetworkpacketcorecontrolplane.DataAzurermMobileNetworkPacketCoreControlPlane_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -354,7 +354,7 @@ dataazurermmobilenetworkpacketcorecontrolplane.DataAzurermMobileNetworkPacketCor
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlane.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkpacketcorecontrolplane"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkpacketcorecontrolplane"
 
 dataazurermmobilenetworkpacketcorecontrolplane.DataAzurermMobileNetworkPacketCoreControlPlane_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -383,7 +383,7 @@ The construct id used in the generated config for the DataAzurermMobileNetworkPa
 
 The id of the existing DataAzurermMobileNetworkPacketCoreControlPlane that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/mobile_network_packet_core_control_plane#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/mobile_network_packet_core_control_plane#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -814,7 +814,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlaneConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkpacketcorecontrolplane"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkpacketcorecontrolplane"
 
 &dataazurermmobilenetworkpacketcorecontrolplane.DataAzurermMobileNetworkPacketCoreControlPlaneConfig {
 	Connection: interface{},
@@ -827,7 +827,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobile
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlaneTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlaneTimeouts,
 }
 ```
 
@@ -842,9 +842,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobile
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlaneConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlaneConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlaneConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlaneConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/mobile_network_packet_core_control_plane#name DataAzurermMobileNetworkPacketCoreControlPlane#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlaneConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/mobile_network_packet_core_control_plane#resource_group_name DataAzurermMobileNetworkPacketCoreControlPlane#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlaneConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/mobile_network_packet_core_control_plane#id DataAzurermMobileNetworkPacketCoreControlPlane#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlaneConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/mobile_network_packet_core_control_plane#name DataAzurermMobileNetworkPacketCoreControlPlane#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlaneConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/mobile_network_packet_core_control_plane#resource_group_name DataAzurermMobileNetworkPacketCoreControlPlane#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlaneConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/mobile_network_packet_core_control_plane#id DataAzurermMobileNetworkPacketCoreControlPlane#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlaneConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlaneTimeouts">DataAzurermMobileNetworkPacketCoreControlPlaneTimeouts</a></code> | timeouts block. |
 
 ---
@@ -927,7 +927,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/mobile_network_packet_core_control_plane#name DataAzurermMobileNetworkPacketCoreControlPlane#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/mobile_network_packet_core_control_plane#name DataAzurermMobileNetworkPacketCoreControlPlane#name}.
 
 ---
 
@@ -939,7 +939,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/mobile_network_packet_core_control_plane#resource_group_name DataAzurermMobileNetworkPacketCoreControlPlane#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/mobile_network_packet_core_control_plane#resource_group_name DataAzurermMobileNetworkPacketCoreControlPlane#resource_group_name}.
 
 ---
 
@@ -951,7 +951,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/mobile_network_packet_core_control_plane#id DataAzurermMobileNetworkPacketCoreControlPlane#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/mobile_network_packet_core_control_plane#id DataAzurermMobileNetworkPacketCoreControlPlane#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -968,7 +968,7 @@ Timeouts DataAzurermMobileNetworkPacketCoreControlPlaneTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/mobile_network_packet_core_control_plane#timeouts DataAzurermMobileNetworkPacketCoreControlPlane#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/mobile_network_packet_core_control_plane#timeouts DataAzurermMobileNetworkPacketCoreControlPlane#timeouts}
 
 ---
 
@@ -977,7 +977,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlaneIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkpacketcorecontrolplane"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkpacketcorecontrolplane"
 
 &dataazurermmobilenetworkpacketcorecontrolplane.DataAzurermMobileNetworkPacketCoreControlPlaneIdentity {
 
@@ -990,7 +990,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobile
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlaneLocalDiagnosticsAccess.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkpacketcorecontrolplane"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkpacketcorecontrolplane"
 
 &dataazurermmobilenetworkpacketcorecontrolplane.DataAzurermMobileNetworkPacketCoreControlPlaneLocalDiagnosticsAccess {
 
@@ -1003,7 +1003,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobile
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlanePlatform.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkpacketcorecontrolplane"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkpacketcorecontrolplane"
 
 &dataazurermmobilenetworkpacketcorecontrolplane.DataAzurermMobileNetworkPacketCoreControlPlanePlatform {
 
@@ -1016,7 +1016,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobile
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlaneTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkpacketcorecontrolplane"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkpacketcorecontrolplane"
 
 &dataazurermmobilenetworkpacketcorecontrolplane.DataAzurermMobileNetworkPacketCoreControlPlaneTimeouts {
 	Read: *string,
@@ -1027,7 +1027,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobile
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlaneTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/mobile_network_packet_core_control_plane#read DataAzurermMobileNetworkPacketCoreControlPlane#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlaneTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/mobile_network_packet_core_control_plane#read DataAzurermMobileNetworkPacketCoreControlPlane#read}. |
 
 ---
 
@@ -1039,7 +1039,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/mobile_network_packet_core_control_plane#read DataAzurermMobileNetworkPacketCoreControlPlane#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/mobile_network_packet_core_control_plane#read DataAzurermMobileNetworkPacketCoreControlPlane#read}.
 
 ---
 
@@ -1050,7 +1050,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlaneIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkpacketcorecontrolplane"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkpacketcorecontrolplane"
 
 dataazurermmobilenetworkpacketcorecontrolplane.NewDataAzurermMobileNetworkPacketCoreControlPlaneIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMobileNetworkPacketCoreControlPlaneIdentityList
 ```
@@ -1182,7 +1182,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlaneIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkpacketcorecontrolplane"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkpacketcorecontrolplane"
 
 dataazurermmobilenetworkpacketcorecontrolplane.NewDataAzurermMobileNetworkPacketCoreControlPlaneIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMobileNetworkPacketCoreControlPlaneIdentityOutputReference
 ```
@@ -1471,7 +1471,7 @@ func InternalValue() DataAzurermMobileNetworkPacketCoreControlPlaneIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlaneLocalDiagnosticsAccessList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkpacketcorecontrolplane"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkpacketcorecontrolplane"
 
 dataazurermmobilenetworkpacketcorecontrolplane.NewDataAzurermMobileNetworkPacketCoreControlPlaneLocalDiagnosticsAccessList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMobileNetworkPacketCoreControlPlaneLocalDiagnosticsAccessList
 ```
@@ -1603,7 +1603,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlaneLocalDiagnosticsAccessOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkpacketcorecontrolplane"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkpacketcorecontrolplane"
 
 dataazurermmobilenetworkpacketcorecontrolplane.NewDataAzurermMobileNetworkPacketCoreControlPlaneLocalDiagnosticsAccessOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMobileNetworkPacketCoreControlPlaneLocalDiagnosticsAccessOutputReference
 ```
@@ -1892,7 +1892,7 @@ func InternalValue() DataAzurermMobileNetworkPacketCoreControlPlaneLocalDiagnost
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlanePlatformList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkpacketcorecontrolplane"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkpacketcorecontrolplane"
 
 dataazurermmobilenetworkpacketcorecontrolplane.NewDataAzurermMobileNetworkPacketCoreControlPlanePlatformList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMobileNetworkPacketCoreControlPlanePlatformList
 ```
@@ -2024,7 +2024,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlanePlatformOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkpacketcorecontrolplane"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkpacketcorecontrolplane"
 
 dataazurermmobilenetworkpacketcorecontrolplane.NewDataAzurermMobileNetworkPacketCoreControlPlanePlatformOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMobileNetworkPacketCoreControlPlanePlatformOutputReference
 ```
@@ -2346,7 +2346,7 @@ func InternalValue() DataAzurermMobileNetworkPacketCoreControlPlanePlatform
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkPacketCoreControlPlane.DataAzurermMobileNetworkPacketCoreControlPlaneTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobilenetworkpacketcorecontrolplane"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmobilenetworkpacketcorecontrolplane"
 
 dataazurermmobilenetworkpacketcorecontrolplane.NewDataAzurermMobileNetworkPacketCoreControlPlaneTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermMobileNetworkPacketCoreControlPlaneTimeoutsOutputReference
 ```

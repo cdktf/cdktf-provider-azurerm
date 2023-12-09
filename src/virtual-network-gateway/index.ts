@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,102 +8,128 @@ import * as cdktf from 'cdktf';
 
 export interface VirtualNetworkGatewayConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#active_active VirtualNetworkGateway#active_active}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#active_active VirtualNetworkGateway#active_active}
   */
   readonly activeActive?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#default_local_network_gateway_id VirtualNetworkGateway#default_local_network_gateway_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#bgp_route_translation_for_nat_enabled VirtualNetworkGateway#bgp_route_translation_for_nat_enabled}
+  */
+  readonly bgpRouteTranslationForNatEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#default_local_network_gateway_id VirtualNetworkGateway#default_local_network_gateway_id}
   */
   readonly defaultLocalNetworkGatewayId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#edge_zone VirtualNetworkGateway#edge_zone}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#dns_forwarding_enabled VirtualNetworkGateway#dns_forwarding_enabled}
+  */
+  readonly dnsForwardingEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#edge_zone VirtualNetworkGateway#edge_zone}
   */
   readonly edgeZone?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#enable_bgp VirtualNetworkGateway#enable_bgp}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#enable_bgp VirtualNetworkGateway#enable_bgp}
   */
   readonly enableBgp?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#generation VirtualNetworkGateway#generation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#generation VirtualNetworkGateway#generation}
   */
   readonly generation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#id VirtualNetworkGateway#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#id VirtualNetworkGateway#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#location VirtualNetworkGateway#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#ip_sec_replay_protection_enabled VirtualNetworkGateway#ip_sec_replay_protection_enabled}
+  */
+  readonly ipSecReplayProtectionEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#location VirtualNetworkGateway#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#name VirtualNetworkGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#name VirtualNetworkGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#private_ip_address_enabled VirtualNetworkGateway#private_ip_address_enabled}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#private_ip_address_enabled VirtualNetworkGateway#private_ip_address_enabled}
   */
   readonly privateIpAddressEnabled?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#resource_group_name VirtualNetworkGateway#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#remote_vnet_traffic_enabled VirtualNetworkGateway#remote_vnet_traffic_enabled}
+  */
+  readonly remoteVnetTrafficEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#resource_group_name VirtualNetworkGateway#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#sku VirtualNetworkGateway#sku}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#sku VirtualNetworkGateway#sku}
   */
   readonly sku: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#tags VirtualNetworkGateway#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#tags VirtualNetworkGateway#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#type VirtualNetworkGateway#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#type VirtualNetworkGateway#type}
   */
   readonly type: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#vpn_type VirtualNetworkGateway#vpn_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#virtual_wan_traffic_enabled VirtualNetworkGateway#virtual_wan_traffic_enabled}
+  */
+  readonly virtualWanTrafficEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#vpn_type VirtualNetworkGateway#vpn_type}
   */
   readonly vpnType?: string;
   /**
   * bgp_settings block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#bgp_settings VirtualNetworkGateway#bgp_settings}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#bgp_settings VirtualNetworkGateway#bgp_settings}
   */
   readonly bgpSettings?: VirtualNetworkGatewayBgpSettings;
   /**
   * custom_route block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#custom_route VirtualNetworkGateway#custom_route}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#custom_route VirtualNetworkGateway#custom_route}
   */
   readonly customRoute?: VirtualNetworkGatewayCustomRoute;
   /**
   * ip_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#ip_configuration VirtualNetworkGateway#ip_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#ip_configuration VirtualNetworkGateway#ip_configuration}
   */
   readonly ipConfiguration: VirtualNetworkGatewayIpConfiguration[] | cdktf.IResolvable;
   /**
+  * policy_group block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#policy_group VirtualNetworkGateway#policy_group}
+  */
+  readonly policyGroup?: VirtualNetworkGatewayPolicyGroup[] | cdktf.IResolvable;
+  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#timeouts VirtualNetworkGateway#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#timeouts VirtualNetworkGateway#timeouts}
   */
   readonly timeouts?: VirtualNetworkGatewayTimeouts;
   /**
   * vpn_client_configuration block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#vpn_client_configuration VirtualNetworkGateway#vpn_client_configuration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#vpn_client_configuration VirtualNetworkGateway#vpn_client_configuration}
   */
   readonly vpnClientConfiguration?: VirtualNetworkGatewayVpnClientConfiguration;
 }
 export interface VirtualNetworkGatewayBgpSettingsPeeringAddresses {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#apipa_addresses VirtualNetworkGateway#apipa_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#apipa_addresses VirtualNetworkGateway#apipa_addresses}
   */
   readonly apipaAddresses?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#ip_configuration_name VirtualNetworkGateway#ip_configuration_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#ip_configuration_name VirtualNetworkGateway#ip_configuration_name}
   */
   readonly ipConfigurationName?: string;
 }
@@ -238,17 +259,17 @@ export class VirtualNetworkGatewayBgpSettingsPeeringAddressesList extends cdktf.
 }
 export interface VirtualNetworkGatewayBgpSettings {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#asn VirtualNetworkGateway#asn}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#asn VirtualNetworkGateway#asn}
   */
   readonly asn?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#peer_weight VirtualNetworkGateway#peer_weight}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#peer_weight VirtualNetworkGateway#peer_weight}
   */
   readonly peerWeight?: number;
   /**
   * peering_addresses block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#peering_addresses VirtualNetworkGateway#peering_addresses}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#peering_addresses VirtualNetworkGateway#peering_addresses}
   */
   readonly peeringAddresses?: VirtualNetworkGatewayBgpSettingsPeeringAddresses[] | cdktf.IResolvable;
 }
@@ -359,7 +380,7 @@ export class VirtualNetworkGatewayBgpSettingsOutputReference extends cdktf.Compl
 }
 export interface VirtualNetworkGatewayCustomRoute {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#address_prefixes VirtualNetworkGateway#address_prefixes}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#address_prefixes VirtualNetworkGateway#address_prefixes}
   */
   readonly addressPrefixes?: string[];
 }
@@ -424,19 +445,19 @@ export class VirtualNetworkGatewayCustomRouteOutputReference extends cdktf.Compl
 }
 export interface VirtualNetworkGatewayIpConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#name VirtualNetworkGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#name VirtualNetworkGateway#name}
   */
   readonly name?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#private_ip_address_allocation VirtualNetworkGateway#private_ip_address_allocation}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#private_ip_address_allocation VirtualNetworkGateway#private_ip_address_allocation}
   */
   readonly privateIpAddressAllocation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#public_ip_address_id VirtualNetworkGateway#public_ip_address_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#public_ip_address_id VirtualNetworkGateway#public_ip_address_id}
   */
   readonly publicIpAddressId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#subnet_id VirtualNetworkGateway#subnet_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#subnet_id VirtualNetworkGateway#subnet_id}
   */
   readonly subnetId: string;
 }
@@ -594,21 +615,337 @@ export class VirtualNetworkGatewayIpConfigurationList extends cdktf.ComplexList 
     return new VirtualNetworkGatewayIpConfigurationOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface VirtualNetworkGatewayPolicyGroupPolicyMember {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#name VirtualNetworkGateway#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#type VirtualNetworkGateway#type}
+  */
+  readonly type: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#value VirtualNetworkGateway#value}
+  */
+  readonly value: string;
+}
+
+export function virtualNetworkGatewayPolicyGroupPolicyMemberToTerraform(struct?: VirtualNetworkGatewayPolicyGroupPolicyMember | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    name: cdktf.stringToTerraform(struct!.name),
+    type: cdktf.stringToTerraform(struct!.type),
+    value: cdktf.stringToTerraform(struct!.value),
+  }
+}
+
+export class VirtualNetworkGatewayPolicyGroupPolicyMemberOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): VirtualNetworkGatewayPolicyGroupPolicyMember | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    if (this._value !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.value = this._value;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VirtualNetworkGatewayPolicyGroupPolicyMember | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._name = undefined;
+      this._type = undefined;
+      this._value = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._name = value.name;
+      this._type = value.type;
+      this._value = value.value;
+    }
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+
+  // value - computed: false, optional: false, required: true
+  private _value?: string; 
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+  public set value(value: string) {
+    this._value = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get valueInput() {
+    return this._value;
+  }
+}
+
+export class VirtualNetworkGatewayPolicyGroupPolicyMemberList extends cdktf.ComplexList {
+  public internalValue? : VirtualNetworkGatewayPolicyGroupPolicyMember[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): VirtualNetworkGatewayPolicyGroupPolicyMemberOutputReference {
+    return new VirtualNetworkGatewayPolicyGroupPolicyMemberOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface VirtualNetworkGatewayPolicyGroup {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#is_default VirtualNetworkGateway#is_default}
+  */
+  readonly isDefault?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#name VirtualNetworkGateway#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#priority VirtualNetworkGateway#priority}
+  */
+  readonly priority?: number;
+  /**
+  * policy_member block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#policy_member VirtualNetworkGateway#policy_member}
+  */
+  readonly policyMember: VirtualNetworkGatewayPolicyGroupPolicyMember[] | cdktf.IResolvable;
+}
+
+export function virtualNetworkGatewayPolicyGroupToTerraform(struct?: VirtualNetworkGatewayPolicyGroup | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    is_default: cdktf.booleanToTerraform(struct!.isDefault),
+    name: cdktf.stringToTerraform(struct!.name),
+    priority: cdktf.numberToTerraform(struct!.priority),
+    policy_member: cdktf.listMapper(virtualNetworkGatewayPolicyGroupPolicyMemberToTerraform, true)(struct!.policyMember),
+  }
+}
+
+export class VirtualNetworkGatewayPolicyGroupOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): VirtualNetworkGatewayPolicyGroup | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._isDefault !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.isDefault = this._isDefault;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._priority !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.priority = this._priority;
+    }
+    if (this._policyMember?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.policyMember = this._policyMember?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VirtualNetworkGatewayPolicyGroup | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._isDefault = undefined;
+      this._name = undefined;
+      this._priority = undefined;
+      this._policyMember.internalValue = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._isDefault = value.isDefault;
+      this._name = value.name;
+      this._priority = value.priority;
+      this._policyMember.internalValue = value.policyMember;
+    }
+  }
+
+  // is_default - computed: false, optional: true, required: false
+  private _isDefault?: boolean | cdktf.IResolvable; 
+  public get isDefault() {
+    return this.getBooleanAttribute('is_default');
+  }
+  public set isDefault(value: boolean | cdktf.IResolvable) {
+    this._isDefault = value;
+  }
+  public resetIsDefault() {
+    this._isDefault = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get isDefaultInput() {
+    return this._isDefault;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // priority - computed: false, optional: true, required: false
+  private _priority?: number; 
+  public get priority() {
+    return this.getNumberAttribute('priority');
+  }
+  public set priority(value: number) {
+    this._priority = value;
+  }
+  public resetPriority() {
+    this._priority = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get priorityInput() {
+    return this._priority;
+  }
+
+  // policy_member - computed: false, optional: false, required: true
+  private _policyMember = new VirtualNetworkGatewayPolicyGroupPolicyMemberList(this, "policy_member", false);
+  public get policyMember() {
+    return this._policyMember;
+  }
+  public putPolicyMember(value: VirtualNetworkGatewayPolicyGroupPolicyMember[] | cdktf.IResolvable) {
+    this._policyMember.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyMemberInput() {
+    return this._policyMember.internalValue;
+  }
+}
+
+export class VirtualNetworkGatewayPolicyGroupList extends cdktf.ComplexList {
+  public internalValue? : VirtualNetworkGatewayPolicyGroup[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): VirtualNetworkGatewayPolicyGroupOutputReference {
+    return new VirtualNetworkGatewayPolicyGroupOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface VirtualNetworkGatewayTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#create VirtualNetworkGateway#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#create VirtualNetworkGateway#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#delete VirtualNetworkGateway#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#delete VirtualNetworkGateway#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#read VirtualNetworkGateway#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#read VirtualNetworkGateway#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#update VirtualNetworkGateway#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#update VirtualNetworkGateway#update}
   */
   readonly update?: string;
 }
@@ -750,13 +1087,385 @@ export class VirtualNetworkGatewayTimeoutsOutputReference extends cdktf.ComplexO
     return this._update;
   }
 }
+export interface VirtualNetworkGatewayVpnClientConfigurationIpsecPolicy {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#dh_group VirtualNetworkGateway#dh_group}
+  */
+  readonly dhGroup: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#ike_encryption VirtualNetworkGateway#ike_encryption}
+  */
+  readonly ikeEncryption: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#ike_integrity VirtualNetworkGateway#ike_integrity}
+  */
+  readonly ikeIntegrity: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#ipsec_encryption VirtualNetworkGateway#ipsec_encryption}
+  */
+  readonly ipsecEncryption: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#ipsec_integrity VirtualNetworkGateway#ipsec_integrity}
+  */
+  readonly ipsecIntegrity: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#pfs_group VirtualNetworkGateway#pfs_group}
+  */
+  readonly pfsGroup: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#sa_data_size_in_kilobytes VirtualNetworkGateway#sa_data_size_in_kilobytes}
+  */
+  readonly saDataSizeInKilobytes: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#sa_lifetime_in_seconds VirtualNetworkGateway#sa_lifetime_in_seconds}
+  */
+  readonly saLifetimeInSeconds: number;
+}
+
+export function virtualNetworkGatewayVpnClientConfigurationIpsecPolicyToTerraform(struct?: VirtualNetworkGatewayVpnClientConfigurationIpsecPolicyOutputReference | VirtualNetworkGatewayVpnClientConfigurationIpsecPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    dh_group: cdktf.stringToTerraform(struct!.dhGroup),
+    ike_encryption: cdktf.stringToTerraform(struct!.ikeEncryption),
+    ike_integrity: cdktf.stringToTerraform(struct!.ikeIntegrity),
+    ipsec_encryption: cdktf.stringToTerraform(struct!.ipsecEncryption),
+    ipsec_integrity: cdktf.stringToTerraform(struct!.ipsecIntegrity),
+    pfs_group: cdktf.stringToTerraform(struct!.pfsGroup),
+    sa_data_size_in_kilobytes: cdktf.numberToTerraform(struct!.saDataSizeInKilobytes),
+    sa_lifetime_in_seconds: cdktf.numberToTerraform(struct!.saLifetimeInSeconds),
+  }
+}
+
+export class VirtualNetworkGatewayVpnClientConfigurationIpsecPolicyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): VirtualNetworkGatewayVpnClientConfigurationIpsecPolicy | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._dhGroup !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.dhGroup = this._dhGroup;
+    }
+    if (this._ikeEncryption !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ikeEncryption = this._ikeEncryption;
+    }
+    if (this._ikeIntegrity !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ikeIntegrity = this._ikeIntegrity;
+    }
+    if (this._ipsecEncryption !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipsecEncryption = this._ipsecEncryption;
+    }
+    if (this._ipsecIntegrity !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipsecIntegrity = this._ipsecIntegrity;
+    }
+    if (this._pfsGroup !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pfsGroup = this._pfsGroup;
+    }
+    if (this._saDataSizeInKilobytes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.saDataSizeInKilobytes = this._saDataSizeInKilobytes;
+    }
+    if (this._saLifetimeInSeconds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.saLifetimeInSeconds = this._saLifetimeInSeconds;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VirtualNetworkGatewayVpnClientConfigurationIpsecPolicy | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._dhGroup = undefined;
+      this._ikeEncryption = undefined;
+      this._ikeIntegrity = undefined;
+      this._ipsecEncryption = undefined;
+      this._ipsecIntegrity = undefined;
+      this._pfsGroup = undefined;
+      this._saDataSizeInKilobytes = undefined;
+      this._saLifetimeInSeconds = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._dhGroup = value.dhGroup;
+      this._ikeEncryption = value.ikeEncryption;
+      this._ikeIntegrity = value.ikeIntegrity;
+      this._ipsecEncryption = value.ipsecEncryption;
+      this._ipsecIntegrity = value.ipsecIntegrity;
+      this._pfsGroup = value.pfsGroup;
+      this._saDataSizeInKilobytes = value.saDataSizeInKilobytes;
+      this._saLifetimeInSeconds = value.saLifetimeInSeconds;
+    }
+  }
+
+  // dh_group - computed: false, optional: false, required: true
+  private _dhGroup?: string; 
+  public get dhGroup() {
+    return this.getStringAttribute('dh_group');
+  }
+  public set dhGroup(value: string) {
+    this._dhGroup = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dhGroupInput() {
+    return this._dhGroup;
+  }
+
+  // ike_encryption - computed: false, optional: false, required: true
+  private _ikeEncryption?: string; 
+  public get ikeEncryption() {
+    return this.getStringAttribute('ike_encryption');
+  }
+  public set ikeEncryption(value: string) {
+    this._ikeEncryption = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ikeEncryptionInput() {
+    return this._ikeEncryption;
+  }
+
+  // ike_integrity - computed: false, optional: false, required: true
+  private _ikeIntegrity?: string; 
+  public get ikeIntegrity() {
+    return this.getStringAttribute('ike_integrity');
+  }
+  public set ikeIntegrity(value: string) {
+    this._ikeIntegrity = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ikeIntegrityInput() {
+    return this._ikeIntegrity;
+  }
+
+  // ipsec_encryption - computed: false, optional: false, required: true
+  private _ipsecEncryption?: string; 
+  public get ipsecEncryption() {
+    return this.getStringAttribute('ipsec_encryption');
+  }
+  public set ipsecEncryption(value: string) {
+    this._ipsecEncryption = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipsecEncryptionInput() {
+    return this._ipsecEncryption;
+  }
+
+  // ipsec_integrity - computed: false, optional: false, required: true
+  private _ipsecIntegrity?: string; 
+  public get ipsecIntegrity() {
+    return this.getStringAttribute('ipsec_integrity');
+  }
+  public set ipsecIntegrity(value: string) {
+    this._ipsecIntegrity = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipsecIntegrityInput() {
+    return this._ipsecIntegrity;
+  }
+
+  // pfs_group - computed: false, optional: false, required: true
+  private _pfsGroup?: string; 
+  public get pfsGroup() {
+    return this.getStringAttribute('pfs_group');
+  }
+  public set pfsGroup(value: string) {
+    this._pfsGroup = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pfsGroupInput() {
+    return this._pfsGroup;
+  }
+
+  // sa_data_size_in_kilobytes - computed: false, optional: false, required: true
+  private _saDataSizeInKilobytes?: number; 
+  public get saDataSizeInKilobytes() {
+    return this.getNumberAttribute('sa_data_size_in_kilobytes');
+  }
+  public set saDataSizeInKilobytes(value: number) {
+    this._saDataSizeInKilobytes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get saDataSizeInKilobytesInput() {
+    return this._saDataSizeInKilobytes;
+  }
+
+  // sa_lifetime_in_seconds - computed: false, optional: false, required: true
+  private _saLifetimeInSeconds?: number; 
+  public get saLifetimeInSeconds() {
+    return this.getNumberAttribute('sa_lifetime_in_seconds');
+  }
+  public set saLifetimeInSeconds(value: number) {
+    this._saLifetimeInSeconds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get saLifetimeInSecondsInput() {
+    return this._saLifetimeInSeconds;
+  }
+}
+export interface VirtualNetworkGatewayVpnClientConfigurationRadiusServer {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#address VirtualNetworkGateway#address}
+  */
+  readonly address: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#score VirtualNetworkGateway#score}
+  */
+  readonly score: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#secret VirtualNetworkGateway#secret}
+  */
+  readonly secret: string;
+}
+
+export function virtualNetworkGatewayVpnClientConfigurationRadiusServerToTerraform(struct?: VirtualNetworkGatewayVpnClientConfigurationRadiusServer | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    address: cdktf.stringToTerraform(struct!.address),
+    score: cdktf.numberToTerraform(struct!.score),
+    secret: cdktf.stringToTerraform(struct!.secret),
+  }
+}
+
+export class VirtualNetworkGatewayVpnClientConfigurationRadiusServerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): VirtualNetworkGatewayVpnClientConfigurationRadiusServer | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._address !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.address = this._address;
+    }
+    if (this._score !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.score = this._score;
+    }
+    if (this._secret !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.secret = this._secret;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VirtualNetworkGatewayVpnClientConfigurationRadiusServer | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._address = undefined;
+      this._score = undefined;
+      this._secret = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._address = value.address;
+      this._score = value.score;
+      this._secret = value.secret;
+    }
+  }
+
+  // address - computed: false, optional: false, required: true
+  private _address?: string; 
+  public get address() {
+    return this.getStringAttribute('address');
+  }
+  public set address(value: string) {
+    this._address = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressInput() {
+    return this._address;
+  }
+
+  // score - computed: false, optional: false, required: true
+  private _score?: number; 
+  public get score() {
+    return this.getNumberAttribute('score');
+  }
+  public set score(value: number) {
+    this._score = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get scoreInput() {
+    return this._score;
+  }
+
+  // secret - computed: false, optional: false, required: true
+  private _secret?: string; 
+  public get secret() {
+    return this.getStringAttribute('secret');
+  }
+  public set secret(value: string) {
+    this._secret = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get secretInput() {
+    return this._secret;
+  }
+}
+
+export class VirtualNetworkGatewayVpnClientConfigurationRadiusServerList extends cdktf.ComplexList {
+  public internalValue? : VirtualNetworkGatewayVpnClientConfigurationRadiusServer[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): VirtualNetworkGatewayVpnClientConfigurationRadiusServerOutputReference {
+    return new VirtualNetworkGatewayVpnClientConfigurationRadiusServerOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface VirtualNetworkGatewayVpnClientConfigurationRevokedCertificate {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#name VirtualNetworkGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#name VirtualNetworkGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#thumbprint VirtualNetworkGateway#thumbprint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#thumbprint VirtualNetworkGateway#thumbprint}
   */
   readonly thumbprint: string;
 }
@@ -870,11 +1579,11 @@ export class VirtualNetworkGatewayVpnClientConfigurationRevokedCertificateList e
 }
 export interface VirtualNetworkGatewayVpnClientConfigurationRootCertificate {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#name VirtualNetworkGateway#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#name VirtualNetworkGateway#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#public_cert_data VirtualNetworkGateway#public_cert_data}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#public_cert_data VirtualNetworkGateway#public_cert_data}
   */
   readonly publicCertData: string;
 }
@@ -986,51 +1695,211 @@ export class VirtualNetworkGatewayVpnClientConfigurationRootCertificateList exte
     return new VirtualNetworkGatewayVpnClientConfigurationRootCertificateOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface VirtualNetworkGatewayVpnClientConfigurationVirtualNetworkGatewayClientConnection {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#address_prefixes VirtualNetworkGateway#address_prefixes}
+  */
+  readonly addressPrefixes: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#name VirtualNetworkGateway#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#policy_group_names VirtualNetworkGateway#policy_group_names}
+  */
+  readonly policyGroupNames: string[];
+}
+
+export function virtualNetworkGatewayVpnClientConfigurationVirtualNetworkGatewayClientConnectionToTerraform(struct?: VirtualNetworkGatewayVpnClientConfigurationVirtualNetworkGatewayClientConnection | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    address_prefixes: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.addressPrefixes),
+    name: cdktf.stringToTerraform(struct!.name),
+    policy_group_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.policyGroupNames),
+  }
+}
+
+export class VirtualNetworkGatewayVpnClientConfigurationVirtualNetworkGatewayClientConnectionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): VirtualNetworkGatewayVpnClientConfigurationVirtualNetworkGatewayClientConnection | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._addressPrefixes !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.addressPrefixes = this._addressPrefixes;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._policyGroupNames !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.policyGroupNames = this._policyGroupNames;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: VirtualNetworkGatewayVpnClientConfigurationVirtualNetworkGatewayClientConnection | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._addressPrefixes = undefined;
+      this._name = undefined;
+      this._policyGroupNames = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._addressPrefixes = value.addressPrefixes;
+      this._name = value.name;
+      this._policyGroupNames = value.policyGroupNames;
+    }
+  }
+
+  // address_prefixes - computed: false, optional: false, required: true
+  private _addressPrefixes?: string[]; 
+  public get addressPrefixes() {
+    return this.getListAttribute('address_prefixes');
+  }
+  public set addressPrefixes(value: string[]) {
+    this._addressPrefixes = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get addressPrefixesInput() {
+    return this._addressPrefixes;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // policy_group_names - computed: false, optional: false, required: true
+  private _policyGroupNames?: string[]; 
+  public get policyGroupNames() {
+    return this.getListAttribute('policy_group_names');
+  }
+  public set policyGroupNames(value: string[]) {
+    this._policyGroupNames = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyGroupNamesInput() {
+    return this._policyGroupNames;
+  }
+}
+
+export class VirtualNetworkGatewayVpnClientConfigurationVirtualNetworkGatewayClientConnectionList extends cdktf.ComplexList {
+  public internalValue? : VirtualNetworkGatewayVpnClientConfigurationVirtualNetworkGatewayClientConnection[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): VirtualNetworkGatewayVpnClientConfigurationVirtualNetworkGatewayClientConnectionOutputReference {
+    return new VirtualNetworkGatewayVpnClientConfigurationVirtualNetworkGatewayClientConnectionOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface VirtualNetworkGatewayVpnClientConfiguration {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#aad_audience VirtualNetworkGateway#aad_audience}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#aad_audience VirtualNetworkGateway#aad_audience}
   */
   readonly aadAudience?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#aad_issuer VirtualNetworkGateway#aad_issuer}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#aad_issuer VirtualNetworkGateway#aad_issuer}
   */
   readonly aadIssuer?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#aad_tenant VirtualNetworkGateway#aad_tenant}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#aad_tenant VirtualNetworkGateway#aad_tenant}
   */
   readonly aadTenant?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#address_space VirtualNetworkGateway#address_space}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#address_space VirtualNetworkGateway#address_space}
   */
   readonly addressSpace: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#radius_server_address VirtualNetworkGateway#radius_server_address}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#radius_server_address VirtualNetworkGateway#radius_server_address}
   */
   readonly radiusServerAddress?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#radius_server_secret VirtualNetworkGateway#radius_server_secret}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#radius_server_secret VirtualNetworkGateway#radius_server_secret}
   */
   readonly radiusServerSecret?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#vpn_auth_types VirtualNetworkGateway#vpn_auth_types}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#vpn_auth_types VirtualNetworkGateway#vpn_auth_types}
   */
   readonly vpnAuthTypes?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#vpn_client_protocols VirtualNetworkGateway#vpn_client_protocols}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#vpn_client_protocols VirtualNetworkGateway#vpn_client_protocols}
   */
   readonly vpnClientProtocols?: string[];
   /**
+  * ipsec_policy block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#ipsec_policy VirtualNetworkGateway#ipsec_policy}
+  */
+  readonly ipsecPolicy?: VirtualNetworkGatewayVpnClientConfigurationIpsecPolicy;
+  /**
+  * radius_server block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#radius_server VirtualNetworkGateway#radius_server}
+  */
+  readonly radiusServer?: VirtualNetworkGatewayVpnClientConfigurationRadiusServer[] | cdktf.IResolvable;
+  /**
   * revoked_certificate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#revoked_certificate VirtualNetworkGateway#revoked_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#revoked_certificate VirtualNetworkGateway#revoked_certificate}
   */
   readonly revokedCertificate?: VirtualNetworkGatewayVpnClientConfigurationRevokedCertificate[] | cdktf.IResolvable;
   /**
   * root_certificate block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#root_certificate VirtualNetworkGateway#root_certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#root_certificate VirtualNetworkGateway#root_certificate}
   */
   readonly rootCertificate?: VirtualNetworkGatewayVpnClientConfigurationRootCertificate[] | cdktf.IResolvable;
+  /**
+  * virtual_network_gateway_client_connection block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#virtual_network_gateway_client_connection VirtualNetworkGateway#virtual_network_gateway_client_connection}
+  */
+  readonly virtualNetworkGatewayClientConnection?: VirtualNetworkGatewayVpnClientConfigurationVirtualNetworkGatewayClientConnection[] | cdktf.IResolvable;
 }
 
 export function virtualNetworkGatewayVpnClientConfigurationToTerraform(struct?: VirtualNetworkGatewayVpnClientConfigurationOutputReference | VirtualNetworkGatewayVpnClientConfiguration): any {
@@ -1047,8 +1916,11 @@ export function virtualNetworkGatewayVpnClientConfigurationToTerraform(struct?: 
     radius_server_secret: cdktf.stringToTerraform(struct!.radiusServerSecret),
     vpn_auth_types: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.vpnAuthTypes),
     vpn_client_protocols: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.vpnClientProtocols),
+    ipsec_policy: virtualNetworkGatewayVpnClientConfigurationIpsecPolicyToTerraform(struct!.ipsecPolicy),
+    radius_server: cdktf.listMapper(virtualNetworkGatewayVpnClientConfigurationRadiusServerToTerraform, true)(struct!.radiusServer),
     revoked_certificate: cdktf.listMapper(virtualNetworkGatewayVpnClientConfigurationRevokedCertificateToTerraform, true)(struct!.revokedCertificate),
     root_certificate: cdktf.listMapper(virtualNetworkGatewayVpnClientConfigurationRootCertificateToTerraform, true)(struct!.rootCertificate),
+    virtual_network_gateway_client_connection: cdktf.listMapper(virtualNetworkGatewayVpnClientConfigurationVirtualNetworkGatewayClientConnectionToTerraform, true)(struct!.virtualNetworkGatewayClientConnection),
   }
 }
 
@@ -1098,6 +1970,14 @@ export class VirtualNetworkGatewayVpnClientConfigurationOutputReference extends 
       hasAnyValues = true;
       internalValueResult.vpnClientProtocols = this._vpnClientProtocols;
     }
+    if (this._ipsecPolicy?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.ipsecPolicy = this._ipsecPolicy?.internalValue;
+    }
+    if (this._radiusServer?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.radiusServer = this._radiusServer?.internalValue;
+    }
     if (this._revokedCertificate?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.revokedCertificate = this._revokedCertificate?.internalValue;
@@ -1105,6 +1985,10 @@ export class VirtualNetworkGatewayVpnClientConfigurationOutputReference extends 
     if (this._rootCertificate?.internalValue !== undefined) {
       hasAnyValues = true;
       internalValueResult.rootCertificate = this._rootCertificate?.internalValue;
+    }
+    if (this._virtualNetworkGatewayClientConnection?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.virtualNetworkGatewayClientConnection = this._virtualNetworkGatewayClientConnection?.internalValue;
     }
     return hasAnyValues ? internalValueResult : undefined;
   }
@@ -1120,8 +2004,11 @@ export class VirtualNetworkGatewayVpnClientConfigurationOutputReference extends 
       this._radiusServerSecret = undefined;
       this._vpnAuthTypes = undefined;
       this._vpnClientProtocols = undefined;
+      this._ipsecPolicy.internalValue = undefined;
+      this._radiusServer.internalValue = undefined;
       this._revokedCertificate.internalValue = undefined;
       this._rootCertificate.internalValue = undefined;
+      this._virtualNetworkGatewayClientConnection.internalValue = undefined;
     }
     else {
       this.isEmptyObject = Object.keys(value).length === 0;
@@ -1133,8 +2020,11 @@ export class VirtualNetworkGatewayVpnClientConfigurationOutputReference extends 
       this._radiusServerSecret = value.radiusServerSecret;
       this._vpnAuthTypes = value.vpnAuthTypes;
       this._vpnClientProtocols = value.vpnClientProtocols;
+      this._ipsecPolicy.internalValue = value.ipsecPolicy;
+      this._radiusServer.internalValue = value.radiusServer;
       this._revokedCertificate.internalValue = value.revokedCertificate;
       this._rootCertificate.internalValue = value.rootCertificate;
+      this._virtualNetworkGatewayClientConnection.internalValue = value.virtualNetworkGatewayClientConnection;
     }
   }
 
@@ -1263,6 +2153,38 @@ export class VirtualNetworkGatewayVpnClientConfigurationOutputReference extends 
     return this._vpnClientProtocols;
   }
 
+  // ipsec_policy - computed: false, optional: true, required: false
+  private _ipsecPolicy = new VirtualNetworkGatewayVpnClientConfigurationIpsecPolicyOutputReference(this, "ipsec_policy");
+  public get ipsecPolicy() {
+    return this._ipsecPolicy;
+  }
+  public putIpsecPolicy(value: VirtualNetworkGatewayVpnClientConfigurationIpsecPolicy) {
+    this._ipsecPolicy.internalValue = value;
+  }
+  public resetIpsecPolicy() {
+    this._ipsecPolicy.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipsecPolicyInput() {
+    return this._ipsecPolicy.internalValue;
+  }
+
+  // radius_server - computed: false, optional: true, required: false
+  private _radiusServer = new VirtualNetworkGatewayVpnClientConfigurationRadiusServerList(this, "radius_server", false);
+  public get radiusServer() {
+    return this._radiusServer;
+  }
+  public putRadiusServer(value: VirtualNetworkGatewayVpnClientConfigurationRadiusServer[] | cdktf.IResolvable) {
+    this._radiusServer.internalValue = value;
+  }
+  public resetRadiusServer() {
+    this._radiusServer.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get radiusServerInput() {
+    return this._radiusServer.internalValue;
+  }
+
   // revoked_certificate - computed: false, optional: true, required: false
   private _revokedCertificate = new VirtualNetworkGatewayVpnClientConfigurationRevokedCertificateList(this, "revoked_certificate", true);
   public get revokedCertificate() {
@@ -1294,10 +2216,26 @@ export class VirtualNetworkGatewayVpnClientConfigurationOutputReference extends 
   public get rootCertificateInput() {
     return this._rootCertificate.internalValue;
   }
+
+  // virtual_network_gateway_client_connection - computed: false, optional: true, required: false
+  private _virtualNetworkGatewayClientConnection = new VirtualNetworkGatewayVpnClientConfigurationVirtualNetworkGatewayClientConnectionList(this, "virtual_network_gateway_client_connection", false);
+  public get virtualNetworkGatewayClientConnection() {
+    return this._virtualNetworkGatewayClientConnection;
+  }
+  public putVirtualNetworkGatewayClientConnection(value: VirtualNetworkGatewayVpnClientConfigurationVirtualNetworkGatewayClientConnection[] | cdktf.IResolvable) {
+    this._virtualNetworkGatewayClientConnection.internalValue = value;
+  }
+  public resetVirtualNetworkGatewayClientConnection() {
+    this._virtualNetworkGatewayClientConnection.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualNetworkGatewayClientConnectionInput() {
+    return this._virtualNetworkGatewayClientConnection.internalValue;
+  }
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway azurerm_virtual_network_gateway}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway azurerm_virtual_network_gateway}
 */
 export class VirtualNetworkGateway extends cdktf.TerraformResource {
 
@@ -1313,7 +2251,7 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a VirtualNetworkGateway resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the VirtualNetworkGateway to import
-  * @param importFromId The id of the existing VirtualNetworkGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing VirtualNetworkGateway that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the VirtualNetworkGateway to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1325,7 +2263,7 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/virtual_network_gateway azurerm_virtual_network_gateway} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/virtual_network_gateway azurerm_virtual_network_gateway} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1336,7 +2274,7 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_virtual_network_gateway',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.83.0',
+        providerVersion: '3.84.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -1348,22 +2286,28 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
       forEach: config.forEach
     });
     this._activeActive = config.activeActive;
+    this._bgpRouteTranslationForNatEnabled = config.bgpRouteTranslationForNatEnabled;
     this._defaultLocalNetworkGatewayId = config.defaultLocalNetworkGatewayId;
+    this._dnsForwardingEnabled = config.dnsForwardingEnabled;
     this._edgeZone = config.edgeZone;
     this._enableBgp = config.enableBgp;
     this._generation = config.generation;
     this._id = config.id;
+    this._ipSecReplayProtectionEnabled = config.ipSecReplayProtectionEnabled;
     this._location = config.location;
     this._name = config.name;
     this._privateIpAddressEnabled = config.privateIpAddressEnabled;
+    this._remoteVnetTrafficEnabled = config.remoteVnetTrafficEnabled;
     this._resourceGroupName = config.resourceGroupName;
     this._sku = config.sku;
     this._tags = config.tags;
     this._type = config.type;
+    this._virtualWanTrafficEnabled = config.virtualWanTrafficEnabled;
     this._vpnType = config.vpnType;
     this._bgpSettings.internalValue = config.bgpSettings;
     this._customRoute.internalValue = config.customRoute;
     this._ipConfiguration.internalValue = config.ipConfiguration;
+    this._policyGroup.internalValue = config.policyGroup;
     this._timeouts.internalValue = config.timeouts;
     this._vpnClientConfiguration.internalValue = config.vpnClientConfiguration;
   }
@@ -1388,6 +2332,22 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
     return this._activeActive;
   }
 
+  // bgp_route_translation_for_nat_enabled - computed: false, optional: true, required: false
+  private _bgpRouteTranslationForNatEnabled?: boolean | cdktf.IResolvable; 
+  public get bgpRouteTranslationForNatEnabled() {
+    return this.getBooleanAttribute('bgp_route_translation_for_nat_enabled');
+  }
+  public set bgpRouteTranslationForNatEnabled(value: boolean | cdktf.IResolvable) {
+    this._bgpRouteTranslationForNatEnabled = value;
+  }
+  public resetBgpRouteTranslationForNatEnabled() {
+    this._bgpRouteTranslationForNatEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get bgpRouteTranslationForNatEnabledInput() {
+    return this._bgpRouteTranslationForNatEnabled;
+  }
+
   // default_local_network_gateway_id - computed: false, optional: true, required: false
   private _defaultLocalNetworkGatewayId?: string; 
   public get defaultLocalNetworkGatewayId() {
@@ -1402,6 +2362,22 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get defaultLocalNetworkGatewayIdInput() {
     return this._defaultLocalNetworkGatewayId;
+  }
+
+  // dns_forwarding_enabled - computed: false, optional: true, required: false
+  private _dnsForwardingEnabled?: boolean | cdktf.IResolvable; 
+  public get dnsForwardingEnabled() {
+    return this.getBooleanAttribute('dns_forwarding_enabled');
+  }
+  public set dnsForwardingEnabled(value: boolean | cdktf.IResolvable) {
+    this._dnsForwardingEnabled = value;
+  }
+  public resetDnsForwardingEnabled() {
+    this._dnsForwardingEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dnsForwardingEnabledInput() {
+    return this._dnsForwardingEnabled;
   }
 
   // edge_zone - computed: false, optional: true, required: false
@@ -1468,6 +2444,22 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
     return this._id;
   }
 
+  // ip_sec_replay_protection_enabled - computed: false, optional: true, required: false
+  private _ipSecReplayProtectionEnabled?: boolean | cdktf.IResolvable; 
+  public get ipSecReplayProtectionEnabled() {
+    return this.getBooleanAttribute('ip_sec_replay_protection_enabled');
+  }
+  public set ipSecReplayProtectionEnabled(value: boolean | cdktf.IResolvable) {
+    this._ipSecReplayProtectionEnabled = value;
+  }
+  public resetIpSecReplayProtectionEnabled() {
+    this._ipSecReplayProtectionEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get ipSecReplayProtectionEnabledInput() {
+    return this._ipSecReplayProtectionEnabled;
+  }
+
   // location - computed: false, optional: false, required: true
   private _location?: string; 
   public get location() {
@@ -1508,6 +2500,22 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get privateIpAddressEnabledInput() {
     return this._privateIpAddressEnabled;
+  }
+
+  // remote_vnet_traffic_enabled - computed: false, optional: true, required: false
+  private _remoteVnetTrafficEnabled?: boolean | cdktf.IResolvable; 
+  public get remoteVnetTrafficEnabled() {
+    return this.getBooleanAttribute('remote_vnet_traffic_enabled');
+  }
+  public set remoteVnetTrafficEnabled(value: boolean | cdktf.IResolvable) {
+    this._remoteVnetTrafficEnabled = value;
+  }
+  public resetRemoteVnetTrafficEnabled() {
+    this._remoteVnetTrafficEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get remoteVnetTrafficEnabledInput() {
+    return this._remoteVnetTrafficEnabled;
   }
 
   // resource_group_name - computed: false, optional: false, required: true
@@ -1563,6 +2571,22 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get typeInput() {
     return this._type;
+  }
+
+  // virtual_wan_traffic_enabled - computed: false, optional: true, required: false
+  private _virtualWanTrafficEnabled?: boolean | cdktf.IResolvable; 
+  public get virtualWanTrafficEnabled() {
+    return this.getBooleanAttribute('virtual_wan_traffic_enabled');
+  }
+  public set virtualWanTrafficEnabled(value: boolean | cdktf.IResolvable) {
+    this._virtualWanTrafficEnabled = value;
+  }
+  public resetVirtualWanTrafficEnabled() {
+    this._virtualWanTrafficEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get virtualWanTrafficEnabledInput() {
+    return this._virtualWanTrafficEnabled;
   }
 
   // vpn_type - computed: false, optional: true, required: false
@@ -1626,6 +2650,22 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
     return this._ipConfiguration.internalValue;
   }
 
+  // policy_group - computed: false, optional: true, required: false
+  private _policyGroup = new VirtualNetworkGatewayPolicyGroupList(this, "policy_group", false);
+  public get policyGroup() {
+    return this._policyGroup;
+  }
+  public putPolicyGroup(value: VirtualNetworkGatewayPolicyGroup[] | cdktf.IResolvable) {
+    this._policyGroup.internalValue = value;
+  }
+  public resetPolicyGroup() {
+    this._policyGroup.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get policyGroupInput() {
+    return this._policyGroup.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new VirtualNetworkGatewayTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -1665,22 +2705,28 @@ export class VirtualNetworkGateway extends cdktf.TerraformResource {
   protected synthesizeAttributes(): { [name: string]: any } {
     return {
       active_active: cdktf.booleanToTerraform(this._activeActive),
+      bgp_route_translation_for_nat_enabled: cdktf.booleanToTerraform(this._bgpRouteTranslationForNatEnabled),
       default_local_network_gateway_id: cdktf.stringToTerraform(this._defaultLocalNetworkGatewayId),
+      dns_forwarding_enabled: cdktf.booleanToTerraform(this._dnsForwardingEnabled),
       edge_zone: cdktf.stringToTerraform(this._edgeZone),
       enable_bgp: cdktf.booleanToTerraform(this._enableBgp),
       generation: cdktf.stringToTerraform(this._generation),
       id: cdktf.stringToTerraform(this._id),
+      ip_sec_replay_protection_enabled: cdktf.booleanToTerraform(this._ipSecReplayProtectionEnabled),
       location: cdktf.stringToTerraform(this._location),
       name: cdktf.stringToTerraform(this._name),
       private_ip_address_enabled: cdktf.booleanToTerraform(this._privateIpAddressEnabled),
+      remote_vnet_traffic_enabled: cdktf.booleanToTerraform(this._remoteVnetTrafficEnabled),
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       sku: cdktf.stringToTerraform(this._sku),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       type: cdktf.stringToTerraform(this._type),
+      virtual_wan_traffic_enabled: cdktf.booleanToTerraform(this._virtualWanTrafficEnabled),
       vpn_type: cdktf.stringToTerraform(this._vpnType),
       bgp_settings: virtualNetworkGatewayBgpSettingsToTerraform(this._bgpSettings.internalValue),
       custom_route: virtualNetworkGatewayCustomRouteToTerraform(this._customRoute.internalValue),
       ip_configuration: cdktf.listMapper(virtualNetworkGatewayIpConfigurationToTerraform, true)(this._ipConfiguration.internalValue),
+      policy_group: cdktf.listMapper(virtualNetworkGatewayPolicyGroupToTerraform, true)(this._policyGroup.internalValue),
       timeouts: virtualNetworkGatewayTimeoutsToTerraform(this._timeouts.internalValue),
       vpn_client_configuration: virtualNetworkGatewayVpnClientConfigurationToTerraform(this._vpnClientConfiguration.internalValue),
     };

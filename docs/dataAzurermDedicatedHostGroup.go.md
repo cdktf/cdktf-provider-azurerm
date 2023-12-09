@@ -4,12 +4,12 @@
 
 ### DataAzurermDedicatedHostGroup <a name="DataAzurermDedicatedHostGroup" id="@cdktf/provider-azurerm.dataAzurermDedicatedHostGroup.DataAzurermDedicatedHostGroup"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/dedicated_host_group azurerm_dedicated_host_group}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/dedicated_host_group azurerm_dedicated_host_group}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDedicatedHostGroup.DataAzurermDedicatedHostGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdedicatedhostgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdedicatedhostgroup"
 
 dataazurermdedicatedhostgroup.NewDataAzurermDedicatedHostGroup(scope Construct, id *string, config DataAzurermDedicatedHostGroupConfig) DataAzurermDedicatedHostGroup
 ```
@@ -294,7 +294,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermDedicatedHostGroup.DataAzurermDedicatedHostGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdedicatedhostgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdedicatedhostgroup"
 
 dataazurermdedicatedhostgroup.DataAzurermDedicatedHostGroup_IsConstruct(x interface{}) *bool
 ```
@@ -326,7 +326,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermDedicatedHostGroup.DataAzurermDedicatedHostGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdedicatedhostgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdedicatedhostgroup"
 
 dataazurermdedicatedhostgroup.DataAzurermDedicatedHostGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -340,7 +340,7 @@ dataazurermdedicatedhostgroup.DataAzurermDedicatedHostGroup_IsTerraformElement(x
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermDedicatedHostGroup.DataAzurermDedicatedHostGroup.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdedicatedhostgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdedicatedhostgroup"
 
 dataazurermdedicatedhostgroup.DataAzurermDedicatedHostGroup_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -354,7 +354,7 @@ dataazurermdedicatedhostgroup.DataAzurermDedicatedHostGroup_IsTerraformDataSourc
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermDedicatedHostGroup.DataAzurermDedicatedHostGroup.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdedicatedhostgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdedicatedhostgroup"
 
 dataazurermdedicatedhostgroup.DataAzurermDedicatedHostGroup_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -383,7 +383,7 @@ The construct id used in the generated config for the DataAzurermDedicatedHostGr
 
 The id of the existing DataAzurermDedicatedHostGroup that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/dedicated_host_group#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/dedicated_host_group#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -704,7 +704,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDedicatedHostGroup.DataAzurermDedicatedHostGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdedicatedhostgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdedicatedhostgroup"
 
 &dataazurermdedicatedhostgroup.DataAzurermDedicatedHostGroupConfig {
 	Connection: interface{},
@@ -717,7 +717,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdedica
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermDedicatedHostGroup.DataAzurermDedicatedHostGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermDedicatedHostGroup.DataAzurermDedicatedHostGroupTimeouts,
 }
 ```
 
@@ -732,9 +732,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdedica
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDedicatedHostGroup.DataAzurermDedicatedHostGroupConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDedicatedHostGroup.DataAzurermDedicatedHostGroupConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDedicatedHostGroup.DataAzurermDedicatedHostGroupConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDedicatedHostGroup.DataAzurermDedicatedHostGroupConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/dedicated_host_group#name DataAzurermDedicatedHostGroup#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDedicatedHostGroup.DataAzurermDedicatedHostGroupConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/dedicated_host_group#resource_group_name DataAzurermDedicatedHostGroup#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDedicatedHostGroup.DataAzurermDedicatedHostGroupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/dedicated_host_group#id DataAzurermDedicatedHostGroup#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDedicatedHostGroup.DataAzurermDedicatedHostGroupConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/dedicated_host_group#name DataAzurermDedicatedHostGroup#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDedicatedHostGroup.DataAzurermDedicatedHostGroupConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/dedicated_host_group#resource_group_name DataAzurermDedicatedHostGroup#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDedicatedHostGroup.DataAzurermDedicatedHostGroupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/dedicated_host_group#id DataAzurermDedicatedHostGroup#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermDedicatedHostGroup.DataAzurermDedicatedHostGroupConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermDedicatedHostGroup.DataAzurermDedicatedHostGroupTimeouts">DataAzurermDedicatedHostGroupTimeouts</a></code> | timeouts block. |
 
 ---
@@ -817,7 +817,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/dedicated_host_group#name DataAzurermDedicatedHostGroup#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/dedicated_host_group#name DataAzurermDedicatedHostGroup#name}.
 
 ---
 
@@ -829,7 +829,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/dedicated_host_group#resource_group_name DataAzurermDedicatedHostGroup#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/dedicated_host_group#resource_group_name DataAzurermDedicatedHostGroup#resource_group_name}.
 
 ---
 
@@ -841,7 +841,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/dedicated_host_group#id DataAzurermDedicatedHostGroup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/dedicated_host_group#id DataAzurermDedicatedHostGroup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -858,7 +858,7 @@ Timeouts DataAzurermDedicatedHostGroupTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/dedicated_host_group#timeouts DataAzurermDedicatedHostGroup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/dedicated_host_group#timeouts DataAzurermDedicatedHostGroup#timeouts}
 
 ---
 
@@ -867,7 +867,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDedicatedHostGroup.DataAzurermDedicatedHostGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdedicatedhostgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdedicatedhostgroup"
 
 &dataazurermdedicatedhostgroup.DataAzurermDedicatedHostGroupTimeouts {
 	Read: *string,
@@ -878,7 +878,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdedica
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermDedicatedHostGroup.DataAzurermDedicatedHostGroupTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/dedicated_host_group#read DataAzurermDedicatedHostGroup#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermDedicatedHostGroup.DataAzurermDedicatedHostGroupTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/dedicated_host_group#read DataAzurermDedicatedHostGroup#read}. |
 
 ---
 
@@ -890,7 +890,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/dedicated_host_group#read DataAzurermDedicatedHostGroup#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/dedicated_host_group#read DataAzurermDedicatedHostGroup#read}.
 
 ---
 
@@ -901,7 +901,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDedicatedHostGroup.DataAzurermDedicatedHostGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdedicatedhostgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdedicatedhostgroup"
 
 dataazurermdedicatedhostgroup.NewDataAzurermDedicatedHostGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermDedicatedHostGroupTimeoutsOutputReference
 ```

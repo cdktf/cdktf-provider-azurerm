@@ -4,12 +4,12 @@
 
 ### DataAzurermLbBackendAddressPool <a name="DataAzurermLbBackendAddressPool" id="@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPool"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/lb_backend_address_pool azurerm_lb_backend_address_pool}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/lb_backend_address_pool azurerm_lb_backend_address_pool}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlbbackendaddresspool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlbbackendaddresspool"
 
 dataazurermlbbackendaddresspool.NewDataAzurermLbBackendAddressPool(scope Construct, id *string, config DataAzurermLbBackendAddressPoolConfig) DataAzurermLbBackendAddressPool
 ```
@@ -294,7 +294,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPool.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlbbackendaddresspool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlbbackendaddresspool"
 
 dataazurermlbbackendaddresspool.DataAzurermLbBackendAddressPool_IsConstruct(x interface{}) *bool
 ```
@@ -326,7 +326,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPool.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlbbackendaddresspool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlbbackendaddresspool"
 
 dataazurermlbbackendaddresspool.DataAzurermLbBackendAddressPool_IsTerraformElement(x interface{}) *bool
 ```
@@ -340,7 +340,7 @@ dataazurermlbbackendaddresspool.DataAzurermLbBackendAddressPool_IsTerraformEleme
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPool.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlbbackendaddresspool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlbbackendaddresspool"
 
 dataazurermlbbackendaddresspool.DataAzurermLbBackendAddressPool_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -354,7 +354,7 @@ dataazurermlbbackendaddresspool.DataAzurermLbBackendAddressPool_IsTerraformDataS
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPool.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlbbackendaddresspool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlbbackendaddresspool"
 
 dataazurermlbbackendaddresspool.DataAzurermLbBackendAddressPool_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -383,7 +383,7 @@ The construct id used in the generated config for the DataAzurermLbBackendAddres
 
 The id of the existing DataAzurermLbBackendAddressPool that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/lb_backend_address_pool#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/lb_backend_address_pool#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -704,7 +704,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolBackendAddress.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlbbackendaddresspool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlbbackendaddresspool"
 
 &dataazurermlbbackendaddresspool.DataAzurermLbBackendAddressPoolBackendAddress {
 
@@ -717,7 +717,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlbback
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolBackendAddressInboundNatRulePortMapping.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlbbackendaddresspool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlbbackendaddresspool"
 
 &dataazurermlbbackendaddresspool.DataAzurermLbBackendAddressPoolBackendAddressInboundNatRulePortMapping {
 
@@ -730,7 +730,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlbback
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolBackendIpConfigurations.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlbbackendaddresspool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlbbackendaddresspool"
 
 &dataazurermlbbackendaddresspool.DataAzurermLbBackendAddressPoolBackendIpConfigurations {
 
@@ -743,7 +743,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlbback
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlbbackendaddresspool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlbbackendaddresspool"
 
 &dataazurermlbbackendaddresspool.DataAzurermLbBackendAddressPoolConfig {
 	Connection: interface{},
@@ -756,7 +756,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlbback
 	LoadbalancerId: *string,
 	Name: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolTimeouts,
 }
 ```
 
@@ -771,9 +771,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlbback
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolConfig.property.loadbalancerId">LoadbalancerId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/lb_backend_address_pool#loadbalancer_id DataAzurermLbBackendAddressPool#loadbalancer_id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/lb_backend_address_pool#name DataAzurermLbBackendAddressPool#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/lb_backend_address_pool#id DataAzurermLbBackendAddressPool#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolConfig.property.loadbalancerId">LoadbalancerId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/lb_backend_address_pool#loadbalancer_id DataAzurermLbBackendAddressPool#loadbalancer_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/lb_backend_address_pool#name DataAzurermLbBackendAddressPool#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/lb_backend_address_pool#id DataAzurermLbBackendAddressPool#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolTimeouts">DataAzurermLbBackendAddressPoolTimeouts</a></code> | timeouts block. |
 
 ---
@@ -856,7 +856,7 @@ LoadbalancerId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/lb_backend_address_pool#loadbalancer_id DataAzurermLbBackendAddressPool#loadbalancer_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/lb_backend_address_pool#loadbalancer_id DataAzurermLbBackendAddressPool#loadbalancer_id}.
 
 ---
 
@@ -868,7 +868,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/lb_backend_address_pool#name DataAzurermLbBackendAddressPool#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/lb_backend_address_pool#name DataAzurermLbBackendAddressPool#name}.
 
 ---
 
@@ -880,7 +880,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/lb_backend_address_pool#id DataAzurermLbBackendAddressPool#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/lb_backend_address_pool#id DataAzurermLbBackendAddressPool#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -897,7 +897,7 @@ Timeouts DataAzurermLbBackendAddressPoolTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/lb_backend_address_pool#timeouts DataAzurermLbBackendAddressPool#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/lb_backend_address_pool#timeouts DataAzurermLbBackendAddressPool#timeouts}
 
 ---
 
@@ -906,7 +906,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlbbackendaddresspool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlbbackendaddresspool"
 
 &dataazurermlbbackendaddresspool.DataAzurermLbBackendAddressPoolTimeouts {
 	Read: *string,
@@ -917,7 +917,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlbback
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/lb_backend_address_pool#read DataAzurermLbBackendAddressPool#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/lb_backend_address_pool#read DataAzurermLbBackendAddressPool#read}. |
 
 ---
 
@@ -929,7 +929,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/lb_backend_address_pool#read DataAzurermLbBackendAddressPool#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/lb_backend_address_pool#read DataAzurermLbBackendAddressPool#read}.
 
 ---
 
@@ -940,7 +940,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolBackendAddressInboundNatRulePortMappingList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlbbackendaddresspool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlbbackendaddresspool"
 
 dataazurermlbbackendaddresspool.NewDataAzurermLbBackendAddressPoolBackendAddressInboundNatRulePortMappingList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLbBackendAddressPoolBackendAddressInboundNatRulePortMappingList
 ```
@@ -1072,7 +1072,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolBackendAddressInboundNatRulePortMappingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlbbackendaddresspool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlbbackendaddresspool"
 
 dataazurermlbbackendaddresspool.NewDataAzurermLbBackendAddressPoolBackendAddressInboundNatRulePortMappingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLbBackendAddressPoolBackendAddressInboundNatRulePortMappingOutputReference
 ```
@@ -1372,7 +1372,7 @@ func InternalValue() DataAzurermLbBackendAddressPoolBackendAddressInboundNatRule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolBackendAddressList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlbbackendaddresspool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlbbackendaddresspool"
 
 dataazurermlbbackendaddresspool.NewDataAzurermLbBackendAddressPoolBackendAddressList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLbBackendAddressPoolBackendAddressList
 ```
@@ -1504,7 +1504,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolBackendAddressOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlbbackendaddresspool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlbbackendaddresspool"
 
 dataazurermlbbackendaddresspool.NewDataAzurermLbBackendAddressPoolBackendAddressOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLbBackendAddressPoolBackendAddressOutputReference
 ```
@@ -1815,7 +1815,7 @@ func InternalValue() DataAzurermLbBackendAddressPoolBackendAddress
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolBackendIpConfigurationsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlbbackendaddresspool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlbbackendaddresspool"
 
 dataazurermlbbackendaddresspool.NewDataAzurermLbBackendAddressPoolBackendIpConfigurationsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLbBackendAddressPoolBackendIpConfigurationsList
 ```
@@ -1947,7 +1947,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolBackendIpConfigurationsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlbbackendaddresspool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlbbackendaddresspool"
 
 dataazurermlbbackendaddresspool.NewDataAzurermLbBackendAddressPoolBackendIpConfigurationsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLbBackendAddressPoolBackendIpConfigurationsOutputReference
 ```
@@ -2225,7 +2225,7 @@ func InternalValue() DataAzurermLbBackendAddressPoolBackendIpConfigurations
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLbBackendAddressPool.DataAzurermLbBackendAddressPoolTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlbbackendaddresspool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlbbackendaddresspool"
 
 dataazurermlbbackendaddresspool.NewDataAzurermLbBackendAddressPoolTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermLbBackendAddressPoolTimeoutsOutputReference
 ```

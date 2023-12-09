@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/cosmosdb_account
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/cosmosdb_account
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermCosmosdbAccountConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/cosmosdb_account#id DataAzurermCosmosdbAccount#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/cosmosdb_account#id DataAzurermCosmosdbAccount#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/cosmosdb_account#name DataAzurermCosmosdbAccount#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/cosmosdb_account#name DataAzurermCosmosdbAccount#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/cosmosdb_account#resource_group_name DataAzurermCosmosdbAccount#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/cosmosdb_account#resource_group_name DataAzurermCosmosdbAccount#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/cosmosdb_account#timeouts DataAzurermCosmosdbAccount#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/cosmosdb_account#timeouts DataAzurermCosmosdbAccount#timeouts}
   */
   readonly timeouts?: DataAzurermCosmosdbAccountTimeouts;
 }
@@ -312,7 +307,7 @@ export class DataAzurermCosmosdbAccountVirtualNetworkRuleList extends cdktf.Comp
 }
 export interface DataAzurermCosmosdbAccountTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/cosmosdb_account#read DataAzurermCosmosdbAccount#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/cosmosdb_account#read DataAzurermCosmosdbAccount#read}
   */
   readonly read?: string;
 }
@@ -387,7 +382,7 @@ export class DataAzurermCosmosdbAccountTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/cosmosdb_account azurerm_cosmosdb_account}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/cosmosdb_account azurerm_cosmosdb_account}
 */
 export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
 
@@ -403,7 +398,7 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermCosmosdbAccount resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermCosmosdbAccount to import
-  * @param importFromId The id of the existing DataAzurermCosmosdbAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/cosmosdb_account#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermCosmosdbAccount that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/cosmosdb_account#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermCosmosdbAccount to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -415,7 +410,7 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/cosmosdb_account azurerm_cosmosdb_account} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/cosmosdb_account azurerm_cosmosdb_account} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -426,7 +421,7 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_cosmosdb_account',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.83.0',
+        providerVersion: '3.84.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -451,6 +446,11 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
   private _capabilities = new DataAzurermCosmosdbAccountCapabilitiesList(this, "capabilities", false);
   public get capabilities() {
     return this._capabilities;
+  }
+
+  // connection_strings - computed: true, optional: false, required: false
+  public get connectionStrings() {
+    return this.getListAttribute('connection_strings');
   }
 
   // consistency_policy - computed: true, optional: false, required: false
@@ -549,9 +549,29 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
     return this.getStringAttribute('primary_key');
   }
 
+  // primary_mongodb_connection_string - computed: true, optional: false, required: false
+  public get primaryMongodbConnectionString() {
+    return this.getStringAttribute('primary_mongodb_connection_string');
+  }
+
   // primary_readonly_key - computed: true, optional: false, required: false
   public get primaryReadonlyKey() {
     return this.getStringAttribute('primary_readonly_key');
+  }
+
+  // primary_readonly_mongodb_connection_string - computed: true, optional: false, required: false
+  public get primaryReadonlyMongodbConnectionString() {
+    return this.getStringAttribute('primary_readonly_mongodb_connection_string');
+  }
+
+  // primary_readonly_sql_connection_string - computed: true, optional: false, required: false
+  public get primaryReadonlySqlConnectionString() {
+    return this.getStringAttribute('primary_readonly_sql_connection_string');
+  }
+
+  // primary_sql_connection_string - computed: true, optional: false, required: false
+  public get primarySqlConnectionString() {
+    return this.getStringAttribute('primary_sql_connection_string');
   }
 
   // read_endpoints - computed: true, optional: false, required: false
@@ -577,9 +597,29 @@ export class DataAzurermCosmosdbAccount extends cdktf.TerraformDataSource {
     return this.getStringAttribute('secondary_key');
   }
 
+  // secondary_mongodb_connection_string - computed: true, optional: false, required: false
+  public get secondaryMongodbConnectionString() {
+    return this.getStringAttribute('secondary_mongodb_connection_string');
+  }
+
   // secondary_readonly_key - computed: true, optional: false, required: false
   public get secondaryReadonlyKey() {
     return this.getStringAttribute('secondary_readonly_key');
+  }
+
+  // secondary_readonly_mongodb_connection_string - computed: true, optional: false, required: false
+  public get secondaryReadonlyMongodbConnectionString() {
+    return this.getStringAttribute('secondary_readonly_mongodb_connection_string');
+  }
+
+  // secondary_readonly_sql_connection_string - computed: true, optional: false, required: false
+  public get secondaryReadonlySqlConnectionString() {
+    return this.getStringAttribute('secondary_readonly_sql_connection_string');
+  }
+
+  // secondary_sql_connection_string - computed: true, optional: false, required: false
+  public get secondarySqlConnectionString() {
+    return this.getStringAttribute('secondary_sql_connection_string');
   }
 
   // tags - computed: true, optional: false, required: false

@@ -4,12 +4,12 @@
 
 ### DataAzurermNotificationHub <a name="DataAzurermNotificationHub" id="@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHub"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/notification_hub azurerm_notification_hub}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/notification_hub azurerm_notification_hub}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHub.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnotificationhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnotificationhub"
 
 dataazurermnotificationhub.NewDataAzurermNotificationHub(scope Construct, id *string, config DataAzurermNotificationHubConfig) DataAzurermNotificationHub
 ```
@@ -294,7 +294,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHub.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnotificationhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnotificationhub"
 
 dataazurermnotificationhub.DataAzurermNotificationHub_IsConstruct(x interface{}) *bool
 ```
@@ -326,7 +326,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHub.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnotificationhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnotificationhub"
 
 dataazurermnotificationhub.DataAzurermNotificationHub_IsTerraformElement(x interface{}) *bool
 ```
@@ -340,7 +340,7 @@ dataazurermnotificationhub.DataAzurermNotificationHub_IsTerraformElement(x inter
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHub.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnotificationhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnotificationhub"
 
 dataazurermnotificationhub.DataAzurermNotificationHub_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -354,7 +354,7 @@ dataazurermnotificationhub.DataAzurermNotificationHub_IsTerraformDataSource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHub.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnotificationhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnotificationhub"
 
 dataazurermnotificationhub.DataAzurermNotificationHub_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -383,7 +383,7 @@ The construct id used in the generated config for the DataAzurermNotificationHub
 
 The id of the existing DataAzurermNotificationHub that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/notification_hub#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/notification_hub#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -715,7 +715,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHubApnsCredential.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnotificationhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnotificationhub"
 
 &dataazurermnotificationhub.DataAzurermNotificationHubApnsCredential {
 
@@ -728,7 +728,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnotifi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHubConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnotificationhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnotificationhub"
 
 &dataazurermnotificationhub.DataAzurermNotificationHubConfig {
 	Connection: interface{},
@@ -742,7 +742,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnotifi
 	NamespaceName: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermNotificationHub.DataAzurermNotificationHubTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermNotificationHub.DataAzurermNotificationHubTimeouts,
 }
 ```
 
@@ -757,10 +757,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnotifi
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHubConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHubConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHubConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHubConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/notification_hub#name DataAzurermNotificationHub#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHubConfig.property.namespaceName">NamespaceName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/notification_hub#namespace_name DataAzurermNotificationHub#namespace_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHubConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/notification_hub#resource_group_name DataAzurermNotificationHub#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHubConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/notification_hub#id DataAzurermNotificationHub#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHubConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/notification_hub#name DataAzurermNotificationHub#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHubConfig.property.namespaceName">NamespaceName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/notification_hub#namespace_name DataAzurermNotificationHub#namespace_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHubConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/notification_hub#resource_group_name DataAzurermNotificationHub#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHubConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/notification_hub#id DataAzurermNotificationHub#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHubConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHubTimeouts">DataAzurermNotificationHubTimeouts</a></code> | timeouts block. |
 
 ---
@@ -843,7 +843,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/notification_hub#name DataAzurermNotificationHub#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/notification_hub#name DataAzurermNotificationHub#name}.
 
 ---
 
@@ -855,7 +855,7 @@ NamespaceName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/notification_hub#namespace_name DataAzurermNotificationHub#namespace_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/notification_hub#namespace_name DataAzurermNotificationHub#namespace_name}.
 
 ---
 
@@ -867,7 +867,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/notification_hub#resource_group_name DataAzurermNotificationHub#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/notification_hub#resource_group_name DataAzurermNotificationHub#resource_group_name}.
 
 ---
 
@@ -879,7 +879,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/notification_hub#id DataAzurermNotificationHub#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/notification_hub#id DataAzurermNotificationHub#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -896,7 +896,7 @@ Timeouts DataAzurermNotificationHubTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/notification_hub#timeouts DataAzurermNotificationHub#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/notification_hub#timeouts DataAzurermNotificationHub#timeouts}
 
 ---
 
@@ -905,7 +905,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHubGcmCredential.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnotificationhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnotificationhub"
 
 &dataazurermnotificationhub.DataAzurermNotificationHubGcmCredential {
 
@@ -918,7 +918,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnotifi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHubTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnotificationhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnotificationhub"
 
 &dataazurermnotificationhub.DataAzurermNotificationHubTimeouts {
 	Read: *string,
@@ -929,7 +929,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnotifi
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHubTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/notification_hub#read DataAzurermNotificationHub#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHubTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/notification_hub#read DataAzurermNotificationHub#read}. |
 
 ---
 
@@ -941,7 +941,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/data-sources/notification_hub#read DataAzurermNotificationHub#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/notification_hub#read DataAzurermNotificationHub#read}.
 
 ---
 
@@ -952,7 +952,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHubApnsCredentialList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnotificationhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnotificationhub"
 
 dataazurermnotificationhub.NewDataAzurermNotificationHubApnsCredentialList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermNotificationHubApnsCredentialList
 ```
@@ -1084,7 +1084,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHubApnsCredentialOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnotificationhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnotificationhub"
 
 dataazurermnotificationhub.NewDataAzurermNotificationHubApnsCredentialOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermNotificationHubApnsCredentialOutputReference
 ```
@@ -1406,7 +1406,7 @@ func InternalValue() DataAzurermNotificationHubApnsCredential
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHubGcmCredentialList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnotificationhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnotificationhub"
 
 dataazurermnotificationhub.NewDataAzurermNotificationHubGcmCredentialList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermNotificationHubGcmCredentialList
 ```
@@ -1538,7 +1538,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHubGcmCredentialOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnotificationhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnotificationhub"
 
 dataazurermnotificationhub.NewDataAzurermNotificationHubGcmCredentialOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermNotificationHubGcmCredentialOutputReference
 ```
@@ -1816,7 +1816,7 @@ func InternalValue() DataAzurermNotificationHubGcmCredential
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermNotificationHub.DataAzurermNotificationHubTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermnotificationhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermnotificationhub"
 
 dataazurermnotificationhub.NewDataAzurermNotificationHubTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermNotificationHubTimeoutsOutputReference
 ```

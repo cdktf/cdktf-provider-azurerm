@@ -4,7 +4,7 @@
 
 ### Aadb2CDirectory <a name="Aadb2CDirectory" id="@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectory"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/aadb2c_directory azurerm_aadb2c_directory}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/aadb2c_directory azurerm_aadb2c_directory}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectory.Initializer"></a>
 
@@ -508,7 +508,7 @@ The construct id used in the generated config for the Aadb2CDirectory to import.
 
 The id of the existing Aadb2CDirectory that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/aadb2c_directory#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/aadb2c_directory#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -974,12 +974,12 @@ new Aadb2CDirectoryConfig {
 | <code><a href="#@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectoryConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectoryConfig.property.dataResidencyLocation">DataResidencyLocation</a></code> | <code>string</code> | Location in which the B2C tenant is hosted and data resides. See https://aka.ms/B2CDataResidency for more information. |
 | <code><a href="#@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectoryConfig.property.domainName">DomainName</a></code> | <code>string</code> | Domain name of the B2C tenant, including onmicrosoft.com suffix. |
-| <code><a href="#@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectoryConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/aadb2c_directory#resource_group_name Aadb2CDirectory#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectoryConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/aadb2c_directory#resource_group_name Aadb2CDirectory#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectoryConfig.property.skuName">SkuName</a></code> | <code>string</code> | Billing SKU for the B2C tenant. See https://aka.ms/b2cBilling for more information. |
 | <code><a href="#@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectoryConfig.property.countryCode">CountryCode</a></code> | <code>string</code> | Country code of the B2C tenant. See https://aka.ms/B2CDataResidency for valid country codes. |
 | <code><a href="#@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectoryConfig.property.displayName">DisplayName</a></code> | <code>string</code> | The initial display name of the B2C tenant. |
-| <code><a href="#@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectoryConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/aadb2c_directory#id Aadb2CDirectory#id}. |
-| <code><a href="#@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectoryConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/aadb2c_directory#tags Aadb2CDirectory#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectoryConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/aadb2c_directory#id Aadb2CDirectory#id}. |
+| <code><a href="#@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectoryConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/aadb2c_directory#tags Aadb2CDirectory#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectoryConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectoryTimeouts">Aadb2CDirectoryTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1064,7 +1064,7 @@ public string DataResidencyLocation { get; set; }
 
 Location in which the B2C tenant is hosted and data resides. See https://aka.ms/B2CDataResidency for more information.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/aadb2c_directory#data_residency_location Aadb2CDirectory#data_residency_location}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/aadb2c_directory#data_residency_location Aadb2CDirectory#data_residency_location}
 
 ---
 
@@ -1078,7 +1078,7 @@ public string DomainName { get; set; }
 
 Domain name of the B2C tenant, including onmicrosoft.com suffix.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/aadb2c_directory#domain_name Aadb2CDirectory#domain_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/aadb2c_directory#domain_name Aadb2CDirectory#domain_name}
 
 ---
 
@@ -1090,7 +1090,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/aadb2c_directory#resource_group_name Aadb2CDirectory#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/aadb2c_directory#resource_group_name Aadb2CDirectory#resource_group_name}.
 
 ---
 
@@ -1104,7 +1104,7 @@ public string SkuName { get; set; }
 
 Billing SKU for the B2C tenant. See https://aka.ms/b2cBilling for more information.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/aadb2c_directory#sku_name Aadb2CDirectory#sku_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/aadb2c_directory#sku_name Aadb2CDirectory#sku_name}
 
 ---
 
@@ -1118,7 +1118,7 @@ public string CountryCode { get; set; }
 
 Country code of the B2C tenant. See https://aka.ms/B2CDataResidency for valid country codes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/aadb2c_directory#country_code Aadb2CDirectory#country_code}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/aadb2c_directory#country_code Aadb2CDirectory#country_code}
 
 ---
 
@@ -1132,7 +1132,7 @@ public string DisplayName { get; set; }
 
 The initial display name of the B2C tenant.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/aadb2c_directory#display_name Aadb2CDirectory#display_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/aadb2c_directory#display_name Aadb2CDirectory#display_name}
 
 ---
 
@@ -1144,7 +1144,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/aadb2c_directory#id Aadb2CDirectory#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/aadb2c_directory#id Aadb2CDirectory#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1159,7 +1159,7 @@ public System.Collections.Generic.IDictionary<string, string> Tags { get; set; }
 
 - *Type:* System.Collections.Generic.IDictionary<string, string>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/aadb2c_directory#tags Aadb2CDirectory#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/aadb2c_directory#tags Aadb2CDirectory#tags}.
 
 ---
 
@@ -1173,7 +1173,7 @@ public Aadb2CDirectoryTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/aadb2c_directory#timeouts Aadb2CDirectory#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/aadb2c_directory#timeouts Aadb2CDirectory#timeouts}
 
 ---
 
@@ -1196,10 +1196,10 @@ new Aadb2CDirectoryTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectoryTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/aadb2c_directory#create Aadb2CDirectory#create}. |
-| <code><a href="#@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectoryTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/aadb2c_directory#delete Aadb2CDirectory#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectoryTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/aadb2c_directory#read Aadb2CDirectory#read}. |
-| <code><a href="#@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectoryTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/aadb2c_directory#update Aadb2CDirectory#update}. |
+| <code><a href="#@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectoryTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/aadb2c_directory#create Aadb2CDirectory#create}. |
+| <code><a href="#@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectoryTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/aadb2c_directory#delete Aadb2CDirectory#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectoryTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/aadb2c_directory#read Aadb2CDirectory#read}. |
+| <code><a href="#@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectoryTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/aadb2c_directory#update Aadb2CDirectory#update}. |
 
 ---
 
@@ -1211,7 +1211,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/aadb2c_directory#create Aadb2CDirectory#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/aadb2c_directory#create Aadb2CDirectory#create}.
 
 ---
 
@@ -1223,7 +1223,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/aadb2c_directory#delete Aadb2CDirectory#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/aadb2c_directory#delete Aadb2CDirectory#delete}.
 
 ---
 
@@ -1235,7 +1235,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/aadb2c_directory#read Aadb2CDirectory#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/aadb2c_directory#read Aadb2CDirectory#read}.
 
 ---
 
@@ -1247,7 +1247,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.83.0/docs/resources/aadb2c_directory#update Aadb2CDirectory#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/aadb2c_directory#update Aadb2CDirectory#update}.
 
 ---
 
