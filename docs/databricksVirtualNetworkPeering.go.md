@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databricksVirtualNetworkPeering.DatabricksVirtualNetworkPeering.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksvirtualnetworkpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databricksvirtualnetworkpeering"
 
 databricksvirtualnetworkpeering.NewDatabricksVirtualNetworkPeering(scope Construct, id *string, config DatabricksVirtualNetworkPeeringConfig) DatabricksVirtualNetworkPeering
 ```
@@ -426,7 +426,7 @@ func ResetUseRemoteGateways()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.databricksVirtualNetworkPeering.DatabricksVirtualNetworkPeering.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksvirtualnetworkpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databricksvirtualnetworkpeering"
 
 databricksvirtualnetworkpeering.DatabricksVirtualNetworkPeering_IsConstruct(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.databricksVirtualNetworkPeering.DatabricksVirtualNetworkPeering.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksvirtualnetworkpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databricksvirtualnetworkpeering"
 
 databricksvirtualnetworkpeering.DatabricksVirtualNetworkPeering_IsTerraformElement(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ databricksvirtualnetworkpeering.DatabricksVirtualNetworkPeering_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.databricksVirtualNetworkPeering.DatabricksVirtualNetworkPeering.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksvirtualnetworkpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databricksvirtualnetworkpeering"
 
 databricksvirtualnetworkpeering.DatabricksVirtualNetworkPeering_IsTerraformResource(x interface{}) *bool
 ```
@@ -486,7 +486,7 @@ databricksvirtualnetworkpeering.DatabricksVirtualNetworkPeering_IsTerraformResou
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.databricksVirtualNetworkPeering.DatabricksVirtualNetworkPeering.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksvirtualnetworkpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databricksvirtualnetworkpeering"
 
 databricksvirtualnetworkpeering.DatabricksVirtualNetworkPeering_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -979,7 +979,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databricksVirtualNetworkPeering.DatabricksVirtualNetworkPeeringConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksvirtualnetworkpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databricksvirtualnetworkpeering"
 
 &databricksvirtualnetworkpeering.DatabricksVirtualNetworkPeeringConfig {
 	Connection: interface{},
@@ -998,7 +998,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksvirtualnetw
 	AllowGatewayTransit: interface{},
 	AllowVirtualNetworkAccess: interface{},
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.databricksVirtualNetworkPeering.DatabricksVirtualNetworkPeeringTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.databricksVirtualNetworkPeering.DatabricksVirtualNetworkPeeringTimeouts,
 	UseRemoteGateways: interface{},
 }
 ```
@@ -1240,7 +1240,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.databricksVirtualNetworkPeering.DatabricksVirtualNetworkPeeringTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksvirtualnetworkpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databricksvirtualnetworkpeering"
 
 &databricksvirtualnetworkpeering.DatabricksVirtualNetworkPeeringTimeouts {
 	Create: *string,
@@ -1316,7 +1316,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.databricksVirtualNetworkPeering.DatabricksVirtualNetworkPeeringTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/databricksvirtualnetworkpeering"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/databricksvirtualnetworkpeering"
 
 databricksvirtualnetworkpeering.NewDatabricksVirtualNetworkPeeringTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DatabricksVirtualNetworkPeeringTimeoutsOutputReference
 ```
