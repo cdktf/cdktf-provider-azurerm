@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.botChannelDirectLineSpeech.BotChannelDirectLineSpeech.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchanneldirectlinespeech"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchanneldirectlinespeech"
 
 botchanneldirectlinespeech.NewBotChannelDirectLineSpeech(scope Construct, id *string, config BotChannelDirectLineSpeechConfig) BotChannelDirectLineSpeech
 ```
@@ -419,7 +419,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.botChannelDirectLineSpeech.BotChannelDirectLineSpeech.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchanneldirectlinespeech"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchanneldirectlinespeech"
 
 botchanneldirectlinespeech.BotChannelDirectLineSpeech_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.botChannelDirectLineSpeech.BotChannelDirectLineSpeech.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchanneldirectlinespeech"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchanneldirectlinespeech"
 
 botchanneldirectlinespeech.BotChannelDirectLineSpeech_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ botchanneldirectlinespeech.BotChannelDirectLineSpeech_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.botChannelDirectLineSpeech.BotChannelDirectLineSpeech.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchanneldirectlinespeech"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchanneldirectlinespeech"
 
 botchanneldirectlinespeech.BotChannelDirectLineSpeech_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ botchanneldirectlinespeech.BotChannelDirectLineSpeech_IsTerraformResource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.botChannelDirectLineSpeech.BotChannelDirectLineSpeech.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchanneldirectlinespeech"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchanneldirectlinespeech"
 
 botchanneldirectlinespeech.BotChannelDirectLineSpeech_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -928,7 +928,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.botChannelDirectLineSpeech.BotChannelDirectLineSpeechConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchanneldirectlinespeech"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchanneldirectlinespeech"
 
 &botchanneldirectlinespeech.BotChannelDirectLineSpeechConfig {
 	Connection: interface{},
@@ -947,7 +947,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchanneldirectl
 	CustomSpeechModelId: *string,
 	CustomVoiceDeploymentId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.botChannelDirectLineSpeech.BotChannelDirectLineSpeechTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.botChannelDirectLineSpeech.BotChannelDirectLineSpeechTimeouts,
 }
 ```
 
@@ -1175,7 +1175,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.botChannelDirectLineSpeech.BotChannelDirectLineSpeechTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchanneldirectlinespeech"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchanneldirectlinespeech"
 
 &botchanneldirectlinespeech.BotChannelDirectLineSpeechTimeouts {
 	Create: *string,
@@ -1251,7 +1251,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.botChannelDirectLineSpeech.BotChannelDirectLineSpeechTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchanneldirectlinespeech"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchanneldirectlinespeech"
 
 botchanneldirectlinespeech.NewBotChannelDirectLineSpeechTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BotChannelDirectLineSpeechTimeoutsOutputReference
 ```

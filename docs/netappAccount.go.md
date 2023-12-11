@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappAccount.NetappAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/netappaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccount"
 
 netappaccount.NewNetappAccount(scope Construct, id *string, config NetappAccountConfig) NetappAccount
 ```
@@ -425,7 +425,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.netappAccount.NetappAccount.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/netappaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccount"
 
 netappaccount.NetappAccount_IsConstruct(x interface{}) *bool
 ```
@@ -457,7 +457,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.netappAccount.NetappAccount.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/netappaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccount"
 
 netappaccount.NetappAccount_IsTerraformElement(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ netappaccount.NetappAccount_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.netappAccount.NetappAccount.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/netappaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccount"
 
 netappaccount.NetappAccount_IsTerraformResource(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ netappaccount.NetappAccount_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.netappAccount.NetappAccount.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/netappaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccount"
 
 netappaccount.NetappAccount_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -868,7 +868,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectory.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/netappaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccount"
 
 &netappaccount.NetappAccountActiveDirectory {
 	DnsServers: *[]*string,
@@ -970,7 +970,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappAccount.NetappAccountConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/netappaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccount"
 
 &netappaccount.NetappAccountConfig {
 	Connection: interface{},
@@ -983,10 +983,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/netappaccount"
 	Location: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	ActiveDirectory: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.netappAccount.NetappAccountActiveDirectory,
+	ActiveDirectory: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.netappAccount.NetappAccountActiveDirectory,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.netappAccount.NetappAccountTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.netappAccount.NetappAccountTimeouts,
 }
 ```
 
@@ -1177,7 +1177,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappAccount.NetappAccountTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/netappaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccount"
 
 &netappaccount.NetappAccountTimeouts {
 	Create: *string,
@@ -1253,7 +1253,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappAccount.NetappAccountActiveDirectoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/netappaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccount"
 
 netappaccount.NewNetappAccountActiveDirectoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetappAccountActiveDirectoryOutputReference
 ```
@@ -1641,7 +1641,7 @@ func InternalValue() NetappAccountActiveDirectory
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappAccount.NetappAccountTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/netappaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccount"
 
 netappaccount.NewNetappAccountTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetappAccountTimeoutsOutputReference
 ```

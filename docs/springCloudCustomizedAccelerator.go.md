@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudCustomizedAccelerator.SpringCloudCustomizedAccelerator.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcustomizedaccelerator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcustomizedaccelerator"
 
 springcloudcustomizedaccelerator.NewSpringCloudCustomizedAccelerator(scope Construct, id *string, config SpringCloudCustomizedAcceleratorConfig) SpringCloudCustomizedAccelerator
 ```
@@ -446,7 +446,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.springCloudCustomizedAccelerator.SpringCloudCustomizedAccelerator.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcustomizedaccelerator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcustomizedaccelerator"
 
 springcloudcustomizedaccelerator.SpringCloudCustomizedAccelerator_IsConstruct(x interface{}) *bool
 ```
@@ -478,7 +478,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.springCloudCustomizedAccelerator.SpringCloudCustomizedAccelerator.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcustomizedaccelerator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcustomizedaccelerator"
 
 springcloudcustomizedaccelerator.SpringCloudCustomizedAccelerator_IsTerraformElement(x interface{}) *bool
 ```
@@ -492,7 +492,7 @@ springcloudcustomizedaccelerator.SpringCloudCustomizedAccelerator_IsTerraformEle
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.springCloudCustomizedAccelerator.SpringCloudCustomizedAccelerator.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcustomizedaccelerator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcustomizedaccelerator"
 
 springcloudcustomizedaccelerator.SpringCloudCustomizedAccelerator_IsTerraformResource(x interface{}) *bool
 ```
@@ -506,7 +506,7 @@ springcloudcustomizedaccelerator.SpringCloudCustomizedAccelerator_IsTerraformRes
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.springCloudCustomizedAccelerator.SpringCloudCustomizedAccelerator.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcustomizedaccelerator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcustomizedaccelerator"
 
 springcloudcustomizedaccelerator.SpringCloudCustomizedAccelerator_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -955,7 +955,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudCustomizedAccelerator.SpringCloudCustomizedAcceleratorConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcustomizedaccelerator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcustomizedaccelerator"
 
 &springcloudcustomizedaccelerator.SpringCloudCustomizedAcceleratorConfig {
 	Connection: interface{},
@@ -965,7 +965,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcustom
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	GitRepository: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.springCloudCustomizedAccelerator.SpringCloudCustomizedAcceleratorGitRepository,
+	GitRepository: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.springCloudCustomizedAccelerator.SpringCloudCustomizedAcceleratorGitRepository,
 	Name: *string,
 	SpringCloudAcceleratorId: *string,
 	AcceleratorTags: *[]*string,
@@ -974,7 +974,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcustom
 	DisplayName: *string,
 	IconUrl: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.springCloudCustomizedAccelerator.SpringCloudCustomizedAcceleratorTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.springCloudCustomizedAccelerator.SpringCloudCustomizedAcceleratorTimeouts,
 }
 ```
 
@@ -1204,18 +1204,18 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudCustomizedAccelerator.SpringCloudCustomizedAcceleratorGitRepository.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcustomizedaccelerator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcustomizedaccelerator"
 
 &springcloudcustomizedaccelerator.SpringCloudCustomizedAcceleratorGitRepository {
 	Url: *string,
-	BasicAuth: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.springCloudCustomizedAccelerator.SpringCloudCustomizedAcceleratorGitRepositoryBasicAuth,
+	BasicAuth: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.springCloudCustomizedAccelerator.SpringCloudCustomizedAcceleratorGitRepositoryBasicAuth,
 	Branch: *string,
 	CaCertificateId: *string,
 	Commit: *string,
 	GitTag: *string,
 	IntervalInSeconds: *f64,
 	Path: *string,
-	SshAuth: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.springCloudCustomizedAccelerator.SpringCloudCustomizedAcceleratorGitRepositorySshAuth,
+	SshAuth: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.springCloudCustomizedAccelerator.SpringCloudCustomizedAcceleratorGitRepositorySshAuth,
 }
 ```
 
@@ -1352,7 +1352,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudCustomizedAccelerator.SpringCloudCustomizedAcceleratorGitRepositoryBasicAuth.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcustomizedaccelerator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcustomizedaccelerator"
 
 &springcloudcustomizedaccelerator.SpringCloudCustomizedAcceleratorGitRepositoryBasicAuth {
 	Password: *string,
@@ -1398,7 +1398,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudCustomizedAccelerator.SpringCloudCustomizedAcceleratorGitRepositorySshAuth.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcustomizedaccelerator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcustomizedaccelerator"
 
 &springcloudcustomizedaccelerator.SpringCloudCustomizedAcceleratorGitRepositorySshAuth {
 	PrivateKey: *string,
@@ -1458,7 +1458,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudCustomizedAccelerator.SpringCloudCustomizedAcceleratorTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcustomizedaccelerator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcustomizedaccelerator"
 
 &springcloudcustomizedaccelerator.SpringCloudCustomizedAcceleratorTimeouts {
 	Create: *string,
@@ -1534,7 +1534,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudCustomizedAccelerator.SpringCloudCustomizedAcceleratorGitRepositoryBasicAuthOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcustomizedaccelerator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcustomizedaccelerator"
 
 springcloudcustomizedaccelerator.NewSpringCloudCustomizedAcceleratorGitRepositoryBasicAuthOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudCustomizedAcceleratorGitRepositoryBasicAuthOutputReference
 ```
@@ -1827,7 +1827,7 @@ func InternalValue() SpringCloudCustomizedAcceleratorGitRepositoryBasicAuth
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudCustomizedAccelerator.SpringCloudCustomizedAcceleratorGitRepositoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcustomizedaccelerator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcustomizedaccelerator"
 
 springcloudcustomizedaccelerator.NewSpringCloudCustomizedAcceleratorGitRepositoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudCustomizedAcceleratorGitRepositoryOutputReference
 ```
@@ -2356,7 +2356,7 @@ func InternalValue() SpringCloudCustomizedAcceleratorGitRepository
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudCustomizedAccelerator.SpringCloudCustomizedAcceleratorGitRepositorySshAuthOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcustomizedaccelerator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcustomizedaccelerator"
 
 springcloudcustomizedaccelerator.NewSpringCloudCustomizedAcceleratorGitRepositorySshAuthOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudCustomizedAcceleratorGitRepositorySshAuthOutputReference
 ```
@@ -2685,7 +2685,7 @@ func InternalValue() SpringCloudCustomizedAcceleratorGitRepositorySshAuth
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudCustomizedAccelerator.SpringCloudCustomizedAcceleratorTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudcustomizedaccelerator"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/springcloudcustomizedaccelerator"
 
 springcloudcustomizedaccelerator.NewSpringCloudCustomizedAcceleratorTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudCustomizedAcceleratorTimeoutsOutputReference
 ```
