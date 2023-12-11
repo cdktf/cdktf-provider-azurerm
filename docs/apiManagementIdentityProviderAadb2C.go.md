@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementIdentityProviderAadb2C.ApiManagementIdentityProviderAadb2C.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovideraadb2c"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementidentityprovideraadb2c"
 
 apimanagementidentityprovideraadb2c.NewApiManagementIdentityProviderAadb2C(scope Construct, id *string, config ApiManagementIdentityProviderAadb2CConfig) ApiManagementIdentityProviderAadb2C
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.apiManagementIdentityProviderAadb2C.ApiManagementIdentityProviderAadb2C.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovideraadb2c"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementidentityprovideraadb2c"
 
 apimanagementidentityprovideraadb2c.ApiManagementIdentityProviderAadb2C_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.apiManagementIdentityProviderAadb2C.ApiManagementIdentityProviderAadb2C.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovideraadb2c"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementidentityprovideraadb2c"
 
 apimanagementidentityprovideraadb2c.ApiManagementIdentityProviderAadb2C_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ apimanagementidentityprovideraadb2c.ApiManagementIdentityProviderAadb2C_IsTerraf
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.apiManagementIdentityProviderAadb2C.ApiManagementIdentityProviderAadb2C.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovideraadb2c"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementidentityprovideraadb2c"
 
 apimanagementidentityprovideraadb2c.ApiManagementIdentityProviderAadb2C_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ apimanagementidentityprovideraadb2c.ApiManagementIdentityProviderAadb2C_IsTerraf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.apiManagementIdentityProviderAadb2C.ApiManagementIdentityProviderAadb2C.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovideraadb2c"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementidentityprovideraadb2c"
 
 apimanagementidentityprovideraadb2c.ApiManagementIdentityProviderAadb2C_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -987,7 +987,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementIdentityProviderAadb2C.ApiManagementIdentityProviderAadb2CConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovideraadb2c"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementidentityprovideraadb2c"
 
 &apimanagementidentityprovideraadb2c.ApiManagementIdentityProviderAadb2CConfig {
 	Connection: interface{},
@@ -1009,7 +1009,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentity
 	Id: *string,
 	PasswordResetPolicy: *string,
 	ProfileEditingPolicy: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementIdentityProviderAadb2C.ApiManagementIdentityProviderAadb2CTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.apiManagementIdentityProviderAadb2C.ApiManagementIdentityProviderAadb2CTimeouts,
 }
 ```
 
@@ -1276,7 +1276,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementIdentityProviderAadb2C.ApiManagementIdentityProviderAadb2CTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovideraadb2c"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementidentityprovideraadb2c"
 
 &apimanagementidentityprovideraadb2c.ApiManagementIdentityProviderAadb2CTimeouts {
 	Create: *string,
@@ -1352,7 +1352,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementIdentityProviderAadb2C.ApiManagementIdentityProviderAadb2CTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovideraadb2c"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementidentityprovideraadb2c"
 
 apimanagementidentityprovideraadb2c.NewApiManagementIdentityProviderAadb2CTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementIdentityProviderAadb2CTimeoutsOutputReference
 ```
