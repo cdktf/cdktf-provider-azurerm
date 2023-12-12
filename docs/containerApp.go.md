@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerApp(scope Construct, id *string, config ContainerAppConfig) ContainerApp
 ```
@@ -518,7 +518,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.containerApp.ContainerApp.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.ContainerApp_IsConstruct(x interface{}) *bool
 ```
@@ -550,7 +550,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.containerApp.ContainerApp.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.ContainerApp_IsTerraformElement(x interface{}) *bool
 ```
@@ -564,7 +564,7 @@ containerapp.ContainerApp_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.containerApp.ContainerApp.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.ContainerApp_IsTerraformResource(x interface{}) *bool
 ```
@@ -578,7 +578,7 @@ containerapp.ContainerApp_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.containerApp.ContainerApp.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.ContainerApp_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1148,7 +1148,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppConfig {
 	Connection: interface{},
@@ -1162,15 +1162,15 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
 	Name: *string,
 	ResourceGroupName: *string,
 	RevisionMode: *string,
-	Template: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerApp.ContainerAppTemplate,
-	Dapr: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerApp.ContainerAppDapr,
+	Template: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.containerApp.ContainerAppTemplate,
+	Dapr: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.containerApp.ContainerAppDapr,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerApp.ContainerAppIdentity,
-	Ingress: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerApp.ContainerAppIngress,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.containerApp.ContainerAppIdentity,
+	Ingress: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.containerApp.ContainerAppIngress,
 	Registry: interface{},
 	Secret: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerApp.ContainerAppTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.containerApp.ContainerAppTimeouts,
 }
 ```
 
@@ -1453,7 +1453,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppDapr.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppDapr {
 	AppId: *string,
@@ -1519,7 +1519,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppIdentity {
 	Type: *string,
@@ -1565,13 +1565,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngress.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppIngress {
 	TargetPort: *f64,
 	TrafficWeight: interface{},
 	AllowInsecureConnections: interface{},
-	CustomDomain: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerApp.ContainerAppIngressCustomDomain,
+	CustomDomain: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.containerApp.ContainerAppIngressCustomDomain,
 	ExposedPort: *f64,
 	ExternalEnabled: interface{},
 	Transport: *string,
@@ -1695,7 +1695,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressCustomDomain.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppIngressCustomDomain {
 	CertificateId: *string,
@@ -1759,7 +1759,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppIngressTrafficWeight {
 	Percentage: *f64,
@@ -1843,7 +1843,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppRegistry.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppRegistry {
 	Server: *string,
@@ -1925,7 +1925,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppSecret.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppSecret {
 	Name: *string,
@@ -1975,7 +1975,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppTemplate {
 	Container: interface{},
@@ -2139,7 +2139,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppTemplateAzureQueueScaleRule {
 	Authentication: interface{},
@@ -2215,7 +2215,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppTemplateAzureQueueScaleRuleAuthentication {
 	SecretName: *string,
@@ -2261,7 +2261,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppTemplateContainer {
 	Cpu: *f64,
@@ -2461,7 +2461,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppTemplateContainerEnv {
 	Name: *string,
@@ -2527,7 +2527,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppTemplateContainerLivenessProbe {
 	Port: *f64,
@@ -2695,7 +2695,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppTemplateContainerLivenessProbeHeader {
 	Name: *string,
@@ -2745,7 +2745,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppTemplateContainerReadinessProbe {
 	Port: *f64,
@@ -2913,7 +2913,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppTemplateContainerReadinessProbeHeader {
 	Name: *string,
@@ -2963,7 +2963,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppTemplateContainerStartupProbe {
 	Port: *f64,
@@ -3115,7 +3115,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppTemplateContainerStartupProbeHeader {
 	Name: *string,
@@ -3165,7 +3165,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppTemplateContainerVolumeMounts {
 	Name: *string,
@@ -3215,7 +3215,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppTemplateCustomScaleRule {
 	CustomRuleType: *string,
@@ -3291,7 +3291,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppTemplateCustomScaleRuleAuthentication {
 	SecretName: *string,
@@ -3337,7 +3337,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppTemplateHttpScaleRule {
 	ConcurrentRequests: *string,
@@ -3399,7 +3399,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppTemplateHttpScaleRuleAuthentication {
 	SecretName: *string,
@@ -3445,7 +3445,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppTemplateTcpScaleRule {
 	ConcurrentRequests: *string,
@@ -3507,7 +3507,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppTemplateTcpScaleRuleAuthentication {
 	SecretName: *string,
@@ -3553,7 +3553,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppTemplateVolume {
 	Name: *string,
@@ -3619,7 +3619,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerApp.ContainerAppTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 &containerapp.ContainerAppTimeouts {
 	Create: *string,
@@ -3695,7 +3695,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppDaprOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppDaprOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAppDaprOutputReference
 ```
@@ -4024,7 +4024,7 @@ func InternalValue() ContainerAppDapr
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAppIdentityOutputReference
 ```
@@ -4346,7 +4346,7 @@ func InternalValue() ContainerAppIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressCustomDomainOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppIngressCustomDomainOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAppIngressCustomDomainOutputReference
 ```
@@ -4668,7 +4668,7 @@ func InternalValue() ContainerAppIngressCustomDomain
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppIngressOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAppIngressOutputReference
 ```
@@ -5143,7 +5143,7 @@ func InternalValue() ContainerAppIngress
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppIngressTrafficWeightList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppIngressTrafficWeightList
 ```
@@ -5286,7 +5286,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppIngressTrafficWeightOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppIngressTrafficWeightOutputReference
 ```
@@ -5662,7 +5662,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppRegistryList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppRegistryList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppRegistryList
 ```
@@ -5805,7 +5805,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppRegistryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppRegistryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppRegistryOutputReference
 ```
@@ -6181,7 +6181,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppSecretList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppSecretList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppSecretList
 ```
@@ -6324,7 +6324,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppSecretOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppSecretOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppSecretOutputReference
 ```
@@ -6635,7 +6635,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthenticationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateAzureQueueScaleRuleAuthenticationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppTemplateAzureQueueScaleRuleAuthenticationList
 ```
@@ -6778,7 +6778,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthenticationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateAzureQueueScaleRuleAuthenticationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppTemplateAzureQueueScaleRuleAuthenticationOutputReference
 ```
@@ -7089,7 +7089,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateAzureQueueScaleRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppTemplateAzureQueueScaleRuleList
 ```
@@ -7232,7 +7232,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateAzureQueueScaleRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppTemplateAzureQueueScaleRuleOutputReference
 ```
@@ -7600,7 +7600,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnvList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateContainerEnvList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppTemplateContainerEnvList
 ```
@@ -7743,7 +7743,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnvOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateContainerEnvOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppTemplateContainerEnvOutputReference
 ```
@@ -8090,7 +8090,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateContainerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppTemplateContainerList
 ```
@@ -8233,7 +8233,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeaderList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateContainerLivenessProbeHeaderList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppTemplateContainerLivenessProbeHeaderList
 ```
@@ -8376,7 +8376,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeaderOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateContainerLivenessProbeHeaderOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppTemplateContainerLivenessProbeHeaderOutputReference
 ```
@@ -8687,7 +8687,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateContainerLivenessProbeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppTemplateContainerLivenessProbeList
 ```
@@ -8830,7 +8830,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateContainerLivenessProbeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppTemplateContainerLivenessProbeOutputReference
 ```
@@ -9368,7 +9368,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateContainerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppTemplateContainerOutputReference
 ```
@@ -10002,7 +10002,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeaderList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateContainerReadinessProbeHeaderList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppTemplateContainerReadinessProbeHeaderList
 ```
@@ -10145,7 +10145,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeaderOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateContainerReadinessProbeHeaderOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppTemplateContainerReadinessProbeHeaderOutputReference
 ```
@@ -10456,7 +10456,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateContainerReadinessProbeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppTemplateContainerReadinessProbeList
 ```
@@ -10599,7 +10599,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateContainerReadinessProbeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppTemplateContainerReadinessProbeOutputReference
 ```
@@ -11126,7 +11126,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeaderList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateContainerStartupProbeHeaderList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppTemplateContainerStartupProbeHeaderList
 ```
@@ -11269,7 +11269,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeaderOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateContainerStartupProbeHeaderOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppTemplateContainerStartupProbeHeaderOutputReference
 ```
@@ -11580,7 +11580,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateContainerStartupProbeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppTemplateContainerStartupProbeList
 ```
@@ -11723,7 +11723,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateContainerStartupProbeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppTemplateContainerStartupProbeOutputReference
 ```
@@ -12232,7 +12232,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMountsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateContainerVolumeMountsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppTemplateContainerVolumeMountsList
 ```
@@ -12375,7 +12375,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMountsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateContainerVolumeMountsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppTemplateContainerVolumeMountsOutputReference
 ```
@@ -12686,7 +12686,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthenticationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateCustomScaleRuleAuthenticationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppTemplateCustomScaleRuleAuthenticationList
 ```
@@ -12829,7 +12829,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthenticationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateCustomScaleRuleAuthenticationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppTemplateCustomScaleRuleAuthenticationOutputReference
 ```
@@ -13140,7 +13140,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateCustomScaleRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppTemplateCustomScaleRuleList
 ```
@@ -13283,7 +13283,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateCustomScaleRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppTemplateCustomScaleRuleOutputReference
 ```
@@ -13658,7 +13658,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthenticationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateHttpScaleRuleAuthenticationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppTemplateHttpScaleRuleAuthenticationList
 ```
@@ -13801,7 +13801,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthenticationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateHttpScaleRuleAuthenticationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppTemplateHttpScaleRuleAuthenticationOutputReference
 ```
@@ -14119,7 +14119,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateHttpScaleRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppTemplateHttpScaleRuleList
 ```
@@ -14262,7 +14262,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateHttpScaleRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppTemplateHttpScaleRuleOutputReference
 ```
@@ -14615,7 +14615,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAppTemplateOutputReference
 ```
@@ -15196,7 +15196,7 @@ func InternalValue() ContainerAppTemplate
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthenticationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateTcpScaleRuleAuthenticationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppTemplateTcpScaleRuleAuthenticationList
 ```
@@ -15339,7 +15339,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthenticationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateTcpScaleRuleAuthenticationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppTemplateTcpScaleRuleAuthenticationOutputReference
 ```
@@ -15657,7 +15657,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateTcpScaleRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppTemplateTcpScaleRuleList
 ```
@@ -15800,7 +15800,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateTcpScaleRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppTemplateTcpScaleRuleOutputReference
 ```
@@ -16153,7 +16153,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolumeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateVolumeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppTemplateVolumeList
 ```
@@ -16296,7 +16296,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolumeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTemplateVolumeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppTemplateVolumeOutputReference
 ```
@@ -16643,7 +16643,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerApp.ContainerAppTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerapp"
 
 containerapp.NewContainerAppTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAppTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchaccount"
 
 dataazurermbatchaccount.NewDataAzurermBatchAccount(scope Construct, id *string, config DataAzurermBatchAccountConfig) DataAzurermBatchAccount
 ```
@@ -314,7 +314,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchaccount"
 
 dataazurermbatchaccount.DataAzurermBatchAccount_IsConstruct(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchaccount"
 
 dataazurermbatchaccount.DataAzurermBatchAccount_IsTerraformElement(x interface{}) *bool
 ```
@@ -360,7 +360,7 @@ dataazurermbatchaccount.DataAzurermBatchAccount_IsTerraformElement(x interface{}
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchaccount"
 
 dataazurermbatchaccount.DataAzurermBatchAccount_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -374,7 +374,7 @@ dataazurermbatchaccount.DataAzurermBatchAccount_IsTerraformDataSource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccount.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchaccount"
 
 dataazurermbatchaccount.DataAzurermBatchAccount_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -779,7 +779,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchaccount"
 
 &dataazurermbatchaccount.DataAzurermBatchAccountConfig {
 	Connection: interface{},
@@ -793,7 +793,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchaccou
 	ResourceGroupName: *string,
 	Encryption: interface{},
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermBatchAccount.DataAzurermBatchAccountTimeouts,
 }
 ```
 
@@ -956,7 +956,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchaccount"
 
 &dataazurermbatchaccount.DataAzurermBatchAccountEncryption {
 	KeyVaultKeyId: *string,
@@ -988,7 +988,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountKeyVaultReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchaccount"
 
 &dataazurermbatchaccount.DataAzurermBatchAccountKeyVaultReference {
 
@@ -1001,7 +1001,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchaccou
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchaccount"
 
 &dataazurermbatchaccount.DataAzurermBatchAccountTimeouts {
 	Read: *string,
@@ -1035,7 +1035,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryptionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchaccount"
 
 dataazurermbatchaccount.NewDataAzurermBatchAccountEncryptionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchAccountEncryptionList
 ```
@@ -1178,7 +1178,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountEncryptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchaccount"
 
 dataazurermbatchaccount.NewDataAzurermBatchAccountEncryptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchAccountEncryptionOutputReference
 ```
@@ -1474,7 +1474,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountKeyVaultReferenceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchaccount"
 
 dataazurermbatchaccount.NewDataAzurermBatchAccountKeyVaultReferenceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermBatchAccountKeyVaultReferenceList
 ```
@@ -1606,7 +1606,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountKeyVaultReferenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchaccount"
 
 dataazurermbatchaccount.NewDataAzurermBatchAccountKeyVaultReferenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermBatchAccountKeyVaultReferenceOutputReference
 ```
@@ -1895,7 +1895,7 @@ func InternalValue() DataAzurermBatchAccountKeyVaultReference
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermBatchAccount.DataAzurermBatchAccountTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermbatchaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermbatchaccount"
 
 dataazurermbatchaccount.NewDataAzurermBatchAccountTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermBatchAccountTimeoutsOutputReference
 ```
