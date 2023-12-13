@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVirtualWan.DataAzurermVirtualWan.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvirtualwan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualwan"
 
 dataazurermvirtualwan.NewDataAzurermVirtualWan(scope Construct, id *string, config DataAzurermVirtualWanConfig) DataAzurermVirtualWan
 ```
@@ -294,7 +294,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermVirtualWan.DataAzurermVirtualWan.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvirtualwan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualwan"
 
 dataazurermvirtualwan.DataAzurermVirtualWan_IsConstruct(x interface{}) *bool
 ```
@@ -326,7 +326,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermVirtualWan.DataAzurermVirtualWan.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvirtualwan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualwan"
 
 dataazurermvirtualwan.DataAzurermVirtualWan_IsTerraformElement(x interface{}) *bool
 ```
@@ -340,7 +340,7 @@ dataazurermvirtualwan.DataAzurermVirtualWan_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermVirtualWan.DataAzurermVirtualWan.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvirtualwan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualwan"
 
 dataazurermvirtualwan.DataAzurermVirtualWan_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -354,7 +354,7 @@ dataazurermvirtualwan.DataAzurermVirtualWan_IsTerraformDataSource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermVirtualWan.DataAzurermVirtualWan.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvirtualwan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualwan"
 
 dataazurermvirtualwan.DataAzurermVirtualWan_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -737,7 +737,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermVirtualWan.DataAzurermVirtualWanConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvirtualwan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualwan"
 
 &dataazurermvirtualwan.DataAzurermVirtualWanConfig {
 	Connection: interface{},
@@ -750,7 +750,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvirtua
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermVirtualWan.DataAzurermVirtualWanTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermVirtualWan.DataAzurermVirtualWanTimeouts,
 }
 ```
 
@@ -900,7 +900,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermVirtualWan.DataAzurermVirtualWanTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvirtualwan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualwan"
 
 &dataazurermvirtualwan.DataAzurermVirtualWanTimeouts {
 	Read: *string,
@@ -934,7 +934,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVirtualWan.DataAzurermVirtualWanTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvirtualwan"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualwan"
 
 dataazurermvirtualwan.NewDataAzurermVirtualWanTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermVirtualWanTimeoutsOutputReference
 ```
