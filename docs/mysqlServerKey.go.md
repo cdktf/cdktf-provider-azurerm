@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqlserverkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlserverkey"
 
 mysqlserverkey.NewMysqlServerKey(scope Construct, id *string, config MysqlServerKeyConfig) MysqlServerKey
 ```
@@ -398,7 +398,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqlserverkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlserverkey"
 
 mysqlserverkey.MysqlServerKey_IsConstruct(x interface{}) *bool
 ```
@@ -430,7 +430,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqlserverkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlserverkey"
 
 mysqlserverkey.MysqlServerKey_IsTerraformElement(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ mysqlserverkey.MysqlServerKey_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqlserverkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlserverkey"
 
 mysqlserverkey.MysqlServerKey_IsTerraformResource(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ mysqlserverkey.MysqlServerKey_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKey.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqlserverkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlserverkey"
 
 mysqlserverkey.MysqlServerKey_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -775,7 +775,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqlserverkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlserverkey"
 
 &mysqlserverkey.MysqlServerKeyConfig {
 	Connection: interface{},
@@ -788,7 +788,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqlserverkey"
 	KeyVaultKeyId: *string,
 	ServerId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mysqlServerKey.MysqlServerKeyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mysqlServerKey.MysqlServerKeyTimeouts,
 }
 ```
 
@@ -938,7 +938,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqlserverkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlserverkey"
 
 &mysqlserverkey.MysqlServerKeyTimeouts {
 	Create: *string,
@@ -1014,7 +1014,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlServerKey.MysqlServerKeyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mysqlserverkey"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mysqlserverkey"
 
 mysqlserverkey.NewMysqlServerKeyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MysqlServerKeyTimeoutsOutputReference
 ```

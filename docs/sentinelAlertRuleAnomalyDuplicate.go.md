@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyDuplicate.SentinelAlertRuleAnomalyDuplicate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalyduplicate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalyduplicate"
 
 sentinelalertruleanomalyduplicate.NewSentinelAlertRuleAnomalyDuplicate(scope Construct, id *string, config SentinelAlertRuleAnomalyDuplicateConfig) SentinelAlertRuleAnomalyDuplicate
 ```
@@ -478,7 +478,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyDuplicate.SentinelAlertRuleAnomalyDuplicate.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalyduplicate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalyduplicate"
 
 sentinelalertruleanomalyduplicate.SentinelAlertRuleAnomalyDuplicate_IsConstruct(x interface{}) *bool
 ```
@@ -510,7 +510,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyDuplicate.SentinelAlertRuleAnomalyDuplicate.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalyduplicate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalyduplicate"
 
 sentinelalertruleanomalyduplicate.SentinelAlertRuleAnomalyDuplicate_IsTerraformElement(x interface{}) *bool
 ```
@@ -524,7 +524,7 @@ sentinelalertruleanomalyduplicate.SentinelAlertRuleAnomalyDuplicate_IsTerraformE
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyDuplicate.SentinelAlertRuleAnomalyDuplicate.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalyduplicate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalyduplicate"
 
 sentinelalertruleanomalyduplicate.SentinelAlertRuleAnomalyDuplicate_IsTerraformResource(x interface{}) *bool
 ```
@@ -538,7 +538,7 @@ sentinelalertruleanomalyduplicate.SentinelAlertRuleAnomalyDuplicate_IsTerraformR
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyDuplicate.SentinelAlertRuleAnomalyDuplicate.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalyduplicate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalyduplicate"
 
 sentinelalertruleanomalyduplicate.SentinelAlertRuleAnomalyDuplicate_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1119,7 +1119,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyDuplicate.SentinelAlertRuleAnomalyDuplicateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalyduplicate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalyduplicate"
 
 &sentinelalertruleanomalyduplicate.SentinelAlertRuleAnomalyDuplicateConfig {
 	Connection: interface{},
@@ -1139,7 +1139,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrule
 	PrioritizedExcludeObservation: interface{},
 	SingleSelectObservation: interface{},
 	ThresholdObservation: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.sentinelAlertRuleAnomalyDuplicate.SentinelAlertRuleAnomalyDuplicateTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sentinelAlertRuleAnomalyDuplicate.SentinelAlertRuleAnomalyDuplicateTimeouts,
 }
 ```
 
@@ -1388,7 +1388,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyDuplicate.SentinelAlertRuleAnomalyDuplicateMultiSelectObservation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalyduplicate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalyduplicate"
 
 &sentinelalertruleanomalyduplicate.SentinelAlertRuleAnomalyDuplicateMultiSelectObservation {
 	Name: *string,
@@ -1434,7 +1434,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyDuplicate.SentinelAlertRuleAnomalyDuplicatePrioritizedExcludeObservation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalyduplicate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalyduplicate"
 
 &sentinelalertruleanomalyduplicate.SentinelAlertRuleAnomalyDuplicatePrioritizedExcludeObservation {
 	Name: *string,
@@ -1494,7 +1494,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyDuplicate.SentinelAlertRuleAnomalyDuplicateRequiredDataConnector.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalyduplicate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalyduplicate"
 
 &sentinelalertruleanomalyduplicate.SentinelAlertRuleAnomalyDuplicateRequiredDataConnector {
 
@@ -1507,7 +1507,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrule
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyDuplicate.SentinelAlertRuleAnomalyDuplicateSingleSelectObservation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalyduplicate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalyduplicate"
 
 &sentinelalertruleanomalyduplicate.SentinelAlertRuleAnomalyDuplicateSingleSelectObservation {
 	Name: *string,
@@ -1553,7 +1553,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyDuplicate.SentinelAlertRuleAnomalyDuplicateThresholdObservation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalyduplicate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalyduplicate"
 
 &sentinelalertruleanomalyduplicate.SentinelAlertRuleAnomalyDuplicateThresholdObservation {
 	Name: *string,
@@ -1599,7 +1599,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyDuplicate.SentinelAlertRuleAnomalyDuplicateTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalyduplicate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalyduplicate"
 
 &sentinelalertruleanomalyduplicate.SentinelAlertRuleAnomalyDuplicateTimeouts {
 	Create: *string,
@@ -1675,7 +1675,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyDuplicate.SentinelAlertRuleAnomalyDuplicateMultiSelectObservationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalyduplicate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalyduplicate"
 
 sentinelalertruleanomalyduplicate.NewSentinelAlertRuleAnomalyDuplicateMultiSelectObservationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SentinelAlertRuleAnomalyDuplicateMultiSelectObservationList
 ```
@@ -1818,7 +1818,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyDuplicate.SentinelAlertRuleAnomalyDuplicateMultiSelectObservationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalyduplicate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalyduplicate"
 
 sentinelalertruleanomalyduplicate.NewSentinelAlertRuleAnomalyDuplicateMultiSelectObservationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SentinelAlertRuleAnomalyDuplicateMultiSelectObservationOutputReference
 ```
@@ -2151,7 +2151,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyDuplicate.SentinelAlertRuleAnomalyDuplicatePrioritizedExcludeObservationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalyduplicate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalyduplicate"
 
 sentinelalertruleanomalyduplicate.NewSentinelAlertRuleAnomalyDuplicatePrioritizedExcludeObservationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SentinelAlertRuleAnomalyDuplicatePrioritizedExcludeObservationList
 ```
@@ -2294,7 +2294,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyDuplicate.SentinelAlertRuleAnomalyDuplicatePrioritizedExcludeObservationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalyduplicate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalyduplicate"
 
 sentinelalertruleanomalyduplicate.NewSentinelAlertRuleAnomalyDuplicatePrioritizedExcludeObservationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SentinelAlertRuleAnomalyDuplicatePrioritizedExcludeObservationOutputReference
 ```
@@ -2652,7 +2652,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyDuplicate.SentinelAlertRuleAnomalyDuplicateRequiredDataConnectorList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalyduplicate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalyduplicate"
 
 sentinelalertruleanomalyduplicate.NewSentinelAlertRuleAnomalyDuplicateRequiredDataConnectorList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SentinelAlertRuleAnomalyDuplicateRequiredDataConnectorList
 ```
@@ -2784,7 +2784,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyDuplicate.SentinelAlertRuleAnomalyDuplicateRequiredDataConnectorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalyduplicate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalyduplicate"
 
 sentinelalertruleanomalyduplicate.NewSentinelAlertRuleAnomalyDuplicateRequiredDataConnectorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SentinelAlertRuleAnomalyDuplicateRequiredDataConnectorOutputReference
 ```
@@ -3073,7 +3073,7 @@ func InternalValue() SentinelAlertRuleAnomalyDuplicateRequiredDataConnector
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyDuplicate.SentinelAlertRuleAnomalyDuplicateSingleSelectObservationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalyduplicate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalyduplicate"
 
 sentinelalertruleanomalyduplicate.NewSentinelAlertRuleAnomalyDuplicateSingleSelectObservationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SentinelAlertRuleAnomalyDuplicateSingleSelectObservationList
 ```
@@ -3216,7 +3216,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyDuplicate.SentinelAlertRuleAnomalyDuplicateSingleSelectObservationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalyduplicate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalyduplicate"
 
 sentinelalertruleanomalyduplicate.NewSentinelAlertRuleAnomalyDuplicateSingleSelectObservationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SentinelAlertRuleAnomalyDuplicateSingleSelectObservationOutputReference
 ```
@@ -3549,7 +3549,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyDuplicate.SentinelAlertRuleAnomalyDuplicateThresholdObservationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalyduplicate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalyduplicate"
 
 sentinelalertruleanomalyduplicate.NewSentinelAlertRuleAnomalyDuplicateThresholdObservationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SentinelAlertRuleAnomalyDuplicateThresholdObservationList
 ```
@@ -3692,7 +3692,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyDuplicate.SentinelAlertRuleAnomalyDuplicateThresholdObservationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalyduplicate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalyduplicate"
 
 sentinelalertruleanomalyduplicate.NewSentinelAlertRuleAnomalyDuplicateThresholdObservationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SentinelAlertRuleAnomalyDuplicateThresholdObservationOutputReference
 ```
@@ -4036,7 +4036,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyDuplicate.SentinelAlertRuleAnomalyDuplicateTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalyduplicate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalyduplicate"
 
 sentinelalertruleanomalyduplicate.NewSentinelAlertRuleAnomalyDuplicateTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SentinelAlertRuleAnomalyDuplicateTimeoutsOutputReference
 ```
