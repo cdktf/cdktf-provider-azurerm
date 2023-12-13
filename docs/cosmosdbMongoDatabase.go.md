@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbMongoDatabase.CosmosdbMongoDatabase.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongodatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbmongodatabase"
 
 cosmosdbmongodatabase.NewCosmosdbMongoDatabase(scope Construct, id *string, config CosmosdbMongoDatabaseConfig) CosmosdbMongoDatabase
 ```
@@ -425,7 +425,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.cosmosdbMongoDatabase.CosmosdbMongoDatabase.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongodatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbmongodatabase"
 
 cosmosdbmongodatabase.CosmosdbMongoDatabase_IsConstruct(x interface{}) *bool
 ```
@@ -457,7 +457,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.cosmosdbMongoDatabase.CosmosdbMongoDatabase.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongodatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbmongodatabase"
 
 cosmosdbmongodatabase.CosmosdbMongoDatabase_IsTerraformElement(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ cosmosdbmongodatabase.CosmosdbMongoDatabase_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.cosmosdbMongoDatabase.CosmosdbMongoDatabase.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongodatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbmongodatabase"
 
 cosmosdbmongodatabase.CosmosdbMongoDatabase_IsTerraformResource(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ cosmosdbmongodatabase.CosmosdbMongoDatabase_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.cosmosdbMongoDatabase.CosmosdbMongoDatabase.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongodatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbmongodatabase"
 
 cosmosdbmongodatabase.CosmosdbMongoDatabase_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -868,7 +868,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbMongoDatabase.CosmosdbMongoDatabaseAutoscaleSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongodatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbmongodatabase"
 
 &cosmosdbmongodatabase.CosmosdbMongoDatabaseAutoscaleSettings {
 	MaxThroughput: *f64,
@@ -900,7 +900,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbMongoDatabase.CosmosdbMongoDatabaseConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongodatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbmongodatabase"
 
 &cosmosdbmongodatabase.CosmosdbMongoDatabaseConfig {
 	Connection: interface{},
@@ -913,10 +913,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongodatabase
 	AccountName: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	AutoscaleSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbMongoDatabase.CosmosdbMongoDatabaseAutoscaleSettings,
+	AutoscaleSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.cosmosdbMongoDatabase.CosmosdbMongoDatabaseAutoscaleSettings,
 	Id: *string,
 	Throughput: *f64,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbMongoDatabase.CosmosdbMongoDatabaseTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.cosmosdbMongoDatabase.CosmosdbMongoDatabaseTimeouts,
 }
 ```
 
@@ -1107,7 +1107,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbMongoDatabase.CosmosdbMongoDatabaseTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongodatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbmongodatabase"
 
 &cosmosdbmongodatabase.CosmosdbMongoDatabaseTimeouts {
 	Create: *string,
@@ -1183,7 +1183,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbMongoDatabase.CosmosdbMongoDatabaseAutoscaleSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongodatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbmongodatabase"
 
 cosmosdbmongodatabase.NewCosmosdbMongoDatabaseAutoscaleSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbMongoDatabaseAutoscaleSettingsOutputReference
 ```
@@ -1461,7 +1461,7 @@ func InternalValue() CosmosdbMongoDatabaseAutoscaleSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbMongoDatabase.CosmosdbMongoDatabaseTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbmongodatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbmongodatabase"
 
 cosmosdbmongodatabase.NewCosmosdbMongoDatabaseTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbMongoDatabaseTimeoutsOutputReference
 ```
