@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectory.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/aadb2cdirectory"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/aadb2cdirectory"
 
 aadb2cdirectory.NewAadb2CDirectory(scope Construct, id *string, config Aadb2CDirectoryConfig) Aadb2CDirectory
 ```
@@ -419,7 +419,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectory.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/aadb2cdirectory"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/aadb2cdirectory"
 
 aadb2cdirectory.Aadb2CDirectory_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectory.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/aadb2cdirectory"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/aadb2cdirectory"
 
 aadb2cdirectory.Aadb2CDirectory_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ aadb2cdirectory.Aadb2CDirectory_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectory.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/aadb2cdirectory"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/aadb2cdirectory"
 
 aadb2cdirectory.Aadb2CDirectory_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ aadb2cdirectory.Aadb2CDirectory_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectory.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/aadb2cdirectory"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/aadb2cdirectory"
 
 aadb2cdirectory.Aadb2CDirectory_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -939,7 +939,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectoryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/aadb2cdirectory"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/aadb2cdirectory"
 
 &aadb2cdirectory.Aadb2CDirectoryConfig {
 	Connection: interface{},
@@ -957,7 +957,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/aadb2cdirectory"
 	DisplayName: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.aadb2CDirectory.Aadb2CDirectoryTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.aadb2CDirectory.Aadb2CDirectoryTimeouts,
 }
 ```
 
@@ -1182,7 +1182,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectoryTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/aadb2cdirectory"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/aadb2cdirectory"
 
 &aadb2cdirectory.Aadb2CDirectoryTimeouts {
 	Create: *string,
@@ -1258,7 +1258,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.aadb2CDirectory.Aadb2CDirectoryTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/aadb2cdirectory"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/aadb2cdirectory"
 
 aadb2cdirectory.NewAadb2CDirectoryTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) Aadb2CDirectoryTimeoutsOutputReference
 ```
