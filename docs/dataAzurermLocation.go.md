@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlocation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlocation"
 
 dataazurermlocation.NewDataAzurermLocation(scope Construct, id *string, config DataAzurermLocationConfig) DataAzurermLocation
 ```
@@ -294,7 +294,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocation.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlocation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlocation"
 
 dataazurermlocation.DataAzurermLocation_IsConstruct(x interface{}) *bool
 ```
@@ -326,7 +326,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocation.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlocation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlocation"
 
 dataazurermlocation.DataAzurermLocation_IsTerraformElement(x interface{}) *bool
 ```
@@ -340,7 +340,7 @@ dataazurermlocation.DataAzurermLocation_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocation.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlocation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlocation"
 
 dataazurermlocation.DataAzurermLocation_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -354,7 +354,7 @@ dataazurermlocation.DataAzurermLocation_IsTerraformDataSource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocation.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlocation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlocation"
 
 dataazurermlocation.DataAzurermLocation_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -649,7 +649,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlocation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlocation"
 
 &dataazurermlocation.DataAzurermLocationConfig {
 	Connection: interface{},
@@ -661,7 +661,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlocation"
 	Provisioners: *[]interface{},
 	Location: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermLocation.DataAzurermLocationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermLocation.DataAzurermLocationTimeouts,
 }
 ```
 
@@ -798,7 +798,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlocation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlocation"
 
 &dataazurermlocation.DataAzurermLocationTimeouts {
 	Read: *string,
@@ -830,7 +830,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocationZoneMappings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlocation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlocation"
 
 &dataazurermlocation.DataAzurermLocationZoneMappings {
 
@@ -845,7 +845,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlocation"
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlocation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlocation"
 
 dataazurermlocation.NewDataAzurermLocationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermLocationTimeoutsOutputReference
 ```
@@ -1123,7 +1123,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocationZoneMappingsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlocation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlocation"
 
 dataazurermlocation.NewDataAzurermLocationZoneMappingsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermLocationZoneMappingsList
 ```
@@ -1255,7 +1255,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermLocation.DataAzurermLocationZoneMappingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermlocation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermlocation"
 
 dataazurermlocation.NewDataAzurermLocationZoneMappingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermLocationZoneMappingsOutputReference
 ```
