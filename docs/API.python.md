@@ -385,6 +385,7 @@ The following submodules are available:
 - [dataAzurermLinuxFunctionApp](./dataAzurermLinuxFunctionApp.python.md)
 - [dataAzurermLinuxWebApp](./dataAzurermLinuxWebApp.python.md)
 - [dataAzurermLocalNetworkGateway](./dataAzurermLocalNetworkGateway.python.md)
+- [dataAzurermLocation](./dataAzurermLocation.python.md)
 - [dataAzurermLogAnalyticsWorkspace](./dataAzurermLogAnalyticsWorkspace.python.md)
 - [dataAzurermLogicAppIntegrationAccount](./dataAzurermLogicAppIntegrationAccount.python.md)
 - [dataAzurermLogicAppStandard](./dataAzurermLogicAppStandard.python.md)

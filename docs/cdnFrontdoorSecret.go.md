@@ -4,12 +4,12 @@
 
 ### CdnFrontdoorSecret <a name="CdnFrontdoorSecret" id="@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecret"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/cdn_frontdoor_secret azurerm_cdn_frontdoor_secret}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cdn_frontdoor_secret azurerm_cdn_frontdoor_secret}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecret.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorsecret"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorsecret"
 
 cdnfrontdoorsecret.NewCdnFrontdoorSecret(scope Construct, id *string, config CdnFrontdoorSecretConfig) CdnFrontdoorSecret
 ```
@@ -411,7 +411,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecret.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorsecret"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorsecret"
 
 cdnfrontdoorsecret.CdnFrontdoorSecret_IsConstruct(x interface{}) *bool
 ```
@@ -443,7 +443,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecret.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorsecret"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorsecret"
 
 cdnfrontdoorsecret.CdnFrontdoorSecret_IsTerraformElement(x interface{}) *bool
 ```
@@ -457,7 +457,7 @@ cdnfrontdoorsecret.CdnFrontdoorSecret_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecret.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorsecret"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorsecret"
 
 cdnfrontdoorsecret.CdnFrontdoorSecret_IsTerraformResource(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ cdnfrontdoorsecret.CdnFrontdoorSecret_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecret.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorsecret"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorsecret"
 
 cdnfrontdoorsecret.CdnFrontdoorSecret_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -500,7 +500,7 @@ The construct id used in the generated config for the CdnFrontdoorSecret to impo
 
 The id of the existing CdnFrontdoorSecret that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/cdn_frontdoor_secret#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cdn_frontdoor_secret#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -821,7 +821,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorsecret"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorsecret"
 
 &cdnfrontdoorsecret.CdnFrontdoorSecretConfig {
 	Connection: interface{},
@@ -833,9 +833,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorsecre
 	Provisioners: *[]interface{},
 	CdnFrontdoorProfileId: *string,
 	Name: *string,
-	Secret: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.cdnFrontdoorSecret.CdnFrontdoorSecretSecret,
+	Secret: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretSecret,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.cdnFrontdoorSecret.CdnFrontdoorSecretTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretTimeouts,
 }
 ```
 
@@ -850,10 +850,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorsecre
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretConfig.property.cdnFrontdoorProfileId">CdnFrontdoorProfileId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/cdn_frontdoor_secret#cdn_frontdoor_profile_id CdnFrontdoorSecret#cdn_frontdoor_profile_id}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/cdn_frontdoor_secret#name CdnFrontdoorSecret#name}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretConfig.property.cdnFrontdoorProfileId">CdnFrontdoorProfileId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cdn_frontdoor_secret#cdn_frontdoor_profile_id CdnFrontdoorSecret#cdn_frontdoor_profile_id}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cdn_frontdoor_secret#name CdnFrontdoorSecret#name}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretConfig.property.secret">Secret</a></code> | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretSecret">CdnFrontdoorSecretSecret</a></code> | secret block. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/cdn_frontdoor_secret#id CdnFrontdoorSecret#id}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cdn_frontdoor_secret#id CdnFrontdoorSecret#id}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretTimeouts">CdnFrontdoorSecretTimeouts</a></code> | timeouts block. |
 
 ---
@@ -936,7 +936,7 @@ CdnFrontdoorProfileId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/cdn_frontdoor_secret#cdn_frontdoor_profile_id CdnFrontdoorSecret#cdn_frontdoor_profile_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cdn_frontdoor_secret#cdn_frontdoor_profile_id CdnFrontdoorSecret#cdn_frontdoor_profile_id}.
 
 ---
 
@@ -948,7 +948,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/cdn_frontdoor_secret#name CdnFrontdoorSecret#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cdn_frontdoor_secret#name CdnFrontdoorSecret#name}.
 
 ---
 
@@ -962,7 +962,7 @@ Secret CdnFrontdoorSecretSecret
 
 secret block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/cdn_frontdoor_secret#secret CdnFrontdoorSecret#secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cdn_frontdoor_secret#secret CdnFrontdoorSecret#secret}
 
 ---
 
@@ -974,7 +974,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/cdn_frontdoor_secret#id CdnFrontdoorSecret#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cdn_frontdoor_secret#id CdnFrontdoorSecret#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -991,7 +991,7 @@ Timeouts CdnFrontdoorSecretTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/cdn_frontdoor_secret#timeouts CdnFrontdoorSecret#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cdn_frontdoor_secret#timeouts CdnFrontdoorSecret#timeouts}
 
 ---
 
@@ -1000,7 +1000,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretSecret.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorsecret"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorsecret"
 
 &cdnfrontdoorsecret.CdnFrontdoorSecretSecret {
 	CustomerCertificate: interface{},
@@ -1025,7 +1025,7 @@ CustomerCertificate interface{}
 
 customer_certificate block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/cdn_frontdoor_secret#customer_certificate CdnFrontdoorSecret#customer_certificate}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cdn_frontdoor_secret#customer_certificate CdnFrontdoorSecret#customer_certificate}
 
 ---
 
@@ -1034,7 +1034,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretSecretCustomerCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorsecret"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorsecret"
 
 &cdnfrontdoorsecret.CdnFrontdoorSecretSecretCustomerCertificate {
 	KeyVaultCertificateId: *string,
@@ -1045,7 +1045,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorsecre
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretSecretCustomerCertificate.property.keyVaultCertificateId">KeyVaultCertificateId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/cdn_frontdoor_secret#key_vault_certificate_id CdnFrontdoorSecret#key_vault_certificate_id}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretSecretCustomerCertificate.property.keyVaultCertificateId">KeyVaultCertificateId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cdn_frontdoor_secret#key_vault_certificate_id CdnFrontdoorSecret#key_vault_certificate_id}. |
 
 ---
 
@@ -1057,7 +1057,7 @@ KeyVaultCertificateId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/cdn_frontdoor_secret#key_vault_certificate_id CdnFrontdoorSecret#key_vault_certificate_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cdn_frontdoor_secret#key_vault_certificate_id CdnFrontdoorSecret#key_vault_certificate_id}.
 
 ---
 
@@ -1066,7 +1066,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorsecret"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorsecret"
 
 &cdnfrontdoorsecret.CdnFrontdoorSecretTimeouts {
 	Create: *string,
@@ -1079,9 +1079,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorsecre
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/cdn_frontdoor_secret#create CdnFrontdoorSecret#create}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/cdn_frontdoor_secret#delete CdnFrontdoorSecret#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/cdn_frontdoor_secret#read CdnFrontdoorSecret#read}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cdn_frontdoor_secret#create CdnFrontdoorSecret#create}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cdn_frontdoor_secret#delete CdnFrontdoorSecret#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cdn_frontdoor_secret#read CdnFrontdoorSecret#read}. |
 
 ---
 
@@ -1093,7 +1093,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/cdn_frontdoor_secret#create CdnFrontdoorSecret#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cdn_frontdoor_secret#create CdnFrontdoorSecret#create}.
 
 ---
 
@@ -1105,7 +1105,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/cdn_frontdoor_secret#delete CdnFrontdoorSecret#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cdn_frontdoor_secret#delete CdnFrontdoorSecret#delete}.
 
 ---
 
@@ -1117,7 +1117,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/cdn_frontdoor_secret#read CdnFrontdoorSecret#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cdn_frontdoor_secret#read CdnFrontdoorSecret#read}.
 
 ---
 
@@ -1128,7 +1128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretSecretCustomerCertificateList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorsecret"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorsecret"
 
 cdnfrontdoorsecret.NewCdnFrontdoorSecretSecretCustomerCertificateList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) CdnFrontdoorSecretSecretCustomerCertificateList
 ```
@@ -1271,7 +1271,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretSecretCustomerCertificateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorsecret"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorsecret"
 
 cdnfrontdoorsecret.NewCdnFrontdoorSecretSecretCustomerCertificateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) CdnFrontdoorSecretSecretCustomerCertificateOutputReference
 ```
@@ -1571,7 +1571,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretSecretOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorsecret"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorsecret"
 
 cdnfrontdoorsecret.NewCdnFrontdoorSecretSecretOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CdnFrontdoorSecretSecretOutputReference
 ```
@@ -1855,7 +1855,7 @@ func InternalValue() CdnFrontdoorSecretSecret
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cdnFrontdoorSecret.CdnFrontdoorSecretTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cdnfrontdoorsecret"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cdnfrontdoorsecret"
 
 cdnfrontdoorsecret.NewCdnFrontdoorSecretTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CdnFrontdoorSecretTimeoutsOutputReference
 ```

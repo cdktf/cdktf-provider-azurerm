@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/container_app
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/container_app
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +8,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermContainerAppConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/container_app#id DataAzurermContainerApp#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/container_app#id DataAzurermContainerApp#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/container_app#name DataAzurermContainerApp#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/container_app#name DataAzurermContainerApp#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/container_app#resource_group_name DataAzurermContainerApp#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/container_app#resource_group_name DataAzurermContainerApp#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/container_app#timeouts DataAzurermContainerApp#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/container_app#timeouts DataAzurermContainerApp#timeouts}
   */
   readonly timeouts?: DataAzurermContainerAppTimeouts;
 }
@@ -1826,6 +1821,255 @@ export class DataAzurermContainerAppTemplateHttpScaleRuleList extends cdktf.Comp
     return new DataAzurermContainerAppTemplateHttpScaleRuleOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface DataAzurermContainerAppTemplateInitContainerEnv {
+}
+
+export function dataAzurermContainerAppTemplateInitContainerEnvToTerraform(struct?: DataAzurermContainerAppTemplateInitContainerEnv): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermContainerAppTemplateInitContainerEnvOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermContainerAppTemplateInitContainerEnv | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermContainerAppTemplateInitContainerEnv | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // secret_name - computed: true, optional: false, required: false
+  public get secretName() {
+    return this.getStringAttribute('secret_name');
+  }
+
+  // value - computed: true, optional: false, required: false
+  public get value() {
+    return this.getStringAttribute('value');
+  }
+}
+
+export class DataAzurermContainerAppTemplateInitContainerEnvList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermContainerAppTemplateInitContainerEnvOutputReference {
+    return new DataAzurermContainerAppTemplateInitContainerEnvOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermContainerAppTemplateInitContainerVolumeMounts {
+}
+
+export function dataAzurermContainerAppTemplateInitContainerVolumeMountsToTerraform(struct?: DataAzurermContainerAppTemplateInitContainerVolumeMounts): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermContainerAppTemplateInitContainerVolumeMountsOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermContainerAppTemplateInitContainerVolumeMounts | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermContainerAppTemplateInitContainerVolumeMounts | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // path - computed: true, optional: false, required: false
+  public get path() {
+    return this.getStringAttribute('path');
+  }
+}
+
+export class DataAzurermContainerAppTemplateInitContainerVolumeMountsList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermContainerAppTemplateInitContainerVolumeMountsOutputReference {
+    return new DataAzurermContainerAppTemplateInitContainerVolumeMountsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface DataAzurermContainerAppTemplateInitContainer {
+}
+
+export function dataAzurermContainerAppTemplateInitContainerToTerraform(struct?: DataAzurermContainerAppTemplateInitContainer): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+  }
+}
+
+export class DataAzurermContainerAppTemplateInitContainerOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): DataAzurermContainerAppTemplateInitContainer | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: DataAzurermContainerAppTemplateInitContainer | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+    }
+  }
+
+  // args - computed: true, optional: false, required: false
+  public get args() {
+    return this.getListAttribute('args');
+  }
+
+  // command - computed: true, optional: false, required: false
+  public get command() {
+    return this.getListAttribute('command');
+  }
+
+  // cpu - computed: true, optional: false, required: false
+  public get cpu() {
+    return this.getNumberAttribute('cpu');
+  }
+
+  // env - computed: true, optional: false, required: false
+  private _env = new DataAzurermContainerAppTemplateInitContainerEnvList(this, "env", false);
+  public get env() {
+    return this._env;
+  }
+
+  // ephemeral_storage - computed: true, optional: false, required: false
+  public get ephemeralStorage() {
+    return this.getStringAttribute('ephemeral_storage');
+  }
+
+  // image - computed: true, optional: false, required: false
+  public get image() {
+    return this.getStringAttribute('image');
+  }
+
+  // memory - computed: true, optional: false, required: false
+  public get memory() {
+    return this.getStringAttribute('memory');
+  }
+
+  // name - computed: true, optional: false, required: false
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+
+  // volume_mounts - computed: true, optional: false, required: false
+  private _volumeMounts = new DataAzurermContainerAppTemplateInitContainerVolumeMountsList(this, "volume_mounts", false);
+  public get volumeMounts() {
+    return this._volumeMounts;
+  }
+}
+
+export class DataAzurermContainerAppTemplateInitContainerList extends cdktf.ComplexList {
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): DataAzurermContainerAppTemplateInitContainerOutputReference {
+    return new DataAzurermContainerAppTemplateInitContainerOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
 export interface DataAzurermContainerAppTemplateTcpScaleRuleAuthentication {
 }
 
@@ -2108,6 +2352,12 @@ export class DataAzurermContainerAppTemplateOutputReference extends cdktf.Comple
     return this._httpScaleRule;
   }
 
+  // init_container - computed: true, optional: false, required: false
+  private _initContainer = new DataAzurermContainerAppTemplateInitContainerList(this, "init_container", false);
+  public get initContainer() {
+    return this._initContainer;
+  }
+
   // max_replicas - computed: true, optional: false, required: false
   public get maxReplicas() {
     return this.getNumberAttribute('max_replicas');
@@ -2156,7 +2406,7 @@ export class DataAzurermContainerAppTemplateList extends cdktf.ComplexList {
 }
 export interface DataAzurermContainerAppTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/container_app#read DataAzurermContainerApp#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/container_app#read DataAzurermContainerApp#read}
   */
   readonly read?: string;
 }
@@ -2231,7 +2481,7 @@ export class DataAzurermContainerAppTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/container_app azurerm_container_app}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/container_app azurerm_container_app}
 */
 export class DataAzurermContainerApp extends cdktf.TerraformDataSource {
 
@@ -2247,7 +2497,7 @@ export class DataAzurermContainerApp extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermContainerApp resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermContainerApp to import
-  * @param importFromId The id of the existing DataAzurermContainerApp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/container_app#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermContainerApp that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/container_app#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermContainerApp to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -2259,7 +2509,7 @@ export class DataAzurermContainerApp extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/container_app azurerm_container_app} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/container_app azurerm_container_app} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -2270,7 +2520,7 @@ export class DataAzurermContainerApp extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_container_app',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.84.0',
+        providerVersion: '3.85.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -2408,6 +2658,11 @@ export class DataAzurermContainerApp extends cdktf.TerraformDataSource {
   private _template = new DataAzurermContainerAppTemplateList(this, "template", false);
   public get template() {
     return this._template;
+  }
+
+  // workload_profile_name - computed: true, optional: false, required: false
+  public get workloadProfileName() {
+    return this.getStringAttribute('workload_profile_name');
   }
 
   // timeouts - computed: false, optional: true, required: false

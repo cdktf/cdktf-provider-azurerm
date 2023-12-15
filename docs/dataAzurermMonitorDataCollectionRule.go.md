@@ -4,12 +4,12 @@
 
 ### DataAzurermMonitorDataCollectionRule <a name="DataAzurermMonitorDataCollectionRule" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRule"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/monitor_data_collection_rule azurerm_monitor_data_collection_rule}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/monitor_data_collection_rule azurerm_monitor_data_collection_rule}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRule(scope Construct, id *string, config DataAzurermMonitorDataCollectionRuleConfig) DataAzurermMonitorDataCollectionRule
 ```
@@ -294,7 +294,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRule_IsConstruct(x interface{}) *bool
 ```
@@ -326,7 +326,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -340,7 +340,7 @@ dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRule_IsTerr
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRule.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRule_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -354,7 +354,7 @@ dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRule_IsTerr
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRule.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRule_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -383,7 +383,7 @@ The construct id used in the generated config for the DataAzurermMonitorDataColl
 
 The id of the existing DataAzurermMonitorDataCollectionRule that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/monitor_data_collection_rule#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/monitor_data_collection_rule#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -770,7 +770,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleConfig {
 	Connection: interface{},
@@ -783,7 +783,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleTimeouts,
 }
 ```
 
@@ -798,9 +798,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/monitor_data_collection_rule#name DataAzurermMonitorDataCollectionRule#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/monitor_data_collection_rule#resource_group_name DataAzurermMonitorDataCollectionRule#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/monitor_data_collection_rule#id DataAzurermMonitorDataCollectionRule#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/monitor_data_collection_rule#name DataAzurermMonitorDataCollectionRule#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/monitor_data_collection_rule#resource_group_name DataAzurermMonitorDataCollectionRule#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/monitor_data_collection_rule#id DataAzurermMonitorDataCollectionRule#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleTimeouts">DataAzurermMonitorDataCollectionRuleTimeouts</a></code> | timeouts block. |
 
 ---
@@ -883,7 +883,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/monitor_data_collection_rule#name DataAzurermMonitorDataCollectionRule#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/monitor_data_collection_rule#name DataAzurermMonitorDataCollectionRule#name}.
 
 ---
 
@@ -895,7 +895,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/monitor_data_collection_rule#resource_group_name DataAzurermMonitorDataCollectionRule#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/monitor_data_collection_rule#resource_group_name DataAzurermMonitorDataCollectionRule#resource_group_name}.
 
 ---
 
@@ -907,7 +907,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/monitor_data_collection_rule#id DataAzurermMonitorDataCollectionRule#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/monitor_data_collection_rule#id DataAzurermMonitorDataCollectionRule#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -924,7 +924,7 @@ Timeouts DataAzurermMonitorDataCollectionRuleTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/monitor_data_collection_rule#timeouts DataAzurermMonitorDataCollectionRule#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/monitor_data_collection_rule#timeouts DataAzurermMonitorDataCollectionRule#timeouts}
 
 ---
 
@@ -933,7 +933,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataFlow.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleDataFlow {
 
@@ -946,7 +946,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSources.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleDataSources {
 
@@ -959,7 +959,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesDataImport.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleDataSourcesDataImport {
 
@@ -972,7 +972,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesDataImportEventHubDataSource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleDataSourcesDataImportEventHubDataSource {
 
@@ -985,7 +985,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesExtension.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleDataSourcesExtension {
 
@@ -998,7 +998,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesIisLog.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleDataSourcesIisLog {
 
@@ -1011,7 +1011,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesLogFile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleDataSourcesLogFile {
 
@@ -1024,7 +1024,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesLogFileSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleDataSourcesLogFileSettings {
 
@@ -1037,7 +1037,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesLogFileSettingsText.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleDataSourcesLogFileSettingsText {
 
@@ -1050,7 +1050,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesPerformanceCounter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleDataSourcesPerformanceCounter {
 
@@ -1063,7 +1063,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesPlatformTelemetry.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleDataSourcesPlatformTelemetry {
 
@@ -1076,7 +1076,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesPrometheusForwarder.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleDataSourcesPrometheusForwarder {
 
@@ -1089,7 +1089,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesPrometheusForwarderLabelIncludeFilter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleDataSourcesPrometheusForwarderLabelIncludeFilter {
 
@@ -1102,7 +1102,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesSyslog.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleDataSourcesSyslog {
 
@@ -1115,7 +1115,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesWindowsEventLog.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleDataSourcesWindowsEventLog {
 
@@ -1128,7 +1128,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesWindowsFirewallLog.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleDataSourcesWindowsFirewallLog {
 
@@ -1141,7 +1141,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinations.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleDestinations {
 
@@ -1154,7 +1154,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinationsAzureMonitorMetrics.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleDestinationsAzureMonitorMetrics {
 
@@ -1167,7 +1167,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinationsEventHub.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleDestinationsEventHub {
 
@@ -1180,7 +1180,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinationsEventHubDirect.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleDestinationsEventHubDirect {
 
@@ -1193,7 +1193,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinationsLogAnalytics.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleDestinationsLogAnalytics {
 
@@ -1206,7 +1206,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinationsMonitorAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleDestinationsMonitorAccount {
 
@@ -1219,7 +1219,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinationsStorageBlob.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleDestinationsStorageBlob {
 
@@ -1232,7 +1232,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinationsStorageBlobDirect.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleDestinationsStorageBlobDirect {
 
@@ -1245,7 +1245,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinationsStorageTableDirect.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleDestinationsStorageTableDirect {
 
@@ -1258,7 +1258,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleIdentity {
 
@@ -1271,7 +1271,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleStreamDeclaration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleStreamDeclaration {
 
@@ -1284,7 +1284,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleStreamDeclarationColumn.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleStreamDeclarationColumn {
 
@@ -1297,7 +1297,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 &dataazurermmonitordatacollectionrule.DataAzurermMonitorDataCollectionRuleTimeouts {
 	Read: *string,
@@ -1308,7 +1308,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonito
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/monitor_data_collection_rule#read DataAzurermMonitorDataCollectionRule#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/monitor_data_collection_rule#read DataAzurermMonitorDataCollectionRule#read}. |
 
 ---
 
@@ -1320,7 +1320,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/monitor_data_collection_rule#read DataAzurermMonitorDataCollectionRule#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/monitor_data_collection_rule#read DataAzurermMonitorDataCollectionRule#read}.
 
 ---
 
@@ -1331,7 +1331,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataFlowList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataFlowList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleDataFlowList
 ```
@@ -1463,7 +1463,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataFlowOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataFlowOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleDataFlowOutputReference
 ```
@@ -1785,7 +1785,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleDataFlow
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesDataImportEventHubDataSourceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesDataImportEventHubDataSourceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesDataImportEventHubDataSourceList
 ```
@@ -1917,7 +1917,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesDataImportEventHubDataSourceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesDataImportEventHubDataSourceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesDataImportEventHubDataSourceOutputReference
 ```
@@ -2217,7 +2217,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleDataSourcesDataImportEv
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesDataImportList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesDataImportList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesDataImportList
 ```
@@ -2349,7 +2349,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesDataImportOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesDataImportOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesDataImportOutputReference
 ```
@@ -2627,7 +2627,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleDataSourcesDataImport
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesExtensionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesExtensionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesExtensionList
 ```
@@ -2759,7 +2759,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesExtensionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesExtensionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesExtensionOutputReference
 ```
@@ -3081,7 +3081,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleDataSourcesExtension
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesIisLogList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesIisLogList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesIisLogList
 ```
@@ -3213,7 +3213,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesIisLogOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesIisLogOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesIisLogOutputReference
 ```
@@ -3513,7 +3513,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleDataSourcesIisLog
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesList
 ```
@@ -3645,7 +3645,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesLogFileList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesLogFileList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesLogFileList
 ```
@@ -3777,7 +3777,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesLogFileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesLogFileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesLogFileOutputReference
 ```
@@ -4099,7 +4099,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleDataSourcesLogFile
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesLogFileSettingsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesLogFileSettingsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesLogFileSettingsList
 ```
@@ -4231,7 +4231,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesLogFileSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesLogFileSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesLogFileSettingsOutputReference
 ```
@@ -4509,7 +4509,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleDataSourcesLogFileSetti
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesLogFileSettingsTextList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesLogFileSettingsTextList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesLogFileSettingsTextList
 ```
@@ -4641,7 +4641,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesLogFileSettingsTextOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesLogFileSettingsTextOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesLogFileSettingsTextOutputReference
 ```
@@ -4919,7 +4919,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleDataSourcesLogFileSetti
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesOutputReference
 ```
@@ -5296,7 +5296,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleDataSources
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesPerformanceCounterList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesPerformanceCounterList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesPerformanceCounterList
 ```
@@ -5428,7 +5428,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesPerformanceCounterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesPerformanceCounterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesPerformanceCounterOutputReference
 ```
@@ -5739,7 +5739,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleDataSourcesPerformanceC
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesPlatformTelemetryList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesPlatformTelemetryList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesPlatformTelemetryList
 ```
@@ -5871,7 +5871,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesPlatformTelemetryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesPlatformTelemetryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesPlatformTelemetryOutputReference
 ```
@@ -6160,7 +6160,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleDataSourcesPlatformTele
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesPrometheusForwarderLabelIncludeFilterList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesPrometheusForwarderLabelIncludeFilterList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesPrometheusForwarderLabelIncludeFilterList
 ```
@@ -6292,7 +6292,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesPrometheusForwarderLabelIncludeFilterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesPrometheusForwarderLabelIncludeFilterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesPrometheusForwarderLabelIncludeFilterOutputReference
 ```
@@ -6581,7 +6581,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleDataSourcesPrometheusFo
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesPrometheusForwarderList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesPrometheusForwarderList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesPrometheusForwarderList
 ```
@@ -6713,7 +6713,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesPrometheusForwarderOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesPrometheusForwarderOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesPrometheusForwarderOutputReference
 ```
@@ -7013,7 +7013,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleDataSourcesPrometheusFo
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesSyslogList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesSyslogList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesSyslogList
 ```
@@ -7145,7 +7145,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesSyslogOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesSyslogOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesSyslogOutputReference
 ```
@@ -7456,7 +7456,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleDataSourcesSyslog
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesWindowsEventLogList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesWindowsEventLogList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesWindowsEventLogList
 ```
@@ -7588,7 +7588,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesWindowsEventLogOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesWindowsEventLogOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesWindowsEventLogOutputReference
 ```
@@ -7888,7 +7888,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleDataSourcesWindowsEvent
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesWindowsFirewallLogList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesWindowsFirewallLogList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesWindowsFirewallLogList
 ```
@@ -8020,7 +8020,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDataSourcesWindowsFirewallLogOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDataSourcesWindowsFirewallLogOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleDataSourcesWindowsFirewallLogOutputReference
 ```
@@ -8309,7 +8309,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleDataSourcesWindowsFirew
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinationsAzureMonitorMetricsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDestinationsAzureMonitorMetricsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleDestinationsAzureMonitorMetricsList
 ```
@@ -8441,7 +8441,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinationsAzureMonitorMetricsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDestinationsAzureMonitorMetricsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleDestinationsAzureMonitorMetricsOutputReference
 ```
@@ -8719,7 +8719,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleDestinationsAzureMonito
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinationsEventHubDirectList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDestinationsEventHubDirectList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleDestinationsEventHubDirectList
 ```
@@ -8851,7 +8851,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinationsEventHubDirectOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDestinationsEventHubDirectOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleDestinationsEventHubDirectOutputReference
 ```
@@ -9140,7 +9140,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleDestinationsEventHubDir
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinationsEventHubList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDestinationsEventHubList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleDestinationsEventHubList
 ```
@@ -9272,7 +9272,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinationsEventHubOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDestinationsEventHubOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleDestinationsEventHubOutputReference
 ```
@@ -9561,7 +9561,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleDestinationsEventHub
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinationsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDestinationsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleDestinationsList
 ```
@@ -9693,7 +9693,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinationsLogAnalyticsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDestinationsLogAnalyticsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleDestinationsLogAnalyticsList
 ```
@@ -9825,7 +9825,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinationsLogAnalyticsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDestinationsLogAnalyticsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleDestinationsLogAnalyticsOutputReference
 ```
@@ -10114,7 +10114,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleDestinationsLogAnalytic
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinationsMonitorAccountList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDestinationsMonitorAccountList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleDestinationsMonitorAccountList
 ```
@@ -10246,7 +10246,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinationsMonitorAccountOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDestinationsMonitorAccountOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleDestinationsMonitorAccountOutputReference
 ```
@@ -10535,7 +10535,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleDestinationsMonitorAcco
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinationsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDestinationsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleDestinationsOutputReference
 ```
@@ -10890,7 +10890,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleDestinations
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinationsStorageBlobDirectList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDestinationsStorageBlobDirectList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleDestinationsStorageBlobDirectList
 ```
@@ -11022,7 +11022,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinationsStorageBlobDirectOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDestinationsStorageBlobDirectOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleDestinationsStorageBlobDirectOutputReference
 ```
@@ -11322,7 +11322,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleDestinationsStorageBlob
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinationsStorageBlobList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDestinationsStorageBlobList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleDestinationsStorageBlobList
 ```
@@ -11454,7 +11454,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinationsStorageBlobOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDestinationsStorageBlobOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleDestinationsStorageBlobOutputReference
 ```
@@ -11754,7 +11754,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleDestinationsStorageBlob
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinationsStorageTableDirectList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDestinationsStorageTableDirectList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleDestinationsStorageTableDirectList
 ```
@@ -11886,7 +11886,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleDestinationsStorageTableDirectOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleDestinationsStorageTableDirectOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleDestinationsStorageTableDirectOutputReference
 ```
@@ -12186,7 +12186,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleDestinationsStorageTabl
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleIdentityList
 ```
@@ -12318,7 +12318,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleIdentityOutputReference
 ```
@@ -12629,7 +12629,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleStreamDeclarationColumnList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleStreamDeclarationColumnList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleStreamDeclarationColumnList
 ```
@@ -12761,7 +12761,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleStreamDeclarationColumnOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleStreamDeclarationColumnOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleStreamDeclarationColumnOutputReference
 ```
@@ -13050,7 +13050,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleStreamDeclarationColumn
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleStreamDeclarationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleStreamDeclarationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermMonitorDataCollectionRuleStreamDeclarationList
 ```
@@ -13182,7 +13182,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleStreamDeclarationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleStreamDeclarationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermMonitorDataCollectionRuleStreamDeclarationOutputReference
 ```
@@ -13471,7 +13471,7 @@ func InternalValue() DataAzurermMonitorDataCollectionRuleStreamDeclaration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorDataCollectionRule.DataAzurermMonitorDataCollectionRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmonitordatacollectionrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermmonitordatacollectionrule"
 
 dataazurermmonitordatacollectionrule.NewDataAzurermMonitorDataCollectionRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermMonitorDataCollectionRuleTimeoutsOutputReference
 ```

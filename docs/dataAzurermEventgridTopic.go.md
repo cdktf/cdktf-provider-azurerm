@@ -4,12 +4,12 @@
 
 ### DataAzurermEventgridTopic <a name="DataAzurermEventgridTopic" id="@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopic"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/eventgrid_topic azurerm_eventgrid_topic}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/eventgrid_topic azurerm_eventgrid_topic}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopic.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermeventgridtopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgridtopic"
 
 dataazurermeventgridtopic.NewDataAzurermEventgridTopic(scope Construct, id *string, config DataAzurermEventgridTopicConfig) DataAzurermEventgridTopic
 ```
@@ -294,7 +294,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopic.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermeventgridtopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgridtopic"
 
 dataazurermeventgridtopic.DataAzurermEventgridTopic_IsConstruct(x interface{}) *bool
 ```
@@ -326,7 +326,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopic.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermeventgridtopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgridtopic"
 
 dataazurermeventgridtopic.DataAzurermEventgridTopic_IsTerraformElement(x interface{}) *bool
 ```
@@ -340,7 +340,7 @@ dataazurermeventgridtopic.DataAzurermEventgridTopic_IsTerraformElement(x interfa
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopic.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermeventgridtopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgridtopic"
 
 dataazurermeventgridtopic.DataAzurermEventgridTopic_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -354,7 +354,7 @@ dataazurermeventgridtopic.DataAzurermEventgridTopic_IsTerraformDataSource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopic.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermeventgridtopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgridtopic"
 
 dataazurermeventgridtopic.DataAzurermEventgridTopic_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -383,7 +383,7 @@ The construct id used in the generated config for the DataAzurermEventgridTopic 
 
 The id of the existing DataAzurermEventgridTopic that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/eventgrid_topic#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/eventgrid_topic#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -704,7 +704,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermeventgridtopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgridtopic"
 
 &dataazurermeventgridtopic.DataAzurermEventgridTopicConfig {
 	Connection: interface{},
@@ -717,7 +717,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermeventg
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermEventgridTopic.DataAzurermEventgridTopicTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicTimeouts,
 }
 ```
 
@@ -732,9 +732,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermeventg
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/eventgrid_topic#name DataAzurermEventgridTopic#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/eventgrid_topic#resource_group_name DataAzurermEventgridTopic#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/eventgrid_topic#id DataAzurermEventgridTopic#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/eventgrid_topic#name DataAzurermEventgridTopic#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/eventgrid_topic#resource_group_name DataAzurermEventgridTopic#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/eventgrid_topic#id DataAzurermEventgridTopic#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicTimeouts">DataAzurermEventgridTopicTimeouts</a></code> | timeouts block. |
 
 ---
@@ -817,7 +817,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/eventgrid_topic#name DataAzurermEventgridTopic#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/eventgrid_topic#name DataAzurermEventgridTopic#name}.
 
 ---
 
@@ -829,7 +829,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/eventgrid_topic#resource_group_name DataAzurermEventgridTopic#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/eventgrid_topic#resource_group_name DataAzurermEventgridTopic#resource_group_name}.
 
 ---
 
@@ -841,7 +841,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/eventgrid_topic#id DataAzurermEventgridTopic#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/eventgrid_topic#id DataAzurermEventgridTopic#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -858,7 +858,7 @@ Timeouts DataAzurermEventgridTopicTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/eventgrid_topic#timeouts DataAzurermEventgridTopic#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/eventgrid_topic#timeouts DataAzurermEventgridTopic#timeouts}
 
 ---
 
@@ -867,7 +867,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermeventgridtopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgridtopic"
 
 &dataazurermeventgridtopic.DataAzurermEventgridTopicTimeouts {
 	Read: *string,
@@ -878,7 +878,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermeventg
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/eventgrid_topic#read DataAzurermEventgridTopic#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/eventgrid_topic#read DataAzurermEventgridTopic#read}. |
 
 ---
 
@@ -890,7 +890,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/eventgrid_topic#read DataAzurermEventgridTopic#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/eventgrid_topic#read DataAzurermEventgridTopic#read}.
 
 ---
 
@@ -901,7 +901,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermEventgridTopic.DataAzurermEventgridTopicTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermeventgridtopic"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgridtopic"
 
 dataazurermeventgridtopic.NewDataAzurermEventgridTopicTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermEventgridTopicTimeoutsOutputReference
 ```

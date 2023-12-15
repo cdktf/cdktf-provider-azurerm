@@ -4,12 +4,12 @@
 
 ### DataAzurermIpGroup <a name="DataAzurermIpGroup" id="@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroup"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/ip_group azurerm_ip_group}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/ip_group azurerm_ip_group}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermipgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermipgroup"
 
 dataazurermipgroup.NewDataAzurermIpGroup(scope Construct, id *string, config DataAzurermIpGroupConfig) DataAzurermIpGroup
 ```
@@ -294,7 +294,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermipgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermipgroup"
 
 dataazurermipgroup.DataAzurermIpGroup_IsConstruct(x interface{}) *bool
 ```
@@ -326,7 +326,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermipgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermipgroup"
 
 dataazurermipgroup.DataAzurermIpGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -340,7 +340,7 @@ dataazurermipgroup.DataAzurermIpGroup_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroup.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermipgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermipgroup"
 
 dataazurermipgroup.DataAzurermIpGroup_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -354,7 +354,7 @@ dataazurermipgroup.DataAzurermIpGroup_IsTerraformDataSource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroup.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermipgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermipgroup"
 
 dataazurermipgroup.DataAzurermIpGroup_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -383,7 +383,7 @@ The construct id used in the generated config for the DataAzurermIpGroup to impo
 
 The id of the existing DataAzurermIpGroup that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/ip_group#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/ip_group#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -682,7 +682,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermipgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermipgroup"
 
 &dataazurermipgroup.DataAzurermIpGroupConfig {
 	Connection: interface{},
@@ -695,7 +695,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermipgrou
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermIpGroup.DataAzurermIpGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermIpGroup.DataAzurermIpGroupTimeouts,
 }
 ```
 
@@ -710,9 +710,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermipgrou
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/ip_group#name DataAzurermIpGroup#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/ip_group#resource_group_name DataAzurermIpGroup#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/ip_group#id DataAzurermIpGroup#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/ip_group#name DataAzurermIpGroup#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/ip_group#resource_group_name DataAzurermIpGroup#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/ip_group#id DataAzurermIpGroup#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupTimeouts">DataAzurermIpGroupTimeouts</a></code> | timeouts block. |
 
 ---
@@ -795,7 +795,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/ip_group#name DataAzurermIpGroup#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/ip_group#name DataAzurermIpGroup#name}.
 
 ---
 
@@ -807,7 +807,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/ip_group#resource_group_name DataAzurermIpGroup#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/ip_group#resource_group_name DataAzurermIpGroup#resource_group_name}.
 
 ---
 
@@ -819,7 +819,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/ip_group#id DataAzurermIpGroup#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/ip_group#id DataAzurermIpGroup#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -836,7 +836,7 @@ Timeouts DataAzurermIpGroupTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/ip_group#timeouts DataAzurermIpGroup#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/ip_group#timeouts DataAzurermIpGroup#timeouts}
 
 ---
 
@@ -845,7 +845,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermipgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermipgroup"
 
 &dataazurermipgroup.DataAzurermIpGroupTimeouts {
 	Read: *string,
@@ -856,7 +856,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermipgrou
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/ip_group#read DataAzurermIpGroup#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/ip_group#read DataAzurermIpGroup#read}. |
 
 ---
 
@@ -868,7 +868,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/ip_group#read DataAzurermIpGroup#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/ip_group#read DataAzurermIpGroup#read}.
 
 ---
 
@@ -879,7 +879,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermIpGroup.DataAzurermIpGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermipgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermipgroup"
 
 dataazurermipgroup.NewDataAzurermIpGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermIpGroupTimeoutsOutputReference
 ```

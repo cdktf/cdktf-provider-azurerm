@@ -4,7 +4,7 @@
 
 ### DataAzurermMonitorWorkspace <a name="DataAzurermMonitorWorkspace" id="@cdktf/provider-azurerm.dataAzurermMonitorWorkspace.DataAzurermMonitorWorkspace"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/monitor_workspace azurerm_monitor_workspace}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/monitor_workspace azurerm_monitor_workspace}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMonitorWorkspace.DataAzurermMonitorWorkspace.Initializer"></a>
 
@@ -383,7 +383,7 @@ The construct id used in the generated config for the DataAzurermMonitorWorkspac
 
 The id of the existing DataAzurermMonitorWorkspace that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/monitor_workspace#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/monitor_workspace#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -411,6 +411,8 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorWorkspace.DataAzurermMonitorWorkspace.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorWorkspace.DataAzurermMonitorWorkspace.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorWorkspace.DataAzurermMonitorWorkspace.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorWorkspace.DataAzurermMonitorWorkspace.property.defaultDataCollectionEndpointId">defaultDataCollectionEndpointId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorWorkspace.DataAzurermMonitorWorkspace.property.defaultDataCollectionRuleId">defaultDataCollectionRuleId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorWorkspace.DataAzurermMonitorWorkspace.property.location">location</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorWorkspace.DataAzurermMonitorWorkspace.property.publicNetworkAccessEnabled">publicNetworkAccessEnabled</a></code> | <code>cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorWorkspace.DataAzurermMonitorWorkspace.property.queryEndpoint">queryEndpoint</a></code> | <code>string</code> | *No description.* |
@@ -545,6 +547,26 @@ public readonly provider: TerraformProvider;
 ```
 
 - *Type:* cdktf.TerraformProvider
+
+---
+
+##### `defaultDataCollectionEndpointId`<sup>Required</sup> <a name="defaultDataCollectionEndpointId" id="@cdktf/provider-azurerm.dataAzurermMonitorWorkspace.DataAzurermMonitorWorkspace.property.defaultDataCollectionEndpointId"></a>
+
+```typescript
+public readonly defaultDataCollectionEndpointId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `defaultDataCollectionRuleId`<sup>Required</sup> <a name="defaultDataCollectionRuleId" id="@cdktf/provider-azurerm.dataAzurermMonitorWorkspace.DataAzurermMonitorWorkspace.property.defaultDataCollectionRuleId"></a>
+
+```typescript
+public readonly defaultDataCollectionRuleId: string;
+```
+
+- *Type:* string
 
 ---
 
@@ -709,9 +731,9 @@ const dataAzurermMonitorWorkspaceConfig: dataAzurermMonitorWorkspace.DataAzurerm
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorWorkspace.DataAzurermMonitorWorkspaceConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorWorkspace.DataAzurermMonitorWorkspaceConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorWorkspace.DataAzurermMonitorWorkspaceConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorWorkspace.DataAzurermMonitorWorkspaceConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/monitor_workspace#name DataAzurermMonitorWorkspace#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorWorkspace.DataAzurermMonitorWorkspaceConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/monitor_workspace#resource_group_name DataAzurermMonitorWorkspace#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorWorkspace.DataAzurermMonitorWorkspaceConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/monitor_workspace#id DataAzurermMonitorWorkspace#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorWorkspace.DataAzurermMonitorWorkspaceConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/monitor_workspace#name DataAzurermMonitorWorkspace#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorWorkspace.DataAzurermMonitorWorkspaceConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/monitor_workspace#resource_group_name DataAzurermMonitorWorkspace#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorWorkspace.DataAzurermMonitorWorkspaceConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/monitor_workspace#id DataAzurermMonitorWorkspace#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorWorkspace.DataAzurermMonitorWorkspaceConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorWorkspace.DataAzurermMonitorWorkspaceTimeouts">DataAzurermMonitorWorkspaceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -794,7 +816,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/monitor_workspace#name DataAzurermMonitorWorkspace#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/monitor_workspace#name DataAzurermMonitorWorkspace#name}.
 
 ---
 
@@ -806,7 +828,7 @@ public readonly resourceGroupName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/monitor_workspace#resource_group_name DataAzurermMonitorWorkspace#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/monitor_workspace#resource_group_name DataAzurermMonitorWorkspace#resource_group_name}.
 
 ---
 
@@ -818,7 +840,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/monitor_workspace#id DataAzurermMonitorWorkspace#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/monitor_workspace#id DataAzurermMonitorWorkspace#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -835,7 +857,7 @@ public readonly timeouts: DataAzurermMonitorWorkspaceTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/monitor_workspace#timeouts DataAzurermMonitorWorkspace#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/monitor_workspace#timeouts DataAzurermMonitorWorkspace#timeouts}
 
 ---
 
@@ -853,7 +875,7 @@ const dataAzurermMonitorWorkspaceTimeouts: dataAzurermMonitorWorkspace.DataAzure
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorWorkspace.DataAzurermMonitorWorkspaceTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/monitor_workspace#read DataAzurermMonitorWorkspace#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMonitorWorkspace.DataAzurermMonitorWorkspaceTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/monitor_workspace#read DataAzurermMonitorWorkspace#read}. |
 
 ---
 
@@ -865,7 +887,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/monitor_workspace#read DataAzurermMonitorWorkspace#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/monitor_workspace#read DataAzurermMonitorWorkspace#read}.
 
 ---
 
