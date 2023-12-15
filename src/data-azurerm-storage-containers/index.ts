@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_containers
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/storage_containers
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +13,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermStorageContainersConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_containers#id DataAzurermStorageContainers#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/storage_containers#id DataAzurermStorageContainers#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_containers#name_prefix DataAzurermStorageContainers#name_prefix}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/storage_containers#name_prefix DataAzurermStorageContainers#name_prefix}
   */
   readonly namePrefix?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_containers#storage_account_id DataAzurermStorageContainers#storage_account_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/storage_containers#storage_account_id DataAzurermStorageContainers#storage_account_id}
   */
   readonly storageAccountId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_containers#timeouts DataAzurermStorageContainers#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/storage_containers#timeouts DataAzurermStorageContainers#timeouts}
   */
   readonly timeouts?: DataAzurermStorageContainersTimeouts;
 }
@@ -110,7 +110,7 @@ export class DataAzurermStorageContainersContainersList extends cdktf.ComplexLis
 }
 export interface DataAzurermStorageContainersTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_containers#read DataAzurermStorageContainers#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/storage_containers#read DataAzurermStorageContainers#read}
   */
   readonly read?: string;
 }
@@ -185,7 +185,7 @@ export class DataAzurermStorageContainersTimeoutsOutputReference extends cdktf.C
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_containers azurerm_storage_containers}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/storage_containers azurerm_storage_containers}
 */
 export class DataAzurermStorageContainers extends cdktf.TerraformDataSource {
 
@@ -201,7 +201,7 @@ export class DataAzurermStorageContainers extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermStorageContainers resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermStorageContainers to import
-  * @param importFromId The id of the existing DataAzurermStorageContainers that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_containers#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermStorageContainers that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/storage_containers#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermStorageContainers to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -213,7 +213,7 @@ export class DataAzurermStorageContainers extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/storage_containers azurerm_storage_containers} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/storage_containers azurerm_storage_containers} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -224,7 +224,7 @@ export class DataAzurermStorageContainers extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_storage_containers',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.84.0',
+        providerVersion: '3.85.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

@@ -1203,6 +1203,7 @@ export * as dataAzurermLbRule from './data-azurerm-lb-rule';
 export * as dataAzurermLinuxFunctionApp from './data-azurerm-linux-function-app';
 export * as dataAzurermLinuxWebApp from './data-azurerm-linux-web-app';
 export * as dataAzurermLocalNetworkGateway from './data-azurerm-local-network-gateway';
+export * as dataAzurermLocation from './data-azurerm-location';
 export * as dataAzurermLogAnalyticsWorkspace from './data-azurerm-log-analytics-workspace';
 export * as dataAzurermLogicAppIntegrationAccount from './data-azurerm-logic-app-integration-account';
 export * as dataAzurermLogicAppStandard from './data-azurerm-logic-app-standard';

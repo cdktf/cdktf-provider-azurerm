@@ -385,6 +385,7 @@ The following submodules are available:
 - [dataAzurermLinuxFunctionApp](./dataAzurermLinuxFunctionApp.csharp.md)
 - [dataAzurermLinuxWebApp](./dataAzurermLinuxWebApp.csharp.md)
 - [dataAzurermLocalNetworkGateway](./dataAzurermLocalNetworkGateway.csharp.md)
+- [dataAzurermLocation](./dataAzurermLocation.csharp.md)
 - [dataAzurermLogAnalyticsWorkspace](./dataAzurermLogAnalyticsWorkspace.csharp.md)
 - [dataAzurermLogicAppIntegrationAccount](./dataAzurermLogicAppIntegrationAccount.csharp.md)
 - [dataAzurermLogicAppStandard](./dataAzurermLogicAppStandard.csharp.md)

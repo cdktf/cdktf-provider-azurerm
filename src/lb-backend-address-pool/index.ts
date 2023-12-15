@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/lb_backend_address_pool
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/lb_backend_address_pool
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,52 +13,52 @@ import * as cdktf from 'cdktf';
 
 export interface LbBackendAddressPoolConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/lb_backend_address_pool#id LbBackendAddressPool#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/lb_backend_address_pool#id LbBackendAddressPool#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/lb_backend_address_pool#loadbalancer_id LbBackendAddressPool#loadbalancer_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/lb_backend_address_pool#loadbalancer_id LbBackendAddressPool#loadbalancer_id}
   */
   readonly loadbalancerId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/lb_backend_address_pool#name LbBackendAddressPool#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/lb_backend_address_pool#name LbBackendAddressPool#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/lb_backend_address_pool#virtual_network_id LbBackendAddressPool#virtual_network_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/lb_backend_address_pool#virtual_network_id LbBackendAddressPool#virtual_network_id}
   */
   readonly virtualNetworkId?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/lb_backend_address_pool#timeouts LbBackendAddressPool#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/lb_backend_address_pool#timeouts LbBackendAddressPool#timeouts}
   */
   readonly timeouts?: LbBackendAddressPoolTimeouts;
   /**
   * tunnel_interface block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/lb_backend_address_pool#tunnel_interface LbBackendAddressPool#tunnel_interface}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/lb_backend_address_pool#tunnel_interface LbBackendAddressPool#tunnel_interface}
   */
   readonly tunnelInterface?: LbBackendAddressPoolTunnelInterface[] | cdktf.IResolvable;
 }
 export interface LbBackendAddressPoolTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/lb_backend_address_pool#create LbBackendAddressPool#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/lb_backend_address_pool#create LbBackendAddressPool#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/lb_backend_address_pool#delete LbBackendAddressPool#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/lb_backend_address_pool#delete LbBackendAddressPool#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/lb_backend_address_pool#read LbBackendAddressPool#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/lb_backend_address_pool#read LbBackendAddressPool#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/lb_backend_address_pool#update LbBackendAddressPool#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/lb_backend_address_pool#update LbBackendAddressPool#update}
   */
   readonly update?: string;
 }
@@ -202,19 +202,19 @@ export class LbBackendAddressPoolTimeoutsOutputReference extends cdktf.ComplexOb
 }
 export interface LbBackendAddressPoolTunnelInterface {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/lb_backend_address_pool#identifier LbBackendAddressPool#identifier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/lb_backend_address_pool#identifier LbBackendAddressPool#identifier}
   */
   readonly identifier: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/lb_backend_address_pool#port LbBackendAddressPool#port}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/lb_backend_address_pool#port LbBackendAddressPool#port}
   */
   readonly port: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/lb_backend_address_pool#protocol LbBackendAddressPool#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/lb_backend_address_pool#protocol LbBackendAddressPool#protocol}
   */
   readonly protocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/lb_backend_address_pool#type LbBackendAddressPool#type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/lb_backend_address_pool#type LbBackendAddressPool#type}
   */
   readonly type: string;
 }
@@ -368,7 +368,7 @@ export class LbBackendAddressPoolTunnelInterfaceList extends cdktf.ComplexList {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/lb_backend_address_pool azurerm_lb_backend_address_pool}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/lb_backend_address_pool azurerm_lb_backend_address_pool}
 */
 export class LbBackendAddressPool extends cdktf.TerraformResource {
 
@@ -384,7 +384,7 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a LbBackendAddressPool resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the LbBackendAddressPool to import
-  * @param importFromId The id of the existing LbBackendAddressPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/lb_backend_address_pool#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing LbBackendAddressPool that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/lb_backend_address_pool#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the LbBackendAddressPool to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -396,7 +396,7 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/resources/lb_backend_address_pool azurerm_lb_backend_address_pool} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/lb_backend_address_pool azurerm_lb_backend_address_pool} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -407,7 +407,7 @@ export class LbBackendAddressPool extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_lb_backend_address_pool',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.84.0',
+        providerVersion: '3.85.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,

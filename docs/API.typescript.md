@@ -385,6 +385,7 @@ The following submodules are available:
 - [dataAzurermLinuxFunctionApp](./dataAzurermLinuxFunctionApp.typescript.md)
 - [dataAzurermLinuxWebApp](./dataAzurermLinuxWebApp.typescript.md)
 - [dataAzurermLocalNetworkGateway](./dataAzurermLocalNetworkGateway.typescript.md)
+- [dataAzurermLocation](./dataAzurermLocation.typescript.md)
 - [dataAzurermLogAnalyticsWorkspace](./dataAzurermLogAnalyticsWorkspace.typescript.md)
 - [dataAzurermLogicAppIntegrationAccount](./dataAzurermLogicAppIntegrationAccount.typescript.md)
 - [dataAzurermLogicAppStandard](./dataAzurermLogicAppStandard.typescript.md)

@@ -385,6 +385,7 @@ The following submodules are available:
 - [dataAzurermLinuxFunctionApp](./dataAzurermLinuxFunctionApp.java.md)
 - [dataAzurermLinuxWebApp](./dataAzurermLinuxWebApp.java.md)
 - [dataAzurermLocalNetworkGateway](./dataAzurermLocalNetworkGateway.java.md)
+- [dataAzurermLocation](./dataAzurermLocation.java.md)
 - [dataAzurermLogAnalyticsWorkspace](./dataAzurermLogAnalyticsWorkspace.java.md)
 - [dataAzurermLogicAppIntegrationAccount](./dataAzurermLogicAppIntegrationAccount.java.md)
 - [dataAzurermLogicAppStandard](./dataAzurermLogicAppStandard.java.md)

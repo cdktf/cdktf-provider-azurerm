@@ -1,3 +1,3 @@
 # `data_azurerm_netapp_volume_quota_rule`
 
-Refer to the Terraform Registory for docs: [`data_azurerm_netapp_volume_quota_rule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.84.0/docs/data-sources/netapp_volume_quota_rule).
+Refer to the Terraform Registory for docs: [`data_azurerm_netapp_volume_quota_rule`](https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/netapp_volume_quota_rule).
