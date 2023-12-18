@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourceproviderregistration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourceproviderregistration"
 
 resourceproviderregistration.NewResourceProviderRegistration(scope Construct, id *string, config ResourceProviderRegistrationConfig) ResourceProviderRegistration
 ```
@@ -418,7 +418,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistration.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourceproviderregistration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourceproviderregistration"
 
 resourceproviderregistration.ResourceProviderRegistration_IsConstruct(x interface{}) *bool
 ```
@@ -450,7 +450,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistration.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourceproviderregistration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourceproviderregistration"
 
 resourceproviderregistration.ResourceProviderRegistration_IsTerraformElement(x interface{}) *bool
 ```
@@ -464,7 +464,7 @@ resourceproviderregistration.ResourceProviderRegistration_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistration.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourceproviderregistration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourceproviderregistration"
 
 resourceproviderregistration.ResourceProviderRegistration_IsTerraformResource(x interface{}) *bool
 ```
@@ -478,7 +478,7 @@ resourceproviderregistration.ResourceProviderRegistration_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistration.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourceproviderregistration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourceproviderregistration"
 
 resourceproviderregistration.ResourceProviderRegistration_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -795,7 +795,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourceproviderregistration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourceproviderregistration"
 
 &resourceproviderregistration.ResourceProviderRegistrationConfig {
 	Connection: interface{},
@@ -808,7 +808,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourceproviderregis
 	Name: *string,
 	Feature: interface{},
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.resourceProviderRegistration.ResourceProviderRegistrationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.resourceProviderRegistration.ResourceProviderRegistrationTimeouts,
 }
 ```
 
@@ -960,7 +960,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationFeature.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourceproviderregistration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourceproviderregistration"
 
 &resourceproviderregistration.ResourceProviderRegistrationFeature {
 	Name: *string,
@@ -1006,7 +1006,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourceproviderregistration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourceproviderregistration"
 
 &resourceproviderregistration.ResourceProviderRegistrationTimeouts {
 	Create: *string,
@@ -1082,7 +1082,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationFeatureList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourceproviderregistration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourceproviderregistration"
 
 resourceproviderregistration.NewResourceProviderRegistrationFeatureList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ResourceProviderRegistrationFeatureList
 ```
@@ -1225,7 +1225,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationFeatureOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourceproviderregistration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourceproviderregistration"
 
 resourceproviderregistration.NewResourceProviderRegistrationFeatureOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ResourceProviderRegistrationFeatureOutputReference
 ```
@@ -1536,7 +1536,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceProviderRegistration.ResourceProviderRegistrationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourceproviderregistration"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourceproviderregistration"
 
 resourceproviderregistration.NewResourceProviderRegistrationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ResourceProviderRegistrationTimeoutsOutputReference
 ```
