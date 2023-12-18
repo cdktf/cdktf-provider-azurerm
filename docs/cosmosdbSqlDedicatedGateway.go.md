@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbSqlDedicatedGateway.CosmosdbSqlDedicatedGateway.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbsqldedicatedgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqldedicatedgateway"
 
 cosmosdbsqldedicatedgateway.NewCosmosdbSqlDedicatedGateway(scope Construct, id *string, config CosmosdbSqlDedicatedGatewayConfig) CosmosdbSqlDedicatedGateway
 ```
@@ -398,7 +398,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.cosmosdbSqlDedicatedGateway.CosmosdbSqlDedicatedGateway.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbsqldedicatedgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqldedicatedgateway"
 
 cosmosdbsqldedicatedgateway.CosmosdbSqlDedicatedGateway_IsConstruct(x interface{}) *bool
 ```
@@ -430,7 +430,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.cosmosdbSqlDedicatedGateway.CosmosdbSqlDedicatedGateway.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbsqldedicatedgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqldedicatedgateway"
 
 cosmosdbsqldedicatedgateway.CosmosdbSqlDedicatedGateway_IsTerraformElement(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ cosmosdbsqldedicatedgateway.CosmosdbSqlDedicatedGateway_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.cosmosdbSqlDedicatedGateway.CosmosdbSqlDedicatedGateway.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbsqldedicatedgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqldedicatedgateway"
 
 cosmosdbsqldedicatedgateway.CosmosdbSqlDedicatedGateway_IsTerraformResource(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ cosmosdbsqldedicatedgateway.CosmosdbSqlDedicatedGateway_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.cosmosdbSqlDedicatedGateway.CosmosdbSqlDedicatedGateway.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbsqldedicatedgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqldedicatedgateway"
 
 cosmosdbsqldedicatedgateway.CosmosdbSqlDedicatedGateway_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -797,7 +797,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbSqlDedicatedGateway.CosmosdbSqlDedicatedGatewayConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbsqldedicatedgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqldedicatedgateway"
 
 &cosmosdbsqldedicatedgateway.CosmosdbSqlDedicatedGatewayConfig {
 	Connection: interface{},
@@ -811,7 +811,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbsqldedica
 	InstanceCount: *f64,
 	InstanceSize: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.cosmosdbSqlDedicatedGateway.CosmosdbSqlDedicatedGatewayTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbSqlDedicatedGateway.CosmosdbSqlDedicatedGatewayTimeouts,
 }
 ```
 
@@ -974,7 +974,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbSqlDedicatedGateway.CosmosdbSqlDedicatedGatewayTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbsqldedicatedgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqldedicatedgateway"
 
 &cosmosdbsqldedicatedgateway.CosmosdbSqlDedicatedGatewayTimeouts {
 	Create: *string,
@@ -1050,7 +1050,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbSqlDedicatedGateway.CosmosdbSqlDedicatedGatewayTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbsqldedicatedgateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbsqldedicatedgateway"
 
 cosmosdbsqldedicatedgateway.NewCosmosdbSqlDedicatedGatewayTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbSqlDedicatedGatewayTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kubernetesFleetManager.KubernetesFleetManager.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetesfleetmanager"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kubernetesfleetmanager"
 
 kubernetesfleetmanager.NewKubernetesFleetManager(scope Construct, id *string, config KubernetesFleetManagerConfig) KubernetesFleetManager
 ```
@@ -425,7 +425,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.kubernetesFleetManager.KubernetesFleetManager.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetesfleetmanager"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kubernetesfleetmanager"
 
 kubernetesfleetmanager.KubernetesFleetManager_IsConstruct(x interface{}) *bool
 ```
@@ -457,7 +457,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.kubernetesFleetManager.KubernetesFleetManager.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetesfleetmanager"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kubernetesfleetmanager"
 
 kubernetesfleetmanager.KubernetesFleetManager_IsTerraformElement(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ kubernetesfleetmanager.KubernetesFleetManager_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.kubernetesFleetManager.KubernetesFleetManager.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetesfleetmanager"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kubernetesfleetmanager"
 
 kubernetesfleetmanager.KubernetesFleetManager_IsTerraformResource(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ kubernetesfleetmanager.KubernetesFleetManager_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.kubernetesFleetManager.KubernetesFleetManager.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetesfleetmanager"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kubernetesfleetmanager"
 
 kubernetesfleetmanager.KubernetesFleetManager_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -868,7 +868,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kubernetesFleetManager.KubernetesFleetManagerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetesfleetmanager"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kubernetesfleetmanager"
 
 &kubernetesfleetmanager.KubernetesFleetManagerConfig {
 	Connection: interface{},
@@ -881,10 +881,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetesfleetma
 	Location: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	HubProfile: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.kubernetesFleetManager.KubernetesFleetManagerHubProfile,
+	HubProfile: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.kubernetesFleetManager.KubernetesFleetManagerHubProfile,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.kubernetesFleetManager.KubernetesFleetManagerTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.kubernetesFleetManager.KubernetesFleetManagerTimeouts,
 }
 ```
 
@@ -1075,7 +1075,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kubernetesFleetManager.KubernetesFleetManagerHubProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetesfleetmanager"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kubernetesfleetmanager"
 
 &kubernetesfleetmanager.KubernetesFleetManagerHubProfile {
 	DnsPrefix: *string,
@@ -1107,7 +1107,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kubernetesFleetManager.KubernetesFleetManagerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetesfleetmanager"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kubernetesfleetmanager"
 
 &kubernetesfleetmanager.KubernetesFleetManagerTimeouts {
 	Create: *string,
@@ -1183,7 +1183,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kubernetesFleetManager.KubernetesFleetManagerHubProfileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetesfleetmanager"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kubernetesfleetmanager"
 
 kubernetesfleetmanager.NewKubernetesFleetManagerHubProfileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KubernetesFleetManagerHubProfileOutputReference
 ```
@@ -1476,7 +1476,7 @@ func InternalValue() KubernetesFleetManagerHubProfile
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kubernetesFleetManager.KubernetesFleetManagerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kubernetesfleetmanager"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kubernetesfleetmanager"
 
 kubernetesfleetmanager.NewKubernetesFleetManagerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KubernetesFleetManagerTimeoutsOutputReference
 ```
