@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementIdentityProviderGoogle.ApiManagementIdentityProviderGoogle.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovidergoogle"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementidentityprovidergoogle"
 
 apimanagementidentityprovidergoogle.NewApiManagementIdentityProviderGoogle(scope Construct, id *string, config ApiManagementIdentityProviderGoogleConfig) ApiManagementIdentityProviderGoogle
 ```
@@ -398,7 +398,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.apiManagementIdentityProviderGoogle.ApiManagementIdentityProviderGoogle.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovidergoogle"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementidentityprovidergoogle"
 
 apimanagementidentityprovidergoogle.ApiManagementIdentityProviderGoogle_IsConstruct(x interface{}) *bool
 ```
@@ -430,7 +430,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.apiManagementIdentityProviderGoogle.ApiManagementIdentityProviderGoogle.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovidergoogle"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementidentityprovidergoogle"
 
 apimanagementidentityprovidergoogle.ApiManagementIdentityProviderGoogle_IsTerraformElement(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ apimanagementidentityprovidergoogle.ApiManagementIdentityProviderGoogle_IsTerraf
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.apiManagementIdentityProviderGoogle.ApiManagementIdentityProviderGoogle.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovidergoogle"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementidentityprovidergoogle"
 
 apimanagementidentityprovidergoogle.ApiManagementIdentityProviderGoogle_IsTerraformResource(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ apimanagementidentityprovidergoogle.ApiManagementIdentityProviderGoogle_IsTerraf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.apiManagementIdentityProviderGoogle.ApiManagementIdentityProviderGoogle.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovidergoogle"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementidentityprovidergoogle"
 
 apimanagementidentityprovidergoogle.ApiManagementIdentityProviderGoogle_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -819,7 +819,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementIdentityProviderGoogle.ApiManagementIdentityProviderGoogleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovidergoogle"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementidentityprovidergoogle"
 
 &apimanagementidentityprovidergoogle.ApiManagementIdentityProviderGoogleConfig {
 	Connection: interface{},
@@ -834,7 +834,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentity
 	ClientSecret: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementIdentityProviderGoogle.ApiManagementIdentityProviderGoogleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.apiManagementIdentityProviderGoogle.ApiManagementIdentityProviderGoogleTimeouts,
 }
 ```
 
@@ -1010,7 +1010,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementIdentityProviderGoogle.ApiManagementIdentityProviderGoogleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovidergoogle"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementidentityprovidergoogle"
 
 &apimanagementidentityprovidergoogle.ApiManagementIdentityProviderGoogleTimeouts {
 	Create: *string,
@@ -1086,7 +1086,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementIdentityProviderGoogle.ApiManagementIdentityProviderGoogleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovidergoogle"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementidentityprovidergoogle"
 
 apimanagementidentityprovidergoogle.NewApiManagementIdentityProviderGoogleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementIdentityProviderGoogleTimeoutsOutputReference
 ```
