@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaJob.MediaJob.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediajob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediajob"
 
 mediajob.NewMediaJob(scope Construct, id *string, config MediaJobConfig) MediaJob
 ```
@@ -438,7 +438,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mediaJob.MediaJob.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediajob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediajob"
 
 mediajob.MediaJob_IsConstruct(x interface{}) *bool
 ```
@@ -470,7 +470,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mediaJob.MediaJob.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediajob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediajob"
 
 mediajob.MediaJob_IsTerraformElement(x interface{}) *bool
 ```
@@ -484,7 +484,7 @@ mediajob.MediaJob_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mediaJob.MediaJob.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediajob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediajob"
 
 mediajob.MediaJob_IsTerraformResource(x interface{}) *bool
 ```
@@ -498,7 +498,7 @@ mediajob.MediaJob_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.mediaJob.MediaJob.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediajob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediajob"
 
 mediajob.MediaJob_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -947,7 +947,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaJob.MediaJobConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediajob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediajob"
 
 &mediajob.MediaJobConfig {
 	Connection: interface{},
@@ -957,7 +957,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediajob"
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	InputAsset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaJob.MediaJobInputAsset,
+	InputAsset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaJob.MediaJobInputAsset,
 	MediaServicesAccountName: *string,
 	Name: *string,
 	OutputAsset: interface{},
@@ -966,7 +966,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediajob"
 	Description: *string,
 	Id: *string,
 	Priority: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaJob.MediaJobTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaJob.MediaJobTimeouts,
 }
 ```
 
@@ -1198,7 +1198,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaJob.MediaJobInputAsset.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediajob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediajob"
 
 &mediajob.MediaJobInputAsset {
 	Name: *string,
@@ -1244,7 +1244,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaJob.MediaJobOutputAsset.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediajob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediajob"
 
 &mediajob.MediaJobOutputAsset {
 	Name: *string,
@@ -1290,7 +1290,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaJob.MediaJobTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediajob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediajob"
 
 &mediajob.MediaJobTimeouts {
 	Create: *string,
@@ -1366,7 +1366,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaJob.MediaJobInputAssetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediajob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediajob"
 
 mediajob.NewMediaJobInputAssetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaJobInputAssetOutputReference
 ```
@@ -1666,7 +1666,7 @@ func InternalValue() MediaJobInputAsset
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaJob.MediaJobOutputAssetList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediajob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediajob"
 
 mediajob.NewMediaJobOutputAssetList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaJobOutputAssetList
 ```
@@ -1809,7 +1809,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaJob.MediaJobOutputAssetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediajob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediajob"
 
 mediajob.NewMediaJobOutputAssetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaJobOutputAssetOutputReference
 ```
@@ -2127,7 +2127,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaJob.MediaJobTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediajob"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediajob"
 
 mediajob.NewMediaJobTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaJobTimeoutsOutputReference
 ```
