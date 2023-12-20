@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.diskPoolIscsiTargetLun.DiskPoolIscsiTargetLun.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/diskpooliscsitargetlun"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/diskpooliscsitargetlun"
 
 diskpooliscsitargetlun.NewDiskPoolIscsiTargetLun(scope Construct, id *string, config DiskPoolIscsiTargetLunConfig) DiskPoolIscsiTargetLun
 ```
@@ -398,7 +398,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.diskPoolIscsiTargetLun.DiskPoolIscsiTargetLun.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/diskpooliscsitargetlun"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/diskpooliscsitargetlun"
 
 diskpooliscsitargetlun.DiskPoolIscsiTargetLun_IsConstruct(x interface{}) *bool
 ```
@@ -430,7 +430,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.diskPoolIscsiTargetLun.DiskPoolIscsiTargetLun.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/diskpooliscsitargetlun"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/diskpooliscsitargetlun"
 
 diskpooliscsitargetlun.DiskPoolIscsiTargetLun_IsTerraformElement(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ diskpooliscsitargetlun.DiskPoolIscsiTargetLun_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.diskPoolIscsiTargetLun.DiskPoolIscsiTargetLun.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/diskpooliscsitargetlun"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/diskpooliscsitargetlun"
 
 diskpooliscsitargetlun.DiskPoolIscsiTargetLun_IsTerraformResource(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ diskpooliscsitargetlun.DiskPoolIscsiTargetLun_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.diskPoolIscsiTargetLun.DiskPoolIscsiTargetLun.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/diskpooliscsitargetlun"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/diskpooliscsitargetlun"
 
 diskpooliscsitargetlun.DiskPoolIscsiTargetLun_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -808,7 +808,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.diskPoolIscsiTargetLun.DiskPoolIscsiTargetLunConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/diskpooliscsitargetlun"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/diskpooliscsitargetlun"
 
 &diskpooliscsitargetlun.DiskPoolIscsiTargetLunConfig {
 	Connection: interface{},
@@ -822,7 +822,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/diskpooliscsitargetlu
 	IscsiTargetId: *string,
 	Name: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.diskPoolIscsiTargetLun.DiskPoolIscsiTargetLunTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.diskPoolIscsiTargetLun.DiskPoolIscsiTargetLunTimeouts,
 }
 ```
 
@@ -985,7 +985,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.diskPoolIscsiTargetLun.DiskPoolIscsiTargetLunTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/diskpooliscsitargetlun"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/diskpooliscsitargetlun"
 
 &diskpooliscsitargetlun.DiskPoolIscsiTargetLunTimeouts {
 	Create: *string,
@@ -1047,7 +1047,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.diskPoolIscsiTargetLun.DiskPoolIscsiTargetLunTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/diskpooliscsitargetlun"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/diskpooliscsitargetlun"
 
 diskpooliscsitargetlun.NewDiskPoolIscsiTargetLunTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DiskPoolIscsiTargetLunTimeoutsOutputReference
 ```

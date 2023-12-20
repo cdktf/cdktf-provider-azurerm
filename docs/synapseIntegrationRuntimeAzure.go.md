@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.synapseIntegrationRuntimeAzure.SynapseIntegrationRuntimeAzure.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseintegrationruntimeazure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/synapseintegrationruntimeazure"
 
 synapseintegrationruntimeazure.NewSynapseIntegrationRuntimeAzure(scope Construct, id *string, config SynapseIntegrationRuntimeAzureConfig) SynapseIntegrationRuntimeAzure
 ```
@@ -426,7 +426,7 @@ func ResetTimeToLiveMin()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.synapseIntegrationRuntimeAzure.SynapseIntegrationRuntimeAzure.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseintegrationruntimeazure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/synapseintegrationruntimeazure"
 
 synapseintegrationruntimeazure.SynapseIntegrationRuntimeAzure_IsConstruct(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.synapseIntegrationRuntimeAzure.SynapseIntegrationRuntimeAzure.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseintegrationruntimeazure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/synapseintegrationruntimeazure"
 
 synapseintegrationruntimeazure.SynapseIntegrationRuntimeAzure_IsTerraformElement(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ synapseintegrationruntimeazure.SynapseIntegrationRuntimeAzure_IsTerraformElement
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.synapseIntegrationRuntimeAzure.SynapseIntegrationRuntimeAzure.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseintegrationruntimeazure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/synapseintegrationruntimeazure"
 
 synapseintegrationruntimeazure.SynapseIntegrationRuntimeAzure_IsTerraformResource(x interface{}) *bool
 ```
@@ -486,7 +486,7 @@ synapseintegrationruntimeazure.SynapseIntegrationRuntimeAzure_IsTerraformResourc
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.synapseIntegrationRuntimeAzure.SynapseIntegrationRuntimeAzure.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseintegrationruntimeazure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/synapseintegrationruntimeazure"
 
 synapseintegrationruntimeazure.SynapseIntegrationRuntimeAzure_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -913,7 +913,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.synapseIntegrationRuntimeAzure.SynapseIntegrationRuntimeAzureConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseintegrationruntimeazure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/synapseintegrationruntimeazure"
 
 &synapseintegrationruntimeazure.SynapseIntegrationRuntimeAzureConfig {
 	Connection: interface{},
@@ -930,7 +930,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseintegrationrun
 	CoreCount: *f64,
 	Description: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.synapseIntegrationRuntimeAzure.SynapseIntegrationRuntimeAzureTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.synapseIntegrationRuntimeAzure.SynapseIntegrationRuntimeAzureTimeouts,
 	TimeToLiveMin: *f64,
 }
 ```
@@ -1146,7 +1146,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.synapseIntegrationRuntimeAzure.SynapseIntegrationRuntimeAzureTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseintegrationruntimeazure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/synapseintegrationruntimeazure"
 
 &synapseintegrationruntimeazure.SynapseIntegrationRuntimeAzureTimeouts {
 	Create: *string,
@@ -1222,7 +1222,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.synapseIntegrationRuntimeAzure.SynapseIntegrationRuntimeAzureTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/synapseintegrationruntimeazure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/synapseintegrationruntimeazure"
 
 synapseintegrationruntimeazure.NewSynapseIntegrationRuntimeAzureTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SynapseIntegrationRuntimeAzureTimeoutsOutputReference
 ```
