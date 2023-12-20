@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerApp.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerApp(scope Construct, id *string, config DataAzurermContainerAppConfig) DataAzurermContainerApp
 ```
@@ -294,7 +294,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerApp.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.DataAzurermContainerApp_IsConstruct(x interface{}) *bool
 ```
@@ -326,7 +326,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerApp.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.DataAzurermContainerApp_IsTerraformElement(x interface{}) *bool
 ```
@@ -340,7 +340,7 @@ dataazurermcontainerapp.DataAzurermContainerApp_IsTerraformElement(x interface{}
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerApp.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.DataAzurermContainerApp_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -354,7 +354,7 @@ dataazurermcontainerapp.DataAzurermContainerApp_IsTerraformDataSource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerApp.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.DataAzurermContainerApp_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -814,7 +814,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppConfig {
 	Connection: interface{},
@@ -827,7 +827,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermContainerApp.DataAzurermContainerAppTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermContainerApp.DataAzurermContainerAppTimeouts,
 }
 ```
 
@@ -977,7 +977,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppDapr.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppDapr {
 
@@ -990,7 +990,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppIdentity {
 
@@ -1003,7 +1003,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppIngress.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppIngress {
 
@@ -1016,7 +1016,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppIngressCustomDomain.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppIngressCustomDomain {
 
@@ -1029,7 +1029,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppIngressTrafficWeight.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppIngressTrafficWeight {
 
@@ -1042,7 +1042,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppRegistry.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppRegistry {
 
@@ -1055,7 +1055,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppSecret.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppSecret {
 
@@ -1068,7 +1068,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppTemplate {
 
@@ -1081,7 +1081,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateAzureQueueScaleRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppTemplateAzureQueueScaleRule {
 
@@ -1094,7 +1094,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateAzureQueueScaleRuleAuthentication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppTemplateAzureQueueScaleRuleAuthentication {
 
@@ -1107,7 +1107,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppTemplateContainer {
 
@@ -1120,7 +1120,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainerEnv.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppTemplateContainerEnv {
 
@@ -1133,7 +1133,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainerLivenessProbe.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppTemplateContainerLivenessProbe {
 
@@ -1146,7 +1146,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainerLivenessProbeHeader.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppTemplateContainerLivenessProbeHeader {
 
@@ -1159,7 +1159,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainerReadinessProbe.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppTemplateContainerReadinessProbe {
 
@@ -1172,7 +1172,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainerReadinessProbeHeader.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppTemplateContainerReadinessProbeHeader {
 
@@ -1185,7 +1185,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainerStartupProbe.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppTemplateContainerStartupProbe {
 
@@ -1198,7 +1198,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainerStartupProbeHeader.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppTemplateContainerStartupProbeHeader {
 
@@ -1211,7 +1211,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainerVolumeMounts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppTemplateContainerVolumeMounts {
 
@@ -1224,7 +1224,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateCustomScaleRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppTemplateCustomScaleRule {
 
@@ -1237,7 +1237,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateCustomScaleRuleAuthentication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppTemplateCustomScaleRuleAuthentication {
 
@@ -1250,7 +1250,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateHttpScaleRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppTemplateHttpScaleRule {
 
@@ -1263,7 +1263,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateHttpScaleRuleAuthentication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppTemplateHttpScaleRuleAuthentication {
 
@@ -1276,7 +1276,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateInitContainer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppTemplateInitContainer {
 
@@ -1289,7 +1289,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateInitContainerEnv.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppTemplateInitContainerEnv {
 
@@ -1302,7 +1302,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateInitContainerVolumeMounts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppTemplateInitContainerVolumeMounts {
 
@@ -1315,7 +1315,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateTcpScaleRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppTemplateTcpScaleRule {
 
@@ -1328,7 +1328,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateTcpScaleRuleAuthentication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppTemplateTcpScaleRuleAuthentication {
 
@@ -1341,7 +1341,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateVolume.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppTemplateVolume {
 
@@ -1354,7 +1354,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontai
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 &dataazurermcontainerapp.DataAzurermContainerAppTimeouts {
 	Read: *string,
@@ -1388,7 +1388,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppDaprList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppDaprList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppDaprList
 ```
@@ -1520,7 +1520,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppDaprOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppDaprOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppDaprOutputReference
 ```
@@ -1820,7 +1820,7 @@ func InternalValue() DataAzurermContainerAppDapr
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppIdentityList
 ```
@@ -1952,7 +1952,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppIdentityOutputReference
 ```
@@ -2263,7 +2263,7 @@ func InternalValue() DataAzurermContainerAppIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppIngressCustomDomainList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppIngressCustomDomainList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppIngressCustomDomainList
 ```
@@ -2395,7 +2395,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppIngressCustomDomainOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppIngressCustomDomainOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppIngressCustomDomainOutputReference
 ```
@@ -2695,7 +2695,7 @@ func InternalValue() DataAzurermContainerAppIngressCustomDomain
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppIngressList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppIngressList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppIngressList
 ```
@@ -2827,7 +2827,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppIngressOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppIngressOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppIngressOutputReference
 ```
@@ -3182,7 +3182,7 @@ func InternalValue() DataAzurermContainerAppIngress
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppIngressTrafficWeightList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppIngressTrafficWeightList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppIngressTrafficWeightList
 ```
@@ -3314,7 +3314,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppIngressTrafficWeightOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppIngressTrafficWeightOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppIngressTrafficWeightOutputReference
 ```
@@ -3625,7 +3625,7 @@ func InternalValue() DataAzurermContainerAppIngressTrafficWeight
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppRegistryList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppRegistryList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppRegistryList
 ```
@@ -3757,7 +3757,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppRegistryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppRegistryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppRegistryOutputReference
 ```
@@ -4068,7 +4068,7 @@ func InternalValue() DataAzurermContainerAppRegistry
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppSecretList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppSecretList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppSecretList
 ```
@@ -4200,7 +4200,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppSecretOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppSecretOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppSecretOutputReference
 ```
@@ -4489,7 +4489,7 @@ func InternalValue() DataAzurermContainerAppSecret
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateAzureQueueScaleRuleAuthenticationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateAzureQueueScaleRuleAuthenticationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppTemplateAzureQueueScaleRuleAuthenticationList
 ```
@@ -4621,7 +4621,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateAzureQueueScaleRuleAuthenticationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateAzureQueueScaleRuleAuthenticationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppTemplateAzureQueueScaleRuleAuthenticationOutputReference
 ```
@@ -4910,7 +4910,7 @@ func InternalValue() DataAzurermContainerAppTemplateAzureQueueScaleRuleAuthentic
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateAzureQueueScaleRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateAzureQueueScaleRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppTemplateAzureQueueScaleRuleList
 ```
@@ -5042,7 +5042,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateAzureQueueScaleRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateAzureQueueScaleRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppTemplateAzureQueueScaleRuleOutputReference
 ```
@@ -5353,7 +5353,7 @@ func InternalValue() DataAzurermContainerAppTemplateAzureQueueScaleRule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainerEnvList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateContainerEnvList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppTemplateContainerEnvList
 ```
@@ -5485,7 +5485,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainerEnvOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateContainerEnvOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppTemplateContainerEnvOutputReference
 ```
@@ -5785,7 +5785,7 @@ func InternalValue() DataAzurermContainerAppTemplateContainerEnv
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateContainerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppTemplateContainerList
 ```
@@ -5917,7 +5917,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainerLivenessProbeHeaderList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateContainerLivenessProbeHeaderList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppTemplateContainerLivenessProbeHeaderList
 ```
@@ -6049,7 +6049,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainerLivenessProbeHeaderOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateContainerLivenessProbeHeaderOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppTemplateContainerLivenessProbeHeaderOutputReference
 ```
@@ -6338,7 +6338,7 @@ func InternalValue() DataAzurermContainerAppTemplateContainerLivenessProbeHeader
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainerLivenessProbeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateContainerLivenessProbeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppTemplateContainerLivenessProbeList
 ```
@@ -6470,7 +6470,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainerLivenessProbeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateContainerLivenessProbeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppTemplateContainerLivenessProbeOutputReference
 ```
@@ -6847,7 +6847,7 @@ func InternalValue() DataAzurermContainerAppTemplateContainerLivenessProbe
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateContainerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppTemplateContainerOutputReference
 ```
@@ -7246,7 +7246,7 @@ func InternalValue() DataAzurermContainerAppTemplateContainer
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainerReadinessProbeHeaderList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateContainerReadinessProbeHeaderList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppTemplateContainerReadinessProbeHeaderList
 ```
@@ -7378,7 +7378,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainerReadinessProbeHeaderOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateContainerReadinessProbeHeaderOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppTemplateContainerReadinessProbeHeaderOutputReference
 ```
@@ -7667,7 +7667,7 @@ func InternalValue() DataAzurermContainerAppTemplateContainerReadinessProbeHeade
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainerReadinessProbeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateContainerReadinessProbeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppTemplateContainerReadinessProbeList
 ```
@@ -7799,7 +7799,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainerReadinessProbeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateContainerReadinessProbeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppTemplateContainerReadinessProbeOutputReference
 ```
@@ -8165,7 +8165,7 @@ func InternalValue() DataAzurermContainerAppTemplateContainerReadinessProbe
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainerStartupProbeHeaderList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateContainerStartupProbeHeaderList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppTemplateContainerStartupProbeHeaderList
 ```
@@ -8297,7 +8297,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainerStartupProbeHeaderOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateContainerStartupProbeHeaderOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppTemplateContainerStartupProbeHeaderOutputReference
 ```
@@ -8586,7 +8586,7 @@ func InternalValue() DataAzurermContainerAppTemplateContainerStartupProbeHeader
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainerStartupProbeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateContainerStartupProbeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppTemplateContainerStartupProbeList
 ```
@@ -8718,7 +8718,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainerStartupProbeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateContainerStartupProbeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppTemplateContainerStartupProbeOutputReference
 ```
@@ -9084,7 +9084,7 @@ func InternalValue() DataAzurermContainerAppTemplateContainerStartupProbe
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainerVolumeMountsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateContainerVolumeMountsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppTemplateContainerVolumeMountsList
 ```
@@ -9216,7 +9216,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateContainerVolumeMountsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateContainerVolumeMountsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppTemplateContainerVolumeMountsOutputReference
 ```
@@ -9505,7 +9505,7 @@ func InternalValue() DataAzurermContainerAppTemplateContainerVolumeMounts
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateCustomScaleRuleAuthenticationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateCustomScaleRuleAuthenticationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppTemplateCustomScaleRuleAuthenticationList
 ```
@@ -9637,7 +9637,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateCustomScaleRuleAuthenticationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateCustomScaleRuleAuthenticationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppTemplateCustomScaleRuleAuthenticationOutputReference
 ```
@@ -9926,7 +9926,7 @@ func InternalValue() DataAzurermContainerAppTemplateCustomScaleRuleAuthenticatio
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateCustomScaleRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateCustomScaleRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppTemplateCustomScaleRuleList
 ```
@@ -10058,7 +10058,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateCustomScaleRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateCustomScaleRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppTemplateCustomScaleRuleOutputReference
 ```
@@ -10369,7 +10369,7 @@ func InternalValue() DataAzurermContainerAppTemplateCustomScaleRule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateHttpScaleRuleAuthenticationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateHttpScaleRuleAuthenticationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppTemplateHttpScaleRuleAuthenticationList
 ```
@@ -10501,7 +10501,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateHttpScaleRuleAuthenticationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateHttpScaleRuleAuthenticationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppTemplateHttpScaleRuleAuthenticationOutputReference
 ```
@@ -10790,7 +10790,7 @@ func InternalValue() DataAzurermContainerAppTemplateHttpScaleRuleAuthentication
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateHttpScaleRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateHttpScaleRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppTemplateHttpScaleRuleList
 ```
@@ -10922,7 +10922,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateHttpScaleRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateHttpScaleRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppTemplateHttpScaleRuleOutputReference
 ```
@@ -11222,7 +11222,7 @@ func InternalValue() DataAzurermContainerAppTemplateHttpScaleRule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateInitContainerEnvList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateInitContainerEnvList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppTemplateInitContainerEnvList
 ```
@@ -11354,7 +11354,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateInitContainerEnvOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateInitContainerEnvOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppTemplateInitContainerEnvOutputReference
 ```
@@ -11654,7 +11654,7 @@ func InternalValue() DataAzurermContainerAppTemplateInitContainerEnv
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateInitContainerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateInitContainerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppTemplateInitContainerList
 ```
@@ -11786,7 +11786,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateInitContainerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateInitContainerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppTemplateInitContainerOutputReference
 ```
@@ -12152,7 +12152,7 @@ func InternalValue() DataAzurermContainerAppTemplateInitContainer
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateInitContainerVolumeMountsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateInitContainerVolumeMountsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppTemplateInitContainerVolumeMountsList
 ```
@@ -12284,7 +12284,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateInitContainerVolumeMountsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateInitContainerVolumeMountsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppTemplateInitContainerVolumeMountsOutputReference
 ```
@@ -12573,7 +12573,7 @@ func InternalValue() DataAzurermContainerAppTemplateInitContainerVolumeMounts
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppTemplateList
 ```
@@ -12705,7 +12705,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppTemplateOutputReference
 ```
@@ -13082,7 +13082,7 @@ func InternalValue() DataAzurermContainerAppTemplate
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateTcpScaleRuleAuthenticationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateTcpScaleRuleAuthenticationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppTemplateTcpScaleRuleAuthenticationList
 ```
@@ -13214,7 +13214,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateTcpScaleRuleAuthenticationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateTcpScaleRuleAuthenticationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppTemplateTcpScaleRuleAuthenticationOutputReference
 ```
@@ -13503,7 +13503,7 @@ func InternalValue() DataAzurermContainerAppTemplateTcpScaleRuleAuthentication
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateTcpScaleRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateTcpScaleRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppTemplateTcpScaleRuleList
 ```
@@ -13635,7 +13635,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateTcpScaleRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateTcpScaleRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppTemplateTcpScaleRuleOutputReference
 ```
@@ -13935,7 +13935,7 @@ func InternalValue() DataAzurermContainerAppTemplateTcpScaleRule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateVolumeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateVolumeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermContainerAppTemplateVolumeList
 ```
@@ -14067,7 +14067,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTemplateVolumeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTemplateVolumeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermContainerAppTemplateVolumeOutputReference
 ```
@@ -14367,7 +14367,7 @@ func InternalValue() DataAzurermContainerAppTemplateVolume
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermContainerApp.DataAzurermContainerAppTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermcontainerapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermcontainerapp"
 
 dataazurermcontainerapp.NewDataAzurermContainerAppTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermContainerAppTimeoutsOutputReference
 ```

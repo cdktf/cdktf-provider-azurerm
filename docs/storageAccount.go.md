@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccount(scope Construct, id *string, config StorageAccountConfig) StorageAccount
 ```
@@ -771,7 +771,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.storageAccount.StorageAccount.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.StorageAccount_IsConstruct(x interface{}) *bool
 ```
@@ -803,7 +803,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.storageAccount.StorageAccount.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.StorageAccount_IsTerraformElement(x interface{}) *bool
 ```
@@ -817,7 +817,7 @@ storageaccount.StorageAccount_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.storageAccount.StorageAccount.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.StorageAccount_IsTerraformResource(x interface{}) *bool
 ```
@@ -831,7 +831,7 @@ storageaccount.StorageAccount_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.storageAccount.StorageAccount.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.StorageAccount_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -2688,11 +2688,11 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountAzureFilesAuthentication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountAzureFilesAuthentication {
 	DirectoryType: *string,
-	ActiveDirectory: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageAccount.StorageAccountAzureFilesAuthenticationActiveDirectory,
+	ActiveDirectory: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccount.StorageAccountAzureFilesAuthenticationActiveDirectory,
 }
 ```
 
@@ -2736,7 +2736,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountAzureFilesAuthenticationActiveDirectory.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountAzureFilesAuthenticationActiveDirectory {
 	DomainGuid: *string,
@@ -2838,17 +2838,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountBlobProperties.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountBlobProperties {
 	ChangeFeedEnabled: interface{},
 	ChangeFeedRetentionInDays: *f64,
-	ContainerDeleteRetentionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageAccount.StorageAccountBlobPropertiesContainerDeleteRetentionPolicy,
+	ContainerDeleteRetentionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccount.StorageAccountBlobPropertiesContainerDeleteRetentionPolicy,
 	CorsRule: interface{},
 	DefaultServiceVersion: *string,
-	DeleteRetentionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageAccount.StorageAccountBlobPropertiesDeleteRetentionPolicy,
+	DeleteRetentionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccount.StorageAccountBlobPropertiesDeleteRetentionPolicy,
 	LastAccessTimeEnabled: interface{},
-	RestorePolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageAccount.StorageAccountBlobPropertiesRestorePolicy,
+	RestorePolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccount.StorageAccountBlobPropertiesRestorePolicy,
 	VersioningEnabled: interface{},
 }
 ```
@@ -2990,7 +2990,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountBlobPropertiesContainerDeleteRetentionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountBlobPropertiesContainerDeleteRetentionPolicy {
 	Days: *f64,
@@ -3022,7 +3022,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountBlobPropertiesCorsRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountBlobPropertiesCorsRule {
 	AllowedHeaders: *[]*string,
@@ -3110,7 +3110,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountBlobPropertiesDeleteRetentionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountBlobPropertiesDeleteRetentionPolicy {
 	Days: *f64,
@@ -3142,7 +3142,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountBlobPropertiesRestorePolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountBlobPropertiesRestorePolicy {
 	Days: *f64,
@@ -3174,7 +3174,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountConfig {
 	Connection: interface{},
@@ -3193,35 +3193,35 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
 	AccountKind: *string,
 	AllowedCopyScope: *string,
 	AllowNestedItemsToBePublic: interface{},
-	AzureFilesAuthentication: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageAccount.StorageAccountAzureFilesAuthentication,
-	BlobProperties: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageAccount.StorageAccountBlobProperties,
+	AzureFilesAuthentication: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccount.StorageAccountAzureFilesAuthentication,
+	BlobProperties: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccount.StorageAccountBlobProperties,
 	CrossTenantReplicationEnabled: interface{},
-	CustomDomain: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageAccount.StorageAccountCustomDomain,
-	CustomerManagedKey: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageAccount.StorageAccountCustomerManagedKey,
+	CustomDomain: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccount.StorageAccountCustomDomain,
+	CustomerManagedKey: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccount.StorageAccountCustomerManagedKey,
 	DefaultToOauthAuthentication: interface{},
 	EdgeZone: *string,
 	EnableHttpsTrafficOnly: interface{},
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageAccount.StorageAccountIdentity,
-	ImmutabilityPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageAccount.StorageAccountImmutabilityPolicy,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccount.StorageAccountIdentity,
+	ImmutabilityPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccount.StorageAccountImmutabilityPolicy,
 	InfrastructureEncryptionEnabled: interface{},
 	IsHnsEnabled: interface{},
 	LargeFileShareEnabled: interface{},
 	MinTlsVersion: *string,
-	NetworkRules: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageAccount.StorageAccountNetworkRules,
+	NetworkRules: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccount.StorageAccountNetworkRules,
 	Nfsv3Enabled: interface{},
 	PublicNetworkAccessEnabled: interface{},
 	QueueEncryptionKeyType: *string,
-	QueueProperties: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageAccount.StorageAccountQueueProperties,
-	Routing: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageAccount.StorageAccountRouting,
-	SasPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageAccount.StorageAccountSasPolicy,
+	QueueProperties: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccount.StorageAccountQueueProperties,
+	Routing: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccount.StorageAccountRouting,
+	SasPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccount.StorageAccountSasPolicy,
 	SftpEnabled: interface{},
 	SharedAccessKeyEnabled: interface{},
-	ShareProperties: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageAccount.StorageAccountShareProperties,
-	StaticWebsite: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageAccount.StorageAccountStaticWebsite,
+	ShareProperties: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccount.StorageAccountShareProperties,
+	StaticWebsite: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccount.StorageAccountStaticWebsite,
 	TableEncryptionKeyType: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageAccount.StorageAccountTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccount.StorageAccountTimeouts,
 }
 ```
 
@@ -3837,7 +3837,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountCustomDomain.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountCustomDomain {
 	Name: *string,
@@ -3883,7 +3883,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountCustomerManagedKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountCustomerManagedKey {
 	KeyVaultKeyId: *string,
@@ -3929,7 +3929,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountIdentity {
 	Type: *string,
@@ -3975,7 +3975,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountImmutabilityPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountImmutabilityPolicy {
 	AllowProtectedAppendWrites: interface{},
@@ -4035,7 +4035,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountNetworkRules.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountNetworkRules {
 	DefaultAction: *string,
@@ -4125,7 +4125,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountNetworkRulesPrivateLinkAccess.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountNetworkRulesPrivateLinkAccess {
 	EndpointResourceId: *string,
@@ -4171,13 +4171,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountQueueProperties.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountQueueProperties {
 	CorsRule: interface{},
-	HourMetrics: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageAccount.StorageAccountQueuePropertiesHourMetrics,
-	Logging: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageAccount.StorageAccountQueuePropertiesLogging,
-	MinuteMetrics: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageAccount.StorageAccountQueuePropertiesMinuteMetrics,
+	HourMetrics: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccount.StorageAccountQueuePropertiesHourMetrics,
+	Logging: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccount.StorageAccountQueuePropertiesLogging,
+	MinuteMetrics: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccount.StorageAccountQueuePropertiesMinuteMetrics,
 }
 ```
 
@@ -4253,7 +4253,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountQueuePropertiesCorsRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountQueuePropertiesCorsRule {
 	AllowedHeaders: *[]*string,
@@ -4341,7 +4341,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountQueuePropertiesHourMetrics.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountQueuePropertiesHourMetrics {
 	Enabled: interface{},
@@ -4415,7 +4415,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountQueuePropertiesLogging.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountQueuePropertiesLogging {
 	Delete: interface{},
@@ -4503,7 +4503,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountQueuePropertiesMinuteMetrics.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountQueuePropertiesMinuteMetrics {
 	Enabled: interface{},
@@ -4577,7 +4577,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountRouting.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountRouting {
 	Choice: *string,
@@ -4637,7 +4637,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountSasPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountSasPolicy {
 	ExpirationPeriod: *string,
@@ -4683,12 +4683,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountShareProperties.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountShareProperties {
 	CorsRule: interface{},
-	RetentionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageAccount.StorageAccountSharePropertiesRetentionPolicy,
-	Smb: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageAccount.StorageAccountSharePropertiesSmb,
+	RetentionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccount.StorageAccountSharePropertiesRetentionPolicy,
+	Smb: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageAccount.StorageAccountSharePropertiesSmb,
 }
 ```
 
@@ -4749,7 +4749,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountSharePropertiesCorsRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountSharePropertiesCorsRule {
 	AllowedHeaders: *[]*string,
@@ -4837,7 +4837,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountSharePropertiesRetentionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountSharePropertiesRetentionPolicy {
 	Days: *f64,
@@ -4869,7 +4869,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountSharePropertiesSmb.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountSharePropertiesSmb {
 	AuthenticationTypes: *[]*string,
@@ -4957,7 +4957,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountStaticWebsite.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountStaticWebsite {
 	Error404Document: *string,
@@ -5003,7 +5003,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageAccount.StorageAccountTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 &storageaccount.StorageAccountTimeouts {
 	Create: *string,
@@ -5079,7 +5079,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountAzureFilesAuthenticationActiveDirectoryOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountAzureFilesAuthenticationActiveDirectoryOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountAzureFilesAuthenticationActiveDirectoryOutputReference
 ```
@@ -5488,7 +5488,7 @@ func InternalValue() StorageAccountAzureFilesAuthenticationActiveDirectory
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountAzureFilesAuthenticationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountAzureFilesAuthenticationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountAzureFilesAuthenticationOutputReference
 ```
@@ -5801,7 +5801,7 @@ func InternalValue() StorageAccountAzureFilesAuthentication
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountBlobPropertiesContainerDeleteRetentionPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountBlobPropertiesContainerDeleteRetentionPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountBlobPropertiesContainerDeleteRetentionPolicyOutputReference
 ```
@@ -6079,7 +6079,7 @@ func InternalValue() StorageAccountBlobPropertiesContainerDeleteRetentionPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountBlobPropertiesCorsRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountBlobPropertiesCorsRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) StorageAccountBlobPropertiesCorsRuleList
 ```
@@ -6222,7 +6222,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountBlobPropertiesCorsRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountBlobPropertiesCorsRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) StorageAccountBlobPropertiesCorsRuleOutputReference
 ```
@@ -6599,7 +6599,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountBlobPropertiesDeleteRetentionPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountBlobPropertiesDeleteRetentionPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountBlobPropertiesDeleteRetentionPolicyOutputReference
 ```
@@ -6877,7 +6877,7 @@ func InternalValue() StorageAccountBlobPropertiesDeleteRetentionPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountBlobPropertiesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountBlobPropertiesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountBlobPropertiesOutputReference
 ```
@@ -7439,7 +7439,7 @@ func InternalValue() StorageAccountBlobProperties
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountBlobPropertiesRestorePolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountBlobPropertiesRestorePolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountBlobPropertiesRestorePolicyOutputReference
 ```
@@ -7710,7 +7710,7 @@ func InternalValue() StorageAccountBlobPropertiesRestorePolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountCustomDomainOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountCustomDomainOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountCustomDomainOutputReference
 ```
@@ -8010,7 +8010,7 @@ func InternalValue() StorageAccountCustomDomain
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountCustomerManagedKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountCustomerManagedKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountCustomerManagedKeyOutputReference
 ```
@@ -8303,7 +8303,7 @@ func InternalValue() StorageAccountCustomerManagedKey
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountIdentityOutputReference
 ```
@@ -8625,7 +8625,7 @@ func InternalValue() StorageAccountIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountImmutabilityPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountImmutabilityPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountImmutabilityPolicyOutputReference
 ```
@@ -8940,7 +8940,7 @@ func InternalValue() StorageAccountImmutabilityPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountNetworkRulesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountNetworkRulesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountNetworkRulesOutputReference
 ```
@@ -9340,7 +9340,7 @@ func InternalValue() StorageAccountNetworkRules
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountNetworkRulesPrivateLinkAccessList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountNetworkRulesPrivateLinkAccessList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) StorageAccountNetworkRulesPrivateLinkAccessList
 ```
@@ -9483,7 +9483,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountNetworkRulesPrivateLinkAccessOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountNetworkRulesPrivateLinkAccessOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) StorageAccountNetworkRulesPrivateLinkAccessOutputReference
 ```
@@ -9801,7 +9801,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountQueuePropertiesCorsRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountQueuePropertiesCorsRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) StorageAccountQueuePropertiesCorsRuleList
 ```
@@ -9944,7 +9944,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountQueuePropertiesCorsRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountQueuePropertiesCorsRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) StorageAccountQueuePropertiesCorsRuleOutputReference
 ```
@@ -10321,7 +10321,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountQueuePropertiesHourMetricsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountQueuePropertiesHourMetricsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountQueuePropertiesHourMetricsOutputReference
 ```
@@ -10672,7 +10672,7 @@ func InternalValue() StorageAccountQueuePropertiesHourMetrics
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountQueuePropertiesLoggingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountQueuePropertiesLoggingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountQueuePropertiesLoggingOutputReference
 ```
@@ -11038,7 +11038,7 @@ func InternalValue() StorageAccountQueuePropertiesLogging
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountQueuePropertiesMinuteMetricsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountQueuePropertiesMinuteMetricsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountQueuePropertiesMinuteMetricsOutputReference
 ```
@@ -11389,7 +11389,7 @@ func InternalValue() StorageAccountQueuePropertiesMinuteMetrics
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountQueuePropertiesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountQueuePropertiesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountQueuePropertiesOutputReference
 ```
@@ -11806,7 +11806,7 @@ func InternalValue() StorageAccountQueueProperties
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountRoutingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountRoutingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountRoutingOutputReference
 ```
@@ -12142,7 +12142,7 @@ func InternalValue() StorageAccountRouting
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountSasPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountSasPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountSasPolicyOutputReference
 ```
@@ -12442,7 +12442,7 @@ func InternalValue() StorageAccountSasPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountSharePropertiesCorsRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountSharePropertiesCorsRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) StorageAccountSharePropertiesCorsRuleList
 ```
@@ -12585,7 +12585,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountSharePropertiesCorsRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountSharePropertiesCorsRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) StorageAccountSharePropertiesCorsRuleOutputReference
 ```
@@ -12962,7 +12962,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountSharePropertiesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountSharePropertiesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountSharePropertiesOutputReference
 ```
@@ -13337,7 +13337,7 @@ func InternalValue() StorageAccountShareProperties
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountSharePropertiesRetentionPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountSharePropertiesRetentionPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountSharePropertiesRetentionPolicyOutputReference
 ```
@@ -13615,7 +13615,7 @@ func InternalValue() StorageAccountSharePropertiesRetentionPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountSharePropertiesSmbOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountSharePropertiesSmbOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountSharePropertiesSmbOutputReference
 ```
@@ -14009,7 +14009,7 @@ func InternalValue() StorageAccountSharePropertiesSmb
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountStaticWebsiteOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountStaticWebsiteOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountStaticWebsiteOutputReference
 ```
@@ -14316,7 +14316,7 @@ func InternalValue() StorageAccountStaticWebsite
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageAccount.StorageAccountTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storageaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storageaccount"
 
 storageaccount.NewStorageAccountTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageAccountTimeoutsOutputReference
 ```

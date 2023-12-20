@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kustoCluster.KustoCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustocluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustocluster"
 
 kustocluster.NewKustoCluster(scope Construct, id *string, config KustoClusterConfig) KustoCluster
 ```
@@ -576,7 +576,7 @@ func ResetZones()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.kustoCluster.KustoCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustocluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustocluster"
 
 kustocluster.KustoCluster_IsConstruct(x interface{}) *bool
 ```
@@ -608,7 +608,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.kustoCluster.KustoCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustocluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustocluster"
 
 kustocluster.KustoCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -622,7 +622,7 @@ kustocluster.KustoCluster_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.kustoCluster.KustoCluster.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustocluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustocluster"
 
 kustocluster.KustoCluster_IsTerraformResource(x interface{}) *bool
 ```
@@ -636,7 +636,7 @@ kustocluster.KustoCluster_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.kustoCluster.KustoCluster.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustocluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustocluster"
 
 kustocluster.KustoCluster_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1415,7 +1415,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kustoCluster.KustoClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustocluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustocluster"
 
 &kustocluster.KustoClusterConfig {
 	Connection: interface{},
@@ -1428,7 +1428,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustocluster"
 	Location: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	Sku: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.kustoCluster.KustoClusterSku,
+	Sku: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.kustoCluster.KustoClusterSku,
 	AllowedFqdns: *[]*string,
 	AllowedIpRanges: *[]*string,
 	AutoStopEnabled: interface{},
@@ -1436,18 +1436,18 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustocluster"
 	DoubleEncryptionEnabled: interface{},
 	Engine: *string,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.kustoCluster.KustoClusterIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.kustoCluster.KustoClusterIdentity,
 	LanguageExtensions: *[]*string,
-	OptimizedAutoScale: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.kustoCluster.KustoClusterOptimizedAutoScale,
+	OptimizedAutoScale: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.kustoCluster.KustoClusterOptimizedAutoScale,
 	OutboundNetworkAccessRestricted: interface{},
 	PublicIpType: *string,
 	PublicNetworkAccessEnabled: interface{},
 	PurgeEnabled: interface{},
 	StreamingIngestionEnabled: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.kustoCluster.KustoClusterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.kustoCluster.KustoClusterTimeouts,
 	TrustedExternalTenants: *[]*string,
-	VirtualNetworkConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.kustoCluster.KustoClusterVirtualNetworkConfiguration,
+	VirtualNetworkConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.kustoCluster.KustoClusterVirtualNetworkConfiguration,
 	Zones: *[]*string,
 }
 ```
@@ -1866,7 +1866,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kustoCluster.KustoClusterIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustocluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustocluster"
 
 &kustocluster.KustoClusterIdentity {
 	Type: *string,
@@ -1912,7 +1912,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kustoCluster.KustoClusterOptimizedAutoScale.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustocluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustocluster"
 
 &kustocluster.KustoClusterOptimizedAutoScale {
 	MaximumInstances: *f64,
@@ -1958,7 +1958,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kustoCluster.KustoClusterSku.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustocluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustocluster"
 
 &kustocluster.KustoClusterSku {
 	Name: *string,
@@ -2004,7 +2004,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kustoCluster.KustoClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustocluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustocluster"
 
 &kustocluster.KustoClusterTimeouts {
 	Create: *string,
@@ -2078,7 +2078,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kustoCluster.KustoClusterVirtualNetworkConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustocluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustocluster"
 
 &kustocluster.KustoClusterVirtualNetworkConfiguration {
 	DataManagementPublicIpId: *string,
@@ -2140,7 +2140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kustoCluster.KustoClusterIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustocluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustocluster"
 
 kustocluster.NewKustoClusterIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KustoClusterIdentityOutputReference
 ```
@@ -2462,7 +2462,7 @@ func InternalValue() KustoClusterIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kustoCluster.KustoClusterOptimizedAutoScaleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustocluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustocluster"
 
 kustocluster.NewKustoClusterOptimizedAutoScaleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KustoClusterOptimizedAutoScaleOutputReference
 ```
@@ -2755,7 +2755,7 @@ func InternalValue() KustoClusterOptimizedAutoScale
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kustoCluster.KustoClusterSkuOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustocluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustocluster"
 
 kustocluster.NewKustoClusterSkuOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KustoClusterSkuOutputReference
 ```
@@ -3055,7 +3055,7 @@ func InternalValue() KustoClusterSku
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kustoCluster.KustoClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustocluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustocluster"
 
 kustocluster.NewKustoClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KustoClusterTimeoutsOutputReference
 ```
@@ -3420,7 +3420,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kustoCluster.KustoClusterVirtualNetworkConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustocluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustocluster"
 
 kustocluster.NewKustoClusterVirtualNetworkConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KustoClusterVirtualNetworkConfigurationOutputReference
 ```
