@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventhub.Eventhub.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhub"
 
 eventhub.NewEventhub(scope Construct, id *string, config EventhubConfig) Eventhub
 ```
@@ -425,7 +425,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.eventhub.Eventhub.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhub"
 
 eventhub.Eventhub_IsConstruct(x interface{}) *bool
 ```
@@ -457,7 +457,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.eventhub.Eventhub.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhub"
 
 eventhub.Eventhub_IsTerraformElement(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ eventhub.Eventhub_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.eventhub.Eventhub.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhub"
 
 eventhub.Eventhub_IsTerraformResource(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ eventhub.Eventhub_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.eventhub.Eventhub.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhub"
 
 eventhub.Eventhub_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -923,10 +923,10 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventhub.EventhubCaptureDescription.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhub"
 
 &eventhub.EventhubCaptureDescription {
-	Destination: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.eventhub.EventhubCaptureDescriptionDestination,
+	Destination: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.eventhub.EventhubCaptureDescriptionDestination,
 	Enabled: interface{},
 	Encoding: *string,
 	IntervalInSeconds: *f64,
@@ -1027,7 +1027,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventhub.EventhubCaptureDescriptionDestination.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhub"
 
 &eventhub.EventhubCaptureDescriptionDestination {
 	ArchiveNameFormat: *string,
@@ -1101,7 +1101,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventhub.EventhubConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhub"
 
 &eventhub.EventhubConfig {
 	Connection: interface{},
@@ -1116,10 +1116,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhub"
 	NamespaceName: *string,
 	PartitionCount: *f64,
 	ResourceGroupName: *string,
-	CaptureDescription: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.eventhub.EventhubCaptureDescription,
+	CaptureDescription: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.eventhub.EventhubCaptureDescription,
 	Id: *string,
 	Status: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.eventhub.EventhubTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.eventhub.EventhubTimeouts,
 }
 ```
 
@@ -1336,7 +1336,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.eventhub.EventhubTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhub"
 
 &eventhub.EventhubTimeouts {
 	Create: *string,
@@ -1412,7 +1412,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventhub.EventhubCaptureDescriptionDestinationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhub"
 
 eventhub.NewEventhubCaptureDescriptionDestinationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventhubCaptureDescriptionDestinationOutputReference
 ```
@@ -1749,7 +1749,7 @@ func InternalValue() EventhubCaptureDescriptionDestination
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventhub.EventhubCaptureDescriptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhub"
 
 eventhub.NewEventhubCaptureDescriptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventhubCaptureDescriptionOutputReference
 ```
@@ -2164,7 +2164,7 @@ func InternalValue() EventhubCaptureDescription
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventhub.EventhubTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/eventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/eventhub"
 
 eventhub.NewEventhubTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) EventhubTimeoutsOutputReference
 ```
