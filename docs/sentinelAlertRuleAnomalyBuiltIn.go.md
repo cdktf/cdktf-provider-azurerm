@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyBuiltIn.SentinelAlertRuleAnomalyBuiltIn.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalybuiltin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalybuiltin"
 
 sentinelalertruleanomalybuiltin.NewSentinelAlertRuleAnomalyBuiltIn(scope Construct, id *string, config SentinelAlertRuleAnomalyBuiltInConfig) SentinelAlertRuleAnomalyBuiltIn
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyBuiltIn.SentinelAlertRuleAnomalyBuiltIn.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalybuiltin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalybuiltin"
 
 sentinelalertruleanomalybuiltin.SentinelAlertRuleAnomalyBuiltIn_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyBuiltIn.SentinelAlertRuleAnomalyBuiltIn.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalybuiltin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalybuiltin"
 
 sentinelalertruleanomalybuiltin.SentinelAlertRuleAnomalyBuiltIn_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ sentinelalertruleanomalybuiltin.SentinelAlertRuleAnomalyBuiltIn_IsTerraformEleme
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyBuiltIn.SentinelAlertRuleAnomalyBuiltIn.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalybuiltin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalybuiltin"
 
 sentinelalertruleanomalybuiltin.SentinelAlertRuleAnomalyBuiltIn_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ sentinelalertruleanomalybuiltin.SentinelAlertRuleAnomalyBuiltIn_IsTerraformResou
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyBuiltIn.SentinelAlertRuleAnomalyBuiltIn.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalybuiltin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalybuiltin"
 
 sentinelalertruleanomalybuiltin.SentinelAlertRuleAnomalyBuiltIn_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -987,7 +987,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyBuiltIn.SentinelAlertRuleAnomalyBuiltInConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalybuiltin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalybuiltin"
 
 &sentinelalertruleanomalybuiltin.SentinelAlertRuleAnomalyBuiltInConfig {
 	Connection: interface{},
@@ -1003,7 +1003,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrule
 	DisplayName: *string,
 	Id: *string,
 	Name: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.sentinelAlertRuleAnomalyBuiltIn.SentinelAlertRuleAnomalyBuiltInTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.sentinelAlertRuleAnomalyBuiltIn.SentinelAlertRuleAnomalyBuiltInTimeouts,
 }
 ```
 
@@ -1192,7 +1192,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyBuiltIn.SentinelAlertRuleAnomalyBuiltInMultiSelectObservation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalybuiltin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalybuiltin"
 
 &sentinelalertruleanomalybuiltin.SentinelAlertRuleAnomalyBuiltInMultiSelectObservation {
 
@@ -1205,7 +1205,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrule
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyBuiltIn.SentinelAlertRuleAnomalyBuiltInPrioritizedExcludeObservation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalybuiltin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalybuiltin"
 
 &sentinelalertruleanomalybuiltin.SentinelAlertRuleAnomalyBuiltInPrioritizedExcludeObservation {
 
@@ -1218,7 +1218,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrule
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyBuiltIn.SentinelAlertRuleAnomalyBuiltInRequiredDataConnector.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalybuiltin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalybuiltin"
 
 &sentinelalertruleanomalybuiltin.SentinelAlertRuleAnomalyBuiltInRequiredDataConnector {
 
@@ -1231,7 +1231,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrule
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyBuiltIn.SentinelAlertRuleAnomalyBuiltInSingleSelectObservation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalybuiltin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalybuiltin"
 
 &sentinelalertruleanomalybuiltin.SentinelAlertRuleAnomalyBuiltInSingleSelectObservation {
 
@@ -1244,7 +1244,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrule
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyBuiltIn.SentinelAlertRuleAnomalyBuiltInThresholdObservation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalybuiltin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalybuiltin"
 
 &sentinelalertruleanomalybuiltin.SentinelAlertRuleAnomalyBuiltInThresholdObservation {
 
@@ -1257,7 +1257,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertrule
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyBuiltIn.SentinelAlertRuleAnomalyBuiltInTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalybuiltin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalybuiltin"
 
 &sentinelalertruleanomalybuiltin.SentinelAlertRuleAnomalyBuiltInTimeouts {
 	Create: *string,
@@ -1333,7 +1333,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyBuiltIn.SentinelAlertRuleAnomalyBuiltInMultiSelectObservationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalybuiltin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalybuiltin"
 
 sentinelalertruleanomalybuiltin.NewSentinelAlertRuleAnomalyBuiltInMultiSelectObservationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SentinelAlertRuleAnomalyBuiltInMultiSelectObservationList
 ```
@@ -1465,7 +1465,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyBuiltIn.SentinelAlertRuleAnomalyBuiltInMultiSelectObservationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalybuiltin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalybuiltin"
 
 sentinelalertruleanomalybuiltin.NewSentinelAlertRuleAnomalyBuiltInMultiSelectObservationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SentinelAlertRuleAnomalyBuiltInMultiSelectObservationOutputReference
 ```
@@ -1776,7 +1776,7 @@ func InternalValue() SentinelAlertRuleAnomalyBuiltInMultiSelectObservation
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyBuiltIn.SentinelAlertRuleAnomalyBuiltInPrioritizedExcludeObservationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalybuiltin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalybuiltin"
 
 sentinelalertruleanomalybuiltin.NewSentinelAlertRuleAnomalyBuiltInPrioritizedExcludeObservationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SentinelAlertRuleAnomalyBuiltInPrioritizedExcludeObservationList
 ```
@@ -1908,7 +1908,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyBuiltIn.SentinelAlertRuleAnomalyBuiltInPrioritizedExcludeObservationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalybuiltin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalybuiltin"
 
 sentinelalertruleanomalybuiltin.NewSentinelAlertRuleAnomalyBuiltInPrioritizedExcludeObservationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SentinelAlertRuleAnomalyBuiltInPrioritizedExcludeObservationOutputReference
 ```
@@ -2219,7 +2219,7 @@ func InternalValue() SentinelAlertRuleAnomalyBuiltInPrioritizedExcludeObservatio
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyBuiltIn.SentinelAlertRuleAnomalyBuiltInRequiredDataConnectorList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalybuiltin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalybuiltin"
 
 sentinelalertruleanomalybuiltin.NewSentinelAlertRuleAnomalyBuiltInRequiredDataConnectorList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SentinelAlertRuleAnomalyBuiltInRequiredDataConnectorList
 ```
@@ -2351,7 +2351,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyBuiltIn.SentinelAlertRuleAnomalyBuiltInRequiredDataConnectorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalybuiltin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalybuiltin"
 
 sentinelalertruleanomalybuiltin.NewSentinelAlertRuleAnomalyBuiltInRequiredDataConnectorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SentinelAlertRuleAnomalyBuiltInRequiredDataConnectorOutputReference
 ```
@@ -2640,7 +2640,7 @@ func InternalValue() SentinelAlertRuleAnomalyBuiltInRequiredDataConnector
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyBuiltIn.SentinelAlertRuleAnomalyBuiltInSingleSelectObservationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalybuiltin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalybuiltin"
 
 sentinelalertruleanomalybuiltin.NewSentinelAlertRuleAnomalyBuiltInSingleSelectObservationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SentinelAlertRuleAnomalyBuiltInSingleSelectObservationList
 ```
@@ -2772,7 +2772,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyBuiltIn.SentinelAlertRuleAnomalyBuiltInSingleSelectObservationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalybuiltin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalybuiltin"
 
 sentinelalertruleanomalybuiltin.NewSentinelAlertRuleAnomalyBuiltInSingleSelectObservationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SentinelAlertRuleAnomalyBuiltInSingleSelectObservationOutputReference
 ```
@@ -3083,7 +3083,7 @@ func InternalValue() SentinelAlertRuleAnomalyBuiltInSingleSelectObservation
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyBuiltIn.SentinelAlertRuleAnomalyBuiltInThresholdObservationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalybuiltin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalybuiltin"
 
 sentinelalertruleanomalybuiltin.NewSentinelAlertRuleAnomalyBuiltInThresholdObservationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SentinelAlertRuleAnomalyBuiltInThresholdObservationList
 ```
@@ -3215,7 +3215,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyBuiltIn.SentinelAlertRuleAnomalyBuiltInThresholdObservationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalybuiltin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalybuiltin"
 
 sentinelalertruleanomalybuiltin.NewSentinelAlertRuleAnomalyBuiltInThresholdObservationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SentinelAlertRuleAnomalyBuiltInThresholdObservationOutputReference
 ```
@@ -3537,7 +3537,7 @@ func InternalValue() SentinelAlertRuleAnomalyBuiltInThresholdObservation
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sentinelAlertRuleAnomalyBuiltIn.SentinelAlertRuleAnomalyBuiltInTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sentinelalertruleanomalybuiltin"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/sentinelalertruleanomalybuiltin"
 
 sentinelalertruleanomalybuiltin.NewSentinelAlertRuleAnomalyBuiltInTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SentinelAlertRuleAnomalyBuiltInTimeoutsOutputReference
 ```

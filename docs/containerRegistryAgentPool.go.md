@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryAgentPool.ContainerRegistryAgentPool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistryagentpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistryagentpool"
 
 containerregistryagentpool.NewContainerRegistryAgentPool(scope Construct, id *string, config ContainerRegistryAgentPoolConfig) ContainerRegistryAgentPool
 ```
@@ -426,7 +426,7 @@ func ResetVirtualNetworkSubnetId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.containerRegistryAgentPool.ContainerRegistryAgentPool.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistryagentpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistryagentpool"
 
 containerregistryagentpool.ContainerRegistryAgentPool_IsConstruct(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.containerRegistryAgentPool.ContainerRegistryAgentPool.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistryagentpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistryagentpool"
 
 containerregistryagentpool.ContainerRegistryAgentPool_IsTerraformElement(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ containerregistryagentpool.ContainerRegistryAgentPool_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.containerRegistryAgentPool.ContainerRegistryAgentPool.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistryagentpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistryagentpool"
 
 containerregistryagentpool.ContainerRegistryAgentPool_IsTerraformResource(x interface{}) *bool
 ```
@@ -486,7 +486,7 @@ containerregistryagentpool.ContainerRegistryAgentPool_IsTerraformResource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.containerRegistryAgentPool.ContainerRegistryAgentPool.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistryagentpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistryagentpool"
 
 containerregistryagentpool.ContainerRegistryAgentPool_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -935,7 +935,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistryAgentPool.ContainerRegistryAgentPoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistryagentpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistryagentpool"
 
 &containerregistryagentpool.ContainerRegistryAgentPoolConfig {
 	Connection: interface{},
@@ -953,7 +953,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistry
 	InstanceCount: *f64,
 	Tags: *map[string]*string,
 	Tier: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.containerRegistryAgentPool.ContainerRegistryAgentPoolTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerRegistryAgentPool.ContainerRegistryAgentPoolTimeouts,
 	VirtualNetworkSubnetId: *string,
 }
 ```
@@ -1182,7 +1182,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerRegistryAgentPool.ContainerRegistryAgentPoolTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistryagentpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistryagentpool"
 
 &containerregistryagentpool.ContainerRegistryAgentPoolTimeouts {
 	Create: *string,
@@ -1258,7 +1258,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerRegistryAgentPool.ContainerRegistryAgentPoolTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/containerregistryagentpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerregistryagentpool"
 
 containerregistryagentpool.NewContainerRegistryAgentPoolTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerRegistryAgentPoolTimeoutsOutputReference
 ```
