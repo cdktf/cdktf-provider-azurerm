@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsFunctionJavascriptUda.StreamAnalyticsFunctionJavascriptUda.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsfunctionjavascriptuda"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsfunctionjavascriptuda"
 
 streamanalyticsfunctionjavascriptuda.NewStreamAnalyticsFunctionJavascriptUda(scope Construct, id *string, config StreamAnalyticsFunctionJavascriptUdaConfig) StreamAnalyticsFunctionJavascriptUda
 ```
@@ -424,7 +424,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.streamAnalyticsFunctionJavascriptUda.StreamAnalyticsFunctionJavascriptUda.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsfunctionjavascriptuda"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsfunctionjavascriptuda"
 
 streamanalyticsfunctionjavascriptuda.StreamAnalyticsFunctionJavascriptUda_IsConstruct(x interface{}) *bool
 ```
@@ -456,7 +456,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.streamAnalyticsFunctionJavascriptUda.StreamAnalyticsFunctionJavascriptUda.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsfunctionjavascriptuda"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsfunctionjavascriptuda"
 
 streamanalyticsfunctionjavascriptuda.StreamAnalyticsFunctionJavascriptUda_IsTerraformElement(x interface{}) *bool
 ```
@@ -470,7 +470,7 @@ streamanalyticsfunctionjavascriptuda.StreamAnalyticsFunctionJavascriptUda_IsTerr
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.streamAnalyticsFunctionJavascriptUda.StreamAnalyticsFunctionJavascriptUda.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsfunctionjavascriptuda"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsfunctionjavascriptuda"
 
 streamanalyticsfunctionjavascriptuda.StreamAnalyticsFunctionJavascriptUda_IsTerraformResource(x interface{}) *bool
 ```
@@ -484,7 +484,7 @@ streamanalyticsfunctionjavascriptuda.StreamAnalyticsFunctionJavascriptUda_IsTerr
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.streamAnalyticsFunctionJavascriptUda.StreamAnalyticsFunctionJavascriptUda.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsfunctionjavascriptuda"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsfunctionjavascriptuda"
 
 streamanalyticsfunctionjavascriptuda.StreamAnalyticsFunctionJavascriptUda_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -867,7 +867,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsFunctionJavascriptUda.StreamAnalyticsFunctionJavascriptUdaConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsfunctionjavascriptuda"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsfunctionjavascriptuda"
 
 &streamanalyticsfunctionjavascriptuda.StreamAnalyticsFunctionJavascriptUdaConfig {
 	Connection: interface{},
@@ -879,11 +879,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsfuncti
 	Provisioners: *[]interface{},
 	Input: interface{},
 	Name: *string,
-	Output: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.streamAnalyticsFunctionJavascriptUda.StreamAnalyticsFunctionJavascriptUdaOutput,
+	Output: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.streamAnalyticsFunctionJavascriptUda.StreamAnalyticsFunctionJavascriptUdaOutput,
 	Script: *string,
 	StreamAnalyticsJobId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.streamAnalyticsFunctionJavascriptUda.StreamAnalyticsFunctionJavascriptUdaTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.streamAnalyticsFunctionJavascriptUda.StreamAnalyticsFunctionJavascriptUdaTimeouts,
 }
 ```
 
@@ -1076,7 +1076,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsFunctionJavascriptUda.StreamAnalyticsFunctionJavascriptUdaInput.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsfunctionjavascriptuda"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsfunctionjavascriptuda"
 
 &streamanalyticsfunctionjavascriptuda.StreamAnalyticsFunctionJavascriptUdaInput {
 	Type: *string,
@@ -1122,7 +1122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsFunctionJavascriptUda.StreamAnalyticsFunctionJavascriptUdaOutput.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsfunctionjavascriptuda"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsfunctionjavascriptuda"
 
 &streamanalyticsfunctionjavascriptuda.StreamAnalyticsFunctionJavascriptUdaOutput {
 	Type: *string,
@@ -1154,7 +1154,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.streamAnalyticsFunctionJavascriptUda.StreamAnalyticsFunctionJavascriptUdaTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsfunctionjavascriptuda"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsfunctionjavascriptuda"
 
 &streamanalyticsfunctionjavascriptuda.StreamAnalyticsFunctionJavascriptUdaTimeouts {
 	Create: *string,
@@ -1230,7 +1230,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsFunctionJavascriptUda.StreamAnalyticsFunctionJavascriptUdaInputList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsfunctionjavascriptuda"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsfunctionjavascriptuda"
 
 streamanalyticsfunctionjavascriptuda.NewStreamAnalyticsFunctionJavascriptUdaInputList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) StreamAnalyticsFunctionJavascriptUdaInputList
 ```
@@ -1373,7 +1373,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsFunctionJavascriptUda.StreamAnalyticsFunctionJavascriptUdaInputOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsfunctionjavascriptuda"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsfunctionjavascriptuda"
 
 streamanalyticsfunctionjavascriptuda.NewStreamAnalyticsFunctionJavascriptUdaInputOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) StreamAnalyticsFunctionJavascriptUdaInputOutputReference
 ```
@@ -1691,7 +1691,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsFunctionJavascriptUda.StreamAnalyticsFunctionJavascriptUdaOutputOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsfunctionjavascriptuda"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsfunctionjavascriptuda"
 
 streamanalyticsfunctionjavascriptuda.NewStreamAnalyticsFunctionJavascriptUdaOutputOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StreamAnalyticsFunctionJavascriptUdaOutputOutputReference
 ```
@@ -1962,7 +1962,7 @@ func InternalValue() StreamAnalyticsFunctionJavascriptUdaOutput
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.streamAnalyticsFunctionJavascriptUda.StreamAnalyticsFunctionJavascriptUdaTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/streamanalyticsfunctionjavascriptuda"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/streamanalyticsfunctionjavascriptuda"
 
 streamanalyticsfunctionjavascriptuda.NewStreamAnalyticsFunctionJavascriptUdaTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StreamAnalyticsFunctionJavascriptUdaTimeoutsOutputReference
 ```
