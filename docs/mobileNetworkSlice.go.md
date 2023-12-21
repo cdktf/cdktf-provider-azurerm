@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mobileNetworkSlice.MobileNetworkSlice.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworkslice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkslice"
 
 mobilenetworkslice.NewMobileNetworkSlice(scope Construct, id *string, config MobileNetworkSliceConfig) MobileNetworkSlice
 ```
@@ -425,7 +425,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mobileNetworkSlice.MobileNetworkSlice.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworkslice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkslice"
 
 mobilenetworkslice.MobileNetworkSlice_IsConstruct(x interface{}) *bool
 ```
@@ -457,7 +457,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mobileNetworkSlice.MobileNetworkSlice.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworkslice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkslice"
 
 mobilenetworkslice.MobileNetworkSlice_IsTerraformElement(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ mobilenetworkslice.MobileNetworkSlice_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mobileNetworkSlice.MobileNetworkSlice.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworkslice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkslice"
 
 mobilenetworkslice.MobileNetworkSlice_IsTerraformResource(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ mobilenetworkslice.MobileNetworkSlice_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.mobileNetworkSlice.MobileNetworkSlice.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworkslice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkslice"
 
 mobilenetworkslice.MobileNetworkSlice_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -890,7 +890,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mobileNetworkSlice.MobileNetworkSliceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworkslice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkslice"
 
 &mobilenetworkslice.MobileNetworkSliceConfig {
 	Connection: interface{},
@@ -903,11 +903,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworkslic
 	Location: *string,
 	MobileNetworkId: *string,
 	Name: *string,
-	SingleNetworkSliceSelectionAssistanceInformation: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mobileNetworkSlice.MobileNetworkSliceSingleNetworkSliceSelectionAssistanceInformation,
+	SingleNetworkSliceSelectionAssistanceInformation: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mobileNetworkSlice.MobileNetworkSliceSingleNetworkSliceSelectionAssistanceInformation,
 	Description: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mobileNetworkSlice.MobileNetworkSliceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mobileNetworkSlice.MobileNetworkSliceTimeouts,
 }
 ```
 
@@ -1111,7 +1111,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mobileNetworkSlice.MobileNetworkSliceSingleNetworkSliceSelectionAssistanceInformation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworkslice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkslice"
 
 &mobilenetworkslice.MobileNetworkSliceSingleNetworkSliceSelectionAssistanceInformation {
 	SliceServiceType: *f64,
@@ -1157,7 +1157,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mobileNetworkSlice.MobileNetworkSliceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworkslice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkslice"
 
 &mobilenetworkslice.MobileNetworkSliceTimeouts {
 	Create: *string,
@@ -1233,7 +1233,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mobileNetworkSlice.MobileNetworkSliceSingleNetworkSliceSelectionAssistanceInformationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworkslice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkslice"
 
 mobilenetworkslice.NewMobileNetworkSliceSingleNetworkSliceSelectionAssistanceInformationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MobileNetworkSliceSingleNetworkSliceSelectionAssistanceInformationOutputReference
 ```
@@ -1533,7 +1533,7 @@ func InternalValue() MobileNetworkSliceSingleNetworkSliceSelectionAssistanceInfo
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mobileNetworkSlice.MobileNetworkSliceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mobilenetworkslice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mobilenetworkslice"
 
 mobilenetworkslice.NewMobileNetworkSliceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MobileNetworkSliceTimeoutsOutputReference
 ```
