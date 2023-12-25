@@ -1,6 +1,9 @@
-# Submodules <a name="Submodules" id="submodules"></a>
+# API Reference <a name="API Reference" id="api-reference"></a>
+
+## Submodules <a name="Submodules" id="submodules"></a>
 
 The following submodules are available:
+
 - [aadb2CDirectory](./aadb2CDirectory.typescript.md)
 - [activeDirectoryDomainService](./activeDirectoryDomainService.typescript.md)
 - [activeDirectoryDomainServiceReplicaSet](./activeDirectoryDomainServiceReplicaSet.typescript.md)
@@ -1373,3 +1376,8 @@ The following submodules are available:
 - [windowsVirtualMachineScaleSet](./windowsVirtualMachineScaleSet.typescript.md)
 - [windowsWebApp](./windowsWebApp.typescript.md)
 - [windowsWebAppSlot](./windowsWebAppSlot.typescript.md)
+
+
+
+
+

@@ -1,6 +1,9 @@
-# Submodules <a name="Submodules" id="submodules"></a>
+# API Reference <a name="API Reference" id="api-reference"></a>
+
+## Submodules <a name="Submodules" id="submodules"></a>
 
 The following submodules are available:
+
 - [aadb2CDirectory](./aadb2CDirectory.csharp.md)
 - [activeDirectoryDomainService](./activeDirectoryDomainService.csharp.md)
 - [activeDirectoryDomainServiceReplicaSet](./activeDirectoryDomainServiceReplicaSet.csharp.md)
@@ -1373,3 +1376,8 @@ The following submodules are available:
 - [windowsVirtualMachineScaleSet](./windowsVirtualMachineScaleSet.csharp.md)
 - [windowsWebApp](./windowsWebApp.csharp.md)
 - [windowsWebAppSlot](./windowsWebAppSlot.csharp.md)
+
+
+
+
+
