@@ -1,6 +1,9 @@
-# Submodules <a name="Submodules" id="submodules"></a>
+# API Reference <a name="API Reference" id="api-reference"></a>
+
+## Submodules <a name="Submodules" id="submodules"></a>
 
 The following submodules are available:
+
 - [aadb2CDirectory](./aadb2CDirectory.python.md)
 - [activeDirectoryDomainService](./activeDirectoryDomainService.python.md)
 - [activeDirectoryDomainServiceReplicaSet](./activeDirectoryDomainServiceReplicaSet.python.md)
@@ -1373,3 +1376,8 @@ The following submodules are available:
 - [windowsVirtualMachineScaleSet](./windowsVirtualMachineScaleSet.python.md)
 - [windowsWebApp](./windowsWebApp.python.md)
 - [windowsWebAppSlot](./windowsWebAppSlot.python.md)
+
+
+
+
+
