@@ -1,9 +1,4 @@
-/**
- * Copyright (c) HashiCorp, Inc.
- * SPDX-License-Identifier: MPL-2.0
- */
-
-// https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_protection_backup_policy_disk
+// https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_protection_backup_policy_disk
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,44 +8,48 @@ import * as cdktf from 'cdktf';
 
 export interface DataProtectionBackupPolicyDiskConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_protection_backup_policy_disk#backup_repeating_time_intervals DataProtectionBackupPolicyDisk#backup_repeating_time_intervals}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_protection_backup_policy_disk#backup_repeating_time_intervals DataProtectionBackupPolicyDisk#backup_repeating_time_intervals}
   */
   readonly backupRepeatingTimeIntervals: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_protection_backup_policy_disk#default_retention_duration DataProtectionBackupPolicyDisk#default_retention_duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_protection_backup_policy_disk#default_retention_duration DataProtectionBackupPolicyDisk#default_retention_duration}
   */
   readonly defaultRetentionDuration: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_protection_backup_policy_disk#id DataProtectionBackupPolicyDisk#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_protection_backup_policy_disk#id DataProtectionBackupPolicyDisk#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_protection_backup_policy_disk#name DataProtectionBackupPolicyDisk#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_protection_backup_policy_disk#name DataProtectionBackupPolicyDisk#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_protection_backup_policy_disk#vault_id DataProtectionBackupPolicyDisk#vault_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_protection_backup_policy_disk#time_zone DataProtectionBackupPolicyDisk#time_zone}
+  */
+  readonly timeZone?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_protection_backup_policy_disk#vault_id DataProtectionBackupPolicyDisk#vault_id}
   */
   readonly vaultId: string;
   /**
   * retention_rule block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_protection_backup_policy_disk#retention_rule DataProtectionBackupPolicyDisk#retention_rule}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_protection_backup_policy_disk#retention_rule DataProtectionBackupPolicyDisk#retention_rule}
   */
   readonly retentionRule?: DataProtectionBackupPolicyDiskRetentionRule[] | cdktf.IResolvable;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_protection_backup_policy_disk#timeouts DataProtectionBackupPolicyDisk#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_protection_backup_policy_disk#timeouts DataProtectionBackupPolicyDisk#timeouts}
   */
   readonly timeouts?: DataProtectionBackupPolicyDiskTimeouts;
 }
 export interface DataProtectionBackupPolicyDiskRetentionRuleCriteria {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_protection_backup_policy_disk#absolute_criteria DataProtectionBackupPolicyDisk#absolute_criteria}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_protection_backup_policy_disk#absolute_criteria DataProtectionBackupPolicyDisk#absolute_criteria}
   */
   readonly absoluteCriteria?: string;
 }
@@ -115,21 +114,21 @@ export class DataProtectionBackupPolicyDiskRetentionRuleCriteriaOutputReference 
 }
 export interface DataProtectionBackupPolicyDiskRetentionRule {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_protection_backup_policy_disk#duration DataProtectionBackupPolicyDisk#duration}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_protection_backup_policy_disk#duration DataProtectionBackupPolicyDisk#duration}
   */
   readonly duration: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_protection_backup_policy_disk#name DataProtectionBackupPolicyDisk#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_protection_backup_policy_disk#name DataProtectionBackupPolicyDisk#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_protection_backup_policy_disk#priority DataProtectionBackupPolicyDisk#priority}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_protection_backup_policy_disk#priority DataProtectionBackupPolicyDisk#priority}
   */
   readonly priority: number;
   /**
   * criteria block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_protection_backup_policy_disk#criteria DataProtectionBackupPolicyDisk#criteria}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_protection_backup_policy_disk#criteria DataProtectionBackupPolicyDisk#criteria}
   */
   readonly criteria: DataProtectionBackupPolicyDiskRetentionRuleCriteria;
 }
@@ -283,15 +282,15 @@ export class DataProtectionBackupPolicyDiskRetentionRuleList extends cdktf.Compl
 }
 export interface DataProtectionBackupPolicyDiskTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_protection_backup_policy_disk#create DataProtectionBackupPolicyDisk#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_protection_backup_policy_disk#create DataProtectionBackupPolicyDisk#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_protection_backup_policy_disk#delete DataProtectionBackupPolicyDisk#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_protection_backup_policy_disk#delete DataProtectionBackupPolicyDisk#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_protection_backup_policy_disk#read DataProtectionBackupPolicyDisk#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_protection_backup_policy_disk#read DataProtectionBackupPolicyDisk#read}
   */
   readonly read?: string;
 }
@@ -412,7 +411,7 @@ export class DataProtectionBackupPolicyDiskTimeoutsOutputReference extends cdktf
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_protection_backup_policy_disk azurerm_data_protection_backup_policy_disk}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_protection_backup_policy_disk azurerm_data_protection_backup_policy_disk}
 */
 export class DataProtectionBackupPolicyDisk extends cdktf.TerraformResource {
 
@@ -428,7 +427,7 @@ export class DataProtectionBackupPolicyDisk extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a DataProtectionBackupPolicyDisk resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataProtectionBackupPolicyDisk to import
-  * @param importFromId The id of the existing DataProtectionBackupPolicyDisk that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_protection_backup_policy_disk#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataProtectionBackupPolicyDisk that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_protection_backup_policy_disk#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataProtectionBackupPolicyDisk to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -440,7 +439,7 @@ export class DataProtectionBackupPolicyDisk extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_protection_backup_policy_disk azurerm_data_protection_backup_policy_disk} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_protection_backup_policy_disk azurerm_data_protection_backup_policy_disk} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -451,7 +450,7 @@ export class DataProtectionBackupPolicyDisk extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_data_protection_backup_policy_disk',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '3.85.0',
+        providerVersion: '3.86.0',
         providerVersionConstraint: '~> 3.10'
       },
       provider: config.provider,
@@ -466,6 +465,7 @@ export class DataProtectionBackupPolicyDisk extends cdktf.TerraformResource {
     this._defaultRetentionDuration = config.defaultRetentionDuration;
     this._id = config.id;
     this._name = config.name;
+    this._timeZone = config.timeZone;
     this._vaultId = config.vaultId;
     this._retentionRule.internalValue = config.retentionRule;
     this._timeouts.internalValue = config.timeouts;
@@ -530,6 +530,22 @@ export class DataProtectionBackupPolicyDisk extends cdktf.TerraformResource {
     return this._name;
   }
 
+  // time_zone - computed: false, optional: true, required: false
+  private _timeZone?: string; 
+  public get timeZone() {
+    return this.getStringAttribute('time_zone');
+  }
+  public set timeZone(value: string) {
+    this._timeZone = value;
+  }
+  public resetTimeZone() {
+    this._timeZone = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get timeZoneInput() {
+    return this._timeZone;
+  }
+
   // vault_id - computed: false, optional: false, required: true
   private _vaultId?: string; 
   public get vaultId() {
@@ -585,6 +601,7 @@ export class DataProtectionBackupPolicyDisk extends cdktf.TerraformResource {
       default_retention_duration: cdktf.stringToTerraform(this._defaultRetentionDuration),
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
+      time_zone: cdktf.stringToTerraform(this._timeZone),
       vault_id: cdktf.stringToTerraform(this._vaultId),
       retention_rule: cdktf.listMapper(dataProtectionBackupPolicyDiskRetentionRuleToTerraform, true)(this._retentionRule.internalValue),
       timeouts: dataProtectionBackupPolicyDiskTimeoutsToTerraform(this._timeouts.internalValue),

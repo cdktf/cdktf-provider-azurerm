@@ -4,12 +4,12 @@
 
 ### StorageQueue <a name="StorageQueue" id="@cdktf/provider-azurerm.storageQueue.StorageQueue"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/storage_queue azurerm_storage_queue}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/storage_queue azurerm_storage_queue}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageQueue.StorageQueue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagequeue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagequeue"
 
 storagequeue.NewStorageQueue(scope Construct, id *string, config StorageQueueConfig) StorageQueue
 ```
@@ -405,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.storageQueue.StorageQueue.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagequeue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagequeue"
 
 storagequeue.StorageQueue_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.storageQueue.StorageQueue.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagequeue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagequeue"
 
 storagequeue.StorageQueue_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ storagequeue.StorageQueue_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.storageQueue.StorageQueue.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagequeue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagequeue"
 
 storagequeue.StorageQueue_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ storagequeue.StorageQueue_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.storageQueue.StorageQueue.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagequeue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagequeue"
 
 storagequeue.StorageQueue_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -494,7 +494,7 @@ The construct id used in the generated config for the StorageQueue to import.
 
 The id of the existing StorageQueue that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/storage_queue#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/storage_queue#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -815,7 +815,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageQueue.StorageQueueConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagequeue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagequeue"
 
 &storagequeue.StorageQueueConfig {
 	Connection: interface{},
@@ -829,7 +829,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagequeue"
 	StorageAccountName: *string,
 	Id: *string,
 	Metadata: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageQueue.StorageQueueTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.storageQueue.StorageQueueTimeouts,
 }
 ```
 
@@ -844,10 +844,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagequeue"
 | <code><a href="#@cdktf/provider-azurerm.storageQueue.StorageQueueConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageQueue.StorageQueueConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageQueue.StorageQueueConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.storageQueue.StorageQueueConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/storage_queue#name StorageQueue#name}. |
-| <code><a href="#@cdktf/provider-azurerm.storageQueue.StorageQueueConfig.property.storageAccountName">StorageAccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/storage_queue#storage_account_name StorageQueue#storage_account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.storageQueue.StorageQueueConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/storage_queue#id StorageQueue#id}. |
-| <code><a href="#@cdktf/provider-azurerm.storageQueue.StorageQueueConfig.property.metadata">Metadata</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/storage_queue#metadata StorageQueue#metadata}. |
+| <code><a href="#@cdktf/provider-azurerm.storageQueue.StorageQueueConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/storage_queue#name StorageQueue#name}. |
+| <code><a href="#@cdktf/provider-azurerm.storageQueue.StorageQueueConfig.property.storageAccountName">StorageAccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/storage_queue#storage_account_name StorageQueue#storage_account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.storageQueue.StorageQueueConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/storage_queue#id StorageQueue#id}. |
+| <code><a href="#@cdktf/provider-azurerm.storageQueue.StorageQueueConfig.property.metadata">Metadata</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/storage_queue#metadata StorageQueue#metadata}. |
 | <code><a href="#@cdktf/provider-azurerm.storageQueue.StorageQueueConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.storageQueue.StorageQueueTimeouts">StorageQueueTimeouts</a></code> | timeouts block. |
 
 ---
@@ -930,7 +930,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/storage_queue#name StorageQueue#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/storage_queue#name StorageQueue#name}.
 
 ---
 
@@ -942,7 +942,7 @@ StorageAccountName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/storage_queue#storage_account_name StorageQueue#storage_account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/storage_queue#storage_account_name StorageQueue#storage_account_name}.
 
 ---
 
@@ -954,7 +954,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/storage_queue#id StorageQueue#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/storage_queue#id StorageQueue#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -969,7 +969,7 @@ Metadata *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/storage_queue#metadata StorageQueue#metadata}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/storage_queue#metadata StorageQueue#metadata}.
 
 ---
 
@@ -983,7 +983,7 @@ Timeouts StorageQueueTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/storage_queue#timeouts StorageQueue#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/storage_queue#timeouts StorageQueue#timeouts}
 
 ---
 
@@ -992,7 +992,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageQueue.StorageQueueTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagequeue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagequeue"
 
 &storagequeue.StorageQueueTimeouts {
 	Create: *string,
@@ -1006,10 +1006,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagequeue"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.storageQueue.StorageQueueTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/storage_queue#create StorageQueue#create}. |
-| <code><a href="#@cdktf/provider-azurerm.storageQueue.StorageQueueTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/storage_queue#delete StorageQueue#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.storageQueue.StorageQueueTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/storage_queue#read StorageQueue#read}. |
-| <code><a href="#@cdktf/provider-azurerm.storageQueue.StorageQueueTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/storage_queue#update StorageQueue#update}. |
+| <code><a href="#@cdktf/provider-azurerm.storageQueue.StorageQueueTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/storage_queue#create StorageQueue#create}. |
+| <code><a href="#@cdktf/provider-azurerm.storageQueue.StorageQueueTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/storage_queue#delete StorageQueue#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.storageQueue.StorageQueueTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/storage_queue#read StorageQueue#read}. |
+| <code><a href="#@cdktf/provider-azurerm.storageQueue.StorageQueueTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/storage_queue#update StorageQueue#update}. |
 
 ---
 
@@ -1021,7 +1021,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/storage_queue#create StorageQueue#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/storage_queue#create StorageQueue#create}.
 
 ---
 
@@ -1033,7 +1033,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/storage_queue#delete StorageQueue#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/storage_queue#delete StorageQueue#delete}.
 
 ---
 
@@ -1045,7 +1045,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/storage_queue#read StorageQueue#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/storage_queue#read StorageQueue#read}.
 
 ---
 
@@ -1057,7 +1057,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/storage_queue#update StorageQueue#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/storage_queue#update StorageQueue#update}.
 
 ---
 
@@ -1068,7 +1068,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageQueue.StorageQueueTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagequeue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/storagequeue"
 
 storagequeue.NewStorageQueueTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageQueueTimeoutsOutputReference
 ```

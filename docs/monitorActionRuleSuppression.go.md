@@ -4,12 +4,12 @@
 
 ### MonitorActionRuleSuppression <a name="MonitorActionRuleSuppression" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppression"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression azurerm_monitor_action_rule_suppression}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression azurerm_monitor_action_rule_suppression}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppression.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.NewMonitorActionRuleSuppression(scope Construct, id *string, config MonitorActionRuleSuppressionConfig) MonitorActionRuleSuppression
 ```
@@ -472,7 +472,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppression.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.MonitorActionRuleSuppression_IsConstruct(x interface{}) *bool
 ```
@@ -504,7 +504,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppression.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.MonitorActionRuleSuppression_IsTerraformElement(x interface{}) *bool
 ```
@@ -518,7 +518,7 @@ monitoractionrulesuppression.MonitorActionRuleSuppression_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppression.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.MonitorActionRuleSuppression_IsTerraformResource(x interface{}) *bool
 ```
@@ -532,7 +532,7 @@ monitoractionrulesuppression.MonitorActionRuleSuppression_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppression.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.MonitorActionRuleSuppression_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -561,7 +561,7 @@ The construct id used in the generated config for the MonitorActionRuleSuppressi
 
 The id of the existing MonitorActionRuleSuppression that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -981,16 +981,16 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 &monitoractionrulesuppression.MonitorActionRuleSuppressionCondition {
-	AlertContext: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionAlertContext,
-	AlertRuleId: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionAlertRuleId,
-	Description: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionDescription,
-	Monitor: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionMonitor,
-	MonitorService: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionMonitorService,
-	Severity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionSeverity,
-	TargetResourceType: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionTargetResourceType,
+	AlertContext: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionAlertContext,
+	AlertRuleId: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionAlertRuleId,
+	Description: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionDescription,
+	Monitor: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionMonitor,
+	MonitorService: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionMonitorService,
+	Severity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionSeverity,
+	TargetResourceType: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionTargetResourceType,
 }
 ```
 
@@ -1018,7 +1018,7 @@ AlertContext MonitorActionRuleSuppressionConditionAlertContext
 
 alert_context block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#alert_context MonitorActionRuleSuppression#alert_context}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#alert_context MonitorActionRuleSuppression#alert_context}
 
 ---
 
@@ -1032,7 +1032,7 @@ AlertRuleId MonitorActionRuleSuppressionConditionAlertRuleId
 
 alert_rule_id block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#alert_rule_id MonitorActionRuleSuppression#alert_rule_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#alert_rule_id MonitorActionRuleSuppression#alert_rule_id}
 
 ---
 
@@ -1046,7 +1046,7 @@ Description MonitorActionRuleSuppressionConditionDescription
 
 description block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#description MonitorActionRuleSuppression#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#description MonitorActionRuleSuppression#description}
 
 ---
 
@@ -1060,7 +1060,7 @@ Monitor MonitorActionRuleSuppressionConditionMonitor
 
 monitor block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#monitor MonitorActionRuleSuppression#monitor}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#monitor MonitorActionRuleSuppression#monitor}
 
 ---
 
@@ -1074,7 +1074,7 @@ MonitorService MonitorActionRuleSuppressionConditionMonitorService
 
 monitor_service block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#monitor_service MonitorActionRuleSuppression#monitor_service}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#monitor_service MonitorActionRuleSuppression#monitor_service}
 
 ---
 
@@ -1088,7 +1088,7 @@ Severity MonitorActionRuleSuppressionConditionSeverity
 
 severity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#severity MonitorActionRuleSuppression#severity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#severity MonitorActionRuleSuppression#severity}
 
 ---
 
@@ -1102,7 +1102,7 @@ TargetResourceType MonitorActionRuleSuppressionConditionTargetResourceType
 
 target_resource_type block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#target_resource_type MonitorActionRuleSuppression#target_resource_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#target_resource_type MonitorActionRuleSuppression#target_resource_type}
 
 ---
 
@@ -1111,7 +1111,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionAlertContext.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 &monitoractionrulesuppression.MonitorActionRuleSuppressionConditionAlertContext {
 	Operator: *string,
@@ -1123,8 +1123,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrule
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionAlertContext.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionAlertContext.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionAlertContext.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionAlertContext.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}. |
 
 ---
 
@@ -1136,7 +1136,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}.
 
 ---
 
@@ -1148,7 +1148,7 @@ Values *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}.
 
 ---
 
@@ -1157,7 +1157,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionAlertRuleId.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 &monitoractionrulesuppression.MonitorActionRuleSuppressionConditionAlertRuleId {
 	Operator: *string,
@@ -1169,8 +1169,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrule
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionAlertRuleId.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionAlertRuleId.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionAlertRuleId.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionAlertRuleId.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}. |
 
 ---
 
@@ -1182,7 +1182,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}.
 
 ---
 
@@ -1194,7 +1194,7 @@ Values *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}.
 
 ---
 
@@ -1203,7 +1203,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionDescription.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 &monitoractionrulesuppression.MonitorActionRuleSuppressionConditionDescription {
 	Operator: *string,
@@ -1215,8 +1215,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrule
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionDescription.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionDescription.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionDescription.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionDescription.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}. |
 
 ---
 
@@ -1228,7 +1228,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}.
 
 ---
 
@@ -1240,7 +1240,7 @@ Values *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}.
 
 ---
 
@@ -1249,7 +1249,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionMonitor.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 &monitoractionrulesuppression.MonitorActionRuleSuppressionConditionMonitor {
 	Operator: *string,
@@ -1261,8 +1261,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrule
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionMonitor.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionMonitor.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionMonitor.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionMonitor.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}. |
 
 ---
 
@@ -1274,7 +1274,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}.
 
 ---
 
@@ -1286,7 +1286,7 @@ Values *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}.
 
 ---
 
@@ -1295,7 +1295,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionMonitorService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 &monitoractionrulesuppression.MonitorActionRuleSuppressionConditionMonitorService {
 	Operator: *string,
@@ -1307,8 +1307,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrule
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionMonitorService.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionMonitorService.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionMonitorService.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionMonitorService.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}. |
 
 ---
 
@@ -1320,7 +1320,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}.
 
 ---
 
@@ -1332,7 +1332,7 @@ Values *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}.
 
 ---
 
@@ -1341,7 +1341,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionSeverity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 &monitoractionrulesuppression.MonitorActionRuleSuppressionConditionSeverity {
 	Operator: *string,
@@ -1353,8 +1353,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrule
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionSeverity.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionSeverity.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionSeverity.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionSeverity.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}. |
 
 ---
 
@@ -1366,7 +1366,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}.
 
 ---
 
@@ -1378,7 +1378,7 @@ Values *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}.
 
 ---
 
@@ -1387,7 +1387,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionTargetResourceType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 &monitoractionrulesuppression.MonitorActionRuleSuppressionConditionTargetResourceType {
 	Operator: *string,
@@ -1399,8 +1399,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrule
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionTargetResourceType.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionTargetResourceType.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionTargetResourceType.property.operator">Operator</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionTargetResourceType.property.values">Values</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}. |
 
 ---
 
@@ -1412,7 +1412,7 @@ Operator *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#operator MonitorActionRuleSuppression#operator}.
 
 ---
 
@@ -1424,7 +1424,7 @@ Values *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#values MonitorActionRuleSuppression#values}.
 
 ---
 
@@ -1433,7 +1433,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 &monitoractionrulesuppression.MonitorActionRuleSuppressionConfig {
 	Connection: interface{},
@@ -1445,14 +1445,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrule
 	Provisioners: *[]interface{},
 	Name: *string,
 	ResourceGroupName: *string,
-	Suppression: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppression,
-	Condition: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleSuppression.MonitorActionRuleSuppressionCondition,
+	Suppression: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppression,
+	Condition: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionCondition,
 	Description: *string,
 	Enabled: interface{},
 	Id: *string,
-	Scope: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleSuppression.MonitorActionRuleSuppressionScope,
+	Scope: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionScope,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleSuppression.MonitorActionRuleSuppressionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionTimeouts,
 }
 ```
 
@@ -1467,15 +1467,15 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrule
 | <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#name MonitorActionRuleSuppression#name}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#resource_group_name MonitorActionRuleSuppression#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#name MonitorActionRuleSuppression#name}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#resource_group_name MonitorActionRuleSuppression#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConfig.property.suppression">Suppression</a></code> | <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppression">MonitorActionRuleSuppressionSuppression</a></code> | suppression block. |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConfig.property.condition">Condition</a></code> | <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionCondition">MonitorActionRuleSuppressionCondition</a></code> | condition block. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConfig.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#description MonitorActionRuleSuppression#description}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConfig.property.enabled">Enabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#enabled MonitorActionRuleSuppression#enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#id MonitorActionRuleSuppression#id}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConfig.property.description">Description</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#description MonitorActionRuleSuppression#description}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConfig.property.enabled">Enabled</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#enabled MonitorActionRuleSuppression#enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#id MonitorActionRuleSuppression#id}. |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConfig.property.scope">Scope</a></code> | <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionScope">MonitorActionRuleSuppressionScope</a></code> | scope block. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#tags MonitorActionRuleSuppression#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConfig.property.tags">Tags</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#tags MonitorActionRuleSuppression#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionTimeouts">MonitorActionRuleSuppressionTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1558,7 +1558,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#name MonitorActionRuleSuppression#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#name MonitorActionRuleSuppression#name}.
 
 ---
 
@@ -1570,7 +1570,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#resource_group_name MonitorActionRuleSuppression#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#resource_group_name MonitorActionRuleSuppression#resource_group_name}.
 
 ---
 
@@ -1584,7 +1584,7 @@ Suppression MonitorActionRuleSuppressionSuppression
 
 suppression block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#suppression MonitorActionRuleSuppression#suppression}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#suppression MonitorActionRuleSuppression#suppression}
 
 ---
 
@@ -1598,7 +1598,7 @@ Condition MonitorActionRuleSuppressionCondition
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#condition MonitorActionRuleSuppression#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#condition MonitorActionRuleSuppression#condition}
 
 ---
 
@@ -1610,7 +1610,7 @@ Description *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#description MonitorActionRuleSuppression#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#description MonitorActionRuleSuppression#description}.
 
 ---
 
@@ -1622,7 +1622,7 @@ Enabled interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#enabled MonitorActionRuleSuppression#enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#enabled MonitorActionRuleSuppression#enabled}.
 
 ---
 
@@ -1634,7 +1634,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#id MonitorActionRuleSuppression#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#id MonitorActionRuleSuppression#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1651,7 +1651,7 @@ Scope MonitorActionRuleSuppressionScope
 
 scope block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#scope MonitorActionRuleSuppression#scope}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#scope MonitorActionRuleSuppression#scope}
 
 ---
 
@@ -1663,7 +1663,7 @@ Tags *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#tags MonitorActionRuleSuppression#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#tags MonitorActionRuleSuppression#tags}.
 
 ---
 
@@ -1677,7 +1677,7 @@ Timeouts MonitorActionRuleSuppressionTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#timeouts MonitorActionRuleSuppression#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#timeouts MonitorActionRuleSuppression#timeouts}
 
 ---
 
@@ -1686,7 +1686,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionScope.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 &monitoractionrulesuppression.MonitorActionRuleSuppressionScope {
 	ResourceIds: *[]*string,
@@ -1698,8 +1698,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrule
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionScope.property.resourceIds">ResourceIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#resource_ids MonitorActionRuleSuppression#resource_ids}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionScope.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#type MonitorActionRuleSuppression#type}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionScope.property.resourceIds">ResourceIds</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#resource_ids MonitorActionRuleSuppression#resource_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionScope.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#type MonitorActionRuleSuppression#type}. |
 
 ---
 
@@ -1711,7 +1711,7 @@ ResourceIds *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#resource_ids MonitorActionRuleSuppression#resource_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#resource_ids MonitorActionRuleSuppression#resource_ids}.
 
 ---
 
@@ -1723,7 +1723,7 @@ Type *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#type MonitorActionRuleSuppression#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#type MonitorActionRuleSuppression#type}.
 
 ---
 
@@ -1732,11 +1732,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppression.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 &monitoractionrulesuppression.MonitorActionRuleSuppressionSuppression {
 	RecurrenceType: *string,
-	Schedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppressionSchedule,
+	Schedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppressionSchedule,
 }
 ```
 
@@ -1744,7 +1744,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrule
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppression.property.recurrenceType">RecurrenceType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#recurrence_type MonitorActionRuleSuppression#recurrence_type}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppression.property.recurrenceType">RecurrenceType</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#recurrence_type MonitorActionRuleSuppression#recurrence_type}. |
 | <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppression.property.schedule">Schedule</a></code> | <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppressionSchedule">MonitorActionRuleSuppressionSuppressionSchedule</a></code> | schedule block. |
 
 ---
@@ -1757,7 +1757,7 @@ RecurrenceType *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#recurrence_type MonitorActionRuleSuppression#recurrence_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#recurrence_type MonitorActionRuleSuppression#recurrence_type}.
 
 ---
 
@@ -1771,7 +1771,7 @@ Schedule MonitorActionRuleSuppressionSuppressionSchedule
 
 schedule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#schedule MonitorActionRuleSuppression#schedule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#schedule MonitorActionRuleSuppression#schedule}
 
 ---
 
@@ -1780,7 +1780,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppressionSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 &monitoractionrulesuppression.MonitorActionRuleSuppressionSuppressionSchedule {
 	EndDateUtc: *string,
@@ -1794,10 +1794,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrule
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppressionSchedule.property.endDateUtc">EndDateUtc</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#end_date_utc MonitorActionRuleSuppression#end_date_utc}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppressionSchedule.property.startDateUtc">StartDateUtc</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#start_date_utc MonitorActionRuleSuppression#start_date_utc}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppressionSchedule.property.recurrenceMonthly">RecurrenceMonthly</a></code> | <code>*[]*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#recurrence_monthly MonitorActionRuleSuppression#recurrence_monthly}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppressionSchedule.property.recurrenceWeekly">RecurrenceWeekly</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#recurrence_weekly MonitorActionRuleSuppression#recurrence_weekly}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppressionSchedule.property.endDateUtc">EndDateUtc</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#end_date_utc MonitorActionRuleSuppression#end_date_utc}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppressionSchedule.property.startDateUtc">StartDateUtc</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#start_date_utc MonitorActionRuleSuppression#start_date_utc}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppressionSchedule.property.recurrenceMonthly">RecurrenceMonthly</a></code> | <code>*[]*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#recurrence_monthly MonitorActionRuleSuppression#recurrence_monthly}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppressionSchedule.property.recurrenceWeekly">RecurrenceWeekly</a></code> | <code>*[]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#recurrence_weekly MonitorActionRuleSuppression#recurrence_weekly}. |
 
 ---
 
@@ -1809,7 +1809,7 @@ EndDateUtc *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#end_date_utc MonitorActionRuleSuppression#end_date_utc}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#end_date_utc MonitorActionRuleSuppression#end_date_utc}.
 
 ---
 
@@ -1821,7 +1821,7 @@ StartDateUtc *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#start_date_utc MonitorActionRuleSuppression#start_date_utc}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#start_date_utc MonitorActionRuleSuppression#start_date_utc}.
 
 ---
 
@@ -1833,7 +1833,7 @@ RecurrenceMonthly *[]*f64
 
 - *Type:* *[]*f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#recurrence_monthly MonitorActionRuleSuppression#recurrence_monthly}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#recurrence_monthly MonitorActionRuleSuppression#recurrence_monthly}.
 
 ---
 
@@ -1845,7 +1845,7 @@ RecurrenceWeekly *[]*string
 
 - *Type:* *[]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#recurrence_weekly MonitorActionRuleSuppression#recurrence_weekly}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#recurrence_weekly MonitorActionRuleSuppression#recurrence_weekly}.
 
 ---
 
@@ -1854,7 +1854,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 &monitoractionrulesuppression.MonitorActionRuleSuppressionTimeouts {
 	Create: *string,
@@ -1868,10 +1868,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrule
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#create MonitorActionRuleSuppression#create}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#delete MonitorActionRuleSuppression#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#read MonitorActionRuleSuppression#read}. |
-| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#update MonitorActionRuleSuppression#update}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#create MonitorActionRuleSuppression#create}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#delete MonitorActionRuleSuppression#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#read MonitorActionRuleSuppression#read}. |
+| <code><a href="#@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#update MonitorActionRuleSuppression#update}. |
 
 ---
 
@@ -1883,7 +1883,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#create MonitorActionRuleSuppression#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#create MonitorActionRuleSuppression#create}.
 
 ---
 
@@ -1895,7 +1895,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#delete MonitorActionRuleSuppression#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#delete MonitorActionRuleSuppression#delete}.
 
 ---
 
@@ -1907,7 +1907,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#read MonitorActionRuleSuppression#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#read MonitorActionRuleSuppression#read}.
 
 ---
 
@@ -1919,7 +1919,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/monitor_action_rule_suppression#update MonitorActionRuleSuppression#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/monitor_action_rule_suppression#update MonitorActionRuleSuppression#update}.
 
 ---
 
@@ -1930,7 +1930,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionAlertContextOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.NewMonitorActionRuleSuppressionConditionAlertContextOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleSuppressionConditionAlertContextOutputReference
 ```
@@ -2223,7 +2223,7 @@ func InternalValue() MonitorActionRuleSuppressionConditionAlertContext
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionAlertRuleIdOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.NewMonitorActionRuleSuppressionConditionAlertRuleIdOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleSuppressionConditionAlertRuleIdOutputReference
 ```
@@ -2516,7 +2516,7 @@ func InternalValue() MonitorActionRuleSuppressionConditionAlertRuleId
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionDescriptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.NewMonitorActionRuleSuppressionConditionDescriptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleSuppressionConditionDescriptionOutputReference
 ```
@@ -2809,7 +2809,7 @@ func InternalValue() MonitorActionRuleSuppressionConditionDescription
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionMonitorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.NewMonitorActionRuleSuppressionConditionMonitorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleSuppressionConditionMonitorOutputReference
 ```
@@ -3102,7 +3102,7 @@ func InternalValue() MonitorActionRuleSuppressionConditionMonitor
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionMonitorServiceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.NewMonitorActionRuleSuppressionConditionMonitorServiceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleSuppressionConditionMonitorServiceOutputReference
 ```
@@ -3395,7 +3395,7 @@ func InternalValue() MonitorActionRuleSuppressionConditionMonitorService
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.NewMonitorActionRuleSuppressionConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleSuppressionConditionOutputReference
 ```
@@ -3938,7 +3938,7 @@ func InternalValue() MonitorActionRuleSuppressionCondition
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionSeverityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.NewMonitorActionRuleSuppressionConditionSeverityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleSuppressionConditionSeverityOutputReference
 ```
@@ -4231,7 +4231,7 @@ func InternalValue() MonitorActionRuleSuppressionConditionSeverity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionConditionTargetResourceTypeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.NewMonitorActionRuleSuppressionConditionTargetResourceTypeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleSuppressionConditionTargetResourceTypeOutputReference
 ```
@@ -4524,7 +4524,7 @@ func InternalValue() MonitorActionRuleSuppressionConditionTargetResourceType
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionScopeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.NewMonitorActionRuleSuppressionScopeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleSuppressionScopeOutputReference
 ```
@@ -4817,7 +4817,7 @@ func InternalValue() MonitorActionRuleSuppressionScope
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppressionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.NewMonitorActionRuleSuppressionSuppressionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleSuppressionSuppressionOutputReference
 ```
@@ -5130,7 +5130,7 @@ func InternalValue() MonitorActionRuleSuppressionSuppression
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionSuppressionScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.NewMonitorActionRuleSuppressionSuppressionScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleSuppressionSuppressionScheduleOutputReference
 ```
@@ -5481,7 +5481,7 @@ func InternalValue() MonitorActionRuleSuppressionSuppressionSchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorActionRuleSuppression.MonitorActionRuleSuppressionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoractionrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitoractionrulesuppression"
 
 monitoractionrulesuppression.NewMonitorActionRuleSuppressionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorActionRuleSuppressionTimeoutsOutputReference
 ```

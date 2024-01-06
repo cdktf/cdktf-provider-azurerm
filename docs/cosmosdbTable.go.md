@@ -4,12 +4,12 @@
 
 ### CosmosdbTable <a name="CosmosdbTable" id="@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTable"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cosmosdb_table azurerm_cosmosdb_table}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_table azurerm_cosmosdb_table}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTable.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbtable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbtable"
 
 cosmosdbtable.NewCosmosdbTable(scope Construct, id *string, config CosmosdbTableConfig) CosmosdbTable
 ```
@@ -425,7 +425,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTable.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbtable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbtable"
 
 cosmosdbtable.CosmosdbTable_IsConstruct(x interface{}) *bool
 ```
@@ -457,7 +457,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTable.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbtable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbtable"
 
 cosmosdbtable.CosmosdbTable_IsTerraformElement(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ cosmosdbtable.CosmosdbTable_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTable.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbtable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbtable"
 
 cosmosdbtable.CosmosdbTable_IsTerraformResource(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ cosmosdbtable.CosmosdbTable_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTable.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbtable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbtable"
 
 cosmosdbtable.CosmosdbTable_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -514,7 +514,7 @@ The construct id used in the generated config for the CosmosdbTable to import.
 
 The id of the existing CosmosdbTable that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cosmosdb_table#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_table#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -868,7 +868,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableAutoscaleSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbtable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbtable"
 
 &cosmosdbtable.CosmosdbTableAutoscaleSettings {
 	MaxThroughput: *f64,
@@ -879,7 +879,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbtable"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableAutoscaleSettings.property.maxThroughput">MaxThroughput</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cosmosdb_table#max_throughput CosmosdbTable#max_throughput}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableAutoscaleSettings.property.maxThroughput">MaxThroughput</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_table#max_throughput CosmosdbTable#max_throughput}. |
 
 ---
 
@@ -891,7 +891,7 @@ MaxThroughput *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cosmosdb_table#max_throughput CosmosdbTable#max_throughput}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_table#max_throughput CosmosdbTable#max_throughput}.
 
 ---
 
@@ -900,7 +900,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbtable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbtable"
 
 &cosmosdbtable.CosmosdbTableConfig {
 	Connection: interface{},
@@ -913,10 +913,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbtable"
 	AccountName: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	AutoscaleSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.cosmosdbTable.CosmosdbTableAutoscaleSettings,
+	AutoscaleSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbTable.CosmosdbTableAutoscaleSettings,
 	Id: *string,
 	Throughput: *f64,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.cosmosdbTable.CosmosdbTableTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cosmosdbTable.CosmosdbTableTimeouts,
 }
 ```
 
@@ -931,12 +931,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbtable"
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableConfig.property.accountName">AccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cosmosdb_table#account_name CosmosdbTable#account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cosmosdb_table#name CosmosdbTable#name}. |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cosmosdb_table#resource_group_name CosmosdbTable#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableConfig.property.accountName">AccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_table#account_name CosmosdbTable#account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_table#name CosmosdbTable#name}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_table#resource_group_name CosmosdbTable#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableConfig.property.autoscaleSettings">AutoscaleSettings</a></code> | <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableAutoscaleSettings">CosmosdbTableAutoscaleSettings</a></code> | autoscale_settings block. |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cosmosdb_table#id CosmosdbTable#id}. |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableConfig.property.throughput">Throughput</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cosmosdb_table#throughput CosmosdbTable#throughput}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_table#id CosmosdbTable#id}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableConfig.property.throughput">Throughput</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_table#throughput CosmosdbTable#throughput}. |
 | <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableTimeouts">CosmosdbTableTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1019,7 +1019,7 @@ AccountName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cosmosdb_table#account_name CosmosdbTable#account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_table#account_name CosmosdbTable#account_name}.
 
 ---
 
@@ -1031,7 +1031,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cosmosdb_table#name CosmosdbTable#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_table#name CosmosdbTable#name}.
 
 ---
 
@@ -1043,7 +1043,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cosmosdb_table#resource_group_name CosmosdbTable#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_table#resource_group_name CosmosdbTable#resource_group_name}.
 
 ---
 
@@ -1057,7 +1057,7 @@ AutoscaleSettings CosmosdbTableAutoscaleSettings
 
 autoscale_settings block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cosmosdb_table#autoscale_settings CosmosdbTable#autoscale_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_table#autoscale_settings CosmosdbTable#autoscale_settings}
 
 ---
 
@@ -1069,7 +1069,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cosmosdb_table#id CosmosdbTable#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_table#id CosmosdbTable#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1084,7 +1084,7 @@ Throughput *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cosmosdb_table#throughput CosmosdbTable#throughput}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_table#throughput CosmosdbTable#throughput}.
 
 ---
 
@@ -1098,7 +1098,7 @@ Timeouts CosmosdbTableTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cosmosdb_table#timeouts CosmosdbTable#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_table#timeouts CosmosdbTable#timeouts}
 
 ---
 
@@ -1107,7 +1107,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbtable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbtable"
 
 &cosmosdbtable.CosmosdbTableTimeouts {
 	Create: *string,
@@ -1121,10 +1121,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbtable"
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cosmosdb_table#create CosmosdbTable#create}. |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cosmosdb_table#delete CosmosdbTable#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cosmosdb_table#read CosmosdbTable#read}. |
-| <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cosmosdb_table#update CosmosdbTable#update}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_table#create CosmosdbTable#create}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_table#delete CosmosdbTable#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_table#read CosmosdbTable#read}. |
+| <code><a href="#@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_table#update CosmosdbTable#update}. |
 
 ---
 
@@ -1136,7 +1136,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cosmosdb_table#create CosmosdbTable#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_table#create CosmosdbTable#create}.
 
 ---
 
@@ -1148,7 +1148,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cosmosdb_table#delete CosmosdbTable#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_table#delete CosmosdbTable#delete}.
 
 ---
 
@@ -1160,7 +1160,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cosmosdb_table#read CosmosdbTable#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_table#read CosmosdbTable#read}.
 
 ---
 
@@ -1172,7 +1172,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/cosmosdb_table#update CosmosdbTable#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/cosmosdb_table#update CosmosdbTable#update}.
 
 ---
 
@@ -1183,7 +1183,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableAutoscaleSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbtable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbtable"
 
 cosmosdbtable.NewCosmosdbTableAutoscaleSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbTableAutoscaleSettingsOutputReference
 ```
@@ -1461,7 +1461,7 @@ func InternalValue() CosmosdbTableAutoscaleSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cosmosdbTable.CosmosdbTableTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/cosmosdbtable"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cosmosdbtable"
 
 cosmosdbtable.NewCosmosdbTableTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CosmosdbTableTimeoutsOutputReference
 ```

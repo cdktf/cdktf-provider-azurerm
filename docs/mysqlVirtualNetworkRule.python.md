@@ -4,7 +4,7 @@
 
 ### MysqlVirtualNetworkRule <a name="MysqlVirtualNetworkRule" id="@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRule"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule azurerm_mysql_virtual_network_rule}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule azurerm_mysql_virtual_network_rule}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRule.Initializer"></a>
 
@@ -41,11 +41,11 @@ mysqlVirtualNetworkRule.MysqlVirtualNetworkRule(
 | <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRule.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRule.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRule.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRule.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#name MysqlVirtualNetworkRule#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRule.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#resource_group_name MysqlVirtualNetworkRule#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRule.Initializer.parameter.serverName">server_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#server_name MysqlVirtualNetworkRule#server_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRule.Initializer.parameter.subnetId">subnet_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#subnet_id MysqlVirtualNetworkRule#subnet_id}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRule.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#id MysqlVirtualNetworkRule#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRule.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#name MysqlVirtualNetworkRule#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRule.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#resource_group_name MysqlVirtualNetworkRule#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRule.Initializer.parameter.serverName">server_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#server_name MysqlVirtualNetworkRule#server_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRule.Initializer.parameter.subnetId">subnet_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#subnet_id MysqlVirtualNetworkRule#subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRule.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#id MysqlVirtualNetworkRule#id}. |
 | <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRule.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleTimeouts">MysqlVirtualNetworkRuleTimeouts</a></code> | timeouts block. |
 
 ---
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#name MysqlVirtualNetworkRule#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#name MysqlVirtualNetworkRule#name}.
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#resource_group_name MysqlVirtualNetworkRule#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#resource_group_name MysqlVirtualNetworkRule#resource_group_name}.
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#server_name MysqlVirtualNetworkRule#server_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#server_name MysqlVirtualNetworkRule#server_name}.
 
 ---
 
@@ -138,7 +138,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#subnet_id MysqlVirtualNetworkRule#subnet_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#subnet_id MysqlVirtualNetworkRule#subnet_id}.
 
 ---
 
@@ -146,7 +146,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#id MysqlVirtualNetworkRule#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#id MysqlVirtualNetworkRule#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -159,7 +159,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#timeouts MysqlVirtualNetworkRule#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#timeouts MysqlVirtualNetworkRule#timeouts}
 
 ---
 
@@ -529,7 +529,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#create MysqlVirtualNetworkRule#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#create MysqlVirtualNetworkRule#create}.
 
 ---
 
@@ -537,7 +537,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#delete MysqlVirtualNetworkRule#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#delete MysqlVirtualNetworkRule#delete}.
 
 ---
 
@@ -545,7 +545,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#read MysqlVirtualNetworkRule#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#read MysqlVirtualNetworkRule#read}.
 
 ---
 
@@ -553,7 +553,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#update MysqlVirtualNetworkRule#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#update MysqlVirtualNetworkRule#update}.
 
 ---
 
@@ -683,7 +683,7 @@ The construct id used in the generated config for the MysqlVirtualNetworkRule to
 
 The id of the existing MysqlVirtualNetworkRule that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1045,11 +1045,11 @@ mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleConfig(
 | <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#name MysqlVirtualNetworkRule#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#resource_group_name MysqlVirtualNetworkRule#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleConfig.property.serverName">server_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#server_name MysqlVirtualNetworkRule#server_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleConfig.property.subnetId">subnet_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#subnet_id MysqlVirtualNetworkRule#subnet_id}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#id MysqlVirtualNetworkRule#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#name MysqlVirtualNetworkRule#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#resource_group_name MysqlVirtualNetworkRule#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleConfig.property.serverName">server_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#server_name MysqlVirtualNetworkRule#server_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleConfig.property.subnetId">subnet_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#subnet_id MysqlVirtualNetworkRule#subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#id MysqlVirtualNetworkRule#id}. |
 | <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleTimeouts">MysqlVirtualNetworkRuleTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1132,7 +1132,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#name MysqlVirtualNetworkRule#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#name MysqlVirtualNetworkRule#name}.
 
 ---
 
@@ -1144,7 +1144,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#resource_group_name MysqlVirtualNetworkRule#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#resource_group_name MysqlVirtualNetworkRule#resource_group_name}.
 
 ---
 
@@ -1156,7 +1156,7 @@ server_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#server_name MysqlVirtualNetworkRule#server_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#server_name MysqlVirtualNetworkRule#server_name}.
 
 ---
 
@@ -1168,7 +1168,7 @@ subnet_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#subnet_id MysqlVirtualNetworkRule#subnet_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#subnet_id MysqlVirtualNetworkRule#subnet_id}.
 
 ---
 
@@ -1180,7 +1180,7 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#id MysqlVirtualNetworkRule#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#id MysqlVirtualNetworkRule#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1197,7 +1197,7 @@ timeouts: MysqlVirtualNetworkRuleTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#timeouts MysqlVirtualNetworkRule#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#timeouts MysqlVirtualNetworkRule#timeouts}
 
 ---
 
@@ -1220,10 +1220,10 @@ mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#create MysqlVirtualNetworkRule#create}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#delete MysqlVirtualNetworkRule#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#read MysqlVirtualNetworkRule#read}. |
-| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#update MysqlVirtualNetworkRule#update}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#create MysqlVirtualNetworkRule#create}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#delete MysqlVirtualNetworkRule#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#read MysqlVirtualNetworkRule#read}. |
+| <code><a href="#@cdktf/provider-azurerm.mysqlVirtualNetworkRule.MysqlVirtualNetworkRuleTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#update MysqlVirtualNetworkRule#update}. |
 
 ---
 
@@ -1235,7 +1235,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#create MysqlVirtualNetworkRule#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#create MysqlVirtualNetworkRule#create}.
 
 ---
 
@@ -1247,7 +1247,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#delete MysqlVirtualNetworkRule#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#delete MysqlVirtualNetworkRule#delete}.
 
 ---
 
@@ -1259,7 +1259,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#read MysqlVirtualNetworkRule#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#read MysqlVirtualNetworkRule#read}.
 
 ---
 
@@ -1271,7 +1271,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/mysql_virtual_network_rule#update MysqlVirtualNetworkRule#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/mysql_virtual_network_rule#update MysqlVirtualNetworkRule#update}.
 
 ---
 

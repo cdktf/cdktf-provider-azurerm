@@ -4,12 +4,12 @@
 
 ### MediaServicesAccountFilter <a name="MediaServicesAccountFilter" id="@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilter"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter azurerm_media_services_account_filter}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter azurerm_media_services_account_filter}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediaservicesaccountfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccountfilter"
 
 mediaservicesaccountfilter.NewMediaServicesAccountFilter(scope Construct, id *string, config MediaServicesAccountFilterConfig) MediaServicesAccountFilter
 ```
@@ -445,7 +445,7 @@ func ResetTrackSelection()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilter.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediaservicesaccountfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccountfilter"
 
 mediaservicesaccountfilter.MediaServicesAccountFilter_IsConstruct(x interface{}) *bool
 ```
@@ -477,7 +477,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilter.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediaservicesaccountfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccountfilter"
 
 mediaservicesaccountfilter.MediaServicesAccountFilter_IsTerraformElement(x interface{}) *bool
 ```
@@ -491,7 +491,7 @@ mediaservicesaccountfilter.MediaServicesAccountFilter_IsTerraformElement(x inter
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilter.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediaservicesaccountfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccountfilter"
 
 mediaservicesaccountfilter.MediaServicesAccountFilter_IsTerraformResource(x interface{}) *bool
 ```
@@ -505,7 +505,7 @@ mediaservicesaccountfilter.MediaServicesAccountFilter_IsTerraformResource(x inte
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilter.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediaservicesaccountfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccountfilter"
 
 mediaservicesaccountfilter.MediaServicesAccountFilter_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -534,7 +534,7 @@ The construct id used in the generated config for the MediaServicesAccountFilter
 
 The id of the existing MediaServicesAccountFilter that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -910,7 +910,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediaservicesaccountfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccountfilter"
 
 &mediaservicesaccountfilter.MediaServicesAccountFilterConfig {
 	Connection: interface{},
@@ -925,8 +925,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediaservicesacco
 	ResourceGroupName: *string,
 	FirstQualityBitrate: *f64,
 	Id: *string,
-	PresentationTimeRange: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaServicesAccountFilter.MediaServicesAccountFilterPresentationTimeRange,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaServicesAccountFilter.MediaServicesAccountFilterTimeouts,
+	PresentationTimeRange: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterPresentationTimeRange,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterTimeouts,
 	TrackSelection: interface{},
 }
 ```
@@ -942,11 +942,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediaservicesacco
 | <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterConfig.property.mediaServicesAccountName">MediaServicesAccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#media_services_account_name MediaServicesAccountFilter#media_services_account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#name MediaServicesAccountFilter#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#resource_group_name MediaServicesAccountFilter#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterConfig.property.firstQualityBitrate">FirstQualityBitrate</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#first_quality_bitrate MediaServicesAccountFilter#first_quality_bitrate}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#id MediaServicesAccountFilter#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterConfig.property.mediaServicesAccountName">MediaServicesAccountName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#media_services_account_name MediaServicesAccountFilter#media_services_account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#name MediaServicesAccountFilter#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#resource_group_name MediaServicesAccountFilter#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterConfig.property.firstQualityBitrate">FirstQualityBitrate</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#first_quality_bitrate MediaServicesAccountFilter#first_quality_bitrate}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#id MediaServicesAccountFilter#id}. |
 | <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterConfig.property.presentationTimeRange">PresentationTimeRange</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterPresentationTimeRange">MediaServicesAccountFilterPresentationTimeRange</a></code> | presentation_time_range block. |
 | <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterTimeouts">MediaServicesAccountFilterTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterConfig.property.trackSelection">TrackSelection</a></code> | <code>interface{}</code> | track_selection block. |
@@ -1031,7 +1031,7 @@ MediaServicesAccountName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#media_services_account_name MediaServicesAccountFilter#media_services_account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#media_services_account_name MediaServicesAccountFilter#media_services_account_name}.
 
 ---
 
@@ -1043,7 +1043,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#name MediaServicesAccountFilter#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#name MediaServicesAccountFilter#name}.
 
 ---
 
@@ -1055,7 +1055,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#resource_group_name MediaServicesAccountFilter#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#resource_group_name MediaServicesAccountFilter#resource_group_name}.
 
 ---
 
@@ -1067,7 +1067,7 @@ FirstQualityBitrate *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#first_quality_bitrate MediaServicesAccountFilter#first_quality_bitrate}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#first_quality_bitrate MediaServicesAccountFilter#first_quality_bitrate}.
 
 ---
 
@@ -1079,7 +1079,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#id MediaServicesAccountFilter#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#id MediaServicesAccountFilter#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1096,7 +1096,7 @@ PresentationTimeRange MediaServicesAccountFilterPresentationTimeRange
 
 presentation_time_range block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#presentation_time_range MediaServicesAccountFilter#presentation_time_range}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#presentation_time_range MediaServicesAccountFilter#presentation_time_range}
 
 ---
 
@@ -1110,7 +1110,7 @@ Timeouts MediaServicesAccountFilterTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#timeouts MediaServicesAccountFilter#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#timeouts MediaServicesAccountFilter#timeouts}
 
 ---
 
@@ -1124,7 +1124,7 @@ TrackSelection interface{}
 
 track_selection block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#track_selection MediaServicesAccountFilter#track_selection}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#track_selection MediaServicesAccountFilter#track_selection}
 
 ---
 
@@ -1133,7 +1133,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterPresentationTimeRange.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediaservicesaccountfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccountfilter"
 
 &mediaservicesaccountfilter.MediaServicesAccountFilterPresentationTimeRange {
 	UnitTimescaleInMilliseconds: *f64,
@@ -1149,12 +1149,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediaservicesacco
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterPresentationTimeRange.property.unitTimescaleInMilliseconds">UnitTimescaleInMilliseconds</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#unit_timescale_in_milliseconds MediaServicesAccountFilter#unit_timescale_in_milliseconds}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterPresentationTimeRange.property.endInUnits">EndInUnits</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#end_in_units MediaServicesAccountFilter#end_in_units}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterPresentationTimeRange.property.forceEnd">ForceEnd</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#force_end MediaServicesAccountFilter#force_end}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterPresentationTimeRange.property.liveBackoffInUnits">LiveBackoffInUnits</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#live_backoff_in_units MediaServicesAccountFilter#live_backoff_in_units}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterPresentationTimeRange.property.presentationWindowInUnits">PresentationWindowInUnits</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#presentation_window_in_units MediaServicesAccountFilter#presentation_window_in_units}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterPresentationTimeRange.property.startInUnits">StartInUnits</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#start_in_units MediaServicesAccountFilter#start_in_units}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterPresentationTimeRange.property.unitTimescaleInMilliseconds">UnitTimescaleInMilliseconds</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#unit_timescale_in_milliseconds MediaServicesAccountFilter#unit_timescale_in_milliseconds}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterPresentationTimeRange.property.endInUnits">EndInUnits</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#end_in_units MediaServicesAccountFilter#end_in_units}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterPresentationTimeRange.property.forceEnd">ForceEnd</a></code> | <code>interface{}</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#force_end MediaServicesAccountFilter#force_end}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterPresentationTimeRange.property.liveBackoffInUnits">LiveBackoffInUnits</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#live_backoff_in_units MediaServicesAccountFilter#live_backoff_in_units}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterPresentationTimeRange.property.presentationWindowInUnits">PresentationWindowInUnits</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#presentation_window_in_units MediaServicesAccountFilter#presentation_window_in_units}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterPresentationTimeRange.property.startInUnits">StartInUnits</a></code> | <code>*f64</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#start_in_units MediaServicesAccountFilter#start_in_units}. |
 
 ---
 
@@ -1166,7 +1166,7 @@ UnitTimescaleInMilliseconds *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#unit_timescale_in_milliseconds MediaServicesAccountFilter#unit_timescale_in_milliseconds}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#unit_timescale_in_milliseconds MediaServicesAccountFilter#unit_timescale_in_milliseconds}.
 
 ---
 
@@ -1178,7 +1178,7 @@ EndInUnits *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#end_in_units MediaServicesAccountFilter#end_in_units}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#end_in_units MediaServicesAccountFilter#end_in_units}.
 
 ---
 
@@ -1190,7 +1190,7 @@ ForceEnd interface{}
 
 - *Type:* interface{}
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#force_end MediaServicesAccountFilter#force_end}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#force_end MediaServicesAccountFilter#force_end}.
 
 ---
 
@@ -1202,7 +1202,7 @@ LiveBackoffInUnits *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#live_backoff_in_units MediaServicesAccountFilter#live_backoff_in_units}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#live_backoff_in_units MediaServicesAccountFilter#live_backoff_in_units}.
 
 ---
 
@@ -1214,7 +1214,7 @@ PresentationWindowInUnits *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#presentation_window_in_units MediaServicesAccountFilter#presentation_window_in_units}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#presentation_window_in_units MediaServicesAccountFilter#presentation_window_in_units}.
 
 ---
 
@@ -1226,7 +1226,7 @@ StartInUnits *f64
 
 - *Type:* *f64
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#start_in_units MediaServicesAccountFilter#start_in_units}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#start_in_units MediaServicesAccountFilter#start_in_units}.
 
 ---
 
@@ -1235,7 +1235,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediaservicesaccountfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccountfilter"
 
 &mediaservicesaccountfilter.MediaServicesAccountFilterTimeouts {
 	Create: *string,
@@ -1249,10 +1249,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediaservicesacco
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#create MediaServicesAccountFilter#create}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#delete MediaServicesAccountFilter#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#read MediaServicesAccountFilter#read}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#update MediaServicesAccountFilter#update}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#create MediaServicesAccountFilter#create}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#delete MediaServicesAccountFilter#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#read MediaServicesAccountFilter#read}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#update MediaServicesAccountFilter#update}. |
 
 ---
 
@@ -1264,7 +1264,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#create MediaServicesAccountFilter#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#create MediaServicesAccountFilter#create}.
 
 ---
 
@@ -1276,7 +1276,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#delete MediaServicesAccountFilter#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#delete MediaServicesAccountFilter#delete}.
 
 ---
 
@@ -1288,7 +1288,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#read MediaServicesAccountFilter#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#read MediaServicesAccountFilter#read}.
 
 ---
 
@@ -1300,7 +1300,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#update MediaServicesAccountFilter#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#update MediaServicesAccountFilter#update}.
 
 ---
 
@@ -1309,7 +1309,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterTrackSelection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediaservicesaccountfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccountfilter"
 
 &mediaservicesaccountfilter.MediaServicesAccountFilterTrackSelection {
 	Condition: interface{},
@@ -1334,7 +1334,7 @@ Condition interface{}
 
 condition block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#condition MediaServicesAccountFilter#condition}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#condition MediaServicesAccountFilter#condition}
 
 ---
 
@@ -1343,7 +1343,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterTrackSelectionCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediaservicesaccountfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccountfilter"
 
 &mediaservicesaccountfilter.MediaServicesAccountFilterTrackSelectionCondition {
 	Operation: *string,
@@ -1356,9 +1356,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediaservicesacco
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterTrackSelectionCondition.property.operation">Operation</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#operation MediaServicesAccountFilter#operation}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterTrackSelectionCondition.property.property">Property</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#property MediaServicesAccountFilter#property}. |
-| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterTrackSelectionCondition.property.value">Value</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#value MediaServicesAccountFilter#value}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterTrackSelectionCondition.property.operation">Operation</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#operation MediaServicesAccountFilter#operation}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterTrackSelectionCondition.property.property">Property</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#property MediaServicesAccountFilter#property}. |
+| <code><a href="#@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterTrackSelectionCondition.property.value">Value</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#value MediaServicesAccountFilter#value}. |
 
 ---
 
@@ -1370,7 +1370,7 @@ Operation *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#operation MediaServicesAccountFilter#operation}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#operation MediaServicesAccountFilter#operation}.
 
 ---
 
@@ -1382,7 +1382,7 @@ Property *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#property MediaServicesAccountFilter#property}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#property MediaServicesAccountFilter#property}.
 
 ---
 
@@ -1394,7 +1394,7 @@ Value *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/media_services_account_filter#value MediaServicesAccountFilter#value}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/media_services_account_filter#value MediaServicesAccountFilter#value}.
 
 ---
 
@@ -1405,7 +1405,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterPresentationTimeRangeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediaservicesaccountfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccountfilter"
 
 mediaservicesaccountfilter.NewMediaServicesAccountFilterPresentationTimeRangeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaServicesAccountFilterPresentationTimeRangeOutputReference
 ```
@@ -1821,7 +1821,7 @@ func InternalValue() MediaServicesAccountFilterPresentationTimeRange
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediaservicesaccountfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccountfilter"
 
 mediaservicesaccountfilter.NewMediaServicesAccountFilterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaServicesAccountFilterTimeoutsOutputReference
 ```
@@ -2186,7 +2186,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterTrackSelectionConditionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediaservicesaccountfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccountfilter"
 
 mediaservicesaccountfilter.NewMediaServicesAccountFilterTrackSelectionConditionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaServicesAccountFilterTrackSelectionConditionList
 ```
@@ -2329,7 +2329,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterTrackSelectionConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediaservicesaccountfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccountfilter"
 
 mediaservicesaccountfilter.NewMediaServicesAccountFilterTrackSelectionConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaServicesAccountFilterTrackSelectionConditionOutputReference
 ```
@@ -2662,7 +2662,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterTrackSelectionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediaservicesaccountfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccountfilter"
 
 mediaservicesaccountfilter.NewMediaServicesAccountFilterTrackSelectionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaServicesAccountFilterTrackSelectionList
 ```
@@ -2805,7 +2805,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaServicesAccountFilter.MediaServicesAccountFilterTrackSelectionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediaservicesaccountfilter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mediaservicesaccountfilter"
 
 mediaservicesaccountfilter.NewMediaServicesAccountFilterTrackSelectionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaServicesAccountFilterTrackSelectionOutputReference
 ```

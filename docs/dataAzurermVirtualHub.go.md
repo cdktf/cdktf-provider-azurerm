@@ -4,12 +4,12 @@
 
 ### DataAzurermVirtualHub <a name="DataAzurermVirtualHub" id="@cdktf/provider-azurerm.dataAzurermVirtualHub.DataAzurermVirtualHub"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/virtual_hub azurerm_virtual_hub}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/virtual_hub azurerm_virtual_hub}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVirtualHub.DataAzurermVirtualHub.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvirtualhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualhub"
 
 dataazurermvirtualhub.NewDataAzurermVirtualHub(scope Construct, id *string, config DataAzurermVirtualHubConfig) DataAzurermVirtualHub
 ```
@@ -294,7 +294,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermVirtualHub.DataAzurermVirtualHub.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvirtualhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualhub"
 
 dataazurermvirtualhub.DataAzurermVirtualHub_IsConstruct(x interface{}) *bool
 ```
@@ -326,7 +326,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermVirtualHub.DataAzurermVirtualHub.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvirtualhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualhub"
 
 dataazurermvirtualhub.DataAzurermVirtualHub_IsTerraformElement(x interface{}) *bool
 ```
@@ -340,7 +340,7 @@ dataazurermvirtualhub.DataAzurermVirtualHub_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermVirtualHub.DataAzurermVirtualHub.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvirtualhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualhub"
 
 dataazurermvirtualhub.DataAzurermVirtualHub_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -354,7 +354,7 @@ dataazurermvirtualhub.DataAzurermVirtualHub_IsTerraformDataSource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermVirtualHub.DataAzurermVirtualHub.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvirtualhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualhub"
 
 dataazurermvirtualhub.DataAzurermVirtualHub_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -383,7 +383,7 @@ The construct id used in the generated config for the DataAzurermVirtualHub to i
 
 The id of the existing DataAzurermVirtualHub that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/virtual_hub#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/virtual_hub#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -726,7 +726,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermVirtualHub.DataAzurermVirtualHubConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvirtualhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualhub"
 
 &dataazurermvirtualhub.DataAzurermVirtualHubConfig {
 	Connection: interface{},
@@ -739,7 +739,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvirtua
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermVirtualHub.DataAzurermVirtualHubTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermVirtualHub.DataAzurermVirtualHubTimeouts,
 }
 ```
 
@@ -754,9 +754,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvirtua
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualHub.DataAzurermVirtualHubConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualHub.DataAzurermVirtualHubConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualHub.DataAzurermVirtualHubConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualHub.DataAzurermVirtualHubConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/virtual_hub#name DataAzurermVirtualHub#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualHub.DataAzurermVirtualHubConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/virtual_hub#resource_group_name DataAzurermVirtualHub#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualHub.DataAzurermVirtualHubConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/virtual_hub#id DataAzurermVirtualHub#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualHub.DataAzurermVirtualHubConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/virtual_hub#name DataAzurermVirtualHub#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualHub.DataAzurermVirtualHubConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/virtual_hub#resource_group_name DataAzurermVirtualHub#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualHub.DataAzurermVirtualHubConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/virtual_hub#id DataAzurermVirtualHub#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualHub.DataAzurermVirtualHubConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualHub.DataAzurermVirtualHubTimeouts">DataAzurermVirtualHubTimeouts</a></code> | timeouts block. |
 
 ---
@@ -839,7 +839,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/virtual_hub#name DataAzurermVirtualHub#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/virtual_hub#name DataAzurermVirtualHub#name}.
 
 ---
 
@@ -851,7 +851,7 @@ ResourceGroupName *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/virtual_hub#resource_group_name DataAzurermVirtualHub#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/virtual_hub#resource_group_name DataAzurermVirtualHub#resource_group_name}.
 
 ---
 
@@ -863,7 +863,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/virtual_hub#id DataAzurermVirtualHub#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/virtual_hub#id DataAzurermVirtualHub#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -880,7 +880,7 @@ Timeouts DataAzurermVirtualHubTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/virtual_hub#timeouts DataAzurermVirtualHub#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/virtual_hub#timeouts DataAzurermVirtualHub#timeouts}
 
 ---
 
@@ -889,7 +889,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermVirtualHub.DataAzurermVirtualHubTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvirtualhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualhub"
 
 &dataazurermvirtualhub.DataAzurermVirtualHubTimeouts {
 	Read: *string,
@@ -900,7 +900,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvirtua
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualHub.DataAzurermVirtualHubTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/virtual_hub#read DataAzurermVirtualHub#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermVirtualHub.DataAzurermVirtualHubTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/virtual_hub#read DataAzurermVirtualHub#read}. |
 
 ---
 
@@ -912,7 +912,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/virtual_hub#read DataAzurermVirtualHub#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/virtual_hub#read DataAzurermVirtualHub#read}.
 
 ---
 
@@ -923,7 +923,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermVirtualHub.DataAzurermVirtualHubTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermvirtualhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermvirtualhub"
 
 dataazurermvirtualhub.NewDataAzurermVirtualHubTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermVirtualHubTimeoutsOutputReference
 ```
