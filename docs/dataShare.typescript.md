@@ -4,7 +4,7 @@
 
 ### DataShare <a name="DataShare" id="@cdktf/provider-azurerm.dataShare.DataShare"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share azurerm_data_share}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share azurerm_data_share}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataShare.DataShare.Initializer"></a>
 
@@ -521,7 +521,7 @@ The construct id used in the generated config for the DataShare to import.
 
 The id of the existing DataShare that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -913,13 +913,13 @@ const dataShareConfig: dataShare.DataShareConfig = { ... }
 | <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareConfig.property.accountId">accountId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#account_id DataShare#account_id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareConfig.property.kind">kind</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#kind DataShare#kind}. |
-| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#name DataShare#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareConfig.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#description DataShare#description}. |
-| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#id DataShare#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareConfig.property.accountId">accountId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#account_id DataShare#account_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareConfig.property.kind">kind</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#kind DataShare#kind}. |
+| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareConfig.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#name DataShare#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareConfig.property.description">description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#description DataShare#description}. |
+| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#id DataShare#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareConfig.property.snapshotSchedule">snapshotSchedule</a></code> | <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareSnapshotSchedule">DataShareSnapshotSchedule</a></code> | snapshot_schedule block. |
-| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareConfig.property.terms">terms</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#terms DataShare#terms}. |
+| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareConfig.property.terms">terms</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#terms DataShare#terms}. |
 | <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareTimeouts">DataShareTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1002,7 +1002,7 @@ public readonly accountId: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#account_id DataShare#account_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#account_id DataShare#account_id}.
 
 ---
 
@@ -1014,7 +1014,7 @@ public readonly kind: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#kind DataShare#kind}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#kind DataShare#kind}.
 
 ---
 
@@ -1026,7 +1026,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#name DataShare#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#name DataShare#name}.
 
 ---
 
@@ -1038,7 +1038,7 @@ public readonly description: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#description DataShare#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#description DataShare#description}.
 
 ---
 
@@ -1050,7 +1050,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#id DataShare#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#id DataShare#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1067,7 +1067,7 @@ public readonly snapshotSchedule: DataShareSnapshotSchedule;
 
 snapshot_schedule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#snapshot_schedule DataShare#snapshot_schedule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#snapshot_schedule DataShare#snapshot_schedule}
 
 ---
 
@@ -1079,7 +1079,7 @@ public readonly terms: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#terms DataShare#terms}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#terms DataShare#terms}.
 
 ---
 
@@ -1093,7 +1093,7 @@ public readonly timeouts: DataShareTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#timeouts DataShare#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#timeouts DataShare#timeouts}
 
 ---
 
@@ -1111,9 +1111,9 @@ const dataShareSnapshotSchedule: dataShare.DataShareSnapshotSchedule = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareSnapshotSchedule.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#name DataShare#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareSnapshotSchedule.property.recurrence">recurrence</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#recurrence DataShare#recurrence}. |
-| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareSnapshotSchedule.property.startTime">startTime</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#start_time DataShare#start_time}. |
+| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareSnapshotSchedule.property.name">name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#name DataShare#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareSnapshotSchedule.property.recurrence">recurrence</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#recurrence DataShare#recurrence}. |
+| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareSnapshotSchedule.property.startTime">startTime</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#start_time DataShare#start_time}. |
 
 ---
 
@@ -1125,7 +1125,7 @@ public readonly name: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#name DataShare#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#name DataShare#name}.
 
 ---
 
@@ -1137,7 +1137,7 @@ public readonly recurrence: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#recurrence DataShare#recurrence}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#recurrence DataShare#recurrence}.
 
 ---
 
@@ -1149,7 +1149,7 @@ public readonly startTime: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#start_time DataShare#start_time}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#start_time DataShare#start_time}.
 
 ---
 
@@ -1167,10 +1167,10 @@ const dataShareTimeouts: dataShare.DataShareTimeouts = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#create DataShare#create}. |
-| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#delete DataShare#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#read DataShare#read}. |
-| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#update DataShare#update}. |
+| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#create DataShare#create}. |
+| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#delete DataShare#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#read DataShare#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataShare.DataShareTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#update DataShare#update}. |
 
 ---
 
@@ -1182,7 +1182,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#create DataShare#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#create DataShare#create}.
 
 ---
 
@@ -1194,7 +1194,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#delete DataShare#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#delete DataShare#delete}.
 
 ---
 
@@ -1206,7 +1206,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#read DataShare#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#read DataShare#read}.
 
 ---
 
@@ -1218,7 +1218,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/data_share#update DataShare#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/data_share#update DataShare#update}.
 
 ---
 

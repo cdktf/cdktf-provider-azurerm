@@ -4,7 +4,7 @@
 
 ### DataAzurermMobileNetworkSlice <a name="DataAzurermMobileNetworkSlice" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSlice.DataAzurermMobileNetworkSlice"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/mobile_network_slice azurerm_mobile_network_slice}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/mobile_network_slice azurerm_mobile_network_slice}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkSlice.DataAzurermMobileNetworkSlice.Initializer"></a>
 
@@ -383,7 +383,7 @@ The construct id used in the generated config for the DataAzurermMobileNetworkSl
 
 The id of the existing DataAzurermMobileNetworkSlice that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/mobile_network_slice#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/mobile_network_slice#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -721,9 +721,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobile
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSlice.DataAzurermMobileNetworkSliceConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSlice.DataAzurermMobileNetworkSliceConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSlice.DataAzurermMobileNetworkSliceConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSlice.DataAzurermMobileNetworkSliceConfig.property.mobileNetworkId">MobileNetworkId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/mobile_network_slice#mobile_network_id DataAzurermMobileNetworkSlice#mobile_network_id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSlice.DataAzurermMobileNetworkSliceConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/mobile_network_slice#name DataAzurermMobileNetworkSlice#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSlice.DataAzurermMobileNetworkSliceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/mobile_network_slice#id DataAzurermMobileNetworkSlice#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSlice.DataAzurermMobileNetworkSliceConfig.property.mobileNetworkId">MobileNetworkId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/mobile_network_slice#mobile_network_id DataAzurermMobileNetworkSlice#mobile_network_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSlice.DataAzurermMobileNetworkSliceConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/mobile_network_slice#name DataAzurermMobileNetworkSlice#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSlice.DataAzurermMobileNetworkSliceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/mobile_network_slice#id DataAzurermMobileNetworkSlice#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSlice.DataAzurermMobileNetworkSliceConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSlice.DataAzurermMobileNetworkSliceTimeouts">DataAzurermMobileNetworkSliceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -806,7 +806,7 @@ MobileNetworkId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/mobile_network_slice#mobile_network_id DataAzurermMobileNetworkSlice#mobile_network_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/mobile_network_slice#mobile_network_id DataAzurermMobileNetworkSlice#mobile_network_id}.
 
 ---
 
@@ -818,7 +818,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/mobile_network_slice#name DataAzurermMobileNetworkSlice#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/mobile_network_slice#name DataAzurermMobileNetworkSlice#name}.
 
 ---
 
@@ -830,7 +830,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/mobile_network_slice#id DataAzurermMobileNetworkSlice#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/mobile_network_slice#id DataAzurermMobileNetworkSlice#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -847,7 +847,7 @@ Timeouts DataAzurermMobileNetworkSliceTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/mobile_network_slice#timeouts DataAzurermMobileNetworkSlice#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/mobile_network_slice#timeouts DataAzurermMobileNetworkSlice#timeouts}
 
 ---
 
@@ -880,7 +880,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermmobile
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSlice.DataAzurermMobileNetworkSliceTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/mobile_network_slice#read DataAzurermMobileNetworkSlice#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkSlice.DataAzurermMobileNetworkSliceTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/mobile_network_slice#read DataAzurermMobileNetworkSlice#read}. |
 
 ---
 
@@ -892,7 +892,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/data-sources/mobile_network_slice#read DataAzurermMobileNetworkSlice#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/data-sources/mobile_network_slice#read DataAzurermMobileNetworkSlice#read}.
 
 ---
 

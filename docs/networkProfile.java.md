@@ -4,7 +4,7 @@
 
 ### NetworkProfile <a name="NetworkProfile" id="@cdktf/provider-azurerm.networkProfile.NetworkProfile"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile azurerm_network_profile}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile azurerm_network_profile}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkProfile.NetworkProfile.Initializer"></a>
 
@@ -45,11 +45,11 @@ NetworkProfile.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfile.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfile.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfile.Initializer.parameter.containerNetworkInterface">containerNetworkInterface</a></code> | <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileContainerNetworkInterface">NetworkProfileContainerNetworkInterface</a></code> | container_network_interface block. |
-| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfile.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#location NetworkProfile#location}. |
-| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfile.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#name NetworkProfile#name}. |
-| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfile.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#resource_group_name NetworkProfile#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfile.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#id NetworkProfile#id}. |
-| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfile.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#tags NetworkProfile#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfile.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#location NetworkProfile#location}. |
+| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfile.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#name NetworkProfile#name}. |
+| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfile.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#resource_group_name NetworkProfile#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfile.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#id NetworkProfile#id}. |
+| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfile.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#tags NetworkProfile#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfile.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileTimeouts">NetworkProfileTimeouts</a></code> | timeouts block. |
 
 ---
@@ -120,7 +120,7 @@ Must be unique amongst siblings in the same scope
 
 container_network_interface block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#container_network_interface NetworkProfile#container_network_interface}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#container_network_interface NetworkProfile#container_network_interface}
 
 ---
 
@@ -128,7 +128,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#location NetworkProfile#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#location NetworkProfile#location}.
 
 ---
 
@@ -136,7 +136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#name NetworkProfile#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#name NetworkProfile#name}.
 
 ---
 
@@ -144,7 +144,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#resource_group_name NetworkProfile#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#resource_group_name NetworkProfile#resource_group_name}.
 
 ---
 
@@ -152,7 +152,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#id NetworkProfile#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#id NetworkProfile#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -163,7 +163,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#tags NetworkProfile#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#tags NetworkProfile#tags}.
 
 ---
 
@@ -173,7 +173,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#timeouts NetworkProfile#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#timeouts NetworkProfile#timeouts}
 
 ---
 
@@ -640,7 +640,7 @@ The construct id used in the generated config for the NetworkProfile to import.
 
 The id of the existing NetworkProfile that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1041,11 +1041,11 @@ NetworkProfileConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileConfig.property.containerNetworkInterface">containerNetworkInterface</a></code> | <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileContainerNetworkInterface">NetworkProfileContainerNetworkInterface</a></code> | container_network_interface block. |
-| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#location NetworkProfile#location}. |
-| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#name NetworkProfile#name}. |
-| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#resource_group_name NetworkProfile#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#id NetworkProfile#id}. |
-| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#tags NetworkProfile#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#location NetworkProfile#location}. |
+| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#name NetworkProfile#name}. |
+| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#resource_group_name NetworkProfile#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#id NetworkProfile#id}. |
+| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#tags NetworkProfile#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileTimeouts">NetworkProfileTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1130,7 +1130,7 @@ public NetworkProfileContainerNetworkInterface getContainerNetworkInterface();
 
 container_network_interface block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#container_network_interface NetworkProfile#container_network_interface}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#container_network_interface NetworkProfile#container_network_interface}
 
 ---
 
@@ -1142,7 +1142,7 @@ public java.lang.String getLocation();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#location NetworkProfile#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#location NetworkProfile#location}.
 
 ---
 
@@ -1154,7 +1154,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#name NetworkProfile#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#name NetworkProfile#name}.
 
 ---
 
@@ -1166,7 +1166,7 @@ public java.lang.String getResourceGroupName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#resource_group_name NetworkProfile#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#resource_group_name NetworkProfile#resource_group_name}.
 
 ---
 
@@ -1178,7 +1178,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#id NetworkProfile#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#id NetworkProfile#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1193,7 +1193,7 @@ public java.util.Map<java.lang.String, java.lang.String> getTags();
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#tags NetworkProfile#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#tags NetworkProfile#tags}.
 
 ---
 
@@ -1207,7 +1207,7 @@ public NetworkProfileTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#timeouts NetworkProfile#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#timeouts NetworkProfile#timeouts}
 
 ---
 
@@ -1230,7 +1230,7 @@ NetworkProfileContainerNetworkInterface.builder()
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileContainerNetworkInterface.property.ipConfiguration">ipConfiguration</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileContainerNetworkInterfaceIpConfiguration">NetworkProfileContainerNetworkInterfaceIpConfiguration</a>></code> | ip_configuration block. |
-| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileContainerNetworkInterface.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#name NetworkProfile#name}. |
+| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileContainerNetworkInterface.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#name NetworkProfile#name}. |
 
 ---
 
@@ -1244,7 +1244,7 @@ public java.lang.Object getIpConfiguration();
 
 ip_configuration block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#ip_configuration NetworkProfile#ip_configuration}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#ip_configuration NetworkProfile#ip_configuration}
 
 ---
 
@@ -1256,7 +1256,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#name NetworkProfile#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#name NetworkProfile#name}.
 
 ---
 
@@ -1277,8 +1277,8 @@ NetworkProfileContainerNetworkInterfaceIpConfiguration.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileContainerNetworkInterfaceIpConfiguration.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#name NetworkProfile#name}. |
-| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileContainerNetworkInterfaceIpConfiguration.property.subnetId">subnetId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#subnet_id NetworkProfile#subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileContainerNetworkInterfaceIpConfiguration.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#name NetworkProfile#name}. |
+| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileContainerNetworkInterfaceIpConfiguration.property.subnetId">subnetId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#subnet_id NetworkProfile#subnet_id}. |
 
 ---
 
@@ -1290,7 +1290,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#name NetworkProfile#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#name NetworkProfile#name}.
 
 ---
 
@@ -1302,7 +1302,7 @@ public java.lang.String getSubnetId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#subnet_id NetworkProfile#subnet_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#subnet_id NetworkProfile#subnet_id}.
 
 ---
 
@@ -1325,10 +1325,10 @@ NetworkProfileTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#create NetworkProfile#create}. |
-| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#delete NetworkProfile#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#read NetworkProfile#read}. |
-| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#update NetworkProfile#update}. |
+| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#create NetworkProfile#create}. |
+| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#delete NetworkProfile#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#read NetworkProfile#read}. |
+| <code><a href="#@cdktf/provider-azurerm.networkProfile.NetworkProfileTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#update NetworkProfile#update}. |
 
 ---
 
@@ -1340,7 +1340,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#create NetworkProfile#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#create NetworkProfile#create}.
 
 ---
 
@@ -1352,7 +1352,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#delete NetworkProfile#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#delete NetworkProfile#delete}.
 
 ---
 
@@ -1364,7 +1364,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#read NetworkProfile#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#read NetworkProfile#read}.
 
 ---
 
@@ -1376,7 +1376,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_profile#update NetworkProfile#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_profile#update NetworkProfile#update}.
 
 ---
 

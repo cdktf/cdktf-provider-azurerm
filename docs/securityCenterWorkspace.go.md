@@ -4,7 +4,7 @@
 
 ### SecurityCenterWorkspace <a name="SecurityCenterWorkspace" id="@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspace"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_workspace azurerm_security_center_workspace}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_workspace azurerm_security_center_workspace}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspace.Initializer"></a>
 
@@ -487,7 +487,7 @@ The construct id used in the generated config for the SecurityCenterWorkspace to
 
 The id of the existing SecurityCenterWorkspace that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_workspace#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_workspace#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -803,9 +803,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/securitycenterwor
 | <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.property.scope">Scope</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_workspace#scope SecurityCenterWorkspace#scope}. |
-| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.property.workspaceId">WorkspaceId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_workspace#workspace_id SecurityCenterWorkspace#workspace_id}. |
-| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_workspace#id SecurityCenterWorkspace#id}. |
+| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.property.scope">Scope</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_workspace#scope SecurityCenterWorkspace#scope}. |
+| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.property.workspaceId">WorkspaceId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_workspace#workspace_id SecurityCenterWorkspace#workspace_id}. |
+| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_workspace#id SecurityCenterWorkspace#id}. |
 | <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceTimeouts">SecurityCenterWorkspaceTimeouts</a></code> | timeouts block. |
 
 ---
@@ -888,7 +888,7 @@ Scope *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_workspace#scope SecurityCenterWorkspace#scope}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_workspace#scope SecurityCenterWorkspace#scope}.
 
 ---
 
@@ -900,7 +900,7 @@ WorkspaceId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_workspace#workspace_id SecurityCenterWorkspace#workspace_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_workspace#workspace_id SecurityCenterWorkspace#workspace_id}.
 
 ---
 
@@ -912,7 +912,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_workspace#id SecurityCenterWorkspace#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_workspace#id SecurityCenterWorkspace#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -929,7 +929,7 @@ Timeouts SecurityCenterWorkspaceTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_workspace#timeouts SecurityCenterWorkspace#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_workspace#timeouts SecurityCenterWorkspace#timeouts}
 
 ---
 
@@ -952,10 +952,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/securitycenterwor
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_workspace#create SecurityCenterWorkspace#create}. |
-| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_workspace#delete SecurityCenterWorkspace#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_workspace#read SecurityCenterWorkspace#read}. |
-| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_workspace#update SecurityCenterWorkspace#update}. |
+| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_workspace#create SecurityCenterWorkspace#create}. |
+| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_workspace#delete SecurityCenterWorkspace#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_workspace#read SecurityCenterWorkspace#read}. |
+| <code><a href="#@cdktf/provider-azurerm.securityCenterWorkspace.SecurityCenterWorkspaceTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_workspace#update SecurityCenterWorkspace#update}. |
 
 ---
 
@@ -967,7 +967,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_workspace#create SecurityCenterWorkspace#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_workspace#create SecurityCenterWorkspace#create}.
 
 ---
 
@@ -979,7 +979,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_workspace#delete SecurityCenterWorkspace#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_workspace#delete SecurityCenterWorkspace#delete}.
 
 ---
 
@@ -991,7 +991,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_workspace#read SecurityCenterWorkspace#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_workspace#read SecurityCenterWorkspace#read}.
 
 ---
 
@@ -1003,7 +1003,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_workspace#update SecurityCenterWorkspace#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_workspace#update SecurityCenterWorkspace#update}.
 
 ---
 

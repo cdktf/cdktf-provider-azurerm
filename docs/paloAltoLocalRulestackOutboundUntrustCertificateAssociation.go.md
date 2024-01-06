@@ -4,7 +4,7 @@
 
 ### PaloAltoLocalRulestackOutboundUntrustCertificateAssociation <a name="PaloAltoLocalRulestackOutboundUntrustCertificateAssociation" id="@cdktf/provider-azurerm.paloAltoLocalRulestackOutboundUntrustCertificateAssociation.PaloAltoLocalRulestackOutboundUntrustCertificateAssociation"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/palo_alto_local_rulestack_outbound_untrust_certificate_association azurerm_palo_alto_local_rulestack_outbound_untrust_certificate_association}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/palo_alto_local_rulestack_outbound_untrust_certificate_association azurerm_palo_alto_local_rulestack_outbound_untrust_certificate_association}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.paloAltoLocalRulestackOutboundUntrustCertificateAssociation.PaloAltoLocalRulestackOutboundUntrustCertificateAssociation.Initializer"></a>
 
@@ -487,7 +487,7 @@ The construct id used in the generated config for the PaloAltoLocalRulestackOutb
 
 The id of the existing PaloAltoLocalRulestackOutboundUntrustCertificateAssociation that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/palo_alto_local_rulestack_outbound_untrust_certificate_association#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/palo_alto_local_rulestack_outbound_untrust_certificate_association#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -780,8 +780,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltolocalrule
 | <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackOutboundUntrustCertificateAssociation.PaloAltoLocalRulestackOutboundUntrustCertificateAssociationConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackOutboundUntrustCertificateAssociation.PaloAltoLocalRulestackOutboundUntrustCertificateAssociationConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackOutboundUntrustCertificateAssociation.PaloAltoLocalRulestackOutboundUntrustCertificateAssociationConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackOutboundUntrustCertificateAssociation.PaloAltoLocalRulestackOutboundUntrustCertificateAssociationConfig.property.certificateId">CertificateId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/palo_alto_local_rulestack_outbound_untrust_certificate_association#certificate_id PaloAltoLocalRulestackOutboundUntrustCertificateAssociation#certificate_id}. |
-| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackOutboundUntrustCertificateAssociation.PaloAltoLocalRulestackOutboundUntrustCertificateAssociationConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/palo_alto_local_rulestack_outbound_untrust_certificate_association#id PaloAltoLocalRulestackOutboundUntrustCertificateAssociation#id}. |
+| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackOutboundUntrustCertificateAssociation.PaloAltoLocalRulestackOutboundUntrustCertificateAssociationConfig.property.certificateId">CertificateId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/palo_alto_local_rulestack_outbound_untrust_certificate_association#certificate_id PaloAltoLocalRulestackOutboundUntrustCertificateAssociation#certificate_id}. |
+| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackOutboundUntrustCertificateAssociation.PaloAltoLocalRulestackOutboundUntrustCertificateAssociationConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/palo_alto_local_rulestack_outbound_untrust_certificate_association#id PaloAltoLocalRulestackOutboundUntrustCertificateAssociation#id}. |
 | <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackOutboundUntrustCertificateAssociation.PaloAltoLocalRulestackOutboundUntrustCertificateAssociationConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackOutboundUntrustCertificateAssociation.PaloAltoLocalRulestackOutboundUntrustCertificateAssociationTimeouts">PaloAltoLocalRulestackOutboundUntrustCertificateAssociationTimeouts</a></code> | timeouts block. |
 
 ---
@@ -864,7 +864,7 @@ CertificateId *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/palo_alto_local_rulestack_outbound_untrust_certificate_association#certificate_id PaloAltoLocalRulestackOutboundUntrustCertificateAssociation#certificate_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/palo_alto_local_rulestack_outbound_untrust_certificate_association#certificate_id PaloAltoLocalRulestackOutboundUntrustCertificateAssociation#certificate_id}.
 
 ---
 
@@ -876,7 +876,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/palo_alto_local_rulestack_outbound_untrust_certificate_association#id PaloAltoLocalRulestackOutboundUntrustCertificateAssociation#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/palo_alto_local_rulestack_outbound_untrust_certificate_association#id PaloAltoLocalRulestackOutboundUntrustCertificateAssociation#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -893,7 +893,7 @@ Timeouts PaloAltoLocalRulestackOutboundUntrustCertificateAssociationTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/palo_alto_local_rulestack_outbound_untrust_certificate_association#timeouts PaloAltoLocalRulestackOutboundUntrustCertificateAssociation#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/palo_alto_local_rulestack_outbound_untrust_certificate_association#timeouts PaloAltoLocalRulestackOutboundUntrustCertificateAssociation#timeouts}
 
 ---
 
@@ -915,9 +915,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/paloaltolocalrule
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackOutboundUntrustCertificateAssociation.PaloAltoLocalRulestackOutboundUntrustCertificateAssociationTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/palo_alto_local_rulestack_outbound_untrust_certificate_association#create PaloAltoLocalRulestackOutboundUntrustCertificateAssociation#create}. |
-| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackOutboundUntrustCertificateAssociation.PaloAltoLocalRulestackOutboundUntrustCertificateAssociationTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/palo_alto_local_rulestack_outbound_untrust_certificate_association#delete PaloAltoLocalRulestackOutboundUntrustCertificateAssociation#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackOutboundUntrustCertificateAssociation.PaloAltoLocalRulestackOutboundUntrustCertificateAssociationTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/palo_alto_local_rulestack_outbound_untrust_certificate_association#read PaloAltoLocalRulestackOutboundUntrustCertificateAssociation#read}. |
+| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackOutboundUntrustCertificateAssociation.PaloAltoLocalRulestackOutboundUntrustCertificateAssociationTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/palo_alto_local_rulestack_outbound_untrust_certificate_association#create PaloAltoLocalRulestackOutboundUntrustCertificateAssociation#create}. |
+| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackOutboundUntrustCertificateAssociation.PaloAltoLocalRulestackOutboundUntrustCertificateAssociationTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/palo_alto_local_rulestack_outbound_untrust_certificate_association#delete PaloAltoLocalRulestackOutboundUntrustCertificateAssociation#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.paloAltoLocalRulestackOutboundUntrustCertificateAssociation.PaloAltoLocalRulestackOutboundUntrustCertificateAssociationTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/palo_alto_local_rulestack_outbound_untrust_certificate_association#read PaloAltoLocalRulestackOutboundUntrustCertificateAssociation#read}. |
 
 ---
 
@@ -929,7 +929,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/palo_alto_local_rulestack_outbound_untrust_certificate_association#create PaloAltoLocalRulestackOutboundUntrustCertificateAssociation#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/palo_alto_local_rulestack_outbound_untrust_certificate_association#create PaloAltoLocalRulestackOutboundUntrustCertificateAssociation#create}.
 
 ---
 
@@ -941,7 +941,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/palo_alto_local_rulestack_outbound_untrust_certificate_association#delete PaloAltoLocalRulestackOutboundUntrustCertificateAssociation#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/palo_alto_local_rulestack_outbound_untrust_certificate_association#delete PaloAltoLocalRulestackOutboundUntrustCertificateAssociation#delete}.
 
 ---
 
@@ -953,7 +953,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/palo_alto_local_rulestack_outbound_untrust_certificate_association#read PaloAltoLocalRulestackOutboundUntrustCertificateAssociation#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/palo_alto_local_rulestack_outbound_untrust_certificate_association#read PaloAltoLocalRulestackOutboundUntrustCertificateAssociation#read}.
 
 ---
 

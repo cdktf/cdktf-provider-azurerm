@@ -4,7 +4,7 @@
 
 ### SecurityCenterSetting <a name="SecurityCenterSetting" id="@cdktf/provider-azurerm.securityCenterSetting.SecurityCenterSetting"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_setting azurerm_security_center_setting}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_setting azurerm_security_center_setting}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.securityCenterSetting.SecurityCenterSetting.Initializer"></a>
 
@@ -487,7 +487,7 @@ The construct id used in the generated config for the SecurityCenterSetting to i
 
 The id of the existing SecurityCenterSetting that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_setting#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_setting#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -791,9 +791,9 @@ const securityCenterSettingConfig: securityCenterSetting.SecurityCenterSettingCo
 | <code><a href="#@cdktf/provider-azurerm.securityCenterSetting.SecurityCenterSettingConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.securityCenterSetting.SecurityCenterSettingConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.securityCenterSetting.SecurityCenterSettingConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.securityCenterSetting.SecurityCenterSettingConfig.property.enabled">enabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_setting#enabled SecurityCenterSetting#enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.securityCenterSetting.SecurityCenterSettingConfig.property.settingName">settingName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_setting#setting_name SecurityCenterSetting#setting_name}. |
-| <code><a href="#@cdktf/provider-azurerm.securityCenterSetting.SecurityCenterSettingConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_setting#id SecurityCenterSetting#id}. |
+| <code><a href="#@cdktf/provider-azurerm.securityCenterSetting.SecurityCenterSettingConfig.property.enabled">enabled</a></code> | <code>boolean \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_setting#enabled SecurityCenterSetting#enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.securityCenterSetting.SecurityCenterSettingConfig.property.settingName">settingName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_setting#setting_name SecurityCenterSetting#setting_name}. |
+| <code><a href="#@cdktf/provider-azurerm.securityCenterSetting.SecurityCenterSettingConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_setting#id SecurityCenterSetting#id}. |
 | <code><a href="#@cdktf/provider-azurerm.securityCenterSetting.SecurityCenterSettingConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.securityCenterSetting.SecurityCenterSettingTimeouts">SecurityCenterSettingTimeouts</a></code> | timeouts block. |
 
 ---
@@ -876,7 +876,7 @@ public readonly enabled: boolean | IResolvable;
 
 - *Type:* boolean | cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_setting#enabled SecurityCenterSetting#enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_setting#enabled SecurityCenterSetting#enabled}.
 
 ---
 
@@ -888,7 +888,7 @@ public readonly settingName: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_setting#setting_name SecurityCenterSetting#setting_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_setting#setting_name SecurityCenterSetting#setting_name}.
 
 ---
 
@@ -900,7 +900,7 @@ public readonly id: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_setting#id SecurityCenterSetting#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_setting#id SecurityCenterSetting#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -917,7 +917,7 @@ public readonly timeouts: SecurityCenterSettingTimeouts;
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_setting#timeouts SecurityCenterSetting#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_setting#timeouts SecurityCenterSetting#timeouts}
 
 ---
 
@@ -935,10 +935,10 @@ const securityCenterSettingTimeouts: securityCenterSetting.SecurityCenterSetting
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.securityCenterSetting.SecurityCenterSettingTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_setting#create SecurityCenterSetting#create}. |
-| <code><a href="#@cdktf/provider-azurerm.securityCenterSetting.SecurityCenterSettingTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_setting#delete SecurityCenterSetting#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.securityCenterSetting.SecurityCenterSettingTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_setting#read SecurityCenterSetting#read}. |
-| <code><a href="#@cdktf/provider-azurerm.securityCenterSetting.SecurityCenterSettingTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_setting#update SecurityCenterSetting#update}. |
+| <code><a href="#@cdktf/provider-azurerm.securityCenterSetting.SecurityCenterSettingTimeouts.property.create">create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_setting#create SecurityCenterSetting#create}. |
+| <code><a href="#@cdktf/provider-azurerm.securityCenterSetting.SecurityCenterSettingTimeouts.property.delete">delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_setting#delete SecurityCenterSetting#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.securityCenterSetting.SecurityCenterSettingTimeouts.property.read">read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_setting#read SecurityCenterSetting#read}. |
+| <code><a href="#@cdktf/provider-azurerm.securityCenterSetting.SecurityCenterSettingTimeouts.property.update">update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_setting#update SecurityCenterSetting#update}. |
 
 ---
 
@@ -950,7 +950,7 @@ public readonly create: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_setting#create SecurityCenterSetting#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_setting#create SecurityCenterSetting#create}.
 
 ---
 
@@ -962,7 +962,7 @@ public readonly delete: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_setting#delete SecurityCenterSetting#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_setting#delete SecurityCenterSetting#delete}.
 
 ---
 
@@ -974,7 +974,7 @@ public readonly read: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_setting#read SecurityCenterSetting#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_setting#read SecurityCenterSetting#read}.
 
 ---
 
@@ -986,7 +986,7 @@ public readonly update: string;
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/security_center_setting#update SecurityCenterSetting#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/security_center_setting#update SecurityCenterSetting#update}.
 
 ---
 

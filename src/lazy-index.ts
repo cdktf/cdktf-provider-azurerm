@@ -115,6 +115,7 @@ Object.defineProperty(exports, 'automationHybridRunbookWorker', { get: function 
 Object.defineProperty(exports, 'automationHybridRunbookWorkerGroup', { get: function () { return require('./automation-hybrid-runbook-worker-group'); } });
 Object.defineProperty(exports, 'automationJobSchedule', { get: function () { return require('./automation-job-schedule'); } });
 Object.defineProperty(exports, 'automationModule', { get: function () { return require('./automation-module'); } });
+Object.defineProperty(exports, 'automationPowershell72Module', { get: function () { return require('./automation-powershell72-module'); } });
 Object.defineProperty(exports, 'automationPython3Package', { get: function () { return require('./automation-python3-package'); } });
 Object.defineProperty(exports, 'automationRunbook', { get: function () { return require('./automation-runbook'); } });
 Object.defineProperty(exports, 'automationSchedule', { get: function () { return require('./automation-schedule'); } });
@@ -230,6 +231,7 @@ Object.defineProperty(exports, 'customProvider', { get: function () { return req
 Object.defineProperty(exports, 'dashboard', { get: function () { return require('./dashboard'); } });
 Object.defineProperty(exports, 'dashboardGrafana', { get: function () { return require('./dashboard-grafana'); } });
 Object.defineProperty(exports, 'dataFactory', { get: function () { return require('./data-factory'); } });
+Object.defineProperty(exports, 'dataFactoryCredentialUserManagedIdentity', { get: function () { return require('./data-factory-credential-user-managed-identity'); } });
 Object.defineProperty(exports, 'dataFactoryCustomDataset', { get: function () { return require('./data-factory-custom-dataset'); } });
 Object.defineProperty(exports, 'dataFactoryDataFlow', { get: function () { return require('./data-factory-data-flow'); } });
 Object.defineProperty(exports, 'dataFactoryDatasetAzureBlob', { get: function () { return require('./data-factory-dataset-azure-blob'); } });
@@ -498,6 +500,7 @@ Object.defineProperty(exports, 'logAnalyticsSavedSearch', { get: function () { r
 Object.defineProperty(exports, 'logAnalyticsSolution', { get: function () { return require('./log-analytics-solution'); } });
 Object.defineProperty(exports, 'logAnalyticsStorageInsights', { get: function () { return require('./log-analytics-storage-insights'); } });
 Object.defineProperty(exports, 'logAnalyticsWorkspace', { get: function () { return require('./log-analytics-workspace'); } });
+Object.defineProperty(exports, 'logAnalyticsWorkspaceTable', { get: function () { return require('./log-analytics-workspace-table'); } });
 Object.defineProperty(exports, 'logicAppActionCustom', { get: function () { return require('./logic-app-action-custom'); } });
 Object.defineProperty(exports, 'logicAppActionHttp', { get: function () { return require('./logic-app-action-http'); } });
 Object.defineProperty(exports, 'logicAppIntegrationAccount', { get: function () { return require('./logic-app-integration-account'); } });
@@ -1115,6 +1118,7 @@ Object.defineProperty(exports, 'dataAzurermCosmosdbMongoDatabase', { get: functi
 Object.defineProperty(exports, 'dataAzurermCosmosdbRestorableDatabaseAccounts', { get: function () { return require('./data-azurerm-cosmosdb-restorable-database-accounts'); } });
 Object.defineProperty(exports, 'dataAzurermCosmosdbSqlDatabase', { get: function () { return require('./data-azurerm-cosmosdb-sql-database'); } });
 Object.defineProperty(exports, 'dataAzurermCosmosdbSqlRoleDefinition', { get: function () { return require('./data-azurerm-cosmosdb-sql-role-definition'); } });
+Object.defineProperty(exports, 'dataAzurermDashboardGrafana', { get: function () { return require('./data-azurerm-dashboard-grafana'); } });
 Object.defineProperty(exports, 'dataAzurermDataFactory', { get: function () { return require('./data-azurerm-data-factory'); } });
 Object.defineProperty(exports, 'dataAzurermDataProtectionBackupVault', { get: function () { return require('./data-azurerm-data-protection-backup-vault'); } });
 Object.defineProperty(exports, 'dataAzurermDataShare', { get: function () { return require('./data-azurerm-data-share'); } });

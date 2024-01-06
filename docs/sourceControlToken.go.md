@@ -4,7 +4,7 @@
 
 ### SourceControlToken <a name="SourceControlToken" id="@cdktf/provider-azurerm.sourceControlToken.SourceControlToken"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/source_control_token azurerm_source_control_token}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/source_control_token azurerm_source_control_token}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.sourceControlToken.SourceControlToken.Initializer"></a>
 
@@ -494,7 +494,7 @@ The construct id used in the generated config for the SourceControlToken to impo
 
 The id of the existing SourceControlToken that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/source_control_token#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/source_control_token#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -833,11 +833,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sourcecontroltoke
 | <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenConfig.property.token">Token</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/source_control_token#token SourceControlToken#token}. |
-| <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenConfig.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/source_control_token#type SourceControlToken#type}. |
-| <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/source_control_token#id SourceControlToken#id}. |
+| <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenConfig.property.token">Token</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/source_control_token#token SourceControlToken#token}. |
+| <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenConfig.property.type">Type</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/source_control_token#type SourceControlToken#type}. |
+| <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/source_control_token#id SourceControlToken#id}. |
 | <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenTimeouts">SourceControlTokenTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenConfig.property.tokenSecret">TokenSecret</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/source_control_token#token_secret SourceControlToken#token_secret}. |
+| <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenConfig.property.tokenSecret">TokenSecret</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/source_control_token#token_secret SourceControlToken#token_secret}. |
 
 ---
 
@@ -919,7 +919,7 @@ Token *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/source_control_token#token SourceControlToken#token}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/source_control_token#token SourceControlToken#token}.
 
 ---
 
@@ -931,7 +931,7 @@ Type *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/source_control_token#type SourceControlToken#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/source_control_token#type SourceControlToken#type}.
 
 ---
 
@@ -943,7 +943,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/source_control_token#id SourceControlToken#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/source_control_token#id SourceControlToken#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -960,7 +960,7 @@ Timeouts SourceControlTokenTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/source_control_token#timeouts SourceControlToken#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/source_control_token#timeouts SourceControlToken#timeouts}
 
 ---
 
@@ -972,7 +972,7 @@ TokenSecret *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/source_control_token#token_secret SourceControlToken#token_secret}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/source_control_token#token_secret SourceControlToken#token_secret}.
 
 ---
 
@@ -995,10 +995,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/sourcecontroltoke
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/source_control_token#create SourceControlToken#create}. |
-| <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/source_control_token#delete SourceControlToken#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/source_control_token#read SourceControlToken#read}. |
-| <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/source_control_token#update SourceControlToken#update}. |
+| <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/source_control_token#create SourceControlToken#create}. |
+| <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/source_control_token#delete SourceControlToken#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/source_control_token#read SourceControlToken#read}. |
+| <code><a href="#@cdktf/provider-azurerm.sourceControlToken.SourceControlTokenTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/source_control_token#update SourceControlToken#update}. |
 
 ---
 
@@ -1010,7 +1010,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/source_control_token#create SourceControlToken#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/source_control_token#create SourceControlToken#create}.
 
 ---
 
@@ -1022,7 +1022,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/source_control_token#delete SourceControlToken#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/source_control_token#delete SourceControlToken#delete}.
 
 ---
 
@@ -1034,7 +1034,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/source_control_token#read SourceControlToken#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/source_control_token#read SourceControlToken#read}.
 
 ---
 
@@ -1046,7 +1046,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/source_control_token#update SourceControlToken#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/source_control_token#update SourceControlToken#update}.
 
 ---
 

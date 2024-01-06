@@ -4,7 +4,7 @@
 
 ### NetworkManager <a name="NetworkManager" id="@cdktf/provider-azurerm.networkManager.NetworkManager"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager azurerm_network_manager}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager azurerm_network_manager}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkManager.NetworkManager.Initializer"></a>
 
@@ -514,7 +514,7 @@ The construct id used in the generated config for the NetworkManager to import.
 
 The id of the existing NetworkManager that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -956,14 +956,14 @@ new NetworkManagerConfig {
 | <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#location NetworkManager#location}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#name NetworkManager#name}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#resource_group_name NetworkManager#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#location NetworkManager#location}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#name NetworkManager#name}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#resource_group_name NetworkManager#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerConfig.property.scope">Scope</a></code> | <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerScope">NetworkManagerScope</a></code> | scope block. |
-| <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerConfig.property.scopeAccesses">ScopeAccesses</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#scope_accesses NetworkManager#scope_accesses}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerConfig.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#description NetworkManager#description}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#id NetworkManager#id}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#tags NetworkManager#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerConfig.property.scopeAccesses">ScopeAccesses</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#scope_accesses NetworkManager#scope_accesses}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerConfig.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#description NetworkManager#description}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#id NetworkManager#id}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#tags NetworkManager#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerTimeouts">NetworkManagerTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1046,7 +1046,7 @@ public string Location { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#location NetworkManager#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#location NetworkManager#location}.
 
 ---
 
@@ -1058,7 +1058,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#name NetworkManager#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#name NetworkManager#name}.
 
 ---
 
@@ -1070,7 +1070,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#resource_group_name NetworkManager#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#resource_group_name NetworkManager#resource_group_name}.
 
 ---
 
@@ -1084,7 +1084,7 @@ public NetworkManagerScope Scope { get; set; }
 
 scope block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#scope NetworkManager#scope}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#scope NetworkManager#scope}
 
 ---
 
@@ -1096,7 +1096,7 @@ public string[] ScopeAccesses { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#scope_accesses NetworkManager#scope_accesses}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#scope_accesses NetworkManager#scope_accesses}.
 
 ---
 
@@ -1108,7 +1108,7 @@ public string Description { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#description NetworkManager#description}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#description NetworkManager#description}.
 
 ---
 
@@ -1120,7 +1120,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#id NetworkManager#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#id NetworkManager#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1135,7 +1135,7 @@ public System.Collections.Generic.IDictionary<string, string> Tags { get; set; }
 
 - *Type:* System.Collections.Generic.IDictionary<string, string>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#tags NetworkManager#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#tags NetworkManager#tags}.
 
 ---
 
@@ -1149,7 +1149,7 @@ public NetworkManagerTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#timeouts NetworkManager#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#timeouts NetworkManager#timeouts}
 
 ---
 
@@ -1183,8 +1183,8 @@ new NetworkManagerScope {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerScope.property.managementGroupIds">ManagementGroupIds</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#management_group_ids NetworkManager#management_group_ids}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerScope.property.subscriptionIds">SubscriptionIds</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#subscription_ids NetworkManager#subscription_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerScope.property.managementGroupIds">ManagementGroupIds</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#management_group_ids NetworkManager#management_group_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerScope.property.subscriptionIds">SubscriptionIds</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#subscription_ids NetworkManager#subscription_ids}. |
 
 ---
 
@@ -1196,7 +1196,7 @@ public string[] ManagementGroupIds { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#management_group_ids NetworkManager#management_group_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#management_group_ids NetworkManager#management_group_ids}.
 
 ---
 
@@ -1208,7 +1208,7 @@ public string[] SubscriptionIds { get; set; }
 
 - *Type:* string[]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#subscription_ids NetworkManager#subscription_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#subscription_ids NetworkManager#subscription_ids}.
 
 ---
 
@@ -1231,10 +1231,10 @@ new NetworkManagerTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#create NetworkManager#create}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#delete NetworkManager#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#read NetworkManager#read}. |
-| <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#update NetworkManager#update}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#create NetworkManager#create}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#delete NetworkManager#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#read NetworkManager#read}. |
+| <code><a href="#@cdktf/provider-azurerm.networkManager.NetworkManagerTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#update NetworkManager#update}. |
 
 ---
 
@@ -1246,7 +1246,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#create NetworkManager#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#create NetworkManager#create}.
 
 ---
 
@@ -1258,7 +1258,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#delete NetworkManager#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#delete NetworkManager#delete}.
 
 ---
 
@@ -1270,7 +1270,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#read NetworkManager#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#read NetworkManager#read}.
 
 ---
 
@@ -1282,7 +1282,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.85.0/docs/resources/network_manager#update NetworkManager#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.86.0/docs/resources/network_manager#update NetworkManager#update}.
 
 ---
 
