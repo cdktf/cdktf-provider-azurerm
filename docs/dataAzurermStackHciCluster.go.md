@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStackHciCluster.DataAzurermStackHciCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstackhcicluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstackhcicluster"
 
 dataazurermstackhcicluster.NewDataAzurermStackHciCluster(scope Construct, id *string, config DataAzurermStackHciClusterConfig) DataAzurermStackHciCluster
 ```
@@ -294,7 +294,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermStackHciCluster.DataAzurermStackHciCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstackhcicluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstackhcicluster"
 
 dataazurermstackhcicluster.DataAzurermStackHciCluster_IsConstruct(x interface{}) *bool
 ```
@@ -326,7 +326,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermStackHciCluster.DataAzurermStackHciCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstackhcicluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstackhcicluster"
 
 dataazurermstackhcicluster.DataAzurermStackHciCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -340,7 +340,7 @@ dataazurermstackhcicluster.DataAzurermStackHciCluster_IsTerraformElement(x inter
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermStackHciCluster.DataAzurermStackHciCluster.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstackhcicluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstackhcicluster"
 
 dataazurermstackhcicluster.DataAzurermStackHciCluster_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -354,7 +354,7 @@ dataazurermstackhcicluster.DataAzurermStackHciCluster_IsTerraformDataSource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermStackHciCluster.DataAzurermStackHciCluster.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstackhcicluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstackhcicluster"
 
 dataazurermstackhcicluster.DataAzurermStackHciCluster_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -704,7 +704,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermStackHciCluster.DataAzurermStackHciClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstackhcicluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstackhcicluster"
 
 &dataazurermstackhcicluster.DataAzurermStackHciClusterConfig {
 	Connection: interface{},
@@ -717,7 +717,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstackhcicl
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermStackHciCluster.DataAzurermStackHciClusterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermStackHciCluster.DataAzurermStackHciClusterTimeouts,
 }
 ```
 
@@ -867,7 +867,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermStackHciCluster.DataAzurermStackHciClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstackhcicluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstackhcicluster"
 
 &dataazurermstackhcicluster.DataAzurermStackHciClusterTimeouts {
 	Read: *string,
@@ -901,7 +901,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStackHciCluster.DataAzurermStackHciClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermstackhcicluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstackhcicluster"
 
 dataazurermstackhcicluster.NewDataAzurermStackHciClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermStackHciClusterTimeoutsOutputReference
 ```

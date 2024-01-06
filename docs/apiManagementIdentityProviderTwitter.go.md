@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementIdentityProviderTwitter.ApiManagementIdentityProviderTwitter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovidertwitter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementidentityprovidertwitter"
 
 apimanagementidentityprovidertwitter.NewApiManagementIdentityProviderTwitter(scope Construct, id *string, config ApiManagementIdentityProviderTwitterConfig) ApiManagementIdentityProviderTwitter
 ```
@@ -398,7 +398,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.apiManagementIdentityProviderTwitter.ApiManagementIdentityProviderTwitter.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovidertwitter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementidentityprovidertwitter"
 
 apimanagementidentityprovidertwitter.ApiManagementIdentityProviderTwitter_IsConstruct(x interface{}) *bool
 ```
@@ -430,7 +430,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.apiManagementIdentityProviderTwitter.ApiManagementIdentityProviderTwitter.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovidertwitter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementidentityprovidertwitter"
 
 apimanagementidentityprovidertwitter.ApiManagementIdentityProviderTwitter_IsTerraformElement(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ apimanagementidentityprovidertwitter.ApiManagementIdentityProviderTwitter_IsTerr
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.apiManagementIdentityProviderTwitter.ApiManagementIdentityProviderTwitter.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovidertwitter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementidentityprovidertwitter"
 
 apimanagementidentityprovidertwitter.ApiManagementIdentityProviderTwitter_IsTerraformResource(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ apimanagementidentityprovidertwitter.ApiManagementIdentityProviderTwitter_IsTerr
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.apiManagementIdentityProviderTwitter.ApiManagementIdentityProviderTwitter.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovidertwitter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementidentityprovidertwitter"
 
 apimanagementidentityprovidertwitter.ApiManagementIdentityProviderTwitter_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -819,7 +819,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementIdentityProviderTwitter.ApiManagementIdentityProviderTwitterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovidertwitter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementidentityprovidertwitter"
 
 &apimanagementidentityprovidertwitter.ApiManagementIdentityProviderTwitterConfig {
 	Connection: interface{},
@@ -834,7 +834,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentity
 	ApiSecretKey: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementIdentityProviderTwitter.ApiManagementIdentityProviderTwitterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.apiManagementIdentityProviderTwitter.ApiManagementIdentityProviderTwitterTimeouts,
 }
 ```
 
@@ -1010,7 +1010,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementIdentityProviderTwitter.ApiManagementIdentityProviderTwitterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovidertwitter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementidentityprovidertwitter"
 
 &apimanagementidentityprovidertwitter.ApiManagementIdentityProviderTwitterTimeouts {
 	Create: *string,
@@ -1086,7 +1086,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementIdentityProviderTwitter.ApiManagementIdentityProviderTwitterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementidentityprovidertwitter"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementidentityprovidertwitter"
 
 apimanagementidentityprovidertwitter.NewApiManagementIdentityProviderTwitterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementIdentityProviderTwitterTimeoutsOutputReference
 ```
