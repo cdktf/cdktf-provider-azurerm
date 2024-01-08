@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelslack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelslack"
 
 botchannelslack.NewBotChannelSlack(scope Construct, id *string, config BotChannelSlackConfig) BotChannelSlack
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelslack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelslack"
 
 botchannelslack.BotChannelSlack_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelslack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelslack"
 
 botchannelslack.BotChannelSlack_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ botchannelslack.BotChannelSlack_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelslack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelslack"
 
 botchannelslack.BotChannelSlack_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ botchannelslack.BotChannelSlack_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.botChannelSlack.BotChannelSlack.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelslack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelslack"
 
 botchannelslack.BotChannelSlack_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -921,7 +921,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelslack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelslack"
 
 &botchannelslack.BotChannelSlackConfig {
 	Connection: interface{},
@@ -940,7 +940,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelslack"
 	Id: *string,
 	LandingPageUrl: *string,
 	SigningSecret: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.botChannelSlack.BotChannelSlackTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.botChannelSlack.BotChannelSlackTimeouts,
 }
 ```
 
@@ -1168,7 +1168,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelslack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelslack"
 
 &botchannelslack.BotChannelSlackTimeouts {
 	Create: *string,
@@ -1244,7 +1244,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.botChannelSlack.BotChannelSlackTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botchannelslack"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/botchannelslack"
 
 botchannelslack.NewBotChannelSlackTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BotChannelSlackTimeoutsOutputReference
 ```

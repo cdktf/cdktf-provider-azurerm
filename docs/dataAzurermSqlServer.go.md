@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsqlserver"
 
 dataazurermsqlserver.NewDataAzurermSqlServer(scope Construct, id *string, config DataAzurermSqlServerConfig) DataAzurermSqlServer
 ```
@@ -294,7 +294,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServer.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsqlserver"
 
 dataazurermsqlserver.DataAzurermSqlServer_IsConstruct(x interface{}) *bool
 ```
@@ -326,7 +326,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServer.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsqlserver"
 
 dataazurermsqlserver.DataAzurermSqlServer_IsTerraformElement(x interface{}) *bool
 ```
@@ -340,7 +340,7 @@ dataazurermsqlserver.DataAzurermSqlServer_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServer.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsqlserver"
 
 dataazurermsqlserver.DataAzurermSqlServer_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -354,7 +354,7 @@ dataazurermsqlserver.DataAzurermSqlServer_IsTerraformDataSource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServer.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsqlserver"
 
 dataazurermsqlserver.DataAzurermSqlServer_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -715,7 +715,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsqlserver"
 
 &dataazurermsqlserver.DataAzurermSqlServerConfig {
 	Connection: interface{},
@@ -728,7 +728,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsqlser
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermSqlServer.DataAzurermSqlServerTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermSqlServer.DataAzurermSqlServerTimeouts,
 }
 ```
 
@@ -878,7 +878,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsqlserver"
 
 &dataazurermsqlserver.DataAzurermSqlServerIdentity {
 
@@ -891,7 +891,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsqlser
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsqlserver"
 
 &dataazurermsqlserver.DataAzurermSqlServerTimeouts {
 	Read: *string,
@@ -925,7 +925,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerIdentityList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsqlserver"
 
 dataazurermsqlserver.NewDataAzurermSqlServerIdentityList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermSqlServerIdentityList
 ```
@@ -1057,7 +1057,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsqlserver"
 
 dataazurermsqlserver.NewDataAzurermSqlServerIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermSqlServerIdentityOutputReference
 ```
@@ -1357,7 +1357,7 @@ func InternalValue() DataAzurermSqlServerIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermSqlServer.DataAzurermSqlServerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermsqlserver"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermsqlserver"
 
 dataazurermsqlserver.NewDataAzurermSqlServerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermSqlServerTimeoutsOutputReference
 ```

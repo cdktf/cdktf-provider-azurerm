@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.diskPool.DiskPool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/diskpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/diskpool"
 
 diskpool.NewDiskPool(scope Construct, id *string, config DiskPoolConfig) DiskPool
 ```
@@ -405,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.diskPool.DiskPool.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/diskpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/diskpool"
 
 diskpool.DiskPool_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.diskPool.DiskPool.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/diskpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/diskpool"
 
 diskpool.DiskPool_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ diskpool.DiskPool_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.diskPool.DiskPool.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/diskpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/diskpool"
 
 diskpool.DiskPool_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ diskpool.DiskPool_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.diskPool.DiskPool.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/diskpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/diskpool"
 
 diskpool.DiskPool_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -892,7 +892,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.diskPool.DiskPoolConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/diskpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/diskpool"
 
 &diskpool.DiskPoolConfig {
 	Connection: interface{},
@@ -910,7 +910,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/diskpool"
 	Zones: *[]*string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.diskPool.DiskPoolTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.diskPool.DiskPoolTimeouts,
 }
 ```
 
@@ -1125,7 +1125,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.diskPool.DiskPoolTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/diskpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/diskpool"
 
 &diskpool.DiskPoolTimeouts {
 	Create: *string,
@@ -1201,7 +1201,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.diskPool.DiskPoolTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/diskpool"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/diskpool"
 
 diskpool.NewDiskPoolTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DiskPoolTimeoutsOutputReference
 ```
