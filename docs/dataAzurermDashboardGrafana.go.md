@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDashboardGrafana.DataAzurermDashboardGrafana.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdashboardgrafana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdashboardgrafana"
 
 dataazurermdashboardgrafana.NewDataAzurermDashboardGrafana(scope Construct, id *string, config DataAzurermDashboardGrafanaConfig) DataAzurermDashboardGrafana
 ```
@@ -314,7 +314,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermDashboardGrafana.DataAzurermDashboardGrafana.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdashboardgrafana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdashboardgrafana"
 
 dataazurermdashboardgrafana.DataAzurermDashboardGrafana_IsConstruct(x interface{}) *bool
 ```
@@ -346,7 +346,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermDashboardGrafana.DataAzurermDashboardGrafana.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdashboardgrafana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdashboardgrafana"
 
 dataazurermdashboardgrafana.DataAzurermDashboardGrafana_IsTerraformElement(x interface{}) *bool
 ```
@@ -360,7 +360,7 @@ dataazurermdashboardgrafana.DataAzurermDashboardGrafana_IsTerraformElement(x int
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermDashboardGrafana.DataAzurermDashboardGrafana.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdashboardgrafana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdashboardgrafana"
 
 dataazurermdashboardgrafana.DataAzurermDashboardGrafana_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -374,7 +374,7 @@ dataazurermdashboardgrafana.DataAzurermDashboardGrafana_IsTerraformDataSource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermDashboardGrafana.DataAzurermDashboardGrafana.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdashboardgrafana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdashboardgrafana"
 
 dataazurermdashboardgrafana.DataAzurermDashboardGrafana_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -834,7 +834,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDashboardGrafana.DataAzurermDashboardGrafanaAzureMonitorWorkspaceIntegrations.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdashboardgrafana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdashboardgrafana"
 
 &dataazurermdashboardgrafana.DataAzurermDashboardGrafanaAzureMonitorWorkspaceIntegrations {
 
@@ -847,7 +847,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdashboardg
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDashboardGrafana.DataAzurermDashboardGrafanaConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdashboardgrafana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdashboardgrafana"
 
 &dataazurermdashboardgrafana.DataAzurermDashboardGrafanaConfig {
 	Connection: interface{},
@@ -860,8 +860,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdashboardg
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermDashboardGrafana.DataAzurermDashboardGrafanaIdentity,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermDashboardGrafana.DataAzurermDashboardGrafanaTimeouts,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermDashboardGrafana.DataAzurermDashboardGrafanaIdentity,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermDashboardGrafana.DataAzurermDashboardGrafanaTimeouts,
 }
 ```
 
@@ -1026,7 +1026,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDashboardGrafana.DataAzurermDashboardGrafanaIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdashboardgrafana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdashboardgrafana"
 
 &dataazurermdashboardgrafana.DataAzurermDashboardGrafanaIdentity {
 	Type: *string,
@@ -1072,7 +1072,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermDashboardGrafana.DataAzurermDashboardGrafanaTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdashboardgrafana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdashboardgrafana"
 
 &dataazurermdashboardgrafana.DataAzurermDashboardGrafanaTimeouts {
 	Read: *string,
@@ -1106,7 +1106,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDashboardGrafana.DataAzurermDashboardGrafanaAzureMonitorWorkspaceIntegrationsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdashboardgrafana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdashboardgrafana"
 
 dataazurermdashboardgrafana.NewDataAzurermDashboardGrafanaAzureMonitorWorkspaceIntegrationsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermDashboardGrafanaAzureMonitorWorkspaceIntegrationsList
 ```
@@ -1238,7 +1238,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDashboardGrafana.DataAzurermDashboardGrafanaAzureMonitorWorkspaceIntegrationsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdashboardgrafana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdashboardgrafana"
 
 dataazurermdashboardgrafana.NewDataAzurermDashboardGrafanaAzureMonitorWorkspaceIntegrationsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermDashboardGrafanaAzureMonitorWorkspaceIntegrationsOutputReference
 ```
@@ -1516,7 +1516,7 @@ func InternalValue() DataAzurermDashboardGrafanaAzureMonitorWorkspaceIntegration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDashboardGrafana.DataAzurermDashboardGrafanaIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdashboardgrafana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdashboardgrafana"
 
 dataazurermdashboardgrafana.NewDataAzurermDashboardGrafanaIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermDashboardGrafanaIdentityOutputReference
 ```
@@ -1838,7 +1838,7 @@ func InternalValue() DataAzurermDashboardGrafanaIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermDashboardGrafana.DataAzurermDashboardGrafanaTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermdashboardgrafana"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermdashboardgrafana"
 
 dataazurermdashboardgrafana.NewDataAzurermDashboardGrafanaTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermDashboardGrafanaTimeoutsOutputReference
 ```

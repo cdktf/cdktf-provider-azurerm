@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logAnalyticsSolution.LogAnalyticsSolution.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticssolution"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/loganalyticssolution"
 
 loganalyticssolution.NewLogAnalyticsSolution(scope Construct, id *string, config LogAnalyticsSolutionConfig) LogAnalyticsSolution
 ```
@@ -418,7 +418,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.logAnalyticsSolution.LogAnalyticsSolution.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticssolution"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/loganalyticssolution"
 
 loganalyticssolution.LogAnalyticsSolution_IsConstruct(x interface{}) *bool
 ```
@@ -450,7 +450,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.logAnalyticsSolution.LogAnalyticsSolution.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticssolution"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/loganalyticssolution"
 
 loganalyticssolution.LogAnalyticsSolution_IsTerraformElement(x interface{}) *bool
 ```
@@ -464,7 +464,7 @@ loganalyticssolution.LogAnalyticsSolution_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.logAnalyticsSolution.LogAnalyticsSolution.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticssolution"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/loganalyticssolution"
 
 loganalyticssolution.LogAnalyticsSolution_IsTerraformResource(x interface{}) *bool
 ```
@@ -478,7 +478,7 @@ loganalyticssolution.LogAnalyticsSolution_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.logAnalyticsSolution.LogAnalyticsSolution.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticssolution"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/loganalyticssolution"
 
 loganalyticssolution.LogAnalyticsSolution_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -905,7 +905,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logAnalyticsSolution.LogAnalyticsSolutionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticssolution"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/loganalyticssolution"
 
 &loganalyticssolution.LogAnalyticsSolutionConfig {
 	Connection: interface{},
@@ -916,14 +916,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticssolution"
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Location: *string,
-	Plan: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.logAnalyticsSolution.LogAnalyticsSolutionPlan,
+	Plan: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.logAnalyticsSolution.LogAnalyticsSolutionPlan,
 	ResourceGroupName: *string,
 	SolutionName: *string,
 	WorkspaceName: *string,
 	WorkspaceResourceId: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.logAnalyticsSolution.LogAnalyticsSolutionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.logAnalyticsSolution.LogAnalyticsSolutionTimeouts,
 }
 ```
 
@@ -1140,7 +1140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logAnalyticsSolution.LogAnalyticsSolutionPlan.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticssolution"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/loganalyticssolution"
 
 &loganalyticssolution.LogAnalyticsSolutionPlan {
 	Product: *string,
@@ -1200,7 +1200,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logAnalyticsSolution.LogAnalyticsSolutionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticssolution"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/loganalyticssolution"
 
 &loganalyticssolution.LogAnalyticsSolutionTimeouts {
 	Create: *string,
@@ -1276,7 +1276,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logAnalyticsSolution.LogAnalyticsSolutionPlanOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticssolution"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/loganalyticssolution"
 
 loganalyticssolution.NewLogAnalyticsSolutionPlanOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogAnalyticsSolutionPlanOutputReference
 ```
@@ -1609,7 +1609,7 @@ func InternalValue() LogAnalyticsSolutionPlan
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logAnalyticsSolution.LogAnalyticsSolutionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticssolution"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/loganalyticssolution"
 
 loganalyticssolution.NewLogAnalyticsSolutionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogAnalyticsSolutionTimeoutsOutputReference
 ```
