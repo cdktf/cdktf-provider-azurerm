@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSetting.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 monitorautoscalesetting.NewMonitorAutoscaleSetting(scope Construct, id *string, config MonitorAutoscaleSettingConfig) MonitorAutoscaleSetting
 ```
@@ -465,7 +465,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSetting.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 monitorautoscalesetting.MonitorAutoscaleSetting_IsConstruct(x interface{}) *bool
 ```
@@ -497,7 +497,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSetting.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 monitorautoscalesetting.MonitorAutoscaleSetting_IsTerraformElement(x interface{}) *bool
 ```
@@ -511,7 +511,7 @@ monitorautoscalesetting.MonitorAutoscaleSetting_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSetting.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 monitorautoscalesetting.MonitorAutoscaleSetting_IsTerraformResource(x interface{}) *bool
 ```
@@ -525,7 +525,7 @@ monitorautoscalesetting.MonitorAutoscaleSetting_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSetting.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 monitorautoscalesetting.MonitorAutoscaleSetting_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -996,7 +996,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 &monitorautoscalesetting.MonitorAutoscaleSettingConfig {
 	Connection: interface{},
@@ -1013,10 +1013,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscales
 	TargetResourceId: *string,
 	Enabled: interface{},
 	Id: *string,
-	Notification: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorAutoscaleSetting.MonitorAutoscaleSettingNotification,
-	Predictive: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorAutoscaleSetting.MonitorAutoscaleSettingPredictive,
+	Notification: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingNotification,
+	Predictive: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingPredictive,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorAutoscaleSetting.MonitorAutoscaleSettingTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingTimeouts,
 }
 ```
 
@@ -1263,10 +1263,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingNotification.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 &monitorautoscalesetting.MonitorAutoscaleSettingNotification {
-	Email: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorAutoscaleSetting.MonitorAutoscaleSettingNotificationEmail,
+	Email: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingNotificationEmail,
 	Webhook: interface{},
 }
 ```
@@ -1313,7 +1313,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingNotificationEmail.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 &monitorautoscalesetting.MonitorAutoscaleSettingNotificationEmail {
 	CustomEmails: *[]*string,
@@ -1373,7 +1373,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingNotificationWebhook.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 &monitorautoscalesetting.MonitorAutoscaleSettingNotificationWebhook {
 	ServiceUri: *string,
@@ -1419,7 +1419,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingPredictive.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 &monitorautoscalesetting.MonitorAutoscaleSettingPredictive {
 	ScaleMode: *string,
@@ -1465,13 +1465,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 &monitorautoscalesetting.MonitorAutoscaleSettingProfile {
-	Capacity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileCapacity,
+	Capacity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileCapacity,
 	Name: *string,
-	FixedDate: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileFixedDate,
-	Recurrence: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileRecurrence,
+	FixedDate: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileFixedDate,
+	Recurrence: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileRecurrence,
 	Rule: interface{},
 }
 ```
@@ -1561,7 +1561,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileCapacity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 &monitorautoscalesetting.MonitorAutoscaleSettingProfileCapacity {
 	Default: *f64,
@@ -1621,7 +1621,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileFixedDate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 &monitorautoscalesetting.MonitorAutoscaleSettingProfileFixedDate {
 	End: *string,
@@ -1681,7 +1681,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileRecurrence.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 &monitorautoscalesetting.MonitorAutoscaleSettingProfileRecurrence {
 	Days: *[]*string,
@@ -1755,11 +1755,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 &monitorautoscalesetting.MonitorAutoscaleSettingProfileRule {
-	MetricTrigger: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileRuleMetricTrigger,
-	ScaleAction: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileRuleScaleAction,
+	MetricTrigger: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileRuleMetricTrigger,
+	ScaleAction: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileRuleScaleAction,
 }
 ```
 
@@ -1805,7 +1805,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileRuleMetricTrigger.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 &monitorautoscalesetting.MonitorAutoscaleSettingProfileRuleMetricTrigger {
 	MetricName: *string,
@@ -1979,7 +1979,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileRuleMetricTriggerDimensions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 &monitorautoscalesetting.MonitorAutoscaleSettingProfileRuleMetricTriggerDimensions {
 	Name: *string,
@@ -2039,7 +2039,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileRuleScaleAction.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 &monitorautoscalesetting.MonitorAutoscaleSettingProfileRuleScaleAction {
 	Cooldown: *string,
@@ -2113,7 +2113,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 &monitorautoscalesetting.MonitorAutoscaleSettingTimeouts {
 	Create: *string,
@@ -2189,7 +2189,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingNotificationEmailOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 monitorautoscalesetting.NewMonitorAutoscaleSettingNotificationEmailOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorAutoscaleSettingNotificationEmailOutputReference
 ```
@@ -2525,7 +2525,7 @@ func InternalValue() MonitorAutoscaleSettingNotificationEmail
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingNotificationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 monitorautoscalesetting.NewMonitorAutoscaleSettingNotificationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorAutoscaleSettingNotificationOutputReference
 ```
@@ -2858,7 +2858,7 @@ func InternalValue() MonitorAutoscaleSettingNotification
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingNotificationWebhookList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 monitorautoscalesetting.NewMonitorAutoscaleSettingNotificationWebhookList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MonitorAutoscaleSettingNotificationWebhookList
 ```
@@ -3001,7 +3001,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingNotificationWebhookOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 monitorautoscalesetting.NewMonitorAutoscaleSettingNotificationWebhookOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MonitorAutoscaleSettingNotificationWebhookOutputReference
 ```
@@ -3319,7 +3319,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingPredictiveOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 monitorautoscalesetting.NewMonitorAutoscaleSettingPredictiveOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorAutoscaleSettingPredictiveOutputReference
 ```
@@ -3619,7 +3619,7 @@ func InternalValue() MonitorAutoscaleSettingPredictive
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileCapacityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 monitorautoscalesetting.NewMonitorAutoscaleSettingProfileCapacityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorAutoscaleSettingProfileCapacityOutputReference
 ```
@@ -3934,7 +3934,7 @@ func InternalValue() MonitorAutoscaleSettingProfileCapacity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileFixedDateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 monitorautoscalesetting.NewMonitorAutoscaleSettingProfileFixedDateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorAutoscaleSettingProfileFixedDateOutputReference
 ```
@@ -4256,7 +4256,7 @@ func InternalValue() MonitorAutoscaleSettingProfileFixedDate
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 monitorautoscalesetting.NewMonitorAutoscaleSettingProfileList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MonitorAutoscaleSettingProfileList
 ```
@@ -4399,7 +4399,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 monitorautoscalesetting.NewMonitorAutoscaleSettingProfileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MonitorAutoscaleSettingProfileOutputReference
 ```
@@ -4849,7 +4849,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileRecurrenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 monitorautoscalesetting.NewMonitorAutoscaleSettingProfileRecurrenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorAutoscaleSettingProfileRecurrenceOutputReference
 ```
@@ -5193,7 +5193,7 @@ func InternalValue() MonitorAutoscaleSettingProfileRecurrence
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 monitorautoscalesetting.NewMonitorAutoscaleSettingProfileRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MonitorAutoscaleSettingProfileRuleList
 ```
@@ -5336,7 +5336,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileRuleMetricTriggerDimensionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 monitorautoscalesetting.NewMonitorAutoscaleSettingProfileRuleMetricTriggerDimensionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MonitorAutoscaleSettingProfileRuleMetricTriggerDimensionsList
 ```
@@ -5479,7 +5479,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileRuleMetricTriggerDimensionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 monitorautoscalesetting.NewMonitorAutoscaleSettingProfileRuleMetricTriggerDimensionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MonitorAutoscaleSettingProfileRuleMetricTriggerDimensionsOutputReference
 ```
@@ -5812,7 +5812,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileRuleMetricTriggerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 monitorautoscalesetting.NewMonitorAutoscaleSettingProfileRuleMetricTriggerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorAutoscaleSettingProfileRuleMetricTriggerOutputReference
 ```
@@ -6337,7 +6337,7 @@ func InternalValue() MonitorAutoscaleSettingProfileRuleMetricTrigger
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 monitorautoscalesetting.NewMonitorAutoscaleSettingProfileRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MonitorAutoscaleSettingProfileRuleOutputReference
 ```
@@ -6674,7 +6674,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingProfileRuleScaleActionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 monitorautoscalesetting.NewMonitorAutoscaleSettingProfileRuleScaleActionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorAutoscaleSettingProfileRuleScaleActionOutputReference
 ```
@@ -7011,7 +7011,7 @@ func InternalValue() MonitorAutoscaleSettingProfileRuleScaleAction
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAutoscaleSetting.MonitorAutoscaleSettingTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitorautoscalesetting"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/monitorautoscalesetting"
 
 monitorautoscalesetting.NewMonitorAutoscaleSettingTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorAutoscaleSettingTimeoutsOutputReference
 ```

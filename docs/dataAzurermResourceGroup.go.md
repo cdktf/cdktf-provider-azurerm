@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresourcegroup"
 
 dataazurermresourcegroup.NewDataAzurermResourceGroup(scope Construct, id *string, config DataAzurermResourceGroupConfig) DataAzurermResourceGroup
 ```
@@ -294,7 +294,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresourcegroup"
 
 dataazurermresourcegroup.DataAzurermResourceGroup_IsConstruct(x interface{}) *bool
 ```
@@ -326,7 +326,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresourcegroup"
 
 dataazurermresourcegroup.DataAzurermResourceGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -340,7 +340,7 @@ dataazurermresourcegroup.DataAzurermResourceGroup_IsTerraformElement(x interface
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresourcegroup"
 
 dataazurermresourcegroup.DataAzurermResourceGroup_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -354,7 +354,7 @@ dataazurermresourcegroup.DataAzurermResourceGroup_IsTerraformDataSource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroup.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresourcegroup"
 
 dataazurermresourcegroup.DataAzurermResourceGroup_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -660,7 +660,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresourcegroup"
 
 &dataazurermresourcegroup.DataAzurermResourceGroupConfig {
 	Connection: interface{},
@@ -672,7 +672,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermresour
 	Provisioners: *[]interface{},
 	Name: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts,
 }
 ```
 
@@ -809,7 +809,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresourcegroup"
 
 &dataazurermresourcegroup.DataAzurermResourceGroupTimeouts {
 	Read: *string,
@@ -843,7 +843,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermResourceGroup.DataAzurermResourceGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermresourcegroup"
 
 dataazurermresourcegroup.NewDataAzurermResourceGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermResourceGroupTimeoutsOutputReference
 ```

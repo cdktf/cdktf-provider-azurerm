@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermServicebusNamespaceDisasterRecoveryConfig.DataAzurermServicebusNamespaceDisasterRecoveryConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermservicebusnamespacedisasterrecoveryconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermservicebusnamespacedisasterrecoveryconfig"
 
 dataazurermservicebusnamespacedisasterrecoveryconfig.NewDataAzurermServicebusNamespaceDisasterRecoveryConfig(scope Construct, id *string, config DataAzurermServicebusNamespaceDisasterRecoveryConfigConfig) DataAzurermServicebusNamespaceDisasterRecoveryConfig
 ```
@@ -322,7 +322,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermServicebusNamespaceDisasterRecoveryConfig.DataAzurermServicebusNamespaceDisasterRecoveryConfig.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermservicebusnamespacedisasterrecoveryconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermservicebusnamespacedisasterrecoveryconfig"
 
 dataazurermservicebusnamespacedisasterrecoveryconfig.DataAzurermServicebusNamespaceDisasterRecoveryConfig_IsConstruct(x interface{}) *bool
 ```
@@ -354,7 +354,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermServicebusNamespaceDisasterRecoveryConfig.DataAzurermServicebusNamespaceDisasterRecoveryConfig.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermservicebusnamespacedisasterrecoveryconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermservicebusnamespacedisasterrecoveryconfig"
 
 dataazurermservicebusnamespacedisasterrecoveryconfig.DataAzurermServicebusNamespaceDisasterRecoveryConfig_IsTerraformElement(x interface{}) *bool
 ```
@@ -368,7 +368,7 @@ dataazurermservicebusnamespacedisasterrecoveryconfig.DataAzurermServicebusNamesp
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermServicebusNamespaceDisasterRecoveryConfig.DataAzurermServicebusNamespaceDisasterRecoveryConfig.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermservicebusnamespacedisasterrecoveryconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermservicebusnamespacedisasterrecoveryconfig"
 
 dataazurermservicebusnamespacedisasterrecoveryconfig.DataAzurermServicebusNamespaceDisasterRecoveryConfig_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -382,7 +382,7 @@ dataazurermservicebusnamespacedisasterrecoveryconfig.DataAzurermServicebusNamesp
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermServicebusNamespaceDisasterRecoveryConfig.DataAzurermServicebusNamespaceDisasterRecoveryConfig.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermservicebusnamespacedisasterrecoveryconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermservicebusnamespacedisasterrecoveryconfig"
 
 dataazurermservicebusnamespacedisasterrecoveryconfig.DataAzurermServicebusNamespaceDisasterRecoveryConfig_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -798,7 +798,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermServicebusNamespaceDisasterRecoveryConfig.DataAzurermServicebusNamespaceDisasterRecoveryConfigConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermservicebusnamespacedisasterrecoveryconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermservicebusnamespacedisasterrecoveryconfig"
 
 &dataazurermservicebusnamespacedisasterrecoveryconfig.DataAzurermServicebusNamespaceDisasterRecoveryConfigConfig {
 	Connection: interface{},
@@ -814,7 +814,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermservic
 	NamespaceId: *string,
 	NamespaceName: *string,
 	ResourceGroupName: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermServicebusNamespaceDisasterRecoveryConfig.DataAzurermServicebusNamespaceDisasterRecoveryConfigTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermServicebusNamespaceDisasterRecoveryConfig.DataAzurermServicebusNamespaceDisasterRecoveryConfigTimeouts,
 }
 ```
 
@@ -1003,7 +1003,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermServicebusNamespaceDisasterRecoveryConfig.DataAzurermServicebusNamespaceDisasterRecoveryConfigTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermservicebusnamespacedisasterrecoveryconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermservicebusnamespacedisasterrecoveryconfig"
 
 &dataazurermservicebusnamespacedisasterrecoveryconfig.DataAzurermServicebusNamespaceDisasterRecoveryConfigTimeouts {
 	Read: *string,
@@ -1037,7 +1037,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermServicebusNamespaceDisasterRecoveryConfig.DataAzurermServicebusNamespaceDisasterRecoveryConfigTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermservicebusnamespacedisasterrecoveryconfig"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermservicebusnamespacedisasterrecoveryconfig"
 
 dataazurermservicebusnamespacedisasterrecoveryconfig.NewDataAzurermServicebusNamespaceDisasterRecoveryConfigTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermServicebusNamespaceDisasterRecoveryConfigTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermtrafficmanagerprofile"
 
 dataazurermtrafficmanagerprofile.NewDataAzurermTrafficManagerProfile(scope Construct, id *string, config DataAzurermTrafficManagerProfileConfig) DataAzurermTrafficManagerProfile
 ```
@@ -308,7 +308,7 @@ func ResetTrafficViewEnabled()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfile.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermtrafficmanagerprofile"
 
 dataazurermtrafficmanagerprofile.DataAzurermTrafficManagerProfile_IsConstruct(x interface{}) *bool
 ```
@@ -340,7 +340,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfile.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermtrafficmanagerprofile"
 
 dataazurermtrafficmanagerprofile.DataAzurermTrafficManagerProfile_IsTerraformElement(x interface{}) *bool
 ```
@@ -354,7 +354,7 @@ dataazurermtrafficmanagerprofile.DataAzurermTrafficManagerProfile_IsTerraformEle
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfile.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermtrafficmanagerprofile"
 
 dataazurermtrafficmanagerprofile.DataAzurermTrafficManagerProfile_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -368,7 +368,7 @@ dataazurermtrafficmanagerprofile.DataAzurermTrafficManagerProfile_IsTerraformDat
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfile.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermtrafficmanagerprofile"
 
 dataazurermtrafficmanagerprofile.DataAzurermTrafficManagerProfile_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -762,7 +762,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermtrafficmanagerprofile"
 
 &dataazurermtrafficmanagerprofile.DataAzurermTrafficManagerProfileConfig {
 	Connection: interface{},
@@ -776,7 +776,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermtraffi
 	ResourceGroupName: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileTimeouts,
 	TrafficViewEnabled: interface{},
 }
 ```
@@ -953,7 +953,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileDnsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermtrafficmanagerprofile"
 
 &dataazurermtrafficmanagerprofile.DataAzurermTrafficManagerProfileDnsConfig {
 
@@ -966,7 +966,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermtraffi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileMonitorConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermtrafficmanagerprofile"
 
 &dataazurermtrafficmanagerprofile.DataAzurermTrafficManagerProfileMonitorConfig {
 
@@ -979,7 +979,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermtraffi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileMonitorConfigCustomHeader.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermtrafficmanagerprofile"
 
 &dataazurermtrafficmanagerprofile.DataAzurermTrafficManagerProfileMonitorConfigCustomHeader {
 
@@ -992,7 +992,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermtraffi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermtrafficmanagerprofile"
 
 &dataazurermtrafficmanagerprofile.DataAzurermTrafficManagerProfileTimeouts {
 	Read: *string,
@@ -1026,7 +1026,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileDnsConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermtrafficmanagerprofile"
 
 dataazurermtrafficmanagerprofile.NewDataAzurermTrafficManagerProfileDnsConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermTrafficManagerProfileDnsConfigList
 ```
@@ -1158,7 +1158,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileDnsConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermtrafficmanagerprofile"
 
 dataazurermtrafficmanagerprofile.NewDataAzurermTrafficManagerProfileDnsConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermTrafficManagerProfileDnsConfigOutputReference
 ```
@@ -1447,7 +1447,7 @@ func InternalValue() DataAzurermTrafficManagerProfileDnsConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileMonitorConfigCustomHeaderList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermtrafficmanagerprofile"
 
 dataazurermtrafficmanagerprofile.NewDataAzurermTrafficManagerProfileMonitorConfigCustomHeaderList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermTrafficManagerProfileMonitorConfigCustomHeaderList
 ```
@@ -1579,7 +1579,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileMonitorConfigCustomHeaderOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermtrafficmanagerprofile"
 
 dataazurermtrafficmanagerprofile.NewDataAzurermTrafficManagerProfileMonitorConfigCustomHeaderOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermTrafficManagerProfileMonitorConfigCustomHeaderOutputReference
 ```
@@ -1868,7 +1868,7 @@ func InternalValue() DataAzurermTrafficManagerProfileMonitorConfigCustomHeader
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileMonitorConfigList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermtrafficmanagerprofile"
 
 dataazurermtrafficmanagerprofile.NewDataAzurermTrafficManagerProfileMonitorConfigList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermTrafficManagerProfileMonitorConfigList
 ```
@@ -2000,7 +2000,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileMonitorConfigOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermtrafficmanagerprofile"
 
 dataazurermtrafficmanagerprofile.NewDataAzurermTrafficManagerProfileMonitorConfigOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermTrafficManagerProfileMonitorConfigOutputReference
 ```
@@ -2355,7 +2355,7 @@ func InternalValue() DataAzurermTrafficManagerProfileMonitorConfig
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermTrafficManagerProfile.DataAzurermTrafficManagerProfileTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermtrafficmanagerprofile"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermtrafficmanagerprofile"
 
 dataazurermtrafficmanagerprofile.NewDataAzurermTrafficManagerProfileTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermTrafficManagerProfileTimeoutsOutputReference
 ```

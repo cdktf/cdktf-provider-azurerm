@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceManagementPrivateLinkAssociation.ResourceManagementPrivateLinkAssociation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcemanagementprivatelinkassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcemanagementprivatelinkassociation"
 
 resourcemanagementprivatelinkassociation.NewResourceManagementPrivateLinkAssociation(scope Construct, id *string, config ResourceManagementPrivateLinkAssociationConfig) ResourceManagementPrivateLinkAssociation
 ```
@@ -405,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.resourceManagementPrivateLinkAssociation.ResourceManagementPrivateLinkAssociation.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcemanagementprivatelinkassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcemanagementprivatelinkassociation"
 
 resourcemanagementprivatelinkassociation.ResourceManagementPrivateLinkAssociation_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.resourceManagementPrivateLinkAssociation.ResourceManagementPrivateLinkAssociation.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcemanagementprivatelinkassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcemanagementprivatelinkassociation"
 
 resourcemanagementprivatelinkassociation.ResourceManagementPrivateLinkAssociation_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +451,7 @@ resourcemanagementprivatelinkassociation.ResourceManagementPrivateLinkAssociatio
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.resourceManagementPrivateLinkAssociation.ResourceManagementPrivateLinkAssociation.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcemanagementprivatelinkassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcemanagementprivatelinkassociation"
 
 resourcemanagementprivatelinkassociation.ResourceManagementPrivateLinkAssociation_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ resourcemanagementprivatelinkassociation.ResourceManagementPrivateLinkAssociatio
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.resourceManagementPrivateLinkAssociation.ResourceManagementPrivateLinkAssociation.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcemanagementprivatelinkassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcemanagementprivatelinkassociation"
 
 resourcemanagementprivatelinkassociation.ResourceManagementPrivateLinkAssociation_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -837,7 +837,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourceManagementPrivateLinkAssociation.ResourceManagementPrivateLinkAssociationConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcemanagementprivatelinkassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcemanagementprivatelinkassociation"
 
 &resourcemanagementprivatelinkassociation.ResourceManagementPrivateLinkAssociationConfig {
 	Connection: interface{},
@@ -852,7 +852,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcemanagemen
 	ResourceManagementPrivateLinkId: *string,
 	Id: *string,
 	Name: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.resourceManagementPrivateLinkAssociation.ResourceManagementPrivateLinkAssociationTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.resourceManagementPrivateLinkAssociation.ResourceManagementPrivateLinkAssociationTimeouts,
 }
 ```
 
@@ -1028,7 +1028,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.resourceManagementPrivateLinkAssociation.ResourceManagementPrivateLinkAssociationTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcemanagementprivatelinkassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcemanagementprivatelinkassociation"
 
 &resourcemanagementprivatelinkassociation.ResourceManagementPrivateLinkAssociationTimeouts {
 	Create: *string,
@@ -1090,7 +1090,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.resourceManagementPrivateLinkAssociation.ResourceManagementPrivateLinkAssociationTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/resourcemanagementprivatelinkassociation"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/resourcemanagementprivatelinkassociation"
 
 resourcemanagementprivatelinkassociation.NewResourceManagementPrivateLinkAssociationTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ResourceManagementPrivateLinkAssociationTimeoutsOutputReference
 ```
