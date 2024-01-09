@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kustoCosmosdbDataConnection.KustoCosmosdbDataConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustocosmosdbdataconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustocosmosdbdataconnection"
 
 kustocosmosdbdataconnection.NewKustoCosmosdbDataConnection(scope Construct, id *string, config KustoCosmosdbDataConnectionConfig) KustoCosmosdbDataConnection
 ```
@@ -412,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.kustoCosmosdbDataConnection.KustoCosmosdbDataConnection.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustocosmosdbdataconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustocosmosdbdataconnection"
 
 kustocosmosdbdataconnection.KustoCosmosdbDataConnection_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.kustoCosmosdbDataConnection.KustoCosmosdbDataConnection.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustocosmosdbdataconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustocosmosdbdataconnection"
 
 kustocosmosdbdataconnection.KustoCosmosdbDataConnection_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ kustocosmosdbdataconnection.KustoCosmosdbDataConnection_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.kustoCosmosdbDataConnection.KustoCosmosdbDataConnection.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustocosmosdbdataconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustocosmosdbdataconnection"
 
 kustocosmosdbdataconnection.KustoCosmosdbDataConnection_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ kustocosmosdbdataconnection.KustoCosmosdbDataConnection_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.kustoCosmosdbDataConnection.KustoCosmosdbDataConnection.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustocosmosdbdataconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustocosmosdbdataconnection"
 
 kustocosmosdbdataconnection.KustoCosmosdbDataConnection_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -921,7 +921,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kustoCosmosdbDataConnection.KustoCosmosdbDataConnectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustocosmosdbdataconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustocosmosdbdataconnection"
 
 &kustocosmosdbdataconnection.KustoCosmosdbDataConnectionConfig {
 	Connection: interface{},
@@ -940,7 +940,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustocosmosdbdataconn
 	Id: *string,
 	MappingRuleName: *string,
 	RetrievalStartDate: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.kustoCosmosdbDataConnection.KustoCosmosdbDataConnectionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.kustoCosmosdbDataConnection.KustoCosmosdbDataConnectionTimeouts,
 }
 ```
 
@@ -1168,7 +1168,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kustoCosmosdbDataConnection.KustoCosmosdbDataConnectionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustocosmosdbdataconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustocosmosdbdataconnection"
 
 &kustocosmosdbdataconnection.KustoCosmosdbDataConnectionTimeouts {
 	Create: *string,
@@ -1230,7 +1230,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kustoCosmosdbDataConnection.KustoCosmosdbDataConnectionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/kustocosmosdbdataconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustocosmosdbdataconnection"
 
 kustocosmosdbdataconnection.NewKustoCosmosdbDataConnectionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KustoCosmosdbDataConnectionTimeoutsOutputReference
 ```
