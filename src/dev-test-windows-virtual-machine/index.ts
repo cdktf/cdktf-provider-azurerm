@@ -126,6 +126,43 @@ export function devTestWindowsVirtualMachineGalleryImageReferenceToTerraform(str
   }
 }
 
+
+export function devTestWindowsVirtualMachineGalleryImageReferenceToHclTerraform(struct?: DevTestWindowsVirtualMachineGalleryImageReferenceOutputReference | DevTestWindowsVirtualMachineGalleryImageReference): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    offer: {
+      value: cdktf.stringToHclTerraform(struct!.offer),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    publisher: {
+      value: cdktf.stringToHclTerraform(struct!.publisher),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sku: {
+      value: cdktf.stringToHclTerraform(struct!.sku),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    version: {
+      value: cdktf.stringToHclTerraform(struct!.version),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DevTestWindowsVirtualMachineGalleryImageReferenceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -248,6 +285,31 @@ export function devTestWindowsVirtualMachineInboundNatRuleToTerraform(struct?: D
     backend_port: cdktf.numberToTerraform(struct!.backendPort),
     protocol: cdktf.stringToTerraform(struct!.protocol),
   }
+}
+
+
+export function devTestWindowsVirtualMachineInboundNatRuleToHclTerraform(struct?: DevTestWindowsVirtualMachineInboundNatRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    backend_port: {
+      value: cdktf.numberToHclTerraform(struct!.backendPort),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    protocol: {
+      value: cdktf.stringToHclTerraform(struct!.protocol),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DevTestWindowsVirtualMachineInboundNatRuleOutputReference extends cdktf.ComplexObject {
@@ -381,6 +443,43 @@ export function devTestWindowsVirtualMachineTimeoutsToTerraform(struct?: DevTest
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function devTestWindowsVirtualMachineTimeoutsToHclTerraform(struct?: DevTestWindowsVirtualMachineTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DevTestWindowsVirtualMachineTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -873,5 +972,121 @@ export class DevTestWindowsVirtualMachine extends cdktf.TerraformResource {
       inbound_nat_rule: cdktf.listMapper(devTestWindowsVirtualMachineInboundNatRuleToTerraform, true)(this._inboundNatRule.internalValue),
       timeouts: devTestWindowsVirtualMachineTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      allow_claim: {
+        value: cdktf.booleanToHclTerraform(this._allowClaim),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      disallow_public_ip_address: {
+        value: cdktf.booleanToHclTerraform(this._disallowPublicIpAddress),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      lab_name: {
+        value: cdktf.stringToHclTerraform(this._labName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      lab_subnet_name: {
+        value: cdktf.stringToHclTerraform(this._labSubnetName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      lab_virtual_network_id: {
+        value: cdktf.stringToHclTerraform(this._labVirtualNetworkId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      notes: {
+        value: cdktf.stringToHclTerraform(this._notes),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      password: {
+        value: cdktf.stringToHclTerraform(this._password),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      size: {
+        value: cdktf.stringToHclTerraform(this._size),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_type: {
+        value: cdktf.stringToHclTerraform(this._storageType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      username: {
+        value: cdktf.stringToHclTerraform(this._username),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      gallery_image_reference: {
+        value: devTestWindowsVirtualMachineGalleryImageReferenceToHclTerraform(this._galleryImageReference.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DevTestWindowsVirtualMachineGalleryImageReferenceList",
+      },
+      inbound_nat_rule: {
+        value: cdktf.listMapperHcl(devTestWindowsVirtualMachineInboundNatRuleToHclTerraform, true)(this._inboundNatRule.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "DevTestWindowsVirtualMachineInboundNatRuleList",
+      },
+      timeouts: {
+        value: devTestWindowsVirtualMachineTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DevTestWindowsVirtualMachineTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

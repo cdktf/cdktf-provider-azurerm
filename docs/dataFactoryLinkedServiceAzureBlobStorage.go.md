@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceazureblobstorage"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorylinkedserviceazureblobstorage"
 
 datafactorylinkedserviceazureblobstorage.NewDataFactoryLinkedServiceAzureBlobStorage(scope Construct, id *string, config DataFactoryLinkedServiceAzureBlobStorageConfig) DataFactoryLinkedServiceAzureBlobStorage
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorage.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorage.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorage.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorage.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorage.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorage.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorage.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -145,6 +146,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorage.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorage.toMetadata"></a>
 
@@ -536,7 +543,7 @@ func ResetUseManagedIdentity()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorage.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceazureblobstorage"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorylinkedserviceazureblobstorage"
 
 datafactorylinkedserviceazureblobstorage.DataFactoryLinkedServiceAzureBlobStorage_IsConstruct(x interface{}) *bool
 ```
@@ -568,7 +575,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorage.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceazureblobstorage"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorylinkedserviceazureblobstorage"
 
 datafactorylinkedserviceazureblobstorage.DataFactoryLinkedServiceAzureBlobStorage_IsTerraformElement(x interface{}) *bool
 ```
@@ -582,7 +589,7 @@ datafactorylinkedserviceazureblobstorage.DataFactoryLinkedServiceAzureBlobStorag
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorage.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceazureblobstorage"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorylinkedserviceazureblobstorage"
 
 datafactorylinkedserviceazureblobstorage.DataFactoryLinkedServiceAzureBlobStorage_IsTerraformResource(x interface{}) *bool
 ```
@@ -596,7 +603,7 @@ datafactorylinkedserviceazureblobstorage.DataFactoryLinkedServiceAzureBlobStorag
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorage.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceazureblobstorage"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorylinkedserviceazureblobstorage"
 
 datafactorylinkedserviceazureblobstorage.DataFactoryLinkedServiceAzureBlobStorage_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1265,7 +1272,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorageConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceazureblobstorage"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorylinkedserviceazureblobstorage"
 
 &datafactorylinkedserviceazureblobstorage.DataFactoryLinkedServiceAzureBlobStorageConfig {
 	Connection: interface{},
@@ -1284,16 +1291,16 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinked
 	Description: *string,
 	Id: *string,
 	IntegrationRuntimeName: *string,
-	KeyVaultSasToken: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorageKeyVaultSasToken,
+	KeyVaultSasToken: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorageKeyVaultSasToken,
 	Parameters: *map[string]*string,
 	SasUri: *string,
 	ServiceEndpoint: *string,
 	ServicePrincipalId: *string,
 	ServicePrincipalKey: *string,
-	ServicePrincipalLinkedKeyVaultKey: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKeyVaultKey,
+	ServicePrincipalLinkedKeyVaultKey: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKeyVaultKey,
 	StorageKind: *string,
 	TenantId: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorageTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorageTimeouts,
 	UseManagedIdentity: interface{},
 }
 ```
@@ -1656,7 +1663,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorageKeyVaultSasToken.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceazureblobstorage"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorylinkedserviceazureblobstorage"
 
 &datafactorylinkedserviceazureblobstorage.DataFactoryLinkedServiceAzureBlobStorageKeyVaultSasToken {
 	LinkedServiceName: *string,
@@ -1702,7 +1709,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKeyVaultKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceazureblobstorage"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorylinkedserviceazureblobstorage"
 
 &datafactorylinkedserviceazureblobstorage.DataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKeyVaultKey {
 	LinkedServiceName: *string,
@@ -1748,7 +1755,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorageTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceazureblobstorage"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorylinkedserviceazureblobstorage"
 
 &datafactorylinkedserviceazureblobstorage.DataFactoryLinkedServiceAzureBlobStorageTimeouts {
 	Create: *string,
@@ -1824,7 +1831,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorageKeyVaultSasTokenOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceazureblobstorage"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorylinkedserviceazureblobstorage"
 
 datafactorylinkedserviceazureblobstorage.NewDataFactoryLinkedServiceAzureBlobStorageKeyVaultSasTokenOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryLinkedServiceAzureBlobStorageKeyVaultSasTokenOutputReference
 ```
@@ -2117,7 +2124,7 @@ func InternalValue() DataFactoryLinkedServiceAzureBlobStorageKeyVaultSasToken
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKeyVaultKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceazureblobstorage"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorylinkedserviceazureblobstorage"
 
 datafactorylinkedserviceazureblobstorage.NewDataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKeyVaultKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKeyVaultKeyOutputReference
 ```
@@ -2410,7 +2417,7 @@ func InternalValue() DataFactoryLinkedServiceAzureBlobStorageServicePrincipalLin
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryLinkedServiceAzureBlobStorage.DataFactoryLinkedServiceAzureBlobStorageTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactorylinkedserviceazureblobstorage"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactorylinkedserviceazureblobstorage"
 
 datafactorylinkedserviceazureblobstorage.NewDataFactoryLinkedServiceAzureBlobStorageTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryLinkedServiceAzureBlobStorageTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionAppConnection.FunctionAppConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/functionappconnection"
 
 functionappconnection.NewFunctionAppConnection(scope Construct, id *string, config FunctionAppConnectionConfig) FunctionAppConnection
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.functionAppConnection.FunctionAppConnection.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppConnection.FunctionAppConnection.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppConnection.FunctionAppConnection.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppConnection.FunctionAppConnection.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppConnection.FunctionAppConnection.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppConnection.FunctionAppConnection.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppConnection.FunctionAppConnection.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -132,6 +133,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.functionAppConnection.FunctionAppConnection.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.functionAppConnection.FunctionAppConnection.toMetadata"></a>
 
@@ -445,7 +452,7 @@ func ResetVnetSolution()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.functionAppConnection.FunctionAppConnection.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/functionappconnection"
 
 functionappconnection.FunctionAppConnection_IsConstruct(x interface{}) *bool
 ```
@@ -477,7 +484,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.functionAppConnection.FunctionAppConnection.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/functionappconnection"
 
 functionappconnection.FunctionAppConnection_IsTerraformElement(x interface{}) *bool
 ```
@@ -491,7 +498,7 @@ functionappconnection.FunctionAppConnection_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.functionAppConnection.FunctionAppConnection.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/functionappconnection"
 
 functionappconnection.FunctionAppConnection_IsTerraformResource(x interface{}) *bool
 ```
@@ -505,7 +512,7 @@ functionappconnection.FunctionAppConnection_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.functionAppConnection.FunctionAppConnection.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/functionappconnection"
 
 functionappconnection.FunctionAppConnection_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -932,7 +939,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionAppConnection.FunctionAppConnectionAuthentication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/functionappconnection"
 
 &functionappconnection.FunctionAppConnectionAuthentication {
 	Type: *string,
@@ -1048,7 +1055,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionAppConnection.FunctionAppConnectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/functionappconnection"
 
 &functionappconnection.FunctionAppConnectionConfig {
 	Connection: interface{},
@@ -1058,14 +1065,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappconnec
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Authentication: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.functionAppConnection.FunctionAppConnectionAuthentication,
+	Authentication: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.functionAppConnection.FunctionAppConnectionAuthentication,
 	FunctionAppId: *string,
 	Name: *string,
 	TargetResourceId: *string,
 	ClientType: *string,
 	Id: *string,
-	SecretStore: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.functionAppConnection.FunctionAppConnectionSecretStore,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.functionAppConnection.FunctionAppConnectionTimeouts,
+	SecretStore: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.functionAppConnection.FunctionAppConnectionSecretStore,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.functionAppConnection.FunctionAppConnectionTimeouts,
 	VnetSolution: *string,
 }
 ```
@@ -1285,7 +1292,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionAppConnection.FunctionAppConnectionSecretStore.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/functionappconnection"
 
 &functionappconnection.FunctionAppConnectionSecretStore {
 	KeyVaultId: *string,
@@ -1317,7 +1324,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.functionAppConnection.FunctionAppConnectionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/functionappconnection"
 
 &functionappconnection.FunctionAppConnectionTimeouts {
 	Create: *string,
@@ -1393,7 +1400,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionAppConnection.FunctionAppConnectionAuthenticationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/functionappconnection"
 
 functionappconnection.NewFunctionAppConnectionAuthenticationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FunctionAppConnectionAuthenticationOutputReference
 ```
@@ -1838,7 +1845,7 @@ func InternalValue() FunctionAppConnectionAuthentication
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionAppConnection.FunctionAppConnectionSecretStoreOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/functionappconnection"
 
 functionappconnection.NewFunctionAppConnectionSecretStoreOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FunctionAppConnectionSecretStoreOutputReference
 ```
@@ -2109,7 +2116,7 @@ func InternalValue() FunctionAppConnectionSecretStore
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionAppConnection.FunctionAppConnectionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/functionappconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/functionappconnection"
 
 functionappconnection.NewFunctionAppConnectionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) FunctionAppConnectionTimeoutsOutputReference
 ```

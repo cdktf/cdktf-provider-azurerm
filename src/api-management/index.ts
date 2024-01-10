@@ -178,6 +178,31 @@ export function apiManagementPolicyToTerraform(struct?: ApiManagementPolicy | cd
   }
 }
 
+
+export function apiManagementPolicyToHclTerraform(struct?: ApiManagementPolicy | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    xml_content: {
+      value: struct!.xmlContent === undefined ? null : cdktf.stringToHclTerraform(struct!.xmlContent),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    xml_link: {
+      value: struct!.xmlLink === undefined ? null : cdktf.stringToHclTerraform(struct!.xmlLink),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementPolicyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -297,6 +322,25 @@ export function apiManagementAdditionalLocationVirtualNetworkConfigurationToTerr
   }
 }
 
+
+export function apiManagementAdditionalLocationVirtualNetworkConfigurationToHclTerraform(struct?: ApiManagementAdditionalLocationVirtualNetworkConfigurationOutputReference | ApiManagementAdditionalLocationVirtualNetworkConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    subnet_id: {
+      value: cdktf.stringToHclTerraform(struct!.subnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementAdditionalLocationVirtualNetworkConfigurationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -384,6 +428,55 @@ export function apiManagementAdditionalLocationToTerraform(struct?: ApiManagemen
     zones: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.zones),
     virtual_network_configuration: apiManagementAdditionalLocationVirtualNetworkConfigurationToTerraform(struct!.virtualNetworkConfiguration),
   }
+}
+
+
+export function apiManagementAdditionalLocationToHclTerraform(struct?: ApiManagementAdditionalLocation | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    capacity: {
+      value: cdktf.numberToHclTerraform(struct!.capacity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    gateway_disabled: {
+      value: cdktf.booleanToHclTerraform(struct!.gatewayDisabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    location: {
+      value: cdktf.stringToHclTerraform(struct!.location),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    public_ip_address_id: {
+      value: cdktf.stringToHclTerraform(struct!.publicIpAddressId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    zones: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.zones),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    virtual_network_configuration: {
+      value: apiManagementAdditionalLocationVirtualNetworkConfigurationToHclTerraform(struct!.virtualNetworkConfiguration),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementAdditionalLocationVirtualNetworkConfigurationList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementAdditionalLocationOutputReference extends cdktf.ComplexObject {
@@ -615,6 +708,37 @@ export function apiManagementCertificateToTerraform(struct?: ApiManagementCertif
   }
 }
 
+
+export function apiManagementCertificateToHclTerraform(struct?: ApiManagementCertificate | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    certificate_password: {
+      value: cdktf.stringToHclTerraform(struct!.certificatePassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    encoded_certificate: {
+      value: cdktf.stringToHclTerraform(struct!.encodedCertificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    store_name: {
+      value: cdktf.stringToHclTerraform(struct!.storeName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementCertificateOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -780,6 +904,43 @@ export function apiManagementDelegationToTerraform(struct?: ApiManagementDelegat
   }
 }
 
+
+export function apiManagementDelegationToHclTerraform(struct?: ApiManagementDelegationOutputReference | ApiManagementDelegation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    subscriptions_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.subscriptionsEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    url: {
+      value: cdktf.stringToHclTerraform(struct!.url),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    user_registration_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.userRegistrationEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    validation_key: {
+      value: cdktf.stringToHclTerraform(struct!.validationKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementDelegationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -934,6 +1095,55 @@ export function apiManagementHostnameConfigurationDeveloperPortalToTerraform(str
     negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
     ssl_keyvault_identity_client_id: cdktf.stringToTerraform(struct!.sslKeyvaultIdentityClientId),
   }
+}
+
+
+export function apiManagementHostnameConfigurationDeveloperPortalToHclTerraform(struct?: ApiManagementHostnameConfigurationDeveloperPortal | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    certificate: {
+      value: cdktf.stringToHclTerraform(struct!.certificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    certificate_password: {
+      value: cdktf.stringToHclTerraform(struct!.certificatePassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    host_name: {
+      value: cdktf.stringToHclTerraform(struct!.hostName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_vault_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    negotiate_client_certificate: {
+      value: cdktf.booleanToHclTerraform(struct!.negotiateClientCertificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    ssl_keyvault_identity_client_id: {
+      value: cdktf.stringToHclTerraform(struct!.sslKeyvaultIdentityClientId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementHostnameConfigurationDeveloperPortalOutputReference extends cdktf.ComplexObject {
@@ -1190,6 +1400,55 @@ export function apiManagementHostnameConfigurationManagementToTerraform(struct?:
   }
 }
 
+
+export function apiManagementHostnameConfigurationManagementToHclTerraform(struct?: ApiManagementHostnameConfigurationManagement | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    certificate: {
+      value: cdktf.stringToHclTerraform(struct!.certificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    certificate_password: {
+      value: cdktf.stringToHclTerraform(struct!.certificatePassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    host_name: {
+      value: cdktf.stringToHclTerraform(struct!.hostName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_vault_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    negotiate_client_certificate: {
+      value: cdktf.booleanToHclTerraform(struct!.negotiateClientCertificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    ssl_keyvault_identity_client_id: {
+      value: cdktf.stringToHclTerraform(struct!.sslKeyvaultIdentityClientId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementHostnameConfigurationManagementOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1442,6 +1701,55 @@ export function apiManagementHostnameConfigurationPortalToTerraform(struct?: Api
     negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
     ssl_keyvault_identity_client_id: cdktf.stringToTerraform(struct!.sslKeyvaultIdentityClientId),
   }
+}
+
+
+export function apiManagementHostnameConfigurationPortalToHclTerraform(struct?: ApiManagementHostnameConfigurationPortal | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    certificate: {
+      value: cdktf.stringToHclTerraform(struct!.certificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    certificate_password: {
+      value: cdktf.stringToHclTerraform(struct!.certificatePassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    host_name: {
+      value: cdktf.stringToHclTerraform(struct!.hostName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_vault_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    negotiate_client_certificate: {
+      value: cdktf.booleanToHclTerraform(struct!.negotiateClientCertificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    ssl_keyvault_identity_client_id: {
+      value: cdktf.stringToHclTerraform(struct!.sslKeyvaultIdentityClientId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementHostnameConfigurationPortalOutputReference extends cdktf.ComplexObject {
@@ -1701,6 +2009,61 @@ export function apiManagementHostnameConfigurationProxyToTerraform(struct?: ApiM
     negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
     ssl_keyvault_identity_client_id: cdktf.stringToTerraform(struct!.sslKeyvaultIdentityClientId),
   }
+}
+
+
+export function apiManagementHostnameConfigurationProxyToHclTerraform(struct?: ApiManagementHostnameConfigurationProxy | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    certificate: {
+      value: cdktf.stringToHclTerraform(struct!.certificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    certificate_password: {
+      value: cdktf.stringToHclTerraform(struct!.certificatePassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    default_ssl_binding: {
+      value: cdktf.booleanToHclTerraform(struct!.defaultSslBinding),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    host_name: {
+      value: cdktf.stringToHclTerraform(struct!.hostName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_vault_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    negotiate_client_certificate: {
+      value: cdktf.booleanToHclTerraform(struct!.negotiateClientCertificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    ssl_keyvault_identity_client_id: {
+      value: cdktf.stringToHclTerraform(struct!.sslKeyvaultIdentityClientId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementHostnameConfigurationProxyOutputReference extends cdktf.ComplexObject {
@@ -1979,6 +2342,55 @@ export function apiManagementHostnameConfigurationScmToTerraform(struct?: ApiMan
   }
 }
 
+
+export function apiManagementHostnameConfigurationScmToHclTerraform(struct?: ApiManagementHostnameConfigurationScm | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    certificate: {
+      value: cdktf.stringToHclTerraform(struct!.certificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    certificate_password: {
+      value: cdktf.stringToHclTerraform(struct!.certificatePassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    host_name: {
+      value: cdktf.stringToHclTerraform(struct!.hostName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_vault_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    negotiate_client_certificate: {
+      value: cdktf.booleanToHclTerraform(struct!.negotiateClientCertificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    ssl_keyvault_identity_client_id: {
+      value: cdktf.stringToHclTerraform(struct!.sslKeyvaultIdentityClientId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementHostnameConfigurationScmOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -2238,6 +2650,49 @@ export function apiManagementHostnameConfigurationToTerraform(struct?: ApiManage
   }
 }
 
+
+export function apiManagementHostnameConfigurationToHclTerraform(struct?: ApiManagementHostnameConfigurationOutputReference | ApiManagementHostnameConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    developer_portal: {
+      value: cdktf.listMapperHcl(apiManagementHostnameConfigurationDeveloperPortalToHclTerraform, true)(struct!.developerPortal),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementHostnameConfigurationDeveloperPortalList",
+    },
+    management: {
+      value: cdktf.listMapperHcl(apiManagementHostnameConfigurationManagementToHclTerraform, true)(struct!.management),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementHostnameConfigurationManagementList",
+    },
+    portal: {
+      value: cdktf.listMapperHcl(apiManagementHostnameConfigurationPortalToHclTerraform, true)(struct!.portal),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementHostnameConfigurationPortalList",
+    },
+    proxy: {
+      value: cdktf.listMapperHcl(apiManagementHostnameConfigurationProxyToHclTerraform, true)(struct!.proxy),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementHostnameConfigurationProxyList",
+    },
+    scm: {
+      value: cdktf.listMapperHcl(apiManagementHostnameConfigurationScmToHclTerraform, true)(struct!.scm),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementHostnameConfigurationScmList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementHostnameConfigurationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2396,6 +2851,31 @@ export function apiManagementIdentityToTerraform(struct?: ApiManagementIdentityO
   }
 }
 
+
+export function apiManagementIdentityToHclTerraform(struct?: ApiManagementIdentityOutputReference | ApiManagementIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.identityIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementIdentityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2488,6 +2968,25 @@ export function apiManagementProtocolsToTerraform(struct?: ApiManagementProtocol
   return {
     enable_http2: cdktf.booleanToTerraform(struct!.enableHttp2),
   }
+}
+
+
+export function apiManagementProtocolsToHclTerraform(struct?: ApiManagementProtocolsOutputReference | ApiManagementProtocols): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enable_http2: {
+      value: cdktf.booleanToHclTerraform(struct!.enableHttp2),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementProtocolsOutputReference extends cdktf.ComplexObject {
@@ -2633,6 +3132,121 @@ export function apiManagementSecurityToTerraform(struct?: ApiManagementSecurityO
     tls_rsa_with_aes256_gcm_sha384_ciphers_enabled: cdktf.booleanToTerraform(struct!.tlsRsaWithAes256GcmSha384CiphersEnabled),
     triple_des_ciphers_enabled: cdktf.booleanToTerraform(struct!.tripleDesCiphersEnabled),
   }
+}
+
+
+export function apiManagementSecurityToHclTerraform(struct?: ApiManagementSecurityOutputReference | ApiManagementSecurity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enable_backend_ssl30: {
+      value: cdktf.booleanToHclTerraform(struct!.enableBackendSsl30),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    enable_backend_tls10: {
+      value: cdktf.booleanToHclTerraform(struct!.enableBackendTls10),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    enable_backend_tls11: {
+      value: cdktf.booleanToHclTerraform(struct!.enableBackendTls11),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    enable_frontend_ssl30: {
+      value: cdktf.booleanToHclTerraform(struct!.enableFrontendSsl30),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    enable_frontend_tls10: {
+      value: cdktf.booleanToHclTerraform(struct!.enableFrontendTls10),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    enable_frontend_tls11: {
+      value: cdktf.booleanToHclTerraform(struct!.enableFrontendTls11),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.tlsEcdheRsaWithAes128CbcShaCiphersEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.tlsEcdheRsaWithAes256CbcShaCiphersEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    tls_rsa_with_aes128_cbc_sha256_ciphers_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.tlsRsaWithAes128CbcSha256CiphersEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    tls_rsa_with_aes128_cbc_sha_ciphers_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.tlsRsaWithAes128CbcShaCiphersEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    tls_rsa_with_aes128_gcm_sha256_ciphers_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.tlsRsaWithAes128GcmSha256CiphersEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    tls_rsa_with_aes256_cbc_sha256_ciphers_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.tlsRsaWithAes256CbcSha256CiphersEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    tls_rsa_with_aes256_cbc_sha_ciphers_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.tlsRsaWithAes256CbcShaCiphersEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    tls_rsa_with_aes256_gcm_sha384_ciphers_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.tlsRsaWithAes256GcmSha384CiphersEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    triple_des_ciphers_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.tripleDesCiphersEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementSecurityOutputReference extends cdktf.ComplexObject {
@@ -3052,6 +3666,25 @@ export function apiManagementSignInToTerraform(struct?: ApiManagementSignInOutpu
   }
 }
 
+
+export function apiManagementSignInToHclTerraform(struct?: ApiManagementSignInOutputReference | ApiManagementSignIn): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementSignInOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -3122,6 +3755,37 @@ export function apiManagementSignUpTermsOfServiceToTerraform(struct?: ApiManagem
     enabled: cdktf.booleanToTerraform(struct!.enabled),
     text: cdktf.stringToTerraform(struct!.text),
   }
+}
+
+
+export function apiManagementSignUpTermsOfServiceToHclTerraform(struct?: ApiManagementSignUpTermsOfServiceOutputReference | ApiManagementSignUpTermsOfService): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    consent_required: {
+      value: cdktf.booleanToHclTerraform(struct!.consentRequired),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    text: {
+      value: cdktf.stringToHclTerraform(struct!.text),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementSignUpTermsOfServiceOutputReference extends cdktf.ComplexObject {
@@ -3234,6 +3898,31 @@ export function apiManagementSignUpToTerraform(struct?: ApiManagementSignUpOutpu
   }
 }
 
+
+export function apiManagementSignUpToHclTerraform(struct?: ApiManagementSignUpOutputReference | ApiManagementSignUp): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    terms_of_service: {
+      value: apiManagementSignUpTermsOfServiceToHclTerraform(struct!.termsOfService),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementSignUpTermsOfServiceList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementSignUpOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -3313,6 +4002,25 @@ export function apiManagementTenantAccessToTerraform(struct?: ApiManagementTenan
   return {
     enabled: cdktf.booleanToTerraform(struct!.enabled),
   }
+}
+
+
+export function apiManagementTenantAccessToHclTerraform(struct?: ApiManagementTenantAccessOutputReference | ApiManagementTenantAccess): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementTenantAccessOutputReference extends cdktf.ComplexObject {
@@ -3405,6 +4113,43 @@ export function apiManagementTimeoutsToTerraform(struct?: ApiManagementTimeouts 
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function apiManagementTimeoutsToHclTerraform(struct?: ApiManagementTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -3546,6 +4291,25 @@ export function apiManagementVirtualNetworkConfigurationToTerraform(struct?: Api
   return {
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
   }
+}
+
+
+export function apiManagementVirtualNetworkConfigurationToHclTerraform(struct?: ApiManagementVirtualNetworkConfigurationOutputReference | ApiManagementVirtualNetworkConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    subnet_id: {
+      value: cdktf.stringToHclTerraform(struct!.subnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementVirtualNetworkConfigurationOutputReference extends cdktf.ComplexObject {
@@ -4202,5 +4966,187 @@ export class ApiManagement extends cdktf.TerraformResource {
       timeouts: apiManagementTimeoutsToTerraform(this._timeouts.internalValue),
       virtual_network_configuration: apiManagementVirtualNetworkConfigurationToTerraform(this._virtualNetworkConfiguration.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      client_certificate_enabled: {
+        value: cdktf.booleanToHclTerraform(this._clientCertificateEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      gateway_disabled: {
+        value: cdktf.booleanToHclTerraform(this._gatewayDisabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      min_api_version: {
+        value: cdktf.stringToHclTerraform(this._minApiVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      notification_sender_email: {
+        value: cdktf.stringToHclTerraform(this._notificationSenderEmail),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      policy: {
+        value: cdktf.listMapperHcl(apiManagementPolicyToHclTerraform, false)(this._policy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementPolicyList",
+      },
+      public_ip_address_id: {
+        value: cdktf.stringToHclTerraform(this._publicIpAddressId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      public_network_access_enabled: {
+        value: cdktf.booleanToHclTerraform(this._publicNetworkAccessEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      publisher_email: {
+        value: cdktf.stringToHclTerraform(this._publisherEmail),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      publisher_name: {
+        value: cdktf.stringToHclTerraform(this._publisherName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sku_name: {
+        value: cdktf.stringToHclTerraform(this._skuName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      virtual_network_type: {
+        value: cdktf.stringToHclTerraform(this._virtualNetworkType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      zones: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._zones),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      additional_location: {
+        value: cdktf.listMapperHcl(apiManagementAdditionalLocationToHclTerraform, true)(this._additionalLocation.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementAdditionalLocationList",
+      },
+      certificate: {
+        value: cdktf.listMapperHcl(apiManagementCertificateToHclTerraform, true)(this._certificate.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementCertificateList",
+      },
+      delegation: {
+        value: apiManagementDelegationToHclTerraform(this._delegation.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementDelegationList",
+      },
+      hostname_configuration: {
+        value: apiManagementHostnameConfigurationToHclTerraform(this._hostnameConfiguration.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementHostnameConfigurationList",
+      },
+      identity: {
+        value: apiManagementIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementIdentityList",
+      },
+      protocols: {
+        value: apiManagementProtocolsToHclTerraform(this._protocols.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementProtocolsList",
+      },
+      security: {
+        value: apiManagementSecurityToHclTerraform(this._security.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementSecurityList",
+      },
+      sign_in: {
+        value: apiManagementSignInToHclTerraform(this._signIn.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementSignInList",
+      },
+      sign_up: {
+        value: apiManagementSignUpToHclTerraform(this._signUp.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementSignUpList",
+      },
+      tenant_access: {
+        value: apiManagementTenantAccessToHclTerraform(this._tenantAccess.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementTenantAccessList",
+      },
+      timeouts: {
+        value: apiManagementTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ApiManagementTimeouts",
+      },
+      virtual_network_configuration: {
+        value: apiManagementVirtualNetworkConfigurationToHclTerraform(this._virtualNetworkConfiguration.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementVirtualNetworkConfigurationList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

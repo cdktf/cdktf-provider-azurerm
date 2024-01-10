@@ -100,6 +100,43 @@ export function orbitalContactProfileLinksChannelsEndPointToTerraform(struct?: O
   }
 }
 
+
+export function orbitalContactProfileLinksChannelsEndPointToHclTerraform(struct?: OrbitalContactProfileLinksChannelsEndPoint | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    end_point_name: {
+      value: cdktf.stringToHclTerraform(struct!.endPointName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ip_address: {
+      value: cdktf.stringToHclTerraform(struct!.ipAddress),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    port: {
+      value: cdktf.stringToHclTerraform(struct!.port),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    protocol: {
+      value: cdktf.stringToHclTerraform(struct!.protocol),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class OrbitalContactProfileLinksChannelsEndPointOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -279,6 +316,55 @@ export function orbitalContactProfileLinksChannelsToTerraform(struct?: OrbitalCo
     name: cdktf.stringToTerraform(struct!.name),
     end_point: cdktf.listMapper(orbitalContactProfileLinksChannelsEndPointToTerraform, true)(struct!.endPoint),
   }
+}
+
+
+export function orbitalContactProfileLinksChannelsToHclTerraform(struct?: OrbitalContactProfileLinksChannels | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    bandwidth_mhz: {
+      value: cdktf.numberToHclTerraform(struct!.bandwidthMhz),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    center_frequency_mhz: {
+      value: cdktf.numberToHclTerraform(struct!.centerFrequencyMhz),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    demodulation_configuration: {
+      value: cdktf.stringToHclTerraform(struct!.demodulationConfiguration),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    modulation_configuration: {
+      value: cdktf.stringToHclTerraform(struct!.modulationConfiguration),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    end_point: {
+      value: cdktf.listMapperHcl(orbitalContactProfileLinksChannelsEndPointToHclTerraform, true)(struct!.endPoint),
+      isBlock: true,
+      type: "set",
+      storageClassType: "OrbitalContactProfileLinksChannelsEndPointList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class OrbitalContactProfileLinksChannelsOutputReference extends cdktf.ComplexObject {
@@ -493,6 +579,43 @@ export function orbitalContactProfileLinksToTerraform(struct?: OrbitalContactPro
   }
 }
 
+
+export function orbitalContactProfileLinksToHclTerraform(struct?: OrbitalContactProfileLinks | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    direction: {
+      value: cdktf.stringToHclTerraform(struct!.direction),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    polarization: {
+      value: cdktf.stringToHclTerraform(struct!.polarization),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    channels: {
+      value: cdktf.listMapperHcl(orbitalContactProfileLinksChannelsToHclTerraform, true)(struct!.channels),
+      isBlock: true,
+      type: "list",
+      storageClassType: "OrbitalContactProfileLinksChannelsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class OrbitalContactProfileLinksOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -657,6 +780,43 @@ export function orbitalContactProfileTimeoutsToTerraform(struct?: OrbitalContact
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function orbitalContactProfileTimeoutsToHclTerraform(struct?: OrbitalContactProfileTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class OrbitalContactProfileTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1043,5 +1203,85 @@ export class OrbitalContactProfile extends cdktf.TerraformResource {
       links: cdktf.listMapper(orbitalContactProfileLinksToTerraform, true)(this._links.internalValue),
       timeouts: orbitalContactProfileTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      auto_tracking: {
+        value: cdktf.stringToHclTerraform(this._autoTracking),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      event_hub_uri: {
+        value: cdktf.stringToHclTerraform(this._eventHubUri),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      minimum_elevation_degrees: {
+        value: cdktf.numberToHclTerraform(this._minimumElevationDegrees),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      minimum_variable_contact_duration: {
+        value: cdktf.stringToHclTerraform(this._minimumVariableContactDuration),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network_configuration_subnet_id: {
+        value: cdktf.stringToHclTerraform(this._networkConfigurationSubnetId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      links: {
+        value: cdktf.listMapperHcl(orbitalContactProfileLinksToHclTerraform, true)(this._links.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "OrbitalContactProfileLinksList",
+      },
+      timeouts: {
+        value: orbitalContactProfileTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "OrbitalContactProfileTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

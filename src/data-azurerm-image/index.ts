@@ -54,6 +54,17 @@ export function dataAzurermImageDataDiskToTerraform(struct?: DataAzurermImageDat
   }
 }
 
+
+export function dataAzurermImageDataDiskToHclTerraform(struct?: DataAzurermImageDataDisk): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermImageDataDiskOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -136,6 +147,17 @@ export function dataAzurermImageOsDiskToTerraform(struct?: DataAzurermImageOsDis
   }
   return {
   }
+}
+
+
+export function dataAzurermImageOsDiskToHclTerraform(struct?: DataAzurermImageOsDisk): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermImageOsDiskOutputReference extends cdktf.ComplexObject {
@@ -230,6 +252,25 @@ export function dataAzurermImageTimeoutsToTerraform(struct?: DataAzurermImageTim
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function dataAzurermImageTimeoutsToHclTerraform(struct?: DataAzurermImageTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataAzurermImageTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -488,5 +529,49 @@ export class DataAzurermImage extends cdktf.TerraformDataSource {
       sort_descending: cdktf.booleanToTerraform(this._sortDescending),
       timeouts: dataAzurermImageTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name_regex: {
+        value: cdktf.stringToHclTerraform(this._nameRegex),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sort_descending: {
+        value: cdktf.booleanToHclTerraform(this._sortDescending),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      timeouts: {
+        value: dataAzurermImageTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataAzurermImageTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

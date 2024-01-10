@@ -74,6 +74,31 @@ export function monitorLogProfileRetentionPolicyToTerraform(struct?: MonitorLogP
   }
 }
 
+
+export function monitorLogProfileRetentionPolicyToHclTerraform(struct?: MonitorLogProfileRetentionPolicyOutputReference | MonitorLogProfileRetentionPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    days: {
+      value: cdktf.numberToHclTerraform(struct!.days),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitorLogProfileRetentionPolicyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -171,6 +196,43 @@ export function monitorLogProfileTimeoutsToTerraform(struct?: MonitorLogProfileT
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function monitorLogProfileTimeoutsToHclTerraform(struct?: MonitorLogProfileTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorLogProfileTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -494,5 +556,61 @@ export class MonitorLogProfile extends cdktf.TerraformResource {
       retention_policy: monitorLogProfileRetentionPolicyToTerraform(this._retentionPolicy.internalValue),
       timeouts: monitorLogProfileTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      categories: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._categories),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      locations: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._locations),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      servicebus_rule_id: {
+        value: cdktf.stringToHclTerraform(this._servicebusRuleId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_account_id: {
+        value: cdktf.stringToHclTerraform(this._storageAccountId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      retention_policy: {
+        value: monitorLogProfileRetentionPolicyToHclTerraform(this._retentionPolicy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitorLogProfileRetentionPolicyList",
+      },
+      timeouts: {
+        value: monitorLogProfileTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MonitorLogProfileTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

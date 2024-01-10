@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orbitalContact.OrbitalContact.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/orbitalcontact"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/orbitalcontact"
 
 orbitalcontact.NewOrbitalContact(scope Construct, id *string, config OrbitalContactConfig) OrbitalContact
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContact.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContact.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContact.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContact.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContact.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContact.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.orbitalContact.OrbitalContact.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -127,6 +128,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.orbitalContact.OrbitalContact.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.orbitalContact.OrbitalContact.toMetadata"></a>
 
@@ -398,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.orbitalContact.OrbitalContact.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/orbitalcontact"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/orbitalcontact"
 
 orbitalcontact.OrbitalContact_IsConstruct(x interface{}) *bool
 ```
@@ -430,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.orbitalContact.OrbitalContact.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/orbitalcontact"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/orbitalcontact"
 
 orbitalcontact.OrbitalContact_IsTerraformElement(x interface{}) *bool
 ```
@@ -444,7 +451,7 @@ orbitalcontact.OrbitalContact_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.orbitalContact.OrbitalContact.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/orbitalcontact"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/orbitalcontact"
 
 orbitalcontact.OrbitalContact_IsTerraformResource(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ orbitalcontact.OrbitalContact_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.orbitalContact.OrbitalContact.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/orbitalcontact"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/orbitalcontact"
 
 orbitalcontact.OrbitalContact_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -863,7 +870,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orbitalContact.OrbitalContactConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/orbitalcontact"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/orbitalcontact"
 
 &orbitalcontact.OrbitalContactConfig {
 	Connection: interface{},
@@ -880,7 +887,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/orbitalcontact"
 	ReservationStartTime: *string,
 	SpacecraftId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.orbitalContact.OrbitalContactTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.orbitalContact.OrbitalContactTimeouts,
 }
 ```
 
@@ -1082,7 +1089,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.orbitalContact.OrbitalContactTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/orbitalcontact"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/orbitalcontact"
 
 &orbitalcontact.OrbitalContactTimeouts {
 	Create: *string,
@@ -1144,7 +1151,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.orbitalContact.OrbitalContactTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/orbitalcontact"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/orbitalcontact"
 
 orbitalcontact.NewOrbitalContactTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OrbitalContactTimeoutsOutputReference
 ```

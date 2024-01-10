@@ -92,6 +92,31 @@ export function trafficManagerExternalEndpointCustomHeaderToTerraform(struct?: T
   }
 }
 
+
+export function trafficManagerExternalEndpointCustomHeaderToHclTerraform(struct?: TrafficManagerExternalEndpointCustomHeader | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class TrafficManagerExternalEndpointCustomHeaderOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -213,6 +238,37 @@ export function trafficManagerExternalEndpointSubnetToTerraform(struct?: Traffic
     last: cdktf.stringToTerraform(struct!.last),
     scope: cdktf.numberToTerraform(struct!.scope),
   }
+}
+
+
+export function trafficManagerExternalEndpointSubnetToHclTerraform(struct?: TrafficManagerExternalEndpointSubnet | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    first: {
+      value: cdktf.stringToHclTerraform(struct!.first),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    last: {
+      value: cdktf.stringToHclTerraform(struct!.last),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    scope: {
+      value: cdktf.numberToHclTerraform(struct!.scope),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class TrafficManagerExternalEndpointSubnetOutputReference extends cdktf.ComplexObject {
@@ -366,6 +422,43 @@ export function trafficManagerExternalEndpointTimeoutsToTerraform(struct?: Traff
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function trafficManagerExternalEndpointTimeoutsToHclTerraform(struct?: TrafficManagerExternalEndpointTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class TrafficManagerExternalEndpointTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -764,5 +857,85 @@ export class TrafficManagerExternalEndpoint extends cdktf.TerraformResource {
       subnet: cdktf.listMapper(trafficManagerExternalEndpointSubnetToTerraform, true)(this._subnet.internalValue),
       timeouts: trafficManagerExternalEndpointTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      enabled: {
+        value: cdktf.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      endpoint_location: {
+        value: cdktf.stringToHclTerraform(this._endpointLocation),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      geo_mappings: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._geoMappings),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      priority: {
+        value: cdktf.numberToHclTerraform(this._priority),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      profile_id: {
+        value: cdktf.stringToHclTerraform(this._profileId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      target: {
+        value: cdktf.stringToHclTerraform(this._target),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      weight: {
+        value: cdktf.numberToHclTerraform(this._weight),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      custom_header: {
+        value: cdktf.listMapperHcl(trafficManagerExternalEndpointCustomHeaderToHclTerraform, true)(this._customHeader.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "TrafficManagerExternalEndpointCustomHeaderList",
+      },
+      subnet: {
+        value: cdktf.listMapperHcl(trafficManagerExternalEndpointSubnetToHclTerraform, true)(this._subnet.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "TrafficManagerExternalEndpointSubnetList",
+      },
+      timeouts: {
+        value: trafficManagerExternalEndpointTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "TrafficManagerExternalEndpointTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

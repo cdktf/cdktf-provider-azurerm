@@ -143,6 +143,25 @@ export function hdinsightHbaseClusterComponentVersionToTerraform(struct?: Hdinsi
   }
 }
 
+
+export function hdinsightHbaseClusterComponentVersionToHclTerraform(struct?: HdinsightHbaseClusterComponentVersionOutputReference | HdinsightHbaseClusterComponentVersion): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    hbase: {
+      value: cdktf.stringToHclTerraform(struct!.hbase),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class HdinsightHbaseClusterComponentVersionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -208,6 +227,31 @@ export function hdinsightHbaseClusterComputeIsolationToTerraform(struct?: Hdinsi
     compute_isolation_enabled: cdktf.booleanToTerraform(struct!.computeIsolationEnabled),
     host_sku: cdktf.stringToTerraform(struct!.hostSku),
   }
+}
+
+
+export function hdinsightHbaseClusterComputeIsolationToHclTerraform(struct?: HdinsightHbaseClusterComputeIsolationOutputReference | HdinsightHbaseClusterComputeIsolation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    compute_isolation_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.computeIsolationEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    host_sku: {
+      value: cdktf.stringToHclTerraform(struct!.hostSku),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class HdinsightHbaseClusterComputeIsolationOutputReference extends cdktf.ComplexObject {
@@ -310,6 +354,43 @@ export function hdinsightHbaseClusterDiskEncryptionToTerraform(struct?: Hdinsigh
     key_vault_key_id: cdktf.stringToTerraform(struct!.keyVaultKeyId),
     key_vault_managed_identity_id: cdktf.stringToTerraform(struct!.keyVaultManagedIdentityId),
   }
+}
+
+
+export function hdinsightHbaseClusterDiskEncryptionToHclTerraform(struct?: HdinsightHbaseClusterDiskEncryption | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    encryption_algorithm: {
+      value: cdktf.stringToHclTerraform(struct!.encryptionAlgorithm),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    encryption_at_host_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.encryptionAtHostEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    key_vault_key_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultKeyId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_vault_managed_identity_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultManagedIdentityId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class HdinsightHbaseClusterDiskEncryptionOutputReference extends cdktf.ComplexObject {
@@ -480,6 +561,31 @@ export function hdinsightHbaseClusterExtensionToTerraform(struct?: HdinsightHbas
   }
 }
 
+
+export function hdinsightHbaseClusterExtensionToHclTerraform(struct?: HdinsightHbaseClusterExtensionOutputReference | HdinsightHbaseClusterExtension): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    log_analytics_workspace_id: {
+      value: cdktf.stringToHclTerraform(struct!.logAnalyticsWorkspaceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    primary_key: {
+      value: cdktf.stringToHclTerraform(struct!.primaryKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class HdinsightHbaseClusterExtensionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -564,6 +670,31 @@ export function hdinsightHbaseClusterGatewayToTerraform(struct?: HdinsightHbaseC
     password: cdktf.stringToTerraform(struct!.password),
     username: cdktf.stringToTerraform(struct!.username),
   }
+}
+
+
+export function hdinsightHbaseClusterGatewayToHclTerraform(struct?: HdinsightHbaseClusterGatewayOutputReference | HdinsightHbaseClusterGateway): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    password: {
+      value: cdktf.stringToHclTerraform(struct!.password),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    username: {
+      value: cdktf.stringToHclTerraform(struct!.username),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class HdinsightHbaseClusterGatewayOutputReference extends cdktf.ComplexObject {
@@ -660,6 +791,43 @@ export function hdinsightHbaseClusterMetastoresAmbariToTerraform(struct?: Hdinsi
     server: cdktf.stringToTerraform(struct!.server),
     username: cdktf.stringToTerraform(struct!.username),
   }
+}
+
+
+export function hdinsightHbaseClusterMetastoresAmbariToHclTerraform(struct?: HdinsightHbaseClusterMetastoresAmbariOutputReference | HdinsightHbaseClusterMetastoresAmbari): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    database_name: {
+      value: cdktf.stringToHclTerraform(struct!.databaseName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    password: {
+      value: cdktf.stringToHclTerraform(struct!.password),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    server: {
+      value: cdktf.stringToHclTerraform(struct!.server),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    username: {
+      value: cdktf.stringToHclTerraform(struct!.username),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class HdinsightHbaseClusterMetastoresAmbariOutputReference extends cdktf.ComplexObject {
@@ -796,6 +964,43 @@ export function hdinsightHbaseClusterMetastoresHiveToTerraform(struct?: Hdinsigh
   }
 }
 
+
+export function hdinsightHbaseClusterMetastoresHiveToHclTerraform(struct?: HdinsightHbaseClusterMetastoresHiveOutputReference | HdinsightHbaseClusterMetastoresHive): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    database_name: {
+      value: cdktf.stringToHclTerraform(struct!.databaseName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    password: {
+      value: cdktf.stringToHclTerraform(struct!.password),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    server: {
+      value: cdktf.stringToHclTerraform(struct!.server),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    username: {
+      value: cdktf.stringToHclTerraform(struct!.username),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class HdinsightHbaseClusterMetastoresHiveOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -928,6 +1133,43 @@ export function hdinsightHbaseClusterMetastoresOozieToTerraform(struct?: Hdinsig
     server: cdktf.stringToTerraform(struct!.server),
     username: cdktf.stringToTerraform(struct!.username),
   }
+}
+
+
+export function hdinsightHbaseClusterMetastoresOozieToHclTerraform(struct?: HdinsightHbaseClusterMetastoresOozieOutputReference | HdinsightHbaseClusterMetastoresOozie): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    database_name: {
+      value: cdktf.stringToHclTerraform(struct!.databaseName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    password: {
+      value: cdktf.stringToHclTerraform(struct!.password),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    server: {
+      value: cdktf.stringToHclTerraform(struct!.server),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    username: {
+      value: cdktf.stringToHclTerraform(struct!.username),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class HdinsightHbaseClusterMetastoresOozieOutputReference extends cdktf.ComplexObject {
@@ -1065,6 +1307,37 @@ export function hdinsightHbaseClusterMetastoresToTerraform(struct?: HdinsightHba
   }
 }
 
+
+export function hdinsightHbaseClusterMetastoresToHclTerraform(struct?: HdinsightHbaseClusterMetastoresOutputReference | HdinsightHbaseClusterMetastores): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    ambari: {
+      value: hdinsightHbaseClusterMetastoresAmbariToHclTerraform(struct!.ambari),
+      isBlock: true,
+      type: "list",
+      storageClassType: "HdinsightHbaseClusterMetastoresAmbariList",
+    },
+    hive: {
+      value: hdinsightHbaseClusterMetastoresHiveToHclTerraform(struct!.hive),
+      isBlock: true,
+      type: "list",
+      storageClassType: "HdinsightHbaseClusterMetastoresHiveList",
+    },
+    oozie: {
+      value: hdinsightHbaseClusterMetastoresOozieToHclTerraform(struct!.oozie),
+      isBlock: true,
+      type: "list",
+      storageClassType: "HdinsightHbaseClusterMetastoresOozieList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class HdinsightHbaseClusterMetastoresOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1179,6 +1452,31 @@ export function hdinsightHbaseClusterMonitorToTerraform(struct?: HdinsightHbaseC
   }
 }
 
+
+export function hdinsightHbaseClusterMonitorToHclTerraform(struct?: HdinsightHbaseClusterMonitorOutputReference | HdinsightHbaseClusterMonitor): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    log_analytics_workspace_id: {
+      value: cdktf.stringToHclTerraform(struct!.logAnalyticsWorkspaceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    primary_key: {
+      value: cdktf.stringToHclTerraform(struct!.primaryKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class HdinsightHbaseClusterMonitorOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1263,6 +1561,31 @@ export function hdinsightHbaseClusterNetworkToTerraform(struct?: HdinsightHbaseC
     connection_direction: cdktf.stringToTerraform(struct!.connectionDirection),
     private_link_enabled: cdktf.booleanToTerraform(struct!.privateLinkEnabled),
   }
+}
+
+
+export function hdinsightHbaseClusterNetworkToHclTerraform(struct?: HdinsightHbaseClusterNetworkOutputReference | HdinsightHbaseClusterNetwork): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    connection_direction: {
+      value: cdktf.stringToHclTerraform(struct!.connectionDirection),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    private_link_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.privateLinkEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class HdinsightHbaseClusterNetworkOutputReference extends cdktf.ComplexObject {
@@ -1360,6 +1683,37 @@ export function hdinsightHbaseClusterRolesHeadNodeScriptActionsToTerraform(struc
     parameters: cdktf.stringToTerraform(struct!.parameters),
     uri: cdktf.stringToTerraform(struct!.uri),
   }
+}
+
+
+export function hdinsightHbaseClusterRolesHeadNodeScriptActionsToHclTerraform(struct?: HdinsightHbaseClusterRolesHeadNodeScriptActions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    parameters: {
+      value: cdktf.stringToHclTerraform(struct!.parameters),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    uri: {
+      value: cdktf.stringToHclTerraform(struct!.uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class HdinsightHbaseClusterRolesHeadNodeScriptActionsOutputReference extends cdktf.ComplexObject {
@@ -1527,6 +1881,61 @@ export function hdinsightHbaseClusterRolesHeadNodeToTerraform(struct?: Hdinsight
     vm_size: cdktf.stringToTerraform(struct!.vmSize),
     script_actions: cdktf.listMapper(hdinsightHbaseClusterRolesHeadNodeScriptActionsToTerraform, true)(struct!.scriptActions),
   }
+}
+
+
+export function hdinsightHbaseClusterRolesHeadNodeToHclTerraform(struct?: HdinsightHbaseClusterRolesHeadNodeOutputReference | HdinsightHbaseClusterRolesHeadNode): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    password: {
+      value: cdktf.stringToHclTerraform(struct!.password),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ssh_keys: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.sshKeys),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    subnet_id: {
+      value: cdktf.stringToHclTerraform(struct!.subnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    username: {
+      value: cdktf.stringToHclTerraform(struct!.username),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    virtual_network_id: {
+      value: cdktf.stringToHclTerraform(struct!.virtualNetworkId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    vm_size: {
+      value: cdktf.stringToHclTerraform(struct!.vmSize),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    script_actions: {
+      value: cdktf.listMapperHcl(hdinsightHbaseClusterRolesHeadNodeScriptActionsToHclTerraform, true)(struct!.scriptActions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "HdinsightHbaseClusterRolesHeadNodeScriptActionsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class HdinsightHbaseClusterRolesHeadNodeOutputReference extends cdktf.ComplexObject {
@@ -1730,6 +2139,37 @@ export function hdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceScheduleT
   }
 }
 
+
+export function hdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceScheduleToHclTerraform(struct?: HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceSchedule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    days: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.days),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    target_instance_count: {
+      value: cdktf.numberToHclTerraform(struct!.targetInstanceCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    time: {
+      value: cdktf.stringToHclTerraform(struct!.time),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceScheduleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1869,6 +2309,31 @@ export function hdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceToTerrafo
   }
 }
 
+
+export function hdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceToHclTerraform(struct?: HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceOutputReference | HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrence): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    timezone: {
+      value: cdktf.stringToHclTerraform(struct!.timezone),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    schedule: {
+      value: cdktf.listMapperHcl(hdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceScheduleToHclTerraform, true)(struct!.schedule),
+      isBlock: true,
+      type: "list",
+      storageClassType: "HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceScheduleList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1952,6 +2417,25 @@ export function hdinsightHbaseClusterRolesWorkerNodeAutoscaleToTerraform(struct?
   }
 }
 
+
+export function hdinsightHbaseClusterRolesWorkerNodeAutoscaleToHclTerraform(struct?: HdinsightHbaseClusterRolesWorkerNodeAutoscaleOutputReference | HdinsightHbaseClusterRolesWorkerNodeAutoscale): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    recurrence: {
+      value: hdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceToHclTerraform(struct!.recurrence),
+      isBlock: true,
+      type: "list",
+      storageClassType: "HdinsightHbaseClusterRolesWorkerNodeAutoscaleRecurrenceList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class HdinsightHbaseClusterRolesWorkerNodeAutoscaleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2025,6 +2509,37 @@ export function hdinsightHbaseClusterRolesWorkerNodeScriptActionsToTerraform(str
     parameters: cdktf.stringToTerraform(struct!.parameters),
     uri: cdktf.stringToTerraform(struct!.uri),
   }
+}
+
+
+export function hdinsightHbaseClusterRolesWorkerNodeScriptActionsToHclTerraform(struct?: HdinsightHbaseClusterRolesWorkerNodeScriptActions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    parameters: {
+      value: cdktf.stringToHclTerraform(struct!.parameters),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    uri: {
+      value: cdktf.stringToHclTerraform(struct!.uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class HdinsightHbaseClusterRolesWorkerNodeScriptActionsOutputReference extends cdktf.ComplexObject {
@@ -2204,6 +2719,73 @@ export function hdinsightHbaseClusterRolesWorkerNodeToTerraform(struct?: Hdinsig
     autoscale: hdinsightHbaseClusterRolesWorkerNodeAutoscaleToTerraform(struct!.autoscale),
     script_actions: cdktf.listMapper(hdinsightHbaseClusterRolesWorkerNodeScriptActionsToTerraform, true)(struct!.scriptActions),
   }
+}
+
+
+export function hdinsightHbaseClusterRolesWorkerNodeToHclTerraform(struct?: HdinsightHbaseClusterRolesWorkerNodeOutputReference | HdinsightHbaseClusterRolesWorkerNode): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    password: {
+      value: cdktf.stringToHclTerraform(struct!.password),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ssh_keys: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.sshKeys),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    subnet_id: {
+      value: cdktf.stringToHclTerraform(struct!.subnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    target_instance_count: {
+      value: cdktf.numberToHclTerraform(struct!.targetInstanceCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    username: {
+      value: cdktf.stringToHclTerraform(struct!.username),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    virtual_network_id: {
+      value: cdktf.stringToHclTerraform(struct!.virtualNetworkId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    vm_size: {
+      value: cdktf.stringToHclTerraform(struct!.vmSize),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    autoscale: {
+      value: hdinsightHbaseClusterRolesWorkerNodeAutoscaleToHclTerraform(struct!.autoscale),
+      isBlock: true,
+      type: "list",
+      storageClassType: "HdinsightHbaseClusterRolesWorkerNodeAutoscaleList",
+    },
+    script_actions: {
+      value: cdktf.listMapperHcl(hdinsightHbaseClusterRolesWorkerNodeScriptActionsToHclTerraform, true)(struct!.scriptActions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "HdinsightHbaseClusterRolesWorkerNodeScriptActionsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class HdinsightHbaseClusterRolesWorkerNodeOutputReference extends cdktf.ComplexObject {
@@ -2448,6 +3030,37 @@ export function hdinsightHbaseClusterRolesZookeeperNodeScriptActionsToTerraform(
   }
 }
 
+
+export function hdinsightHbaseClusterRolesZookeeperNodeScriptActionsToHclTerraform(struct?: HdinsightHbaseClusterRolesZookeeperNodeScriptActions | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    parameters: {
+      value: cdktf.stringToHclTerraform(struct!.parameters),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    uri: {
+      value: cdktf.stringToHclTerraform(struct!.uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class HdinsightHbaseClusterRolesZookeeperNodeScriptActionsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -2613,6 +3226,61 @@ export function hdinsightHbaseClusterRolesZookeeperNodeToTerraform(struct?: Hdin
     vm_size: cdktf.stringToTerraform(struct!.vmSize),
     script_actions: cdktf.listMapper(hdinsightHbaseClusterRolesZookeeperNodeScriptActionsToTerraform, true)(struct!.scriptActions),
   }
+}
+
+
+export function hdinsightHbaseClusterRolesZookeeperNodeToHclTerraform(struct?: HdinsightHbaseClusterRolesZookeeperNodeOutputReference | HdinsightHbaseClusterRolesZookeeperNode): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    password: {
+      value: cdktf.stringToHclTerraform(struct!.password),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ssh_keys: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.sshKeys),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    subnet_id: {
+      value: cdktf.stringToHclTerraform(struct!.subnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    username: {
+      value: cdktf.stringToHclTerraform(struct!.username),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    virtual_network_id: {
+      value: cdktf.stringToHclTerraform(struct!.virtualNetworkId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    vm_size: {
+      value: cdktf.stringToHclTerraform(struct!.vmSize),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    script_actions: {
+      value: cdktf.listMapperHcl(hdinsightHbaseClusterRolesZookeeperNodeScriptActionsToHclTerraform, true)(struct!.scriptActions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "HdinsightHbaseClusterRolesZookeeperNodeScriptActionsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class HdinsightHbaseClusterRolesZookeeperNodeOutputReference extends cdktf.ComplexObject {
@@ -2822,6 +3490,37 @@ export function hdinsightHbaseClusterRolesToTerraform(struct?: HdinsightHbaseClu
   }
 }
 
+
+export function hdinsightHbaseClusterRolesToHclTerraform(struct?: HdinsightHbaseClusterRolesOutputReference | HdinsightHbaseClusterRoles): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    head_node: {
+      value: hdinsightHbaseClusterRolesHeadNodeToHclTerraform(struct!.headNode),
+      isBlock: true,
+      type: "list",
+      storageClassType: "HdinsightHbaseClusterRolesHeadNodeList",
+    },
+    worker_node: {
+      value: hdinsightHbaseClusterRolesWorkerNodeToHclTerraform(struct!.workerNode),
+      isBlock: true,
+      type: "list",
+      storageClassType: "HdinsightHbaseClusterRolesWorkerNodeList",
+    },
+    zookeeper_node: {
+      value: hdinsightHbaseClusterRolesZookeeperNodeToHclTerraform(struct!.zookeeperNode),
+      isBlock: true,
+      type: "list",
+      storageClassType: "HdinsightHbaseClusterRolesZookeeperNodeList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class HdinsightHbaseClusterRolesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2950,6 +3649,61 @@ export function hdinsightHbaseClusterSecurityProfileToTerraform(struct?: Hdinsig
     ldaps_urls: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.ldapsUrls),
     msi_resource_id: cdktf.stringToTerraform(struct!.msiResourceId),
   }
+}
+
+
+export function hdinsightHbaseClusterSecurityProfileToHclTerraform(struct?: HdinsightHbaseClusterSecurityProfileOutputReference | HdinsightHbaseClusterSecurityProfile): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    aadds_resource_id: {
+      value: cdktf.stringToHclTerraform(struct!.aaddsResourceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    cluster_users_group_dns: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.clusterUsersGroupDns),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    domain_name: {
+      value: cdktf.stringToHclTerraform(struct!.domainName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    domain_user_password: {
+      value: cdktf.stringToHclTerraform(struct!.domainUserPassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    domain_username: {
+      value: cdktf.stringToHclTerraform(struct!.domainUsername),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ldaps_urls: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.ldapsUrls),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    msi_resource_id: {
+      value: cdktf.stringToHclTerraform(struct!.msiResourceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class HdinsightHbaseClusterSecurityProfileOutputReference extends cdktf.ComplexObject {
@@ -3146,6 +3900,43 @@ export function hdinsightHbaseClusterStorageAccountToTerraform(struct?: Hdinsigh
   }
 }
 
+
+export function hdinsightHbaseClusterStorageAccountToHclTerraform(struct?: HdinsightHbaseClusterStorageAccount | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    is_default: {
+      value: cdktf.booleanToHclTerraform(struct!.isDefault),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    storage_account_key: {
+      value: cdktf.stringToHclTerraform(struct!.storageAccountKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    storage_container_id: {
+      value: cdktf.stringToHclTerraform(struct!.storageContainerId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    storage_resource_id: {
+      value: cdktf.stringToHclTerraform(struct!.storageResourceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class HdinsightHbaseClusterStorageAccountOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -3315,6 +4106,43 @@ export function hdinsightHbaseClusterStorageAccountGen2ToTerraform(struct?: Hdin
   }
 }
 
+
+export function hdinsightHbaseClusterStorageAccountGen2ToHclTerraform(struct?: HdinsightHbaseClusterStorageAccountGen2OutputReference | HdinsightHbaseClusterStorageAccountGen2): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    filesystem_id: {
+      value: cdktf.stringToHclTerraform(struct!.filesystemId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    is_default: {
+      value: cdktf.booleanToHclTerraform(struct!.isDefault),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    managed_identity_resource_id: {
+      value: cdktf.stringToHclTerraform(struct!.managedIdentityResourceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    storage_resource_id: {
+      value: cdktf.stringToHclTerraform(struct!.storageResourceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class HdinsightHbaseClusterStorageAccountGen2OutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -3447,6 +4275,43 @@ export function hdinsightHbaseClusterTimeoutsToTerraform(struct?: HdinsightHbase
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function hdinsightHbaseClusterTimeoutsToHclTerraform(struct?: HdinsightHbaseClusterTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class HdinsightHbaseClusterTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -4002,5 +4867,139 @@ export class HdinsightHbaseCluster extends cdktf.TerraformResource {
       storage_account_gen2: hdinsightHbaseClusterStorageAccountGen2ToTerraform(this._storageAccountGen2.internalValue),
       timeouts: hdinsightHbaseClusterTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      cluster_version: {
+        value: cdktf.stringToHclTerraform(this._clusterVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tier: {
+        value: cdktf.stringToHclTerraform(this._tier),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tls_min_version: {
+        value: cdktf.stringToHclTerraform(this._tlsMinVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      component_version: {
+        value: hdinsightHbaseClusterComponentVersionToHclTerraform(this._componentVersion.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "HdinsightHbaseClusterComponentVersionList",
+      },
+      compute_isolation: {
+        value: hdinsightHbaseClusterComputeIsolationToHclTerraform(this._computeIsolation.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "HdinsightHbaseClusterComputeIsolationList",
+      },
+      disk_encryption: {
+        value: cdktf.listMapperHcl(hdinsightHbaseClusterDiskEncryptionToHclTerraform, true)(this._diskEncryption.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "HdinsightHbaseClusterDiskEncryptionList",
+      },
+      extension: {
+        value: hdinsightHbaseClusterExtensionToHclTerraform(this._extension.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "HdinsightHbaseClusterExtensionList",
+      },
+      gateway: {
+        value: hdinsightHbaseClusterGatewayToHclTerraform(this._gateway.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "HdinsightHbaseClusterGatewayList",
+      },
+      metastores: {
+        value: hdinsightHbaseClusterMetastoresToHclTerraform(this._metastores.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "HdinsightHbaseClusterMetastoresList",
+      },
+      monitor: {
+        value: hdinsightHbaseClusterMonitorToHclTerraform(this._monitor.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "HdinsightHbaseClusterMonitorList",
+      },
+      network: {
+        value: hdinsightHbaseClusterNetworkToHclTerraform(this._network.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "HdinsightHbaseClusterNetworkList",
+      },
+      roles: {
+        value: hdinsightHbaseClusterRolesToHclTerraform(this._roles.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "HdinsightHbaseClusterRolesList",
+      },
+      security_profile: {
+        value: hdinsightHbaseClusterSecurityProfileToHclTerraform(this._securityProfile.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "HdinsightHbaseClusterSecurityProfileList",
+      },
+      storage_account: {
+        value: cdktf.listMapperHcl(hdinsightHbaseClusterStorageAccountToHclTerraform, true)(this._storageAccount.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "HdinsightHbaseClusterStorageAccountList",
+      },
+      storage_account_gen2: {
+        value: hdinsightHbaseClusterStorageAccountGen2ToHclTerraform(this._storageAccountGen2.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "HdinsightHbaseClusterStorageAccountGen2List",
+      },
+      timeouts: {
+        value: hdinsightHbaseClusterTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "HdinsightHbaseClusterTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

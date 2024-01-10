@@ -50,6 +50,17 @@ export function dataAzurermSentinelAlertRuleAnomalyMultiSelectObservationToTerra
   }
 }
 
+
+export function dataAzurermSentinelAlertRuleAnomalyMultiSelectObservationToHclTerraform(struct?: DataAzurermSentinelAlertRuleAnomalyMultiSelectObservation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermSentinelAlertRuleAnomalyMultiSelectObservationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -127,6 +138,17 @@ export function dataAzurermSentinelAlertRuleAnomalyPrioritizedExcludeObservation
   }
   return {
   }
+}
+
+
+export function dataAzurermSentinelAlertRuleAnomalyPrioritizedExcludeObservationToHclTerraform(struct?: DataAzurermSentinelAlertRuleAnomalyPrioritizedExcludeObservation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermSentinelAlertRuleAnomalyPrioritizedExcludeObservationOutputReference extends cdktf.ComplexObject {
@@ -208,6 +230,17 @@ export function dataAzurermSentinelAlertRuleAnomalyRequiredDataConnectorToTerraf
   }
 }
 
+
+export function dataAzurermSentinelAlertRuleAnomalyRequiredDataConnectorToHclTerraform(struct?: DataAzurermSentinelAlertRuleAnomalyRequiredDataConnector): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermSentinelAlertRuleAnomalyRequiredDataConnectorOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -275,6 +308,17 @@ export function dataAzurermSentinelAlertRuleAnomalySingleSelectObservationToTerr
   }
   return {
   }
+}
+
+
+export function dataAzurermSentinelAlertRuleAnomalySingleSelectObservationToHclTerraform(struct?: DataAzurermSentinelAlertRuleAnomalySingleSelectObservation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermSentinelAlertRuleAnomalySingleSelectObservationOutputReference extends cdktf.ComplexObject {
@@ -354,6 +398,17 @@ export function dataAzurermSentinelAlertRuleAnomalyThresholdObservationToTerrafo
   }
   return {
   }
+}
+
+
+export function dataAzurermSentinelAlertRuleAnomalyThresholdObservationToHclTerraform(struct?: DataAzurermSentinelAlertRuleAnomalyThresholdObservation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermSentinelAlertRuleAnomalyThresholdObservationOutputReference extends cdktf.ComplexObject {
@@ -443,6 +498,25 @@ export function dataAzurermSentinelAlertRuleAnomalyTimeoutsToTerraform(struct?: 
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function dataAzurermSentinelAlertRuleAnomalyTimeoutsToHclTerraform(struct?: DataAzurermSentinelAlertRuleAnomalyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataAzurermSentinelAlertRuleAnomalyTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -730,5 +804,43 @@ export class DataAzurermSentinelAlertRuleAnomaly extends cdktf.TerraformDataSour
       name: cdktf.stringToTerraform(this._name),
       timeouts: dataAzurermSentinelAlertRuleAnomalyTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      log_analytics_workspace_id: {
+        value: cdktf.stringToHclTerraform(this._logAnalyticsWorkspaceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: dataAzurermSentinelAlertRuleAnomalyTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataAzurermSentinelAlertRuleAnomalyTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

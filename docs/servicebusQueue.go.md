@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.servicebusQueue.ServicebusQueue.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicebusqueue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/servicebusqueue"
 
 servicebusqueue.NewServicebusQueue(scope Construct, id *string, config ServicebusQueueConfig) ServicebusQueue
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.servicebusQueue.ServicebusQueue.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.servicebusQueue.ServicebusQueue.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.servicebusQueue.ServicebusQueue.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.servicebusQueue.ServicebusQueue.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.servicebusQueue.ServicebusQueue.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.servicebusQueue.ServicebusQueue.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.servicebusQueue.ServicebusQueue.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -143,6 +144,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.servicebusQueue.ServicebusQueue.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.servicebusQueue.ServicebusQueue.toMetadata"></a>
 
@@ -510,7 +517,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.servicebusQueue.ServicebusQueue.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicebusqueue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/servicebusqueue"
 
 servicebusqueue.ServicebusQueue_IsConstruct(x interface{}) *bool
 ```
@@ -542,7 +549,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.servicebusQueue.ServicebusQueue.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicebusqueue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/servicebusqueue"
 
 servicebusqueue.ServicebusQueue_IsTerraformElement(x interface{}) *bool
 ```
@@ -556,7 +563,7 @@ servicebusqueue.ServicebusQueue_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.servicebusQueue.ServicebusQueue.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicebusqueue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/servicebusqueue"
 
 servicebusqueue.ServicebusQueue_IsTerraformResource(x interface{}) *bool
 ```
@@ -570,7 +577,7 @@ servicebusqueue.ServicebusQueue_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.servicebusQueue.ServicebusQueue.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicebusqueue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/servicebusqueue"
 
 servicebusqueue.ServicebusQueue_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1239,7 +1246,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.servicebusQueue.ServicebusQueueConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicebusqueue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/servicebusqueue"
 
 &servicebusqueue.ServicebusQueueConfig {
 	Connection: interface{},
@@ -1268,7 +1275,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicebusqueue"
 	RequiresDuplicateDetection: interface{},
 	RequiresSession: interface{},
 	Status: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.servicebusQueue.ServicebusQueueTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.servicebusQueue.ServicebusQueueTimeouts,
 }
 ```
 
@@ -1626,7 +1633,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.servicebusQueue.ServicebusQueueTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicebusqueue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/servicebusqueue"
 
 &servicebusqueue.ServicebusQueueTimeouts {
 	Create: *string,
@@ -1702,7 +1709,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.servicebusQueue.ServicebusQueueTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/servicebusqueue"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/servicebusqueue"
 
 servicebusqueue.NewServicebusQueueTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ServicebusQueueTimeoutsOutputReference
 ```

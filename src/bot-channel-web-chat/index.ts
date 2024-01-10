@@ -80,6 +80,43 @@ export function botChannelWebChatSiteToTerraform(struct?: BotChannelWebChatSite 
   }
 }
 
+
+export function botChannelWebChatSiteToHclTerraform(struct?: BotChannelWebChatSite | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    endpoint_parameters_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.endpointParametersEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    storage_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.storageEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    user_upload_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.userUploadEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class BotChannelWebChatSiteOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -253,6 +290,43 @@ export function botChannelWebChatTimeoutsToTerraform(struct?: BotChannelWebChatT
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function botChannelWebChatTimeoutsToHclTerraform(struct?: BotChannelWebChatTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BotChannelWebChatTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -561,5 +635,55 @@ export class BotChannelWebChat extends cdktf.TerraformResource {
       site: cdktf.listMapper(botChannelWebChatSiteToTerraform, true)(this._site.internalValue),
       timeouts: botChannelWebChatTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      bot_name: {
+        value: cdktf.stringToHclTerraform(this._botName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      site_names: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._siteNames),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      site: {
+        value: cdktf.listMapperHcl(botChannelWebChatSiteToHclTerraform, true)(this._site.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "BotChannelWebChatSiteList",
+      },
+      timeouts: {
+        value: botChannelWebChatTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "BotChannelWebChatTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -92,6 +92,67 @@ export function hpcCacheAccessPolicyAccessRuleToTerraform(struct?: HpcCacheAcces
   }
 }
 
+
+export function hpcCacheAccessPolicyAccessRuleToHclTerraform(struct?: HpcCacheAccessPolicyAccessRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    access: {
+      value: cdktf.stringToHclTerraform(struct!.access),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    anonymous_gid: {
+      value: cdktf.numberToHclTerraform(struct!.anonymousGid),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    anonymous_uid: {
+      value: cdktf.numberToHclTerraform(struct!.anonymousUid),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    filter: {
+      value: cdktf.stringToHclTerraform(struct!.filter),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    root_squash_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.rootSquashEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    scope: {
+      value: cdktf.stringToHclTerraform(struct!.scope),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    submount_access_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.submountAccessEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    suid_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.suidEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class HpcCacheAccessPolicyAccessRuleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -350,6 +411,43 @@ export function hpcCacheAccessPolicyTimeoutsToTerraform(struct?: HpcCacheAccessP
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function hpcCacheAccessPolicyTimeoutsToHclTerraform(struct?: HpcCacheAccessPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class HpcCacheAccessPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -622,5 +720,43 @@ export class HpcCacheAccessPolicy extends cdktf.TerraformResource {
       access_rule: cdktf.listMapper(hpcCacheAccessPolicyAccessRuleToTerraform, true)(this._accessRule.internalValue),
       timeouts: hpcCacheAccessPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      hpc_cache_id: {
+        value: cdktf.stringToHclTerraform(this._hpcCacheId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      access_rule: {
+        value: cdktf.listMapperHcl(hpcCacheAccessPolicyAccessRuleToHclTerraform, true)(this._accessRule.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "HpcCacheAccessPolicyAccessRuleList",
+      },
+      timeouts: {
+        value: hpcCacheAccessPolicyTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "HpcCacheAccessPolicyTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

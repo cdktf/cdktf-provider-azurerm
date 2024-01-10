@@ -103,6 +103,37 @@ export function appServicePlanSkuToTerraform(struct?: AppServicePlanSkuOutputRef
   }
 }
 
+
+export function appServicePlanSkuToHclTerraform(struct?: AppServicePlanSkuOutputReference | AppServicePlanSku): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    capacity: {
+      value: cdktf.numberToHclTerraform(struct!.capacity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    size: {
+      value: cdktf.stringToHclTerraform(struct!.size),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tier: {
+      value: cdktf.stringToHclTerraform(struct!.tier),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AppServicePlanSkuOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -219,6 +250,43 @@ export function appServicePlanTimeoutsToTerraform(struct?: AppServicePlanTimeout
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function appServicePlanTimeoutsToHclTerraform(struct?: AppServicePlanTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AppServicePlanTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -655,5 +723,97 @@ export class AppServicePlan extends cdktf.TerraformResource {
       sku: appServicePlanSkuToTerraform(this._sku.internalValue),
       timeouts: appServicePlanTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      app_service_environment_id: {
+        value: cdktf.stringToHclTerraform(this._appServiceEnvironmentId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      is_xenon: {
+        value: cdktf.booleanToHclTerraform(this._isXenon),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      kind: {
+        value: cdktf.stringToHclTerraform(this._kind),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      maximum_elastic_worker_count: {
+        value: cdktf.numberToHclTerraform(this._maximumElasticWorkerCount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      per_site_scaling: {
+        value: cdktf.booleanToHclTerraform(this._perSiteScaling),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      reserved: {
+        value: cdktf.booleanToHclTerraform(this._reserved),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      zone_redundant: {
+        value: cdktf.booleanToHclTerraform(this._zoneRedundant),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      sku: {
+        value: appServicePlanSkuToHclTerraform(this._sku.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AppServicePlanSkuList",
+      },
+      timeouts: {
+        value: appServicePlanTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AppServicePlanTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

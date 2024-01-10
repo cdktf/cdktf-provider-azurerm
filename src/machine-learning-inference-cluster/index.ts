@@ -88,6 +88,31 @@ export function machineLearningInferenceClusterIdentityToTerraform(struct?: Mach
   }
 }
 
+
+export function machineLearningInferenceClusterIdentityToHclTerraform(struct?: MachineLearningInferenceClusterIdentityOutputReference | MachineLearningInferenceClusterIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.identityIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MachineLearningInferenceClusterIdentityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -200,6 +225,49 @@ export function machineLearningInferenceClusterSslToTerraform(struct?: MachineLe
     leaf_domain_label: cdktf.stringToTerraform(struct!.leafDomainLabel),
     overwrite_existing_domain: cdktf.booleanToTerraform(struct!.overwriteExistingDomain),
   }
+}
+
+
+export function machineLearningInferenceClusterSslToHclTerraform(struct?: MachineLearningInferenceClusterSslOutputReference | MachineLearningInferenceClusterSsl): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cert: {
+      value: cdktf.stringToHclTerraform(struct!.cert),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    cname: {
+      value: cdktf.stringToHclTerraform(struct!.cname),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key: {
+      value: cdktf.stringToHclTerraform(struct!.key),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    leaf_domain_label: {
+      value: cdktf.stringToHclTerraform(struct!.leafDomainLabel),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    overwrite_existing_domain: {
+      value: cdktf.booleanToHclTerraform(struct!.overwriteExistingDomain),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MachineLearningInferenceClusterSslOutputReference extends cdktf.ComplexObject {
@@ -363,6 +431,37 @@ export function machineLearningInferenceClusterTimeoutsToTerraform(struct?: Mach
     delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function machineLearningInferenceClusterTimeoutsToHclTerraform(struct?: MachineLearningInferenceClusterTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MachineLearningInferenceClusterTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -718,5 +817,79 @@ export class MachineLearningInferenceCluster extends cdktf.TerraformResource {
       ssl: machineLearningInferenceClusterSslToTerraform(this._ssl.internalValue),
       timeouts: machineLearningInferenceClusterTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      cluster_purpose: {
+        value: cdktf.stringToHclTerraform(this._clusterPurpose),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      kubernetes_cluster_id: {
+        value: cdktf.stringToHclTerraform(this._kubernetesClusterId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      machine_learning_workspace_id: {
+        value: cdktf.stringToHclTerraform(this._machineLearningWorkspaceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      identity: {
+        value: machineLearningInferenceClusterIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MachineLearningInferenceClusterIdentityList",
+      },
+      ssl: {
+        value: machineLearningInferenceClusterSslToHclTerraform(this._ssl.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MachineLearningInferenceClusterSslList",
+      },
+      timeouts: {
+        value: machineLearningInferenceClusterTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MachineLearningInferenceClusterTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

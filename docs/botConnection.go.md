@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.botConnection.BotConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/botconnection"
 
 botconnection.NewBotConnection(scope Construct, id *string, config BotConnectionConfig) BotConnection
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnection.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnection.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnection.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnection.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnection.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnection.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.botConnection.BotConnection.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -130,6 +131,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.botConnection.BotConnection.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.botConnection.BotConnection.toMetadata"></a>
 
@@ -419,7 +426,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.botConnection.BotConnection.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/botconnection"
 
 botconnection.BotConnection_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.botConnection.BotConnection.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/botconnection"
 
 botconnection.BotConnection_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +472,7 @@ botconnection.BotConnection_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.botConnection.BotConnection.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/botconnection"
 
 botconnection.BotConnection_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +486,7 @@ botconnection.BotConnection_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.botConnection.BotConnection.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/botconnection"
 
 botconnection.BotConnection_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -972,7 +979,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.botConnection.BotConnectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/botconnection"
 
 &botconnection.BotConnectionConfig {
 	Connection: interface{},
@@ -993,7 +1000,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botconnection"
 	Parameters: *map[string]*string,
 	Scopes: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.botConnection.BotConnectionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.botConnection.BotConnectionTimeouts,
 }
 ```
 
@@ -1247,7 +1254,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.botConnection.BotConnectionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/botconnection"
 
 &botconnection.BotConnectionTimeouts {
 	Create: *string,
@@ -1323,7 +1330,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.botConnection.BotConnectionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/botconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/botconnection"
 
 botconnection.NewBotConnectionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) BotConnectionTimeoutsOutputReference
 ```

@@ -90,6 +90,31 @@ export function attestationProviderPolicyToTerraform(struct?: AttestationProvide
   }
 }
 
+
+export function attestationProviderPolicyToHclTerraform(struct?: AttestationProviderPolicy | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    data: {
+      value: cdktf.stringToHclTerraform(struct!.data),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    environment_type: {
+      value: cdktf.stringToHclTerraform(struct!.environmentType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AttestationProviderPolicyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -222,6 +247,43 @@ export function attestationProviderTimeoutsToTerraform(struct?: AttestationProvi
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function attestationProviderTimeoutsToHclTerraform(struct?: AttestationProviderTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AttestationProviderTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -630,5 +692,85 @@ export class AttestationProvider extends cdktf.TerraformResource {
       policy: cdktf.listMapper(attestationProviderPolicyToTerraform, true)(this._policy.internalValue),
       timeouts: attestationProviderTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      open_enclave_policy_base64: {
+        value: cdktf.stringToHclTerraform(this._openEnclavePolicyBase64),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      policy_signing_certificate_data: {
+        value: cdktf.stringToHclTerraform(this._policySigningCertificateData),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sev_snp_policy_base64: {
+        value: cdktf.stringToHclTerraform(this._sevSnpPolicyBase64),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sgx_enclave_policy_base64: {
+        value: cdktf.stringToHclTerraform(this._sgxEnclavePolicyBase64),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tpm_policy_base64: {
+        value: cdktf.stringToHclTerraform(this._tpmPolicyBase64),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      policy: {
+        value: cdktf.listMapperHcl(attestationProviderPolicyToHclTerraform, true)(this._policy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AttestationProviderPolicyList",
+      },
+      timeouts: {
+        value: attestationProviderTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AttestationProviderTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -74,6 +74,31 @@ export function mobileNetworkSliceSingleNetworkSliceSelectionAssistanceInformati
   }
 }
 
+
+export function mobileNetworkSliceSingleNetworkSliceSelectionAssistanceInformationToHclTerraform(struct?: MobileNetworkSliceSingleNetworkSliceSelectionAssistanceInformationOutputReference | MobileNetworkSliceSingleNetworkSliceSelectionAssistanceInformation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    slice_differentiator: {
+      value: cdktf.stringToHclTerraform(struct!.sliceDifferentiator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    slice_service_type: {
+      value: cdktf.numberToHclTerraform(struct!.sliceServiceType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MobileNetworkSliceSingleNetworkSliceSelectionAssistanceInformationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -171,6 +196,43 @@ export function mobileNetworkSliceTimeoutsToTerraform(struct?: MobileNetworkSlic
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function mobileNetworkSliceTimeoutsToHclTerraform(struct?: MobileNetworkSliceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MobileNetworkSliceTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -494,5 +556,61 @@ export class MobileNetworkSlice extends cdktf.TerraformResource {
       single_network_slice_selection_assistance_information: mobileNetworkSliceSingleNetworkSliceSelectionAssistanceInformationToTerraform(this._singleNetworkSliceSelectionAssistanceInformation.internalValue),
       timeouts: mobileNetworkSliceTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      mobile_network_id: {
+        value: cdktf.stringToHclTerraform(this._mobileNetworkId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      single_network_slice_selection_assistance_information: {
+        value: mobileNetworkSliceSingleNetworkSliceSelectionAssistanceInformationToHclTerraform(this._singleNetworkSliceSelectionAssistanceInformation.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MobileNetworkSliceSingleNetworkSliceSelectionAssistanceInformationList",
+      },
+      timeouts: {
+        value: mobileNetworkSliceTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MobileNetworkSliceTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

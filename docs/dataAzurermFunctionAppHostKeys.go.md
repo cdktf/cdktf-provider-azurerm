@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermFunctionAppHostKeys.DataAzurermFunctionAppHostKeys.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermfunctionapphostkeys"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermfunctionapphostkeys"
 
 dataazurermfunctionapphostkeys.NewDataAzurermFunctionAppHostKeys(scope Construct, id *string, config DataAzurermFunctionAppHostKeysConfig) DataAzurermFunctionAppHostKeys
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermFunctionAppHostKeys.DataAzurermFunctionAppHostKeys.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermFunctionAppHostKeys.DataAzurermFunctionAppHostKeys.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermFunctionAppHostKeys.DataAzurermFunctionAppHostKeys.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermFunctionAppHostKeys.DataAzurermFunctionAppHostKeys.toHclTerraform">ToHclTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermFunctionAppHostKeys.DataAzurermFunctionAppHostKeys.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermFunctionAppHostKeys.DataAzurermFunctionAppHostKeys.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermFunctionAppHostKeys.DataAzurermFunctionAppHostKeys.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
@@ -121,6 +122,14 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.dataAzurermFunctionAppHostKeys.DataAzurermFunctionAppHostKeys.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
+
+Adds this resource to the terraform JSON output.
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.dataAzurermFunctionAppHostKeys.DataAzurermFunctionAppHostKeys.toMetadata"></a>
 
@@ -294,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermFunctionAppHostKeys.DataAzurermFunctionAppHostKeys.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermfunctionapphostkeys"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermfunctionapphostkeys"
 
 dataazurermfunctionapphostkeys.DataAzurermFunctionAppHostKeys_IsConstruct(x interface{}) *bool
 ```
@@ -326,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermFunctionAppHostKeys.DataAzurermFunctionAppHostKeys.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermfunctionapphostkeys"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermfunctionapphostkeys"
 
 dataazurermfunctionapphostkeys.DataAzurermFunctionAppHostKeys_IsTerraformElement(x interface{}) *bool
 ```
@@ -340,7 +349,7 @@ dataazurermfunctionapphostkeys.DataAzurermFunctionAppHostKeys_IsTerraformElement
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermFunctionAppHostKeys.DataAzurermFunctionAppHostKeys.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermfunctionapphostkeys"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermfunctionapphostkeys"
 
 dataazurermfunctionapphostkeys.DataAzurermFunctionAppHostKeys_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -354,7 +363,7 @@ dataazurermfunctionapphostkeys.DataAzurermFunctionAppHostKeys_IsTerraformDataSou
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermFunctionAppHostKeys.DataAzurermFunctionAppHostKeys.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermfunctionapphostkeys"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermfunctionapphostkeys"
 
 dataazurermfunctionapphostkeys.DataAzurermFunctionAppHostKeys_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -726,7 +735,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermFunctionAppHostKeys.DataAzurermFunctionAppHostKeysConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermfunctionapphostkeys"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermfunctionapphostkeys"
 
 &dataazurermfunctionapphostkeys.DataAzurermFunctionAppHostKeysConfig {
 	Connection: interface{},
@@ -739,7 +748,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermfuncti
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermFunctionAppHostKeys.DataAzurermFunctionAppHostKeysTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataAzurermFunctionAppHostKeys.DataAzurermFunctionAppHostKeysTimeouts,
 }
 ```
 
@@ -889,7 +898,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermFunctionAppHostKeys.DataAzurermFunctionAppHostKeysTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermfunctionapphostkeys"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermfunctionapphostkeys"
 
 &dataazurermfunctionapphostkeys.DataAzurermFunctionAppHostKeysTimeouts {
 	Read: *string,
@@ -923,7 +932,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermFunctionAppHostKeys.DataAzurermFunctionAppHostKeysTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermfunctionapphostkeys"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermfunctionapphostkeys"
 
 dataazurermfunctionapphostkeys.NewDataAzurermFunctionAppHostKeysTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermFunctionAppHostKeysTimeoutsOutputReference
 ```

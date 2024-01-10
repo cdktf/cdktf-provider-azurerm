@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kustoDatabasePrincipalAssignment.KustoDatabasePrincipalAssignment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustodatabaseprincipalassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/kustodatabaseprincipalassignment"
 
 kustodatabaseprincipalassignment.NewKustoDatabasePrincipalAssignment(scope Construct, id *string, config KustoDatabasePrincipalAssignmentConfig) KustoDatabasePrincipalAssignment
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.kustoDatabasePrincipalAssignment.KustoDatabasePrincipalAssignment.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kustoDatabasePrincipalAssignment.KustoDatabasePrincipalAssignment.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.kustoDatabasePrincipalAssignment.KustoDatabasePrincipalAssignment.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.kustoDatabasePrincipalAssignment.KustoDatabasePrincipalAssignment.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kustoDatabasePrincipalAssignment.KustoDatabasePrincipalAssignment.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kustoDatabasePrincipalAssignment.KustoDatabasePrincipalAssignment.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.kustoDatabasePrincipalAssignment.KustoDatabasePrincipalAssignment.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -127,6 +128,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.kustoDatabasePrincipalAssignment.KustoDatabasePrincipalAssignment.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.kustoDatabasePrincipalAssignment.KustoDatabasePrincipalAssignment.toMetadata"></a>
 
@@ -398,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.kustoDatabasePrincipalAssignment.KustoDatabasePrincipalAssignment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustodatabaseprincipalassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/kustodatabaseprincipalassignment"
 
 kustodatabaseprincipalassignment.KustoDatabasePrincipalAssignment_IsConstruct(x interface{}) *bool
 ```
@@ -430,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.kustoDatabasePrincipalAssignment.KustoDatabasePrincipalAssignment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustodatabaseprincipalassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/kustodatabaseprincipalassignment"
 
 kustodatabaseprincipalassignment.KustoDatabasePrincipalAssignment_IsTerraformElement(x interface{}) *bool
 ```
@@ -444,7 +451,7 @@ kustodatabaseprincipalassignment.KustoDatabasePrincipalAssignment_IsTerraformEle
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.kustoDatabasePrincipalAssignment.KustoDatabasePrincipalAssignment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustodatabaseprincipalassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/kustodatabaseprincipalassignment"
 
 kustodatabaseprincipalassignment.KustoDatabasePrincipalAssignment_IsTerraformResource(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ kustodatabaseprincipalassignment.KustoDatabasePrincipalAssignment_IsTerraformRes
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.kustoDatabasePrincipalAssignment.KustoDatabasePrincipalAssignment.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustodatabaseprincipalassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/kustodatabaseprincipalassignment"
 
 kustodatabaseprincipalassignment.KustoDatabasePrincipalAssignment_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -929,7 +936,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kustoDatabasePrincipalAssignment.KustoDatabasePrincipalAssignmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustodatabaseprincipalassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/kustodatabaseprincipalassignment"
 
 &kustodatabaseprincipalassignment.KustoDatabasePrincipalAssignmentConfig {
 	Connection: interface{},
@@ -948,7 +955,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustodatabaseprin
 	Role: *string,
 	TenantId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.kustoDatabasePrincipalAssignment.KustoDatabasePrincipalAssignmentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.kustoDatabasePrincipalAssignment.KustoDatabasePrincipalAssignmentTimeouts,
 }
 ```
 
@@ -1176,7 +1183,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kustoDatabasePrincipalAssignment.KustoDatabasePrincipalAssignmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustodatabaseprincipalassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/kustodatabaseprincipalassignment"
 
 &kustodatabaseprincipalassignment.KustoDatabasePrincipalAssignmentTimeouts {
 	Create: *string,
@@ -1238,7 +1245,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kustoDatabasePrincipalAssignment.KustoDatabasePrincipalAssignmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustodatabaseprincipalassignment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/kustodatabaseprincipalassignment"
 
 kustodatabaseprincipalassignment.NewKustoDatabasePrincipalAssignmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KustoDatabasePrincipalAssignmentTimeoutsOutputReference
 ```

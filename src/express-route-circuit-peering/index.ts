@@ -110,6 +110,43 @@ export function expressRouteCircuitPeeringIpv6MicrosoftPeeringToTerraform(struct
   }
 }
 
+
+export function expressRouteCircuitPeeringIpv6MicrosoftPeeringToHclTerraform(struct?: ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference | ExpressRouteCircuitPeeringIpv6MicrosoftPeering): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    advertised_communities: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.advertisedCommunities),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    advertised_public_prefixes: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.advertisedPublicPrefixes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    customer_asn: {
+      value: cdktf.numberToHclTerraform(struct!.customerAsn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    routing_registry_name: {
+      value: cdktf.stringToHclTerraform(struct!.routingRegistryName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ExpressRouteCircuitPeeringIpv6MicrosoftPeeringOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -261,6 +298,49 @@ export function expressRouteCircuitPeeringIpv6ToTerraform(struct?: ExpressRouteC
     secondary_peer_address_prefix: cdktf.stringToTerraform(struct!.secondaryPeerAddressPrefix),
     microsoft_peering: expressRouteCircuitPeeringIpv6MicrosoftPeeringToTerraform(struct!.microsoftPeering),
   }
+}
+
+
+export function expressRouteCircuitPeeringIpv6ToHclTerraform(struct?: ExpressRouteCircuitPeeringIpv6OutputReference | ExpressRouteCircuitPeeringIpv6): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    primary_peer_address_prefix: {
+      value: cdktf.stringToHclTerraform(struct!.primaryPeerAddressPrefix),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    route_filter_id: {
+      value: cdktf.stringToHclTerraform(struct!.routeFilterId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    secondary_peer_address_prefix: {
+      value: cdktf.stringToHclTerraform(struct!.secondaryPeerAddressPrefix),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    microsoft_peering: {
+      value: expressRouteCircuitPeeringIpv6MicrosoftPeeringToHclTerraform(struct!.microsoftPeering),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ExpressRouteCircuitPeeringIpv6MicrosoftPeeringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ExpressRouteCircuitPeeringIpv6OutputReference extends cdktf.ComplexObject {
@@ -425,6 +505,43 @@ export function expressRouteCircuitPeeringMicrosoftPeeringConfigToTerraform(stru
   }
 }
 
+
+export function expressRouteCircuitPeeringMicrosoftPeeringConfigToHclTerraform(struct?: ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference | ExpressRouteCircuitPeeringMicrosoftPeeringConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    advertised_communities: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.advertisedCommunities),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    advertised_public_prefixes: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.advertisedPublicPrefixes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    customer_asn: {
+      value: cdktf.numberToHclTerraform(struct!.customerAsn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    routing_registry_name: {
+      value: cdktf.stringToHclTerraform(struct!.routingRegistryName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ExpressRouteCircuitPeeringMicrosoftPeeringConfigOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -566,6 +683,43 @@ export function expressRouteCircuitPeeringTimeoutsToTerraform(struct?: ExpressRo
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function expressRouteCircuitPeeringTimeoutsToHclTerraform(struct?: ExpressRouteCircuitPeeringTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ExpressRouteCircuitPeeringTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1017,5 +1171,97 @@ export class ExpressRouteCircuitPeering extends cdktf.TerraformResource {
       microsoft_peering_config: expressRouteCircuitPeeringMicrosoftPeeringConfigToTerraform(this._microsoftPeeringConfig.internalValue),
       timeouts: expressRouteCircuitPeeringTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      express_route_circuit_name: {
+        value: cdktf.stringToHclTerraform(this._expressRouteCircuitName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ipv4_enabled: {
+        value: cdktf.booleanToHclTerraform(this._ipv4Enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      peer_asn: {
+        value: cdktf.numberToHclTerraform(this._peerAsn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      peering_type: {
+        value: cdktf.stringToHclTerraform(this._peeringType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      primary_peer_address_prefix: {
+        value: cdktf.stringToHclTerraform(this._primaryPeerAddressPrefix),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      route_filter_id: {
+        value: cdktf.stringToHclTerraform(this._routeFilterId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      secondary_peer_address_prefix: {
+        value: cdktf.stringToHclTerraform(this._secondaryPeerAddressPrefix),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      shared_key: {
+        value: cdktf.stringToHclTerraform(this._sharedKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      vlan_id: {
+        value: cdktf.numberToHclTerraform(this._vlanId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      ipv6: {
+        value: expressRouteCircuitPeeringIpv6ToHclTerraform(this._ipv6.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ExpressRouteCircuitPeeringIpv6List",
+      },
+      microsoft_peering_config: {
+        value: expressRouteCircuitPeeringMicrosoftPeeringConfigToHclTerraform(this._microsoftPeeringConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ExpressRouteCircuitPeeringMicrosoftPeeringConfigList",
+      },
+      timeouts: {
+        value: expressRouteCircuitPeeringTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ExpressRouteCircuitPeeringTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

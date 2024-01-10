@@ -150,6 +150,31 @@ export function sentinelAlertRuleScheduledAlertDetailsOverrideDynamicPropertyToT
   }
 }
 
+
+export function sentinelAlertRuleScheduledAlertDetailsOverrideDynamicPropertyToHclTerraform(struct?: SentinelAlertRuleScheduledAlertDetailsOverrideDynamicProperty | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SentinelAlertRuleScheduledAlertDetailsOverrideDynamicPropertyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -283,6 +308,49 @@ export function sentinelAlertRuleScheduledAlertDetailsOverrideToTerraform(struct
     tactics_column_name: cdktf.stringToTerraform(struct!.tacticsColumnName),
     dynamic_property: cdktf.listMapper(sentinelAlertRuleScheduledAlertDetailsOverrideDynamicPropertyToTerraform, true)(struct!.dynamicProperty),
   }
+}
+
+
+export function sentinelAlertRuleScheduledAlertDetailsOverrideToHclTerraform(struct?: SentinelAlertRuleScheduledAlertDetailsOverride | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description_format: {
+      value: cdktf.stringToHclTerraform(struct!.descriptionFormat),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    display_name_format: {
+      value: cdktf.stringToHclTerraform(struct!.displayNameFormat),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    severity_column_name: {
+      value: cdktf.stringToHclTerraform(struct!.severityColumnName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tactics_column_name: {
+      value: cdktf.stringToHclTerraform(struct!.tacticsColumnName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    dynamic_property: {
+      value: cdktf.listMapperHcl(sentinelAlertRuleScheduledAlertDetailsOverrideDynamicPropertyToHclTerraform, true)(struct!.dynamicProperty),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SentinelAlertRuleScheduledAlertDetailsOverrideDynamicPropertyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SentinelAlertRuleScheduledAlertDetailsOverrideOutputReference extends cdktf.ComplexObject {
@@ -475,6 +543,31 @@ export function sentinelAlertRuleScheduledEntityMappingFieldMappingToTerraform(s
   }
 }
 
+
+export function sentinelAlertRuleScheduledEntityMappingFieldMappingToHclTerraform(struct?: SentinelAlertRuleScheduledEntityMappingFieldMapping | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    column_name: {
+      value: cdktf.stringToHclTerraform(struct!.columnName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    identifier: {
+      value: cdktf.stringToHclTerraform(struct!.identifier),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SentinelAlertRuleScheduledEntityMappingFieldMappingOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -595,6 +688,31 @@ export function sentinelAlertRuleScheduledEntityMappingToTerraform(struct?: Sent
   }
 }
 
+
+export function sentinelAlertRuleScheduledEntityMappingToHclTerraform(struct?: SentinelAlertRuleScheduledEntityMapping | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    entity_type: {
+      value: cdktf.stringToHclTerraform(struct!.entityType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    field_mapping: {
+      value: cdktf.listMapperHcl(sentinelAlertRuleScheduledEntityMappingFieldMappingToHclTerraform, true)(struct!.fieldMapping),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SentinelAlertRuleScheduledEntityMappingFieldMappingList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SentinelAlertRuleScheduledEntityMappingOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -708,6 +826,25 @@ export function sentinelAlertRuleScheduledEventGroupingToTerraform(struct?: Sent
   }
 }
 
+
+export function sentinelAlertRuleScheduledEventGroupingToHclTerraform(struct?: SentinelAlertRuleScheduledEventGroupingOutputReference | SentinelAlertRuleScheduledEventGrouping): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    aggregation_method: {
+      value: cdktf.stringToHclTerraform(struct!.aggregationMethod),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SentinelAlertRuleScheduledEventGroupingOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -798,6 +935,61 @@ export function sentinelAlertRuleScheduledIncidentConfigurationGroupingToTerrafo
     lookback_duration: cdktf.stringToTerraform(struct!.lookbackDuration),
     reopen_closed_incidents: cdktf.booleanToTerraform(struct!.reopenClosedIncidents),
   }
+}
+
+
+export function sentinelAlertRuleScheduledIncidentConfigurationGroupingToHclTerraform(struct?: SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputReference | SentinelAlertRuleScheduledIncidentConfigurationGrouping): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    entity_matching_method: {
+      value: cdktf.stringToHclTerraform(struct!.entityMatchingMethod),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    group_by_alert_details: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.groupByAlertDetails),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    group_by_custom_details: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.groupByCustomDetails),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    group_by_entities: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.groupByEntities),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    lookback_duration: {
+      value: cdktf.stringToHclTerraform(struct!.lookbackDuration),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    reopen_closed_incidents: {
+      value: cdktf.booleanToHclTerraform(struct!.reopenClosedIncidents),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SentinelAlertRuleScheduledIncidentConfigurationGroupingOutputReference extends cdktf.ComplexObject {
@@ -1004,6 +1196,31 @@ export function sentinelAlertRuleScheduledIncidentConfigurationToTerraform(struc
   }
 }
 
+
+export function sentinelAlertRuleScheduledIncidentConfigurationToHclTerraform(struct?: SentinelAlertRuleScheduledIncidentConfigurationOutputReference | SentinelAlertRuleScheduledIncidentConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create_incident: {
+      value: cdktf.booleanToHclTerraform(struct!.createIncident),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    grouping: {
+      value: sentinelAlertRuleScheduledIncidentConfigurationGroupingToHclTerraform(struct!.grouping),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SentinelAlertRuleScheduledIncidentConfigurationGroupingList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SentinelAlertRuleScheduledIncidentConfigurationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1083,6 +1300,25 @@ export function sentinelAlertRuleScheduledSentinelEntityMappingToTerraform(struc
   return {
     column_name: cdktf.stringToTerraform(struct!.columnName),
   }
+}
+
+
+export function sentinelAlertRuleScheduledSentinelEntityMappingToHclTerraform(struct?: SentinelAlertRuleScheduledSentinelEntityMapping | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    column_name: {
+      value: cdktf.stringToHclTerraform(struct!.columnName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SentinelAlertRuleScheduledSentinelEntityMappingOutputReference extends cdktf.ComplexObject {
@@ -1192,6 +1428,43 @@ export function sentinelAlertRuleScheduledTimeoutsToTerraform(struct?: SentinelA
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function sentinelAlertRuleScheduledTimeoutsToHclTerraform(struct?: SentinelAlertRuleScheduledTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SentinelAlertRuleScheduledTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1818,5 +2091,163 @@ export class SentinelAlertRuleScheduled extends cdktf.TerraformResource {
       sentinel_entity_mapping: cdktf.listMapper(sentinelAlertRuleScheduledSentinelEntityMappingToTerraform, true)(this._sentinelEntityMapping.internalValue),
       timeouts: sentinelAlertRuleScheduledTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      alert_rule_template_guid: {
+        value: cdktf.stringToHclTerraform(this._alertRuleTemplateGuid),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      alert_rule_template_version: {
+        value: cdktf.stringToHclTerraform(this._alertRuleTemplateVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      custom_details: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._customDetails),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enabled: {
+        value: cdktf.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      log_analytics_workspace_id: {
+        value: cdktf.stringToHclTerraform(this._logAnalyticsWorkspaceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      query: {
+        value: cdktf.stringToHclTerraform(this._query),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      query_frequency: {
+        value: cdktf.stringToHclTerraform(this._queryFrequency),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      query_period: {
+        value: cdktf.stringToHclTerraform(this._queryPeriod),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      severity: {
+        value: cdktf.stringToHclTerraform(this._severity),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      suppression_duration: {
+        value: cdktf.stringToHclTerraform(this._suppressionDuration),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      suppression_enabled: {
+        value: cdktf.booleanToHclTerraform(this._suppressionEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      tactics: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._tactics),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      techniques: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._techniques),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      trigger_operator: {
+        value: cdktf.stringToHclTerraform(this._triggerOperator),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      trigger_threshold: {
+        value: cdktf.numberToHclTerraform(this._triggerThreshold),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      alert_details_override: {
+        value: cdktf.listMapperHcl(sentinelAlertRuleScheduledAlertDetailsOverrideToHclTerraform, true)(this._alertDetailsOverride.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SentinelAlertRuleScheduledAlertDetailsOverrideList",
+      },
+      entity_mapping: {
+        value: cdktf.listMapperHcl(sentinelAlertRuleScheduledEntityMappingToHclTerraform, true)(this._entityMapping.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SentinelAlertRuleScheduledEntityMappingList",
+      },
+      event_grouping: {
+        value: sentinelAlertRuleScheduledEventGroupingToHclTerraform(this._eventGrouping.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SentinelAlertRuleScheduledEventGroupingList",
+      },
+      incident_configuration: {
+        value: sentinelAlertRuleScheduledIncidentConfigurationToHclTerraform(this._incidentConfiguration.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SentinelAlertRuleScheduledIncidentConfigurationList",
+      },
+      sentinel_entity_mapping: {
+        value: cdktf.listMapperHcl(sentinelAlertRuleScheduledSentinelEntityMappingToHclTerraform, true)(this._sentinelEntityMapping.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SentinelAlertRuleScheduledSentinelEntityMappingList",
+      },
+      timeouts: {
+        value: sentinelAlertRuleScheduledTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SentinelAlertRuleScheduledTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

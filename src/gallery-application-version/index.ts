@@ -107,6 +107,37 @@ export function galleryApplicationVersionManageActionToTerraform(struct?: Galler
   }
 }
 
+
+export function galleryApplicationVersionManageActionToHclTerraform(struct?: GalleryApplicationVersionManageActionOutputReference | GalleryApplicationVersionManageAction): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    install: {
+      value: cdktf.stringToHclTerraform(struct!.install),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    remove: {
+      value: cdktf.stringToHclTerraform(struct!.remove),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class GalleryApplicationVersionManageActionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -215,6 +246,31 @@ export function galleryApplicationVersionSourceToTerraform(struct?: GalleryAppli
   }
 }
 
+
+export function galleryApplicationVersionSourceToHclTerraform(struct?: GalleryApplicationVersionSourceOutputReference | GalleryApplicationVersionSource): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    default_configuration_link: {
+      value: cdktf.stringToHclTerraform(struct!.defaultConfigurationLink),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    media_link: {
+      value: cdktf.stringToHclTerraform(struct!.mediaLink),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class GalleryApplicationVersionSourceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -312,6 +368,43 @@ export function galleryApplicationVersionTargetRegionToTerraform(struct?: Galler
     regional_replica_count: cdktf.numberToTerraform(struct!.regionalReplicaCount),
     storage_account_type: cdktf.stringToTerraform(struct!.storageAccountType),
   }
+}
+
+
+export function galleryApplicationVersionTargetRegionToHclTerraform(struct?: GalleryApplicationVersionTargetRegion | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    exclude_from_latest: {
+      value: cdktf.booleanToHclTerraform(struct!.excludeFromLatest),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    regional_replica_count: {
+      value: cdktf.numberToHclTerraform(struct!.regionalReplicaCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    storage_account_type: {
+      value: cdktf.stringToHclTerraform(struct!.storageAccountType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class GalleryApplicationVersionTargetRegionOutputReference extends cdktf.ComplexObject {
@@ -484,6 +577,43 @@ export function galleryApplicationVersionTimeoutsToTerraform(struct?: GalleryApp
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function galleryApplicationVersionTimeoutsToHclTerraform(struct?: GalleryApplicationVersionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class GalleryApplicationVersionTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -909,5 +1039,97 @@ export class GalleryApplicationVersion extends cdktf.TerraformResource {
       target_region: cdktf.listMapper(galleryApplicationVersionTargetRegionToTerraform, true)(this._targetRegion.internalValue),
       timeouts: galleryApplicationVersionTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      config_file: {
+        value: cdktf.stringToHclTerraform(this._configFile),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enable_health_check: {
+        value: cdktf.booleanToHclTerraform(this._enableHealthCheck),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      end_of_life_date: {
+        value: cdktf.stringToHclTerraform(this._endOfLifeDate),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      exclude_from_latest: {
+        value: cdktf.booleanToHclTerraform(this._excludeFromLatest),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      gallery_application_id: {
+        value: cdktf.stringToHclTerraform(this._galleryApplicationId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      package_file: {
+        value: cdktf.stringToHclTerraform(this._packageFile),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      manage_action: {
+        value: galleryApplicationVersionManageActionToHclTerraform(this._manageAction.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "GalleryApplicationVersionManageActionList",
+      },
+      source: {
+        value: galleryApplicationVersionSourceToHclTerraform(this._source.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "GalleryApplicationVersionSourceList",
+      },
+      target_region: {
+        value: cdktf.listMapperHcl(galleryApplicationVersionTargetRegionToHclTerraform, true)(this._targetRegion.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "GalleryApplicationVersionTargetRegionList",
+      },
+      timeouts: {
+        value: galleryApplicationVersionTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "GalleryApplicationVersionTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

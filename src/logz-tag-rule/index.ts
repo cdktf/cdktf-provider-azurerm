@@ -75,6 +75,37 @@ export function logzTagRuleTagFilterToTerraform(struct?: LogzTagRuleTagFilter | 
   }
 }
 
+
+export function logzTagRuleTagFilterToHclTerraform(struct?: LogzTagRuleTagFilter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    action: {
+      value: cdktf.stringToHclTerraform(struct!.action),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class LogzTagRuleTagFilterOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -223,6 +254,43 @@ export function logzTagRuleTimeoutsToTerraform(struct?: LogzTagRuleTimeouts | cd
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function logzTagRuleTimeoutsToHclTerraform(struct?: LogzTagRuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LogzTagRuleTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -537,5 +605,55 @@ export class LogzTagRule extends cdktf.TerraformResource {
       tag_filter: cdktf.listMapper(logzTagRuleTagFilterToTerraform, true)(this._tagFilter.internalValue),
       timeouts: logzTagRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      logz_monitor_id: {
+        value: cdktf.stringToHclTerraform(this._logzMonitorId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      send_aad_logs: {
+        value: cdktf.booleanToHclTerraform(this._sendAadLogs),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      send_activity_logs: {
+        value: cdktf.booleanToHclTerraform(this._sendActivityLogs),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      send_subscription_logs: {
+        value: cdktf.booleanToHclTerraform(this._sendSubscriptionLogs),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      tag_filter: {
+        value: cdktf.listMapperHcl(logzTagRuleTagFilterToHclTerraform, true)(this._tagFilter.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "LogzTagRuleTagFilterList",
+      },
+      timeouts: {
+        value: logzTagRuleTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "LogzTagRuleTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

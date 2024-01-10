@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionBackupVault.DataProtectionBackupVault.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionbackupvault"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackupvault"
 
 dataprotectionbackupvault.NewDataProtectionBackupVault(scope Construct, id *string, config DataProtectionBackupVaultConfig) DataProtectionBackupVault
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupVault.DataProtectionBackupVault.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupVault.DataProtectionBackupVault.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupVault.DataProtectionBackupVault.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupVault.DataProtectionBackupVault.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupVault.DataProtectionBackupVault.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupVault.DataProtectionBackupVault.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupVault.DataProtectionBackupVault.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -130,6 +131,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.dataProtectionBackupVault.DataProtectionBackupVault.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.dataProtectionBackupVault.DataProtectionBackupVault.toMetadata"></a>
 
@@ -425,7 +432,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataProtectionBackupVault.DataProtectionBackupVault.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionbackupvault"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackupvault"
 
 dataprotectionbackupvault.DataProtectionBackupVault_IsConstruct(x interface{}) *bool
 ```
@@ -457,7 +464,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataProtectionBackupVault.DataProtectionBackupVault.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionbackupvault"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackupvault"
 
 dataprotectionbackupvault.DataProtectionBackupVault_IsTerraformElement(x interface{}) *bool
 ```
@@ -471,7 +478,7 @@ dataprotectionbackupvault.DataProtectionBackupVault_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataProtectionBackupVault.DataProtectionBackupVault.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionbackupvault"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackupvault"
 
 dataprotectionbackupvault.DataProtectionBackupVault_IsTerraformResource(x interface{}) *bool
 ```
@@ -485,7 +492,7 @@ dataprotectionbackupvault.DataProtectionBackupVault_IsTerraformResource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataProtectionBackupVault.DataProtectionBackupVault.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionbackupvault"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackupvault"
 
 dataprotectionbackupvault.DataProtectionBackupVault_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -912,7 +919,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataProtectionBackupVault.DataProtectionBackupVaultConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionbackupvault"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackupvault"
 
 &dataprotectionbackupvault.DataProtectionBackupVaultConfig {
 	Connection: interface{},
@@ -928,9 +935,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionbac
 	Redundancy: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataProtectionBackupVault.DataProtectionBackupVaultIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataProtectionBackupVault.DataProtectionBackupVaultIdentity,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataProtectionBackupVault.DataProtectionBackupVaultTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataProtectionBackupVault.DataProtectionBackupVaultTimeouts,
 }
 ```
 
@@ -1147,7 +1154,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataProtectionBackupVault.DataProtectionBackupVaultIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionbackupvault"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackupvault"
 
 &dataprotectionbackupvault.DataProtectionBackupVaultIdentity {
 	Type: *string,
@@ -1179,7 +1186,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataProtectionBackupVault.DataProtectionBackupVaultTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionbackupvault"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackupvault"
 
 &dataprotectionbackupvault.DataProtectionBackupVaultTimeouts {
 	Create: *string,
@@ -1255,7 +1262,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionBackupVault.DataProtectionBackupVaultIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionbackupvault"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackupvault"
 
 dataprotectionbackupvault.NewDataProtectionBackupVaultIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataProtectionBackupVaultIdentityOutputReference
 ```
@@ -1548,7 +1555,7 @@ func InternalValue() DataProtectionBackupVaultIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionBackupVault.DataProtectionBackupVaultTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataprotectionbackupvault"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataprotectionbackupvault"
 
 dataprotectionbackupvault.NewDataProtectionBackupVaultTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataProtectionBackupVaultTimeoutsOutputReference
 ```

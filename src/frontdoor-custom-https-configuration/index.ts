@@ -72,6 +72,43 @@ export function frontdoorCustomHttpsConfigurationCustomHttpsConfigurationToTerra
   }
 }
 
+
+export function frontdoorCustomHttpsConfigurationCustomHttpsConfigurationToHclTerraform(struct?: FrontdoorCustomHttpsConfigurationCustomHttpsConfigurationOutputReference | FrontdoorCustomHttpsConfigurationCustomHttpsConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    azure_key_vault_certificate_secret_name: {
+      value: cdktf.stringToHclTerraform(struct!.azureKeyVaultCertificateSecretName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    azure_key_vault_certificate_secret_version: {
+      value: cdktf.stringToHclTerraform(struct!.azureKeyVaultCertificateSecretVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    azure_key_vault_certificate_vault_id: {
+      value: cdktf.stringToHclTerraform(struct!.azureKeyVaultCertificateVaultId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    certificate_source: {
+      value: cdktf.stringToHclTerraform(struct!.certificateSource),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class FrontdoorCustomHttpsConfigurationCustomHttpsConfigurationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -231,6 +268,43 @@ export function frontdoorCustomHttpsConfigurationTimeoutsToTerraform(struct?: Fr
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function frontdoorCustomHttpsConfigurationTimeoutsToHclTerraform(struct?: FrontdoorCustomHttpsConfigurationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class FrontdoorCustomHttpsConfigurationTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -506,5 +580,43 @@ export class FrontdoorCustomHttpsConfiguration extends cdktf.TerraformResource {
       custom_https_configuration: frontdoorCustomHttpsConfigurationCustomHttpsConfigurationToTerraform(this._customHttpsConfiguration.internalValue),
       timeouts: frontdoorCustomHttpsConfigurationTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      custom_https_provisioning_enabled: {
+        value: cdktf.booleanToHclTerraform(this._customHttpsProvisioningEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      frontend_endpoint_id: {
+        value: cdktf.stringToHclTerraform(this._frontendEndpointId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      custom_https_configuration: {
+        value: frontdoorCustomHttpsConfigurationCustomHttpsConfigurationToHclTerraform(this._customHttpsConfiguration.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "FrontdoorCustomHttpsConfigurationCustomHttpsConfigurationList",
+      },
+      timeouts: {
+        value: frontdoorCustomHttpsConfigurationTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "FrontdoorCustomHttpsConfigurationTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

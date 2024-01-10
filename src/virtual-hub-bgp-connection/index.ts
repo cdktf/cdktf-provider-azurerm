@@ -78,6 +78,43 @@ export function virtualHubBgpConnectionTimeoutsToTerraform(struct?: VirtualHubBg
   }
 }
 
+
+export function virtualHubBgpConnectionTimeoutsToHclTerraform(struct?: VirtualHubBgpConnectionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class VirtualHubBgpConnectionTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -381,5 +418,55 @@ export class VirtualHubBgpConnection extends cdktf.TerraformResource {
       virtual_network_connection_id: cdktf.stringToTerraform(this._virtualNetworkConnectionId),
       timeouts: virtualHubBgpConnectionTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      peer_asn: {
+        value: cdktf.numberToHclTerraform(this._peerAsn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      peer_ip: {
+        value: cdktf.stringToHclTerraform(this._peerIp),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      virtual_hub_id: {
+        value: cdktf.stringToHclTerraform(this._virtualHubId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      virtual_network_connection_id: {
+        value: cdktf.stringToHclTerraform(this._virtualNetworkConnectionId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: virtualHubBgpConnectionTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "VirtualHubBgpConnectionTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

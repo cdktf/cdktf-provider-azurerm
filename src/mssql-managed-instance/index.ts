@@ -130,6 +130,31 @@ export function mssqlManagedInstanceIdentityToTerraform(struct?: MssqlManagedIns
   }
 }
 
+
+export function mssqlManagedInstanceIdentityToHclTerraform(struct?: MssqlManagedInstanceIdentityOutputReference | MssqlManagedInstanceIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.identityIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MssqlManagedInstanceIdentityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -237,6 +262,43 @@ export function mssqlManagedInstanceTimeoutsToTerraform(struct?: MssqlManagedIns
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function mssqlManagedInstanceTimeoutsToHclTerraform(struct?: MssqlManagedInstanceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MssqlManagedInstanceTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -799,5 +861,145 @@ export class MssqlManagedInstance extends cdktf.TerraformResource {
       identity: mssqlManagedInstanceIdentityToTerraform(this._identity.internalValue),
       timeouts: mssqlManagedInstanceTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      administrator_login: {
+        value: cdktf.stringToHclTerraform(this._administratorLogin),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      administrator_login_password: {
+        value: cdktf.stringToHclTerraform(this._administratorLoginPassword),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      collation: {
+        value: cdktf.stringToHclTerraform(this._collation),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      dns_zone_partner_id: {
+        value: cdktf.stringToHclTerraform(this._dnsZonePartnerId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      license_type: {
+        value: cdktf.stringToHclTerraform(this._licenseType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      maintenance_configuration_name: {
+        value: cdktf.stringToHclTerraform(this._maintenanceConfigurationName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      minimum_tls_version: {
+        value: cdktf.stringToHclTerraform(this._minimumTlsVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      proxy_override: {
+        value: cdktf.stringToHclTerraform(this._proxyOverride),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      public_data_endpoint_enabled: {
+        value: cdktf.booleanToHclTerraform(this._publicDataEndpointEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sku_name: {
+        value: cdktf.stringToHclTerraform(this._skuName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_account_type: {
+        value: cdktf.stringToHclTerraform(this._storageAccountType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_size_in_gb: {
+        value: cdktf.numberToHclTerraform(this._storageSizeInGb),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      subnet_id: {
+        value: cdktf.stringToHclTerraform(this._subnetId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      timezone_id: {
+        value: cdktf.stringToHclTerraform(this._timezoneId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      vcores: {
+        value: cdktf.numberToHclTerraform(this._vcores),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      identity: {
+        value: mssqlManagedInstanceIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MssqlManagedInstanceIdentityList",
+      },
+      timeouts: {
+        value: mssqlManagedInstanceTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MssqlManagedInstanceTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

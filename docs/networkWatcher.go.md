@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/networkwatcher"
 
 networkwatcher.NewNetworkWatcher(scope Construct, id *string, config NetworkWatcherConfig) NetworkWatcher
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -128,6 +129,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.toMetadata"></a>
 
@@ -405,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/networkwatcher"
 
 networkwatcher.NetworkWatcher_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/networkwatcher"
 
 networkwatcher.NetworkWatcher_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +458,7 @@ networkwatcher.NetworkWatcher_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/networkwatcher"
 
 networkwatcher.NetworkWatcher_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +472,7 @@ networkwatcher.NetworkWatcher_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.networkWatcher.NetworkWatcher.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/networkwatcher"
 
 networkwatcher.NetworkWatcher_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -826,7 +833,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkWatcher.NetworkWatcherConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/networkwatcher"
 
 &networkwatcher.NetworkWatcherConfig {
 	Connection: interface{},
@@ -841,7 +848,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkwatcher"
 	ResourceGroupName: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.networkWatcher.NetworkWatcherTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.networkWatcher.NetworkWatcherTimeouts,
 }
 ```
 
@@ -1017,7 +1024,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkWatcher.NetworkWatcherTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/networkwatcher"
 
 &networkwatcher.NetworkWatcherTimeouts {
 	Create: *string,
@@ -1093,7 +1100,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkWatcher.NetworkWatcherTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/networkwatcher"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/networkwatcher"
 
 networkwatcher.NewNetworkWatcherTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkWatcherTimeoutsOutputReference
 ```

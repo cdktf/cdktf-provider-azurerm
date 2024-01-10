@@ -148,6 +148,43 @@ export function netappVolumeDataProtectionReplicationToTerraform(struct?: Netapp
   }
 }
 
+
+export function netappVolumeDataProtectionReplicationToHclTerraform(struct?: NetappVolumeDataProtectionReplicationOutputReference | NetappVolumeDataProtectionReplication): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    endpoint_type: {
+      value: cdktf.stringToHclTerraform(struct!.endpointType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    remote_volume_location: {
+      value: cdktf.stringToHclTerraform(struct!.remoteVolumeLocation),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    remote_volume_resource_id: {
+      value: cdktf.stringToHclTerraform(struct!.remoteVolumeResourceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    replication_frequency: {
+      value: cdktf.stringToHclTerraform(struct!.replicationFrequency),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class NetappVolumeDataProtectionReplicationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -270,6 +307,25 @@ export function netappVolumeDataProtectionSnapshotPolicyToTerraform(struct?: Net
   }
 }
 
+
+export function netappVolumeDataProtectionSnapshotPolicyToHclTerraform(struct?: NetappVolumeDataProtectionSnapshotPolicyOutputReference | NetappVolumeDataProtectionSnapshotPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    snapshot_policy_id: {
+      value: cdktf.stringToHclTerraform(struct!.snapshotPolicyId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class NetappVolumeDataProtectionSnapshotPolicyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -355,6 +411,55 @@ export function netappVolumeExportPolicyRuleToTerraform(struct?: NetappVolumeExp
     unix_read_only: cdktf.booleanToTerraform(struct!.unixReadOnly),
     unix_read_write: cdktf.booleanToTerraform(struct!.unixReadWrite),
   }
+}
+
+
+export function netappVolumeExportPolicyRuleToHclTerraform(struct?: NetappVolumeExportPolicyRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_clients: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedClients),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    protocols_enabled: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.protocolsEnabled),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    root_access_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.rootAccessEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    rule_index: {
+      value: cdktf.numberToHclTerraform(struct!.ruleIndex),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    unix_read_only: {
+      value: cdktf.booleanToHclTerraform(struct!.unixReadOnly),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    unix_read_write: {
+      value: cdktf.booleanToHclTerraform(struct!.unixReadWrite),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NetappVolumeExportPolicyRuleOutputReference extends cdktf.ComplexObject {
@@ -571,6 +676,43 @@ export function netappVolumeTimeoutsToTerraform(struct?: NetappVolumeTimeouts | 
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function netappVolumeTimeoutsToHclTerraform(struct?: NetappVolumeTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NetappVolumeTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1154,5 +1296,151 @@ export class NetappVolume extends cdktf.TerraformResource {
       export_policy_rule: cdktf.listMapper(netappVolumeExportPolicyRuleToTerraform, true)(this._exportPolicyRule.internalValue),
       timeouts: netappVolumeTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      account_name: {
+        value: cdktf.stringToHclTerraform(this._accountName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      azure_vmware_data_store_enabled: {
+        value: cdktf.booleanToHclTerraform(this._azureVmwareDataStoreEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      create_from_snapshot_resource_id: {
+        value: cdktf.stringToHclTerraform(this._createFromSnapshotResourceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network_features: {
+        value: cdktf.stringToHclTerraform(this._networkFeatures),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      pool_name: {
+        value: cdktf.stringToHclTerraform(this._poolName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      protocols: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._protocols),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      security_style: {
+        value: cdktf.stringToHclTerraform(this._securityStyle),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service_level: {
+        value: cdktf.stringToHclTerraform(this._serviceLevel),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      snapshot_directory_visible: {
+        value: cdktf.booleanToHclTerraform(this._snapshotDirectoryVisible),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      storage_quota_in_gb: {
+        value: cdktf.numberToHclTerraform(this._storageQuotaInGb),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      subnet_id: {
+        value: cdktf.stringToHclTerraform(this._subnetId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      throughput_in_mibps: {
+        value: cdktf.numberToHclTerraform(this._throughputInMibps),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      volume_path: {
+        value: cdktf.stringToHclTerraform(this._volumePath),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      zone: {
+        value: cdktf.stringToHclTerraform(this._zone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      data_protection_replication: {
+        value: netappVolumeDataProtectionReplicationToHclTerraform(this._dataProtectionReplication.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NetappVolumeDataProtectionReplicationList",
+      },
+      data_protection_snapshot_policy: {
+        value: netappVolumeDataProtectionSnapshotPolicyToHclTerraform(this._dataProtectionSnapshotPolicy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NetappVolumeDataProtectionSnapshotPolicyList",
+      },
+      export_policy_rule: {
+        value: cdktf.listMapperHcl(netappVolumeExportPolicyRuleToHclTerraform, true)(this._exportPolicyRule.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NetappVolumeExportPolicyRuleList",
+      },
+      timeouts: {
+        value: netappVolumeTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "NetappVolumeTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

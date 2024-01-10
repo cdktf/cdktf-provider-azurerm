@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logAnalyticsStorageInsights.LogAnalyticsStorageInsights.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/loganalyticsstorageinsights"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/loganalyticsstorageinsights"
 
 loganalyticsstorageinsights.NewLogAnalyticsStorageInsights(scope Construct, id *string, config LogAnalyticsStorageInsightsConfig) LogAnalyticsStorageInsights
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsStorageInsights.LogAnalyticsStorageInsights.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsStorageInsights.LogAnalyticsStorageInsights.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsStorageInsights.LogAnalyticsStorageInsights.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.logAnalyticsStorageInsights.LogAnalyticsStorageInsights.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsStorageInsights.LogAnalyticsStorageInsights.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsStorageInsights.LogAnalyticsStorageInsights.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.logAnalyticsStorageInsights.LogAnalyticsStorageInsights.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -129,6 +130,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.logAnalyticsStorageInsights.LogAnalyticsStorageInsights.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.logAnalyticsStorageInsights.LogAnalyticsStorageInsights.toMetadata"></a>
 
@@ -412,7 +419,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.logAnalyticsStorageInsights.LogAnalyticsStorageInsights.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/loganalyticsstorageinsights"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/loganalyticsstorageinsights"
 
 loganalyticsstorageinsights.LogAnalyticsStorageInsights_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.logAnalyticsStorageInsights.LogAnalyticsStorageInsights.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/loganalyticsstorageinsights"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/loganalyticsstorageinsights"
 
 loganalyticsstorageinsights.LogAnalyticsStorageInsights_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ loganalyticsstorageinsights.LogAnalyticsStorageInsights_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.logAnalyticsStorageInsights.LogAnalyticsStorageInsights.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/loganalyticsstorageinsights"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/loganalyticsstorageinsights"
 
 loganalyticsstorageinsights.LogAnalyticsStorageInsights_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +479,7 @@ loganalyticsstorageinsights.LogAnalyticsStorageInsights_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.logAnalyticsStorageInsights.LogAnalyticsStorageInsights.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/loganalyticsstorageinsights"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/loganalyticsstorageinsights"
 
 loganalyticsstorageinsights.LogAnalyticsStorageInsights_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -899,7 +906,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logAnalyticsStorageInsights.LogAnalyticsStorageInsightsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/loganalyticsstorageinsights"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/loganalyticsstorageinsights"
 
 &loganalyticsstorageinsights.LogAnalyticsStorageInsightsConfig {
 	Connection: interface{},
@@ -917,7 +924,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/loganalyticsstora
 	BlobContainerNames: *[]*string,
 	Id: *string,
 	TableNames: *[]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.logAnalyticsStorageInsights.LogAnalyticsStorageInsightsTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.logAnalyticsStorageInsights.LogAnalyticsStorageInsightsTimeouts,
 }
 ```
 
@@ -1132,7 +1139,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logAnalyticsStorageInsights.LogAnalyticsStorageInsightsTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/loganalyticsstorageinsights"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/loganalyticsstorageinsights"
 
 &loganalyticsstorageinsights.LogAnalyticsStorageInsightsTimeouts {
 	Create: *string,
@@ -1208,7 +1215,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logAnalyticsStorageInsights.LogAnalyticsStorageInsightsTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/loganalyticsstorageinsights"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/loganalyticsstorageinsights"
 
 loganalyticsstorageinsights.NewLogAnalyticsStorageInsightsTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogAnalyticsStorageInsightsTimeoutsOutputReference
 ```

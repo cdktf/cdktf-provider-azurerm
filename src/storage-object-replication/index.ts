@@ -72,6 +72,43 @@ export function storageObjectReplicationRulesToTerraform(struct?: StorageObjectR
   }
 }
 
+
+export function storageObjectReplicationRulesToHclTerraform(struct?: StorageObjectReplicationRules | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    copy_blobs_created_after: {
+      value: cdktf.stringToHclTerraform(struct!.copyBlobsCreatedAfter),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    destination_container_name: {
+      value: cdktf.stringToHclTerraform(struct!.destinationContainerName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    filter_out_blobs_with_prefix: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.filterOutBlobsWithPrefix),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    source_container_name: {
+      value: cdktf.stringToHclTerraform(struct!.sourceContainerName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class StorageObjectReplicationRulesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -247,6 +284,43 @@ export function storageObjectReplicationTimeoutsToTerraform(struct?: StorageObje
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function storageObjectReplicationTimeoutsToHclTerraform(struct?: StorageObjectReplicationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class StorageObjectReplicationTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -529,5 +603,43 @@ export class StorageObjectReplication extends cdktf.TerraformResource {
       rules: cdktf.listMapper(storageObjectReplicationRulesToTerraform, true)(this._rules.internalValue),
       timeouts: storageObjectReplicationTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      destination_storage_account_id: {
+        value: cdktf.stringToHclTerraform(this._destinationStorageAccountId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source_storage_account_id: {
+        value: cdktf.stringToHclTerraform(this._sourceStorageAccountId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      rules: {
+        value: cdktf.listMapperHcl(storageObjectReplicationRulesToHclTerraform, true)(this._rules.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "StorageObjectReplicationRulesList",
+      },
+      timeouts: {
+        value: storageObjectReplicationTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "StorageObjectReplicationTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

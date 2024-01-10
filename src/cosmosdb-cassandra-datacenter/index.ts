@@ -106,6 +106,43 @@ export function cosmosdbCassandraDatacenterTimeoutsToTerraform(struct?: Cosmosdb
   }
 }
 
+
+export function cosmosdbCassandraDatacenterTimeoutsToHclTerraform(struct?: CosmosdbCassandraDatacenterTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CosmosdbCassandraDatacenterTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -540,5 +577,97 @@ export class CosmosdbCassandraDatacenter extends cdktf.TerraformResource {
       sku_name: cdktf.stringToTerraform(this._skuName),
       timeouts: cosmosdbCassandraDatacenterTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      availability_zones_enabled: {
+        value: cdktf.booleanToHclTerraform(this._availabilityZonesEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      backup_storage_customer_key_uri: {
+        value: cdktf.stringToHclTerraform(this._backupStorageCustomerKeyUri),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      base64_encoded_yaml_fragment: {
+        value: cdktf.stringToHclTerraform(this._base64EncodedYamlFragment),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      cassandra_cluster_id: {
+        value: cdktf.stringToHclTerraform(this._cassandraClusterId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      delegated_management_subnet_id: {
+        value: cdktf.stringToHclTerraform(this._delegatedManagementSubnetId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      disk_count: {
+        value: cdktf.numberToHclTerraform(this._diskCount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      disk_sku: {
+        value: cdktf.stringToHclTerraform(this._diskSku),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      managed_disk_customer_key_uri: {
+        value: cdktf.stringToHclTerraform(this._managedDiskCustomerKeyUri),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      node_count: {
+        value: cdktf.numberToHclTerraform(this._nodeCount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      sku_name: {
+        value: cdktf.stringToHclTerraform(this._skuName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: cosmosdbCassandraDatacenterTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "CosmosdbCassandraDatacenterTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

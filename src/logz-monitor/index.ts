@@ -98,6 +98,43 @@ export function logzMonitorPlanToTerraform(struct?: LogzMonitorPlanOutputReferen
   }
 }
 
+
+export function logzMonitorPlanToHclTerraform(struct?: LogzMonitorPlanOutputReference | LogzMonitorPlan): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    billing_cycle: {
+      value: cdktf.stringToHclTerraform(struct!.billingCycle),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    effective_date: {
+      value: cdktf.stringToHclTerraform(struct!.effectiveDate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    plan_id: {
+      value: cdktf.stringToHclTerraform(struct!.planId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    usage_type: {
+      value: cdktf.stringToHclTerraform(struct!.usageType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class LogzMonitorPlanOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -233,6 +270,43 @@ export function logzMonitorTimeoutsToTerraform(struct?: LogzMonitorTimeouts | cd
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function logzMonitorTimeoutsToHclTerraform(struct?: LogzMonitorTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LogzMonitorTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -389,6 +463,43 @@ export function logzMonitorUserToTerraform(struct?: LogzMonitorUserOutputReferen
     last_name: cdktf.stringToTerraform(struct!.lastName),
     phone_number: cdktf.stringToTerraform(struct!.phoneNumber),
   }
+}
+
+
+export function logzMonitorUserToHclTerraform(struct?: LogzMonitorUserOutputReference | LogzMonitorUser): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    email: {
+      value: cdktf.stringToHclTerraform(struct!.email),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    first_name: {
+      value: cdktf.stringToHclTerraform(struct!.firstName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    last_name: {
+      value: cdktf.stringToHclTerraform(struct!.lastName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    phone_number: {
+      value: cdktf.stringToHclTerraform(struct!.phoneNumber),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LogzMonitorUserOutputReference extends cdktf.ComplexObject {
@@ -751,5 +862,79 @@ export class LogzMonitor extends cdktf.TerraformResource {
       timeouts: logzMonitorTimeoutsToTerraform(this._timeouts.internalValue),
       user: logzMonitorUserToTerraform(this._user.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      company_name: {
+        value: cdktf.stringToHclTerraform(this._companyName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enabled: {
+        value: cdktf.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      enterprise_app_id: {
+        value: cdktf.stringToHclTerraform(this._enterpriseAppId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      plan: {
+        value: logzMonitorPlanToHclTerraform(this._plan.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "LogzMonitorPlanList",
+      },
+      timeouts: {
+        value: logzMonitorTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "LogzMonitorTimeouts",
+      },
+      user: {
+        value: logzMonitorUserToHclTerraform(this._user.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "LogzMonitorUserList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

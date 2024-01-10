@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kustoEventgridDataConnection.KustoEventgridDataConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustoeventgriddataconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/kustoeventgriddataconnection"
 
 kustoeventgriddataconnection.NewKustoEventgridDataConnection(scope Construct, id *string, config KustoEventgridDataConnectionConfig) KustoEventgridDataConnection
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.kustoEventgridDataConnection.KustoEventgridDataConnection.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kustoEventgridDataConnection.KustoEventgridDataConnection.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.kustoEventgridDataConnection.KustoEventgridDataConnection.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.kustoEventgridDataConnection.KustoEventgridDataConnection.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kustoEventgridDataConnection.KustoEventgridDataConnection.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kustoEventgridDataConnection.KustoEventgridDataConnection.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.kustoEventgridDataConnection.KustoEventgridDataConnection.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -135,6 +136,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.kustoEventgridDataConnection.KustoEventgridDataConnection.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.kustoEventgridDataConnection.KustoEventgridDataConnection.toMetadata"></a>
 
@@ -454,7 +461,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.kustoEventgridDataConnection.KustoEventgridDataConnection.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustoeventgriddataconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/kustoeventgriddataconnection"
 
 kustoeventgriddataconnection.KustoEventgridDataConnection_IsConstruct(x interface{}) *bool
 ```
@@ -486,7 +493,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.kustoEventgridDataConnection.KustoEventgridDataConnection.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustoeventgriddataconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/kustoeventgriddataconnection"
 
 kustoeventgriddataconnection.KustoEventgridDataConnection_IsTerraformElement(x interface{}) *bool
 ```
@@ -500,7 +507,7 @@ kustoeventgriddataconnection.KustoEventgridDataConnection_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.kustoEventgridDataConnection.KustoEventgridDataConnection.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustoeventgriddataconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/kustoeventgriddataconnection"
 
 kustoeventgriddataconnection.KustoEventgridDataConnection_IsTerraformResource(x interface{}) *bool
 ```
@@ -514,7 +521,7 @@ kustoeventgriddataconnection.KustoEventgridDataConnection_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.kustoEventgridDataConnection.KustoEventgridDataConnection.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustoeventgriddataconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/kustoeventgriddataconnection"
 
 kustoeventgriddataconnection.KustoEventgridDataConnection_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1139,7 +1146,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kustoEventgridDataConnection.KustoEventgridDataConnectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustoeventgriddataconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/kustoeventgriddataconnection"
 
 &kustoeventgriddataconnection.KustoEventgridDataConnectionConfig {
 	Connection: interface{},
@@ -1166,7 +1173,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustoeventgriddat
 	MappingRuleName: *string,
 	SkipFirstRecord: interface{},
 	TableName: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.kustoEventgridDataConnection.KustoEventgridDataConnectionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.kustoEventgridDataConnection.KustoEventgridDataConnectionTimeouts,
 }
 ```
 
@@ -1498,7 +1505,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.kustoEventgridDataConnection.KustoEventgridDataConnectionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustoeventgriddataconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/kustoeventgriddataconnection"
 
 &kustoeventgriddataconnection.KustoEventgridDataConnectionTimeouts {
 	Create: *string,
@@ -1574,7 +1581,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.kustoEventgridDataConnection.KustoEventgridDataConnectionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/kustoeventgriddataconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/kustoeventgriddataconnection"
 
 kustoeventgriddataconnection.NewKustoEventgridDataConnectionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) KustoEventgridDataConnectionTimeoutsOutputReference
 ```

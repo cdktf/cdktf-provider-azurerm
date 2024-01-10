@@ -81,6 +81,25 @@ export function vpnGatewayBgpSettingsInstance0BgpPeeringAddressToTerraform(struc
   }
 }
 
+
+export function vpnGatewayBgpSettingsInstance0BgpPeeringAddressToHclTerraform(struct?: VpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference | VpnGatewayBgpSettingsInstance0BgpPeeringAddress): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    custom_ips: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.customIps),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class VpnGatewayBgpSettingsInstance0BgpPeeringAddressOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -156,6 +175,25 @@ export function vpnGatewayBgpSettingsInstance1BgpPeeringAddressToTerraform(struc
   return {
     custom_ips: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.customIps),
   }
+}
+
+
+export function vpnGatewayBgpSettingsInstance1BgpPeeringAddressToHclTerraform(struct?: VpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference | VpnGatewayBgpSettingsInstance1BgpPeeringAddress): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    custom_ips: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.customIps),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class VpnGatewayBgpSettingsInstance1BgpPeeringAddressOutputReference extends cdktf.ComplexObject {
@@ -252,6 +290,43 @@ export function vpnGatewayBgpSettingsToTerraform(struct?: VpnGatewayBgpSettingsO
     instance_0_bgp_peering_address: vpnGatewayBgpSettingsInstance0BgpPeeringAddressToTerraform(struct!.instance0BgpPeeringAddress),
     instance_1_bgp_peering_address: vpnGatewayBgpSettingsInstance1BgpPeeringAddressToTerraform(struct!.instance1BgpPeeringAddress),
   }
+}
+
+
+export function vpnGatewayBgpSettingsToHclTerraform(struct?: VpnGatewayBgpSettingsOutputReference | VpnGatewayBgpSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    asn: {
+      value: cdktf.numberToHclTerraform(struct!.asn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    peer_weight: {
+      value: cdktf.numberToHclTerraform(struct!.peerWeight),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    instance_0_bgp_peering_address: {
+      value: vpnGatewayBgpSettingsInstance0BgpPeeringAddressToHclTerraform(struct!.instance0BgpPeeringAddress),
+      isBlock: true,
+      type: "list",
+      storageClassType: "VpnGatewayBgpSettingsInstance0BgpPeeringAddressList",
+    },
+    instance_1_bgp_peering_address: {
+      value: vpnGatewayBgpSettingsInstance1BgpPeeringAddressToHclTerraform(struct!.instance1BgpPeeringAddress),
+      isBlock: true,
+      type: "list",
+      storageClassType: "VpnGatewayBgpSettingsInstance1BgpPeeringAddressList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class VpnGatewayBgpSettingsOutputReference extends cdktf.ComplexObject {
@@ -397,6 +472,43 @@ export function vpnGatewayTimeoutsToTerraform(struct?: VpnGatewayTimeouts | cdkt
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function vpnGatewayTimeoutsToHclTerraform(struct?: VpnGatewayTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class VpnGatewayTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -774,5 +886,79 @@ export class VpnGateway extends cdktf.TerraformResource {
       bgp_settings: vpnGatewayBgpSettingsToTerraform(this._bgpSettings.internalValue),
       timeouts: vpnGatewayTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      bgp_route_translation_for_nat_enabled: {
+        value: cdktf.booleanToHclTerraform(this._bgpRouteTranslationForNatEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      routing_preference: {
+        value: cdktf.stringToHclTerraform(this._routingPreference),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      scale_unit: {
+        value: cdktf.numberToHclTerraform(this._scaleUnit),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      virtual_hub_id: {
+        value: cdktf.stringToHclTerraform(this._virtualHubId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      bgp_settings: {
+        value: vpnGatewayBgpSettingsToHclTerraform(this._bgpSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "VpnGatewayBgpSettingsList",
+      },
+      timeouts: {
+        value: vpnGatewayTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "VpnGatewayTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

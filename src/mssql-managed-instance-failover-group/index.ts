@@ -64,6 +64,17 @@ export function mssqlManagedInstanceFailoverGroupPartnerRegionToTerraform(struct
   }
 }
 
+
+export function mssqlManagedInstanceFailoverGroupPartnerRegionToHclTerraform(struct?: MssqlManagedInstanceFailoverGroupPartnerRegion): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class MssqlManagedInstanceFailoverGroupPartnerRegionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -141,6 +152,31 @@ export function mssqlManagedInstanceFailoverGroupReadWriteEndpointFailoverPolicy
     grace_minutes: cdktf.numberToTerraform(struct!.graceMinutes),
     mode: cdktf.stringToTerraform(struct!.mode),
   }
+}
+
+
+export function mssqlManagedInstanceFailoverGroupReadWriteEndpointFailoverPolicyToHclTerraform(struct?: MssqlManagedInstanceFailoverGroupReadWriteEndpointFailoverPolicyOutputReference | MssqlManagedInstanceFailoverGroupReadWriteEndpointFailoverPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    grace_minutes: {
+      value: cdktf.numberToHclTerraform(struct!.graceMinutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    mode: {
+      value: cdktf.stringToHclTerraform(struct!.mode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MssqlManagedInstanceFailoverGroupReadWriteEndpointFailoverPolicyOutputReference extends cdktf.ComplexObject {
@@ -240,6 +276,43 @@ export function mssqlManagedInstanceFailoverGroupTimeoutsToTerraform(struct?: Ms
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function mssqlManagedInstanceFailoverGroupTimeoutsToHclTerraform(struct?: MssqlManagedInstanceFailoverGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MssqlManagedInstanceFailoverGroupTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -571,5 +644,61 @@ export class MssqlManagedInstanceFailoverGroup extends cdktf.TerraformResource {
       read_write_endpoint_failover_policy: mssqlManagedInstanceFailoverGroupReadWriteEndpointFailoverPolicyToTerraform(this._readWriteEndpointFailoverPolicy.internalValue),
       timeouts: mssqlManagedInstanceFailoverGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      managed_instance_id: {
+        value: cdktf.stringToHclTerraform(this._managedInstanceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      partner_managed_instance_id: {
+        value: cdktf.stringToHclTerraform(this._partnerManagedInstanceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      readonly_endpoint_failover_policy_enabled: {
+        value: cdktf.booleanToHclTerraform(this._readonlyEndpointFailoverPolicyEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      read_write_endpoint_failover_policy: {
+        value: mssqlManagedInstanceFailoverGroupReadWriteEndpointFailoverPolicyToHclTerraform(this._readWriteEndpointFailoverPolicy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MssqlManagedInstanceFailoverGroupReadWriteEndpointFailoverPolicyList",
+      },
+      timeouts: {
+        value: mssqlManagedInstanceFailoverGroupTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MssqlManagedInstanceFailoverGroupTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

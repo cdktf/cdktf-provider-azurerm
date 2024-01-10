@@ -67,6 +67,37 @@ export function routeMapRuleActionParameterToTerraform(struct?: RouteMapRuleActi
   }
 }
 
+
+export function routeMapRuleActionParameterToHclTerraform(struct?: RouteMapRuleActionParameter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    as_path: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.asPath),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    community: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.community),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    route_prefix: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.routePrefix),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class RouteMapRuleActionParameterOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -215,6 +246,31 @@ export function routeMapRuleActionToTerraform(struct?: RouteMapRuleAction | cdkt
   }
 }
 
+
+export function routeMapRuleActionToHclTerraform(struct?: RouteMapRuleAction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    parameter: {
+      value: cdktf.listMapperHcl(routeMapRuleActionParameterToHclTerraform, true)(struct!.parameter),
+      isBlock: true,
+      type: "list",
+      storageClassType: "RouteMapRuleActionParameterList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class RouteMapRuleActionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -341,6 +397,43 @@ export function routeMapRuleMatchCriterionToTerraform(struct?: RouteMapRuleMatch
     match_condition: cdktf.stringToTerraform(struct!.matchCondition),
     route_prefix: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.routePrefix),
   }
+}
+
+
+export function routeMapRuleMatchCriterionToHclTerraform(struct?: RouteMapRuleMatchCriterion | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    as_path: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.asPath),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    community: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.community),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    match_condition: {
+      value: cdktf.stringToHclTerraform(struct!.matchCondition),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    route_prefix: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.routePrefix),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class RouteMapRuleMatchCriterionOutputReference extends cdktf.ComplexObject {
@@ -522,6 +615,43 @@ export function routeMapRuleToTerraform(struct?: RouteMapRule | cdktf.IResolvabl
   }
 }
 
+
+export function routeMapRuleToHclTerraform(struct?: RouteMapRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    next_step_if_matched: {
+      value: cdktf.stringToHclTerraform(struct!.nextStepIfMatched),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    action: {
+      value: cdktf.listMapperHcl(routeMapRuleActionToHclTerraform, true)(struct!.action),
+      isBlock: true,
+      type: "list",
+      storageClassType: "RouteMapRuleActionList",
+    },
+    match_criterion: {
+      value: cdktf.listMapperHcl(routeMapRuleMatchCriterionToHclTerraform, true)(struct!.matchCriterion),
+      isBlock: true,
+      type: "list",
+      storageClassType: "RouteMapRuleMatchCriterionList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class RouteMapRuleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -695,6 +825,43 @@ export function routeMapTimeoutsToTerraform(struct?: RouteMapTimeouts | cdktf.IR
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function routeMapTimeoutsToHclTerraform(struct?: RouteMapTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class RouteMapTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -970,5 +1137,43 @@ export class RouteMap extends cdktf.TerraformResource {
       rule: cdktf.listMapper(routeMapRuleToTerraform, true)(this._rule.internalValue),
       timeouts: routeMapTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      virtual_hub_id: {
+        value: cdktf.stringToHclTerraform(this._virtualHubId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      rule: {
+        value: cdktf.listMapperHcl(routeMapRuleToHclTerraform, true)(this._rule.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "RouteMapRuleList",
+      },
+      timeouts: {
+        value: routeMapTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "RouteMapTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -61,6 +61,37 @@ export function natGatewayPublicIpPrefixAssociationTimeoutsToTerraform(struct?: 
   }
 }
 
+
+export function natGatewayPublicIpPrefixAssociationTimeoutsToHclTerraform(struct?: NatGatewayPublicIpPrefixAssociationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class NatGatewayPublicIpPrefixAssociationTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -294,5 +325,37 @@ export class NatGatewayPublicIpPrefixAssociation extends cdktf.TerraformResource
       public_ip_prefix_id: cdktf.stringToTerraform(this._publicIpPrefixId),
       timeouts: natGatewayPublicIpPrefixAssociationTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      nat_gateway_id: {
+        value: cdktf.stringToHclTerraform(this._natGatewayId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      public_ip_prefix_id: {
+        value: cdktf.stringToHclTerraform(this._publicIpPrefixId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: natGatewayPublicIpPrefixAssociationTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "NatGatewayPublicIpPrefixAssociationTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

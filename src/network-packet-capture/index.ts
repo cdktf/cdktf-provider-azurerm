@@ -103,6 +103,49 @@ export function networkPacketCaptureFilterToTerraform(struct?: NetworkPacketCapt
   }
 }
 
+
+export function networkPacketCaptureFilterToHclTerraform(struct?: NetworkPacketCaptureFilter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    local_ip_address: {
+      value: cdktf.stringToHclTerraform(struct!.localIpAddress),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    local_port: {
+      value: cdktf.stringToHclTerraform(struct!.localPort),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    protocol: {
+      value: cdktf.stringToHclTerraform(struct!.protocol),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    remote_ip_address: {
+      value: cdktf.stringToHclTerraform(struct!.remoteIpAddress),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    remote_port: {
+      value: cdktf.stringToHclTerraform(struct!.remotePort),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class NetworkPacketCaptureFilterOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -290,6 +333,31 @@ export function networkPacketCaptureStorageLocationToTerraform(struct?: NetworkP
   }
 }
 
+
+export function networkPacketCaptureStorageLocationToHclTerraform(struct?: NetworkPacketCaptureStorageLocationOutputReference | NetworkPacketCaptureStorageLocation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    file_path: {
+      value: cdktf.stringToHclTerraform(struct!.filePath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    storage_account_id: {
+      value: cdktf.stringToHclTerraform(struct!.storageAccountId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class NetworkPacketCaptureStorageLocationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -390,6 +458,37 @@ export function networkPacketCaptureTimeoutsToTerraform(struct?: NetworkPacketCa
     delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function networkPacketCaptureTimeoutsToHclTerraform(struct?: NetworkPacketCaptureTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NetworkPacketCaptureTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -742,5 +841,79 @@ export class NetworkPacketCapture extends cdktf.TerraformResource {
       storage_location: networkPacketCaptureStorageLocationToTerraform(this._storageLocation.internalValue),
       timeouts: networkPacketCaptureTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      maximum_bytes_per_packet: {
+        value: cdktf.numberToHclTerraform(this._maximumBytesPerPacket),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      maximum_bytes_per_session: {
+        value: cdktf.numberToHclTerraform(this._maximumBytesPerSession),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      maximum_capture_duration: {
+        value: cdktf.numberToHclTerraform(this._maximumCaptureDuration),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network_watcher_name: {
+        value: cdktf.stringToHclTerraform(this._networkWatcherName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      target_resource_id: {
+        value: cdktf.stringToHclTerraform(this._targetResourceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      filter: {
+        value: cdktf.listMapperHcl(networkPacketCaptureFilterToHclTerraform, true)(this._filter.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NetworkPacketCaptureFilterList",
+      },
+      storage_location: {
+        value: networkPacketCaptureStorageLocationToHclTerraform(this._storageLocation.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NetworkPacketCaptureStorageLocationList",
+      },
+      timeouts: {
+        value: networkPacketCaptureTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "NetworkPacketCaptureTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

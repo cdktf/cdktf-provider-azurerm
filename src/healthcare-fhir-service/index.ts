@@ -113,6 +113,37 @@ export function healthcareFhirServiceAuthenticationToTerraform(struct?: Healthca
   }
 }
 
+
+export function healthcareFhirServiceAuthenticationToHclTerraform(struct?: HealthcareFhirServiceAuthenticationOutputReference | HealthcareFhirServiceAuthentication): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    audience: {
+      value: cdktf.stringToHclTerraform(struct!.audience),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    authority: {
+      value: cdktf.stringToHclTerraform(struct!.authority),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    smart_proxy_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.smartProxyEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class HealthcareFhirServiceAuthenticationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -234,6 +265,49 @@ export function healthcareFhirServiceCorsToTerraform(struct?: HealthcareFhirServ
     credentials_allowed: cdktf.booleanToTerraform(struct!.credentialsAllowed),
     max_age_in_seconds: cdktf.numberToTerraform(struct!.maxAgeInSeconds),
   }
+}
+
+
+export function healthcareFhirServiceCorsToHclTerraform(struct?: HealthcareFhirServiceCorsOutputReference | HealthcareFhirServiceCors): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_headers: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedHeaders),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    allowed_methods: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedMethods),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    allowed_origins: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedOrigins),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    credentials_allowed: {
+      value: cdktf.booleanToHclTerraform(struct!.credentialsAllowed),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    max_age_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.maxAgeInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class HealthcareFhirServiceCorsOutputReference extends cdktf.ComplexObject {
@@ -385,6 +459,31 @@ export function healthcareFhirServiceIdentityToTerraform(struct?: HealthcareFhir
   }
 }
 
+
+export function healthcareFhirServiceIdentityToHclTerraform(struct?: HealthcareFhirServiceIdentityOutputReference | HealthcareFhirServiceIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.identityIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class HealthcareFhirServiceIdentityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -487,6 +586,37 @@ export function healthcareFhirServiceOciArtifactToTerraform(struct?: HealthcareF
     image_name: cdktf.stringToTerraform(struct!.imageName),
     login_server: cdktf.stringToTerraform(struct!.loginServer),
   }
+}
+
+
+export function healthcareFhirServiceOciArtifactToHclTerraform(struct?: HealthcareFhirServiceOciArtifact | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    digest: {
+      value: cdktf.stringToHclTerraform(struct!.digest),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    image_name: {
+      value: cdktf.stringToHclTerraform(struct!.imageName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    login_server: {
+      value: cdktf.stringToHclTerraform(struct!.loginServer),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class HealthcareFhirServiceOciArtifactOutputReference extends cdktf.ComplexObject {
@@ -640,6 +770,43 @@ export function healthcareFhirServiceTimeoutsToTerraform(struct?: HealthcareFhir
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function healthcareFhirServiceTimeoutsToHclTerraform(struct?: HealthcareFhirServiceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class HealthcareFhirServiceTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1091,5 +1258,103 @@ export class HealthcareFhirService extends cdktf.TerraformResource {
       oci_artifact: cdktf.listMapper(healthcareFhirServiceOciArtifactToTerraform, true)(this._ociArtifact.internalValue),
       timeouts: healthcareFhirServiceTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      access_policy_object_ids: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._accessPolicyObjectIds),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      configuration_export_storage_account_name: {
+        value: cdktf.stringToHclTerraform(this._configurationExportStorageAccountName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      container_registry_login_server_url: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._containerRegistryLoginServerUrl),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      kind: {
+        value: cdktf.stringToHclTerraform(this._kind),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      workspace_id: {
+        value: cdktf.stringToHclTerraform(this._workspaceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      authentication: {
+        value: healthcareFhirServiceAuthenticationToHclTerraform(this._authentication.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "HealthcareFhirServiceAuthenticationList",
+      },
+      cors: {
+        value: healthcareFhirServiceCorsToHclTerraform(this._cors.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "HealthcareFhirServiceCorsList",
+      },
+      identity: {
+        value: healthcareFhirServiceIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "HealthcareFhirServiceIdentityList",
+      },
+      oci_artifact: {
+        value: cdktf.listMapperHcl(healthcareFhirServiceOciArtifactToHclTerraform, true)(this._ociArtifact.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "HealthcareFhirServiceOciArtifactList",
+      },
+      timeouts: {
+        value: healthcareFhirServiceTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "HealthcareFhirServiceTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

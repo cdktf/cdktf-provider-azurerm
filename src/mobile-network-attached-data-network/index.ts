@@ -98,6 +98,31 @@ export function mobileNetworkAttachedDataNetworkNetworkAddressPortTranslationPor
   }
 }
 
+
+export function mobileNetworkAttachedDataNetworkNetworkAddressPortTranslationPortRangeToHclTerraform(struct?: MobileNetworkAttachedDataNetworkNetworkAddressPortTranslationPortRangeOutputReference | MobileNetworkAttachedDataNetworkNetworkAddressPortTranslationPortRange): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    maximum: {
+      value: cdktf.numberToHclTerraform(struct!.maximum),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minimum: {
+      value: cdktf.numberToHclTerraform(struct!.minimum),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MobileNetworkAttachedDataNetworkNetworkAddressPortTranslationPortRangeOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -215,6 +240,61 @@ export function mobileNetworkAttachedDataNetworkNetworkAddressPortTranslationToT
     udp_port_reuse_minimum_hold_time_in_seconds: cdktf.numberToTerraform(struct!.udpPortReuseMinimumHoldTimeInSeconds),
     port_range: mobileNetworkAttachedDataNetworkNetworkAddressPortTranslationPortRangeToTerraform(struct!.portRange),
   }
+}
+
+
+export function mobileNetworkAttachedDataNetworkNetworkAddressPortTranslationToHclTerraform(struct?: MobileNetworkAttachedDataNetworkNetworkAddressPortTranslationOutputReference | MobileNetworkAttachedDataNetworkNetworkAddressPortTranslation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    icmp_pinhole_timeout_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.icmpPinholeTimeoutInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    pinhole_maximum_number: {
+      value: cdktf.numberToHclTerraform(struct!.pinholeMaximumNumber),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    tcp_pinhole_timeout_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.tcpPinholeTimeoutInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    tcp_port_reuse_minimum_hold_time_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.tcpPortReuseMinimumHoldTimeInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    udp_pinhole_timeout_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.udpPinholeTimeoutInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    udp_port_reuse_minimum_hold_time_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.udpPortReuseMinimumHoldTimeInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    port_range: {
+      value: mobileNetworkAttachedDataNetworkNetworkAddressPortTranslationPortRangeToHclTerraform(struct!.portRange),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MobileNetworkAttachedDataNetworkNetworkAddressPortTranslationPortRangeList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MobileNetworkAttachedDataNetworkNetworkAddressPortTranslationOutputReference extends cdktf.ComplexObject {
@@ -427,6 +507,43 @@ export function mobileNetworkAttachedDataNetworkTimeoutsToTerraform(struct?: Mob
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function mobileNetworkAttachedDataNetworkTimeoutsToHclTerraform(struct?: MobileNetworkAttachedDataNetworkTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MobileNetworkAttachedDataNetworkTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -858,5 +975,97 @@ export class MobileNetworkAttachedDataNetwork extends cdktf.TerraformResource {
       network_address_port_translation: mobileNetworkAttachedDataNetworkNetworkAddressPortTranslationToTerraform(this._networkAddressPortTranslation.internalValue),
       timeouts: mobileNetworkAttachedDataNetworkTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      dns_addresses: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._dnsAddresses),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      mobile_network_data_network_name: {
+        value: cdktf.stringToHclTerraform(this._mobileNetworkDataNetworkName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      mobile_network_packet_core_data_plane_id: {
+        value: cdktf.stringToHclTerraform(this._mobileNetworkPacketCoreDataPlaneId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      user_equipment_address_pool_prefixes: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._userEquipmentAddressPoolPrefixes),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      user_equipment_static_address_pool_prefixes: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._userEquipmentStaticAddressPoolPrefixes),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      user_plane_access_ipv4_address: {
+        value: cdktf.stringToHclTerraform(this._userPlaneAccessIpv4Address),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      user_plane_access_ipv4_gateway: {
+        value: cdktf.stringToHclTerraform(this._userPlaneAccessIpv4Gateway),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      user_plane_access_ipv4_subnet: {
+        value: cdktf.stringToHclTerraform(this._userPlaneAccessIpv4Subnet),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      user_plane_access_name: {
+        value: cdktf.stringToHclTerraform(this._userPlaneAccessName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network_address_port_translation: {
+        value: mobileNetworkAttachedDataNetworkNetworkAddressPortTranslationToHclTerraform(this._networkAddressPortTranslation.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MobileNetworkAttachedDataNetworkNetworkAddressPortTranslationList",
+      },
+      timeouts: {
+        value: mobileNetworkAttachedDataNetworkTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MobileNetworkAttachedDataNetworkTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

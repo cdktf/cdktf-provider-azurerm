@@ -118,6 +118,17 @@ export function springCloudServiceRequiredNetworkTrafficRulesToTerraform(struct?
   }
 }
 
+
+export function springCloudServiceRequiredNetworkTrafficRulesToHclTerraform(struct?: SpringCloudServiceRequiredNetworkTrafficRules): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class SpringCloudServiceRequiredNetworkTrafficRulesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -212,6 +223,31 @@ export function springCloudServiceConfigServerGitSettingHttpBasicAuthToTerraform
   }
 }
 
+
+export function springCloudServiceConfigServerGitSettingHttpBasicAuthToHclTerraform(struct?: SpringCloudServiceConfigServerGitSettingHttpBasicAuthOutputReference | SpringCloudServiceConfigServerGitSettingHttpBasicAuth): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    password: {
+      value: cdktf.stringToHclTerraform(struct!.password),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    username: {
+      value: cdktf.stringToHclTerraform(struct!.username),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SpringCloudServiceConfigServerGitSettingHttpBasicAuthOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -296,6 +332,31 @@ export function springCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthT
     password: cdktf.stringToTerraform(struct!.password),
     username: cdktf.stringToTerraform(struct!.username),
   }
+}
+
+
+export function springCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthToHclTerraform(struct?: SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthOutputReference | SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    password: {
+      value: cdktf.stringToHclTerraform(struct!.password),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    username: {
+      value: cdktf.stringToHclTerraform(struct!.username),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthOutputReference extends cdktf.ComplexObject {
@@ -392,6 +453,43 @@ export function springCloudServiceConfigServerGitSettingRepositorySshAuthToTerra
     private_key: cdktf.stringToTerraform(struct!.privateKey),
     strict_host_key_checking_enabled: cdktf.booleanToTerraform(struct!.strictHostKeyCheckingEnabled),
   }
+}
+
+
+export function springCloudServiceConfigServerGitSettingRepositorySshAuthToHclTerraform(struct?: SpringCloudServiceConfigServerGitSettingRepositorySshAuthOutputReference | SpringCloudServiceConfigServerGitSettingRepositorySshAuth): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    host_key: {
+      value: cdktf.stringToHclTerraform(struct!.hostKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    host_key_algorithm: {
+      value: cdktf.stringToHclTerraform(struct!.hostKeyAlgorithm),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    private_key: {
+      value: cdktf.stringToHclTerraform(struct!.privateKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    strict_host_key_checking_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.strictHostKeyCheckingEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SpringCloudServiceConfigServerGitSettingRepositorySshAuthOutputReference extends cdktf.ComplexObject {
@@ -554,6 +652,61 @@ export function springCloudServiceConfigServerGitSettingRepositoryToTerraform(st
     http_basic_auth: springCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthToTerraform(struct!.httpBasicAuth),
     ssh_auth: springCloudServiceConfigServerGitSettingRepositorySshAuthToTerraform(struct!.sshAuth),
   }
+}
+
+
+export function springCloudServiceConfigServerGitSettingRepositoryToHclTerraform(struct?: SpringCloudServiceConfigServerGitSettingRepository | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    label: {
+      value: cdktf.stringToHclTerraform(struct!.label),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    pattern: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.pattern),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    search_paths: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.searchPaths),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    uri: {
+      value: cdktf.stringToHclTerraform(struct!.uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    http_basic_auth: {
+      value: springCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthToHclTerraform(struct!.httpBasicAuth),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthList",
+    },
+    ssh_auth: {
+      value: springCloudServiceConfigServerGitSettingRepositorySshAuthToHclTerraform(struct!.sshAuth),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SpringCloudServiceConfigServerGitSettingRepositorySshAuthList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SpringCloudServiceConfigServerGitSettingRepositoryOutputReference extends cdktf.ComplexObject {
@@ -794,6 +947,43 @@ export function springCloudServiceConfigServerGitSettingSshAuthToTerraform(struc
   }
 }
 
+
+export function springCloudServiceConfigServerGitSettingSshAuthToHclTerraform(struct?: SpringCloudServiceConfigServerGitSettingSshAuthOutputReference | SpringCloudServiceConfigServerGitSettingSshAuth): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    host_key: {
+      value: cdktf.stringToHclTerraform(struct!.hostKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    host_key_algorithm: {
+      value: cdktf.stringToHclTerraform(struct!.hostKeyAlgorithm),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    private_key: {
+      value: cdktf.stringToHclTerraform(struct!.privateKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    strict_host_key_checking_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.strictHostKeyCheckingEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SpringCloudServiceConfigServerGitSettingSshAuthOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -951,6 +1141,55 @@ export function springCloudServiceConfigServerGitSettingToTerraform(struct?: Spr
     repository: cdktf.listMapper(springCloudServiceConfigServerGitSettingRepositoryToTerraform, true)(struct!.repository),
     ssh_auth: springCloudServiceConfigServerGitSettingSshAuthToTerraform(struct!.sshAuth),
   }
+}
+
+
+export function springCloudServiceConfigServerGitSettingToHclTerraform(struct?: SpringCloudServiceConfigServerGitSettingOutputReference | SpringCloudServiceConfigServerGitSetting): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    label: {
+      value: cdktf.stringToHclTerraform(struct!.label),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    search_paths: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.searchPaths),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    uri: {
+      value: cdktf.stringToHclTerraform(struct!.uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    http_basic_auth: {
+      value: springCloudServiceConfigServerGitSettingHttpBasicAuthToHclTerraform(struct!.httpBasicAuth),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SpringCloudServiceConfigServerGitSettingHttpBasicAuthList",
+    },
+    repository: {
+      value: cdktf.listMapperHcl(springCloudServiceConfigServerGitSettingRepositoryToHclTerraform, true)(struct!.repository),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SpringCloudServiceConfigServerGitSettingRepositoryList",
+    },
+    ssh_auth: {
+      value: springCloudServiceConfigServerGitSettingSshAuthToHclTerraform(struct!.sshAuth),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SpringCloudServiceConfigServerGitSettingSshAuthList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SpringCloudServiceConfigServerGitSettingOutputReference extends cdktf.ComplexObject {
@@ -1140,6 +1379,43 @@ export function springCloudServiceContainerRegistryToTerraform(struct?: SpringCl
   }
 }
 
+
+export function springCloudServiceContainerRegistryToHclTerraform(struct?: SpringCloudServiceContainerRegistry | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    password: {
+      value: cdktf.stringToHclTerraform(struct!.password),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    server: {
+      value: cdktf.stringToHclTerraform(struct!.server),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    username: {
+      value: cdktf.stringToHclTerraform(struct!.username),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SpringCloudServiceContainerRegistryOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1291,6 +1567,25 @@ export function springCloudServiceDefaultBuildServiceToTerraform(struct?: Spring
   }
 }
 
+
+export function springCloudServiceDefaultBuildServiceToHclTerraform(struct?: SpringCloudServiceDefaultBuildServiceOutputReference | SpringCloudServiceDefaultBuildService): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    container_registry_name: {
+      value: cdktf.stringToHclTerraform(struct!.containerRegistryName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SpringCloudServiceDefaultBuildServiceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1364,6 +1659,37 @@ export function springCloudServiceMarketplaceToTerraform(struct?: SpringCloudSer
     product: cdktf.stringToTerraform(struct!.product),
     publisher: cdktf.stringToTerraform(struct!.publisher),
   }
+}
+
+
+export function springCloudServiceMarketplaceToHclTerraform(struct?: SpringCloudServiceMarketplaceOutputReference | SpringCloudServiceMarketplace): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    plan: {
+      value: cdktf.stringToHclTerraform(struct!.plan),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    product: {
+      value: cdktf.stringToHclTerraform(struct!.product),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    publisher: {
+      value: cdktf.stringToHclTerraform(struct!.publisher),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SpringCloudServiceMarketplaceOutputReference extends cdktf.ComplexObject {
@@ -1494,6 +1820,61 @@ export function springCloudServiceNetworkToTerraform(struct?: SpringCloudService
     service_runtime_network_resource_group: cdktf.stringToTerraform(struct!.serviceRuntimeNetworkResourceGroup),
     service_runtime_subnet_id: cdktf.stringToTerraform(struct!.serviceRuntimeSubnetId),
   }
+}
+
+
+export function springCloudServiceNetworkToHclTerraform(struct?: SpringCloudServiceNetworkOutputReference | SpringCloudServiceNetwork): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    app_network_resource_group: {
+      value: cdktf.stringToHclTerraform(struct!.appNetworkResourceGroup),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    app_subnet_id: {
+      value: cdktf.stringToHclTerraform(struct!.appSubnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    cidr_ranges: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.cidrRanges),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    outbound_type: {
+      value: cdktf.stringToHclTerraform(struct!.outboundType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read_timeout_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.readTimeoutSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    service_runtime_network_resource_group: {
+      value: cdktf.stringToHclTerraform(struct!.serviceRuntimeNetworkResourceGroup),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    service_runtime_subnet_id: {
+      value: cdktf.stringToHclTerraform(struct!.serviceRuntimeSubnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SpringCloudServiceNetworkOutputReference extends cdktf.ComplexObject {
@@ -1699,6 +2080,43 @@ export function springCloudServiceTimeoutsToTerraform(struct?: SpringCloudServic
   }
 }
 
+
+export function springCloudServiceTimeoutsToHclTerraform(struct?: SpringCloudServiceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SpringCloudServiceTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1843,6 +2261,31 @@ export function springCloudServiceTraceToTerraform(struct?: SpringCloudServiceTr
     connection_string: cdktf.stringToTerraform(struct!.connectionString),
     sample_rate: cdktf.numberToTerraform(struct!.sampleRate),
   }
+}
+
+
+export function springCloudServiceTraceToHclTerraform(struct?: SpringCloudServiceTraceOutputReference | SpringCloudServiceTrace): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    connection_string: {
+      value: cdktf.stringToHclTerraform(struct!.connectionString),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sample_rate: {
+      value: cdktf.numberToHclTerraform(struct!.sampleRate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SpringCloudServiceTraceOutputReference extends cdktf.ComplexObject {
@@ -2329,5 +2772,127 @@ export class SpringCloudService extends cdktf.TerraformResource {
       timeouts: springCloudServiceTimeoutsToTerraform(this._timeouts.internalValue),
       trace: springCloudServiceTraceToTerraform(this._trace.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      build_agent_pool_size: {
+        value: cdktf.stringToHclTerraform(this._buildAgentPoolSize),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      log_stream_public_endpoint_enabled: {
+        value: cdktf.booleanToHclTerraform(this._logStreamPublicEndpointEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      managed_environment_id: {
+        value: cdktf.stringToHclTerraform(this._managedEnvironmentId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service_registry_enabled: {
+        value: cdktf.booleanToHclTerraform(this._serviceRegistryEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      sku_name: {
+        value: cdktf.stringToHclTerraform(this._skuName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sku_tier: {
+        value: cdktf.stringToHclTerraform(this._skuTier),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      zone_redundant: {
+        value: cdktf.booleanToHclTerraform(this._zoneRedundant),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      config_server_git_setting: {
+        value: springCloudServiceConfigServerGitSettingToHclTerraform(this._configServerGitSetting.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SpringCloudServiceConfigServerGitSettingList",
+      },
+      container_registry: {
+        value: cdktf.listMapperHcl(springCloudServiceContainerRegistryToHclTerraform, true)(this._containerRegistry.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SpringCloudServiceContainerRegistryList",
+      },
+      default_build_service: {
+        value: springCloudServiceDefaultBuildServiceToHclTerraform(this._defaultBuildService.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SpringCloudServiceDefaultBuildServiceList",
+      },
+      marketplace: {
+        value: springCloudServiceMarketplaceToHclTerraform(this._marketplace.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SpringCloudServiceMarketplaceList",
+      },
+      network: {
+        value: springCloudServiceNetworkToHclTerraform(this._network.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SpringCloudServiceNetworkList",
+      },
+      timeouts: {
+        value: springCloudServiceTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SpringCloudServiceTimeouts",
+      },
+      trace: {
+        value: springCloudServiceTraceToHclTerraform(this._trace.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SpringCloudServiceTraceList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

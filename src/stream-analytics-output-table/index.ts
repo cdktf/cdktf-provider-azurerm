@@ -98,6 +98,43 @@ export function streamAnalyticsOutputTableTimeoutsToTerraform(struct?: StreamAna
   }
 }
 
+
+export function streamAnalyticsOutputTableTimeoutsToHclTerraform(struct?: StreamAnalyticsOutputTableTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class StreamAnalyticsOutputTableTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -476,5 +513,85 @@ export class StreamAnalyticsOutputTable extends cdktf.TerraformResource {
       table: cdktf.stringToTerraform(this._table),
       timeouts: streamAnalyticsOutputTableTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      batch_size: {
+        value: cdktf.numberToHclTerraform(this._batchSize),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      columns_to_remove: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._columnsToRemove),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      partition_key: {
+        value: cdktf.stringToHclTerraform(this._partitionKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      row_key: {
+        value: cdktf.stringToHclTerraform(this._rowKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_account_key: {
+        value: cdktf.stringToHclTerraform(this._storageAccountKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_account_name: {
+        value: cdktf.stringToHclTerraform(this._storageAccountName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      stream_analytics_job_name: {
+        value: cdktf.stringToHclTerraform(this._streamAnalyticsJobName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      table: {
+        value: cdktf.stringToHclTerraform(this._table),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: streamAnalyticsOutputTableTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "StreamAnalyticsOutputTableTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

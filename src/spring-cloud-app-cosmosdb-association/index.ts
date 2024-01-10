@@ -98,6 +98,43 @@ export function springCloudAppCosmosdbAssociationTimeoutsToTerraform(struct?: Sp
   }
 }
 
+
+export function springCloudAppCosmosdbAssociationTimeoutsToHclTerraform(struct?: SpringCloudAppCosmosdbAssociationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SpringCloudAppCosmosdbAssociationTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -488,5 +525,85 @@ export class SpringCloudAppCosmosdbAssociation extends cdktf.TerraformResource {
       spring_cloud_app_id: cdktf.stringToTerraform(this._springCloudAppId),
       timeouts: springCloudAppCosmosdbAssociationTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      api_type: {
+        value: cdktf.stringToHclTerraform(this._apiType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      cosmosdb_access_key: {
+        value: cdktf.stringToHclTerraform(this._cosmosdbAccessKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      cosmosdb_account_id: {
+        value: cdktf.stringToHclTerraform(this._cosmosdbAccountId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      cosmosdb_cassandra_keyspace_name: {
+        value: cdktf.stringToHclTerraform(this._cosmosdbCassandraKeyspaceName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      cosmosdb_gremlin_database_name: {
+        value: cdktf.stringToHclTerraform(this._cosmosdbGremlinDatabaseName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      cosmosdb_gremlin_graph_name: {
+        value: cdktf.stringToHclTerraform(this._cosmosdbGremlinGraphName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      cosmosdb_mongo_database_name: {
+        value: cdktf.stringToHclTerraform(this._cosmosdbMongoDatabaseName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      cosmosdb_sql_database_name: {
+        value: cdktf.stringToHclTerraform(this._cosmosdbSqlDatabaseName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      spring_cloud_app_id: {
+        value: cdktf.stringToHclTerraform(this._springCloudAppId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: springCloudAppCosmosdbAssociationTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SpringCloudAppCosmosdbAssociationTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

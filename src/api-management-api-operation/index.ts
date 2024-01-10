@@ -113,6 +113,49 @@ export function apiManagementApiOperationRequestHeaderExampleToTerraform(struct?
   }
 }
 
+
+export function apiManagementApiOperationRequestHeaderExampleToHclTerraform(struct?: ApiManagementApiOperationRequestHeaderExample | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    external_value: {
+      value: cdktf.stringToHclTerraform(struct!.externalValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    summary: {
+      value: cdktf.stringToHclTerraform(struct!.summary),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementApiOperationRequestHeaderExampleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -335,6 +378,73 @@ export function apiManagementApiOperationRequestHeaderToTerraform(struct?: ApiMa
     values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
     example: cdktf.listMapper(apiManagementApiOperationRequestHeaderExampleToTerraform, true)(struct!.example),
   }
+}
+
+
+export function apiManagementApiOperationRequestHeaderToHclTerraform(struct?: ApiManagementApiOperationRequestHeader | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    default_value: {
+      value: cdktf.stringToHclTerraform(struct!.defaultValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    required: {
+      value: cdktf.booleanToHclTerraform(struct!.required),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    schema_id: {
+      value: cdktf.stringToHclTerraform(struct!.schemaId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type_name: {
+      value: cdktf.stringToHclTerraform(struct!.typeName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    example: {
+      value: cdktf.listMapperHcl(apiManagementApiOperationRequestHeaderExampleToHclTerraform, true)(struct!.example),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiOperationRequestHeaderExampleList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiOperationRequestHeaderOutputReference extends cdktf.ComplexObject {
@@ -621,6 +731,49 @@ export function apiManagementApiOperationRequestQueryParameterExampleToTerraform
   }
 }
 
+
+export function apiManagementApiOperationRequestQueryParameterExampleToHclTerraform(struct?: ApiManagementApiOperationRequestQueryParameterExample | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    external_value: {
+      value: cdktf.stringToHclTerraform(struct!.externalValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    summary: {
+      value: cdktf.stringToHclTerraform(struct!.summary),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementApiOperationRequestQueryParameterExampleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -843,6 +996,73 @@ export function apiManagementApiOperationRequestQueryParameterToTerraform(struct
     values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
     example: cdktf.listMapper(apiManagementApiOperationRequestQueryParameterExampleToTerraform, true)(struct!.example),
   }
+}
+
+
+export function apiManagementApiOperationRequestQueryParameterToHclTerraform(struct?: ApiManagementApiOperationRequestQueryParameter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    default_value: {
+      value: cdktf.stringToHclTerraform(struct!.defaultValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    required: {
+      value: cdktf.booleanToHclTerraform(struct!.required),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    schema_id: {
+      value: cdktf.stringToHclTerraform(struct!.schemaId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type_name: {
+      value: cdktf.stringToHclTerraform(struct!.typeName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    example: {
+      value: cdktf.listMapperHcl(apiManagementApiOperationRequestQueryParameterExampleToHclTerraform, true)(struct!.example),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiOperationRequestQueryParameterExampleList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiOperationRequestQueryParameterOutputReference extends cdktf.ComplexObject {
@@ -1129,6 +1349,49 @@ export function apiManagementApiOperationRequestRepresentationExampleToTerraform
   }
 }
 
+
+export function apiManagementApiOperationRequestRepresentationExampleToHclTerraform(struct?: ApiManagementApiOperationRequestRepresentationExample | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    external_value: {
+      value: cdktf.stringToHclTerraform(struct!.externalValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    summary: {
+      value: cdktf.stringToHclTerraform(struct!.summary),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementApiOperationRequestRepresentationExampleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1329,6 +1592,49 @@ export function apiManagementApiOperationRequestRepresentationFormParameterExamp
     summary: cdktf.stringToTerraform(struct!.summary),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function apiManagementApiOperationRequestRepresentationFormParameterExampleToHclTerraform(struct?: ApiManagementApiOperationRequestRepresentationFormParameterExample | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    external_value: {
+      value: cdktf.stringToHclTerraform(struct!.externalValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    summary: {
+      value: cdktf.stringToHclTerraform(struct!.summary),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiOperationRequestRepresentationFormParameterExampleOutputReference extends cdktf.ComplexObject {
@@ -1553,6 +1859,73 @@ export function apiManagementApiOperationRequestRepresentationFormParameterToTer
     values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
     example: cdktf.listMapper(apiManagementApiOperationRequestRepresentationFormParameterExampleToTerraform, true)(struct!.example),
   }
+}
+
+
+export function apiManagementApiOperationRequestRepresentationFormParameterToHclTerraform(struct?: ApiManagementApiOperationRequestRepresentationFormParameter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    default_value: {
+      value: cdktf.stringToHclTerraform(struct!.defaultValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    required: {
+      value: cdktf.booleanToHclTerraform(struct!.required),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    schema_id: {
+      value: cdktf.stringToHclTerraform(struct!.schemaId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type_name: {
+      value: cdktf.stringToHclTerraform(struct!.typeName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    example: {
+      value: cdktf.listMapperHcl(apiManagementApiOperationRequestRepresentationFormParameterExampleToHclTerraform, true)(struct!.example),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiOperationRequestRepresentationFormParameterExampleList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiOperationRequestRepresentationFormParameterOutputReference extends cdktf.ComplexObject {
@@ -1843,6 +2216,49 @@ export function apiManagementApiOperationRequestRepresentationToTerraform(struct
   }
 }
 
+
+export function apiManagementApiOperationRequestRepresentationToHclTerraform(struct?: ApiManagementApiOperationRequestRepresentation | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    content_type: {
+      value: cdktf.stringToHclTerraform(struct!.contentType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    schema_id: {
+      value: cdktf.stringToHclTerraform(struct!.schemaId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type_name: {
+      value: cdktf.stringToHclTerraform(struct!.typeName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    example: {
+      value: cdktf.listMapperHcl(apiManagementApiOperationRequestRepresentationExampleToHclTerraform, true)(struct!.example),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiOperationRequestRepresentationExampleList",
+    },
+    form_parameter: {
+      value: cdktf.listMapperHcl(apiManagementApiOperationRequestRepresentationFormParameterToHclTerraform, true)(struct!.formParameter),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiOperationRequestRepresentationFormParameterList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementApiOperationRequestRepresentationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -2046,6 +2462,43 @@ export function apiManagementApiOperationRequestToTerraform(struct?: ApiManageme
   }
 }
 
+
+export function apiManagementApiOperationRequestToHclTerraform(struct?: ApiManagementApiOperationRequestOutputReference | ApiManagementApiOperationRequest): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    header: {
+      value: cdktf.listMapperHcl(apiManagementApiOperationRequestHeaderToHclTerraform, true)(struct!.header),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiOperationRequestHeaderList",
+    },
+    query_parameter: {
+      value: cdktf.listMapperHcl(apiManagementApiOperationRequestQueryParameterToHclTerraform, true)(struct!.queryParameter),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiOperationRequestQueryParameterList",
+    },
+    representation: {
+      value: cdktf.listMapperHcl(apiManagementApiOperationRequestRepresentationToHclTerraform, true)(struct!.representation),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiOperationRequestRepresentationList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementApiOperationRequestOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -2195,6 +2648,49 @@ export function apiManagementApiOperationResponseHeaderExampleToTerraform(struct
     summary: cdktf.stringToTerraform(struct!.summary),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function apiManagementApiOperationResponseHeaderExampleToHclTerraform(struct?: ApiManagementApiOperationResponseHeaderExample | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    external_value: {
+      value: cdktf.stringToHclTerraform(struct!.externalValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    summary: {
+      value: cdktf.stringToHclTerraform(struct!.summary),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiOperationResponseHeaderExampleOutputReference extends cdktf.ComplexObject {
@@ -2419,6 +2915,73 @@ export function apiManagementApiOperationResponseHeaderToTerraform(struct?: ApiM
     values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
     example: cdktf.listMapper(apiManagementApiOperationResponseHeaderExampleToTerraform, true)(struct!.example),
   }
+}
+
+
+export function apiManagementApiOperationResponseHeaderToHclTerraform(struct?: ApiManagementApiOperationResponseHeader | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    default_value: {
+      value: cdktf.stringToHclTerraform(struct!.defaultValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    required: {
+      value: cdktf.booleanToHclTerraform(struct!.required),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    schema_id: {
+      value: cdktf.stringToHclTerraform(struct!.schemaId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type_name: {
+      value: cdktf.stringToHclTerraform(struct!.typeName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    example: {
+      value: cdktf.listMapperHcl(apiManagementApiOperationResponseHeaderExampleToHclTerraform, true)(struct!.example),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiOperationResponseHeaderExampleList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiOperationResponseHeaderOutputReference extends cdktf.ComplexObject {
@@ -2705,6 +3268,49 @@ export function apiManagementApiOperationResponseRepresentationExampleToTerrafor
   }
 }
 
+
+export function apiManagementApiOperationResponseRepresentationExampleToHclTerraform(struct?: ApiManagementApiOperationResponseRepresentationExample | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    external_value: {
+      value: cdktf.stringToHclTerraform(struct!.externalValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    summary: {
+      value: cdktf.stringToHclTerraform(struct!.summary),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementApiOperationResponseRepresentationExampleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -2905,6 +3511,49 @@ export function apiManagementApiOperationResponseRepresentationFormParameterExam
     summary: cdktf.stringToTerraform(struct!.summary),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function apiManagementApiOperationResponseRepresentationFormParameterExampleToHclTerraform(struct?: ApiManagementApiOperationResponseRepresentationFormParameterExample | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    external_value: {
+      value: cdktf.stringToHclTerraform(struct!.externalValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    summary: {
+      value: cdktf.stringToHclTerraform(struct!.summary),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiOperationResponseRepresentationFormParameterExampleOutputReference extends cdktf.ComplexObject {
@@ -3129,6 +3778,73 @@ export function apiManagementApiOperationResponseRepresentationFormParameterToTe
     values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
     example: cdktf.listMapper(apiManagementApiOperationResponseRepresentationFormParameterExampleToTerraform, true)(struct!.example),
   }
+}
+
+
+export function apiManagementApiOperationResponseRepresentationFormParameterToHclTerraform(struct?: ApiManagementApiOperationResponseRepresentationFormParameter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    default_value: {
+      value: cdktf.stringToHclTerraform(struct!.defaultValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    required: {
+      value: cdktf.booleanToHclTerraform(struct!.required),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    schema_id: {
+      value: cdktf.stringToHclTerraform(struct!.schemaId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type_name: {
+      value: cdktf.stringToHclTerraform(struct!.typeName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    example: {
+      value: cdktf.listMapperHcl(apiManagementApiOperationResponseRepresentationFormParameterExampleToHclTerraform, true)(struct!.example),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiOperationResponseRepresentationFormParameterExampleList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiOperationResponseRepresentationFormParameterOutputReference extends cdktf.ComplexObject {
@@ -3419,6 +4135,49 @@ export function apiManagementApiOperationResponseRepresentationToTerraform(struc
   }
 }
 
+
+export function apiManagementApiOperationResponseRepresentationToHclTerraform(struct?: ApiManagementApiOperationResponseRepresentation | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    content_type: {
+      value: cdktf.stringToHclTerraform(struct!.contentType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    schema_id: {
+      value: cdktf.stringToHclTerraform(struct!.schemaId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type_name: {
+      value: cdktf.stringToHclTerraform(struct!.typeName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    example: {
+      value: cdktf.listMapperHcl(apiManagementApiOperationResponseRepresentationExampleToHclTerraform, true)(struct!.example),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiOperationResponseRepresentationExampleList",
+    },
+    form_parameter: {
+      value: cdktf.listMapperHcl(apiManagementApiOperationResponseRepresentationFormParameterToHclTerraform, true)(struct!.formParameter),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiOperationResponseRepresentationFormParameterList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementApiOperationResponseRepresentationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -3620,6 +4379,43 @@ export function apiManagementApiOperationResponseToTerraform(struct?: ApiManagem
   }
 }
 
+
+export function apiManagementApiOperationResponseToHclTerraform(struct?: ApiManagementApiOperationResponse | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    status_code: {
+      value: cdktf.numberToHclTerraform(struct!.statusCode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    header: {
+      value: cdktf.listMapperHcl(apiManagementApiOperationResponseHeaderToHclTerraform, true)(struct!.header),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiOperationResponseHeaderList",
+    },
+    representation: {
+      value: cdktf.listMapperHcl(apiManagementApiOperationResponseRepresentationToHclTerraform, true)(struct!.representation),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiOperationResponseRepresentationList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementApiOperationResponseOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -3798,6 +4594,49 @@ export function apiManagementApiOperationTemplateParameterExampleToTerraform(str
     summary: cdktf.stringToTerraform(struct!.summary),
     value: cdktf.stringToTerraform(struct!.value),
   }
+}
+
+
+export function apiManagementApiOperationTemplateParameterExampleToHclTerraform(struct?: ApiManagementApiOperationTemplateParameterExample | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    external_value: {
+      value: cdktf.stringToHclTerraform(struct!.externalValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    summary: {
+      value: cdktf.stringToHclTerraform(struct!.summary),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiOperationTemplateParameterExampleOutputReference extends cdktf.ComplexObject {
@@ -4022,6 +4861,73 @@ export function apiManagementApiOperationTemplateParameterToTerraform(struct?: A
     values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
     example: cdktf.listMapper(apiManagementApiOperationTemplateParameterExampleToTerraform, true)(struct!.example),
   }
+}
+
+
+export function apiManagementApiOperationTemplateParameterToHclTerraform(struct?: ApiManagementApiOperationTemplateParameter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    default_value: {
+      value: cdktf.stringToHclTerraform(struct!.defaultValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    required: {
+      value: cdktf.booleanToHclTerraform(struct!.required),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    schema_id: {
+      value: cdktf.stringToHclTerraform(struct!.schemaId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type_name: {
+      value: cdktf.stringToHclTerraform(struct!.typeName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    example: {
+      value: cdktf.listMapperHcl(apiManagementApiOperationTemplateParameterExampleToHclTerraform, true)(struct!.example),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiOperationTemplateParameterExampleList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiOperationTemplateParameterOutputReference extends cdktf.ComplexObject {
@@ -4301,6 +5207,43 @@ export function apiManagementApiOperationTimeoutsToTerraform(struct?: ApiManagem
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function apiManagementApiOperationTimeoutsToHclTerraform(struct?: ApiManagementApiOperationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiOperationTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -4705,5 +5648,91 @@ export class ApiManagementApiOperation extends cdktf.TerraformResource {
       template_parameter: cdktf.listMapper(apiManagementApiOperationTemplateParameterToTerraform, true)(this._templateParameter.internalValue),
       timeouts: apiManagementApiOperationTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      api_management_name: {
+        value: cdktf.stringToHclTerraform(this._apiManagementName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      api_name: {
+        value: cdktf.stringToHclTerraform(this._apiName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      method: {
+        value: cdktf.stringToHclTerraform(this._method),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      operation_id: {
+        value: cdktf.stringToHclTerraform(this._operationId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      url_template: {
+        value: cdktf.stringToHclTerraform(this._urlTemplate),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      request: {
+        value: apiManagementApiOperationRequestToHclTerraform(this._request.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementApiOperationRequestList",
+      },
+      response: {
+        value: cdktf.listMapperHcl(apiManagementApiOperationResponseToHclTerraform, true)(this._response.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementApiOperationResponseList",
+      },
+      template_parameter: {
+        value: cdktf.listMapperHcl(apiManagementApiOperationTemplateParameterToHclTerraform, true)(this._templateParameter.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementApiOperationTemplateParameterList",
+      },
+      timeouts: {
+        value: apiManagementApiOperationTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ApiManagementApiOperationTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

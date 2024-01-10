@@ -140,6 +140,31 @@ export function siteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionDiskEncry
   }
 }
 
+
+export function siteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionDiskEncryptionKeyToHclTerraform(struct?: SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionDiskEncryptionKey | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    secret_url: {
+      value: cdktf.stringToHclTerraform(struct!.secretUrl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    vault_id: {
+      value: cdktf.stringToHclTerraform(struct!.vaultId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionDiskEncryptionKeyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -264,6 +289,31 @@ export function siteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionKeyEncryp
   }
 }
 
+
+export function siteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionKeyEncryptionKeyToHclTerraform(struct?: SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionKeyEncryptionKey | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    key_url: {
+      value: cdktf.stringToHclTerraform(struct!.keyUrl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    vault_id: {
+      value: cdktf.stringToHclTerraform(struct!.vaultId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionKeyEncryptionKeyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -386,6 +436,31 @@ export function siteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionToTerrafo
     disk_encryption_key: cdktf.listMapper(siteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionDiskEncryptionKeyToTerraform, false)(struct!.diskEncryptionKey),
     key_encryption_key: cdktf.listMapper(siteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionKeyEncryptionKeyToTerraform, false)(struct!.keyEncryptionKey),
   }
+}
+
+
+export function siteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionToHclTerraform(struct?: SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryption | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    disk_encryption_key: {
+      value: cdktf.listMapperHcl(siteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionDiskEncryptionKeyToHclTerraform, false)(struct!.diskEncryptionKey),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionDiskEncryptionKeyList",
+    },
+    key_encryption_key: {
+      value: cdktf.listMapperHcl(siteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionKeyEncryptionKeyToHclTerraform, false)(struct!.keyEncryptionKey),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionKeyEncryptionKeyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionOutputReference extends cdktf.ComplexObject {
@@ -535,6 +610,61 @@ export function siteRecoveryReplicatedVmManagedDiskToTerraform(struct?: SiteReco
     target_replica_disk_type: struct!.targetReplicaDiskType === undefined ? null : cdktf.stringToTerraform(struct!.targetReplicaDiskType),
     target_resource_group_id: struct!.targetResourceGroupId === undefined ? null : cdktf.stringToTerraform(struct!.targetResourceGroupId),
   }
+}
+
+
+export function siteRecoveryReplicatedVmManagedDiskToHclTerraform(struct?: SiteRecoveryReplicatedVmManagedDisk | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    disk_id: {
+      value: struct!.diskId === undefined ? null : cdktf.stringToHclTerraform(struct!.diskId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    staging_storage_account_id: {
+      value: struct!.stagingStorageAccountId === undefined ? null : cdktf.stringToHclTerraform(struct!.stagingStorageAccountId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    target_disk_encryption: {
+      value: struct!.targetDiskEncryption === undefined ? null : cdktf.listMapperHcl(siteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionToHclTerraform, false)(struct!.targetDiskEncryption),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SiteRecoveryReplicatedVmManagedDiskTargetDiskEncryptionList",
+    },
+    target_disk_encryption_set_id: {
+      value: struct!.targetDiskEncryptionSetId === undefined ? null : cdktf.stringToHclTerraform(struct!.targetDiskEncryptionSetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    target_disk_type: {
+      value: struct!.targetDiskType === undefined ? null : cdktf.stringToHclTerraform(struct!.targetDiskType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    target_replica_disk_type: {
+      value: struct!.targetReplicaDiskType === undefined ? null : cdktf.stringToHclTerraform(struct!.targetReplicaDiskType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    target_resource_group_id: {
+      value: struct!.targetResourceGroupId === undefined ? null : cdktf.stringToHclTerraform(struct!.targetResourceGroupId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SiteRecoveryReplicatedVmManagedDiskOutputReference extends cdktf.ComplexObject {
@@ -801,6 +931,67 @@ export function siteRecoveryReplicatedVmNetworkInterfaceToTerraform(struct?: Sit
   }
 }
 
+
+export function siteRecoveryReplicatedVmNetworkInterfaceToHclTerraform(struct?: SiteRecoveryReplicatedVmNetworkInterface | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    failover_test_public_ip_address_id: {
+      value: cdktf.stringToHclTerraform(struct!.failoverTestPublicIpAddressId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    failover_test_static_ip: {
+      value: cdktf.stringToHclTerraform(struct!.failoverTestStaticIp),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    failover_test_subnet_name: {
+      value: cdktf.stringToHclTerraform(struct!.failoverTestSubnetName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    is_primary: {
+      value: cdktf.booleanToHclTerraform(struct!.isPrimary),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    recovery_public_ip_address_id: {
+      value: struct!.recoveryPublicIpAddressId === undefined ? null : cdktf.stringToHclTerraform(struct!.recoveryPublicIpAddressId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    source_network_interface_id: {
+      value: struct!.sourceNetworkInterfaceId === undefined ? null : cdktf.stringToHclTerraform(struct!.sourceNetworkInterfaceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    target_static_ip: {
+      value: struct!.targetStaticIp === undefined ? null : cdktf.stringToHclTerraform(struct!.targetStaticIp),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    target_subnet_name: {
+      value: struct!.targetSubnetName === undefined ? null : cdktf.stringToHclTerraform(struct!.targetSubnetName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SiteRecoveryReplicatedVmNetworkInterfaceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1062,6 +1253,37 @@ export function siteRecoveryReplicatedVmUnmanagedDiskToTerraform(struct?: SiteRe
   }
 }
 
+
+export function siteRecoveryReplicatedVmUnmanagedDiskToHclTerraform(struct?: SiteRecoveryReplicatedVmUnmanagedDisk | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    disk_uri: {
+      value: cdktf.stringToHclTerraform(struct!.diskUri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    staging_storage_account_id: {
+      value: cdktf.stringToHclTerraform(struct!.stagingStorageAccountId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    target_storage_account_id: {
+      value: cdktf.stringToHclTerraform(struct!.targetStorageAccountId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SiteRecoveryReplicatedVmUnmanagedDiskOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1216,6 +1438,43 @@ export function siteRecoveryReplicatedVmTimeoutsToTerraform(struct?: SiteRecover
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function siteRecoveryReplicatedVmTimeoutsToHclTerraform(struct?: SiteRecoveryReplicatedVmTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SiteRecoveryReplicatedVmTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1827,5 +2086,163 @@ export class SiteRecoveryReplicatedVm extends cdktf.TerraformResource {
       unmanaged_disk: cdktf.listMapper(siteRecoveryReplicatedVmUnmanagedDiskToTerraform, false)(this._unmanagedDisk.internalValue),
       timeouts: siteRecoveryReplicatedVmTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      managed_disk: {
+        value: cdktf.listMapperHcl(siteRecoveryReplicatedVmManagedDiskToHclTerraform, false)(this._managedDisk.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "SiteRecoveryReplicatedVmManagedDiskList",
+      },
+      multi_vm_group_name: {
+        value: cdktf.stringToHclTerraform(this._multiVmGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network_interface: {
+        value: cdktf.listMapperHcl(siteRecoveryReplicatedVmNetworkInterfaceToHclTerraform, false)(this._networkInterface.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "SiteRecoveryReplicatedVmNetworkInterfaceList",
+      },
+      recovery_replication_policy_id: {
+        value: cdktf.stringToHclTerraform(this._recoveryReplicationPolicyId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      recovery_vault_name: {
+        value: cdktf.stringToHclTerraform(this._recoveryVaultName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source_recovery_fabric_name: {
+        value: cdktf.stringToHclTerraform(this._sourceRecoveryFabricName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source_recovery_protection_container_name: {
+        value: cdktf.stringToHclTerraform(this._sourceRecoveryProtectionContainerName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source_vm_id: {
+        value: cdktf.stringToHclTerraform(this._sourceVmId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      target_availability_set_id: {
+        value: cdktf.stringToHclTerraform(this._targetAvailabilitySetId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      target_boot_diagnostic_storage_account_id: {
+        value: cdktf.stringToHclTerraform(this._targetBootDiagnosticStorageAccountId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      target_capacity_reservation_group_id: {
+        value: cdktf.stringToHclTerraform(this._targetCapacityReservationGroupId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      target_edge_zone: {
+        value: cdktf.stringToHclTerraform(this._targetEdgeZone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      target_network_id: {
+        value: cdktf.stringToHclTerraform(this._targetNetworkId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      target_proximity_placement_group_id: {
+        value: cdktf.stringToHclTerraform(this._targetProximityPlacementGroupId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      target_recovery_fabric_id: {
+        value: cdktf.stringToHclTerraform(this._targetRecoveryFabricId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      target_recovery_protection_container_id: {
+        value: cdktf.stringToHclTerraform(this._targetRecoveryProtectionContainerId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      target_resource_group_id: {
+        value: cdktf.stringToHclTerraform(this._targetResourceGroupId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      target_virtual_machine_scale_set_id: {
+        value: cdktf.stringToHclTerraform(this._targetVirtualMachineScaleSetId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      target_zone: {
+        value: cdktf.stringToHclTerraform(this._targetZone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      test_network_id: {
+        value: cdktf.stringToHclTerraform(this._testNetworkId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      unmanaged_disk: {
+        value: cdktf.listMapperHcl(siteRecoveryReplicatedVmUnmanagedDiskToHclTerraform, false)(this._unmanagedDisk.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "SiteRecoveryReplicatedVmUnmanagedDiskList",
+      },
+      timeouts: {
+        value: siteRecoveryReplicatedVmTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SiteRecoveryReplicatedVmTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

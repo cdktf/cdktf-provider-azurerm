@@ -118,6 +118,43 @@ export function applicationInsightsTimeoutsToTerraform(struct?: ApplicationInsig
   }
 }
 
+
+export function applicationInsightsTimeoutsToHclTerraform(struct?: ApplicationInsightsTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApplicationInsightsTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -616,5 +653,115 @@ export class ApplicationInsights extends cdktf.TerraformResource {
       workspace_id: cdktf.stringToTerraform(this._workspaceId),
       timeouts: applicationInsightsTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      application_type: {
+        value: cdktf.stringToHclTerraform(this._applicationType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      daily_data_cap_in_gb: {
+        value: cdktf.numberToHclTerraform(this._dailyDataCapInGb),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      daily_data_cap_notifications_disabled: {
+        value: cdktf.booleanToHclTerraform(this._dailyDataCapNotificationsDisabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      disable_ip_masking: {
+        value: cdktf.booleanToHclTerraform(this._disableIpMasking),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      force_customer_storage_for_profiler: {
+        value: cdktf.booleanToHclTerraform(this._forceCustomerStorageForProfiler),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      internet_ingestion_enabled: {
+        value: cdktf.booleanToHclTerraform(this._internetIngestionEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      internet_query_enabled: {
+        value: cdktf.booleanToHclTerraform(this._internetQueryEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      local_authentication_disabled: {
+        value: cdktf.booleanToHclTerraform(this._localAuthenticationDisabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      retention_in_days: {
+        value: cdktf.numberToHclTerraform(this._retentionInDays),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      sampling_percentage: {
+        value: cdktf.numberToHclTerraform(this._samplingPercentage),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      workspace_id: {
+        value: cdktf.stringToHclTerraform(this._workspaceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: applicationInsightsTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ApplicationInsightsTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -80,6 +80,43 @@ export function keyVaultManagedHardwareSecurityModuleRoleDefinitionPermissionToT
   }
 }
 
+
+export function keyVaultManagedHardwareSecurityModuleRoleDefinitionPermissionToHclTerraform(struct?: KeyVaultManagedHardwareSecurityModuleRoleDefinitionPermission | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    actions: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.actions),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    data_actions: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.dataActions),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    not_actions: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.notActions),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    not_data_actions: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.notDataActions),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class KeyVaultManagedHardwareSecurityModuleRoleDefinitionPermissionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -256,6 +293,43 @@ export function keyVaultManagedHardwareSecurityModuleRoleDefinitionTimeoutsToTer
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function keyVaultManagedHardwareSecurityModuleRoleDefinitionTimeoutsToHclTerraform(struct?: KeyVaultManagedHardwareSecurityModuleRoleDefinitionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class KeyVaultManagedHardwareSecurityModuleRoleDefinitionTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -577,5 +651,55 @@ export class KeyVaultManagedHardwareSecurityModuleRoleDefinition extends cdktf.T
       permission: cdktf.listMapper(keyVaultManagedHardwareSecurityModuleRoleDefinitionPermissionToTerraform, true)(this._permission.internalValue),
       timeouts: keyVaultManagedHardwareSecurityModuleRoleDefinitionTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      role_name: {
+        value: cdktf.stringToHclTerraform(this._roleName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      vault_base_url: {
+        value: cdktf.stringToHclTerraform(this._vaultBaseUrl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      permission: {
+        value: cdktf.listMapperHcl(keyVaultManagedHardwareSecurityModuleRoleDefinitionPermissionToHclTerraform, true)(this._permission.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "KeyVaultManagedHardwareSecurityModuleRoleDefinitionPermissionList",
+      },
+      timeouts: {
+        value: keyVaultManagedHardwareSecurityModuleRoleDefinitionTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "KeyVaultManagedHardwareSecurityModuleRoleDefinitionTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

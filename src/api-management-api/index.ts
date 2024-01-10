@@ -161,6 +161,37 @@ export function apiManagementApiContactToTerraform(struct?: ApiManagementApiCont
   }
 }
 
+
+export function apiManagementApiContactToHclTerraform(struct?: ApiManagementApiContactOutputReference | ApiManagementApiContact): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    email: {
+      value: cdktf.stringToHclTerraform(struct!.email),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    url: {
+      value: cdktf.stringToHclTerraform(struct!.url),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementApiContactOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -275,6 +306,31 @@ export function apiManagementApiImportWsdlSelectorToTerraform(struct?: ApiManage
   }
 }
 
+
+export function apiManagementApiImportWsdlSelectorToHclTerraform(struct?: ApiManagementApiImportWsdlSelectorOutputReference | ApiManagementApiImportWsdlSelector): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    endpoint_name: {
+      value: cdktf.stringToHclTerraform(struct!.endpointName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    service_name: {
+      value: cdktf.stringToHclTerraform(struct!.serviceName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementApiImportWsdlSelectorOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -366,6 +422,37 @@ export function apiManagementApiImportToTerraform(struct?: ApiManagementApiImpor
     content_value: cdktf.stringToTerraform(struct!.contentValue),
     wsdl_selector: apiManagementApiImportWsdlSelectorToTerraform(struct!.wsdlSelector),
   }
+}
+
+
+export function apiManagementApiImportToHclTerraform(struct?: ApiManagementApiImportOutputReference | ApiManagementApiImport): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    content_format: {
+      value: cdktf.stringToHclTerraform(struct!.contentFormat),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    content_value: {
+      value: cdktf.stringToHclTerraform(struct!.contentValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    wsdl_selector: {
+      value: apiManagementApiImportWsdlSelectorToHclTerraform(struct!.wsdlSelector),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementApiImportWsdlSelectorList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiImportOutputReference extends cdktf.ComplexObject {
@@ -476,6 +563,31 @@ export function apiManagementApiLicenseToTerraform(struct?: ApiManagementApiLice
   }
 }
 
+
+export function apiManagementApiLicenseToHclTerraform(struct?: ApiManagementApiLicenseOutputReference | ApiManagementApiLicense): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    url: {
+      value: cdktf.stringToHclTerraform(struct!.url),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementApiLicenseOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -568,6 +680,31 @@ export function apiManagementApiOauth2AuthorizationToTerraform(struct?: ApiManag
   }
 }
 
+
+export function apiManagementApiOauth2AuthorizationToHclTerraform(struct?: ApiManagementApiOauth2AuthorizationOutputReference | ApiManagementApiOauth2Authorization): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    authorization_server_name: {
+      value: cdktf.stringToHclTerraform(struct!.authorizationServerName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    scope: {
+      value: cdktf.stringToHclTerraform(struct!.scope),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementApiOauth2AuthorizationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -657,6 +794,31 @@ export function apiManagementApiOpenidAuthenticationToTerraform(struct?: ApiMana
   }
 }
 
+
+export function apiManagementApiOpenidAuthenticationToHclTerraform(struct?: ApiManagementApiOpenidAuthenticationOutputReference | ApiManagementApiOpenidAuthentication): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    bearer_token_sending_methods: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.bearerTokenSendingMethods),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    openid_provider_name: {
+      value: cdktf.stringToHclTerraform(struct!.openidProviderName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementApiOpenidAuthenticationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -744,6 +906,31 @@ export function apiManagementApiSubscriptionKeyParameterNamesToTerraform(struct?
     header: cdktf.stringToTerraform(struct!.header),
     query: cdktf.stringToTerraform(struct!.query),
   }
+}
+
+
+export function apiManagementApiSubscriptionKeyParameterNamesToHclTerraform(struct?: ApiManagementApiSubscriptionKeyParameterNamesOutputReference | ApiManagementApiSubscriptionKeyParameterNames): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    header: {
+      value: cdktf.stringToHclTerraform(struct!.header),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    query: {
+      value: cdktf.stringToHclTerraform(struct!.query),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiSubscriptionKeyParameterNamesOutputReference extends cdktf.ComplexObject {
@@ -840,6 +1027,43 @@ export function apiManagementApiTimeoutsToTerraform(struct?: ApiManagementApiTim
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function apiManagementApiTimeoutsToHclTerraform(struct?: ApiManagementApiTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementApiTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1497,5 +1721,169 @@ export class ApiManagementApi extends cdktf.TerraformResource {
       subscription_key_parameter_names: apiManagementApiSubscriptionKeyParameterNamesToTerraform(this._subscriptionKeyParameterNames.internalValue),
       timeouts: apiManagementApiTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      api_management_name: {
+        value: cdktf.stringToHclTerraform(this._apiManagementName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      api_type: {
+        value: cdktf.stringToHclTerraform(this._apiType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      display_name: {
+        value: cdktf.stringToHclTerraform(this._displayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      path: {
+        value: cdktf.stringToHclTerraform(this._path),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      protocols: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._protocols),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      revision: {
+        value: cdktf.stringToHclTerraform(this._revision),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      revision_description: {
+        value: cdktf.stringToHclTerraform(this._revisionDescription),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service_url: {
+        value: cdktf.stringToHclTerraform(this._serviceUrl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      soap_pass_through: {
+        value: cdktf.booleanToHclTerraform(this._soapPassThrough),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      source_api_id: {
+        value: cdktf.stringToHclTerraform(this._sourceApiId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      subscription_required: {
+        value: cdktf.booleanToHclTerraform(this._subscriptionRequired),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      terms_of_service_url: {
+        value: cdktf.stringToHclTerraform(this._termsOfServiceUrl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      version: {
+        value: cdktf.stringToHclTerraform(this._version),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      version_description: {
+        value: cdktf.stringToHclTerraform(this._versionDescription),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      version_set_id: {
+        value: cdktf.stringToHclTerraform(this._versionSetId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      contact: {
+        value: apiManagementApiContactToHclTerraform(this._contact.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementApiContactList",
+      },
+      import: {
+        value: apiManagementApiImportToHclTerraform(this._import.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementApiImportList",
+      },
+      license: {
+        value: apiManagementApiLicenseToHclTerraform(this._license.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementApiLicenseList",
+      },
+      oauth2_authorization: {
+        value: apiManagementApiOauth2AuthorizationToHclTerraform(this._oauth2Authorization.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementApiOauth2AuthorizationList",
+      },
+      openid_authentication: {
+        value: apiManagementApiOpenidAuthenticationToHclTerraform(this._openidAuthentication.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementApiOpenidAuthenticationList",
+      },
+      subscription_key_parameter_names: {
+        value: apiManagementApiSubscriptionKeyParameterNamesToHclTerraform(this._subscriptionKeyParameterNames.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementApiSubscriptionKeyParameterNamesList",
+      },
+      timeouts: {
+        value: apiManagementApiTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ApiManagementApiTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

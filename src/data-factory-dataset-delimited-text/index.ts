@@ -160,6 +160,55 @@ export function dataFactoryDatasetDelimitedTextAzureBlobFsLocationToTerraform(st
   }
 }
 
+
+export function dataFactoryDatasetDelimitedTextAzureBlobFsLocationToHclTerraform(struct?: DataFactoryDatasetDelimitedTextAzureBlobFsLocationOutputReference | DataFactoryDatasetDelimitedTextAzureBlobFsLocation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    dynamic_file_system_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.dynamicFileSystemEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    dynamic_filename_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.dynamicFilenameEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    dynamic_path_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.dynamicPathEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    file_system: {
+      value: cdktf.stringToHclTerraform(struct!.fileSystem),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    filename: {
+      value: cdktf.stringToHclTerraform(struct!.filename),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataFactoryDatasetDelimitedTextAzureBlobFsLocationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -360,6 +409,55 @@ export function dataFactoryDatasetDelimitedTextAzureBlobStorageLocationToTerrafo
   }
 }
 
+
+export function dataFactoryDatasetDelimitedTextAzureBlobStorageLocationToHclTerraform(struct?: DataFactoryDatasetDelimitedTextAzureBlobStorageLocationOutputReference | DataFactoryDatasetDelimitedTextAzureBlobStorageLocation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    container: {
+      value: cdktf.stringToHclTerraform(struct!.container),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    dynamic_container_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.dynamicContainerEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    dynamic_filename_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.dynamicFilenameEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    dynamic_path_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.dynamicPathEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    filename: {
+      value: cdktf.stringToHclTerraform(struct!.filename),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataFactoryDatasetDelimitedTextAzureBlobStorageLocationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -552,6 +650,49 @@ export function dataFactoryDatasetDelimitedTextHttpServerLocationToTerraform(str
   }
 }
 
+
+export function dataFactoryDatasetDelimitedTextHttpServerLocationToHclTerraform(struct?: DataFactoryDatasetDelimitedTextHttpServerLocationOutputReference | DataFactoryDatasetDelimitedTextHttpServerLocation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    dynamic_filename_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.dynamicFilenameEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    dynamic_path_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.dynamicPathEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    filename: {
+      value: cdktf.stringToHclTerraform(struct!.filename),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    relative_url: {
+      value: cdktf.stringToHclTerraform(struct!.relativeUrl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataFactoryDatasetDelimitedTextHttpServerLocationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -706,6 +847,37 @@ export function dataFactoryDatasetDelimitedTextSchemaColumnToTerraform(struct?: 
   }
 }
 
+
+export function dataFactoryDatasetDelimitedTextSchemaColumnToHclTerraform(struct?: DataFactoryDatasetDelimitedTextSchemaColumn | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataFactoryDatasetDelimitedTextSchemaColumnOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -857,6 +1029,43 @@ export function dataFactoryDatasetDelimitedTextTimeoutsToTerraform(struct?: Data
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function dataFactoryDatasetDelimitedTextTimeoutsToHclTerraform(struct?: DataFactoryDatasetDelimitedTextTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryDatasetDelimitedTextTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1453,5 +1662,151 @@ export class DataFactoryDatasetDelimitedText extends cdktf.TerraformResource {
       schema_column: cdktf.listMapper(dataFactoryDatasetDelimitedTextSchemaColumnToTerraform, true)(this._schemaColumn.internalValue),
       timeouts: dataFactoryDatasetDelimitedTextTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      additional_properties: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._additionalProperties),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      annotations: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._annotations),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      column_delimiter: {
+        value: cdktf.stringToHclTerraform(this._columnDelimiter),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      compression_codec: {
+        value: cdktf.stringToHclTerraform(this._compressionCodec),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      compression_level: {
+        value: cdktf.stringToHclTerraform(this._compressionLevel),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      data_factory_id: {
+        value: cdktf.stringToHclTerraform(this._dataFactoryId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      encoding: {
+        value: cdktf.stringToHclTerraform(this._encoding),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      escape_character: {
+        value: cdktf.stringToHclTerraform(this._escapeCharacter),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      first_row_as_header: {
+        value: cdktf.booleanToHclTerraform(this._firstRowAsHeader),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      folder: {
+        value: cdktf.stringToHclTerraform(this._folder),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      linked_service_name: {
+        value: cdktf.stringToHclTerraform(this._linkedServiceName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      null_value: {
+        value: cdktf.stringToHclTerraform(this._nullValue),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      parameters: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._parameters),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      quote_character: {
+        value: cdktf.stringToHclTerraform(this._quoteCharacter),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      row_delimiter: {
+        value: cdktf.stringToHclTerraform(this._rowDelimiter),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      azure_blob_fs_location: {
+        value: dataFactoryDatasetDelimitedTextAzureBlobFsLocationToHclTerraform(this._azureBlobFsLocation.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryDatasetDelimitedTextAzureBlobFsLocationList",
+      },
+      azure_blob_storage_location: {
+        value: dataFactoryDatasetDelimitedTextAzureBlobStorageLocationToHclTerraform(this._azureBlobStorageLocation.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryDatasetDelimitedTextAzureBlobStorageLocationList",
+      },
+      http_server_location: {
+        value: dataFactoryDatasetDelimitedTextHttpServerLocationToHclTerraform(this._httpServerLocation.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryDatasetDelimitedTextHttpServerLocationList",
+      },
+      schema_column: {
+        value: cdktf.listMapperHcl(dataFactoryDatasetDelimitedTextSchemaColumnToHclTerraform, true)(this._schemaColumn.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryDatasetDelimitedTextSchemaColumnList",
+      },
+      timeouts: {
+        value: dataFactoryDatasetDelimitedTextTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataFactoryDatasetDelimitedTextTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

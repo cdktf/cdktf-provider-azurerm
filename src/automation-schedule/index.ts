@@ -98,6 +98,31 @@ export function automationScheduleMonthlyOccurrenceToTerraform(struct?: Automati
   }
 }
 
+
+export function automationScheduleMonthlyOccurrenceToHclTerraform(struct?: AutomationScheduleMonthlyOccurrence | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day: {
+      value: cdktf.stringToHclTerraform(struct!.day),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    occurrence: {
+      value: cdktf.numberToHclTerraform(struct!.occurrence),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AutomationScheduleMonthlyOccurrenceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -224,6 +249,43 @@ export function automationScheduleTimeoutsToTerraform(struct?: AutomationSchedul
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function automationScheduleTimeoutsToHclTerraform(struct?: AutomationScheduleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AutomationScheduleTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -655,5 +717,97 @@ export class AutomationSchedule extends cdktf.TerraformResource {
       monthly_occurrence: cdktf.listMapper(automationScheduleMonthlyOccurrenceToTerraform, true)(this._monthlyOccurrence.internalValue),
       timeouts: automationScheduleTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      automation_account_name: {
+        value: cdktf.stringToHclTerraform(this._automationAccountName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      expiry_time: {
+        value: cdktf.stringToHclTerraform(this._expiryTime),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      frequency: {
+        value: cdktf.stringToHclTerraform(this._frequency),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      interval: {
+        value: cdktf.numberToHclTerraform(this._interval),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      month_days: {
+        value: cdktf.listMapperHcl(cdktf.numberToHclTerraform, false)(this._monthDays),
+        isBlock: false,
+        type: "set",
+        storageClassType: "numberList",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      start_time: {
+        value: cdktf.stringToHclTerraform(this._startTime),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timezone: {
+        value: cdktf.stringToHclTerraform(this._timezone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      week_days: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._weekDays),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      monthly_occurrence: {
+        value: cdktf.listMapperHcl(automationScheduleMonthlyOccurrenceToHclTerraform, true)(this._monthlyOccurrence.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AutomationScheduleMonthlyOccurrenceList",
+      },
+      timeouts: {
+        value: automationScheduleTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AutomationScheduleTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

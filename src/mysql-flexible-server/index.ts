@@ -156,6 +156,43 @@ export function mysqlFlexibleServerCustomerManagedKeyToTerraform(struct?: MysqlF
   }
 }
 
+
+export function mysqlFlexibleServerCustomerManagedKeyToHclTerraform(struct?: MysqlFlexibleServerCustomerManagedKeyOutputReference | MysqlFlexibleServerCustomerManagedKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    geo_backup_key_vault_key_id: {
+      value: cdktf.stringToHclTerraform(struct!.geoBackupKeyVaultKeyId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    geo_backup_user_assigned_identity_id: {
+      value: cdktf.stringToHclTerraform(struct!.geoBackupUserAssignedIdentityId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_vault_key_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultKeyId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    primary_user_assigned_identity_id: {
+      value: cdktf.stringToHclTerraform(struct!.primaryUserAssignedIdentityId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MysqlFlexibleServerCustomerManagedKeyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -292,6 +329,31 @@ export function mysqlFlexibleServerHighAvailabilityToTerraform(struct?: MysqlFle
   }
 }
 
+
+export function mysqlFlexibleServerHighAvailabilityToHclTerraform(struct?: MysqlFlexibleServerHighAvailabilityOutputReference | MysqlFlexibleServerHighAvailability): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    mode: {
+      value: cdktf.stringToHclTerraform(struct!.mode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    standby_availability_zone: {
+      value: cdktf.stringToHclTerraform(struct!.standbyAvailabilityZone),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MysqlFlexibleServerHighAvailabilityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -379,6 +441,31 @@ export function mysqlFlexibleServerIdentityToTerraform(struct?: MysqlFlexibleSer
     identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
+}
+
+
+export function mysqlFlexibleServerIdentityToHclTerraform(struct?: MysqlFlexibleServerIdentityOutputReference | MysqlFlexibleServerIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.identityIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MysqlFlexibleServerIdentityOutputReference extends cdktf.ComplexObject {
@@ -470,6 +557,37 @@ export function mysqlFlexibleServerMaintenanceWindowToTerraform(struct?: MysqlFl
     start_hour: cdktf.numberToTerraform(struct!.startHour),
     start_minute: cdktf.numberToTerraform(struct!.startMinute),
   }
+}
+
+
+export function mysqlFlexibleServerMaintenanceWindowToHclTerraform(struct?: MysqlFlexibleServerMaintenanceWindowOutputReference | MysqlFlexibleServerMaintenanceWindow): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day_of_week: {
+      value: cdktf.numberToHclTerraform(struct!.dayOfWeek),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    start_hour: {
+      value: cdktf.numberToHclTerraform(struct!.startHour),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    start_minute: {
+      value: cdktf.numberToHclTerraform(struct!.startMinute),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MysqlFlexibleServerMaintenanceWindowOutputReference extends cdktf.ComplexObject {
@@ -594,6 +712,43 @@ export function mysqlFlexibleServerStorageToTerraform(struct?: MysqlFlexibleServ
     iops: cdktf.numberToTerraform(struct!.iops),
     size_gb: cdktf.numberToTerraform(struct!.sizeGb),
   }
+}
+
+
+export function mysqlFlexibleServerStorageToHclTerraform(struct?: MysqlFlexibleServerStorageOutputReference | MysqlFlexibleServerStorage): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    auto_grow_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.autoGrowEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    io_scaling_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.ioScalingEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    iops: {
+      value: cdktf.numberToHclTerraform(struct!.iops),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    size_gb: {
+      value: cdktf.numberToHclTerraform(struct!.sizeGb),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MysqlFlexibleServerStorageOutputReference extends cdktf.ComplexObject {
@@ -740,6 +895,43 @@ export function mysqlFlexibleServerTimeoutsToTerraform(struct?: MysqlFlexibleSer
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function mysqlFlexibleServerTimeoutsToHclTerraform(struct?: MysqlFlexibleServerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MysqlFlexibleServerTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1369,5 +1561,157 @@ export class MysqlFlexibleServer extends cdktf.TerraformResource {
       storage: mysqlFlexibleServerStorageToTerraform(this._storage.internalValue),
       timeouts: mysqlFlexibleServerTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      administrator_login: {
+        value: cdktf.stringToHclTerraform(this._administratorLogin),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      administrator_password: {
+        value: cdktf.stringToHclTerraform(this._administratorPassword),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      backup_retention_days: {
+        value: cdktf.numberToHclTerraform(this._backupRetentionDays),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      create_mode: {
+        value: cdktf.stringToHclTerraform(this._createMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      delegated_subnet_id: {
+        value: cdktf.stringToHclTerraform(this._delegatedSubnetId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      geo_redundant_backup_enabled: {
+        value: cdktf.booleanToHclTerraform(this._geoRedundantBackupEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      point_in_time_restore_time_in_utc: {
+        value: cdktf.stringToHclTerraform(this._pointInTimeRestoreTimeInUtc),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      private_dns_zone_id: {
+        value: cdktf.stringToHclTerraform(this._privateDnsZoneId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      replication_role: {
+        value: cdktf.stringToHclTerraform(this._replicationRole),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sku_name: {
+        value: cdktf.stringToHclTerraform(this._skuName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source_server_id: {
+        value: cdktf.stringToHclTerraform(this._sourceServerId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      version: {
+        value: cdktf.stringToHclTerraform(this._version),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      zone: {
+        value: cdktf.stringToHclTerraform(this._zone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      customer_managed_key: {
+        value: mysqlFlexibleServerCustomerManagedKeyToHclTerraform(this._customerManagedKey.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MysqlFlexibleServerCustomerManagedKeyList",
+      },
+      high_availability: {
+        value: mysqlFlexibleServerHighAvailabilityToHclTerraform(this._highAvailability.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MysqlFlexibleServerHighAvailabilityList",
+      },
+      identity: {
+        value: mysqlFlexibleServerIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MysqlFlexibleServerIdentityList",
+      },
+      maintenance_window: {
+        value: mysqlFlexibleServerMaintenanceWindowToHclTerraform(this._maintenanceWindow.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MysqlFlexibleServerMaintenanceWindowList",
+      },
+      storage: {
+        value: mysqlFlexibleServerStorageToHclTerraform(this._storage.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MysqlFlexibleServerStorageList",
+      },
+      timeouts: {
+        value: mysqlFlexibleServerTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MysqlFlexibleServerTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

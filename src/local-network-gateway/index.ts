@@ -87,6 +87,37 @@ export function localNetworkGatewayBgpSettingsToTerraform(struct?: LocalNetworkG
   }
 }
 
+
+export function localNetworkGatewayBgpSettingsToHclTerraform(struct?: LocalNetworkGatewayBgpSettingsOutputReference | LocalNetworkGatewayBgpSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    asn: {
+      value: cdktf.numberToHclTerraform(struct!.asn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    bgp_peering_address: {
+      value: cdktf.stringToHclTerraform(struct!.bgpPeeringAddress),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    peer_weight: {
+      value: cdktf.numberToHclTerraform(struct!.peerWeight),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class LocalNetworkGatewayBgpSettingsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -203,6 +234,43 @@ export function localNetworkGatewayTimeoutsToTerraform(struct?: LocalNetworkGate
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function localNetworkGatewayTimeoutsToHclTerraform(struct?: LocalNetworkGatewayTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LocalNetworkGatewayTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -565,5 +633,73 @@ export class LocalNetworkGateway extends cdktf.TerraformResource {
       bgp_settings: localNetworkGatewayBgpSettingsToTerraform(this._bgpSettings.internalValue),
       timeouts: localNetworkGatewayTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      address_space: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._addressSpace),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      gateway_address: {
+        value: cdktf.stringToHclTerraform(this._gatewayAddress),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      gateway_fqdn: {
+        value: cdktf.stringToHclTerraform(this._gatewayFqdn),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      bgp_settings: {
+        value: localNetworkGatewayBgpSettingsToHclTerraform(this._bgpSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "LocalNetworkGatewayBgpSettingsList",
+      },
+      timeouts: {
+        value: localNetworkGatewayTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "LocalNetworkGatewayTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

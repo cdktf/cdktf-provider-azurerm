@@ -114,6 +114,43 @@ export function kustoEventhubDataConnectionTimeoutsToTerraform(struct?: KustoEve
   }
 }
 
+
+export function kustoEventhubDataConnectionTimeoutsToHclTerraform(struct?: KustoEventhubDataConnectionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class KustoEventhubDataConnectionTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -570,5 +607,109 @@ export class KustoEventhubDataConnection extends cdktf.TerraformResource {
       table_name: cdktf.stringToTerraform(this._tableName),
       timeouts: kustoEventhubDataConnectionTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      cluster_name: {
+        value: cdktf.stringToHclTerraform(this._clusterName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      compression: {
+        value: cdktf.stringToHclTerraform(this._compression),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      consumer_group: {
+        value: cdktf.stringToHclTerraform(this._consumerGroup),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      data_format: {
+        value: cdktf.stringToHclTerraform(this._dataFormat),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      database_name: {
+        value: cdktf.stringToHclTerraform(this._databaseName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      database_routing_type: {
+        value: cdktf.stringToHclTerraform(this._databaseRoutingType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      event_system_properties: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._eventSystemProperties),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      eventhub_id: {
+        value: cdktf.stringToHclTerraform(this._eventhubId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      identity_id: {
+        value: cdktf.stringToHclTerraform(this._identityId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      mapping_rule_name: {
+        value: cdktf.stringToHclTerraform(this._mappingRuleName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      table_name: {
+        value: cdktf.stringToHclTerraform(this._tableName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: kustoEventhubDataConnectionTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "KustoEventhubDataConnectionTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

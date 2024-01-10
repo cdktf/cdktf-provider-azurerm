@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.digitalTwinsEndpointEventhub.DigitalTwinsEndpointEventhub.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/digitaltwinsendpointeventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/digitaltwinsendpointeventhub"
 
 digitaltwinsendpointeventhub.NewDigitalTwinsEndpointEventhub(scope Construct, id *string, config DigitalTwinsEndpointEventhubConfig) DigitalTwinsEndpointEventhub
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.digitalTwinsEndpointEventhub.DigitalTwinsEndpointEventhub.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.digitalTwinsEndpointEventhub.DigitalTwinsEndpointEventhub.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.digitalTwinsEndpointEventhub.DigitalTwinsEndpointEventhub.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.digitalTwinsEndpointEventhub.DigitalTwinsEndpointEventhub.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.digitalTwinsEndpointEventhub.DigitalTwinsEndpointEventhub.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.digitalTwinsEndpointEventhub.DigitalTwinsEndpointEventhub.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.digitalTwinsEndpointEventhub.DigitalTwinsEndpointEventhub.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -128,6 +129,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.digitalTwinsEndpointEventhub.DigitalTwinsEndpointEventhub.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.digitalTwinsEndpointEventhub.DigitalTwinsEndpointEventhub.toMetadata"></a>
 
@@ -405,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.digitalTwinsEndpointEventhub.DigitalTwinsEndpointEventhub.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/digitaltwinsendpointeventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/digitaltwinsendpointeventhub"
 
 digitaltwinsendpointeventhub.DigitalTwinsEndpointEventhub_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.digitalTwinsEndpointEventhub.DigitalTwinsEndpointEventhub.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/digitaltwinsendpointeventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/digitaltwinsendpointeventhub"
 
 digitaltwinsendpointeventhub.DigitalTwinsEndpointEventhub_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +458,7 @@ digitaltwinsendpointeventhub.DigitalTwinsEndpointEventhub_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.digitalTwinsEndpointEventhub.DigitalTwinsEndpointEventhub.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/digitaltwinsendpointeventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/digitaltwinsendpointeventhub"
 
 digitaltwinsendpointeventhub.DigitalTwinsEndpointEventhub_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +472,7 @@ digitaltwinsendpointeventhub.DigitalTwinsEndpointEventhub_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.digitalTwinsEndpointEventhub.DigitalTwinsEndpointEventhub.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/digitaltwinsendpointeventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/digitaltwinsendpointeventhub"
 
 digitaltwinsendpointeventhub.DigitalTwinsEndpointEventhub_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -848,7 +855,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.digitalTwinsEndpointEventhub.DigitalTwinsEndpointEventhubConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/digitaltwinsendpointeventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/digitaltwinsendpointeventhub"
 
 &digitaltwinsendpointeventhub.DigitalTwinsEndpointEventhubConfig {
 	Connection: interface{},
@@ -864,7 +871,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/digitaltwinsendpo
 	Name: *string,
 	DeadLetterStorageSecret: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.digitalTwinsEndpointEventhub.DigitalTwinsEndpointEventhubTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.digitalTwinsEndpointEventhub.DigitalTwinsEndpointEventhubTimeouts,
 }
 ```
 
@@ -1053,7 +1060,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.digitalTwinsEndpointEventhub.DigitalTwinsEndpointEventhubTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/digitaltwinsendpointeventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/digitaltwinsendpointeventhub"
 
 &digitaltwinsendpointeventhub.DigitalTwinsEndpointEventhubTimeouts {
 	Create: *string,
@@ -1129,7 +1136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.digitalTwinsEndpointEventhub.DigitalTwinsEndpointEventhubTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/digitaltwinsendpointeventhub"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/digitaltwinsendpointeventhub"
 
 digitaltwinsendpointeventhub.NewDigitalTwinsEndpointEventhubTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DigitalTwinsEndpointEventhubTimeoutsOutputReference
 ```

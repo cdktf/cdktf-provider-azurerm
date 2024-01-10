@@ -145,6 +145,37 @@ export function sentinelMetadataAuthorToTerraform(struct?: SentinelMetadataAutho
   }
 }
 
+
+export function sentinelMetadataAuthorToHclTerraform(struct?: SentinelMetadataAuthorOutputReference | SentinelMetadataAuthor): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    email: {
+      value: cdktf.stringToHclTerraform(struct!.email),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    link: {
+      value: cdktf.stringToHclTerraform(struct!.link),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SentinelMetadataAuthorOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -259,6 +290,31 @@ export function sentinelMetadataCategoryToTerraform(struct?: SentinelMetadataCat
   }
 }
 
+
+export function sentinelMetadataCategoryToHclTerraform(struct?: SentinelMetadataCategoryOutputReference | SentinelMetadataCategory): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    domains: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.domains),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    verticals: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.verticals),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SentinelMetadataCategoryOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -357,6 +413,37 @@ export function sentinelMetadataSourceToTerraform(struct?: SentinelMetadataSourc
     kind: cdktf.stringToTerraform(struct!.kind),
     name: cdktf.stringToTerraform(struct!.name),
   }
+}
+
+
+export function sentinelMetadataSourceToHclTerraform(struct?: SentinelMetadataSourceOutputReference | SentinelMetadataSource): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    id: {
+      value: cdktf.stringToHclTerraform(struct!.id),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    kind: {
+      value: cdktf.stringToHclTerraform(struct!.kind),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SentinelMetadataSourceOutputReference extends cdktf.ComplexObject {
@@ -478,6 +565,43 @@ export function sentinelMetadataSupportToTerraform(struct?: SentinelMetadataSupp
     name: cdktf.stringToTerraform(struct!.name),
     tier: cdktf.stringToTerraform(struct!.tier),
   }
+}
+
+
+export function sentinelMetadataSupportToHclTerraform(struct?: SentinelMetadataSupportOutputReference | SentinelMetadataSupport): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    email: {
+      value: cdktf.stringToHclTerraform(struct!.email),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    link: {
+      value: cdktf.stringToHclTerraform(struct!.link),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tier: {
+      value: cdktf.stringToHclTerraform(struct!.tier),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SentinelMetadataSupportOutputReference extends cdktf.ComplexObject {
@@ -621,6 +745,43 @@ export function sentinelMetadataTimeoutsToTerraform(struct?: SentinelMetadataTim
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function sentinelMetadataTimeoutsToHclTerraform(struct?: SentinelMetadataTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SentinelMetadataTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1211,5 +1372,151 @@ export class SentinelMetadata extends cdktf.TerraformResource {
       support: sentinelMetadataSupportToTerraform(this._support.internalValue),
       timeouts: sentinelMetadataTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      content_id: {
+        value: cdktf.stringToHclTerraform(this._contentId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      content_schema_version: {
+        value: cdktf.stringToHclTerraform(this._contentSchemaVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      custom_version: {
+        value: cdktf.stringToHclTerraform(this._customVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      dependency: {
+        value: cdktf.stringToHclTerraform(this._dependency),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      first_publish_date: {
+        value: cdktf.stringToHclTerraform(this._firstPublishDate),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      icon_id: {
+        value: cdktf.stringToHclTerraform(this._iconId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      kind: {
+        value: cdktf.stringToHclTerraform(this._kind),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      last_publish_date: {
+        value: cdktf.stringToHclTerraform(this._lastPublishDate),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      parent_id: {
+        value: cdktf.stringToHclTerraform(this._parentId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      preview_images: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._previewImages),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      preview_images_dark: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._previewImagesDark),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      providers: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._providers),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      threat_analysis_tactics: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._threatAnalysisTactics),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      threat_analysis_techniques: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._threatAnalysisTechniques),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      version: {
+        value: cdktf.stringToHclTerraform(this._version),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      workspace_id: {
+        value: cdktf.stringToHclTerraform(this._workspaceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      author: {
+        value: sentinelMetadataAuthorToHclTerraform(this._author.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SentinelMetadataAuthorList",
+      },
+      category: {
+        value: sentinelMetadataCategoryToHclTerraform(this._category.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SentinelMetadataCategoryList",
+      },
+      source: {
+        value: sentinelMetadataSourceToHclTerraform(this._source.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SentinelMetadataSourceList",
+      },
+      support: {
+        value: sentinelMetadataSupportToHclTerraform(this._support.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SentinelMetadataSupportList",
+      },
+      timeouts: {
+        value: sentinelMetadataTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SentinelMetadataTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

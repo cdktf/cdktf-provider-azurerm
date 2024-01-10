@@ -120,6 +120,43 @@ export function recoveryServicesVaultEncryptionToTerraform(struct?: RecoveryServ
   }
 }
 
+
+export function recoveryServicesVaultEncryptionToHclTerraform(struct?: RecoveryServicesVaultEncryptionOutputReference | RecoveryServicesVaultEncryption): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    infrastructure_encryption_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.infrastructureEncryptionEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    key_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    use_system_assigned_identity: {
+      value: cdktf.booleanToHclTerraform(struct!.useSystemAssignedIdentity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    user_assigned_identity_id: {
+      value: cdktf.stringToHclTerraform(struct!.userAssignedIdentityId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class RecoveryServicesVaultEncryptionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -250,6 +287,31 @@ export function recoveryServicesVaultIdentityToTerraform(struct?: RecoveryServic
   }
 }
 
+
+export function recoveryServicesVaultIdentityToHclTerraform(struct?: RecoveryServicesVaultIdentityOutputReference | RecoveryServicesVaultIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.identityIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class RecoveryServicesVaultIdentityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -347,6 +409,31 @@ export function recoveryServicesVaultMonitoringToTerraform(struct?: RecoveryServ
     alerts_for_all_job_failures_enabled: cdktf.booleanToTerraform(struct!.alertsForAllJobFailuresEnabled),
     alerts_for_critical_operation_failures_enabled: cdktf.booleanToTerraform(struct!.alertsForCriticalOperationFailuresEnabled),
   }
+}
+
+
+export function recoveryServicesVaultMonitoringToHclTerraform(struct?: RecoveryServicesVaultMonitoringOutputReference | RecoveryServicesVaultMonitoring): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    alerts_for_all_job_failures_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.alertsForAllJobFailuresEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    alerts_for_critical_operation_failures_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.alertsForCriticalOperationFailuresEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class RecoveryServicesVaultMonitoringOutputReference extends cdktf.ComplexObject {
@@ -449,6 +536,43 @@ export function recoveryServicesVaultTimeoutsToTerraform(struct?: RecoveryServic
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function recoveryServicesVaultTimeoutsToHclTerraform(struct?: RecoveryServicesVaultTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class RecoveryServicesVaultTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -916,5 +1040,109 @@ export class RecoveryServicesVault extends cdktf.TerraformResource {
       monitoring: recoveryServicesVaultMonitoringToTerraform(this._monitoring.internalValue),
       timeouts: recoveryServicesVaultTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      classic_vmware_replication_enabled: {
+        value: cdktf.booleanToHclTerraform(this._classicVmwareReplicationEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      cross_region_restore_enabled: {
+        value: cdktf.booleanToHclTerraform(this._crossRegionRestoreEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      immutability: {
+        value: cdktf.stringToHclTerraform(this._immutability),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      public_network_access_enabled: {
+        value: cdktf.booleanToHclTerraform(this._publicNetworkAccessEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sku: {
+        value: cdktf.stringToHclTerraform(this._sku),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      soft_delete_enabled: {
+        value: cdktf.booleanToHclTerraform(this._softDeleteEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      storage_mode_type: {
+        value: cdktf.stringToHclTerraform(this._storageModeType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      encryption: {
+        value: recoveryServicesVaultEncryptionToHclTerraform(this._encryption.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "RecoveryServicesVaultEncryptionList",
+      },
+      identity: {
+        value: recoveryServicesVaultIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "RecoveryServicesVaultIdentityList",
+      },
+      monitoring: {
+        value: recoveryServicesVaultMonitoringToHclTerraform(this._monitoring.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "RecoveryServicesVaultMonitoringList",
+      },
+      timeouts: {
+        value: recoveryServicesVaultTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "RecoveryServicesVaultTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

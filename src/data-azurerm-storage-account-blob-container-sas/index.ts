@@ -118,6 +118,55 @@ export function dataAzurermStorageAccountBlobContainerSasPermissionsToTerraform(
   }
 }
 
+
+export function dataAzurermStorageAccountBlobContainerSasPermissionsToHclTerraform(struct?: DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference | DataAzurermStorageAccountBlobContainerSasPermissions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    add: {
+      value: cdktf.booleanToHclTerraform(struct!.add),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    create: {
+      value: cdktf.booleanToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    delete: {
+      value: cdktf.booleanToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    list: {
+      value: cdktf.booleanToHclTerraform(struct!.list),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    read: {
+      value: cdktf.booleanToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    write: {
+      value: cdktf.booleanToHclTerraform(struct!.write),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataAzurermStorageAccountBlobContainerSasPermissionsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -273,6 +322,25 @@ export function dataAzurermStorageAccountBlobContainerSasTimeoutsToTerraform(str
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function dataAzurermStorageAccountBlobContainerSasTimeoutsToHclTerraform(struct?: DataAzurermStorageAccountBlobContainerSasTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataAzurermStorageAccountBlobContainerSasTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -640,5 +708,97 @@ export class DataAzurermStorageAccountBlobContainerSas extends cdktf.TerraformDa
       permissions: dataAzurermStorageAccountBlobContainerSasPermissionsToTerraform(this._permissions.internalValue),
       timeouts: dataAzurermStorageAccountBlobContainerSasTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      cache_control: {
+        value: cdktf.stringToHclTerraform(this._cacheControl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      connection_string: {
+        value: cdktf.stringToHclTerraform(this._connectionString),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      container_name: {
+        value: cdktf.stringToHclTerraform(this._containerName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      content_disposition: {
+        value: cdktf.stringToHclTerraform(this._contentDisposition),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      content_encoding: {
+        value: cdktf.stringToHclTerraform(this._contentEncoding),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      content_language: {
+        value: cdktf.stringToHclTerraform(this._contentLanguage),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      content_type: {
+        value: cdktf.stringToHclTerraform(this._contentType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      expiry: {
+        value: cdktf.stringToHclTerraform(this._expiry),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      https_only: {
+        value: cdktf.booleanToHclTerraform(this._httpsOnly),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ip_address: {
+        value: cdktf.stringToHclTerraform(this._ipAddress),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      start: {
+        value: cdktf.stringToHclTerraform(this._start),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      permissions: {
+        value: dataAzurermStorageAccountBlobContainerSasPermissionsToHclTerraform(this._permissions.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataAzurermStorageAccountBlobContainerSasPermissionsList",
+      },
+      timeouts: {
+        value: dataAzurermStorageAccountBlobContainerSasTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataAzurermStorageAccountBlobContainerSasTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

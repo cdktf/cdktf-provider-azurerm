@@ -110,6 +110,31 @@ export function servicebusSubscriptionClientScopedSubscriptionToTerraform(struct
   }
 }
 
+
+export function servicebusSubscriptionClientScopedSubscriptionToHclTerraform(struct?: ServicebusSubscriptionClientScopedSubscriptionOutputReference | ServicebusSubscriptionClientScopedSubscription): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    client_id: {
+      value: cdktf.stringToHclTerraform(struct!.clientId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    is_client_scoped_subscription_shareable: {
+      value: cdktf.booleanToHclTerraform(struct!.isClientScopedSubscriptionShareable),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ServicebusSubscriptionClientScopedSubscriptionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -215,6 +240,43 @@ export function servicebusSubscriptionTimeoutsToTerraform(struct?: ServicebusSub
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function servicebusSubscriptionTimeoutsToHclTerraform(struct?: ServicebusSubscriptionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ServicebusSubscriptionTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -703,5 +765,115 @@ export class ServicebusSubscription extends cdktf.TerraformResource {
       client_scoped_subscription: servicebusSubscriptionClientScopedSubscriptionToTerraform(this._clientScopedSubscription.internalValue),
       timeouts: servicebusSubscriptionTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      auto_delete_on_idle: {
+        value: cdktf.stringToHclTerraform(this._autoDeleteOnIdle),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      client_scoped_subscription_enabled: {
+        value: cdktf.booleanToHclTerraform(this._clientScopedSubscriptionEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      dead_lettering_on_filter_evaluation_error: {
+        value: cdktf.booleanToHclTerraform(this._deadLetteringOnFilterEvaluationError),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      dead_lettering_on_message_expiration: {
+        value: cdktf.booleanToHclTerraform(this._deadLetteringOnMessageExpiration),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      default_message_ttl: {
+        value: cdktf.stringToHclTerraform(this._defaultMessageTtl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enable_batched_operations: {
+        value: cdktf.booleanToHclTerraform(this._enableBatchedOperations),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      forward_dead_lettered_messages_to: {
+        value: cdktf.stringToHclTerraform(this._forwardDeadLetteredMessagesTo),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      forward_to: {
+        value: cdktf.stringToHclTerraform(this._forwardTo),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      lock_duration: {
+        value: cdktf.stringToHclTerraform(this._lockDuration),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      max_delivery_count: {
+        value: cdktf.numberToHclTerraform(this._maxDeliveryCount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      requires_session: {
+        value: cdktf.booleanToHclTerraform(this._requiresSession),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      status: {
+        value: cdktf.stringToHclTerraform(this._status),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      topic_id: {
+        value: cdktf.stringToHclTerraform(this._topicId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      client_scoped_subscription: {
+        value: servicebusSubscriptionClientScopedSubscriptionToHclTerraform(this._clientScopedSubscription.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ServicebusSubscriptionClientScopedSubscriptionList",
+      },
+      timeouts: {
+        value: servicebusSubscriptionTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ServicebusSubscriptionTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -46,6 +46,17 @@ export function dataAzurermLbBackendAddressPoolBackendAddressInboundNatRulePortM
   }
 }
 
+
+export function dataAzurermLbBackendAddressPoolBackendAddressInboundNatRulePortMappingToHclTerraform(struct?: DataAzurermLbBackendAddressPoolBackendAddressInboundNatRulePortMapping): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermLbBackendAddressPoolBackendAddressInboundNatRulePortMappingOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -118,6 +129,17 @@ export function dataAzurermLbBackendAddressPoolBackendAddressToTerraform(struct?
   }
   return {
   }
+}
+
+
+export function dataAzurermLbBackendAddressPoolBackendAddressToHclTerraform(struct?: DataAzurermLbBackendAddressPoolBackendAddress): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermLbBackendAddressPoolBackendAddressOutputReference extends cdktf.ComplexObject {
@@ -200,6 +222,17 @@ export function dataAzurermLbBackendAddressPoolBackendIpConfigurationsToTerrafor
   }
 }
 
+
+export function dataAzurermLbBackendAddressPoolBackendIpConfigurationsToHclTerraform(struct?: DataAzurermLbBackendAddressPoolBackendIpConfigurations): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermLbBackendAddressPoolBackendIpConfigurationsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -267,6 +300,25 @@ export function dataAzurermLbBackendAddressPoolTimeoutsToTerraform(struct?: Data
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function dataAzurermLbBackendAddressPoolTimeoutsToHclTerraform(struct?: DataAzurermLbBackendAddressPoolTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataAzurermLbBackendAddressPoolTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -485,5 +537,37 @@ export class DataAzurermLbBackendAddressPool extends cdktf.TerraformDataSource {
       name: cdktf.stringToTerraform(this._name),
       timeouts: dataAzurermLbBackendAddressPoolTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      loadbalancer_id: {
+        value: cdktf.stringToHclTerraform(this._loadbalancerId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: dataAzurermLbBackendAddressPoolTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataAzurermLbBackendAddressPoolTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

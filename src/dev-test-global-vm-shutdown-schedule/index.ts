@@ -88,6 +88,43 @@ export function devTestGlobalVmShutdownScheduleNotificationSettingsToTerraform(s
   }
 }
 
+
+export function devTestGlobalVmShutdownScheduleNotificationSettingsToHclTerraform(struct?: DevTestGlobalVmShutdownScheduleNotificationSettingsOutputReference | DevTestGlobalVmShutdownScheduleNotificationSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    email: {
+      value: cdktf.stringToHclTerraform(struct!.email),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    time_in_minutes: {
+      value: cdktf.numberToHclTerraform(struct!.timeInMinutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    webhook_url: {
+      value: cdktf.stringToHclTerraform(struct!.webhookUrl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DevTestGlobalVmShutdownScheduleNotificationSettingsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -229,6 +266,43 @@ export function devTestGlobalVmShutdownScheduleTimeoutsToTerraform(struct?: DevT
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function devTestGlobalVmShutdownScheduleTimeoutsToHclTerraform(struct?: DevTestGlobalVmShutdownScheduleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DevTestGlobalVmShutdownScheduleTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -567,5 +641,67 @@ export class DevTestGlobalVmShutdownSchedule extends cdktf.TerraformResource {
       notification_settings: devTestGlobalVmShutdownScheduleNotificationSettingsToTerraform(this._notificationSettings.internalValue),
       timeouts: devTestGlobalVmShutdownScheduleTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      daily_recurrence_time: {
+        value: cdktf.stringToHclTerraform(this._dailyRecurrenceTime),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enabled: {
+        value: cdktf.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      timezone: {
+        value: cdktf.stringToHclTerraform(this._timezone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      virtual_machine_id: {
+        value: cdktf.stringToHclTerraform(this._virtualMachineId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      notification_settings: {
+        value: devTestGlobalVmShutdownScheduleNotificationSettingsToHclTerraform(this._notificationSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DevTestGlobalVmShutdownScheduleNotificationSettingsList",
+      },
+      timeouts: {
+        value: devTestGlobalVmShutdownScheduleTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DevTestGlobalVmShutdownScheduleTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

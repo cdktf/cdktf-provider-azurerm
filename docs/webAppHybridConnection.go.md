@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/webapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webapphybridconnection"
 
 webapphybridconnection.NewWebAppHybridConnection(scope Construct, id *string, config WebAppHybridConnectionConfig) WebAppHybridConnection
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnection.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnection.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnection.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnection.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnection.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnection.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnection.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -128,6 +129,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnection.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnection.toMetadata"></a>
 
@@ -405,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnection.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/webapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webapphybridconnection"
 
 webapphybridconnection.WebAppHybridConnection_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnection.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/webapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webapphybridconnection"
 
 webapphybridconnection.WebAppHybridConnection_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +458,7 @@ webapphybridconnection.WebAppHybridConnection_IsTerraformElement(x interface{}) 
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnection.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/webapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webapphybridconnection"
 
 webapphybridconnection.WebAppHybridConnection_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +472,7 @@ webapphybridconnection.WebAppHybridConnection_IsTerraformResource(x interface{})
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnection.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/webapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webapphybridconnection"
 
 webapphybridconnection.WebAppHybridConnection_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -903,7 +910,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/webapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webapphybridconnection"
 
 &webapphybridconnection.WebAppHybridConnectionConfig {
 	Connection: interface{},
@@ -919,7 +926,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/webapphybridconne
 	WebAppId: *string,
 	Id: *string,
 	SendKeyName: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.webAppHybridConnection.WebAppHybridConnectionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.webAppHybridConnection.WebAppHybridConnectionTimeouts,
 }
 ```
 
@@ -1118,7 +1125,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnectionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/webapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webapphybridconnection"
 
 &webapphybridconnection.WebAppHybridConnectionTimeouts {
 	Create: *string,
@@ -1194,7 +1201,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.webAppHybridConnection.WebAppHybridConnectionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/webapphybridconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webapphybridconnection"
 
 webapphybridconnection.NewWebAppHybridConnectionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WebAppHybridConnectionTimeoutsOutputReference
 ```

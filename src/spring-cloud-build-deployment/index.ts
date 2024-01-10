@@ -82,6 +82,31 @@ export function springCloudBuildDeploymentQuotaToTerraform(struct?: SpringCloudB
   }
 }
 
+
+export function springCloudBuildDeploymentQuotaToHclTerraform(struct?: SpringCloudBuildDeploymentQuotaOutputReference | SpringCloudBuildDeploymentQuota): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cpu: {
+      value: cdktf.stringToHclTerraform(struct!.cpu),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    memory: {
+      value: cdktf.stringToHclTerraform(struct!.memory),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SpringCloudBuildDeploymentQuotaOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -182,6 +207,43 @@ export function springCloudBuildDeploymentTimeoutsToTerraform(struct?: SpringClo
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function springCloudBuildDeploymentTimeoutsToHclTerraform(struct?: SpringCloudBuildDeploymentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SpringCloudBuildDeploymentTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -544,5 +606,73 @@ export class SpringCloudBuildDeployment extends cdktf.TerraformResource {
       quota: springCloudBuildDeploymentQuotaToTerraform(this._quota.internalValue),
       timeouts: springCloudBuildDeploymentTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      addon_json: {
+        value: cdktf.stringToHclTerraform(this._addonJson),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      application_performance_monitoring_ids: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._applicationPerformanceMonitoringIds),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      build_result_id: {
+        value: cdktf.stringToHclTerraform(this._buildResultId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      environment_variables: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._environmentVariables),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      instance_count: {
+        value: cdktf.numberToHclTerraform(this._instanceCount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      spring_cloud_app_id: {
+        value: cdktf.stringToHclTerraform(this._springCloudAppId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      quota: {
+        value: springCloudBuildDeploymentQuotaToHclTerraform(this._quota.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SpringCloudBuildDeploymentQuotaList",
+      },
+      timeouts: {
+        value: springCloudBuildDeploymentTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SpringCloudBuildDeploymentTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

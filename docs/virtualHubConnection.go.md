@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnection.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/virtualhubconnection"
 
 virtualhubconnection.NewVirtualHubConnection(scope Construct, id *string, config VirtualHubConnectionConfig) VirtualHubConnection
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnection.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnection.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnection.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnection.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnection.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnection.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnection.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -130,6 +131,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnection.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnection.toMetadata"></a>
 
@@ -425,7 +432,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnection.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/virtualhubconnection"
 
 virtualhubconnection.VirtualHubConnection_IsConstruct(x interface{}) *bool
 ```
@@ -457,7 +464,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnection.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/virtualhubconnection"
 
 virtualhubconnection.VirtualHubConnection_IsTerraformElement(x interface{}) *bool
 ```
@@ -471,7 +478,7 @@ virtualhubconnection.VirtualHubConnection_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnection.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/virtualhubconnection"
 
 virtualhubconnection.VirtualHubConnection_IsTerraformResource(x interface{}) *bool
 ```
@@ -485,7 +492,7 @@ virtualhubconnection.VirtualHubConnection_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnection.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/virtualhubconnection"
 
 virtualhubconnection.VirtualHubConnection_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -868,7 +875,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnectionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/virtualhubconnection"
 
 &virtualhubconnection.VirtualHubConnectionConfig {
 	Connection: interface{},
@@ -883,8 +890,8 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualhubconnect
 	VirtualHubId: *string,
 	Id: *string,
 	InternetSecurityEnabled: interface{},
-	Routing: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.virtualHubConnection.VirtualHubConnectionRouting,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.virtualHubConnection.VirtualHubConnectionTimeouts,
+	Routing: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.virtualHubConnection.VirtualHubConnectionRouting,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.virtualHubConnection.VirtualHubConnectionTimeouts,
 }
 ```
 
@@ -1075,13 +1082,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnectionRouting.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/virtualhubconnection"
 
 &virtualhubconnection.VirtualHubConnectionRouting {
 	AssociatedRouteTableId: *string,
 	InboundRouteMapId: *string,
 	OutboundRouteMapId: *string,
-	PropagatedRouteTable: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.virtualHubConnection.VirtualHubConnectionRoutingPropagatedRouteTable,
+	PropagatedRouteTable: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.virtualHubConnection.VirtualHubConnectionRoutingPropagatedRouteTable,
 	StaticVnetLocalRouteOverrideCriteria: *string,
 	StaticVnetRoute: interface{},
 }
@@ -1181,7 +1188,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnectionRoutingPropagatedRouteTable.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/virtualhubconnection"
 
 &virtualhubconnection.VirtualHubConnectionRoutingPropagatedRouteTable {
 	Labels: *[]*string,
@@ -1227,7 +1234,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnectionRoutingStaticVnetRoute.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/virtualhubconnection"
 
 &virtualhubconnection.VirtualHubConnectionRoutingStaticVnetRoute {
 	AddressPrefixes: *[]*string,
@@ -1287,7 +1294,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnectionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/virtualhubconnection"
 
 &virtualhubconnection.VirtualHubConnectionTimeouts {
 	Create: *string,
@@ -1363,7 +1370,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnectionRoutingOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/virtualhubconnection"
 
 virtualhubconnection.NewVirtualHubConnectionRoutingOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VirtualHubConnectionRoutingOutputReference
 ```
@@ -1812,7 +1819,7 @@ func InternalValue() VirtualHubConnectionRouting
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnectionRoutingPropagatedRouteTableOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/virtualhubconnection"
 
 virtualhubconnection.NewVirtualHubConnectionRoutingPropagatedRouteTableOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VirtualHubConnectionRoutingPropagatedRouteTableOutputReference
 ```
@@ -2119,7 +2126,7 @@ func InternalValue() VirtualHubConnectionRoutingPropagatedRouteTable
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnectionRoutingStaticVnetRouteList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/virtualhubconnection"
 
 virtualhubconnection.NewVirtualHubConnectionRoutingStaticVnetRouteList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VirtualHubConnectionRoutingStaticVnetRouteList
 ```
@@ -2160,10 +2167,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnectionRoutingStaticVnetRouteList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnectionRoutingStaticVnetRouteList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnectionRoutingStaticVnetRouteList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnectionRoutingStaticVnetRouteList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnectionRoutingStaticVnetRouteList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnectionRoutingStaticVnetRouteList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnectionRoutingStaticVnetRouteList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -2262,7 +2286,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnectionRoutingStaticVnetRouteOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/virtualhubconnection"
 
 virtualhubconnection.NewVirtualHubConnectionRoutingStaticVnetRouteOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VirtualHubConnectionRoutingStaticVnetRouteOutputReference
 ```
@@ -2616,7 +2640,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualHubConnection.VirtualHubConnectionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/virtualhubconnection"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/virtualhubconnection"
 
 virtualhubconnection.NewVirtualHubConnectionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VirtualHubConnectionTimeoutsOutputReference
 ```

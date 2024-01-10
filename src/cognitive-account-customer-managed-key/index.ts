@@ -70,6 +70,43 @@ export function cognitiveAccountCustomerManagedKeyTimeoutsToTerraform(struct?: C
   }
 }
 
+
+export function cognitiveAccountCustomerManagedKeyTimeoutsToHclTerraform(struct?: CognitiveAccountCustomerManagedKeyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CognitiveAccountCustomerManagedKeyTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -343,5 +380,43 @@ export class CognitiveAccountCustomerManagedKeyA extends cdktf.TerraformResource
       key_vault_key_id: cdktf.stringToTerraform(this._keyVaultKeyId),
       timeouts: cognitiveAccountCustomerManagedKeyTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      cognitive_account_id: {
+        value: cdktf.stringToHclTerraform(this._cognitiveAccountId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      identity_client_id: {
+        value: cdktf.stringToHclTerraform(this._identityClientId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      key_vault_key_id: {
+        value: cdktf.stringToHclTerraform(this._keyVaultKeyId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: cognitiveAccountCustomerManagedKeyTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "CognitiveAccountCustomerManagedKeyTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

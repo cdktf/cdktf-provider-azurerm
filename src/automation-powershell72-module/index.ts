@@ -62,6 +62,31 @@ export function automationPowershell72ModuleModuleLinkHashToTerraform(struct?: A
   }
 }
 
+
+export function automationPowershell72ModuleModuleLinkHashToHclTerraform(struct?: AutomationPowershell72ModuleModuleLinkHashOutputReference | AutomationPowershell72ModuleModuleLinkHash): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    algorithm: {
+      value: cdktf.stringToHclTerraform(struct!.algorithm),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AutomationPowershell72ModuleModuleLinkHashOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -148,6 +173,31 @@ export function automationPowershell72ModuleModuleLinkToTerraform(struct?: Autom
     uri: cdktf.stringToTerraform(struct!.uri),
     hash: automationPowershell72ModuleModuleLinkHashToTerraform(struct!.hash),
   }
+}
+
+
+export function automationPowershell72ModuleModuleLinkToHclTerraform(struct?: AutomationPowershell72ModuleModuleLinkOutputReference | AutomationPowershell72ModuleModuleLink): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    uri: {
+      value: cdktf.stringToHclTerraform(struct!.uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    hash: {
+      value: automationPowershell72ModuleModuleLinkHashToHclTerraform(struct!.hash),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AutomationPowershell72ModuleModuleLinkHashList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AutomationPowershell72ModuleModuleLinkOutputReference extends cdktf.ComplexObject {
@@ -247,6 +297,43 @@ export function automationPowershell72ModuleTimeoutsToTerraform(struct?: Automat
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function automationPowershell72ModuleTimeoutsToHclTerraform(struct?: AutomationPowershell72ModuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AutomationPowershell72ModuleTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -519,5 +606,43 @@ export class AutomationPowershell72Module extends cdktf.TerraformResource {
       module_link: automationPowershell72ModuleModuleLinkToTerraform(this._moduleLink.internalValue),
       timeouts: automationPowershell72ModuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      automation_account_id: {
+        value: cdktf.stringToHclTerraform(this._automationAccountId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      module_link: {
+        value: automationPowershell72ModuleModuleLinkToHclTerraform(this._moduleLink.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AutomationPowershell72ModuleModuleLinkList",
+      },
+      timeouts: {
+        value: automationPowershell72ModuleTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AutomationPowershell72ModuleTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

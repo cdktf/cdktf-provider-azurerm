@@ -93,6 +93,49 @@ export function dataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaToTerra
   }
 }
 
+
+export function dataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaToHclTerraform(struct?: DataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaOutputReference | DataProtectionBackupPolicyPostgresqlRetentionRuleCriteria): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    absolute_criteria: {
+      value: cdktf.stringToHclTerraform(struct!.absoluteCriteria),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    days_of_week: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.daysOfWeek),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    months_of_year: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.monthsOfYear),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    scheduled_backup_times: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.scheduledBackupTimes),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    weeks_of_month: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.weeksOfMonth),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -263,6 +306,43 @@ export function dataProtectionBackupPolicyPostgresqlRetentionRuleToTerraform(str
   }
 }
 
+
+export function dataProtectionBackupPolicyPostgresqlRetentionRuleToHclTerraform(struct?: DataProtectionBackupPolicyPostgresqlRetentionRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    duration: {
+      value: cdktf.stringToHclTerraform(struct!.duration),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    priority: {
+      value: cdktf.numberToHclTerraform(struct!.priority),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    criteria: {
+      value: dataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaToHclTerraform(struct!.criteria),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataProtectionBackupPolicyPostgresqlRetentionRuleCriteriaList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataProtectionBackupPolicyPostgresqlRetentionRuleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -422,6 +502,37 @@ export function dataProtectionBackupPolicyPostgresqlTimeoutsToTerraform(struct?:
     delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function dataProtectionBackupPolicyPostgresqlTimeoutsToHclTerraform(struct?: DataProtectionBackupPolicyPostgresqlTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataProtectionBackupPolicyPostgresqlTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -738,5 +849,67 @@ export class DataProtectionBackupPolicyPostgresql extends cdktf.TerraformResourc
       retention_rule: cdktf.listMapper(dataProtectionBackupPolicyPostgresqlRetentionRuleToTerraform, true)(this._retentionRule.internalValue),
       timeouts: dataProtectionBackupPolicyPostgresqlTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      backup_repeating_time_intervals: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._backupRepeatingTimeIntervals),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      default_retention_duration: {
+        value: cdktf.stringToHclTerraform(this._defaultRetentionDuration),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      time_zone: {
+        value: cdktf.stringToHclTerraform(this._timeZone),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      vault_name: {
+        value: cdktf.stringToHclTerraform(this._vaultName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      retention_rule: {
+        value: cdktf.listMapperHcl(dataProtectionBackupPolicyPostgresqlRetentionRuleToHclTerraform, true)(this._retentionRule.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataProtectionBackupPolicyPostgresqlRetentionRuleList",
+      },
+      timeouts: {
+        value: dataProtectionBackupPolicyPostgresqlTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataProtectionBackupPolicyPostgresqlTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

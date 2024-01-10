@@ -124,6 +124,55 @@ export function dataFactoryDatasetBinaryAzureBlobStorageLocationToTerraform(stru
   }
 }
 
+
+export function dataFactoryDatasetBinaryAzureBlobStorageLocationToHclTerraform(struct?: DataFactoryDatasetBinaryAzureBlobStorageLocationOutputReference | DataFactoryDatasetBinaryAzureBlobStorageLocation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    container: {
+      value: cdktf.stringToHclTerraform(struct!.container),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    dynamic_container_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.dynamicContainerEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    dynamic_filename_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.dynamicFilenameEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    dynamic_path_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.dynamicPathEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    filename: {
+      value: cdktf.stringToHclTerraform(struct!.filename),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataFactoryDatasetBinaryAzureBlobStorageLocationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -301,6 +350,31 @@ export function dataFactoryDatasetBinaryCompressionToTerraform(struct?: DataFact
   }
 }
 
+
+export function dataFactoryDatasetBinaryCompressionToHclTerraform(struct?: DataFactoryDatasetBinaryCompressionOutputReference | DataFactoryDatasetBinaryCompression): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    level: {
+      value: cdktf.stringToHclTerraform(struct!.level),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataFactoryDatasetBinaryCompressionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -403,6 +477,49 @@ export function dataFactoryDatasetBinaryHttpServerLocationToTerraform(struct?: D
     path: cdktf.stringToTerraform(struct!.path),
     relative_url: cdktf.stringToTerraform(struct!.relativeUrl),
   }
+}
+
+
+export function dataFactoryDatasetBinaryHttpServerLocationToHclTerraform(struct?: DataFactoryDatasetBinaryHttpServerLocationOutputReference | DataFactoryDatasetBinaryHttpServerLocation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    dynamic_filename_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.dynamicFilenameEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    dynamic_path_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.dynamicPathEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    filename: {
+      value: cdktf.stringToHclTerraform(struct!.filename),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    relative_url: {
+      value: cdktf.stringToHclTerraform(struct!.relativeUrl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryDatasetBinaryHttpServerLocationOutputReference extends cdktf.ComplexObject {
@@ -564,6 +681,43 @@ export function dataFactoryDatasetBinarySftpServerLocationToTerraform(struct?: D
   }
 }
 
+
+export function dataFactoryDatasetBinarySftpServerLocationToHclTerraform(struct?: DataFactoryDatasetBinarySftpServerLocationOutputReference | DataFactoryDatasetBinarySftpServerLocation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    dynamic_filename_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.dynamicFilenameEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    dynamic_path_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.dynamicPathEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    filename: {
+      value: cdktf.stringToHclTerraform(struct!.filename),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataFactoryDatasetBinarySftpServerLocationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -702,6 +856,43 @@ export function dataFactoryDatasetBinaryTimeoutsToTerraform(struct?: DataFactory
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function dataFactoryDatasetBinaryTimeoutsToHclTerraform(struct?: DataFactoryDatasetBinaryTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryDatasetBinaryTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1136,5 +1327,97 @@ export class DataFactoryDatasetBinary extends cdktf.TerraformResource {
       sftp_server_location: dataFactoryDatasetBinarySftpServerLocationToTerraform(this._sftpServerLocation.internalValue),
       timeouts: dataFactoryDatasetBinaryTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      additional_properties: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._additionalProperties),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      annotations: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._annotations),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      data_factory_id: {
+        value: cdktf.stringToHclTerraform(this._dataFactoryId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      folder: {
+        value: cdktf.stringToHclTerraform(this._folder),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      linked_service_name: {
+        value: cdktf.stringToHclTerraform(this._linkedServiceName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      parameters: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._parameters),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      azure_blob_storage_location: {
+        value: dataFactoryDatasetBinaryAzureBlobStorageLocationToHclTerraform(this._azureBlobStorageLocation.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryDatasetBinaryAzureBlobStorageLocationList",
+      },
+      compression: {
+        value: dataFactoryDatasetBinaryCompressionToHclTerraform(this._compression.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryDatasetBinaryCompressionList",
+      },
+      http_server_location: {
+        value: dataFactoryDatasetBinaryHttpServerLocationToHclTerraform(this._httpServerLocation.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryDatasetBinaryHttpServerLocationList",
+      },
+      sftp_server_location: {
+        value: dataFactoryDatasetBinarySftpServerLocationToHclTerraform(this._sftpServerLocation.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryDatasetBinarySftpServerLocationList",
+      },
+      timeouts: {
+        value: dataFactoryDatasetBinaryTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataFactoryDatasetBinaryTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -50,6 +50,17 @@ export function dataAzurermVirtualHubConnectionRoutingPropagatedRouteTableToTerr
   }
 }
 
+
+export function dataAzurermVirtualHubConnectionRoutingPropagatedRouteTableToHclTerraform(struct?: DataAzurermVirtualHubConnectionRoutingPropagatedRouteTable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermVirtualHubConnectionRoutingPropagatedRouteTableOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -117,6 +128,17 @@ export function dataAzurermVirtualHubConnectionRoutingStaticVnetRouteToTerraform
   }
   return {
   }
+}
+
+
+export function dataAzurermVirtualHubConnectionRoutingStaticVnetRouteToHclTerraform(struct?: DataAzurermVirtualHubConnectionRoutingStaticVnetRoute): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermVirtualHubConnectionRoutingStaticVnetRouteOutputReference extends cdktf.ComplexObject {
@@ -191,6 +213,17 @@ export function dataAzurermVirtualHubConnectionRoutingToTerraform(struct?: DataA
   }
   return {
   }
+}
+
+
+export function dataAzurermVirtualHubConnectionRoutingToHclTerraform(struct?: DataAzurermVirtualHubConnectionRouting): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermVirtualHubConnectionRoutingOutputReference extends cdktf.ComplexObject {
@@ -287,6 +320,25 @@ export function dataAzurermVirtualHubConnectionTimeoutsToTerraform(struct?: Data
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function dataAzurermVirtualHubConnectionTimeoutsToHclTerraform(struct?: DataAzurermVirtualHubConnectionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataAzurermVirtualHubConnectionTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -514,5 +566,43 @@ export class DataAzurermVirtualHubConnection extends cdktf.TerraformDataSource {
       virtual_hub_name: cdktf.stringToTerraform(this._virtualHubName),
       timeouts: dataAzurermVirtualHubConnectionTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      virtual_hub_name: {
+        value: cdktf.stringToHclTerraform(this._virtualHubName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: dataAzurermVirtualHubConnectionTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataAzurermVirtualHubConnectionTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

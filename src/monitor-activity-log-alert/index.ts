@@ -84,6 +84,31 @@ export function monitorActivityLogAlertActionToTerraform(struct?: MonitorActivit
   }
 }
 
+
+export function monitorActivityLogAlertActionToHclTerraform(struct?: MonitorActivityLogAlertAction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    action_group_id: {
+      value: cdktf.stringToHclTerraform(struct!.actionGroupId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    webhook_properties: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.webhookProperties),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitorActivityLogAlertActionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -210,6 +235,37 @@ export function monitorActivityLogAlertCriteriaResourceHealthToTerraform(struct?
   }
 }
 
+
+export function monitorActivityLogAlertCriteriaResourceHealthToHclTerraform(struct?: MonitorActivityLogAlertCriteriaResourceHealthOutputReference | MonitorActivityLogAlertCriteriaResourceHealth): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    current: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.current),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    previous: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.previous),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    reason: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.reason),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitorActivityLogAlertCriteriaResourceHealthOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -327,6 +383,37 @@ export function monitorActivityLogAlertCriteriaServiceHealthToTerraform(struct?:
     locations: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.locations),
     services: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.services),
   }
+}
+
+
+export function monitorActivityLogAlertCriteriaServiceHealthToHclTerraform(struct?: MonitorActivityLogAlertCriteriaServiceHealthOutputReference | MonitorActivityLogAlertCriteriaServiceHealth): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    events: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.events),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    locations: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.locations),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    services: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.services),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorActivityLogAlertCriteriaServiceHealthOutputReference extends cdktf.ComplexObject {
@@ -545,6 +632,151 @@ export function monitorActivityLogAlertCriteriaToTerraform(struct?: MonitorActiv
     resource_health: monitorActivityLogAlertCriteriaResourceHealthToTerraform(struct!.resourceHealth),
     service_health: monitorActivityLogAlertCriteriaServiceHealthToTerraform(struct!.serviceHealth),
   }
+}
+
+
+export function monitorActivityLogAlertCriteriaToHclTerraform(struct?: MonitorActivityLogAlertCriteriaOutputReference | MonitorActivityLogAlertCriteria): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    caller: {
+      value: cdktf.stringToHclTerraform(struct!.caller),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    category: {
+      value: cdktf.stringToHclTerraform(struct!.category),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    level: {
+      value: cdktf.stringToHclTerraform(struct!.level),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    levels: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.levels),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    operation_name: {
+      value: cdktf.stringToHclTerraform(struct!.operationName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    recommendation_category: {
+      value: cdktf.stringToHclTerraform(struct!.recommendationCategory),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    recommendation_impact: {
+      value: cdktf.stringToHclTerraform(struct!.recommendationImpact),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    recommendation_type: {
+      value: cdktf.stringToHclTerraform(struct!.recommendationType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    resource_group: {
+      value: cdktf.stringToHclTerraform(struct!.resourceGroup),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    resource_groups: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.resourceGroups),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    resource_id: {
+      value: cdktf.stringToHclTerraform(struct!.resourceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    resource_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.resourceIds),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    resource_provider: {
+      value: cdktf.stringToHclTerraform(struct!.resourceProvider),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    resource_providers: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.resourceProviders),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    resource_type: {
+      value: cdktf.stringToHclTerraform(struct!.resourceType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    resource_types: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.resourceTypes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    status: {
+      value: cdktf.stringToHclTerraform(struct!.status),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    statuses: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.statuses),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    sub_status: {
+      value: cdktf.stringToHclTerraform(struct!.subStatus),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sub_statuses: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.subStatuses),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    resource_health: {
+      value: monitorActivityLogAlertCriteriaResourceHealthToHclTerraform(struct!.resourceHealth),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitorActivityLogAlertCriteriaResourceHealthList",
+    },
+    service_health: {
+      value: monitorActivityLogAlertCriteriaServiceHealthToHclTerraform(struct!.serviceHealth),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitorActivityLogAlertCriteriaServiceHealthList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorActivityLogAlertCriteriaOutputReference extends cdktf.ComplexObject {
@@ -1086,6 +1318,43 @@ export function monitorActivityLogAlertTimeoutsToTerraform(struct?: MonitorActiv
   }
 }
 
+
+export function monitorActivityLogAlertTimeoutsToHclTerraform(struct?: MonitorActivityLogAlertTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitorActivityLogAlertTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1443,5 +1712,73 @@ export class MonitorActivityLogAlert extends cdktf.TerraformResource {
       criteria: monitorActivityLogAlertCriteriaToTerraform(this._criteria.internalValue),
       timeouts: monitorActivityLogAlertTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enabled: {
+        value: cdktf.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      scopes: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._scopes),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      action: {
+        value: cdktf.listMapperHcl(monitorActivityLogAlertActionToHclTerraform, true)(this._action.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitorActivityLogAlertActionList",
+      },
+      criteria: {
+        value: monitorActivityLogAlertCriteriaToHclTerraform(this._criteria.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitorActivityLogAlertCriteriaList",
+      },
+      timeouts: {
+        value: monitorActivityLogAlertTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MonitorActivityLogAlertTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

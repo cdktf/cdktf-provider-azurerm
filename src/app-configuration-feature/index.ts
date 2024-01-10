@@ -100,6 +100,31 @@ export function appConfigurationFeatureTargetingFilterGroupsToTerraform(struct?:
   }
 }
 
+
+export function appConfigurationFeatureTargetingFilterGroupsToHclTerraform(struct?: AppConfigurationFeatureTargetingFilterGroups | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    rollout_percentage: {
+      value: cdktf.numberToHclTerraform(struct!.rolloutPercentage),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AppConfigurationFeatureTargetingFilterGroupsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -223,6 +248,37 @@ export function appConfigurationFeatureTargetingFilterToTerraform(struct?: AppCo
     users: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.users),
     groups: cdktf.listMapper(appConfigurationFeatureTargetingFilterGroupsToTerraform, true)(struct!.groups),
   }
+}
+
+
+export function appConfigurationFeatureTargetingFilterToHclTerraform(struct?: AppConfigurationFeatureTargetingFilter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    default_rollout_percentage: {
+      value: cdktf.numberToHclTerraform(struct!.defaultRolloutPercentage),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    users: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.users),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    groups: {
+      value: cdktf.listMapperHcl(appConfigurationFeatureTargetingFilterGroupsToHclTerraform, true)(struct!.groups),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AppConfigurationFeatureTargetingFilterGroupsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AppConfigurationFeatureTargetingFilterOutputReference extends cdktf.ComplexObject {
@@ -378,6 +434,43 @@ export function appConfigurationFeatureTimeoutsToTerraform(struct?: AppConfigura
   }
 }
 
+
+export function appConfigurationFeatureTimeoutsToHclTerraform(struct?: AppConfigurationFeatureTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AppConfigurationFeatureTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -522,6 +615,31 @@ export function appConfigurationFeatureTimewindowFilterToTerraform(struct?: AppC
     end: cdktf.stringToTerraform(struct!.end),
     start: cdktf.stringToTerraform(struct!.start),
   }
+}
+
+
+export function appConfigurationFeatureTimewindowFilterToHclTerraform(struct?: AppConfigurationFeatureTimewindowFilter | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    end: {
+      value: cdktf.stringToHclTerraform(struct!.end),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    start: {
+      value: cdktf.stringToHclTerraform(struct!.start),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AppConfigurationFeatureTimewindowFilterOutputReference extends cdktf.ComplexObject {
@@ -937,5 +1055,97 @@ export class AppConfigurationFeature extends cdktf.TerraformResource {
       timeouts: appConfigurationFeatureTimeoutsToTerraform(this._timeouts.internalValue),
       timewindow_filter: cdktf.listMapper(appConfigurationFeatureTimewindowFilterToTerraform, true)(this._timewindowFilter.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      configuration_store_id: {
+        value: cdktf.stringToHclTerraform(this._configurationStoreId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enabled: {
+        value: cdktf.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      etag: {
+        value: cdktf.stringToHclTerraform(this._etag),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      key: {
+        value: cdktf.stringToHclTerraform(this._key),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      label: {
+        value: cdktf.stringToHclTerraform(this._label),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      locked: {
+        value: cdktf.booleanToHclTerraform(this._locked),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      percentage_filter_value: {
+        value: cdktf.numberToHclTerraform(this._percentageFilterValue),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      targeting_filter: {
+        value: cdktf.listMapperHcl(appConfigurationFeatureTargetingFilterToHclTerraform, true)(this._targetingFilter.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AppConfigurationFeatureTargetingFilterList",
+      },
+      timeouts: {
+        value: appConfigurationFeatureTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AppConfigurationFeatureTimeouts",
+      },
+      timewindow_filter: {
+        value: cdktf.listMapperHcl(appConfigurationFeatureTimewindowFilterToHclTerraform, true)(this._timewindowFilter.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AppConfigurationFeatureTimewindowFilterList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

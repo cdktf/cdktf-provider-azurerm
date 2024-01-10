@@ -110,6 +110,43 @@ export function lbNatRuleTimeoutsToTerraform(struct?: LbNatRuleTimeouts | cdktf.
   }
 }
 
+
+export function lbNatRuleTimeoutsToHclTerraform(struct?: LbNatRuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class LbNatRuleTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -561,5 +598,103 @@ export class LbNatRule extends cdktf.TerraformResource {
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       timeouts: lbNatRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      backend_address_pool_id: {
+        value: cdktf.stringToHclTerraform(this._backendAddressPoolId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      backend_port: {
+        value: cdktf.numberToHclTerraform(this._backendPort),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      enable_floating_ip: {
+        value: cdktf.booleanToHclTerraform(this._enableFloatingIp),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      enable_tcp_reset: {
+        value: cdktf.booleanToHclTerraform(this._enableTcpReset),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      frontend_ip_configuration_name: {
+        value: cdktf.stringToHclTerraform(this._frontendIpConfigurationName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      frontend_port: {
+        value: cdktf.numberToHclTerraform(this._frontendPort),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      frontend_port_end: {
+        value: cdktf.numberToHclTerraform(this._frontendPortEnd),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      frontend_port_start: {
+        value: cdktf.numberToHclTerraform(this._frontendPortStart),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      idle_timeout_in_minutes: {
+        value: cdktf.numberToHclTerraform(this._idleTimeoutInMinutes),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      loadbalancer_id: {
+        value: cdktf.stringToHclTerraform(this._loadbalancerId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      protocol: {
+        value: cdktf.stringToHclTerraform(this._protocol),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: lbNatRuleTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "LbNatRuleTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

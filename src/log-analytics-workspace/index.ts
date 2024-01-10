@@ -114,6 +114,31 @@ export function logAnalyticsWorkspaceIdentityToTerraform(struct?: LogAnalyticsWo
   }
 }
 
+
+export function logAnalyticsWorkspaceIdentityToHclTerraform(struct?: LogAnalyticsWorkspaceIdentityOutputReference | LogAnalyticsWorkspaceIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.identityIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class LogAnalyticsWorkspaceIdentityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -221,6 +246,43 @@ export function logAnalyticsWorkspaceTimeoutsToTerraform(struct?: LogAnalyticsWo
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function logAnalyticsWorkspaceTimeoutsToHclTerraform(struct?: LogAnalyticsWorkspaceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LogAnalyticsWorkspaceTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -742,5 +804,121 @@ export class LogAnalyticsWorkspace extends cdktf.TerraformResource {
       identity: logAnalyticsWorkspaceIdentityToTerraform(this._identity.internalValue),
       timeouts: logAnalyticsWorkspaceTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      allow_resource_only_permissions: {
+        value: cdktf.booleanToHclTerraform(this._allowResourceOnlyPermissions),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      cmk_for_query_forced: {
+        value: cdktf.booleanToHclTerraform(this._cmkForQueryForced),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      daily_quota_gb: {
+        value: cdktf.numberToHclTerraform(this._dailyQuotaGb),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      data_collection_rule_id: {
+        value: cdktf.stringToHclTerraform(this._dataCollectionRuleId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      immediate_data_purge_on_30_days_enabled: {
+        value: cdktf.booleanToHclTerraform(this._immediateDataPurgeOn30DaysEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      internet_ingestion_enabled: {
+        value: cdktf.booleanToHclTerraform(this._internetIngestionEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      internet_query_enabled: {
+        value: cdktf.booleanToHclTerraform(this._internetQueryEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      local_authentication_disabled: {
+        value: cdktf.booleanToHclTerraform(this._localAuthenticationDisabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      reservation_capacity_in_gb_per_day: {
+        value: cdktf.numberToHclTerraform(this._reservationCapacityInGbPerDay),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      retention_in_days: {
+        value: cdktf.numberToHclTerraform(this._retentionInDays),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      sku: {
+        value: cdktf.stringToHclTerraform(this._sku),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      identity: {
+        value: logAnalyticsWorkspaceIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "LogAnalyticsWorkspaceIdentityList",
+      },
+      timeouts: {
+        value: logAnalyticsWorkspaceTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "LogAnalyticsWorkspaceTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

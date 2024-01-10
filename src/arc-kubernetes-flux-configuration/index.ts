@@ -112,6 +112,55 @@ export function arcKubernetesFluxConfigurationBlobStorageServicePrincipalToTerra
   }
 }
 
+
+export function arcKubernetesFluxConfigurationBlobStorageServicePrincipalToHclTerraform(struct?: ArcKubernetesFluxConfigurationBlobStorageServicePrincipalOutputReference | ArcKubernetesFluxConfigurationBlobStorageServicePrincipal): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    client_certificate_base64: {
+      value: cdktf.stringToHclTerraform(struct!.clientCertificateBase64),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    client_certificate_password: {
+      value: cdktf.stringToHclTerraform(struct!.clientCertificatePassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    client_certificate_send_chain: {
+      value: cdktf.booleanToHclTerraform(struct!.clientCertificateSendChain),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    client_id: {
+      value: cdktf.stringToHclTerraform(struct!.clientId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    client_secret: {
+      value: cdktf.stringToHclTerraform(struct!.clientSecret),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tenant_id: {
+      value: cdktf.stringToHclTerraform(struct!.tenantId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ArcKubernetesFluxConfigurationBlobStorageServicePrincipalOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -311,6 +360,61 @@ export function arcKubernetesFluxConfigurationBlobStorageToTerraform(struct?: Ar
     timeout_in_seconds: cdktf.numberToTerraform(struct!.timeoutInSeconds),
     service_principal: arcKubernetesFluxConfigurationBlobStorageServicePrincipalToTerraform(struct!.servicePrincipal),
   }
+}
+
+
+export function arcKubernetesFluxConfigurationBlobStorageToHclTerraform(struct?: ArcKubernetesFluxConfigurationBlobStorageOutputReference | ArcKubernetesFluxConfigurationBlobStorage): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    account_key: {
+      value: cdktf.stringToHclTerraform(struct!.accountKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    container_id: {
+      value: cdktf.stringToHclTerraform(struct!.containerId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    local_auth_reference: {
+      value: cdktf.stringToHclTerraform(struct!.localAuthReference),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sas_token: {
+      value: cdktf.stringToHclTerraform(struct!.sasToken),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sync_interval_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.syncIntervalInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    timeout_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.timeoutInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    service_principal: {
+      value: arcKubernetesFluxConfigurationBlobStorageServicePrincipalToHclTerraform(struct!.servicePrincipal),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ArcKubernetesFluxConfigurationBlobStorageServicePrincipalList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ArcKubernetesFluxConfigurationBlobStorageOutputReference extends cdktf.ComplexObject {
@@ -540,6 +644,67 @@ export function arcKubernetesFluxConfigurationBucketToTerraform(struct?: ArcKube
     tls_enabled: cdktf.booleanToTerraform(struct!.tlsEnabled),
     url: cdktf.stringToTerraform(struct!.url),
   }
+}
+
+
+export function arcKubernetesFluxConfigurationBucketToHclTerraform(struct?: ArcKubernetesFluxConfigurationBucketOutputReference | ArcKubernetesFluxConfigurationBucket): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    access_key: {
+      value: cdktf.stringToHclTerraform(struct!.accessKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    bucket_name: {
+      value: cdktf.stringToHclTerraform(struct!.bucketName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    local_auth_reference: {
+      value: cdktf.stringToHclTerraform(struct!.localAuthReference),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    secret_key_base64: {
+      value: cdktf.stringToHclTerraform(struct!.secretKeyBase64),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sync_interval_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.syncIntervalInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    timeout_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.timeoutInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    tls_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.tlsEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    url: {
+      value: cdktf.stringToHclTerraform(struct!.url),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ArcKubernetesFluxConfigurationBucketOutputReference extends cdktf.ComplexObject {
@@ -803,6 +968,85 @@ export function arcKubernetesFluxConfigurationGitRepositoryToTerraform(struct?: 
     timeout_in_seconds: cdktf.numberToTerraform(struct!.timeoutInSeconds),
     url: cdktf.stringToTerraform(struct!.url),
   }
+}
+
+
+export function arcKubernetesFluxConfigurationGitRepositoryToHclTerraform(struct?: ArcKubernetesFluxConfigurationGitRepositoryOutputReference | ArcKubernetesFluxConfigurationGitRepository): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    https_ca_cert_base64: {
+      value: cdktf.stringToHclTerraform(struct!.httpsCaCertBase64),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    https_key_base64: {
+      value: cdktf.stringToHclTerraform(struct!.httpsKeyBase64),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    https_user: {
+      value: cdktf.stringToHclTerraform(struct!.httpsUser),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    local_auth_reference: {
+      value: cdktf.stringToHclTerraform(struct!.localAuthReference),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    reference_type: {
+      value: cdktf.stringToHclTerraform(struct!.referenceType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    reference_value: {
+      value: cdktf.stringToHclTerraform(struct!.referenceValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ssh_known_hosts_base64: {
+      value: cdktf.stringToHclTerraform(struct!.sshKnownHostsBase64),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ssh_private_key_base64: {
+      value: cdktf.stringToHclTerraform(struct!.sshPrivateKeyBase64),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sync_interval_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.syncIntervalInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    timeout_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.timeoutInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    url: {
+      value: cdktf.stringToHclTerraform(struct!.url),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ArcKubernetesFluxConfigurationGitRepositoryOutputReference extends cdktf.ComplexObject {
@@ -1116,6 +1360,67 @@ export function arcKubernetesFluxConfigurationKustomizationsToTerraform(struct?:
   }
 }
 
+
+export function arcKubernetesFluxConfigurationKustomizationsToHclTerraform(struct?: ArcKubernetesFluxConfigurationKustomizations | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    depends_on: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.dependsOn),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    garbage_collection_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.garbageCollectionEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    path: {
+      value: cdktf.stringToHclTerraform(struct!.path),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    recreating_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.recreatingEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    retry_interval_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.retryIntervalInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    sync_interval_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.syncIntervalInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    timeout_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.timeoutInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ArcKubernetesFluxConfigurationKustomizationsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1377,6 +1682,43 @@ export function arcKubernetesFluxConfigurationTimeoutsToTerraform(struct?: ArcKu
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function arcKubernetesFluxConfigurationTimeoutsToHclTerraform(struct?: ArcKubernetesFluxConfigurationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ArcKubernetesFluxConfigurationTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1754,5 +2096,79 @@ export class ArcKubernetesFluxConfiguration extends cdktf.TerraformResource {
       kustomizations: cdktf.listMapper(arcKubernetesFluxConfigurationKustomizationsToTerraform, true)(this._kustomizations.internalValue),
       timeouts: arcKubernetesFluxConfigurationTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      cluster_id: {
+        value: cdktf.stringToHclTerraform(this._clusterId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      continuous_reconciliation_enabled: {
+        value: cdktf.booleanToHclTerraform(this._continuousReconciliationEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      namespace: {
+        value: cdktf.stringToHclTerraform(this._namespace),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      scope: {
+        value: cdktf.stringToHclTerraform(this._scope),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      blob_storage: {
+        value: arcKubernetesFluxConfigurationBlobStorageToHclTerraform(this._blobStorage.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ArcKubernetesFluxConfigurationBlobStorageList",
+      },
+      bucket: {
+        value: arcKubernetesFluxConfigurationBucketToHclTerraform(this._bucket.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ArcKubernetesFluxConfigurationBucketList",
+      },
+      git_repository: {
+        value: arcKubernetesFluxConfigurationGitRepositoryToHclTerraform(this._gitRepository.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ArcKubernetesFluxConfigurationGitRepositoryList",
+      },
+      kustomizations: {
+        value: cdktf.listMapperHcl(arcKubernetesFluxConfigurationKustomizationsToHclTerraform, true)(this._kustomizations.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "ArcKubernetesFluxConfigurationKustomizationsList",
+      },
+      timeouts: {
+        value: arcKubernetesFluxConfigurationTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ArcKubernetesFluxConfigurationTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

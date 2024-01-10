@@ -90,6 +90,43 @@ export function keyVaultAccessPolicyTimeoutsToTerraform(struct?: KeyVaultAccessP
   }
 }
 
+
+export function keyVaultAccessPolicyTimeoutsToHclTerraform(struct?: KeyVaultAccessPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class KeyVaultAccessPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -450,5 +487,73 @@ export class KeyVaultAccessPolicyA extends cdktf.TerraformResource {
       tenant_id: cdktf.stringToTerraform(this._tenantId),
       timeouts: keyVaultAccessPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      application_id: {
+        value: cdktf.stringToHclTerraform(this._applicationId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      certificate_permissions: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._certificatePermissions),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      key_permissions: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._keyPermissions),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      key_vault_id: {
+        value: cdktf.stringToHclTerraform(this._keyVaultId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      object_id: {
+        value: cdktf.stringToHclTerraform(this._objectId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      secret_permissions: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._secretPermissions),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      storage_permissions: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._storagePermissions),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      tenant_id: {
+        value: cdktf.stringToHclTerraform(this._tenantId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: keyVaultAccessPolicyTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "KeyVaultAccessPolicyTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

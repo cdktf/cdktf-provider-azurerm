@@ -76,6 +76,31 @@ export function streamAnalyticsFunctionJavascriptUdfInputToTerraform(struct?: St
   }
 }
 
+
+export function streamAnalyticsFunctionJavascriptUdfInputToHclTerraform(struct?: StreamAnalyticsFunctionJavascriptUdfInput | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    configuration_parameter: {
+      value: cdktf.booleanToHclTerraform(struct!.configurationParameter),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class StreamAnalyticsFunctionJavascriptUdfInputOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -192,6 +217,25 @@ export function streamAnalyticsFunctionJavascriptUdfOutputToTerraform(struct?: S
   }
 }
 
+
+export function streamAnalyticsFunctionJavascriptUdfOutputToHclTerraform(struct?: StreamAnalyticsFunctionJavascriptUdfOutputOutputReference | StreamAnalyticsFunctionJavascriptUdfOutput): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class StreamAnalyticsFunctionJavascriptUdfOutputOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -267,6 +311,43 @@ export function streamAnalyticsFunctionJavascriptUdfTimeoutsToTerraform(struct?:
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function streamAnalyticsFunctionJavascriptUdfTimeoutsToHclTerraform(struct?: StreamAnalyticsFunctionJavascriptUdfTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class StreamAnalyticsFunctionJavascriptUdfTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -584,5 +665,61 @@ export class StreamAnalyticsFunctionJavascriptUdf extends cdktf.TerraformResourc
       output: streamAnalyticsFunctionJavascriptUdfOutputToTerraform(this._output.internalValue),
       timeouts: streamAnalyticsFunctionJavascriptUdfTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      script: {
+        value: cdktf.stringToHclTerraform(this._script),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      stream_analytics_job_name: {
+        value: cdktf.stringToHclTerraform(this._streamAnalyticsJobName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      input: {
+        value: cdktf.listMapperHcl(streamAnalyticsFunctionJavascriptUdfInputToHclTerraform, true)(this._input.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "StreamAnalyticsFunctionJavascriptUdfInputList",
+      },
+      output: {
+        value: streamAnalyticsFunctionJavascriptUdfOutputToHclTerraform(this._output.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "StreamAnalyticsFunctionJavascriptUdfOutputList",
+      },
+      timeouts: {
+        value: streamAnalyticsFunctionJavascriptUdfTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "StreamAnalyticsFunctionJavascriptUdfTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

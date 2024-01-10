@@ -109,6 +109,73 @@ export function servicebusSubscriptionRuleCorrelationFilterToTerraform(struct?: 
   }
 }
 
+
+export function servicebusSubscriptionRuleCorrelationFilterToHclTerraform(struct?: ServicebusSubscriptionRuleCorrelationFilterOutputReference | ServicebusSubscriptionRuleCorrelationFilter): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    content_type: {
+      value: cdktf.stringToHclTerraform(struct!.contentType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    correlation_id: {
+      value: cdktf.stringToHclTerraform(struct!.correlationId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    label: {
+      value: cdktf.stringToHclTerraform(struct!.label),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    message_id: {
+      value: cdktf.stringToHclTerraform(struct!.messageId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    properties: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.properties),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    reply_to: {
+      value: cdktf.stringToHclTerraform(struct!.replyTo),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    reply_to_session_id: {
+      value: cdktf.stringToHclTerraform(struct!.replyToSessionId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    session_id: {
+      value: cdktf.stringToHclTerraform(struct!.sessionId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    to: {
+      value: cdktf.stringToHclTerraform(struct!.to),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ServicebusSubscriptionRuleCorrelationFilterOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -363,6 +430,43 @@ export function servicebusSubscriptionRuleTimeoutsToTerraform(struct?: Servicebu
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function servicebusSubscriptionRuleTimeoutsToHclTerraform(struct?: ServicebusSubscriptionRuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ServicebusSubscriptionRuleTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -694,5 +798,61 @@ export class ServicebusSubscriptionRule extends cdktf.TerraformResource {
       correlation_filter: servicebusSubscriptionRuleCorrelationFilterToTerraform(this._correlationFilter.internalValue),
       timeouts: servicebusSubscriptionRuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      action: {
+        value: cdktf.stringToHclTerraform(this._action),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      filter_type: {
+        value: cdktf.stringToHclTerraform(this._filterType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sql_filter: {
+        value: cdktf.stringToHclTerraform(this._sqlFilter),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      subscription_id: {
+        value: cdktf.stringToHclTerraform(this._subscriptionId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      correlation_filter: {
+        value: servicebusSubscriptionRuleCorrelationFilterToHclTerraform(this._correlationFilter.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ServicebusSubscriptionRuleCorrelationFilterList",
+      },
+      timeouts: {
+        value: servicebusSubscriptionRuleTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ServicebusSubscriptionRuleTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

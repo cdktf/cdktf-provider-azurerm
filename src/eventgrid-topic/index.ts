@@ -98,6 +98,31 @@ export function eventgridTopicInboundIpRuleToTerraform(struct?: EventgridTopicIn
   }
 }
 
+
+export function eventgridTopicInboundIpRuleToHclTerraform(struct?: EventgridTopicInboundIpRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    action: {
+      value: struct!.action === undefined ? null : cdktf.stringToHclTerraform(struct!.action),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ip_mask: {
+      value: struct!.ipMask === undefined ? null : cdktf.stringToHclTerraform(struct!.ipMask),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class EventgridTopicInboundIpRuleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -222,6 +247,31 @@ export function eventgridTopicIdentityToTerraform(struct?: EventgridTopicIdentit
   }
 }
 
+
+export function eventgridTopicIdentityToHclTerraform(struct?: EventgridTopicIdentityOutputReference | EventgridTopicIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.identityIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class EventgridTopicIdentityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -324,6 +374,37 @@ export function eventgridTopicInputMappingDefaultValuesToTerraform(struct?: Even
     event_type: cdktf.stringToTerraform(struct!.eventType),
     subject: cdktf.stringToTerraform(struct!.subject),
   }
+}
+
+
+export function eventgridTopicInputMappingDefaultValuesToHclTerraform(struct?: EventgridTopicInputMappingDefaultValuesOutputReference | EventgridTopicInputMappingDefaultValues): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    data_version: {
+      value: cdktf.stringToHclTerraform(struct!.dataVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    event_type: {
+      value: cdktf.stringToHclTerraform(struct!.eventType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    subject: {
+      value: cdktf.stringToHclTerraform(struct!.subject),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class EventgridTopicInputMappingDefaultValuesOutputReference extends cdktf.ComplexObject {
@@ -461,6 +542,55 @@ export function eventgridTopicInputMappingFieldsToTerraform(struct?: EventgridTo
     subject: cdktf.stringToTerraform(struct!.subject),
     topic: cdktf.stringToTerraform(struct!.topic),
   }
+}
+
+
+export function eventgridTopicInputMappingFieldsToHclTerraform(struct?: EventgridTopicInputMappingFieldsOutputReference | EventgridTopicInputMappingFields): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    data_version: {
+      value: cdktf.stringToHclTerraform(struct!.dataVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    event_time: {
+      value: cdktf.stringToHclTerraform(struct!.eventTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    event_type: {
+      value: cdktf.stringToHclTerraform(struct!.eventType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    id: {
+      value: cdktf.stringToHclTerraform(struct!.id),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    subject: {
+      value: cdktf.stringToHclTerraform(struct!.subject),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    topic: {
+      value: cdktf.stringToHclTerraform(struct!.topic),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class EventgridTopicInputMappingFieldsOutputReference extends cdktf.ComplexObject {
@@ -651,6 +781,43 @@ export function eventgridTopicTimeoutsToTerraform(struct?: EventgridTopicTimeout
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function eventgridTopicTimeoutsToHclTerraform(struct?: EventgridTopicTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class EventgridTopicTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1082,5 +1249,91 @@ export class EventgridTopic extends cdktf.TerraformResource {
       input_mapping_fields: eventgridTopicInputMappingFieldsToTerraform(this._inputMappingFields.internalValue),
       timeouts: eventgridTopicTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      inbound_ip_rule: {
+        value: cdktf.listMapperHcl(eventgridTopicInboundIpRuleToHclTerraform, false)(this._inboundIpRule.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "EventgridTopicInboundIpRuleList",
+      },
+      input_schema: {
+        value: cdktf.stringToHclTerraform(this._inputSchema),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      local_auth_enabled: {
+        value: cdktf.booleanToHclTerraform(this._localAuthEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      public_network_access_enabled: {
+        value: cdktf.booleanToHclTerraform(this._publicNetworkAccessEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      identity: {
+        value: eventgridTopicIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "EventgridTopicIdentityList",
+      },
+      input_mapping_default_values: {
+        value: eventgridTopicInputMappingDefaultValuesToHclTerraform(this._inputMappingDefaultValues.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "EventgridTopicInputMappingDefaultValuesList",
+      },
+      input_mapping_fields: {
+        value: eventgridTopicInputMappingFieldsToHclTerraform(this._inputMappingFields.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "EventgridTopicInputMappingFieldsList",
+      },
+      timeouts: {
+        value: eventgridTopicTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "EventgridTopicTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -71,6 +71,25 @@ export function networkFunctionCollectorPolicyIpfxEmissionToTerraform(struct?: N
   }
 }
 
+
+export function networkFunctionCollectorPolicyIpfxEmissionToHclTerraform(struct?: NetworkFunctionCollectorPolicyIpfxEmissionOutputReference | NetworkFunctionCollectorPolicyIpfxEmission): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    destination_types: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.destinationTypes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class NetworkFunctionCollectorPolicyIpfxEmissionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -131,6 +150,25 @@ export function networkFunctionCollectorPolicyIpfxIngestionToTerraform(struct?: 
   return {
     source_resource_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.sourceResourceIds),
   }
+}
+
+
+export function networkFunctionCollectorPolicyIpfxIngestionToHclTerraform(struct?: NetworkFunctionCollectorPolicyIpfxIngestionOutputReference | NetworkFunctionCollectorPolicyIpfxIngestion): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    source_resource_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.sourceResourceIds),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NetworkFunctionCollectorPolicyIpfxIngestionOutputReference extends cdktf.ComplexObject {
@@ -208,6 +246,43 @@ export function networkFunctionCollectorPolicyTimeoutsToTerraform(struct?: Netwo
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function networkFunctionCollectorPolicyTimeoutsToHclTerraform(struct?: NetworkFunctionCollectorPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NetworkFunctionCollectorPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -528,5 +603,61 @@ export class NetworkFunctionCollectorPolicy extends cdktf.TerraformResource {
       ipfx_ingestion: networkFunctionCollectorPolicyIpfxIngestionToTerraform(this._ipfxIngestion.internalValue),
       timeouts: networkFunctionCollectorPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      traffic_collector_id: {
+        value: cdktf.stringToHclTerraform(this._trafficCollectorId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ipfx_emission: {
+        value: networkFunctionCollectorPolicyIpfxEmissionToHclTerraform(this._ipfxEmission.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NetworkFunctionCollectorPolicyIpfxEmissionList",
+      },
+      ipfx_ingestion: {
+        value: networkFunctionCollectorPolicyIpfxIngestionToHclTerraform(this._ipfxIngestion.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NetworkFunctionCollectorPolicyIpfxIngestionList",
+      },
+      timeouts: {
+        value: networkFunctionCollectorPolicyTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "NetworkFunctionCollectorPolicyTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageTableEntity.StorageTableEntity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagetableentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagetableentity"
 
 storagetableentity.NewStorageTableEntity(scope Construct, id *string, config StorageTableEntityConfig) StorageTableEntity
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.storageTableEntity.StorageTableEntity.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageTableEntity.StorageTableEntity.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.storageTableEntity.StorageTableEntity.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.storageTableEntity.StorageTableEntity.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageTableEntity.StorageTableEntity.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageTableEntity.StorageTableEntity.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.storageTableEntity.StorageTableEntity.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -127,6 +128,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.storageTableEntity.StorageTableEntity.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.storageTableEntity.StorageTableEntity.toMetadata"></a>
 
@@ -398,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.storageTableEntity.StorageTableEntity.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagetableentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagetableentity"
 
 storagetableentity.StorageTableEntity_IsConstruct(x interface{}) *bool
 ```
@@ -430,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.storageTableEntity.StorageTableEntity.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagetableentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagetableentity"
 
 storagetableentity.StorageTableEntity_IsTerraformElement(x interface{}) *bool
 ```
@@ -444,7 +451,7 @@ storagetableentity.StorageTableEntity_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.storageTableEntity.StorageTableEntity.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagetableentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagetableentity"
 
 storagetableentity.StorageTableEntity_IsTerraformResource(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ storagetableentity.StorageTableEntity_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.storageTableEntity.StorageTableEntity.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagetableentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagetableentity"
 
 storagetableentity.StorageTableEntity_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -841,7 +848,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageTableEntity.StorageTableEntityConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagetableentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagetableentity"
 
 &storagetableentity.StorageTableEntityConfig {
 	Connection: interface{},
@@ -857,7 +864,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagetableentit
 	StorageAccountName: *string,
 	TableName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.storageTableEntity.StorageTableEntityTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.storageTableEntity.StorageTableEntityTimeouts,
 }
 ```
 
@@ -1046,7 +1053,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.storageTableEntity.StorageTableEntityTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagetableentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagetableentity"
 
 &storagetableentity.StorageTableEntityTimeouts {
 	Create: *string,
@@ -1122,7 +1129,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageTableEntity.StorageTableEntityTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/storagetableentity"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/storagetableentity"
 
 storagetableentity.NewStorageTableEntityTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) StorageTableEntityTimeoutsOutputReference
 ```

@@ -97,6 +97,49 @@ export function mssqlVirtualMachineAvailabilityGroupListenerLoadBalancerConfigur
   }
 }
 
+
+export function mssqlVirtualMachineAvailabilityGroupListenerLoadBalancerConfigurationToHclTerraform(struct?: MssqlVirtualMachineAvailabilityGroupListenerLoadBalancerConfigurationOutputReference | MssqlVirtualMachineAvailabilityGroupListenerLoadBalancerConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    load_balancer_id: {
+      value: cdktf.stringToHclTerraform(struct!.loadBalancerId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    private_ip_address: {
+      value: cdktf.stringToHclTerraform(struct!.privateIpAddress),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    probe_port: {
+      value: cdktf.numberToHclTerraform(struct!.probePort),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    sql_virtual_machine_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.sqlVirtualMachineIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    subnet_id: {
+      value: cdktf.stringToHclTerraform(struct!.subnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MssqlVirtualMachineAvailabilityGroupListenerLoadBalancerConfigurationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -243,6 +286,37 @@ export function mssqlVirtualMachineAvailabilityGroupListenerMultiSubnetIpConfigu
     sql_virtual_machine_id: cdktf.stringToTerraform(struct!.sqlVirtualMachineId),
     subnet_id: cdktf.stringToTerraform(struct!.subnetId),
   }
+}
+
+
+export function mssqlVirtualMachineAvailabilityGroupListenerMultiSubnetIpConfigurationToHclTerraform(struct?: MssqlVirtualMachineAvailabilityGroupListenerMultiSubnetIpConfiguration | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    private_ip_address: {
+      value: cdktf.stringToHclTerraform(struct!.privateIpAddress),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sql_virtual_machine_id: {
+      value: cdktf.stringToHclTerraform(struct!.sqlVirtualMachineId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    subnet_id: {
+      value: cdktf.stringToHclTerraform(struct!.subnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MssqlVirtualMachineAvailabilityGroupListenerMultiSubnetIpConfigurationOutputReference extends cdktf.ComplexObject {
@@ -395,6 +469,49 @@ export function mssqlVirtualMachineAvailabilityGroupListenerReplicaToTerraform(s
     role: cdktf.stringToTerraform(struct!.role),
     sql_virtual_machine_id: cdktf.stringToTerraform(struct!.sqlVirtualMachineId),
   }
+}
+
+
+export function mssqlVirtualMachineAvailabilityGroupListenerReplicaToHclTerraform(struct?: MssqlVirtualMachineAvailabilityGroupListenerReplica | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    commit: {
+      value: cdktf.stringToHclTerraform(struct!.commit),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    failover_mode: {
+      value: cdktf.stringToHclTerraform(struct!.failoverMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    readable_secondary: {
+      value: cdktf.stringToHclTerraform(struct!.readableSecondary),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    role: {
+      value: cdktf.stringToHclTerraform(struct!.role),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sql_virtual_machine_id: {
+      value: cdktf.stringToHclTerraform(struct!.sqlVirtualMachineId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MssqlVirtualMachineAvailabilityGroupListenerReplicaOutputReference extends cdktf.ComplexObject {
@@ -575,6 +692,37 @@ export function mssqlVirtualMachineAvailabilityGroupListenerTimeoutsToTerraform(
     delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function mssqlVirtualMachineAvailabilityGroupListenerTimeoutsToHclTerraform(struct?: MssqlVirtualMachineAvailabilityGroupListenerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MssqlVirtualMachineAvailabilityGroupListenerTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -897,5 +1045,67 @@ export class MssqlVirtualMachineAvailabilityGroupListener extends cdktf.Terrafor
       replica: cdktf.listMapper(mssqlVirtualMachineAvailabilityGroupListenerReplicaToTerraform, true)(this._replica.internalValue),
       timeouts: mssqlVirtualMachineAvailabilityGroupListenerTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      availability_group_name: {
+        value: cdktf.stringToHclTerraform(this._availabilityGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      port: {
+        value: cdktf.numberToHclTerraform(this._port),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      sql_virtual_machine_group_id: {
+        value: cdktf.stringToHclTerraform(this._sqlVirtualMachineGroupId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      load_balancer_configuration: {
+        value: mssqlVirtualMachineAvailabilityGroupListenerLoadBalancerConfigurationToHclTerraform(this._loadBalancerConfiguration.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MssqlVirtualMachineAvailabilityGroupListenerLoadBalancerConfigurationList",
+      },
+      multi_subnet_ip_configuration: {
+        value: cdktf.listMapperHcl(mssqlVirtualMachineAvailabilityGroupListenerMultiSubnetIpConfigurationToHclTerraform, true)(this._multiSubnetIpConfiguration.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "MssqlVirtualMachineAvailabilityGroupListenerMultiSubnetIpConfigurationList",
+      },
+      replica: {
+        value: cdktf.listMapperHcl(mssqlVirtualMachineAvailabilityGroupListenerReplicaToHclTerraform, true)(this._replica.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "MssqlVirtualMachineAvailabilityGroupListenerReplicaList",
+      },
+      timeouts: {
+        value: mssqlVirtualMachineAvailabilityGroupListenerTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MssqlVirtualMachineAvailabilityGroupListenerTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

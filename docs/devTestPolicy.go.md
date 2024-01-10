@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.devTestPolicy.DevTestPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devtestpolicy"
 
 devtestpolicy.NewDevTestPolicy(scope Construct, id *string, config DevTestPolicyConfig) DevTestPolicy
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.devTestPolicy.DevTestPolicy.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.devTestPolicy.DevTestPolicy.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.devTestPolicy.DevTestPolicy.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.devTestPolicy.DevTestPolicy.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.devTestPolicy.DevTestPolicy.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.devTestPolicy.DevTestPolicy.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.devTestPolicy.DevTestPolicy.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -130,6 +131,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.devTestPolicy.DevTestPolicy.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.devTestPolicy.DevTestPolicy.toMetadata"></a>
 
@@ -419,7 +426,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.devTestPolicy.DevTestPolicy.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devtestpolicy"
 
 devtestpolicy.DevTestPolicy_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.devTestPolicy.DevTestPolicy.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devtestpolicy"
 
 devtestpolicy.DevTestPolicy_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +472,7 @@ devtestpolicy.DevTestPolicy_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.devTestPolicy.DevTestPolicy.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devtestpolicy"
 
 devtestpolicy.DevTestPolicy_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +486,7 @@ devtestpolicy.DevTestPolicy_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.devTestPolicy.DevTestPolicy.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devtestpolicy"
 
 devtestpolicy.DevTestPolicy_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -950,7 +957,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.devTestPolicy.DevTestPolicyConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devtestpolicy"
 
 &devtestpolicy.DevTestPolicyConfig {
 	Connection: interface{},
@@ -970,7 +977,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestpolicy"
 	FactData: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.devTestPolicy.DevTestPolicyTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.devTestPolicy.DevTestPolicyTimeouts,
 }
 ```
 
@@ -1211,7 +1218,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.devTestPolicy.DevTestPolicyTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devtestpolicy"
 
 &devtestpolicy.DevTestPolicyTimeouts {
 	Create: *string,
@@ -1287,7 +1294,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.devTestPolicy.DevTestPolicyTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/devtestpolicy"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/devtestpolicy"
 
 devtestpolicy.NewDevTestPolicyTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DevTestPolicyTimeoutsOutputReference
 ```

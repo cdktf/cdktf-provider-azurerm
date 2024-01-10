@@ -114,6 +114,31 @@ export function dataFactoryTriggerTumblingWindowPipelineToTerraform(struct?: Dat
   }
 }
 
+
+export function dataFactoryTriggerTumblingWindowPipelineToHclTerraform(struct?: DataFactoryTriggerTumblingWindowPipelineOutputReference | DataFactoryTriggerTumblingWindowPipeline): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    parameters: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.parameters),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataFactoryTriggerTumblingWindowPipelineOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -201,6 +226,31 @@ export function dataFactoryTriggerTumblingWindowRetryToTerraform(struct?: DataFa
     count: cdktf.numberToTerraform(struct!.count),
     interval: cdktf.numberToTerraform(struct!.interval),
   }
+}
+
+
+export function dataFactoryTriggerTumblingWindowRetryToHclTerraform(struct?: DataFactoryTriggerTumblingWindowRetryOutputReference | DataFactoryTriggerTumblingWindowRetry): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    count: {
+      value: cdktf.numberToHclTerraform(struct!.count),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    interval: {
+      value: cdktf.numberToHclTerraform(struct!.interval),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryTriggerTumblingWindowRetryOutputReference extends cdktf.ComplexObject {
@@ -300,6 +350,43 @@ export function dataFactoryTriggerTumblingWindowTimeoutsToTerraform(struct?: Dat
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function dataFactoryTriggerTumblingWindowTimeoutsToHclTerraform(struct?: DataFactoryTriggerTumblingWindowTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryTriggerTumblingWindowTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -451,6 +538,37 @@ export function dataFactoryTriggerTumblingWindowTriggerDependencyToTerraform(str
     size: cdktf.stringToTerraform(struct!.size),
     trigger_name: cdktf.stringToTerraform(struct!.triggerName),
   }
+}
+
+
+export function dataFactoryTriggerTumblingWindowTriggerDependencyToHclTerraform(struct?: DataFactoryTriggerTumblingWindowTriggerDependency | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    offset: {
+      value: cdktf.stringToHclTerraform(struct!.offset),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    size: {
+      value: cdktf.stringToHclTerraform(struct!.size),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    trigger_name: {
+      value: cdktf.stringToHclTerraform(struct!.triggerName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryTriggerTumblingWindowTriggerDependencyOutputReference extends cdktf.ComplexObject {
@@ -930,5 +1048,115 @@ export class DataFactoryTriggerTumblingWindow extends cdktf.TerraformResource {
       timeouts: dataFactoryTriggerTumblingWindowTimeoutsToTerraform(this._timeouts.internalValue),
       trigger_dependency: cdktf.listMapper(dataFactoryTriggerTumblingWindowTriggerDependencyToTerraform, true)(this._triggerDependency.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      activated: {
+        value: cdktf.booleanToHclTerraform(this._activated),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      additional_properties: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._additionalProperties),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      annotations: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._annotations),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      data_factory_id: {
+        value: cdktf.stringToHclTerraform(this._dataFactoryId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      delay: {
+        value: cdktf.stringToHclTerraform(this._delay),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      end_time: {
+        value: cdktf.stringToHclTerraform(this._endTime),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      frequency: {
+        value: cdktf.stringToHclTerraform(this._frequency),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      interval: {
+        value: cdktf.numberToHclTerraform(this._interval),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      max_concurrency: {
+        value: cdktf.numberToHclTerraform(this._maxConcurrency),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      start_time: {
+        value: cdktf.stringToHclTerraform(this._startTime),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      pipeline: {
+        value: dataFactoryTriggerTumblingWindowPipelineToHclTerraform(this._pipeline.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryTriggerTumblingWindowPipelineList",
+      },
+      retry: {
+        value: dataFactoryTriggerTumblingWindowRetryToHclTerraform(this._retry.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryTriggerTumblingWindowRetryList",
+      },
+      timeouts: {
+        value: dataFactoryTriggerTumblingWindowTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataFactoryTriggerTumblingWindowTimeouts",
+      },
+      trigger_dependency: {
+        value: cdktf.listMapperHcl(dataFactoryTriggerTumblingWindowTriggerDependencyToHclTerraform, true)(this._triggerDependency.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "DataFactoryTriggerTumblingWindowTriggerDependencyList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

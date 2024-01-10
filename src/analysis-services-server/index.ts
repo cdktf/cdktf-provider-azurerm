@@ -95,6 +95,37 @@ export function analysisServicesServerIpv4FirewallRuleToTerraform(struct?: Analy
   }
 }
 
+
+export function analysisServicesServerIpv4FirewallRuleToHclTerraform(struct?: AnalysisServicesServerIpv4FirewallRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    range_end: {
+      value: cdktf.stringToHclTerraform(struct!.rangeEnd),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    range_start: {
+      value: cdktf.stringToHclTerraform(struct!.rangeStart),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AnalysisServicesServerIpv4FirewallRuleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -240,6 +271,43 @@ export function analysisServicesServerTimeoutsToTerraform(struct?: AnalysisServi
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function analysisServicesServerTimeoutsToHclTerraform(struct?: AnalysisServicesServerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AnalysisServicesServerTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -640,5 +708,85 @@ export class AnalysisServicesServer extends cdktf.TerraformResource {
       ipv4_firewall_rule: cdktf.listMapper(analysisServicesServerIpv4FirewallRuleToTerraform, true)(this._ipv4FirewallRule.internalValue),
       timeouts: analysisServicesServerTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      admin_users: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._adminUsers),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      backup_blob_container_uri: {
+        value: cdktf.stringToHclTerraform(this._backupBlobContainerUri),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enable_power_bi_service: {
+        value: cdktf.booleanToHclTerraform(this._enablePowerBiService),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      querypool_connection_mode: {
+        value: cdktf.stringToHclTerraform(this._querypoolConnectionMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sku: {
+        value: cdktf.stringToHclTerraform(this._sku),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      ipv4_firewall_rule: {
+        value: cdktf.listMapperHcl(analysisServicesServerIpv4FirewallRuleToHclTerraform, true)(this._ipv4FirewallRule.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AnalysisServicesServerIpv4FirewallRuleList",
+      },
+      timeouts: {
+        value: analysisServicesServerTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AnalysisServicesServerTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -84,6 +84,31 @@ export function mediaJobInputAssetToTerraform(struct?: MediaJobInputAssetOutputR
   }
 }
 
+
+export function mediaJobInputAssetToHclTerraform(struct?: MediaJobInputAssetOutputReference | MediaJobInputAsset): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    label: {
+      value: cdktf.stringToHclTerraform(struct!.label),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MediaJobInputAssetOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -171,6 +196,31 @@ export function mediaJobOutputAssetToTerraform(struct?: MediaJobOutputAsset | cd
     label: cdktf.stringToTerraform(struct!.label),
     name: cdktf.stringToTerraform(struct!.name),
   }
+}
+
+
+export function mediaJobOutputAssetToHclTerraform(struct?: MediaJobOutputAsset | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    label: {
+      value: cdktf.stringToHclTerraform(struct!.label),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MediaJobOutputAssetOutputReference extends cdktf.ComplexObject {
@@ -302,6 +352,43 @@ export function mediaJobTimeoutsToTerraform(struct?: MediaJobTimeouts | cdktf.IR
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function mediaJobTimeoutsToHclTerraform(struct?: MediaJobTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MediaJobTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -655,5 +742,73 @@ export class MediaJob extends cdktf.TerraformResource {
       output_asset: cdktf.listMapper(mediaJobOutputAssetToTerraform, true)(this._outputAsset.internalValue),
       timeouts: mediaJobTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      media_services_account_name: {
+        value: cdktf.stringToHclTerraform(this._mediaServicesAccountName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      priority: {
+        value: cdktf.stringToHclTerraform(this._priority),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      transform_name: {
+        value: cdktf.stringToHclTerraform(this._transformName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      input_asset: {
+        value: mediaJobInputAssetToHclTerraform(this._inputAsset.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MediaJobInputAssetList",
+      },
+      output_asset: {
+        value: cdktf.listMapperHcl(mediaJobOutputAssetToHclTerraform, true)(this._outputAsset.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MediaJobOutputAssetList",
+      },
+      timeouts: {
+        value: mediaJobTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MediaJobTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

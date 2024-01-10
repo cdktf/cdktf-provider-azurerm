@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaCluster(scope Construct, id *string, config HdinsightKafkaClusterConfig) HdinsightKafkaCluster
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaCluster.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaCluster.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaCluster.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaCluster.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaCluster.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaCluster.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaCluster.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -153,6 +154,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaCluster.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaCluster.toMetadata"></a>
 
@@ -658,7 +665,7 @@ func ResetTlsMinVersion()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaCluster.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.HdinsightKafkaCluster_IsConstruct(x interface{}) *bool
 ```
@@ -690,7 +697,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaCluster.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.HdinsightKafkaCluster_IsTerraformElement(x interface{}) *bool
 ```
@@ -704,7 +711,7 @@ hdinsightkafkacluster.HdinsightKafkaCluster_IsTerraformElement(x interface{}) *b
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaCluster.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.HdinsightKafkaCluster_IsTerraformResource(x interface{}) *bool
 ```
@@ -718,7 +725,7 @@ hdinsightkafkacluster.HdinsightKafkaCluster_IsTerraformResource(x interface{}) *
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaCluster.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.HdinsightKafkaCluster_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1486,7 +1493,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterComponentVersion.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 &hdinsightkafkacluster.HdinsightKafkaClusterComponentVersion {
 	Kafka: *string,
@@ -1518,7 +1525,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterComputeIsolation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 &hdinsightkafkacluster.HdinsightKafkaClusterComputeIsolation {
 	ComputeIsolationEnabled: interface{},
@@ -1564,7 +1571,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 &hdinsightkafkacluster.HdinsightKafkaClusterConfig {
 	Connection: interface{},
@@ -1575,27 +1582,27 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkaclu
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	ClusterVersion: *string,
-	ComponentVersion: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hdinsightKafkaCluster.HdinsightKafkaClusterComponentVersion,
-	Gateway: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hdinsightKafkaCluster.HdinsightKafkaClusterGateway,
+	ComponentVersion: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.hdinsightKafkaCluster.HdinsightKafkaClusterComponentVersion,
+	Gateway: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.hdinsightKafkaCluster.HdinsightKafkaClusterGateway,
 	Location: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	Roles: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hdinsightKafkaCluster.HdinsightKafkaClusterRoles,
+	Roles: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.hdinsightKafkaCluster.HdinsightKafkaClusterRoles,
 	Tier: *string,
-	ComputeIsolation: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hdinsightKafkaCluster.HdinsightKafkaClusterComputeIsolation,
+	ComputeIsolation: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.hdinsightKafkaCluster.HdinsightKafkaClusterComputeIsolation,
 	DiskEncryption: interface{},
 	EncryptionInTransitEnabled: interface{},
-	Extension: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hdinsightKafkaCluster.HdinsightKafkaClusterExtension,
+	Extension: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.hdinsightKafkaCluster.HdinsightKafkaClusterExtension,
 	Id: *string,
-	Metastores: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hdinsightKafkaCluster.HdinsightKafkaClusterMetastores,
-	Monitor: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hdinsightKafkaCluster.HdinsightKafkaClusterMonitor,
-	Network: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hdinsightKafkaCluster.HdinsightKafkaClusterNetwork,
-	RestProxy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hdinsightKafkaCluster.HdinsightKafkaClusterRestProxy,
-	SecurityProfile: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hdinsightKafkaCluster.HdinsightKafkaClusterSecurityProfile,
+	Metastores: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.hdinsightKafkaCluster.HdinsightKafkaClusterMetastores,
+	Monitor: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.hdinsightKafkaCluster.HdinsightKafkaClusterMonitor,
+	Network: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.hdinsightKafkaCluster.HdinsightKafkaClusterNetwork,
+	RestProxy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.hdinsightKafkaCluster.HdinsightKafkaClusterRestProxy,
+	SecurityProfile: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.hdinsightKafkaCluster.HdinsightKafkaClusterSecurityProfile,
 	StorageAccount: interface{},
-	StorageAccountGen2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hdinsightKafkaCluster.HdinsightKafkaClusterStorageAccountGen2,
+	StorageAccountGen2: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.hdinsightKafkaCluster.HdinsightKafkaClusterStorageAccountGen2,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hdinsightKafkaCluster.HdinsightKafkaClusterTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.hdinsightKafkaCluster.HdinsightKafkaClusterTimeouts,
 	TlsMinVersion: *string,
 }
 ```
@@ -2019,7 +2026,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterDiskEncryption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 &hdinsightkafkacluster.HdinsightKafkaClusterDiskEncryption {
 	EncryptionAlgorithm: *string,
@@ -2093,7 +2100,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterExtension.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 &hdinsightkafkacluster.HdinsightKafkaClusterExtension {
 	LogAnalyticsWorkspaceId: *string,
@@ -2139,7 +2146,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterGateway.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 &hdinsightkafkacluster.HdinsightKafkaClusterGateway {
 	Password: *string,
@@ -2185,12 +2192,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterMetastores.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 &hdinsightkafkacluster.HdinsightKafkaClusterMetastores {
-	Ambari: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hdinsightKafkaCluster.HdinsightKafkaClusterMetastoresAmbari,
-	Hive: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hdinsightKafkaCluster.HdinsightKafkaClusterMetastoresHive,
-	Oozie: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hdinsightKafkaCluster.HdinsightKafkaClusterMetastoresOozie,
+	Ambari: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.hdinsightKafkaCluster.HdinsightKafkaClusterMetastoresAmbari,
+	Hive: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.hdinsightKafkaCluster.HdinsightKafkaClusterMetastoresHive,
+	Oozie: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.hdinsightKafkaCluster.HdinsightKafkaClusterMetastoresOozie,
 }
 ```
 
@@ -2251,7 +2258,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterMetastoresAmbari.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 &hdinsightkafkacluster.HdinsightKafkaClusterMetastoresAmbari {
 	DatabaseName: *string,
@@ -2325,7 +2332,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterMetastoresHive.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 &hdinsightkafkacluster.HdinsightKafkaClusterMetastoresHive {
 	DatabaseName: *string,
@@ -2399,7 +2406,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterMetastoresOozie.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 &hdinsightkafkacluster.HdinsightKafkaClusterMetastoresOozie {
 	DatabaseName: *string,
@@ -2473,7 +2480,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterMonitor.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 &hdinsightkafkacluster.HdinsightKafkaClusterMonitor {
 	LogAnalyticsWorkspaceId: *string,
@@ -2519,7 +2526,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterNetwork.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 &hdinsightkafkacluster.HdinsightKafkaClusterNetwork {
 	ConnectionDirection: *string,
@@ -2565,7 +2572,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRestProxy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 &hdinsightkafkacluster.HdinsightKafkaClusterRestProxy {
 	SecurityGroupId: *string,
@@ -2611,13 +2618,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRoles.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 &hdinsightkafkacluster.HdinsightKafkaClusterRoles {
-	HeadNode: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hdinsightKafkaCluster.HdinsightKafkaClusterRolesHeadNode,
-	WorkerNode: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hdinsightKafkaCluster.HdinsightKafkaClusterRolesWorkerNode,
-	ZookeeperNode: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hdinsightKafkaCluster.HdinsightKafkaClusterRolesZookeeperNode,
-	KafkaManagementNode: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.hdinsightKafkaCluster.HdinsightKafkaClusterRolesKafkaManagementNode,
+	HeadNode: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.hdinsightKafkaCluster.HdinsightKafkaClusterRolesHeadNode,
+	WorkerNode: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.hdinsightKafkaCluster.HdinsightKafkaClusterRolesWorkerNode,
+	ZookeeperNode: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.hdinsightKafkaCluster.HdinsightKafkaClusterRolesZookeeperNode,
+	KafkaManagementNode: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.hdinsightKafkaCluster.HdinsightKafkaClusterRolesKafkaManagementNode,
 }
 ```
 
@@ -2693,7 +2700,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesHeadNode.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 &hdinsightkafkacluster.HdinsightKafkaClusterRolesHeadNode {
 	Username: *string,
@@ -2811,7 +2818,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesHeadNodeScriptActions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 &hdinsightkafkacluster.HdinsightKafkaClusterRolesHeadNodeScriptActions {
 	Name: *string,
@@ -2871,7 +2878,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesKafkaManagementNode.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 &hdinsightkafkacluster.HdinsightKafkaClusterRolesKafkaManagementNode {
 	Username: *string,
@@ -2989,7 +2996,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesKafkaManagementNodeScriptActions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 &hdinsightkafkacluster.HdinsightKafkaClusterRolesKafkaManagementNodeScriptActions {
 	Name: *string,
@@ -3049,7 +3056,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesWorkerNode.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 &hdinsightkafkacluster.HdinsightKafkaClusterRolesWorkerNode {
 	NumberOfDisksPerNode: *f64,
@@ -3195,7 +3202,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesWorkerNodeScriptActions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 &hdinsightkafkacluster.HdinsightKafkaClusterRolesWorkerNodeScriptActions {
 	Name: *string,
@@ -3255,7 +3262,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesZookeeperNode.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 &hdinsightkafkacluster.HdinsightKafkaClusterRolesZookeeperNode {
 	Username: *string,
@@ -3373,7 +3380,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesZookeeperNodeScriptActions.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 &hdinsightkafkacluster.HdinsightKafkaClusterRolesZookeeperNodeScriptActions {
 	Name: *string,
@@ -3433,7 +3440,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterSecurityProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 &hdinsightkafkacluster.HdinsightKafkaClusterSecurityProfile {
 	AaddsResourceId: *string,
@@ -3549,7 +3556,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterStorageAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 &hdinsightkafkacluster.HdinsightKafkaClusterStorageAccount {
 	IsDefault: interface{},
@@ -3623,7 +3630,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterStorageAccountGen2.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 &hdinsightkafkacluster.HdinsightKafkaClusterStorageAccountGen2 {
 	FilesystemId: *string,
@@ -3697,7 +3704,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 &hdinsightkafkacluster.HdinsightKafkaClusterTimeouts {
 	Create: *string,
@@ -3773,7 +3780,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterComponentVersionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterComponentVersionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightKafkaClusterComponentVersionOutputReference
 ```
@@ -4044,7 +4051,7 @@ func InternalValue() HdinsightKafkaClusterComponentVersion
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterComputeIsolationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterComputeIsolationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightKafkaClusterComputeIsolationOutputReference
 ```
@@ -4351,7 +4358,7 @@ func InternalValue() HdinsightKafkaClusterComputeIsolation
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterDiskEncryptionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterDiskEncryptionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) HdinsightKafkaClusterDiskEncryptionList
 ```
@@ -4392,10 +4399,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterDiskEncryptionList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterDiskEncryptionList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterDiskEncryptionList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterDiskEncryptionList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterDiskEncryptionList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterDiskEncryptionList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterDiskEncryptionList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -4494,7 +4518,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterDiskEncryptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterDiskEncryptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) HdinsightKafkaClusterDiskEncryptionOutputReference
 ```
@@ -4877,7 +4901,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterExtensionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterExtensionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightKafkaClusterExtensionOutputReference
 ```
@@ -5170,7 +5194,7 @@ func InternalValue() HdinsightKafkaClusterExtension
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterGatewayOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterGatewayOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightKafkaClusterGatewayOutputReference
 ```
@@ -5463,7 +5487,7 @@ func InternalValue() HdinsightKafkaClusterGateway
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterMetastoresAmbariOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterMetastoresAmbariOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightKafkaClusterMetastoresAmbariOutputReference
 ```
@@ -5800,7 +5824,7 @@ func InternalValue() HdinsightKafkaClusterMetastoresAmbari
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterMetastoresHiveOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterMetastoresHiveOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightKafkaClusterMetastoresHiveOutputReference
 ```
@@ -6137,7 +6161,7 @@ func InternalValue() HdinsightKafkaClusterMetastoresHive
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterMetastoresOozieOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterMetastoresOozieOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightKafkaClusterMetastoresOozieOutputReference
 ```
@@ -6474,7 +6498,7 @@ func InternalValue() HdinsightKafkaClusterMetastoresOozie
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterMetastoresOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterMetastoresOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightKafkaClusterMetastoresOutputReference
 ```
@@ -6849,7 +6873,7 @@ func InternalValue() HdinsightKafkaClusterMetastores
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterMonitorOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterMonitorOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightKafkaClusterMonitorOutputReference
 ```
@@ -7142,7 +7166,7 @@ func InternalValue() HdinsightKafkaClusterMonitor
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterNetworkOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterNetworkOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightKafkaClusterNetworkOutputReference
 ```
@@ -7449,7 +7473,7 @@ func InternalValue() HdinsightKafkaClusterNetwork
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRestProxyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterRestProxyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightKafkaClusterRestProxyOutputReference
 ```
@@ -7742,7 +7766,7 @@ func InternalValue() HdinsightKafkaClusterRestProxy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesHeadNodeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterRolesHeadNodeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightKafkaClusterRolesHeadNodeOutputReference
 ```
@@ -8193,7 +8217,7 @@ func InternalValue() HdinsightKafkaClusterRolesHeadNode
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesHeadNodeScriptActionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterRolesHeadNodeScriptActionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) HdinsightKafkaClusterRolesHeadNodeScriptActionsList
 ```
@@ -8234,10 +8258,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesHeadNodeScriptActionsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesHeadNodeScriptActionsList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesHeadNodeScriptActionsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesHeadNodeScriptActionsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesHeadNodeScriptActionsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesHeadNodeScriptActionsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesHeadNodeScriptActionsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -8336,7 +8377,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesHeadNodeScriptActionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterRolesHeadNodeScriptActionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) HdinsightKafkaClusterRolesHeadNodeScriptActionsOutputReference
 ```
@@ -8676,7 +8717,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesKafkaManagementNodeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterRolesKafkaManagementNodeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightKafkaClusterRolesKafkaManagementNodeOutputReference
 ```
@@ -9127,7 +9168,7 @@ func InternalValue() HdinsightKafkaClusterRolesKafkaManagementNode
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesKafkaManagementNodeScriptActionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterRolesKafkaManagementNodeScriptActionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) HdinsightKafkaClusterRolesKafkaManagementNodeScriptActionsList
 ```
@@ -9168,10 +9209,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesKafkaManagementNodeScriptActionsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesKafkaManagementNodeScriptActionsList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesKafkaManagementNodeScriptActionsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesKafkaManagementNodeScriptActionsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesKafkaManagementNodeScriptActionsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesKafkaManagementNodeScriptActionsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesKafkaManagementNodeScriptActionsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -9270,7 +9328,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesKafkaManagementNodeScriptActionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterRolesKafkaManagementNodeScriptActionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) HdinsightKafkaClusterRolesKafkaManagementNodeScriptActionsOutputReference
 ```
@@ -9610,7 +9668,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterRolesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightKafkaClusterRolesOutputReference
 ```
@@ -10006,7 +10064,7 @@ func InternalValue() HdinsightKafkaClusterRoles
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesWorkerNodeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterRolesWorkerNodeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightKafkaClusterRolesWorkerNodeOutputReference
 ```
@@ -10501,7 +10559,7 @@ func InternalValue() HdinsightKafkaClusterRolesWorkerNode
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesWorkerNodeScriptActionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterRolesWorkerNodeScriptActionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) HdinsightKafkaClusterRolesWorkerNodeScriptActionsList
 ```
@@ -10542,10 +10600,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesWorkerNodeScriptActionsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesWorkerNodeScriptActionsList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesWorkerNodeScriptActionsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesWorkerNodeScriptActionsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesWorkerNodeScriptActionsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesWorkerNodeScriptActionsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesWorkerNodeScriptActionsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -10644,7 +10719,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesWorkerNodeScriptActionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterRolesWorkerNodeScriptActionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) HdinsightKafkaClusterRolesWorkerNodeScriptActionsOutputReference
 ```
@@ -10984,7 +11059,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesZookeeperNodeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterRolesZookeeperNodeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightKafkaClusterRolesZookeeperNodeOutputReference
 ```
@@ -11435,7 +11510,7 @@ func InternalValue() HdinsightKafkaClusterRolesZookeeperNode
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesZookeeperNodeScriptActionsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterRolesZookeeperNodeScriptActionsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) HdinsightKafkaClusterRolesZookeeperNodeScriptActionsList
 ```
@@ -11476,10 +11551,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesZookeeperNodeScriptActionsList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesZookeeperNodeScriptActionsList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesZookeeperNodeScriptActionsList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesZookeeperNodeScriptActionsList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesZookeeperNodeScriptActionsList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesZookeeperNodeScriptActionsList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesZookeeperNodeScriptActionsList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -11578,7 +11670,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterRolesZookeeperNodeScriptActionsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterRolesZookeeperNodeScriptActionsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) HdinsightKafkaClusterRolesZookeeperNodeScriptActionsOutputReference
 ```
@@ -11918,7 +12010,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterSecurityProfileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterSecurityProfileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightKafkaClusterSecurityProfileOutputReference
 ```
@@ -12328,7 +12420,7 @@ func InternalValue() HdinsightKafkaClusterSecurityProfile
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterStorageAccountGen2OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterStorageAccountGen2OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightKafkaClusterStorageAccountGen2OutputReference
 ```
@@ -12665,7 +12757,7 @@ func InternalValue() HdinsightKafkaClusterStorageAccountGen2
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterStorageAccountList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterStorageAccountList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) HdinsightKafkaClusterStorageAccountList
 ```
@@ -12706,10 +12798,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterStorageAccountList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterStorageAccountList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterStorageAccountList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterStorageAccountList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterStorageAccountList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterStorageAccountList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterStorageAccountList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -12808,7 +12917,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterStorageAccountOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterStorageAccountOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) HdinsightKafkaClusterStorageAccountOutputReference
 ```
@@ -13170,7 +13279,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.hdinsightKafkaCluster.HdinsightKafkaClusterTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/hdinsightkafkacluster"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/hdinsightkafkacluster"
 
 hdinsightkafkacluster.NewHdinsightKafkaClusterTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) HdinsightKafkaClusterTimeoutsOutputReference
 ```

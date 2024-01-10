@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementTag.ApiManagementTag.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementtag"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/apimanagementtag"
 
 apimanagementtag.NewApiManagementTag(scope Construct, id *string, config ApiManagementTagConfig) ApiManagementTag
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.apiManagementTag.ApiManagementTag.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementTag.ApiManagementTag.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementTag.ApiManagementTag.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagementTag.ApiManagementTag.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementTag.ApiManagementTag.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementTag.ApiManagementTag.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagementTag.ApiManagementTag.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -128,6 +129,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.apiManagementTag.ApiManagementTag.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.apiManagementTag.ApiManagementTag.toMetadata"></a>
 
@@ -405,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.apiManagementTag.ApiManagementTag.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementtag"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/apimanagementtag"
 
 apimanagementtag.ApiManagementTag_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.apiManagementTag.ApiManagementTag.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementtag"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/apimanagementtag"
 
 apimanagementtag.ApiManagementTag_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +458,7 @@ apimanagementtag.ApiManagementTag_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.apiManagementTag.ApiManagementTag.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementtag"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/apimanagementtag"
 
 apimanagementtag.ApiManagementTag_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +472,7 @@ apimanagementtag.ApiManagementTag_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.apiManagementTag.ApiManagementTag.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementtag"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/apimanagementtag"
 
 apimanagementtag.ApiManagementTag_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -804,7 +811,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementTag.ApiManagementTagConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementtag"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/apimanagementtag"
 
 &apimanagementtag.ApiManagementTagConfig {
 	Connection: interface{},
@@ -818,7 +825,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementtag"
 	Name: *string,
 	DisplayName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.apiManagementTag.ApiManagementTagTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.apiManagementTag.ApiManagementTagTimeouts,
 }
 ```
 
@@ -981,7 +988,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementTag.ApiManagementTagTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementtag"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/apimanagementtag"
 
 &apimanagementtag.ApiManagementTagTimeouts {
 	Create: *string,
@@ -1057,7 +1064,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementTag.ApiManagementTagTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/apimanagementtag"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/apimanagementtag"
 
 apimanagementtag.NewApiManagementTagTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementTagTimeoutsOutputReference
 ```

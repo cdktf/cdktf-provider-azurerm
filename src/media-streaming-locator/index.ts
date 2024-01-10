@@ -113,6 +113,49 @@ export function mediaStreamingLocatorContentKeyToTerraform(struct?: MediaStreami
   }
 }
 
+
+export function mediaStreamingLocatorContentKeyToHclTerraform(struct?: MediaStreamingLocatorContentKey | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    content_key_id: {
+      value: cdktf.stringToHclTerraform(struct!.contentKeyId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    label_reference_in_streaming_policy: {
+      value: cdktf.stringToHclTerraform(struct!.labelReferenceInStreamingPolicy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    policy_name: {
+      value: cdktf.stringToHclTerraform(struct!.policyName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MediaStreamingLocatorContentKeyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -306,6 +349,37 @@ export function mediaStreamingLocatorTimeoutsToTerraform(struct?: MediaStreaming
     delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function mediaStreamingLocatorTimeoutsToHclTerraform(struct?: MediaStreamingLocatorTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MediaStreamingLocatorTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -712,5 +786,97 @@ export class MediaStreamingLocator extends cdktf.TerraformResource {
       content_key: cdktf.listMapper(mediaStreamingLocatorContentKeyToTerraform, true)(this._contentKey.internalValue),
       timeouts: mediaStreamingLocatorTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      alternative_media_id: {
+        value: cdktf.stringToHclTerraform(this._alternativeMediaId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      asset_name: {
+        value: cdktf.stringToHclTerraform(this._assetName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      default_content_key_policy_name: {
+        value: cdktf.stringToHclTerraform(this._defaultContentKeyPolicyName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      end_time: {
+        value: cdktf.stringToHclTerraform(this._endTime),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      filter_names: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._filterNames),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      media_services_account_name: {
+        value: cdktf.stringToHclTerraform(this._mediaServicesAccountName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      start_time: {
+        value: cdktf.stringToHclTerraform(this._startTime),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      streaming_locator_id: {
+        value: cdktf.stringToHclTerraform(this._streamingLocatorId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      streaming_policy_name: {
+        value: cdktf.stringToHclTerraform(this._streamingPolicyName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      content_key: {
+        value: cdktf.listMapperHcl(mediaStreamingLocatorContentKeyToHclTerraform, true)(this._contentKey.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MediaStreamingLocatorContentKeyList",
+      },
+      timeouts: {
+        value: mediaStreamingLocatorTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MediaStreamingLocatorTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

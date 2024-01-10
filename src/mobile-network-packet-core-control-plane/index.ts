@@ -122,6 +122,31 @@ export function mobileNetworkPacketCoreControlPlaneIdentityToTerraform(struct?: 
   }
 }
 
+
+export function mobileNetworkPacketCoreControlPlaneIdentityToHclTerraform(struct?: MobileNetworkPacketCoreControlPlaneIdentityOutputReference | MobileNetworkPacketCoreControlPlaneIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.identityIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MobileNetworkPacketCoreControlPlaneIdentityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -206,6 +231,31 @@ export function mobileNetworkPacketCoreControlPlaneLocalDiagnosticsAccessToTerra
     authentication_type: cdktf.stringToTerraform(struct!.authenticationType),
     https_server_certificate_url: cdktf.stringToTerraform(struct!.httpsServerCertificateUrl),
   }
+}
+
+
+export function mobileNetworkPacketCoreControlPlaneLocalDiagnosticsAccessToHclTerraform(struct?: MobileNetworkPacketCoreControlPlaneLocalDiagnosticsAccessOutputReference | MobileNetworkPacketCoreControlPlaneLocalDiagnosticsAccess): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    authentication_type: {
+      value: cdktf.stringToHclTerraform(struct!.authenticationType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    https_server_certificate_url: {
+      value: cdktf.stringToHclTerraform(struct!.httpsServerCertificateUrl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MobileNetworkPacketCoreControlPlaneLocalDiagnosticsAccessOutputReference extends cdktf.ComplexObject {
@@ -310,6 +360,49 @@ export function mobileNetworkPacketCoreControlPlanePlatformToTerraform(struct?: 
     stack_hci_cluster_id: cdktf.stringToTerraform(struct!.stackHciClusterId),
     type: cdktf.stringToTerraform(struct!.type),
   }
+}
+
+
+export function mobileNetworkPacketCoreControlPlanePlatformToHclTerraform(struct?: MobileNetworkPacketCoreControlPlanePlatformOutputReference | MobileNetworkPacketCoreControlPlanePlatform): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    arc_kubernetes_cluster_id: {
+      value: cdktf.stringToHclTerraform(struct!.arcKubernetesClusterId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    custom_location_id: {
+      value: cdktf.stringToHclTerraform(struct!.customLocationId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    edge_device_id: {
+      value: cdktf.stringToHclTerraform(struct!.edgeDeviceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    stack_hci_cluster_id: {
+      value: cdktf.stringToHclTerraform(struct!.stackHciClusterId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MobileNetworkPacketCoreControlPlanePlatformOutputReference extends cdktf.ComplexObject {
@@ -475,6 +568,43 @@ export function mobileNetworkPacketCoreControlPlaneTimeoutsToTerraform(struct?: 
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function mobileNetworkPacketCoreControlPlaneTimeoutsToHclTerraform(struct?: MobileNetworkPacketCoreControlPlaneTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MobileNetworkPacketCoreControlPlaneTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -990,5 +1120,127 @@ export class MobileNetworkPacketCoreControlPlane extends cdktf.TerraformResource
       platform: mobileNetworkPacketCoreControlPlanePlatformToTerraform(this._platform.internalValue),
       timeouts: mobileNetworkPacketCoreControlPlaneTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      control_plane_access_ipv4_address: {
+        value: cdktf.stringToHclTerraform(this._controlPlaneAccessIpv4Address),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      control_plane_access_ipv4_gateway: {
+        value: cdktf.stringToHclTerraform(this._controlPlaneAccessIpv4Gateway),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      control_plane_access_ipv4_subnet: {
+        value: cdktf.stringToHclTerraform(this._controlPlaneAccessIpv4Subnet),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      control_plane_access_name: {
+        value: cdktf.stringToHclTerraform(this._controlPlaneAccessName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      core_network_technology: {
+        value: cdktf.stringToHclTerraform(this._coreNetworkTechnology),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      interoperability_settings_json: {
+        value: cdktf.stringToHclTerraform(this._interoperabilitySettingsJson),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      site_ids: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._siteIds),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      sku: {
+        value: cdktf.stringToHclTerraform(this._sku),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      software_version: {
+        value: cdktf.stringToHclTerraform(this._softwareVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      user_equipment_mtu_in_bytes: {
+        value: cdktf.numberToHclTerraform(this._userEquipmentMtuInBytes),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      identity: {
+        value: mobileNetworkPacketCoreControlPlaneIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MobileNetworkPacketCoreControlPlaneIdentityList",
+      },
+      local_diagnostics_access: {
+        value: mobileNetworkPacketCoreControlPlaneLocalDiagnosticsAccessToHclTerraform(this._localDiagnosticsAccess.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MobileNetworkPacketCoreControlPlaneLocalDiagnosticsAccessList",
+      },
+      platform: {
+        value: mobileNetworkPacketCoreControlPlanePlatformToHclTerraform(this._platform.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MobileNetworkPacketCoreControlPlanePlatformList",
+      },
+      timeouts: {
+        value: mobileNetworkPacketCoreControlPlaneTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MobileNetworkPacketCoreControlPlaneTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

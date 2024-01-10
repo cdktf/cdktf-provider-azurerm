@@ -77,6 +77,31 @@ export function iothubDeviceUpdateInstanceDiagnosticStorageAccountToTerraform(st
   }
 }
 
+
+export function iothubDeviceUpdateInstanceDiagnosticStorageAccountToHclTerraform(struct?: IothubDeviceUpdateInstanceDiagnosticStorageAccountOutputReference | IothubDeviceUpdateInstanceDiagnosticStorageAccount): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    connection_string: {
+      value: cdktf.stringToHclTerraform(struct!.connectionString),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    id: {
+      value: cdktf.stringToHclTerraform(struct!.id),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class IothubDeviceUpdateInstanceDiagnosticStorageAccountOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -171,6 +196,43 @@ export function iothubDeviceUpdateInstanceTimeoutsToTerraform(struct?: IothubDev
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function iothubDeviceUpdateInstanceTimeoutsToHclTerraform(struct?: IothubDeviceUpdateInstanceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class IothubDeviceUpdateInstanceTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -497,5 +559,61 @@ export class IothubDeviceUpdateInstance extends cdktf.TerraformResource {
       diagnostic_storage_account: iothubDeviceUpdateInstanceDiagnosticStorageAccountToTerraform(this._diagnosticStorageAccount.internalValue),
       timeouts: iothubDeviceUpdateInstanceTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      device_update_account_id: {
+        value: cdktf.stringToHclTerraform(this._deviceUpdateAccountId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      diagnostic_enabled: {
+        value: cdktf.booleanToHclTerraform(this._diagnosticEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      iothub_id: {
+        value: cdktf.stringToHclTerraform(this._iothubId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      diagnostic_storage_account: {
+        value: iothubDeviceUpdateInstanceDiagnosticStorageAccountToHclTerraform(this._diagnosticStorageAccount.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "IothubDeviceUpdateInstanceDiagnosticStorageAccountList",
+      },
+      timeouts: {
+        value: iothubDeviceUpdateInstanceTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "IothubDeviceUpdateInstanceTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

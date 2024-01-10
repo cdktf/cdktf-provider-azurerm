@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.applicationInsightsAnalyticsItem.ApplicationInsightsAnalyticsItem.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/applicationinsightsanalyticsitem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/applicationinsightsanalyticsitem"
 
 applicationinsightsanalyticsitem.NewApplicationInsightsAnalyticsItem(scope Construct, id *string, config ApplicationInsightsAnalyticsItemConfig) ApplicationInsightsAnalyticsItem
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.applicationInsightsAnalyticsItem.ApplicationInsightsAnalyticsItem.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationInsightsAnalyticsItem.ApplicationInsightsAnalyticsItem.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.applicationInsightsAnalyticsItem.ApplicationInsightsAnalyticsItem.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.applicationInsightsAnalyticsItem.ApplicationInsightsAnalyticsItem.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationInsightsAnalyticsItem.ApplicationInsightsAnalyticsItem.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationInsightsAnalyticsItem.ApplicationInsightsAnalyticsItem.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.applicationInsightsAnalyticsItem.ApplicationInsightsAnalyticsItem.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -128,6 +129,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.applicationInsightsAnalyticsItem.ApplicationInsightsAnalyticsItem.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.applicationInsightsAnalyticsItem.ApplicationInsightsAnalyticsItem.toMetadata"></a>
 
@@ -405,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.applicationInsightsAnalyticsItem.ApplicationInsightsAnalyticsItem.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/applicationinsightsanalyticsitem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/applicationinsightsanalyticsitem"
 
 applicationinsightsanalyticsitem.ApplicationInsightsAnalyticsItem_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.applicationInsightsAnalyticsItem.ApplicationInsightsAnalyticsItem.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/applicationinsightsanalyticsitem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/applicationinsightsanalyticsitem"
 
 applicationinsightsanalyticsitem.ApplicationInsightsAnalyticsItem_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +458,7 @@ applicationinsightsanalyticsitem.ApplicationInsightsAnalyticsItem_IsTerraformEle
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.applicationInsightsAnalyticsItem.ApplicationInsightsAnalyticsItem.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/applicationinsightsanalyticsitem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/applicationinsightsanalyticsitem"
 
 applicationinsightsanalyticsitem.ApplicationInsightsAnalyticsItem_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +472,7 @@ applicationinsightsanalyticsitem.ApplicationInsightsAnalyticsItem_IsTerraformRes
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.applicationInsightsAnalyticsItem.ApplicationInsightsAnalyticsItem.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/applicationinsightsanalyticsitem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/applicationinsightsanalyticsitem"
 
 applicationinsightsanalyticsitem.ApplicationInsightsAnalyticsItem_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -903,7 +910,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.applicationInsightsAnalyticsItem.ApplicationInsightsAnalyticsItemConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/applicationinsightsanalyticsitem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/applicationinsightsanalyticsitem"
 
 &applicationinsightsanalyticsitem.ApplicationInsightsAnalyticsItemConfig {
 	Connection: interface{},
@@ -920,7 +927,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/applicationinsigh
 	Type: *string,
 	FunctionAlias: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.applicationInsightsAnalyticsItem.ApplicationInsightsAnalyticsItemTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.applicationInsightsAnalyticsItem.ApplicationInsightsAnalyticsItemTimeouts,
 }
 ```
 
@@ -1122,7 +1129,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.applicationInsightsAnalyticsItem.ApplicationInsightsAnalyticsItemTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/applicationinsightsanalyticsitem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/applicationinsightsanalyticsitem"
 
 &applicationinsightsanalyticsitem.ApplicationInsightsAnalyticsItemTimeouts {
 	Create: *string,
@@ -1198,7 +1205,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.applicationInsightsAnalyticsItem.ApplicationInsightsAnalyticsItemTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/applicationinsightsanalyticsitem"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/applicationinsightsanalyticsitem"
 
 applicationinsightsanalyticsitem.NewApplicationInsightsAnalyticsItemTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApplicationInsightsAnalyticsItemTimeoutsOutputReference
 ```

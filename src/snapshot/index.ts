@@ -94,6 +94,31 @@ export function snapshotEncryptionSettingsDiskEncryptionKeyToTerraform(struct?: 
   }
 }
 
+
+export function snapshotEncryptionSettingsDiskEncryptionKeyToHclTerraform(struct?: SnapshotEncryptionSettingsDiskEncryptionKeyOutputReference | SnapshotEncryptionSettingsDiskEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    secret_url: {
+      value: cdktf.stringToHclTerraform(struct!.secretUrl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    source_vault_id: {
+      value: cdktf.stringToHclTerraform(struct!.sourceVaultId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SnapshotEncryptionSettingsDiskEncryptionKeyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -178,6 +203,31 @@ export function snapshotEncryptionSettingsKeyEncryptionKeyToTerraform(struct?: S
     key_url: cdktf.stringToTerraform(struct!.keyUrl),
     source_vault_id: cdktf.stringToTerraform(struct!.sourceVaultId),
   }
+}
+
+
+export function snapshotEncryptionSettingsKeyEncryptionKeyToHclTerraform(struct?: SnapshotEncryptionSettingsKeyEncryptionKeyOutputReference | SnapshotEncryptionSettingsKeyEncryptionKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    key_url: {
+      value: cdktf.stringToHclTerraform(struct!.keyUrl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    source_vault_id: {
+      value: cdktf.stringToHclTerraform(struct!.sourceVaultId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SnapshotEncryptionSettingsKeyEncryptionKeyOutputReference extends cdktf.ComplexObject {
@@ -273,6 +323,37 @@ export function snapshotEncryptionSettingsToTerraform(struct?: SnapshotEncryptio
     disk_encryption_key: snapshotEncryptionSettingsDiskEncryptionKeyToTerraform(struct!.diskEncryptionKey),
     key_encryption_key: snapshotEncryptionSettingsKeyEncryptionKeyToTerraform(struct!.keyEncryptionKey),
   }
+}
+
+
+export function snapshotEncryptionSettingsToHclTerraform(struct?: SnapshotEncryptionSettingsOutputReference | SnapshotEncryptionSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    disk_encryption_key: {
+      value: snapshotEncryptionSettingsDiskEncryptionKeyToHclTerraform(struct!.diskEncryptionKey),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SnapshotEncryptionSettingsDiskEncryptionKeyList",
+    },
+    key_encryption_key: {
+      value: snapshotEncryptionSettingsKeyEncryptionKeyToHclTerraform(struct!.keyEncryptionKey),
+      isBlock: true,
+      type: "list",
+      storageClassType: "SnapshotEncryptionSettingsKeyEncryptionKeyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SnapshotEncryptionSettingsOutputReference extends cdktf.ComplexObject {
@@ -397,6 +478,43 @@ export function snapshotTimeoutsToTerraform(struct?: SnapshotTimeouts | cdktf.IR
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function snapshotTimeoutsToHclTerraform(struct?: SnapshotTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SnapshotTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -815,5 +933,91 @@ export class Snapshot extends cdktf.TerraformResource {
       encryption_settings: snapshotEncryptionSettingsToTerraform(this._encryptionSettings.internalValue),
       timeouts: snapshotTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      create_option: {
+        value: cdktf.stringToHclTerraform(this._createOption),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      disk_size_gb: {
+        value: cdktf.numberToHclTerraform(this._diskSizeGb),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      incremental_enabled: {
+        value: cdktf.booleanToHclTerraform(this._incrementalEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source_resource_id: {
+        value: cdktf.stringToHclTerraform(this._sourceResourceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source_uri: {
+        value: cdktf.stringToHclTerraform(this._sourceUri),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_account_id: {
+        value: cdktf.stringToHclTerraform(this._storageAccountId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      encryption_settings: {
+        value: snapshotEncryptionSettingsToHclTerraform(this._encryptionSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SnapshotEncryptionSettingsList",
+      },
+      timeouts: {
+        value: snapshotTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SnapshotTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

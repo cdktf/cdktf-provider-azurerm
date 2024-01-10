@@ -46,6 +46,17 @@ export function dataAzurermHealthcareDicomServiceAuthenticationToTerraform(struc
   }
 }
 
+
+export function dataAzurermHealthcareDicomServiceAuthenticationToHclTerraform(struct?: DataAzurermHealthcareDicomServiceAuthentication): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermHealthcareDicomServiceAuthenticationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -113,6 +124,17 @@ export function dataAzurermHealthcareDicomServiceIdentityToTerraform(struct?: Da
   }
   return {
   }
+}
+
+
+export function dataAzurermHealthcareDicomServiceIdentityToHclTerraform(struct?: DataAzurermHealthcareDicomServiceIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermHealthcareDicomServiceIdentityOutputReference extends cdktf.ComplexObject {
@@ -194,6 +216,17 @@ export function dataAzurermHealthcareDicomServicePrivateEndpointToTerraform(stru
   }
 }
 
+
+export function dataAzurermHealthcareDicomServicePrivateEndpointToHclTerraform(struct?: DataAzurermHealthcareDicomServicePrivateEndpoint): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermHealthcareDicomServicePrivateEndpointOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -266,6 +299,25 @@ export function dataAzurermHealthcareDicomServiceTimeoutsToTerraform(struct?: Da
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function dataAzurermHealthcareDicomServiceTimeoutsToHclTerraform(struct?: DataAzurermHealthcareDicomServiceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataAzurermHealthcareDicomServiceTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -491,5 +543,37 @@ export class DataAzurermHealthcareDicomService extends cdktf.TerraformDataSource
       workspace_id: cdktf.stringToTerraform(this._workspaceId),
       timeouts: dataAzurermHealthcareDicomServiceTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      workspace_id: {
+        value: cdktf.stringToHclTerraform(this._workspaceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: dataAzurermHealthcareDicomServiceTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataAzurermHealthcareDicomServiceTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

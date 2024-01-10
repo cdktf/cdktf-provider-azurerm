@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationPython3Package.AutomationPython3Package.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationpython3package"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationpython3package"
 
 automationpython3package.NewAutomationPython3Package(scope Construct, id *string, config AutomationPython3PackageConfig) AutomationPython3Package
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3Package.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3Package.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3Package.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3Package.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3Package.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3Package.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.automationPython3Package.AutomationPython3Package.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -131,6 +132,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.automationPython3Package.AutomationPython3Package.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.automationPython3Package.AutomationPython3Package.toMetadata"></a>
 
@@ -426,7 +433,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.automationPython3Package.AutomationPython3Package.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationpython3package"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationpython3package"
 
 automationpython3package.AutomationPython3Package_IsConstruct(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.automationPython3Package.AutomationPython3Package.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationpython3package"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationpython3package"
 
 automationpython3package.AutomationPython3Package_IsTerraformElement(x interface{}) *bool
 ```
@@ -472,7 +479,7 @@ automationpython3package.AutomationPython3Package_IsTerraformElement(x interface
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.automationPython3Package.AutomationPython3Package.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationpython3package"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationpython3package"
 
 automationpython3package.AutomationPython3Package_IsTerraformResource(x interface{}) *bool
 ```
@@ -486,7 +493,7 @@ automationpython3package.AutomationPython3Package_IsTerraformResource(x interfac
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.automationPython3Package.AutomationPython3Package.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationpython3package"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationpython3package"
 
 automationpython3package.AutomationPython3Package_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -935,7 +942,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationpython3package"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationpython3package"
 
 &automationpython3package.AutomationPython3PackageConfig {
 	Connection: interface{},
@@ -954,7 +961,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationpython3
 	HashValue: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.automationPython3Package.AutomationPython3PackageTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.automationPython3Package.AutomationPython3PackageTimeouts,
 }
 ```
 
@@ -1182,7 +1189,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationpython3package"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationpython3package"
 
 &automationpython3package.AutomationPython3PackageTimeouts {
 	Create: *string,
@@ -1258,7 +1265,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.automationPython3Package.AutomationPython3PackageTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/automationpython3package"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/automationpython3package"
 
 automationpython3package.NewAutomationPython3PackageTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AutomationPython3PackageTimeoutsOutputReference
 ```

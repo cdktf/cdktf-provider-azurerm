@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.webPubsubSharedPrivateLinkResource.WebPubsubSharedPrivateLinkResource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/webpubsubsharedprivatelinkresource"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webpubsubsharedprivatelinkresource"
 
 webpubsubsharedprivatelinkresource.NewWebPubsubSharedPrivateLinkResource(scope Construct, id *string, config WebPubsubSharedPrivateLinkResourceConfig) WebPubsubSharedPrivateLinkResource
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.webPubsubSharedPrivateLinkResource.WebPubsubSharedPrivateLinkResource.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.webPubsubSharedPrivateLinkResource.WebPubsubSharedPrivateLinkResource.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.webPubsubSharedPrivateLinkResource.WebPubsubSharedPrivateLinkResource.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.webPubsubSharedPrivateLinkResource.WebPubsubSharedPrivateLinkResource.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.webPubsubSharedPrivateLinkResource.WebPubsubSharedPrivateLinkResource.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.webPubsubSharedPrivateLinkResource.WebPubsubSharedPrivateLinkResource.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.webPubsubSharedPrivateLinkResource.WebPubsubSharedPrivateLinkResource.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -128,6 +129,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.webPubsubSharedPrivateLinkResource.WebPubsubSharedPrivateLinkResource.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.webPubsubSharedPrivateLinkResource.WebPubsubSharedPrivateLinkResource.toMetadata"></a>
 
@@ -405,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.webPubsubSharedPrivateLinkResource.WebPubsubSharedPrivateLinkResource.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/webpubsubsharedprivatelinkresource"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webpubsubsharedprivatelinkresource"
 
 webpubsubsharedprivatelinkresource.WebPubsubSharedPrivateLinkResource_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.webPubsubSharedPrivateLinkResource.WebPubsubSharedPrivateLinkResource.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/webpubsubsharedprivatelinkresource"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webpubsubsharedprivatelinkresource"
 
 webpubsubsharedprivatelinkresource.WebPubsubSharedPrivateLinkResource_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +458,7 @@ webpubsubsharedprivatelinkresource.WebPubsubSharedPrivateLinkResource_IsTerrafor
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.webPubsubSharedPrivateLinkResource.WebPubsubSharedPrivateLinkResource.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/webpubsubsharedprivatelinkresource"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webpubsubsharedprivatelinkresource"
 
 webpubsubsharedprivatelinkresource.WebPubsubSharedPrivateLinkResource_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +472,7 @@ webpubsubsharedprivatelinkresource.WebPubsubSharedPrivateLinkResource_IsTerrafor
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.webPubsubSharedPrivateLinkResource.WebPubsubSharedPrivateLinkResource.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/webpubsubsharedprivatelinkresource"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webpubsubsharedprivatelinkresource"
 
 webpubsubsharedprivatelinkresource.WebPubsubSharedPrivateLinkResource_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -859,7 +866,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.webPubsubSharedPrivateLinkResource.WebPubsubSharedPrivateLinkResourceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/webpubsubsharedprivatelinkresource"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webpubsubsharedprivatelinkresource"
 
 &webpubsubsharedprivatelinkresource.WebPubsubSharedPrivateLinkResourceConfig {
 	Connection: interface{},
@@ -875,7 +882,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/webpubsubsharedpr
 	WebPubsubId: *string,
 	Id: *string,
 	RequestMessage: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.webPubsubSharedPrivateLinkResource.WebPubsubSharedPrivateLinkResourceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.webPubsubSharedPrivateLinkResource.WebPubsubSharedPrivateLinkResourceTimeouts,
 }
 ```
 
@@ -1064,7 +1071,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.webPubsubSharedPrivateLinkResource.WebPubsubSharedPrivateLinkResourceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/webpubsubsharedprivatelinkresource"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webpubsubsharedprivatelinkresource"
 
 &webpubsubsharedprivatelinkresource.WebPubsubSharedPrivateLinkResourceTimeouts {
 	Create: *string,
@@ -1140,7 +1147,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.webPubsubSharedPrivateLinkResource.WebPubsubSharedPrivateLinkResourceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/webpubsubsharedprivatelinkresource"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/webpubsubsharedprivatelinkresource"
 
 webpubsubsharedprivatelinkresource.NewWebPubsubSharedPrivateLinkResourceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WebPubsubSharedPrivateLinkResourceTimeoutsOutputReference
 ```

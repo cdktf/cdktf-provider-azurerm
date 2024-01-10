@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 consumptionbudgetresourcegroup.NewConsumptionBudgetResourceGroup(scope Construct, id *string, config ConsumptionBudgetResourceGroupConfig) ConsumptionBudgetResourceGroup
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroup.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroup.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroup.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroup.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroup.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroup.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroup.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -133,6 +134,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroup.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroup.toMetadata"></a>
 
@@ -458,7 +465,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 consumptionbudgetresourcegroup.ConsumptionBudgetResourceGroup_IsConstruct(x interface{}) *bool
 ```
@@ -490,7 +497,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 consumptionbudgetresourcegroup.ConsumptionBudgetResourceGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -504,7 +511,7 @@ consumptionbudgetresourcegroup.ConsumptionBudgetResourceGroup_IsTerraformElement
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroup.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 consumptionbudgetresourcegroup.ConsumptionBudgetResourceGroup_IsTerraformResource(x interface{}) *bool
 ```
@@ -518,7 +525,7 @@ consumptionbudgetresourcegroup.ConsumptionBudgetResourceGroup_IsTerraformResourc
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroup.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 consumptionbudgetresourcegroup.ConsumptionBudgetResourceGroup_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -967,7 +974,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 &consumptionbudgetresourcegroup.ConsumptionBudgetResourceGroupConfig {
 	Connection: interface{},
@@ -981,12 +988,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudget
 	Name: *string,
 	Notification: interface{},
 	ResourceGroupId: *string,
-	TimePeriod: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupTimePeriod,
+	TimePeriod: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupTimePeriod,
 	Etag: *string,
-	Filter: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilter,
+	Filter: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilter,
 	Id: *string,
 	TimeGrain: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupTimeouts,
 }
 ```
 
@@ -1220,11 +1227,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 &consumptionbudgetresourcegroup.ConsumptionBudgetResourceGroupFilter {
 	Dimension: interface{},
-	Not: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterNot,
+	Not: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterNot,
 	Tag: interface{},
 }
 ```
@@ -1286,7 +1293,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterDimension.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 &consumptionbudgetresourcegroup.ConsumptionBudgetResourceGroupFilterDimension {
 	Name: *string,
@@ -1346,11 +1353,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterNot.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 &consumptionbudgetresourcegroup.ConsumptionBudgetResourceGroupFilterNot {
-	Dimension: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterNotDimension,
-	Tag: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterNotTag,
+	Dimension: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterNotDimension,
+	Tag: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterNotTag,
 }
 ```
 
@@ -1396,7 +1403,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterNotDimension.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 &consumptionbudgetresourcegroup.ConsumptionBudgetResourceGroupFilterNotDimension {
 	Name: *string,
@@ -1456,7 +1463,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterNotTag.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 &consumptionbudgetresourcegroup.ConsumptionBudgetResourceGroupFilterNotTag {
 	Name: *string,
@@ -1516,7 +1523,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterTag.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 &consumptionbudgetresourcegroup.ConsumptionBudgetResourceGroupFilterTag {
 	Name: *string,
@@ -1576,7 +1583,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupNotification.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 &consumptionbudgetresourcegroup.ConsumptionBudgetResourceGroupNotification {
 	Operator: *string,
@@ -1692,7 +1699,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 &consumptionbudgetresourcegroup.ConsumptionBudgetResourceGroupTimeouts {
 	Create: *string,
@@ -1766,7 +1773,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupTimePeriod.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 &consumptionbudgetresourcegroup.ConsumptionBudgetResourceGroupTimePeriod {
 	StartDate: *string,
@@ -1814,7 +1821,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterDimensionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 consumptionbudgetresourcegroup.NewConsumptionBudgetResourceGroupFilterDimensionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ConsumptionBudgetResourceGroupFilterDimensionList
 ```
@@ -1855,10 +1862,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterDimensionList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterDimensionList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterDimensionList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterDimensionList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterDimensionList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterDimensionList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterDimensionList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -1957,7 +1981,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterDimensionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 consumptionbudgetresourcegroup.NewConsumptionBudgetResourceGroupFilterDimensionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ConsumptionBudgetResourceGroupFilterDimensionOutputReference
 ```
@@ -2297,7 +2321,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterNotDimensionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 consumptionbudgetresourcegroup.NewConsumptionBudgetResourceGroupFilterNotDimensionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ConsumptionBudgetResourceGroupFilterNotDimensionOutputReference
 ```
@@ -2619,7 +2643,7 @@ func InternalValue() ConsumptionBudgetResourceGroupFilterNotDimension
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterNotOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 consumptionbudgetresourcegroup.NewConsumptionBudgetResourceGroupFilterNotOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ConsumptionBudgetResourceGroupFilterNotOutputReference
 ```
@@ -2952,7 +2976,7 @@ func InternalValue() ConsumptionBudgetResourceGroupFilterNot
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterNotTagOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 consumptionbudgetresourcegroup.NewConsumptionBudgetResourceGroupFilterNotTagOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ConsumptionBudgetResourceGroupFilterNotTagOutputReference
 ```
@@ -3274,7 +3298,7 @@ func InternalValue() ConsumptionBudgetResourceGroupFilterNotTag
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 consumptionbudgetresourcegroup.NewConsumptionBudgetResourceGroupFilterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ConsumptionBudgetResourceGroupFilterOutputReference
 ```
@@ -3649,7 +3673,7 @@ func InternalValue() ConsumptionBudgetResourceGroupFilter
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterTagList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 consumptionbudgetresourcegroup.NewConsumptionBudgetResourceGroupFilterTagList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ConsumptionBudgetResourceGroupFilterTagList
 ```
@@ -3690,10 +3714,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterTagList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterTagList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterTagList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterTagList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterTagList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterTagList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterTagList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -3792,7 +3833,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupFilterTagOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 consumptionbudgetresourcegroup.NewConsumptionBudgetResourceGroupFilterTagOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ConsumptionBudgetResourceGroupFilterTagOutputReference
 ```
@@ -4132,7 +4173,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupNotificationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 consumptionbudgetresourcegroup.NewConsumptionBudgetResourceGroupNotificationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ConsumptionBudgetResourceGroupNotificationList
 ```
@@ -4173,10 +4214,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupNotificationList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupNotificationList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupNotificationList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupNotificationList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupNotificationList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupNotificationList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupNotificationList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -4275,7 +4333,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupNotificationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 consumptionbudgetresourcegroup.NewConsumptionBudgetResourceGroupNotificationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ConsumptionBudgetResourceGroupNotificationOutputReference
 ```
@@ -4731,7 +4789,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 consumptionbudgetresourcegroup.NewConsumptionBudgetResourceGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ConsumptionBudgetResourceGroupTimeoutsOutputReference
 ```
@@ -5096,7 +5154,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.consumptionBudgetResourceGroup.ConsumptionBudgetResourceGroupTimePeriodOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/consumptionbudgetresourcegroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/consumptionbudgetresourcegroup"
 
 consumptionbudgetresourcegroup.NewConsumptionBudgetResourceGroupTimePeriodOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ConsumptionBudgetResourceGroupTimePeriodOutputReference
 ```

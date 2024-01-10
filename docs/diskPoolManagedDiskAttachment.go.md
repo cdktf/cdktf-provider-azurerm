@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/diskpoolmanageddiskattachment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/diskpoolmanageddiskattachment"
 
 diskpoolmanageddiskattachment.NewDiskPoolManagedDiskAttachment(scope Construct, id *string, config DiskPoolManagedDiskAttachmentConfig) DiskPoolManagedDiskAttachment
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachment.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachment.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachment.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachment.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachment.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachment.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachment.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -127,6 +128,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachment.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachment.toMetadata"></a>
 
@@ -398,7 +405,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/diskpoolmanageddiskattachment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/diskpoolmanageddiskattachment"
 
 diskpoolmanageddiskattachment.DiskPoolManagedDiskAttachment_IsConstruct(x interface{}) *bool
 ```
@@ -430,7 +437,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/diskpoolmanageddiskattachment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/diskpoolmanageddiskattachment"
 
 diskpoolmanageddiskattachment.DiskPoolManagedDiskAttachment_IsTerraformElement(x interface{}) *bool
 ```
@@ -444,7 +451,7 @@ diskpoolmanageddiskattachment.DiskPoolManagedDiskAttachment_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/diskpoolmanageddiskattachment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/diskpoolmanageddiskattachment"
 
 diskpoolmanageddiskattachment.DiskPoolManagedDiskAttachment_IsTerraformResource(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ diskpoolmanageddiskattachment.DiskPoolManagedDiskAttachment_IsTerraformResource(
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachment.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/diskpoolmanageddiskattachment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/diskpoolmanageddiskattachment"
 
 diskpoolmanageddiskattachment.DiskPoolManagedDiskAttachment_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -775,7 +782,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/diskpoolmanageddiskattachment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/diskpoolmanageddiskattachment"
 
 &diskpoolmanageddiskattachment.DiskPoolManagedDiskAttachmentConfig {
 	Connection: interface{},
@@ -788,7 +795,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/diskpoolmanageddi
 	DiskPoolId: *string,
 	ManagedDiskId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachmentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachmentTimeouts,
 }
 ```
 
@@ -938,7 +945,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/diskpoolmanageddiskattachment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/diskpoolmanageddiskattachment"
 
 &diskpoolmanageddiskattachment.DiskPoolManagedDiskAttachmentTimeouts {
 	Create: *string,
@@ -1000,7 +1007,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.diskPoolManagedDiskAttachment.DiskPoolManagedDiskAttachmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/diskpoolmanageddiskattachment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/diskpoolmanageddiskattachment"
 
 diskpoolmanageddiskattachment.NewDiskPoolManagedDiskAttachmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DiskPoolManagedDiskAttachmentTimeoutsOutputReference
 ```

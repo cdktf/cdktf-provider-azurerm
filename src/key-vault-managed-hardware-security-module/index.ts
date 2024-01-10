@@ -102,6 +102,31 @@ export function keyVaultManagedHardwareSecurityModuleNetworkAclsToTerraform(stru
   }
 }
 
+
+export function keyVaultManagedHardwareSecurityModuleNetworkAclsToHclTerraform(struct?: KeyVaultManagedHardwareSecurityModuleNetworkAclsOutputReference | KeyVaultManagedHardwareSecurityModuleNetworkAcls): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    bypass: {
+      value: cdktf.stringToHclTerraform(struct!.bypass),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    default_action: {
+      value: cdktf.stringToHclTerraform(struct!.defaultAction),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class KeyVaultManagedHardwareSecurityModuleNetworkAclsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -196,6 +221,43 @@ export function keyVaultManagedHardwareSecurityModuleTimeoutsToTerraform(struct?
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function keyVaultManagedHardwareSecurityModuleTimeoutsToHclTerraform(struct?: KeyVaultManagedHardwareSecurityModuleTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class KeyVaultManagedHardwareSecurityModuleTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -649,5 +711,103 @@ export class KeyVaultManagedHardwareSecurityModule extends cdktf.TerraformResour
       network_acls: keyVaultManagedHardwareSecurityModuleNetworkAclsToTerraform(this._networkAcls.internalValue),
       timeouts: keyVaultManagedHardwareSecurityModuleTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      admin_object_ids: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._adminObjectIds),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      public_network_access_enabled: {
+        value: cdktf.booleanToHclTerraform(this._publicNetworkAccessEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      purge_protection_enabled: {
+        value: cdktf.booleanToHclTerraform(this._purgeProtectionEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      security_domain_key_vault_certificate_ids: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._securityDomainKeyVaultCertificateIds),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      security_domain_quorum: {
+        value: cdktf.numberToHclTerraform(this._securityDomainQuorum),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      sku_name: {
+        value: cdktf.stringToHclTerraform(this._skuName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      soft_delete_retention_days: {
+        value: cdktf.numberToHclTerraform(this._softDeleteRetentionDays),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      tenant_id: {
+        value: cdktf.stringToHclTerraform(this._tenantId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network_acls: {
+        value: keyVaultManagedHardwareSecurityModuleNetworkAclsToHclTerraform(this._networkAcls.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "KeyVaultManagedHardwareSecurityModuleNetworkAclsList",
+      },
+      timeouts: {
+        value: keyVaultManagedHardwareSecurityModuleTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "KeyVaultManagedHardwareSecurityModuleTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

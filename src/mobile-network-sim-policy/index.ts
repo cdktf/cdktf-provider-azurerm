@@ -88,6 +88,31 @@ export function mobileNetworkSimPolicySliceDataNetworkSessionAggregateMaximumBit
   }
 }
 
+
+export function mobileNetworkSimPolicySliceDataNetworkSessionAggregateMaximumBitRateToHclTerraform(struct?: MobileNetworkSimPolicySliceDataNetworkSessionAggregateMaximumBitRateOutputReference | MobileNetworkSimPolicySliceDataNetworkSessionAggregateMaximumBitRate): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    downlink: {
+      value: cdktf.stringToHclTerraform(struct!.downlink),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    uplink: {
+      value: cdktf.stringToHclTerraform(struct!.uplink),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MobileNetworkSimPolicySliceDataNetworkSessionAggregateMaximumBitRateOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -214,6 +239,79 @@ export function mobileNetworkSimPolicySliceDataNetworkToTerraform(struct?: Mobil
     qos_indicator: cdktf.numberToTerraform(struct!.qosIndicator),
     session_aggregate_maximum_bit_rate: mobileNetworkSimPolicySliceDataNetworkSessionAggregateMaximumBitRateToTerraform(struct!.sessionAggregateMaximumBitRate),
   }
+}
+
+
+export function mobileNetworkSimPolicySliceDataNetworkToHclTerraform(struct?: MobileNetworkSimPolicySliceDataNetwork | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    additional_allowed_session_types: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.additionalAllowedSessionTypes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    allocation_and_retention_priority_level: {
+      value: cdktf.numberToHclTerraform(struct!.allocationAndRetentionPriorityLevel),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    allowed_services_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedServicesIds),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    data_network_id: {
+      value: cdktf.stringToHclTerraform(struct!.dataNetworkId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    default_session_type: {
+      value: cdktf.stringToHclTerraform(struct!.defaultSessionType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    max_buffered_packets: {
+      value: cdktf.numberToHclTerraform(struct!.maxBufferedPackets),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    preemption_capability: {
+      value: cdktf.stringToHclTerraform(struct!.preemptionCapability),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    preemption_vulnerability: {
+      value: cdktf.stringToHclTerraform(struct!.preemptionVulnerability),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    qos_indicator: {
+      value: cdktf.numberToHclTerraform(struct!.qosIndicator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    session_aggregate_maximum_bit_rate: {
+      value: mobileNetworkSimPolicySliceDataNetworkSessionAggregateMaximumBitRateToHclTerraform(struct!.sessionAggregateMaximumBitRate),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MobileNetworkSimPolicySliceDataNetworkSessionAggregateMaximumBitRateList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MobileNetworkSimPolicySliceDataNetworkOutputReference extends cdktf.ComplexObject {
@@ -511,6 +609,37 @@ export function mobileNetworkSimPolicySliceToTerraform(struct?: MobileNetworkSim
   }
 }
 
+
+export function mobileNetworkSimPolicySliceToHclTerraform(struct?: MobileNetworkSimPolicySlice | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    default_data_network_id: {
+      value: cdktf.stringToHclTerraform(struct!.defaultDataNetworkId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    slice_id: {
+      value: cdktf.stringToHclTerraform(struct!.sliceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    data_network: {
+      value: cdktf.listMapperHcl(mobileNetworkSimPolicySliceDataNetworkToHclTerraform, true)(struct!.dataNetwork),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MobileNetworkSimPolicySliceDataNetworkList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MobileNetworkSimPolicySliceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -658,6 +787,43 @@ export function mobileNetworkSimPolicyTimeoutsToTerraform(struct?: MobileNetwork
   }
 }
 
+
+export function mobileNetworkSimPolicyTimeoutsToHclTerraform(struct?: MobileNetworkSimPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MobileNetworkSimPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -802,6 +968,31 @@ export function mobileNetworkSimPolicyUserEquipmentAggregateMaximumBitRateToTerr
     downlink: cdktf.stringToTerraform(struct!.downlink),
     uplink: cdktf.stringToTerraform(struct!.uplink),
   }
+}
+
+
+export function mobileNetworkSimPolicyUserEquipmentAggregateMaximumBitRateToHclTerraform(struct?: MobileNetworkSimPolicyUserEquipmentAggregateMaximumBitRateOutputReference | MobileNetworkSimPolicyUserEquipmentAggregateMaximumBitRate): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    downlink: {
+      value: cdktf.stringToHclTerraform(struct!.downlink),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    uplink: {
+      value: cdktf.stringToHclTerraform(struct!.uplink),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MobileNetworkSimPolicyUserEquipmentAggregateMaximumBitRateOutputReference extends cdktf.ComplexObject {
@@ -1113,5 +1304,79 @@ export class MobileNetworkSimPolicy extends cdktf.TerraformResource {
       timeouts: mobileNetworkSimPolicyTimeoutsToTerraform(this._timeouts.internalValue),
       user_equipment_aggregate_maximum_bit_rate: mobileNetworkSimPolicyUserEquipmentAggregateMaximumBitRateToTerraform(this._userEquipmentAggregateMaximumBitRate.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      default_slice_id: {
+        value: cdktf.stringToHclTerraform(this._defaultSliceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      mobile_network_id: {
+        value: cdktf.stringToHclTerraform(this._mobileNetworkId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      rat_frequency_selection_priority_index: {
+        value: cdktf.numberToHclTerraform(this._ratFrequencySelectionPriorityIndex),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      registration_timer_in_seconds: {
+        value: cdktf.numberToHclTerraform(this._registrationTimerInSeconds),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      slice: {
+        value: cdktf.listMapperHcl(mobileNetworkSimPolicySliceToHclTerraform, true)(this._slice.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MobileNetworkSimPolicySliceList",
+      },
+      timeouts: {
+        value: mobileNetworkSimPolicyTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MobileNetworkSimPolicyTimeouts",
+      },
+      user_equipment_aggregate_maximum_bit_rate: {
+        value: mobileNetworkSimPolicyUserEquipmentAggregateMaximumBitRateToHclTerraform(this._userEquipmentAggregateMaximumBitRate.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MobileNetworkSimPolicyUserEquipmentAggregateMaximumBitRateList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

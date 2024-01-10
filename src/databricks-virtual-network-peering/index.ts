@@ -94,6 +94,43 @@ export function databricksVirtualNetworkPeeringTimeoutsToTerraform(struct?: Data
   }
 }
 
+
+export function databricksVirtualNetworkPeeringTimeoutsToHclTerraform(struct?: DatabricksVirtualNetworkPeeringTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DatabricksVirtualNetworkPeeringTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -476,5 +513,79 @@ export class DatabricksVirtualNetworkPeering extends cdktf.TerraformResource {
       workspace_id: cdktf.stringToTerraform(this._workspaceId),
       timeouts: databricksVirtualNetworkPeeringTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      allow_forwarded_traffic: {
+        value: cdktf.booleanToHclTerraform(this._allowForwardedTraffic),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      allow_gateway_transit: {
+        value: cdktf.booleanToHclTerraform(this._allowGatewayTransit),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      allow_virtual_network_access: {
+        value: cdktf.booleanToHclTerraform(this._allowVirtualNetworkAccess),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      remote_address_space_prefixes: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._remoteAddressSpacePrefixes),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      remote_virtual_network_id: {
+        value: cdktf.stringToHclTerraform(this._remoteVirtualNetworkId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      use_remote_gateways: {
+        value: cdktf.booleanToHclTerraform(this._useRemoteGateways),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      workspace_id: {
+        value: cdktf.stringToHclTerraform(this._workspaceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: databricksVirtualNetworkPeeringTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DatabricksVirtualNetworkPeeringTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

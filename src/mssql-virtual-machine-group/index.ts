@@ -88,6 +88,43 @@ export function mssqlVirtualMachineGroupTimeoutsToTerraform(struct?: MssqlVirtua
   }
 }
 
+
+export function mssqlVirtualMachineGroupTimeoutsToHclTerraform(struct?: MssqlVirtualMachineGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MssqlVirtualMachineGroupTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -262,6 +299,67 @@ export function mssqlVirtualMachineGroupWsfcDomainProfileToTerraform(struct?: Ms
     storage_account_primary_key: cdktf.stringToTerraform(struct!.storageAccountPrimaryKey),
     storage_account_url: cdktf.stringToTerraform(struct!.storageAccountUrl),
   }
+}
+
+
+export function mssqlVirtualMachineGroupWsfcDomainProfileToHclTerraform(struct?: MssqlVirtualMachineGroupWsfcDomainProfileOutputReference | MssqlVirtualMachineGroupWsfcDomainProfile): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    cluster_bootstrap_account_name: {
+      value: cdktf.stringToHclTerraform(struct!.clusterBootstrapAccountName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    cluster_operator_account_name: {
+      value: cdktf.stringToHclTerraform(struct!.clusterOperatorAccountName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    cluster_subnet_type: {
+      value: cdktf.stringToHclTerraform(struct!.clusterSubnetType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    fqdn: {
+      value: cdktf.stringToHclTerraform(struct!.fqdn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    organizational_unit_path: {
+      value: cdktf.stringToHclTerraform(struct!.organizationalUnitPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    sql_service_account_name: {
+      value: cdktf.stringToHclTerraform(struct!.sqlServiceAccountName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    storage_account_primary_key: {
+      value: cdktf.stringToHclTerraform(struct!.storageAccountPrimaryKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    storage_account_url: {
+      value: cdktf.stringToHclTerraform(struct!.storageAccountUrl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MssqlVirtualMachineGroupWsfcDomainProfileOutputReference extends cdktf.ComplexObject {
@@ -669,5 +767,67 @@ export class MssqlVirtualMachineGroup extends cdktf.TerraformResource {
       timeouts: mssqlVirtualMachineGroupTimeoutsToTerraform(this._timeouts.internalValue),
       wsfc_domain_profile: mssqlVirtualMachineGroupWsfcDomainProfileToTerraform(this._wsfcDomainProfile.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sql_image_offer: {
+        value: cdktf.stringToHclTerraform(this._sqlImageOffer),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sql_image_sku: {
+        value: cdktf.stringToHclTerraform(this._sqlImageSku),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      timeouts: {
+        value: mssqlVirtualMachineGroupTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MssqlVirtualMachineGroupTimeouts",
+      },
+      wsfc_domain_profile: {
+        value: mssqlVirtualMachineGroupWsfcDomainProfileToHclTerraform(this._wsfcDomainProfile.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MssqlVirtualMachineGroupWsfcDomainProfileList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -90,6 +90,31 @@ export function virtualHubRouteToTerraform(struct?: VirtualHubRoute | cdktf.IRes
   }
 }
 
+
+export function virtualHubRouteToHclTerraform(struct?: VirtualHubRoute | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    address_prefixes: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.addressPrefixes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    next_hop_ip_address: {
+      value: cdktf.stringToHclTerraform(struct!.nextHopIpAddress),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class VirtualHubRouteOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -216,6 +241,43 @@ export function virtualHubTimeoutsToTerraform(struct?: VirtualHubTimeouts | cdkt
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function virtualHubTimeoutsToHclTerraform(struct?: VirtualHubTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class VirtualHubTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -629,5 +691,85 @@ export class VirtualHub extends cdktf.TerraformResource {
       route: cdktf.listMapper(virtualHubRouteToTerraform, true)(this._route.internalValue),
       timeouts: virtualHubTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      address_prefix: {
+        value: cdktf.stringToHclTerraform(this._addressPrefix),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      hub_routing_preference: {
+        value: cdktf.stringToHclTerraform(this._hubRoutingPreference),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sku: {
+        value: cdktf.stringToHclTerraform(this._sku),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      virtual_router_auto_scale_min_capacity: {
+        value: cdktf.numberToHclTerraform(this._virtualRouterAutoScaleMinCapacity),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      virtual_wan_id: {
+        value: cdktf.stringToHclTerraform(this._virtualWanId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      route: {
+        value: cdktf.listMapperHcl(virtualHubRouteToHclTerraform, true)(this._route.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "VirtualHubRouteList",
+      },
+      timeouts: {
+        value: virtualHubTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "VirtualHubTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

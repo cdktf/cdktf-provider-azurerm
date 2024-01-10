@@ -56,6 +56,17 @@ export function dataAzurermLogicAppStandardConnectionStringToTerraform(struct?: 
   }
 }
 
+
+export function dataAzurermLogicAppStandardConnectionStringToHclTerraform(struct?: DataAzurermLogicAppStandardConnectionString): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermLogicAppStandardConnectionStringOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -130,6 +141,17 @@ export function dataAzurermLogicAppStandardIdentityToTerraform(struct?: DataAzur
   }
 }
 
+
+export function dataAzurermLogicAppStandardIdentityToHclTerraform(struct?: DataAzurermLogicAppStandardIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermLogicAppStandardIdentityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -202,6 +224,17 @@ export function dataAzurermLogicAppStandardSiteCredentialToTerraform(struct?: Da
   }
   return {
   }
+}
+
+
+export function dataAzurermLogicAppStandardSiteCredentialToHclTerraform(struct?: DataAzurermLogicAppStandardSiteCredential): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermLogicAppStandardSiteCredentialOutputReference extends cdktf.ComplexObject {
@@ -291,6 +324,43 @@ export function dataAzurermLogicAppStandardSiteConfigIpRestrictionHeadersToTerra
     x_forwarded_for: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedFor),
     x_forwarded_host: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.xForwardedHost),
   }
+}
+
+
+export function dataAzurermLogicAppStandardSiteConfigIpRestrictionHeadersToHclTerraform(struct?: DataAzurermLogicAppStandardSiteConfigIpRestrictionHeaders | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    x_azure_fdid: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.xAzureFdid),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    x_fd_health_probe: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.xFdHealthProbe),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    x_forwarded_for: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.xForwardedFor),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    x_forwarded_host: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.xForwardedHost),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataAzurermLogicAppStandardSiteConfigIpRestrictionHeadersOutputReference extends cdktf.ComplexObject {
@@ -484,6 +554,61 @@ export function dataAzurermLogicAppStandardSiteConfigIpRestrictionToTerraform(st
     service_tag: cdktf.stringToTerraform(struct!.serviceTag),
     virtual_network_subnet_id: cdktf.stringToTerraform(struct!.virtualNetworkSubnetId),
   }
+}
+
+
+export function dataAzurermLogicAppStandardSiteConfigIpRestrictionToHclTerraform(struct?: DataAzurermLogicAppStandardSiteConfigIpRestriction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    action: {
+      value: cdktf.stringToHclTerraform(struct!.action),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    headers: {
+      value: cdktf.listMapperHcl(dataAzurermLogicAppStandardSiteConfigIpRestrictionHeadersToHclTerraform, false)(struct!.headers),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataAzurermLogicAppStandardSiteConfigIpRestrictionHeadersList",
+    },
+    ip_address: {
+      value: cdktf.stringToHclTerraform(struct!.ipAddress),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    priority: {
+      value: cdktf.numberToHclTerraform(struct!.priority),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    service_tag: {
+      value: cdktf.stringToHclTerraform(struct!.serviceTag),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    virtual_network_subnet_id: {
+      value: cdktf.stringToHclTerraform(struct!.virtualNetworkSubnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataAzurermLogicAppStandardSiteConfigIpRestrictionOutputReference extends cdktf.ComplexObject {
@@ -730,6 +855,43 @@ export function dataAzurermLogicAppStandardSiteConfigScmIpRestrictionHeadersToTe
   }
 }
 
+
+export function dataAzurermLogicAppStandardSiteConfigScmIpRestrictionHeadersToHclTerraform(struct?: DataAzurermLogicAppStandardSiteConfigScmIpRestrictionHeaders | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    x_azure_fdid: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.xAzureFdid),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    x_fd_health_probe: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.xFdHealthProbe),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    x_forwarded_for: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.xForwardedFor),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    x_forwarded_host: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.xForwardedHost),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataAzurermLogicAppStandardSiteConfigScmIpRestrictionHeadersOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -921,6 +1083,61 @@ export function dataAzurermLogicAppStandardSiteConfigScmIpRestrictionToTerraform
     service_tag: cdktf.stringToTerraform(struct!.serviceTag),
     virtual_network_subnet_id: cdktf.stringToTerraform(struct!.virtualNetworkSubnetId),
   }
+}
+
+
+export function dataAzurermLogicAppStandardSiteConfigScmIpRestrictionToHclTerraform(struct?: DataAzurermLogicAppStandardSiteConfigScmIpRestriction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    action: {
+      value: cdktf.stringToHclTerraform(struct!.action),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    headers: {
+      value: cdktf.listMapperHcl(dataAzurermLogicAppStandardSiteConfigScmIpRestrictionHeadersToHclTerraform, false)(struct!.headers),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataAzurermLogicAppStandardSiteConfigScmIpRestrictionHeadersList",
+    },
+    ip_address: {
+      value: cdktf.stringToHclTerraform(struct!.ipAddress),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    priority: {
+      value: cdktf.numberToHclTerraform(struct!.priority),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    service_tag: {
+      value: cdktf.stringToHclTerraform(struct!.serviceTag),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    virtual_network_subnet_id: {
+      value: cdktf.stringToHclTerraform(struct!.virtualNetworkSubnetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataAzurermLogicAppStandardSiteConfigScmIpRestrictionOutputReference extends cdktf.ComplexObject {
@@ -1157,6 +1374,31 @@ export function dataAzurermLogicAppStandardSiteConfigCorsToTerraform(struct?: Da
   }
 }
 
+
+export function dataAzurermLogicAppStandardSiteConfigCorsToHclTerraform(struct?: DataAzurermLogicAppStandardSiteConfigCorsOutputReference | DataAzurermLogicAppStandardSiteConfigCors): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_origins: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedOrigins),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    support_credentials: {
+      value: cdktf.booleanToHclTerraform(struct!.supportCredentials),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataAzurermLogicAppStandardSiteConfigCorsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1341,6 +1583,145 @@ export function dataAzurermLogicAppStandardSiteConfigToTerraform(struct?: DataAz
     websockets_enabled: cdktf.booleanToTerraform(struct!.websocketsEnabled),
     cors: dataAzurermLogicAppStandardSiteConfigCorsToTerraform(struct!.cors),
   }
+}
+
+
+export function dataAzurermLogicAppStandardSiteConfigToHclTerraform(struct?: DataAzurermLogicAppStandardSiteConfigOutputReference | DataAzurermLogicAppStandardSiteConfig): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    always_on: {
+      value: cdktf.booleanToHclTerraform(struct!.alwaysOn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    app_scale_limit: {
+      value: cdktf.numberToHclTerraform(struct!.appScaleLimit),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    dotnet_framework_version: {
+      value: cdktf.stringToHclTerraform(struct!.dotnetFrameworkVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    elastic_instance_minimum: {
+      value: cdktf.numberToHclTerraform(struct!.elasticInstanceMinimum),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    ftps_state: {
+      value: cdktf.stringToHclTerraform(struct!.ftpsState),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    health_check_path: {
+      value: cdktf.stringToHclTerraform(struct!.healthCheckPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    http2_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.http2Enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    ip_restriction: {
+      value: cdktf.listMapperHcl(dataAzurermLogicAppStandardSiteConfigIpRestrictionToHclTerraform, false)(struct!.ipRestriction),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataAzurermLogicAppStandardSiteConfigIpRestrictionList",
+    },
+    linux_fx_version: {
+      value: cdktf.stringToHclTerraform(struct!.linuxFxVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    min_tls_version: {
+      value: cdktf.stringToHclTerraform(struct!.minTlsVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    pre_warmed_instance_count: {
+      value: cdktf.numberToHclTerraform(struct!.preWarmedInstanceCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    public_network_access_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.publicNetworkAccessEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    runtime_scale_monitoring_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.runtimeScaleMonitoringEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    scm_ip_restriction: {
+      value: cdktf.listMapperHcl(dataAzurermLogicAppStandardSiteConfigScmIpRestrictionToHclTerraform, false)(struct!.scmIpRestriction),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataAzurermLogicAppStandardSiteConfigScmIpRestrictionList",
+    },
+    scm_min_tls_version: {
+      value: cdktf.stringToHclTerraform(struct!.scmMinTlsVersion),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    scm_type: {
+      value: cdktf.stringToHclTerraform(struct!.scmType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    scm_use_main_ip_restriction: {
+      value: cdktf.booleanToHclTerraform(struct!.scmUseMainIpRestriction),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    use_32_bit_worker_process: {
+      value: cdktf.booleanToHclTerraform(struct!.use32BitWorkerProcess),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    vnet_route_all_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.vnetRouteAllEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    websockets_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.websocketsEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    cors: {
+      value: dataAzurermLogicAppStandardSiteConfigCorsToHclTerraform(struct!.cors),
+      isBlock: true,
+      type: "list",
+      storageClassType: "DataAzurermLogicAppStandardSiteConfigCorsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataAzurermLogicAppStandardSiteConfigOutputReference extends cdktf.ComplexObject {
@@ -1853,6 +2234,25 @@ export function dataAzurermLogicAppStandardTimeoutsToTerraform(struct?: DataAzur
   }
 }
 
+
+export function dataAzurermLogicAppStandardTimeoutsToHclTerraform(struct?: DataAzurermLogicAppStandardTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataAzurermLogicAppStandardTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -2192,5 +2592,49 @@ export class DataAzurermLogicAppStandard extends cdktf.TerraformDataSource {
       site_config: dataAzurermLogicAppStandardSiteConfigToTerraform(this._siteConfig.internalValue),
       timeouts: dataAzurermLogicAppStandardTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      site_config: {
+        value: dataAzurermLogicAppStandardSiteConfigToHclTerraform(this._siteConfig.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataAzurermLogicAppStandardSiteConfigList",
+      },
+      timeouts: {
+        value: dataAzurermLogicAppStandardTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataAzurermLogicAppStandardTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

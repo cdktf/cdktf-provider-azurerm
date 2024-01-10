@@ -102,6 +102,55 @@ export function apiManagementCustomDomainDeveloperPortalToTerraform(struct?: Api
   }
 }
 
+
+export function apiManagementCustomDomainDeveloperPortalToHclTerraform(struct?: ApiManagementCustomDomainDeveloperPortal | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    certificate: {
+      value: cdktf.stringToHclTerraform(struct!.certificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    certificate_password: {
+      value: cdktf.stringToHclTerraform(struct!.certificatePassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    host_name: {
+      value: cdktf.stringToHclTerraform(struct!.hostName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_vault_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    negotiate_client_certificate: {
+      value: cdktf.booleanToHclTerraform(struct!.negotiateClientCertificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    ssl_keyvault_identity_client_id: {
+      value: cdktf.stringToHclTerraform(struct!.sslKeyvaultIdentityClientId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementCustomDomainDeveloperPortalOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -359,6 +408,61 @@ export function apiManagementCustomDomainGatewayToTerraform(struct?: ApiManageme
     negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
     ssl_keyvault_identity_client_id: cdktf.stringToTerraform(struct!.sslKeyvaultIdentityClientId),
   }
+}
+
+
+export function apiManagementCustomDomainGatewayToHclTerraform(struct?: ApiManagementCustomDomainGateway | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    certificate: {
+      value: cdktf.stringToHclTerraform(struct!.certificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    certificate_password: {
+      value: cdktf.stringToHclTerraform(struct!.certificatePassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    default_ssl_binding: {
+      value: cdktf.booleanToHclTerraform(struct!.defaultSslBinding),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    host_name: {
+      value: cdktf.stringToHclTerraform(struct!.hostName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_vault_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    negotiate_client_certificate: {
+      value: cdktf.booleanToHclTerraform(struct!.negotiateClientCertificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    ssl_keyvault_identity_client_id: {
+      value: cdktf.stringToHclTerraform(struct!.sslKeyvaultIdentityClientId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementCustomDomainGatewayOutputReference extends cdktf.ComplexObject {
@@ -637,6 +741,55 @@ export function apiManagementCustomDomainManagementToTerraform(struct?: ApiManag
   }
 }
 
+
+export function apiManagementCustomDomainManagementToHclTerraform(struct?: ApiManagementCustomDomainManagement | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    certificate: {
+      value: cdktf.stringToHclTerraform(struct!.certificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    certificate_password: {
+      value: cdktf.stringToHclTerraform(struct!.certificatePassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    host_name: {
+      value: cdktf.stringToHclTerraform(struct!.hostName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_vault_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    negotiate_client_certificate: {
+      value: cdktf.booleanToHclTerraform(struct!.negotiateClientCertificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    ssl_keyvault_identity_client_id: {
+      value: cdktf.stringToHclTerraform(struct!.sslKeyvaultIdentityClientId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementCustomDomainManagementOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -889,6 +1042,55 @@ export function apiManagementCustomDomainPortalToTerraform(struct?: ApiManagemen
     negotiate_client_certificate: cdktf.booleanToTerraform(struct!.negotiateClientCertificate),
     ssl_keyvault_identity_client_id: cdktf.stringToTerraform(struct!.sslKeyvaultIdentityClientId),
   }
+}
+
+
+export function apiManagementCustomDomainPortalToHclTerraform(struct?: ApiManagementCustomDomainPortal | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    certificate: {
+      value: cdktf.stringToHclTerraform(struct!.certificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    certificate_password: {
+      value: cdktf.stringToHclTerraform(struct!.certificatePassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    host_name: {
+      value: cdktf.stringToHclTerraform(struct!.hostName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_vault_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    negotiate_client_certificate: {
+      value: cdktf.booleanToHclTerraform(struct!.negotiateClientCertificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    ssl_keyvault_identity_client_id: {
+      value: cdktf.stringToHclTerraform(struct!.sslKeyvaultIdentityClientId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementCustomDomainPortalOutputReference extends cdktf.ComplexObject {
@@ -1145,6 +1347,55 @@ export function apiManagementCustomDomainScmToTerraform(struct?: ApiManagementCu
   }
 }
 
+
+export function apiManagementCustomDomainScmToHclTerraform(struct?: ApiManagementCustomDomainScm | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    certificate: {
+      value: cdktf.stringToHclTerraform(struct!.certificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    certificate_password: {
+      value: cdktf.stringToHclTerraform(struct!.certificatePassword),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    host_name: {
+      value: cdktf.stringToHclTerraform(struct!.hostName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_vault_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    negotiate_client_certificate: {
+      value: cdktf.booleanToHclTerraform(struct!.negotiateClientCertificate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    ssl_keyvault_identity_client_id: {
+      value: cdktf.stringToHclTerraform(struct!.sslKeyvaultIdentityClientId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ApiManagementCustomDomainScmOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1387,6 +1638,43 @@ export function apiManagementCustomDomainTimeoutsToTerraform(struct?: ApiManagem
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function apiManagementCustomDomainTimeoutsToHclTerraform(struct?: ApiManagementCustomDomainTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ApiManagementCustomDomainTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1719,5 +2007,61 @@ export class ApiManagementCustomDomain extends cdktf.TerraformResource {
       scm: cdktf.listMapper(apiManagementCustomDomainScmToTerraform, true)(this._scm.internalValue),
       timeouts: apiManagementCustomDomainTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      api_management_id: {
+        value: cdktf.stringToHclTerraform(this._apiManagementId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      developer_portal: {
+        value: cdktf.listMapperHcl(apiManagementCustomDomainDeveloperPortalToHclTerraform, true)(this._developerPortal.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementCustomDomainDeveloperPortalList",
+      },
+      gateway: {
+        value: cdktf.listMapperHcl(apiManagementCustomDomainGatewayToHclTerraform, true)(this._gateway.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementCustomDomainGatewayList",
+      },
+      management: {
+        value: cdktf.listMapperHcl(apiManagementCustomDomainManagementToHclTerraform, true)(this._management.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementCustomDomainManagementList",
+      },
+      portal: {
+        value: cdktf.listMapperHcl(apiManagementCustomDomainPortalToHclTerraform, true)(this._portal.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementCustomDomainPortalList",
+      },
+      scm: {
+        value: cdktf.listMapperHcl(apiManagementCustomDomainScmToHclTerraform, true)(this._scm.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementCustomDomainScmList",
+      },
+      timeouts: {
+        value: apiManagementCustomDomainTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ApiManagementCustomDomainTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

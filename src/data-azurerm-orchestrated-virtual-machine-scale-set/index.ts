@@ -46,6 +46,17 @@ export function dataAzurermOrchestratedVirtualMachineScaleSetIdentityToTerraform
   }
 }
 
+
+export function dataAzurermOrchestratedVirtualMachineScaleSetIdentityToHclTerraform(struct?: DataAzurermOrchestratedVirtualMachineScaleSetIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermOrchestratedVirtualMachineScaleSetIdentityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -115,6 +126,17 @@ export function dataAzurermOrchestratedVirtualMachineScaleSetNetworkInterfaceIpC
   }
 }
 
+
+export function dataAzurermOrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagToHclTerraform(struct?: DataAzurermOrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermOrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -182,6 +204,17 @@ export function dataAzurermOrchestratedVirtualMachineScaleSetNetworkInterfaceIpC
   }
   return {
   }
+}
+
+
+export function dataAzurermOrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressToHclTerraform(struct?: DataAzurermOrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermOrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressOutputReference extends cdktf.ComplexObject {
@@ -272,6 +305,17 @@ export function dataAzurermOrchestratedVirtualMachineScaleSetNetworkInterfaceIpC
   }
   return {
   }
+}
+
+
+export function dataAzurermOrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationToHclTerraform(struct?: DataAzurermOrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfiguration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermOrchestratedVirtualMachineScaleSetNetworkInterfaceIpConfigurationOutputReference extends cdktf.ComplexObject {
@@ -379,6 +423,17 @@ export function dataAzurermOrchestratedVirtualMachineScaleSetNetworkInterfaceToT
   }
 }
 
+
+export function dataAzurermOrchestratedVirtualMachineScaleSetNetworkInterfaceToHclTerraform(struct?: DataAzurermOrchestratedVirtualMachineScaleSetNetworkInterface): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermOrchestratedVirtualMachineScaleSetNetworkInterfaceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -477,6 +532,25 @@ export function dataAzurermOrchestratedVirtualMachineScaleSetTimeoutsToTerraform
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function dataAzurermOrchestratedVirtualMachineScaleSetTimeoutsToHclTerraform(struct?: DataAzurermOrchestratedVirtualMachineScaleSetTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataAzurermOrchestratedVirtualMachineScaleSetTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -685,5 +759,37 @@ export class DataAzurermOrchestratedVirtualMachineScaleSet extends cdktf.Terrafo
       resource_group_name: cdktf.stringToTerraform(this._resourceGroupName),
       timeouts: dataAzurermOrchestratedVirtualMachineScaleSetTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: dataAzurermOrchestratedVirtualMachineScaleSetTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataAzurermOrchestratedVirtualMachineScaleSetTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

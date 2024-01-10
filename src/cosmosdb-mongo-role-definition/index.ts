@@ -66,6 +66,31 @@ export function cosmosdbMongoRoleDefinitionPrivilegeResourceToTerraform(struct?:
   }
 }
 
+
+export function cosmosdbMongoRoleDefinitionPrivilegeResourceToHclTerraform(struct?: CosmosdbMongoRoleDefinitionPrivilegeResourceOutputReference | CosmosdbMongoRoleDefinitionPrivilegeResource): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    collection_name: {
+      value: cdktf.stringToHclTerraform(struct!.collectionName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    db_name: {
+      value: cdktf.stringToHclTerraform(struct!.dbName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CosmosdbMongoRoleDefinitionPrivilegeResourceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -158,6 +183,31 @@ export function cosmosdbMongoRoleDefinitionPrivilegeToTerraform(struct?: Cosmosd
     actions: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.actions),
     resource: cosmosdbMongoRoleDefinitionPrivilegeResourceToTerraform(struct!.resource),
   }
+}
+
+
+export function cosmosdbMongoRoleDefinitionPrivilegeToHclTerraform(struct?: CosmosdbMongoRoleDefinitionPrivilege | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    actions: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.actions),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    resource: {
+      value: cosmosdbMongoRoleDefinitionPrivilegeResourceToHclTerraform(struct!.resource),
+      isBlock: true,
+      type: "list",
+      storageClassType: "CosmosdbMongoRoleDefinitionPrivilegeResourceList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CosmosdbMongoRoleDefinitionPrivilegeOutputReference extends cdktf.ComplexObject {
@@ -286,6 +336,43 @@ export function cosmosdbMongoRoleDefinitionTimeoutsToTerraform(struct?: Cosmosdb
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function cosmosdbMongoRoleDefinitionTimeoutsToHclTerraform(struct?: CosmosdbMongoRoleDefinitionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CosmosdbMongoRoleDefinitionTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -579,5 +666,49 @@ export class CosmosdbMongoRoleDefinition extends cdktf.TerraformResource {
       privilege: cdktf.listMapper(cosmosdbMongoRoleDefinitionPrivilegeToTerraform, true)(this._privilege.internalValue),
       timeouts: cosmosdbMongoRoleDefinitionTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      cosmos_mongo_database_id: {
+        value: cdktf.stringToHclTerraform(this._cosmosMongoDatabaseId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      inherited_role_names: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._inheritedRoleNames),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      role_name: {
+        value: cdktf.stringToHclTerraform(this._roleName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      privilege: {
+        value: cdktf.listMapperHcl(cosmosdbMongoRoleDefinitionPrivilegeToHclTerraform, true)(this._privilege.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CosmosdbMongoRoleDefinitionPrivilegeList",
+      },
+      timeouts: {
+        value: cosmosdbMongoRoleDefinitionTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "CosmosdbMongoRoleDefinitionTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

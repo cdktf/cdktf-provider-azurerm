@@ -81,6 +81,37 @@ export function cognitiveDeploymentModelToTerraform(struct?: CognitiveDeployment
   }
 }
 
+
+export function cognitiveDeploymentModelToHclTerraform(struct?: CognitiveDeploymentModelOutputReference | CognitiveDeploymentModel): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    format: {
+      value: cdktf.stringToHclTerraform(struct!.format),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    version: {
+      value: cdktf.stringToHclTerraform(struct!.version),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CognitiveDeploymentModelOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -199,6 +230,49 @@ export function cognitiveDeploymentScaleToTerraform(struct?: CognitiveDeployment
     tier: cdktf.stringToTerraform(struct!.tier),
     type: cdktf.stringToTerraform(struct!.type),
   }
+}
+
+
+export function cognitiveDeploymentScaleToHclTerraform(struct?: CognitiveDeploymentScaleOutputReference | CognitiveDeploymentScale): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    capacity: {
+      value: cdktf.numberToHclTerraform(struct!.capacity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    family: {
+      value: cdktf.stringToHclTerraform(struct!.family),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    size: {
+      value: cdktf.stringToHclTerraform(struct!.size),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tier: {
+      value: cdktf.stringToHclTerraform(struct!.tier),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CognitiveDeploymentScaleOutputReference extends cdktf.ComplexObject {
@@ -364,6 +438,43 @@ export function cognitiveDeploymentTimeoutsToTerraform(struct?: CognitiveDeploym
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function cognitiveDeploymentTimeoutsToHclTerraform(struct?: CognitiveDeploymentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CognitiveDeploymentTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -687,5 +798,61 @@ export class CognitiveDeployment extends cdktf.TerraformResource {
       scale: cognitiveDeploymentScaleToTerraform(this._scale.internalValue),
       timeouts: cognitiveDeploymentTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      cognitive_account_id: {
+        value: cdktf.stringToHclTerraform(this._cognitiveAccountId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      rai_policy_name: {
+        value: cdktf.stringToHclTerraform(this._raiPolicyName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      version_upgrade_option: {
+        value: cdktf.stringToHclTerraform(this._versionUpgradeOption),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      model: {
+        value: cognitiveDeploymentModelToHclTerraform(this._model.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CognitiveDeploymentModelList",
+      },
+      scale: {
+        value: cognitiveDeploymentScaleToHclTerraform(this._scale.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CognitiveDeploymentScaleList",
+      },
+      timeouts: {
+        value: cognitiveDeploymentTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "CognitiveDeploymentTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

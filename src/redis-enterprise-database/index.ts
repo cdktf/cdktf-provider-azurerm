@@ -90,6 +90,31 @@ export function redisEnterpriseDatabaseModuleToTerraform(struct?: RedisEnterpris
   }
 }
 
+
+export function redisEnterpriseDatabaseModuleToHclTerraform(struct?: RedisEnterpriseDatabaseModule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    args: {
+      value: cdktf.stringToHclTerraform(struct!.args),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class RedisEnterpriseDatabaseModuleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -224,6 +249,43 @@ export function redisEnterpriseDatabaseTimeoutsToTerraform(struct?: RedisEnterpr
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function redisEnterpriseDatabaseTimeoutsToHclTerraform(struct?: RedisEnterpriseDatabaseTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class RedisEnterpriseDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -638,5 +700,85 @@ export class RedisEnterpriseDatabase extends cdktf.TerraformResource {
       module: cdktf.listMapper(redisEnterpriseDatabaseModuleToTerraform, true)(this._module.internalValue),
       timeouts: redisEnterpriseDatabaseTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      client_protocol: {
+        value: cdktf.stringToHclTerraform(this._clientProtocol),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      cluster_id: {
+        value: cdktf.stringToHclTerraform(this._clusterId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      clustering_policy: {
+        value: cdktf.stringToHclTerraform(this._clusteringPolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      eviction_policy: {
+        value: cdktf.stringToHclTerraform(this._evictionPolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      linked_database_group_nickname: {
+        value: cdktf.stringToHclTerraform(this._linkedDatabaseGroupNickname),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      linked_database_id: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._linkedDatabaseId),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      port: {
+        value: cdktf.numberToHclTerraform(this._port),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      module: {
+        value: cdktf.listMapperHcl(redisEnterpriseDatabaseModuleToHclTerraform, true)(this._module.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "RedisEnterpriseDatabaseModuleList",
+      },
+      timeouts: {
+        value: redisEnterpriseDatabaseTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "RedisEnterpriseDatabaseTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -98,6 +98,43 @@ export function managementGroupPolicyRemediationTimeoutsToTerraform(struct?: Man
   }
 }
 
+
+export function managementGroupPolicyRemediationTimeoutsToHclTerraform(struct?: ManagementGroupPolicyRemediationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ManagementGroupPolicyRemediationTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -494,5 +531,85 @@ export class ManagementGroupPolicyRemediation extends cdktf.TerraformResource {
       resource_discovery_mode: cdktf.stringToTerraform(this._resourceDiscoveryMode),
       timeouts: managementGroupPolicyRemediationTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      failure_percentage: {
+        value: cdktf.numberToHclTerraform(this._failurePercentage),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location_filters: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._locationFilters),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      management_group_id: {
+        value: cdktf.stringToHclTerraform(this._managementGroupId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      parallel_deployments: {
+        value: cdktf.numberToHclTerraform(this._parallelDeployments),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      policy_assignment_id: {
+        value: cdktf.stringToHclTerraform(this._policyAssignmentId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      policy_definition_id: {
+        value: cdktf.stringToHclTerraform(this._policyDefinitionId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      policy_definition_reference_id: {
+        value: cdktf.stringToHclTerraform(this._policyDefinitionReferenceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_count: {
+        value: cdktf.numberToHclTerraform(this._resourceCount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      resource_discovery_mode: {
+        value: cdktf.stringToHclTerraform(this._resourceDiscoveryMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: managementGroupPolicyRemediationTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ManagementGroupPolicyRemediationTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

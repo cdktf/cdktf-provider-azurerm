@@ -94,6 +94,43 @@ export function storageMoverJobDefinitionTimeoutsToTerraform(struct?: StorageMov
   }
 }
 
+
+export function storageMoverJobDefinitionTimeoutsToHclTerraform(struct?: StorageMoverJobDefinitionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class StorageMoverJobDefinitionTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -466,5 +503,79 @@ export class StorageMoverJobDefinition extends cdktf.TerraformResource {
       target_sub_path: cdktf.stringToTerraform(this._targetSubPath),
       timeouts: storageMoverJobDefinitionTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      agent_name: {
+        value: cdktf.stringToHclTerraform(this._agentName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      copy_mode: {
+        value: cdktf.stringToHclTerraform(this._copyMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source_name: {
+        value: cdktf.stringToHclTerraform(this._sourceName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      source_sub_path: {
+        value: cdktf.stringToHclTerraform(this._sourceSubPath),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_mover_project_id: {
+        value: cdktf.stringToHclTerraform(this._storageMoverProjectId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      target_name: {
+        value: cdktf.stringToHclTerraform(this._targetName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      target_sub_path: {
+        value: cdktf.stringToHclTerraform(this._targetSubPath),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: storageMoverJobDefinitionTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "StorageMoverJobDefinitionTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

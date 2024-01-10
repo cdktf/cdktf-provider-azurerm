@@ -91,6 +91,37 @@ export function consumptionBudgetManagementGroupFilterDimensionToTerraform(struc
   }
 }
 
+
+export function consumptionBudgetManagementGroupFilterDimensionToHclTerraform(struct?: ConsumptionBudgetManagementGroupFilterDimension | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ConsumptionBudgetManagementGroupFilterDimensionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -236,6 +267,37 @@ export function consumptionBudgetManagementGroupFilterNotDimensionToTerraform(st
   }
 }
 
+
+export function consumptionBudgetManagementGroupFilterNotDimensionToHclTerraform(struct?: ConsumptionBudgetManagementGroupFilterNotDimensionOutputReference | ConsumptionBudgetManagementGroupFilterNotDimension): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ConsumptionBudgetManagementGroupFilterNotDimensionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -347,6 +409,37 @@ export function consumptionBudgetManagementGroupFilterNotTagToTerraform(struct?:
     operator: cdktf.stringToTerraform(struct!.operator),
     values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
+}
+
+
+export function consumptionBudgetManagementGroupFilterNotTagToHclTerraform(struct?: ConsumptionBudgetManagementGroupFilterNotTagOutputReference | ConsumptionBudgetManagementGroupFilterNotTag): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ConsumptionBudgetManagementGroupFilterNotTagOutputReference extends cdktf.ComplexObject {
@@ -461,6 +554,31 @@ export function consumptionBudgetManagementGroupFilterNotToTerraform(struct?: Co
   }
 }
 
+
+export function consumptionBudgetManagementGroupFilterNotToHclTerraform(struct?: ConsumptionBudgetManagementGroupFilterNotOutputReference | ConsumptionBudgetManagementGroupFilterNot): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    dimension: {
+      value: consumptionBudgetManagementGroupFilterNotDimensionToHclTerraform(struct!.dimension),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ConsumptionBudgetManagementGroupFilterNotDimensionList",
+    },
+    tag: {
+      value: consumptionBudgetManagementGroupFilterNotTagToHclTerraform(struct!.tag),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ConsumptionBudgetManagementGroupFilterNotTagList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ConsumptionBudgetManagementGroupFilterNotOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -556,6 +674,37 @@ export function consumptionBudgetManagementGroupFilterTagToTerraform(struct?: Co
     operator: cdktf.stringToTerraform(struct!.operator),
     values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
+}
+
+
+export function consumptionBudgetManagementGroupFilterTagToHclTerraform(struct?: ConsumptionBudgetManagementGroupFilterTag | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ConsumptionBudgetManagementGroupFilterTagOutputReference extends cdktf.ComplexObject {
@@ -709,6 +858,37 @@ export function consumptionBudgetManagementGroupFilterToTerraform(struct?: Consu
   }
 }
 
+
+export function consumptionBudgetManagementGroupFilterToHclTerraform(struct?: ConsumptionBudgetManagementGroupFilterOutputReference | ConsumptionBudgetManagementGroupFilter): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    dimension: {
+      value: cdktf.listMapperHcl(consumptionBudgetManagementGroupFilterDimensionToHclTerraform, true)(struct!.dimension),
+      isBlock: true,
+      type: "set",
+      storageClassType: "ConsumptionBudgetManagementGroupFilterDimensionList",
+    },
+    not: {
+      value: consumptionBudgetManagementGroupFilterNotToHclTerraform(struct!.not),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ConsumptionBudgetManagementGroupFilterNotList",
+    },
+    tag: {
+      value: cdktf.listMapperHcl(consumptionBudgetManagementGroupFilterTagToHclTerraform, true)(struct!.tag),
+      isBlock: true,
+      type: "set",
+      storageClassType: "ConsumptionBudgetManagementGroupFilterTagList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ConsumptionBudgetManagementGroupFilterOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -836,6 +1016,49 @@ export function consumptionBudgetManagementGroupNotificationToTerraform(struct?:
     threshold: cdktf.numberToTerraform(struct!.threshold),
     threshold_type: cdktf.stringToTerraform(struct!.thresholdType),
   }
+}
+
+
+export function consumptionBudgetManagementGroupNotificationToHclTerraform(struct?: ConsumptionBudgetManagementGroupNotification | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    contact_emails: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.contactEmails),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    threshold: {
+      value: cdktf.numberToHclTerraform(struct!.threshold),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    threshold_type: {
+      value: cdktf.stringToHclTerraform(struct!.thresholdType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ConsumptionBudgetManagementGroupNotificationOutputReference extends cdktf.ComplexObject {
@@ -1019,6 +1242,31 @@ export function consumptionBudgetManagementGroupTimePeriodToTerraform(struct?: C
   }
 }
 
+
+export function consumptionBudgetManagementGroupTimePeriodToHclTerraform(struct?: ConsumptionBudgetManagementGroupTimePeriodOutputReference | ConsumptionBudgetManagementGroupTimePeriod): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    end_date: {
+      value: cdktf.stringToHclTerraform(struct!.endDate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    start_date: {
+      value: cdktf.stringToHclTerraform(struct!.startDate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ConsumptionBudgetManagementGroupTimePeriodOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1116,6 +1364,43 @@ export function consumptionBudgetManagementGroupTimeoutsToTerraform(struct?: Con
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function consumptionBudgetManagementGroupTimeoutsToHclTerraform(struct?: ConsumptionBudgetManagementGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ConsumptionBudgetManagementGroupTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1472,5 +1757,73 @@ export class ConsumptionBudgetManagementGroup extends cdktf.TerraformResource {
       time_period: consumptionBudgetManagementGroupTimePeriodToTerraform(this._timePeriod.internalValue),
       timeouts: consumptionBudgetManagementGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      amount: {
+        value: cdktf.numberToHclTerraform(this._amount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      etag: {
+        value: cdktf.stringToHclTerraform(this._etag),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      management_group_id: {
+        value: cdktf.stringToHclTerraform(this._managementGroupId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      time_grain: {
+        value: cdktf.stringToHclTerraform(this._timeGrain),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      filter: {
+        value: consumptionBudgetManagementGroupFilterToHclTerraform(this._filter.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ConsumptionBudgetManagementGroupFilterList",
+      },
+      notification: {
+        value: cdktf.listMapperHcl(consumptionBudgetManagementGroupNotificationToHclTerraform, true)(this._notification.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "ConsumptionBudgetManagementGroupNotificationList",
+      },
+      time_period: {
+        value: consumptionBudgetManagementGroupTimePeriodToHclTerraform(this._timePeriod.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ConsumptionBudgetManagementGroupTimePeriodList",
+      },
+      timeouts: {
+        value: consumptionBudgetManagementGroupTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ConsumptionBudgetManagementGroupTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -102,6 +102,55 @@ export function kustoAttachedDatabaseConfigurationSharingToTerraform(struct?: Ku
   }
 }
 
+
+export function kustoAttachedDatabaseConfigurationSharingToHclTerraform(struct?: KustoAttachedDatabaseConfigurationSharingOutputReference | KustoAttachedDatabaseConfigurationSharing): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    external_tables_to_exclude: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.externalTablesToExclude),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    external_tables_to_include: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.externalTablesToInclude),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    materialized_views_to_exclude: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.materializedViewsToExclude),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    materialized_views_to_include: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.materializedViewsToInclude),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    tables_to_exclude: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.tablesToExclude),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    tables_to_include: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.tablesToInclude),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class KustoAttachedDatabaseConfigurationSharingOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -290,6 +339,43 @@ export function kustoAttachedDatabaseConfigurationTimeoutsToTerraform(struct?: K
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function kustoAttachedDatabaseConfigurationTimeoutsToHclTerraform(struct?: KustoAttachedDatabaseConfigurationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class KustoAttachedDatabaseConfigurationTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -648,5 +734,73 @@ export class KustoAttachedDatabaseConfiguration extends cdktf.TerraformResource 
       sharing: kustoAttachedDatabaseConfigurationSharingToTerraform(this._sharing.internalValue),
       timeouts: kustoAttachedDatabaseConfigurationTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      cluster_name: {
+        value: cdktf.stringToHclTerraform(this._clusterName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      cluster_resource_id: {
+        value: cdktf.stringToHclTerraform(this._clusterResourceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      database_name: {
+        value: cdktf.stringToHclTerraform(this._databaseName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      default_principal_modification_kind: {
+        value: cdktf.stringToHclTerraform(this._defaultPrincipalModificationKind),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sharing: {
+        value: kustoAttachedDatabaseConfigurationSharingToHclTerraform(this._sharing.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "KustoAttachedDatabaseConfigurationSharingList",
+      },
+      timeouts: {
+        value: kustoAttachedDatabaseConfigurationTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "KustoAttachedDatabaseConfigurationTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -101,6 +101,37 @@ export function netappSnapshotPolicyDailyScheduleToTerraform(struct?: NetappSnap
   }
 }
 
+
+export function netappSnapshotPolicyDailyScheduleToHclTerraform(struct?: NetappSnapshotPolicyDailyScheduleOutputReference | NetappSnapshotPolicyDailySchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    hour: {
+      value: cdktf.numberToHclTerraform(struct!.hour),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minute: {
+      value: cdktf.numberToHclTerraform(struct!.minute),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    snapshots_to_keep: {
+      value: cdktf.numberToHclTerraform(struct!.snapshotsToKeep),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class NetappSnapshotPolicyDailyScheduleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -206,6 +237,31 @@ export function netappSnapshotPolicyHourlyScheduleToTerraform(struct?: NetappSna
   }
 }
 
+
+export function netappSnapshotPolicyHourlyScheduleToHclTerraform(struct?: NetappSnapshotPolicyHourlyScheduleOutputReference | NetappSnapshotPolicyHourlySchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    minute: {
+      value: cdktf.numberToHclTerraform(struct!.minute),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    snapshots_to_keep: {
+      value: cdktf.numberToHclTerraform(struct!.snapshotsToKeep),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class NetappSnapshotPolicyHourlyScheduleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -300,6 +356,43 @@ export function netappSnapshotPolicyMonthlyScheduleToTerraform(struct?: NetappSn
     minute: cdktf.numberToTerraform(struct!.minute),
     snapshots_to_keep: cdktf.numberToTerraform(struct!.snapshotsToKeep),
   }
+}
+
+
+export function netappSnapshotPolicyMonthlyScheduleToHclTerraform(struct?: NetappSnapshotPolicyMonthlyScheduleOutputReference | NetappSnapshotPolicyMonthlySchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    days_of_month: {
+      value: cdktf.listMapperHcl(cdktf.numberToHclTerraform, false)(struct!.daysOfMonth),
+      isBlock: false,
+      type: "set",
+      storageClassType: "numberList",
+    },
+    hour: {
+      value: cdktf.numberToHclTerraform(struct!.hour),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minute: {
+      value: cdktf.numberToHclTerraform(struct!.minute),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    snapshots_to_keep: {
+      value: cdktf.numberToHclTerraform(struct!.snapshotsToKeep),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NetappSnapshotPolicyMonthlyScheduleOutputReference extends cdktf.ComplexObject {
@@ -434,6 +527,43 @@ export function netappSnapshotPolicyTimeoutsToTerraform(struct?: NetappSnapshotP
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function netappSnapshotPolicyTimeoutsToHclTerraform(struct?: NetappSnapshotPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NetappSnapshotPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -590,6 +720,43 @@ export function netappSnapshotPolicyWeeklyScheduleToTerraform(struct?: NetappSna
     minute: cdktf.numberToTerraform(struct!.minute),
     snapshots_to_keep: cdktf.numberToTerraform(struct!.snapshotsToKeep),
   }
+}
+
+
+export function netappSnapshotPolicyWeeklyScheduleToHclTerraform(struct?: NetappSnapshotPolicyWeeklyScheduleOutputReference | NetappSnapshotPolicyWeeklySchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    days_of_week: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.daysOfWeek),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    hour: {
+      value: cdktf.numberToHclTerraform(struct!.hour),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    minute: {
+      value: cdktf.numberToHclTerraform(struct!.minute),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    snapshots_to_keep: {
+      value: cdktf.numberToHclTerraform(struct!.snapshotsToKeep),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class NetappSnapshotPolicyWeeklyScheduleOutputReference extends cdktf.ComplexObject {
@@ -960,5 +1127,85 @@ export class NetappSnapshotPolicy extends cdktf.TerraformResource {
       timeouts: netappSnapshotPolicyTimeoutsToTerraform(this._timeouts.internalValue),
       weekly_schedule: netappSnapshotPolicyWeeklyScheduleToTerraform(this._weeklySchedule.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      account_name: {
+        value: cdktf.stringToHclTerraform(this._accountName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enabled: {
+        value: cdktf.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      daily_schedule: {
+        value: netappSnapshotPolicyDailyScheduleToHclTerraform(this._dailySchedule.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NetappSnapshotPolicyDailyScheduleList",
+      },
+      hourly_schedule: {
+        value: netappSnapshotPolicyHourlyScheduleToHclTerraform(this._hourlySchedule.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NetappSnapshotPolicyHourlyScheduleList",
+      },
+      monthly_schedule: {
+        value: netappSnapshotPolicyMonthlyScheduleToHclTerraform(this._monthlySchedule.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NetappSnapshotPolicyMonthlyScheduleList",
+      },
+      timeouts: {
+        value: netappSnapshotPolicyTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "NetappSnapshotPolicyTimeouts",
+      },
+      weekly_schedule: {
+        value: netappSnapshotPolicyWeeklyScheduleToHclTerraform(this._weeklySchedule.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "NetappSnapshotPolicyWeeklyScheduleList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

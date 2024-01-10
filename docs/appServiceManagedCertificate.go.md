@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appservicemanagedcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicemanagedcertificate"
 
 appservicemanagedcertificate.NewAppServiceManagedCertificate(scope Construct, id *string, config AppServiceManagedCertificateConfig) AppServiceManagedCertificate
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificate.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificate.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificate.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificate.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificate.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificate.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificate.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -128,6 +129,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificate.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificate.toMetadata"></a>
 
@@ -405,7 +412,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificate.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appservicemanagedcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicemanagedcertificate"
 
 appservicemanagedcertificate.AppServiceManagedCertificate_IsConstruct(x interface{}) *bool
 ```
@@ -437,7 +444,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificate.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appservicemanagedcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicemanagedcertificate"
 
 appservicemanagedcertificate.AppServiceManagedCertificate_IsTerraformElement(x interface{}) *bool
 ```
@@ -451,7 +458,7 @@ appservicemanagedcertificate.AppServiceManagedCertificate_IsTerraformElement(x i
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificate.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appservicemanagedcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicemanagedcertificate"
 
 appservicemanagedcertificate.AppServiceManagedCertificate_IsTerraformResource(x interface{}) *bool
 ```
@@ -465,7 +472,7 @@ appservicemanagedcertificate.AppServiceManagedCertificate_IsTerraformResource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificate.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appservicemanagedcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicemanagedcertificate"
 
 appservicemanagedcertificate.AppServiceManagedCertificate_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -870,7 +877,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificateConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appservicemanagedcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicemanagedcertificate"
 
 &appservicemanagedcertificate.AppServiceManagedCertificateConfig {
 	Connection: interface{},
@@ -883,7 +890,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appservicemanaged
 	CustomHostnameBindingId: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.appServiceManagedCertificate.AppServiceManagedCertificateTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.appServiceManagedCertificate.AppServiceManagedCertificateTimeouts,
 }
 ```
 
@@ -1033,7 +1040,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificateTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appservicemanagedcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicemanagedcertificate"
 
 &appservicemanagedcertificate.AppServiceManagedCertificateTimeouts {
 	Create: *string,
@@ -1109,7 +1116,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appServiceManagedCertificate.AppServiceManagedCertificateTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appservicemanagedcertificate"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appservicemanagedcertificate"
 
 appservicemanagedcertificate.NewAppServiceManagedCertificateTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceManagedCertificateTimeoutsOutputReference
 ```

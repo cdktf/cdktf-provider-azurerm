@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appServiceSlotCustomHostnameBinding.AppServiceSlotCustomHostnameBinding.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appserviceslotcustomhostnamebinding"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appserviceslotcustomhostnamebinding"
 
 appserviceslotcustomhostnamebinding.NewAppServiceSlotCustomHostnameBinding(scope Construct, id *string, config AppServiceSlotCustomHostnameBindingConfig) AppServiceSlotCustomHostnameBinding
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.appServiceSlotCustomHostnameBinding.AppServiceSlotCustomHostnameBinding.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.appServiceSlotCustomHostnameBinding.AppServiceSlotCustomHostnameBinding.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.appServiceSlotCustomHostnameBinding.AppServiceSlotCustomHostnameBinding.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.appServiceSlotCustomHostnameBinding.AppServiceSlotCustomHostnameBinding.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.appServiceSlotCustomHostnameBinding.AppServiceSlotCustomHostnameBinding.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.appServiceSlotCustomHostnameBinding.AppServiceSlotCustomHostnameBinding.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.appServiceSlotCustomHostnameBinding.AppServiceSlotCustomHostnameBinding.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -129,6 +130,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.appServiceSlotCustomHostnameBinding.AppServiceSlotCustomHostnameBinding.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.appServiceSlotCustomHostnameBinding.AppServiceSlotCustomHostnameBinding.toMetadata"></a>
 
@@ -412,7 +419,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.appServiceSlotCustomHostnameBinding.AppServiceSlotCustomHostnameBinding.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appserviceslotcustomhostnamebinding"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appserviceslotcustomhostnamebinding"
 
 appserviceslotcustomhostnamebinding.AppServiceSlotCustomHostnameBinding_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.appServiceSlotCustomHostnameBinding.AppServiceSlotCustomHostnameBinding.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appserviceslotcustomhostnamebinding"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appserviceslotcustomhostnamebinding"
 
 appserviceslotcustomhostnamebinding.AppServiceSlotCustomHostnameBinding_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ appserviceslotcustomhostnamebinding.AppServiceSlotCustomHostnameBinding_IsTerraf
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.appServiceSlotCustomHostnameBinding.AppServiceSlotCustomHostnameBinding.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appserviceslotcustomhostnamebinding"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appserviceslotcustomhostnamebinding"
 
 appserviceslotcustomhostnamebinding.AppServiceSlotCustomHostnameBinding_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +479,7 @@ appserviceslotcustomhostnamebinding.AppServiceSlotCustomHostnameBinding_IsTerraf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.appServiceSlotCustomHostnameBinding.AppServiceSlotCustomHostnameBinding.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appserviceslotcustomhostnamebinding"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appserviceslotcustomhostnamebinding"
 
 appserviceslotcustomhostnamebinding.AppServiceSlotCustomHostnameBinding_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -844,7 +851,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appServiceSlotCustomHostnameBinding.AppServiceSlotCustomHostnameBindingConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appserviceslotcustomhostnamebinding"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appserviceslotcustomhostnamebinding"
 
 &appserviceslotcustomhostnamebinding.AppServiceSlotCustomHostnameBindingConfig {
 	Connection: interface{},
@@ -859,7 +866,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appserviceslotcus
 	Id: *string,
 	SslState: *string,
 	Thumbprint: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.appServiceSlotCustomHostnameBinding.AppServiceSlotCustomHostnameBindingTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.appServiceSlotCustomHostnameBinding.AppServiceSlotCustomHostnameBindingTimeouts,
 }
 ```
 
@@ -1035,7 +1042,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.appServiceSlotCustomHostnameBinding.AppServiceSlotCustomHostnameBindingTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appserviceslotcustomhostnamebinding"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appserviceslotcustomhostnamebinding"
 
 &appserviceslotcustomhostnamebinding.AppServiceSlotCustomHostnameBindingTimeouts {
 	Create: *string,
@@ -1097,7 +1104,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.appServiceSlotCustomHostnameBinding.AppServiceSlotCustomHostnameBindingTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/appserviceslotcustomhostnamebinding"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/appserviceslotcustomhostnamebinding"
 
 appserviceslotcustomhostnamebinding.NewAppServiceSlotCustomHostnameBindingTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) AppServiceSlotCustomHostnameBindingTimeoutsOutputReference
 ```

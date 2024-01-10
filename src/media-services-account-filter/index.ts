@@ -96,6 +96,55 @@ export function mediaServicesAccountFilterPresentationTimeRangeToTerraform(struc
   }
 }
 
+
+export function mediaServicesAccountFilterPresentationTimeRangeToHclTerraform(struct?: MediaServicesAccountFilterPresentationTimeRangeOutputReference | MediaServicesAccountFilterPresentationTimeRange): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    end_in_units: {
+      value: cdktf.numberToHclTerraform(struct!.endInUnits),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    force_end: {
+      value: cdktf.booleanToHclTerraform(struct!.forceEnd),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    live_backoff_in_units: {
+      value: cdktf.numberToHclTerraform(struct!.liveBackoffInUnits),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    presentation_window_in_units: {
+      value: cdktf.numberToHclTerraform(struct!.presentationWindowInUnits),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    start_in_units: {
+      value: cdktf.numberToHclTerraform(struct!.startInUnits),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    unit_timescale_in_milliseconds: {
+      value: cdktf.numberToHclTerraform(struct!.unitTimescaleInMilliseconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MediaServicesAccountFilterPresentationTimeRangeOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -283,6 +332,43 @@ export function mediaServicesAccountFilterTimeoutsToTerraform(struct?: MediaServ
   }
 }
 
+
+export function mediaServicesAccountFilterTimeoutsToHclTerraform(struct?: MediaServicesAccountFilterTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MediaServicesAccountFilterTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -434,6 +520,37 @@ export function mediaServicesAccountFilterTrackSelectionConditionToTerraform(str
   }
 }
 
+
+export function mediaServicesAccountFilterTrackSelectionConditionToHclTerraform(struct?: MediaServicesAccountFilterTrackSelectionCondition | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    operation: {
+      value: cdktf.stringToHclTerraform(struct!.operation),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    property: {
+      value: cdktf.stringToHclTerraform(struct!.property),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MediaServicesAccountFilterTrackSelectionConditionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -566,6 +683,25 @@ export function mediaServicesAccountFilterTrackSelectionToTerraform(struct?: Med
   return {
     condition: cdktf.listMapper(mediaServicesAccountFilterTrackSelectionConditionToTerraform, true)(struct!.condition),
   }
+}
+
+
+export function mediaServicesAccountFilterTrackSelectionToHclTerraform(struct?: MediaServicesAccountFilterTrackSelection | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    condition: {
+      value: cdktf.listMapperHcl(mediaServicesAccountFilterTrackSelectionConditionToHclTerraform, true)(struct!.condition),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MediaServicesAccountFilterTrackSelectionConditionList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MediaServicesAccountFilterTrackSelectionOutputReference extends cdktf.ComplexObject {
@@ -845,5 +981,61 @@ export class MediaServicesAccountFilter extends cdktf.TerraformResource {
       timeouts: mediaServicesAccountFilterTimeoutsToTerraform(this._timeouts.internalValue),
       track_selection: cdktf.listMapper(mediaServicesAccountFilterTrackSelectionToTerraform, true)(this._trackSelection.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      first_quality_bitrate: {
+        value: cdktf.numberToHclTerraform(this._firstQualityBitrate),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      media_services_account_name: {
+        value: cdktf.stringToHclTerraform(this._mediaServicesAccountName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      presentation_time_range: {
+        value: mediaServicesAccountFilterPresentationTimeRangeToHclTerraform(this._presentationTimeRange.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MediaServicesAccountFilterPresentationTimeRangeList",
+      },
+      timeouts: {
+        value: mediaServicesAccountFilterTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MediaServicesAccountFilterTimeouts",
+      },
+      track_selection: {
+        value: cdktf.listMapperHcl(mediaServicesAccountFilterTrackSelectionToHclTerraform, true)(this._trackSelection.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MediaServicesAccountFilterTrackSelectionList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

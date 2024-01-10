@@ -91,6 +91,37 @@ export function consumptionBudgetSubscriptionFilterDimensionToTerraform(struct?:
   }
 }
 
+
+export function consumptionBudgetSubscriptionFilterDimensionToHclTerraform(struct?: ConsumptionBudgetSubscriptionFilterDimension | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ConsumptionBudgetSubscriptionFilterDimensionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -236,6 +267,37 @@ export function consumptionBudgetSubscriptionFilterNotDimensionToTerraform(struc
   }
 }
 
+
+export function consumptionBudgetSubscriptionFilterNotDimensionToHclTerraform(struct?: ConsumptionBudgetSubscriptionFilterNotDimensionOutputReference | ConsumptionBudgetSubscriptionFilterNotDimension): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ConsumptionBudgetSubscriptionFilterNotDimensionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -347,6 +409,37 @@ export function consumptionBudgetSubscriptionFilterNotTagToTerraform(struct?: Co
     operator: cdktf.stringToTerraform(struct!.operator),
     values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
+}
+
+
+export function consumptionBudgetSubscriptionFilterNotTagToHclTerraform(struct?: ConsumptionBudgetSubscriptionFilterNotTagOutputReference | ConsumptionBudgetSubscriptionFilterNotTag): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ConsumptionBudgetSubscriptionFilterNotTagOutputReference extends cdktf.ComplexObject {
@@ -461,6 +554,31 @@ export function consumptionBudgetSubscriptionFilterNotToTerraform(struct?: Consu
   }
 }
 
+
+export function consumptionBudgetSubscriptionFilterNotToHclTerraform(struct?: ConsumptionBudgetSubscriptionFilterNotOutputReference | ConsumptionBudgetSubscriptionFilterNot): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    dimension: {
+      value: consumptionBudgetSubscriptionFilterNotDimensionToHclTerraform(struct!.dimension),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ConsumptionBudgetSubscriptionFilterNotDimensionList",
+    },
+    tag: {
+      value: consumptionBudgetSubscriptionFilterNotTagToHclTerraform(struct!.tag),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ConsumptionBudgetSubscriptionFilterNotTagList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ConsumptionBudgetSubscriptionFilterNotOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -556,6 +674,37 @@ export function consumptionBudgetSubscriptionFilterTagToTerraform(struct?: Consu
     operator: cdktf.stringToTerraform(struct!.operator),
     values: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.values),
   }
+}
+
+
+export function consumptionBudgetSubscriptionFilterTagToHclTerraform(struct?: ConsumptionBudgetSubscriptionFilterTag | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ConsumptionBudgetSubscriptionFilterTagOutputReference extends cdktf.ComplexObject {
@@ -709,6 +858,37 @@ export function consumptionBudgetSubscriptionFilterToTerraform(struct?: Consumpt
   }
 }
 
+
+export function consumptionBudgetSubscriptionFilterToHclTerraform(struct?: ConsumptionBudgetSubscriptionFilterOutputReference | ConsumptionBudgetSubscriptionFilter): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    dimension: {
+      value: cdktf.listMapperHcl(consumptionBudgetSubscriptionFilterDimensionToHclTerraform, true)(struct!.dimension),
+      isBlock: true,
+      type: "set",
+      storageClassType: "ConsumptionBudgetSubscriptionFilterDimensionList",
+    },
+    not: {
+      value: consumptionBudgetSubscriptionFilterNotToHclTerraform(struct!.not),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ConsumptionBudgetSubscriptionFilterNotList",
+    },
+    tag: {
+      value: cdktf.listMapperHcl(consumptionBudgetSubscriptionFilterTagToHclTerraform, true)(struct!.tag),
+      isBlock: true,
+      type: "set",
+      storageClassType: "ConsumptionBudgetSubscriptionFilterTagList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ConsumptionBudgetSubscriptionFilterOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -846,6 +1026,61 @@ export function consumptionBudgetSubscriptionNotificationToTerraform(struct?: Co
     threshold: cdktf.numberToTerraform(struct!.threshold),
     threshold_type: cdktf.stringToTerraform(struct!.thresholdType),
   }
+}
+
+
+export function consumptionBudgetSubscriptionNotificationToHclTerraform(struct?: ConsumptionBudgetSubscriptionNotification | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    contact_emails: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.contactEmails),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    contact_groups: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.contactGroups),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    contact_roles: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.contactRoles),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    operator: {
+      value: cdktf.stringToHclTerraform(struct!.operator),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    threshold: {
+      value: cdktf.numberToHclTerraform(struct!.threshold),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    threshold_type: {
+      value: cdktf.stringToHclTerraform(struct!.thresholdType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ConsumptionBudgetSubscriptionNotificationOutputReference extends cdktf.ComplexObject {
@@ -1076,6 +1311,31 @@ export function consumptionBudgetSubscriptionTimePeriodToTerraform(struct?: Cons
   }
 }
 
+
+export function consumptionBudgetSubscriptionTimePeriodToHclTerraform(struct?: ConsumptionBudgetSubscriptionTimePeriodOutputReference | ConsumptionBudgetSubscriptionTimePeriod): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    end_date: {
+      value: cdktf.stringToHclTerraform(struct!.endDate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    start_date: {
+      value: cdktf.stringToHclTerraform(struct!.startDate),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ConsumptionBudgetSubscriptionTimePeriodOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1173,6 +1433,43 @@ export function consumptionBudgetSubscriptionTimeoutsToTerraform(struct?: Consum
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function consumptionBudgetSubscriptionTimeoutsToHclTerraform(struct?: ConsumptionBudgetSubscriptionTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ConsumptionBudgetSubscriptionTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1529,5 +1826,73 @@ export class ConsumptionBudgetSubscription extends cdktf.TerraformResource {
       time_period: consumptionBudgetSubscriptionTimePeriodToTerraform(this._timePeriod.internalValue),
       timeouts: consumptionBudgetSubscriptionTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      amount: {
+        value: cdktf.numberToHclTerraform(this._amount),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      etag: {
+        value: cdktf.stringToHclTerraform(this._etag),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      subscription_id: {
+        value: cdktf.stringToHclTerraform(this._subscriptionId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      time_grain: {
+        value: cdktf.stringToHclTerraform(this._timeGrain),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      filter: {
+        value: consumptionBudgetSubscriptionFilterToHclTerraform(this._filter.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ConsumptionBudgetSubscriptionFilterList",
+      },
+      notification: {
+        value: cdktf.listMapperHcl(consumptionBudgetSubscriptionNotificationToHclTerraform, true)(this._notification.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "ConsumptionBudgetSubscriptionNotificationList",
+      },
+      time_period: {
+        value: consumptionBudgetSubscriptionTimePeriodToHclTerraform(this._timePeriod.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ConsumptionBudgetSubscriptionTimePeriodList",
+      },
+      timeouts: {
+        value: consumptionBudgetSubscriptionTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ConsumptionBudgetSubscriptionTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

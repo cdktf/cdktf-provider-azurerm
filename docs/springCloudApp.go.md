@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudApp.SpringCloudApp.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudapp"
 
 springcloudapp.NewSpringCloudApp(scope Construct, id *string, config SpringCloudAppConfig) SpringCloudApp
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.springCloudApp.SpringCloudApp.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudApp.SpringCloudApp.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.springCloudApp.SpringCloudApp.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.springCloudApp.SpringCloudApp.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudApp.SpringCloudApp.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudApp.SpringCloudApp.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.springCloudApp.SpringCloudApp.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -140,6 +141,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.springCloudApp.SpringCloudApp.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.springCloudApp.SpringCloudApp.toMetadata"></a>
 
@@ -513,7 +520,7 @@ func ResetTlsEnabled()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.springCloudApp.SpringCloudApp.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudapp"
 
 springcloudapp.SpringCloudApp_IsConstruct(x interface{}) *bool
 ```
@@ -545,7 +552,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.springCloudApp.SpringCloudApp.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudapp"
 
 springcloudapp.SpringCloudApp_IsTerraformElement(x interface{}) *bool
 ```
@@ -559,7 +566,7 @@ springcloudapp.SpringCloudApp_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.springCloudApp.SpringCloudApp.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudapp"
 
 springcloudapp.SpringCloudApp_IsTerraformResource(x interface{}) *bool
 ```
@@ -573,7 +580,7 @@ springcloudapp.SpringCloudApp_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.springCloudApp.SpringCloudApp.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudapp"
 
 springcloudapp.SpringCloudApp_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1132,7 +1139,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudApp.SpringCloudAppConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudapp"
 
 &springcloudapp.SpringCloudAppConfig {
 	Connection: interface{},
@@ -1149,12 +1156,12 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudapp"
 	CustomPersistentDisk: interface{},
 	HttpsOnly: interface{},
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.springCloudApp.SpringCloudAppIdentity,
-	IngressSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.springCloudApp.SpringCloudAppIngressSettings,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.springCloudApp.SpringCloudAppIdentity,
+	IngressSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.springCloudApp.SpringCloudAppIngressSettings,
 	IsPublic: interface{},
-	PersistentDisk: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.springCloudApp.SpringCloudAppPersistentDisk,
+	PersistentDisk: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.springCloudApp.SpringCloudAppPersistentDisk,
 	PublicEndpointEnabled: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.springCloudApp.SpringCloudAppTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.springCloudApp.SpringCloudAppTimeouts,
 	TlsEnabled: interface{},
 }
 ```
@@ -1443,7 +1450,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudApp.SpringCloudAppCustomPersistentDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudapp"
 
 &springcloudapp.SpringCloudAppCustomPersistentDisk {
 	MountPath: *string,
@@ -1531,7 +1538,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudApp.SpringCloudAppIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudapp"
 
 &springcloudapp.SpringCloudAppIdentity {
 	Type: *string,
@@ -1577,7 +1584,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudApp.SpringCloudAppIngressSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudapp"
 
 &springcloudapp.SpringCloudAppIngressSettings {
 	BackendProtocol: *string,
@@ -1665,7 +1672,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudApp.SpringCloudAppPersistentDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudapp"
 
 &springcloudapp.SpringCloudAppPersistentDisk {
 	SizeInGb: *f64,
@@ -1711,7 +1718,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.springCloudApp.SpringCloudAppTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudapp"
 
 &springcloudapp.SpringCloudAppTimeouts {
 	Create: *string,
@@ -1787,7 +1794,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudApp.SpringCloudAppCustomPersistentDiskList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudapp"
 
 springcloudapp.NewSpringCloudAppCustomPersistentDiskList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SpringCloudAppCustomPersistentDiskList
 ```
@@ -1828,10 +1835,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.springCloudApp.SpringCloudAppCustomPersistentDiskList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.springCloudApp.SpringCloudAppCustomPersistentDiskList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudApp.SpringCloudAppCustomPersistentDiskList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.springCloudApp.SpringCloudAppCustomPersistentDiskList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.springCloudApp.SpringCloudAppCustomPersistentDiskList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.springCloudApp.SpringCloudAppCustomPersistentDiskList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.springCloudApp.SpringCloudAppCustomPersistentDiskList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -1930,7 +1954,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudApp.SpringCloudAppCustomPersistentDiskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudapp"
 
 springcloudapp.NewSpringCloudAppCustomPersistentDiskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SpringCloudAppCustomPersistentDiskOutputReference
 ```
@@ -2321,7 +2345,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudApp.SpringCloudAppIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudapp"
 
 springcloudapp.NewSpringCloudAppIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudAppIdentityOutputReference
 ```
@@ -2643,7 +2667,7 @@ func InternalValue() SpringCloudAppIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudApp.SpringCloudAppIngressSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudapp"
 
 springcloudapp.NewSpringCloudAppIngressSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudAppIngressSettingsOutputReference
 ```
@@ -3037,7 +3061,7 @@ func InternalValue() SpringCloudAppIngressSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudApp.SpringCloudAppPersistentDiskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudapp"
 
 springcloudapp.NewSpringCloudAppPersistentDiskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudAppPersistentDiskOutputReference
 ```
@@ -3337,7 +3361,7 @@ func InternalValue() SpringCloudAppPersistentDisk
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.springCloudApp.SpringCloudAppTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/springcloudapp"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/springcloudapp"
 
 springcloudapp.NewSpringCloudAppTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SpringCloudAppTimeoutsOutputReference
 ```

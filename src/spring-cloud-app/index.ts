@@ -119,6 +119,49 @@ export function springCloudAppCustomPersistentDiskToTerraform(struct?: SpringClo
   }
 }
 
+
+export function springCloudAppCustomPersistentDiskToHclTerraform(struct?: SpringCloudAppCustomPersistentDisk | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    mount_options: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.mountOptions),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    mount_path: {
+      value: cdktf.stringToHclTerraform(struct!.mountPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read_only_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.readOnlyEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    share_name: {
+      value: cdktf.stringToHclTerraform(struct!.shareName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    storage_name: {
+      value: cdktf.stringToHclTerraform(struct!.storageName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SpringCloudAppCustomPersistentDiskOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -300,6 +343,31 @@ export function springCloudAppIdentityToTerraform(struct?: SpringCloudAppIdentit
   }
 }
 
+
+export function springCloudAppIdentityToHclTerraform(struct?: SpringCloudAppIdentityOutputReference | SpringCloudAppIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.identityIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SpringCloudAppIdentityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -412,6 +480,49 @@ export function springCloudAppIngressSettingsToTerraform(struct?: SpringCloudApp
     session_affinity: cdktf.stringToTerraform(struct!.sessionAffinity),
     session_cookie_max_age: cdktf.numberToTerraform(struct!.sessionCookieMaxAge),
   }
+}
+
+
+export function springCloudAppIngressSettingsToHclTerraform(struct?: SpringCloudAppIngressSettingsOutputReference | SpringCloudAppIngressSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    backend_protocol: {
+      value: cdktf.stringToHclTerraform(struct!.backendProtocol),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read_timeout_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.readTimeoutInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    send_timeout_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.sendTimeoutInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    session_affinity: {
+      value: cdktf.stringToHclTerraform(struct!.sessionAffinity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    session_cookie_max_age: {
+      value: cdktf.numberToHclTerraform(struct!.sessionCookieMaxAge),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SpringCloudAppIngressSettingsOutputReference extends cdktf.ComplexObject {
@@ -572,6 +683,31 @@ export function springCloudAppPersistentDiskToTerraform(struct?: SpringCloudAppP
   }
 }
 
+
+export function springCloudAppPersistentDiskToHclTerraform(struct?: SpringCloudAppPersistentDiskOutputReference | SpringCloudAppPersistentDisk): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    mount_path: {
+      value: cdktf.stringToHclTerraform(struct!.mountPath),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    size_in_gb: {
+      value: cdktf.numberToHclTerraform(struct!.sizeInGb),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SpringCloudAppPersistentDiskOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -669,6 +805,43 @@ export function springCloudAppTimeoutsToTerraform(struct?: SpringCloudAppTimeout
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function springCloudAppTimeoutsToHclTerraform(struct?: SpringCloudAppTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SpringCloudAppTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1113,5 +1286,97 @@ export class SpringCloudApp extends cdktf.TerraformResource {
       persistent_disk: springCloudAppPersistentDiskToTerraform(this._persistentDisk.internalValue),
       timeouts: springCloudAppTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      addon_json: {
+        value: cdktf.stringToHclTerraform(this._addonJson),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      https_only: {
+        value: cdktf.booleanToHclTerraform(this._httpsOnly),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      is_public: {
+        value: cdktf.booleanToHclTerraform(this._isPublic),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      public_endpoint_enabled: {
+        value: cdktf.booleanToHclTerraform(this._publicEndpointEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service_name: {
+        value: cdktf.stringToHclTerraform(this._serviceName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tls_enabled: {
+        value: cdktf.booleanToHclTerraform(this._tlsEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      custom_persistent_disk: {
+        value: cdktf.listMapperHcl(springCloudAppCustomPersistentDiskToHclTerraform, true)(this._customPersistentDisk.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SpringCloudAppCustomPersistentDiskList",
+      },
+      identity: {
+        value: springCloudAppIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SpringCloudAppIdentityList",
+      },
+      ingress_settings: {
+        value: springCloudAppIngressSettingsToHclTerraform(this._ingressSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SpringCloudAppIngressSettingsList",
+      },
+      persistent_disk: {
+        value: springCloudAppPersistentDiskToHclTerraform(this._persistentDisk.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SpringCloudAppPersistentDiskList",
+      },
+      timeouts: {
+        value: springCloudAppTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SpringCloudAppTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

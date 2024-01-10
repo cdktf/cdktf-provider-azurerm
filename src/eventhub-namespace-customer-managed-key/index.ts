@@ -74,6 +74,43 @@ export function eventhubNamespaceCustomerManagedKeyTimeoutsToTerraform(struct?: 
   }
 }
 
+
+export function eventhubNamespaceCustomerManagedKeyTimeoutsToHclTerraform(struct?: EventhubNamespaceCustomerManagedKeyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class EventhubNamespaceCustomerManagedKeyTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -365,5 +402,49 @@ export class EventhubNamespaceCustomerManagedKey extends cdktf.TerraformResource
       user_assigned_identity_id: cdktf.stringToTerraform(this._userAssignedIdentityId),
       timeouts: eventhubNamespaceCustomerManagedKeyTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      eventhub_namespace_id: {
+        value: cdktf.stringToHclTerraform(this._eventhubNamespaceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      infrastructure_encryption_enabled: {
+        value: cdktf.booleanToHclTerraform(this._infrastructureEncryptionEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      key_vault_key_ids: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._keyVaultKeyIds),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      user_assigned_identity_id: {
+        value: cdktf.stringToHclTerraform(this._userAssignedIdentityId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: eventhubNamespaceCustomerManagedKeyTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "EventhubNamespaceCustomerManagedKeyTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

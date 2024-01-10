@@ -108,6 +108,43 @@ export function cdnFrontdoorOriginPrivateLinkToTerraform(struct?: CdnFrontdoorOr
   }
 }
 
+
+export function cdnFrontdoorOriginPrivateLinkToHclTerraform(struct?: CdnFrontdoorOriginPrivateLinkOutputReference | CdnFrontdoorOriginPrivateLink): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    location: {
+      value: cdktf.stringToHclTerraform(struct!.location),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    private_link_target_id: {
+      value: cdktf.stringToHclTerraform(struct!.privateLinkTargetId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    request_message: {
+      value: cdktf.stringToHclTerraform(struct!.requestMessage),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    target_type: {
+      value: cdktf.stringToHclTerraform(struct!.targetType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CdnFrontdoorOriginPrivateLinkOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -246,6 +283,43 @@ export function cdnFrontdoorOriginTimeoutsToTerraform(struct?: CdnFrontdoorOrigi
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function cdnFrontdoorOriginTimeoutsToHclTerraform(struct?: CdnFrontdoorOriginTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CdnFrontdoorOriginTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -677,5 +751,97 @@ export class CdnFrontdoorOrigin extends cdktf.TerraformResource {
       private_link: cdnFrontdoorOriginPrivateLinkToTerraform(this._privateLink.internalValue),
       timeouts: cdnFrontdoorOriginTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      cdn_frontdoor_origin_group_id: {
+        value: cdktf.stringToHclTerraform(this._cdnFrontdoorOriginGroupId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      certificate_name_check_enabled: {
+        value: cdktf.booleanToHclTerraform(this._certificateNameCheckEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      enabled: {
+        value: cdktf.booleanToHclTerraform(this._enabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      health_probes_enabled: {
+        value: cdktf.booleanToHclTerraform(this._healthProbesEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      host_name: {
+        value: cdktf.stringToHclTerraform(this._hostName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      http_port: {
+        value: cdktf.numberToHclTerraform(this._httpPort),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      https_port: {
+        value: cdktf.numberToHclTerraform(this._httpsPort),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      origin_host_header: {
+        value: cdktf.stringToHclTerraform(this._originHostHeader),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      priority: {
+        value: cdktf.numberToHclTerraform(this._priority),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      weight: {
+        value: cdktf.numberToHclTerraform(this._weight),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      private_link: {
+        value: cdnFrontdoorOriginPrivateLinkToHclTerraform(this._privateLink.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CdnFrontdoorOriginPrivateLinkList",
+      },
+      timeouts: {
+        value: cdnFrontdoorOriginTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "CdnFrontdoorOriginTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

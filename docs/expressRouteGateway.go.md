@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.expressRouteGateway.ExpressRouteGateway.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutegateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/expressroutegateway"
 
 expressroutegateway.NewExpressRouteGateway(scope Construct, id *string, config ExpressRouteGatewayConfig) ExpressRouteGateway
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.expressRouteGateway.ExpressRouteGateway.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteGateway.ExpressRouteGateway.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteGateway.ExpressRouteGateway.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.expressRouteGateway.ExpressRouteGateway.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteGateway.ExpressRouteGateway.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteGateway.ExpressRouteGateway.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.expressRouteGateway.ExpressRouteGateway.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -129,6 +130,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.expressRouteGateway.ExpressRouteGateway.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.expressRouteGateway.ExpressRouteGateway.toMetadata"></a>
 
@@ -412,7 +419,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.expressRouteGateway.ExpressRouteGateway.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutegateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/expressroutegateway"
 
 expressroutegateway.ExpressRouteGateway_IsConstruct(x interface{}) *bool
 ```
@@ -444,7 +451,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.expressRouteGateway.ExpressRouteGateway.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutegateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/expressroutegateway"
 
 expressroutegateway.ExpressRouteGateway_IsTerraformElement(x interface{}) *bool
 ```
@@ -458,7 +465,7 @@ expressroutegateway.ExpressRouteGateway_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.expressRouteGateway.ExpressRouteGateway.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutegateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/expressroutegateway"
 
 expressroutegateway.ExpressRouteGateway_IsTerraformResource(x interface{}) *bool
 ```
@@ -472,7 +479,7 @@ expressroutegateway.ExpressRouteGateway_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.expressRouteGateway.ExpressRouteGateway.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutegateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/expressroutegateway"
 
 expressroutegateway.ExpressRouteGateway_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -899,7 +906,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.expressRouteGateway.ExpressRouteGatewayConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutegateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/expressroutegateway"
 
 &expressroutegateway.ExpressRouteGatewayConfig {
 	Connection: interface{},
@@ -917,7 +924,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutegatew
 	AllowNonVirtualWanTraffic: interface{},
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.expressRouteGateway.ExpressRouteGatewayTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.expressRouteGateway.ExpressRouteGatewayTimeouts,
 }
 ```
 
@@ -1132,7 +1139,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.expressRouteGateway.ExpressRouteGatewayTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutegateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/expressroutegateway"
 
 &expressroutegateway.ExpressRouteGatewayTimeouts {
 	Create: *string,
@@ -1208,7 +1215,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.expressRouteGateway.ExpressRouteGatewayTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/expressroutegateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/expressroutegateway"
 
 expressroutegateway.NewExpressRouteGatewayTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ExpressRouteGatewayTimeoutsOutputReference
 ```

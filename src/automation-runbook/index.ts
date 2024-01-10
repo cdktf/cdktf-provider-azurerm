@@ -118,6 +118,43 @@ export function automationRunbookJobScheduleToTerraform(struct?: AutomationRunbo
   }
 }
 
+
+export function automationRunbookJobScheduleToHclTerraform(struct?: AutomationRunbookJobSchedule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    job_schedule_id: {
+      value: struct!.jobScheduleId === undefined ? null : cdktf.stringToHclTerraform(struct!.jobScheduleId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    parameters: {
+      value: struct!.parameters === undefined ? null : cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.parameters),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    run_on: {
+      value: struct!.runOn === undefined ? null : cdktf.stringToHclTerraform(struct!.runOn),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    schedule_name: {
+      value: struct!.scheduleName === undefined ? null : cdktf.stringToHclTerraform(struct!.scheduleName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AutomationRunbookJobScheduleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -286,6 +323,31 @@ export function automationRunbookDraftContentLinkHashToTerraform(struct?: Automa
   }
 }
 
+
+export function automationRunbookDraftContentLinkHashToHclTerraform(struct?: AutomationRunbookDraftContentLinkHashOutputReference | AutomationRunbookDraftContentLinkHash): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    algorithm: {
+      value: cdktf.stringToHclTerraform(struct!.algorithm),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AutomationRunbookDraftContentLinkHashOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -377,6 +439,37 @@ export function automationRunbookDraftContentLinkToTerraform(struct?: Automation
     version: cdktf.stringToTerraform(struct!.version),
     hash: automationRunbookDraftContentLinkHashToTerraform(struct!.hash),
   }
+}
+
+
+export function automationRunbookDraftContentLinkToHclTerraform(struct?: AutomationRunbookDraftContentLinkOutputReference | AutomationRunbookDraftContentLink): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    uri: {
+      value: cdktf.stringToHclTerraform(struct!.uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    version: {
+      value: cdktf.stringToHclTerraform(struct!.version),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    hash: {
+      value: automationRunbookDraftContentLinkHashToHclTerraform(struct!.hash),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AutomationRunbookDraftContentLinkHashList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AutomationRunbookDraftContentLinkOutputReference extends cdktf.ComplexObject {
@@ -503,6 +596,49 @@ export function automationRunbookDraftParametersToTerraform(struct?: AutomationR
     position: cdktf.numberToTerraform(struct!.position),
     type: cdktf.stringToTerraform(struct!.type),
   }
+}
+
+
+export function automationRunbookDraftParametersToHclTerraform(struct?: AutomationRunbookDraftParameters | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    default_value: {
+      value: cdktf.stringToHclTerraform(struct!.defaultValue),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key: {
+      value: cdktf.stringToHclTerraform(struct!.key),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    mandatory: {
+      value: cdktf.booleanToHclTerraform(struct!.mandatory),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    position: {
+      value: cdktf.numberToHclTerraform(struct!.position),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AutomationRunbookDraftParametersOutputReference extends cdktf.ComplexObject {
@@ -703,6 +839,43 @@ export function automationRunbookDraftToTerraform(struct?: AutomationRunbookDraf
   }
 }
 
+
+export function automationRunbookDraftToHclTerraform(struct?: AutomationRunbookDraftOutputReference | AutomationRunbookDraft): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    edit_mode_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.editModeEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    output_types: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.outputTypes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    content_link: {
+      value: automationRunbookDraftContentLinkToHclTerraform(struct!.contentLink),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AutomationRunbookDraftContentLinkList",
+    },
+    parameters: {
+      value: cdktf.listMapperHcl(automationRunbookDraftParametersToHclTerraform, true)(struct!.parameters),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AutomationRunbookDraftParametersList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AutomationRunbookDraftOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -849,6 +1022,31 @@ export function automationRunbookPublishContentLinkHashToTerraform(struct?: Auto
   }
 }
 
+
+export function automationRunbookPublishContentLinkHashToHclTerraform(struct?: AutomationRunbookPublishContentLinkHashOutputReference | AutomationRunbookPublishContentLinkHash): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    algorithm: {
+      value: cdktf.stringToHclTerraform(struct!.algorithm),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    value: {
+      value: cdktf.stringToHclTerraform(struct!.value),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AutomationRunbookPublishContentLinkHashOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -940,6 +1138,37 @@ export function automationRunbookPublishContentLinkToTerraform(struct?: Automati
     version: cdktf.stringToTerraform(struct!.version),
     hash: automationRunbookPublishContentLinkHashToTerraform(struct!.hash),
   }
+}
+
+
+export function automationRunbookPublishContentLinkToHclTerraform(struct?: AutomationRunbookPublishContentLinkOutputReference | AutomationRunbookPublishContentLink): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    uri: {
+      value: cdktf.stringToHclTerraform(struct!.uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    version: {
+      value: cdktf.stringToHclTerraform(struct!.version),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    hash: {
+      value: automationRunbookPublishContentLinkHashToHclTerraform(struct!.hash),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AutomationRunbookPublishContentLinkHashList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AutomationRunbookPublishContentLinkOutputReference extends cdktf.ComplexObject {
@@ -1061,6 +1290,43 @@ export function automationRunbookTimeoutsToTerraform(struct?: AutomationRunbookT
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function automationRunbookTimeoutsToHclTerraform(struct?: AutomationRunbookTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AutomationRunbookTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1519,5 +1785,109 @@ export class AutomationRunbook extends cdktf.TerraformResource {
       publish_content_link: automationRunbookPublishContentLinkToTerraform(this._publishContentLink.internalValue),
       timeouts: automationRunbookTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      automation_account_name: {
+        value: cdktf.stringToHclTerraform(this._automationAccountName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      content: {
+        value: cdktf.stringToHclTerraform(this._content),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      job_schedule: {
+        value: cdktf.listMapperHcl(automationRunbookJobScheduleToHclTerraform, false)(this._jobSchedule.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "AutomationRunbookJobScheduleList",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      log_activity_trace_level: {
+        value: cdktf.numberToHclTerraform(this._logActivityTraceLevel),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      log_progress: {
+        value: cdktf.booleanToHclTerraform(this._logProgress),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      log_verbose: {
+        value: cdktf.booleanToHclTerraform(this._logVerbose),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      runbook_type: {
+        value: cdktf.stringToHclTerraform(this._runbookType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      draft: {
+        value: automationRunbookDraftToHclTerraform(this._draft.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AutomationRunbookDraftList",
+      },
+      publish_content_link: {
+        value: automationRunbookPublishContentLinkToHclTerraform(this._publishContentLink.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AutomationRunbookPublishContentLinkList",
+      },
+      timeouts: {
+        value: automationRunbookTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AutomationRunbookTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

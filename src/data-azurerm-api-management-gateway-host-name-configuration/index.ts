@@ -55,6 +55,25 @@ export function dataAzurermApiManagementGatewayHostNameConfigurationTimeoutsToTe
   }
 }
 
+
+export function dataAzurermApiManagementGatewayHostNameConfigurationTimeoutsToHclTerraform(struct?: DataAzurermApiManagementGatewayHostNameConfigurationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataAzurermApiManagementGatewayHostNameConfigurationTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -289,5 +308,43 @@ export class DataAzurermApiManagementGatewayHostNameConfiguration extends cdktf.
       name: cdktf.stringToTerraform(this._name),
       timeouts: dataAzurermApiManagementGatewayHostNameConfigurationTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      api_management_id: {
+        value: cdktf.stringToHclTerraform(this._apiManagementId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      gateway_name: {
+        value: cdktf.stringToHclTerraform(this._gatewayName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: dataAzurermApiManagementGatewayHostNameConfigurationTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataAzurermApiManagementGatewayHostNameConfigurationTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -42,6 +42,17 @@ export function dataAzurermAutomationVariablesBoolToTerraform(struct?: DataAzure
   }
 }
 
+
+export function dataAzurermAutomationVariablesBoolToHclTerraform(struct?: DataAzurermAutomationVariablesBool): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermAutomationVariablesBoolOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -124,6 +135,17 @@ export function dataAzurermAutomationVariablesDatetimeToTerraform(struct?: DataA
   }
   return {
   }
+}
+
+
+export function dataAzurermAutomationVariablesDatetimeToHclTerraform(struct?: DataAzurermAutomationVariablesDatetime): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermAutomationVariablesDatetimeOutputReference extends cdktf.ComplexObject {
@@ -210,6 +232,17 @@ export function dataAzurermAutomationVariablesEncryptedToTerraform(struct?: Data
   }
 }
 
+
+export function dataAzurermAutomationVariablesEncryptedToHclTerraform(struct?: DataAzurermAutomationVariablesEncrypted): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermAutomationVariablesEncryptedOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -292,6 +325,17 @@ export function dataAzurermAutomationVariablesIntToTerraform(struct?: DataAzurer
   }
   return {
   }
+}
+
+
+export function dataAzurermAutomationVariablesIntToHclTerraform(struct?: DataAzurermAutomationVariablesInt): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermAutomationVariablesIntOutputReference extends cdktf.ComplexObject {
@@ -378,6 +422,17 @@ export function dataAzurermAutomationVariablesNullToTerraform(struct?: DataAzure
   }
 }
 
+
+export function dataAzurermAutomationVariablesNullToHclTerraform(struct?: DataAzurermAutomationVariablesNull): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermAutomationVariablesNullOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -462,6 +517,17 @@ export function dataAzurermAutomationVariablesObjectToTerraform(struct?: DataAzu
   }
 }
 
+
+export function dataAzurermAutomationVariablesObjectToHclTerraform(struct?: DataAzurermAutomationVariablesObject): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermAutomationVariablesObjectOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -544,6 +610,17 @@ export function dataAzurermAutomationVariablesStringToTerraform(struct?: DataAzu
   }
   return {
   }
+}
+
+
+export function dataAzurermAutomationVariablesStringToHclTerraform(struct?: DataAzurermAutomationVariablesString): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermAutomationVariablesStringOutputReference extends cdktf.ComplexObject {
@@ -633,6 +710,25 @@ export function dataAzurermAutomationVariablesTimeoutsToTerraform(struct?: DataA
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function dataAzurermAutomationVariablesTimeoutsToHclTerraform(struct?: DataAzurermAutomationVariablesTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataAzurermAutomationVariablesTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -851,5 +947,31 @@ export class DataAzurermAutomationVariables extends cdktf.TerraformDataSource {
       id: cdktf.stringToTerraform(this._id),
       timeouts: dataAzurermAutomationVariablesTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      automation_account_id: {
+        value: cdktf.stringToHclTerraform(this._automationAccountId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: dataAzurermAutomationVariablesTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataAzurermAutomationVariablesTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

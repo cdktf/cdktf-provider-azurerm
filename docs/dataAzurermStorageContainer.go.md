@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStorageContainer.DataAzurermStorageContainer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstoragecontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermstoragecontainer"
 
 dataazurermstoragecontainer.NewDataAzurermStorageContainer(scope Construct, id *string, config DataAzurermStorageContainerConfig) DataAzurermStorageContainer
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageContainer.DataAzurermStorageContainer.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageContainer.DataAzurermStorageContainer.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageContainer.DataAzurermStorageContainer.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageContainer.DataAzurermStorageContainer.toHclTerraform">ToHclTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageContainer.DataAzurermStorageContainer.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageContainer.DataAzurermStorageContainer.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermStorageContainer.DataAzurermStorageContainer.getAnyMapAttribute">GetAnyMapAttribute</a></code> | *No description.* |
@@ -122,6 +123,14 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.dataAzurermStorageContainer.DataAzurermStorageContainer.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
+
+Adds this resource to the terraform JSON output.
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.dataAzurermStorageContainer.DataAzurermStorageContainer.toMetadata"></a>
 
@@ -301,7 +310,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermStorageContainer.DataAzurermStorageContainer.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstoragecontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermstoragecontainer"
 
 dataazurermstoragecontainer.DataAzurermStorageContainer_IsConstruct(x interface{}) *bool
 ```
@@ -333,7 +342,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermStorageContainer.DataAzurermStorageContainer.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstoragecontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermstoragecontainer"
 
 dataazurermstoragecontainer.DataAzurermStorageContainer_IsTerraformElement(x interface{}) *bool
 ```
@@ -347,7 +356,7 @@ dataazurermstoragecontainer.DataAzurermStorageContainer_IsTerraformElement(x int
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermStorageContainer.DataAzurermStorageContainer.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstoragecontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermstoragecontainer"
 
 dataazurermstoragecontainer.DataAzurermStorageContainer_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -361,7 +370,7 @@ dataazurermstoragecontainer.DataAzurermStorageContainer_IsTerraformDataSource(x 
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermStorageContainer.DataAzurermStorageContainer.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstoragecontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermstoragecontainer"
 
 dataazurermstoragecontainer.DataAzurermStorageContainer_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -722,7 +731,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermStorageContainer.DataAzurermStorageContainerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstoragecontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermstoragecontainer"
 
 &dataazurermstoragecontainer.DataAzurermStorageContainerConfig {
 	Connection: interface{},
@@ -736,7 +745,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstorag
 	StorageAccountName: *string,
 	Id: *string,
 	Metadata: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataAzurermStorageContainer.DataAzurermStorageContainerTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataAzurermStorageContainer.DataAzurermStorageContainerTimeouts,
 }
 ```
 
@@ -899,7 +908,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermStorageContainer.DataAzurermStorageContainerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstoragecontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermstoragecontainer"
 
 &dataazurermstoragecontainer.DataAzurermStorageContainerTimeouts {
 	Read: *string,
@@ -933,7 +942,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermStorageContainer.DataAzurermStorageContainerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/dataazurermstoragecontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/dataazurermstoragecontainer"
 
 dataazurermstoragecontainer.NewDataAzurermStorageContainerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermStorageContainerTimeoutsOutputReference
 ```

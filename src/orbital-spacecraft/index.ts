@@ -97,6 +97,49 @@ export function orbitalSpacecraftLinksToTerraform(struct?: OrbitalSpacecraftLink
   }
 }
 
+
+export function orbitalSpacecraftLinksToHclTerraform(struct?: OrbitalSpacecraftLinks | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    bandwidth_mhz: {
+      value: cdktf.numberToHclTerraform(struct!.bandwidthMhz),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    center_frequency_mhz: {
+      value: cdktf.numberToHclTerraform(struct!.centerFrequencyMhz),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    direction: {
+      value: cdktf.stringToHclTerraform(struct!.direction),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    polarization: {
+      value: cdktf.stringToHclTerraform(struct!.polarization),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class OrbitalSpacecraftLinksOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -280,6 +323,43 @@ export function orbitalSpacecraftTimeoutsToTerraform(struct?: OrbitalSpacecraftT
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function orbitalSpacecraftTimeoutsToHclTerraform(struct?: OrbitalSpacecraftTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class OrbitalSpacecraftTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -630,5 +710,73 @@ export class OrbitalSpacecraft extends cdktf.TerraformResource {
       links: cdktf.listMapper(orbitalSpacecraftLinksToTerraform, true)(this._links.internalValue),
       timeouts: orbitalSpacecraftTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      norad_id: {
+        value: cdktf.stringToHclTerraform(this._noradId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      title_line: {
+        value: cdktf.stringToHclTerraform(this._titleLine),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      two_line_elements: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._twoLineElements),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      links: {
+        value: cdktf.listMapperHcl(orbitalSpacecraftLinksToHclTerraform, true)(this._links.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "OrbitalSpacecraftLinksList",
+      },
+      timeouts: {
+        value: orbitalSpacecraftTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "OrbitalSpacecraftTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

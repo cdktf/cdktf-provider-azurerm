@@ -97,6 +97,37 @@ export function maintenanceConfigurationInstallPatchesLinuxToTerraform(struct?: 
   }
 }
 
+
+export function maintenanceConfigurationInstallPatchesLinuxToHclTerraform(struct?: MaintenanceConfigurationInstallPatchesLinux | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    classifications_to_include: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.classificationsToInclude),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    package_names_mask_to_exclude: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.packageNamesMaskToExclude),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    package_names_mask_to_include: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.packageNamesMaskToInclude),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MaintenanceConfigurationInstallPatchesLinuxOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -246,6 +277,37 @@ export function maintenanceConfigurationInstallPatchesWindowsToTerraform(struct?
     kb_numbers_to_exclude: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.kbNumbersToExclude),
     kb_numbers_to_include: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.kbNumbersToInclude),
   }
+}
+
+
+export function maintenanceConfigurationInstallPatchesWindowsToHclTerraform(struct?: MaintenanceConfigurationInstallPatchesWindows | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    classifications_to_include: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.classificationsToInclude),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    kb_numbers_to_exclude: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.kbNumbersToExclude),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    kb_numbers_to_include: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.kbNumbersToInclude),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MaintenanceConfigurationInstallPatchesWindowsOutputReference extends cdktf.ComplexObject {
@@ -403,6 +465,37 @@ export function maintenanceConfigurationInstallPatchesToTerraform(struct?: Maint
   }
 }
 
+
+export function maintenanceConfigurationInstallPatchesToHclTerraform(struct?: MaintenanceConfigurationInstallPatchesOutputReference | MaintenanceConfigurationInstallPatches): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    reboot: {
+      value: cdktf.stringToHclTerraform(struct!.reboot),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    linux: {
+      value: cdktf.listMapperHcl(maintenanceConfigurationInstallPatchesLinuxToHclTerraform, true)(struct!.linux),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MaintenanceConfigurationInstallPatchesLinuxList",
+    },
+    windows: {
+      value: cdktf.listMapperHcl(maintenanceConfigurationInstallPatchesWindowsToHclTerraform, true)(struct!.windows),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MaintenanceConfigurationInstallPatchesWindowsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MaintenanceConfigurationInstallPatchesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -525,6 +618,43 @@ export function maintenanceConfigurationTimeoutsToTerraform(struct?: Maintenance
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function maintenanceConfigurationTimeoutsToHclTerraform(struct?: MaintenanceConfigurationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MaintenanceConfigurationTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -686,6 +816,49 @@ export function maintenanceConfigurationWindowToTerraform(struct?: MaintenanceCo
     start_date_time: cdktf.stringToTerraform(struct!.startDateTime),
     time_zone: cdktf.stringToTerraform(struct!.timeZone),
   }
+}
+
+
+export function maintenanceConfigurationWindowToHclTerraform(struct?: MaintenanceConfigurationWindowOutputReference | MaintenanceConfigurationWindow): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    duration: {
+      value: cdktf.stringToHclTerraform(struct!.duration),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    expiration_date_time: {
+      value: cdktf.stringToHclTerraform(struct!.expirationDateTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    recur_every: {
+      value: cdktf.stringToHclTerraform(struct!.recurEvery),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    start_date_time: {
+      value: cdktf.stringToHclTerraform(struct!.startDateTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    time_zone: {
+      value: cdktf.stringToHclTerraform(struct!.timeZone),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MaintenanceConfigurationWindowOutputReference extends cdktf.ComplexObject {
@@ -1087,5 +1260,85 @@ export class MaintenanceConfiguration extends cdktf.TerraformResource {
       timeouts: maintenanceConfigurationTimeoutsToTerraform(this._timeouts.internalValue),
       window: maintenanceConfigurationWindowToTerraform(this._window.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      in_guest_user_patch_mode: {
+        value: cdktf.stringToHclTerraform(this._inGuestUserPatchMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      properties: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._properties),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      scope: {
+        value: cdktf.stringToHclTerraform(this._scope),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      visibility: {
+        value: cdktf.stringToHclTerraform(this._visibility),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      install_patches: {
+        value: maintenanceConfigurationInstallPatchesToHclTerraform(this._installPatches.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MaintenanceConfigurationInstallPatchesList",
+      },
+      timeouts: {
+        value: maintenanceConfigurationTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MaintenanceConfigurationTimeouts",
+      },
+      window: {
+        value: maintenanceConfigurationWindowToHclTerraform(this._window.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MaintenanceConfigurationWindowList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

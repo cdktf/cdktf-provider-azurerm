@@ -90,6 +90,31 @@ export function monitorAlertPrometheusRuleGroupRuleActionToTerraform(struct?: Mo
   }
 }
 
+
+export function monitorAlertPrometheusRuleGroupRuleActionToHclTerraform(struct?: MonitorAlertPrometheusRuleGroupRuleAction | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    action_group_id: {
+      value: cdktf.stringToHclTerraform(struct!.actionGroupId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    action_properties: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.actionProperties),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MonitorAlertPrometheusRuleGroupRuleActionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -209,6 +234,31 @@ export function monitorAlertPrometheusRuleGroupRuleAlertResolutionToTerraform(st
     auto_resolved: cdktf.booleanToTerraform(struct!.autoResolved),
     time_to_resolve: cdktf.stringToTerraform(struct!.timeToResolve),
   }
+}
+
+
+export function monitorAlertPrometheusRuleGroupRuleAlertResolutionToHclTerraform(struct?: MonitorAlertPrometheusRuleGroupRuleAlertResolutionOutputReference | MonitorAlertPrometheusRuleGroupRuleAlertResolution): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    auto_resolved: {
+      value: cdktf.booleanToHclTerraform(struct!.autoResolved),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    time_to_resolve: {
+      value: cdktf.stringToHclTerraform(struct!.timeToResolve),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorAlertPrometheusRuleGroupRuleAlertResolutionOutputReference extends cdktf.ComplexObject {
@@ -345,6 +395,79 @@ export function monitorAlertPrometheusRuleGroupRuleToTerraform(struct?: MonitorA
     action: cdktf.listMapper(monitorAlertPrometheusRuleGroupRuleActionToTerraform, true)(struct!.action),
     alert_resolution: monitorAlertPrometheusRuleGroupRuleAlertResolutionToTerraform(struct!.alertResolution),
   }
+}
+
+
+export function monitorAlertPrometheusRuleGroupRuleToHclTerraform(struct?: MonitorAlertPrometheusRuleGroupRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    alert: {
+      value: cdktf.stringToHclTerraform(struct!.alert),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    annotations: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.annotations),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.enabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    expression: {
+      value: cdktf.stringToHclTerraform(struct!.expression),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    for: {
+      value: cdktf.stringToHclTerraform(struct!.for),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    labels: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.labels),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    record: {
+      value: cdktf.stringToHclTerraform(struct!.record),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    severity: {
+      value: cdktf.numberToHclTerraform(struct!.severity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    action: {
+      value: cdktf.listMapperHcl(monitorAlertPrometheusRuleGroupRuleActionToHclTerraform, true)(struct!.action),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitorAlertPrometheusRuleGroupRuleActionList",
+    },
+    alert_resolution: {
+      value: monitorAlertPrometheusRuleGroupRuleAlertResolutionToHclTerraform(struct!.alertResolution),
+      isBlock: true,
+      type: "list",
+      storageClassType: "MonitorAlertPrometheusRuleGroupRuleAlertResolutionList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorAlertPrometheusRuleGroupRuleOutputReference extends cdktf.ComplexObject {
@@ -652,6 +775,43 @@ export function monitorAlertPrometheusRuleGroupTimeoutsToTerraform(struct?: Moni
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function monitorAlertPrometheusRuleGroupTimeoutsToHclTerraform(struct?: MonitorAlertPrometheusRuleGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class MonitorAlertPrometheusRuleGroupTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1044,5 +1204,85 @@ export class MonitorAlertPrometheusRuleGroup extends cdktf.TerraformResource {
       rule: cdktf.listMapper(monitorAlertPrometheusRuleGroupRuleToTerraform, true)(this._rule.internalValue),
       timeouts: monitorAlertPrometheusRuleGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      cluster_name: {
+        value: cdktf.stringToHclTerraform(this._clusterName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      interval: {
+        value: cdktf.stringToHclTerraform(this._interval),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      rule_group_enabled: {
+        value: cdktf.booleanToHclTerraform(this._ruleGroupEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      scopes: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._scopes),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      rule: {
+        value: cdktf.listMapperHcl(monitorAlertPrometheusRuleGroupRuleToHclTerraform, true)(this._rule.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MonitorAlertPrometheusRuleGroupRuleList",
+      },
+      timeouts: {
+        value: monitorAlertPrometheusRuleGroupTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MonitorAlertPrometheusRuleGroupTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

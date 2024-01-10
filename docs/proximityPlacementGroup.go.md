@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.proximityPlacementGroup.ProximityPlacementGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/proximityplacementgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/proximityplacementgroup"
 
 proximityplacementgroup.NewProximityPlacementGroup(scope Construct, id *string, config ProximityPlacementGroupConfig) ProximityPlacementGroup
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.proximityPlacementGroup.ProximityPlacementGroup.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.proximityPlacementGroup.ProximityPlacementGroup.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.proximityPlacementGroup.ProximityPlacementGroup.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.proximityPlacementGroup.ProximityPlacementGroup.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.proximityPlacementGroup.ProximityPlacementGroup.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.proximityPlacementGroup.ProximityPlacementGroup.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.proximityPlacementGroup.ProximityPlacementGroup.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -130,6 +131,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.proximityPlacementGroup.ProximityPlacementGroup.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.proximityPlacementGroup.ProximityPlacementGroup.toMetadata"></a>
 
@@ -419,7 +426,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.proximityPlacementGroup.ProximityPlacementGroup.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/proximityplacementgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/proximityplacementgroup"
 
 proximityplacementgroup.ProximityPlacementGroup_IsConstruct(x interface{}) *bool
 ```
@@ -451,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.proximityPlacementGroup.ProximityPlacementGroup.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/proximityplacementgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/proximityplacementgroup"
 
 proximityplacementgroup.ProximityPlacementGroup_IsTerraformElement(x interface{}) *bool
 ```
@@ -465,7 +472,7 @@ proximityplacementgroup.ProximityPlacementGroup_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.proximityPlacementGroup.ProximityPlacementGroup.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/proximityplacementgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/proximityplacementgroup"
 
 proximityplacementgroup.ProximityPlacementGroup_IsTerraformResource(x interface{}) *bool
 ```
@@ -479,7 +486,7 @@ proximityplacementgroup.ProximityPlacementGroup_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.proximityPlacementGroup.ProximityPlacementGroup.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/proximityplacementgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/proximityplacementgroup"
 
 proximityplacementgroup.ProximityPlacementGroup_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -884,7 +891,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.proximityPlacementGroup.ProximityPlacementGroupConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/proximityplacementgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/proximityplacementgroup"
 
 &proximityplacementgroup.ProximityPlacementGroupConfig {
 	Connection: interface{},
@@ -900,7 +907,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/proximityplacemen
 	AllowedVmSizes: *[]*string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.proximityPlacementGroup.ProximityPlacementGroupTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.proximityPlacementGroup.ProximityPlacementGroupTimeouts,
 	Zone: *string,
 }
 ```
@@ -1103,7 +1110,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.proximityPlacementGroup.ProximityPlacementGroupTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/proximityplacementgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/proximityplacementgroup"
 
 &proximityplacementgroup.ProximityPlacementGroupTimeouts {
 	Create: *string,
@@ -1179,7 +1186,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.proximityPlacementGroup.ProximityPlacementGroupTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/proximityplacementgroup"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/proximityplacementgroup"
 
 proximityplacementgroup.NewProximityPlacementGroupTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ProximityPlacementGroupTimeoutsOutputReference
 ```

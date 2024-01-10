@@ -51,6 +51,25 @@ export function dataAzurermBillingMpaAccountScopeTimeoutsToTerraform(struct?: Da
   }
 }
 
+
+export function dataAzurermBillingMpaAccountScopeTimeoutsToHclTerraform(struct?: DataAzurermBillingMpaAccountScopeTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataAzurermBillingMpaAccountScopeTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -240,5 +259,37 @@ export class DataAzurermBillingMpaAccountScope extends cdktf.TerraformDataSource
       id: cdktf.stringToTerraform(this._id),
       timeouts: dataAzurermBillingMpaAccountScopeTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      billing_account_name: {
+        value: cdktf.stringToHclTerraform(this._billingAccountName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      customer_name: {
+        value: cdktf.stringToHclTerraform(this._customerName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: dataAzurermBillingMpaAccountScopeTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataAzurermBillingMpaAccountScopeTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

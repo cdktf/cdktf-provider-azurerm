@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransform.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransform(scope Construct, id *string, config MediaTransformConfig) MediaTransform
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransform.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransform.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransform.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransform.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransform.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransform.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransform.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -130,6 +131,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.mediaTransform.MediaTransform.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.mediaTransform.MediaTransform.toMetadata"></a>
 
@@ -425,7 +432,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mediaTransform.MediaTransform.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.MediaTransform_IsConstruct(x interface{}) *bool
 ```
@@ -457,7 +464,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mediaTransform.MediaTransform.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.MediaTransform_IsTerraformElement(x interface{}) *bool
 ```
@@ -471,7 +478,7 @@ mediatransform.MediaTransform_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mediaTransform.MediaTransform.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.MediaTransform_IsTerraformResource(x interface{}) *bool
 ```
@@ -485,7 +492,7 @@ mediatransform.MediaTransform_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.mediaTransform.MediaTransform.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.MediaTransform_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -868,7 +875,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformConfig {
 	Connection: interface{},
@@ -884,7 +891,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
 	Description: *string,
 	Id: *string,
 	Output: interface{},
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformTimeouts,
 }
 ```
 
@@ -1075,16 +1082,16 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutput.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutput {
-	AudioAnalyzerPreset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputAudioAnalyzerPreset,
-	BuiltinPreset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputBuiltinPreset,
-	CustomPreset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputCustomPreset,
-	FaceDetectorPreset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputFaceDetectorPreset,
+	AudioAnalyzerPreset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputAudioAnalyzerPreset,
+	BuiltinPreset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputBuiltinPreset,
+	CustomPreset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputCustomPreset,
+	FaceDetectorPreset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputFaceDetectorPreset,
 	OnErrorAction: *string,
 	RelativePriority: *string,
-	VideoAnalyzerPreset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputVideoAnalyzerPreset,
+	VideoAnalyzerPreset: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputVideoAnalyzerPreset,
 }
 ```
 
@@ -1201,7 +1208,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputAudioAnalyzerPreset.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputAudioAnalyzerPreset {
 	AudioAnalysisMode: *string,
@@ -1261,11 +1268,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPreset.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputBuiltinPreset {
 	PresetName: *string,
-	PresetConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration,
+	PresetConfiguration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration,
 }
 ```
 
@@ -1309,7 +1316,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputBuiltinPresetPresetConfiguration {
 	Complexity: *string,
@@ -1439,13 +1446,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPreset.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPreset {
 	Codec: interface{},
 	Format: interface{},
 	ExperimentalOptions: *map[string]*string,
-	Filter: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputCustomPresetFilter,
+	Filter: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputCustomPresetFilter,
 }
 ```
 
@@ -1519,17 +1526,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodec.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetCodec {
-	AacAudio: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputCustomPresetCodecAacAudio,
-	CopyAudio: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputCustomPresetCodecCopyAudio,
-	CopyVideo: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputCustomPresetCodecCopyVideo,
-	DdAudio: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputCustomPresetCodecDdAudio,
-	H264Video: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video,
-	H265Video: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video,
-	JpgImage: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage,
-	PngImage: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage,
+	AacAudio: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputCustomPresetCodecAacAudio,
+	CopyAudio: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputCustomPresetCodecCopyAudio,
+	CopyVideo: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputCustomPresetCodecCopyVideo,
+	DdAudio: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputCustomPresetCodecDdAudio,
+	H264Video: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video,
+	H265Video: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video,
+	JpgImage: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage,
+	PngImage: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage,
 }
 ```
 
@@ -1665,7 +1672,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecAacAudio.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetCodecAacAudio {
 	Bitrate: *f64,
@@ -1753,7 +1760,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecCopyAudio.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetCodecCopyAudio {
 	Label: *string,
@@ -1785,7 +1792,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecCopyVideo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetCodecCopyVideo {
 	Label: *string,
@@ -1817,7 +1824,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecDdAudio.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetCodecDdAudio {
 	Bitrate: *f64,
@@ -1891,7 +1898,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264Video.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetCodecH264Video {
 	Complexity: *string,
@@ -2023,7 +2030,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetCodecH264VideoLayer {
 	Bitrate: *f64,
@@ -2251,7 +2258,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265Video.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetCodecH265Video {
 	Complexity: *string,
@@ -2369,7 +2376,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetCodecH265VideoLayer {
 	Bitrate: *f64,
@@ -2583,7 +2590,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetCodecJpgImage {
 	Start: *string,
@@ -2729,7 +2736,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetCodecJpgImageLayer {
 	Height: *string,
@@ -2803,7 +2810,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImage.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetCodecPngImage {
 	Start: *string,
@@ -2935,7 +2942,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetCodecPngImageLayer {
 	Height: *string,
@@ -2995,13 +3002,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilter.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetFilter {
-	CropRectangle: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputCustomPresetFilterCropRectangle,
-	Deinterlace: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputCustomPresetFilterDeinterlace,
-	FadeIn: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputCustomPresetFilterFadeIn,
-	FadeOut: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputCustomPresetFilterFadeOut,
+	CropRectangle: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputCustomPresetFilterCropRectangle,
+	Deinterlace: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputCustomPresetFilterDeinterlace,
+	FadeIn: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputCustomPresetFilterFadeIn,
+	FadeOut: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputCustomPresetFilterFadeOut,
 	Overlay: interface{},
 	Rotation: *string,
 }
@@ -3107,7 +3114,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterCropRectangle.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetFilterCropRectangle {
 	Height: *string,
@@ -3181,7 +3188,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterDeinterlace.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetFilterDeinterlace {
 	Mode: *string,
@@ -3227,7 +3234,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeIn.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetFilterFadeIn {
 	Duration: *string,
@@ -3287,7 +3294,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeOut.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetFilterFadeOut {
 	Duration: *string,
@@ -3347,11 +3354,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlay.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetFilterOverlay {
-	Audio: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio,
-	Video: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo,
+	Audio: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio,
+	Video: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo,
 }
 ```
 
@@ -3397,7 +3404,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudio.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetFilterOverlayAudio {
 	InputLabel: *string,
@@ -3499,17 +3506,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetFilterOverlayVideo {
 	InputLabel: *string,
 	AudioGainLevel: *f64,
-	CropRectangle: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle,
+	CropRectangle: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle,
 	End: *string,
 	FadeInDuration: *string,
 	FadeOutDuration: *string,
 	Opacity: *f64,
-	Position: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoPosition,
+	Position: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoPosition,
 	Start: *string,
 }
 ```
@@ -3647,7 +3654,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangle {
 	Height: *string,
@@ -3721,7 +3728,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoPosition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetFilterOverlayVideoPosition {
 	Height: *string,
@@ -3795,13 +3802,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormat.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetFormat {
-	Jpg: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputCustomPresetFormatJpg,
-	Mp4: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputCustomPresetFormatMp4,
-	Png: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputCustomPresetFormatPng,
-	TransportStream: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStream,
+	Jpg: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputCustomPresetFormatJpg,
+	Mp4: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputCustomPresetFormatMp4,
+	Png: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputCustomPresetFormatPng,
+	TransportStream: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStream,
 }
 ```
 
@@ -3877,7 +3884,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpg.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetFormatJpg {
 	FilenamePattern: *string,
@@ -3909,7 +3916,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetFormatMp4 {
 	FilenamePattern: *string,
@@ -3957,7 +3964,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputFile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetFormatMp4OutputFile {
 	Labels: *[]*string,
@@ -3989,7 +3996,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPng.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetFormatPng {
 	FilenamePattern: *string,
@@ -4021,7 +4028,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStream.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetFormatTransportStream {
 	FilenamePattern: *string,
@@ -4069,7 +4076,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputFile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputFile {
 	Labels: *[]*string,
@@ -4101,7 +4108,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputFaceDetectorPreset.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputFaceDetectorPreset {
 	AnalysisResolution: *string,
@@ -4175,7 +4182,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputVideoAnalyzerPreset.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformOutputVideoAnalyzerPreset {
 	AudioAnalysisMode: *string,
@@ -4249,7 +4256,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 &mediatransform.MediaTransformTimeouts {
 	Create: *string,
@@ -4325,7 +4332,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputAudioAnalyzerPresetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputAudioAnalyzerPresetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputAudioAnalyzerPresetOutputReference
 ```
@@ -4661,7 +4668,7 @@ func InternalValue() MediaTransformOutputAudioAnalyzerPreset
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputBuiltinPresetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputBuiltinPresetOutputReference
 ```
@@ -4974,7 +4981,7 @@ func InternalValue() MediaTransformOutputBuiltinPreset
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputBuiltinPresetPresetConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputBuiltinPresetPresetConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputBuiltinPresetPresetConfigurationOutputReference
 ```
@@ -5455,7 +5462,7 @@ func InternalValue() MediaTransformOutputBuiltinPresetPresetConfiguration
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecAacAudioOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetCodecAacAudioOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputCustomPresetCodecAacAudioOutputReference
 ```
@@ -5849,7 +5856,7 @@ func InternalValue() MediaTransformOutputCustomPresetCodecAacAudio
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecCopyAudioOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetCodecCopyAudioOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputCustomPresetCodecCopyAudioOutputReference
 ```
@@ -6127,7 +6134,7 @@ func InternalValue() MediaTransformOutputCustomPresetCodecCopyAudio
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecCopyVideoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetCodecCopyVideoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputCustomPresetCodecCopyVideoOutputReference
 ```
@@ -6405,7 +6412,7 @@ func InternalValue() MediaTransformOutputCustomPresetCodecCopyVideo
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecDdAudioOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetCodecDdAudioOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputCustomPresetCodecDdAudioOutputReference
 ```
@@ -6770,7 +6777,7 @@ func InternalValue() MediaTransformOutputCustomPresetCodecDdAudio
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetCodecH264VideoLayerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaTransformOutputCustomPresetCodecH264VideoLayerList
 ```
@@ -6811,10 +6818,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayerList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayerList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayerList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayerList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayerList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayerList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayerList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -6913,7 +6937,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoLayerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetCodecH264VideoLayerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaTransformOutputCustomPresetCodecH264VideoLayerOutputReference
 ```
@@ -7608,7 +7632,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH264VideoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetCodecH264VideoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputCustomPresetCodecH264VideoOutputReference
 ```
@@ -8102,7 +8126,7 @@ func InternalValue() MediaTransformOutputCustomPresetCodecH264Video
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetCodecH265VideoLayerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaTransformOutputCustomPresetCodecH265VideoLayerList
 ```
@@ -8143,10 +8167,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayerList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayerList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayerList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayerList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayerList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayerList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayerList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -8245,7 +8286,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoLayerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetCodecH265VideoLayerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaTransformOutputCustomPresetCodecH265VideoLayerOutputReference
 ```
@@ -8911,7 +8952,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecH265VideoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetCodecH265VideoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputCustomPresetCodecH265VideoOutputReference
 ```
@@ -9376,7 +9417,7 @@ func InternalValue() MediaTransformOutputCustomPresetCodecH265Video
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetCodecJpgImageLayerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaTransformOutputCustomPresetCodecJpgImageLayerList
 ```
@@ -9417,10 +9458,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -9519,7 +9577,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaTransformOutputCustomPresetCodecJpgImageLayerOutputReference
 ```
@@ -9902,7 +9960,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecJpgImageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetCodecJpgImageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputCustomPresetCodecJpgImageOutputReference
 ```
@@ -10418,7 +10476,7 @@ func InternalValue() MediaTransformOutputCustomPresetCodecJpgImage
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetCodecList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaTransformOutputCustomPresetCodecList
 ```
@@ -10459,10 +10517,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -10561,7 +10636,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetCodecOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaTransformOutputCustomPresetCodecOutputReference
 ```
@@ -11164,7 +11239,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetCodecPngImageLayerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaTransformOutputCustomPresetCodecPngImageLayerList
 ```
@@ -11205,10 +11280,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -11307,7 +11399,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetCodecPngImageLayerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaTransformOutputCustomPresetCodecPngImageLayerOutputReference
 ```
@@ -11661,7 +11753,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetCodecPngImageOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetCodecPngImageOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputCustomPresetCodecPngImageOutputReference
 ```
@@ -12148,7 +12240,7 @@ func InternalValue() MediaTransformOutputCustomPresetCodecPngImage
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterCropRectangleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetFilterCropRectangleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputCustomPresetFilterCropRectangleOutputReference
 ```
@@ -12513,7 +12605,7 @@ func InternalValue() MediaTransformOutputCustomPresetFilterCropRectangle
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterDeinterlaceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetFilterDeinterlaceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputCustomPresetFilterDeinterlaceOutputReference
 ```
@@ -12820,7 +12912,7 @@ func InternalValue() MediaTransformOutputCustomPresetFilterDeinterlace
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeInOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetFilterFadeInOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputCustomPresetFilterFadeInOutputReference
 ```
@@ -13142,7 +13234,7 @@ func InternalValue() MediaTransformOutputCustomPresetFilterFadeIn
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterFadeOutOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetFilterFadeOutOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputCustomPresetFilterFadeOutOutputReference
 ```
@@ -13464,7 +13556,7 @@ func InternalValue() MediaTransformOutputCustomPresetFilterFadeOut
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetFilterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputCustomPresetFilterOutputReference
 ```
@@ -13952,7 +14044,7 @@ func InternalValue() MediaTransformOutputCustomPresetFilter
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayAudioOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetFilterOverlayAudioOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputCustomPresetFilterOverlayAudioOutputReference
 ```
@@ -14368,7 +14460,7 @@ func InternalValue() MediaTransformOutputCustomPresetFilterOverlayAudio
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetFilterOverlayList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaTransformOutputCustomPresetFilterOverlayList
 ```
@@ -14409,10 +14501,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -14511,7 +14620,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetFilterOverlayOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaTransformOutputCustomPresetFilterOverlayOutputReference
 ```
@@ -14862,7 +14971,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetFilterOverlayVideoCropRectangleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputCustomPresetFilterOverlayVideoCropRectangleOutputReference
 ```
@@ -15227,7 +15336,7 @@ func InternalValue() MediaTransformOutputCustomPresetFilterOverlayVideoCropRecta
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetFilterOverlayVideoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputCustomPresetFilterOverlayVideoOutputReference
 ```
@@ -15756,7 +15865,7 @@ func InternalValue() MediaTransformOutputCustomPresetFilterOverlayVideo
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFilterOverlayVideoPositionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetFilterOverlayVideoPositionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputCustomPresetFilterOverlayVideoPositionOutputReference
 ```
@@ -16121,7 +16230,7 @@ func InternalValue() MediaTransformOutputCustomPresetFilterOverlayVideoPosition
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatJpgOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetFormatJpgOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputCustomPresetFormatJpgOutputReference
 ```
@@ -16392,7 +16501,7 @@ func InternalValue() MediaTransformOutputCustomPresetFormatJpg
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetFormatList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaTransformOutputCustomPresetFormatList
 ```
@@ -16433,10 +16542,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -16535,7 +16661,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputFileList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetFormatMp4OutputFileList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaTransformOutputCustomPresetFormatMp4OutputFileList
 ```
@@ -16576,10 +16702,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputFileList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputFileList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputFileList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputFileList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputFileList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputFileList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputFileList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -16678,7 +16821,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputFileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetFormatMp4OutputFileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaTransformOutputCustomPresetFormatMp4OutputFileOutputReference
 ```
@@ -16967,7 +17110,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatMp4OutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetFormatMp4OutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputCustomPresetFormatMp4OutputReference
 ```
@@ -17280,7 +17423,7 @@ func InternalValue() MediaTransformOutputCustomPresetFormatMp4
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetFormatOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaTransformOutputCustomPresetFormatOutputReference
 ```
@@ -17715,7 +17858,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatPngOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetFormatPngOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputCustomPresetFormatPngOutputReference
 ```
@@ -17986,7 +18129,7 @@ func InternalValue() MediaTransformOutputCustomPresetFormatPng
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputFileList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetFormatTransportStreamOutputFileList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaTransformOutputCustomPresetFormatTransportStreamOutputFileList
 ```
@@ -18027,10 +18170,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputFileList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputFileList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputFileList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputFileList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputFileList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputFileList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputFileList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -18129,7 +18289,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputFileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetFormatTransportStreamOutputFileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaTransformOutputCustomPresetFormatTransportStreamOutputFileOutputReference
 ```
@@ -18418,7 +18578,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetFormatTransportStreamOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetFormatTransportStreamOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputCustomPresetFormatTransportStreamOutputReference
 ```
@@ -18731,7 +18891,7 @@ func InternalValue() MediaTransformOutputCustomPresetFormatTransportStream
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputCustomPresetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputCustomPresetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputCustomPresetOutputReference
 ```
@@ -19121,7 +19281,7 @@ func InternalValue() MediaTransformOutputCustomPreset
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputFaceDetectorPresetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputFaceDetectorPresetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputFaceDetectorPresetOutputReference
 ```
@@ -19486,7 +19646,7 @@ func InternalValue() MediaTransformOutputFaceDetectorPreset
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MediaTransformOutputList
 ```
@@ -19527,10 +19687,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -19629,7 +19806,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MediaTransformOutputOutputReference
 ```
@@ -20164,7 +20341,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformOutputVideoAnalyzerPresetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformOutputVideoAnalyzerPresetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformOutputVideoAnalyzerPresetOutputReference
 ```
@@ -20529,7 +20706,7 @@ func InternalValue() MediaTransformOutputVideoAnalyzerPreset
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mediaTransform.MediaTransformTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mediatransform"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mediatransform"
 
 mediatransform.NewMediaTransformTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MediaTransformTimeoutsOutputReference
 ```

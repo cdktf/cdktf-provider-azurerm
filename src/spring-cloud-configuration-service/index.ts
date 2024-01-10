@@ -116,6 +116,91 @@ export function springCloudConfigurationServiceRepositoryToTerraform(struct?: Sp
   }
 }
 
+
+export function springCloudConfigurationServiceRepositoryToHclTerraform(struct?: SpringCloudConfigurationServiceRepository | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    ca_certificate_id: {
+      value: cdktf.stringToHclTerraform(struct!.caCertificateId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    host_key: {
+      value: cdktf.stringToHclTerraform(struct!.hostKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    host_key_algorithm: {
+      value: cdktf.stringToHclTerraform(struct!.hostKeyAlgorithm),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    label: {
+      value: cdktf.stringToHclTerraform(struct!.label),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    password: {
+      value: cdktf.stringToHclTerraform(struct!.password),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    patterns: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.patterns),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    private_key: {
+      value: cdktf.stringToHclTerraform(struct!.privateKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    search_paths: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.searchPaths),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    strict_host_key_checking: {
+      value: cdktf.booleanToHclTerraform(struct!.strictHostKeyChecking),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    uri: {
+      value: cdktf.stringToHclTerraform(struct!.uri),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    username: {
+      value: cdktf.stringToHclTerraform(struct!.username),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SpringCloudConfigurationServiceRepositoryOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -458,6 +543,43 @@ export function springCloudConfigurationServiceTimeoutsToTerraform(struct?: Spri
   }
 }
 
+
+export function springCloudConfigurationServiceTimeoutsToHclTerraform(struct?: SpringCloudConfigurationServiceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SpringCloudConfigurationServiceTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -749,5 +871,49 @@ export class SpringCloudConfigurationService extends cdktf.TerraformResource {
       repository: cdktf.listMapper(springCloudConfigurationServiceRepositoryToTerraform, true)(this._repository.internalValue),
       timeouts: springCloudConfigurationServiceTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      generation: {
+        value: cdktf.stringToHclTerraform(this._generation),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      spring_cloud_service_id: {
+        value: cdktf.stringToHclTerraform(this._springCloudServiceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      repository: {
+        value: cdktf.listMapperHcl(springCloudConfigurationServiceRepositoryToHclTerraform, true)(this._repository.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SpringCloudConfigurationServiceRepositoryList",
+      },
+      timeouts: {
+        value: springCloudConfigurationServiceTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SpringCloudConfigurationServiceTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

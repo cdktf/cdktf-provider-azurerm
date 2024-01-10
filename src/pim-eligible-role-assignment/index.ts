@@ -95,6 +95,37 @@ export function pimEligibleRoleAssignmentScheduleExpirationToTerraform(struct?: 
   }
 }
 
+
+export function pimEligibleRoleAssignmentScheduleExpirationToHclTerraform(struct?: PimEligibleRoleAssignmentScheduleExpirationOutputReference | PimEligibleRoleAssignmentScheduleExpiration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    duration_days: {
+      value: cdktf.numberToHclTerraform(struct!.durationDays),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    duration_hours: {
+      value: cdktf.numberToHclTerraform(struct!.durationHours),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    end_date_time: {
+      value: cdktf.stringToHclTerraform(struct!.endDateTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class PimEligibleRoleAssignmentScheduleExpirationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -213,6 +244,31 @@ export function pimEligibleRoleAssignmentScheduleToTerraform(struct?: PimEligibl
   }
 }
 
+
+export function pimEligibleRoleAssignmentScheduleToHclTerraform(struct?: PimEligibleRoleAssignmentScheduleOutputReference | PimEligibleRoleAssignmentSchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    start_date_time: {
+      value: cdktf.stringToHclTerraform(struct!.startDateTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    expiration: {
+      value: pimEligibleRoleAssignmentScheduleExpirationToHclTerraform(struct!.expiration),
+      isBlock: true,
+      type: "list",
+      storageClassType: "PimEligibleRoleAssignmentScheduleExpirationList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class PimEligibleRoleAssignmentScheduleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -307,6 +363,31 @@ export function pimEligibleRoleAssignmentTicketToTerraform(struct?: PimEligibleR
     number: cdktf.stringToTerraform(struct!.number),
     system: cdktf.stringToTerraform(struct!.systemAttribute),
   }
+}
+
+
+export function pimEligibleRoleAssignmentTicketToHclTerraform(struct?: PimEligibleRoleAssignmentTicketOutputReference | PimEligibleRoleAssignmentTicket): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    number: {
+      value: cdktf.stringToHclTerraform(struct!.number),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    system: {
+      value: cdktf.stringToHclTerraform(struct!.systemAttribute),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class PimEligibleRoleAssignmentTicketOutputReference extends cdktf.ComplexObject {
@@ -404,6 +485,37 @@ export function pimEligibleRoleAssignmentTimeoutsToTerraform(struct?: PimEligibl
     delete: cdktf.stringToTerraform(struct!.delete),
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function pimEligibleRoleAssignmentTimeoutsToHclTerraform(struct?: PimEligibleRoleAssignmentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class PimEligibleRoleAssignmentTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -713,5 +825,61 @@ export class PimEligibleRoleAssignment extends cdktf.TerraformResource {
       ticket: pimEligibleRoleAssignmentTicketToTerraform(this._ticket.internalValue),
       timeouts: pimEligibleRoleAssignmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      justification: {
+        value: cdktf.stringToHclTerraform(this._justification),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      principal_id: {
+        value: cdktf.stringToHclTerraform(this._principalId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      role_definition_id: {
+        value: cdktf.stringToHclTerraform(this._roleDefinitionId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      scope: {
+        value: cdktf.stringToHclTerraform(this._scope),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      schedule: {
+        value: pimEligibleRoleAssignmentScheduleToHclTerraform(this._schedule.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "PimEligibleRoleAssignmentScheduleList",
+      },
+      ticket: {
+        value: pimEligibleRoleAssignmentTicketToHclTerraform(this._ticket.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "PimEligibleRoleAssignmentTicketList",
+      },
+      timeouts: {
+        value: pimEligibleRoleAssignmentTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "PimEligibleRoleAssignmentTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

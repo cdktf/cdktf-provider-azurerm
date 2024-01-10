@@ -74,6 +74,31 @@ export function logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecur
   }
 }
 
+
+export function logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthlyToHclTerraform(struct?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthly | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    week: {
+      value: cdktf.numberToHclTerraform(struct!.week),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    weekday: {
+      value: cdktf.stringToHclTerraform(struct!.weekday),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthlyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -207,6 +232,49 @@ export function logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecur
     week_days: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.weekDays),
     monthly: cdktf.listMapper(logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthlyToTerraform, true)(struct!.monthly),
   }
+}
+
+
+export function logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleToHclTerraform(struct?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleOutputReference | LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceSchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    hours: {
+      value: cdktf.listMapperHcl(cdktf.numberToHclTerraform, false)(struct!.hours),
+      isBlock: false,
+      type: "set",
+      storageClassType: "numberList",
+    },
+    minutes: {
+      value: cdktf.listMapperHcl(cdktf.numberToHclTerraform, false)(struct!.minutes),
+      isBlock: false,
+      type: "set",
+      storageClassType: "numberList",
+    },
+    month_days: {
+      value: cdktf.listMapperHcl(cdktf.numberToHclTerraform, false)(struct!.monthDays),
+      isBlock: false,
+      type: "set",
+      storageClassType: "numberList",
+    },
+    week_days: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.weekDays),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    monthly: {
+      value: cdktf.listMapperHcl(logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthlyToHclTerraform, true)(struct!.monthly),
+      isBlock: true,
+      type: "set",
+      storageClassType: "LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleMonthlyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleOutputReference extends cdktf.ComplexObject {
@@ -387,6 +455,55 @@ export function logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecur
     time_zone: cdktf.stringToTerraform(struct!.timeZone),
     schedule: logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleToTerraform(struct!.schedule),
   }
+}
+
+
+export function logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceToHclTerraform(struct?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceOutputReference | LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrence): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    end_time: {
+      value: cdktf.stringToHclTerraform(struct!.endTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    frequency: {
+      value: cdktf.stringToHclTerraform(struct!.frequency),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    interval: {
+      value: cdktf.numberToHclTerraform(struct!.interval),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    start_time: {
+      value: cdktf.stringToHclTerraform(struct!.startTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    time_zone: {
+      value: cdktf.stringToHclTerraform(struct!.timeZone),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    schedule: {
+      value: logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleToHclTerraform(struct!.schedule),
+      isBlock: true,
+      type: "list",
+      storageClassType: "LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceScheduleList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceOutputReference extends cdktf.ComplexObject {
@@ -570,6 +687,37 @@ export function logicAppIntegrationAccountBatchConfigurationReleaseCriteriaToTer
   }
 }
 
+
+export function logicAppIntegrationAccountBatchConfigurationReleaseCriteriaToHclTerraform(struct?: LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaOutputReference | LogicAppIntegrationAccountBatchConfigurationReleaseCriteria): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    batch_size: {
+      value: cdktf.numberToHclTerraform(struct!.batchSize),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    message_count: {
+      value: cdktf.numberToHclTerraform(struct!.messageCount),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    recurrence: {
+      value: logicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceToHclTerraform(struct!.recurrence),
+      isBlock: true,
+      type: "list",
+      storageClassType: "LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaRecurrenceList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -692,6 +840,43 @@ export function logicAppIntegrationAccountBatchConfigurationTimeoutsToTerraform(
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function logicAppIntegrationAccountBatchConfigurationTimeoutsToHclTerraform(struct?: LogicAppIntegrationAccountBatchConfigurationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class LogicAppIntegrationAccountBatchConfigurationTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1012,5 +1197,61 @@ export class LogicAppIntegrationAccountBatchConfiguration extends cdktf.Terrafor
       release_criteria: logicAppIntegrationAccountBatchConfigurationReleaseCriteriaToTerraform(this._releaseCriteria.internalValue),
       timeouts: logicAppIntegrationAccountBatchConfigurationTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      batch_group_name: {
+        value: cdktf.stringToHclTerraform(this._batchGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      integration_account_name: {
+        value: cdktf.stringToHclTerraform(this._integrationAccountName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      metadata: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._metadata),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      release_criteria: {
+        value: logicAppIntegrationAccountBatchConfigurationReleaseCriteriaToHclTerraform(this._releaseCriteria.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "LogicAppIntegrationAccountBatchConfigurationReleaseCriteriaList",
+      },
+      timeouts: {
+        value: logicAppIntegrationAccountBatchConfigurationTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "LogicAppIntegrationAccountBatchConfigurationTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -94,6 +94,43 @@ export function mssqlServerSecurityAlertPolicyTimeoutsToTerraform(struct?: Mssql
   }
 }
 
+
+export function mssqlServerSecurityAlertPolicyTimeoutsToHclTerraform(struct?: MssqlServerSecurityAlertPolicyTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MssqlServerSecurityAlertPolicyTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -472,5 +509,79 @@ export class MssqlServerSecurityAlertPolicy extends cdktf.TerraformResource {
       storage_endpoint: cdktf.stringToTerraform(this._storageEndpoint),
       timeouts: mssqlServerSecurityAlertPolicyTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      disabled_alerts: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._disabledAlerts),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      email_account_admins: {
+        value: cdktf.booleanToHclTerraform(this._emailAccountAdmins),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      email_addresses: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._emailAddresses),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      retention_days: {
+        value: cdktf.numberToHclTerraform(this._retentionDays),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      server_name: {
+        value: cdktf.stringToHclTerraform(this._serverName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      state: {
+        value: cdktf.stringToHclTerraform(this._state),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_account_access_key: {
+        value: cdktf.stringToHclTerraform(this._storageAccountAccessKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_endpoint: {
+        value: cdktf.stringToHclTerraform(this._storageEndpoint),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: mssqlServerSecurityAlertPolicyTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MssqlServerSecurityAlertPolicyTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -89,6 +89,37 @@ export function marketplaceRoleAssignmentTimeoutsToTerraform(struct?: Marketplac
   }
 }
 
+
+export function marketplaceRoleAssignmentTimeoutsToHclTerraform(struct?: MarketplaceRoleAssignmentTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class MarketplaceRoleAssignmentTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -456,5 +487,79 @@ export class MarketplaceRoleAssignment extends cdktf.TerraformResource {
       skip_service_principal_aad_check: cdktf.booleanToTerraform(this._skipServicePrincipalAadCheck),
       timeouts: marketplaceRoleAssignmentTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      condition: {
+        value: cdktf.stringToHclTerraform(this._condition),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      condition_version: {
+        value: cdktf.stringToHclTerraform(this._conditionVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      delegated_managed_identity_resource_id: {
+        value: cdktf.stringToHclTerraform(this._delegatedManagedIdentityResourceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      principal_id: {
+        value: cdktf.stringToHclTerraform(this._principalId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      role_definition_id: {
+        value: cdktf.stringToHclTerraform(this._roleDefinitionId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      role_definition_name: {
+        value: cdktf.stringToHclTerraform(this._roleDefinitionName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      skip_service_principal_aad_check: {
+        value: cdktf.booleanToHclTerraform(this._skipServicePrincipalAadCheck),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      timeouts: {
+        value: marketplaceRoleAssignmentTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "MarketplaceRoleAssignmentTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

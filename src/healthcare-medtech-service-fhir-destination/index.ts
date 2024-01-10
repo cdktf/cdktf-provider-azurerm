@@ -82,6 +82,43 @@ export function healthcareMedtechServiceFhirDestinationTimeoutsToTerraform(struc
   }
 }
 
+
+export function healthcareMedtechServiceFhirDestinationTimeoutsToHclTerraform(struct?: HealthcareMedtechServiceFhirDestinationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class HealthcareMedtechServiceFhirDestinationTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -397,5 +434,61 @@ export class HealthcareMedtechServiceFhirDestination extends cdktf.TerraformReso
       name: cdktf.stringToTerraform(this._name),
       timeouts: healthcareMedtechServiceFhirDestinationTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      destination_fhir_mapping_json: {
+        value: cdktf.stringToHclTerraform(this._destinationFhirMappingJson),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      destination_fhir_service_id: {
+        value: cdktf.stringToHclTerraform(this._destinationFhirServiceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      destination_identity_resolution_type: {
+        value: cdktf.stringToHclTerraform(this._destinationIdentityResolutionType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      medtech_service_id: {
+        value: cdktf.stringToHclTerraform(this._medtechServiceId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: healthcareMedtechServiceFhirDestinationTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "HealthcareMedtechServiceFhirDestinationTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

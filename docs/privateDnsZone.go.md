@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.privateDnsZone.PrivateDnsZone.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privatednszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/privatednszone"
 
 privatednszone.NewPrivateDnsZone(scope Construct, id *string, config PrivateDnsZoneConfig) PrivateDnsZone
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.privateDnsZone.PrivateDnsZone.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.privateDnsZone.PrivateDnsZone.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.privateDnsZone.PrivateDnsZone.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.privateDnsZone.PrivateDnsZone.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.privateDnsZone.PrivateDnsZone.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.privateDnsZone.PrivateDnsZone.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.privateDnsZone.PrivateDnsZone.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -130,6 +131,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.privateDnsZone.PrivateDnsZone.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.privateDnsZone.PrivateDnsZone.toMetadata"></a>
 
@@ -425,7 +432,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.privateDnsZone.PrivateDnsZone.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privatednszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/privatednszone"
 
 privatednszone.PrivateDnsZone_IsConstruct(x interface{}) *bool
 ```
@@ -457,7 +464,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.privateDnsZone.PrivateDnsZone.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privatednszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/privatednszone"
 
 privatednszone.PrivateDnsZone_IsTerraformElement(x interface{}) *bool
 ```
@@ -471,7 +478,7 @@ privatednszone.PrivateDnsZone_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.privateDnsZone.PrivateDnsZone.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privatednszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/privatednszone"
 
 privatednszone.PrivateDnsZone_IsTerraformResource(x interface{}) *bool
 ```
@@ -485,7 +492,7 @@ privatednszone.PrivateDnsZone_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.privateDnsZone.PrivateDnsZone.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privatednszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/privatednszone"
 
 privatednszone.PrivateDnsZone_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -890,7 +897,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.privateDnsZone.PrivateDnsZoneConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privatednszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/privatednszone"
 
 &privatednszone.PrivateDnsZoneConfig {
 	Connection: interface{},
@@ -903,9 +910,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privatednszone"
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	SoaRecord: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.privateDnsZone.PrivateDnsZoneSoaRecord,
+	SoaRecord: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.privateDnsZone.PrivateDnsZoneSoaRecord,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.privateDnsZone.PrivateDnsZoneTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.privateDnsZone.PrivateDnsZoneTimeouts,
 }
 ```
 
@@ -1083,7 +1090,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.privateDnsZone.PrivateDnsZoneSoaRecord.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privatednszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/privatednszone"
 
 &privatednszone.PrivateDnsZoneSoaRecord {
 	Email: *string,
@@ -1199,7 +1206,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.privateDnsZone.PrivateDnsZoneTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privatednszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/privatednszone"
 
 &privatednszone.PrivateDnsZoneTimeouts {
 	Create: *string,
@@ -1275,7 +1282,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.privateDnsZone.PrivateDnsZoneSoaRecordOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privatednszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/privatednszone"
 
 privatednszone.NewPrivateDnsZoneSoaRecordOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PrivateDnsZoneSoaRecordOutputReference
 ```
@@ -1753,7 +1760,7 @@ func InternalValue() PrivateDnsZoneSoaRecord
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.privateDnsZone.PrivateDnsZoneTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/privatednszone"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/privatednszone"
 
 privatednszone.NewPrivateDnsZoneTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) PrivateDnsZoneTimeoutsOutputReference
 ```

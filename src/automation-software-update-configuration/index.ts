@@ -123,6 +123,49 @@ export function automationSoftwareUpdateConfigurationLinuxToTerraform(struct?: A
   }
 }
 
+
+export function automationSoftwareUpdateConfigurationLinuxToHclTerraform(struct?: AutomationSoftwareUpdateConfigurationLinuxOutputReference | AutomationSoftwareUpdateConfigurationLinux): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    classification_included: {
+      value: cdktf.stringToHclTerraform(struct!.classificationIncluded),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    classifications_included: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.classificationsIncluded),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    excluded_packages: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.excludedPackages),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    included_packages: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.includedPackages),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    reboot: {
+      value: cdktf.stringToHclTerraform(struct!.reboot),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AutomationSoftwareUpdateConfigurationLinuxOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -281,6 +324,31 @@ export function automationSoftwareUpdateConfigurationPostTaskToTerraform(struct?
   }
 }
 
+
+export function automationSoftwareUpdateConfigurationPostTaskToHclTerraform(struct?: AutomationSoftwareUpdateConfigurationPostTaskOutputReference | AutomationSoftwareUpdateConfigurationPostTask): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    parameters: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.parameters),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    source: {
+      value: cdktf.stringToHclTerraform(struct!.source),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AutomationSoftwareUpdateConfigurationPostTaskOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -373,6 +441,31 @@ export function automationSoftwareUpdateConfigurationPreTaskToTerraform(struct?:
   }
 }
 
+
+export function automationSoftwareUpdateConfigurationPreTaskToHclTerraform(struct?: AutomationSoftwareUpdateConfigurationPreTaskOutputReference | AutomationSoftwareUpdateConfigurationPreTask): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    parameters: {
+      value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(struct!.parameters),
+      isBlock: false,
+      type: "map",
+      storageClassType: "stringMap",
+    },
+    source: {
+      value: cdktf.stringToHclTerraform(struct!.source),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AutomationSoftwareUpdateConfigurationPreTaskOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -463,6 +556,31 @@ export function automationSoftwareUpdateConfigurationScheduleMonthlyOccurrenceTo
     day: cdktf.stringToTerraform(struct!.day),
     occurrence: cdktf.numberToTerraform(struct!.occurrence),
   }
+}
+
+
+export function automationSoftwareUpdateConfigurationScheduleMonthlyOccurrenceToHclTerraform(struct?: AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrenceOutputReference | AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrence): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    day: {
+      value: cdktf.stringToHclTerraform(struct!.day),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    occurrence: {
+      value: cdktf.numberToHclTerraform(struct!.occurrence),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrenceOutputReference extends cdktf.ComplexObject {
@@ -611,6 +729,103 @@ export function automationSoftwareUpdateConfigurationScheduleToTerraform(struct?
     time_zone: cdktf.stringToTerraform(struct!.timeZone),
     monthly_occurrence: automationSoftwareUpdateConfigurationScheduleMonthlyOccurrenceToTerraform(struct!.monthlyOccurrence),
   }
+}
+
+
+export function automationSoftwareUpdateConfigurationScheduleToHclTerraform(struct?: AutomationSoftwareUpdateConfigurationScheduleOutputReference | AutomationSoftwareUpdateConfigurationSchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    advanced_month_days: {
+      value: cdktf.listMapperHcl(cdktf.numberToHclTerraform, false)(struct!.advancedMonthDays),
+      isBlock: false,
+      type: "list",
+      storageClassType: "numberList",
+    },
+    advanced_week_days: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.advancedWeekDays),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    description: {
+      value: cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    expiry_time: {
+      value: cdktf.stringToHclTerraform(struct!.expiryTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    expiry_time_offset_minutes: {
+      value: cdktf.numberToHclTerraform(struct!.expiryTimeOffsetMinutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    frequency: {
+      value: cdktf.stringToHclTerraform(struct!.frequency),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    interval: {
+      value: cdktf.numberToHclTerraform(struct!.interval),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    is_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.isEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    next_run: {
+      value: cdktf.stringToHclTerraform(struct!.nextRun),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    next_run_offset_minutes: {
+      value: cdktf.numberToHclTerraform(struct!.nextRunOffsetMinutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    start_time: {
+      value: cdktf.stringToHclTerraform(struct!.startTime),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    start_time_offset_minutes: {
+      value: cdktf.numberToHclTerraform(struct!.startTimeOffsetMinutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    time_zone: {
+      value: cdktf.stringToHclTerraform(struct!.timeZone),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    monthly_occurrence: {
+      value: automationSoftwareUpdateConfigurationScheduleMonthlyOccurrenceToHclTerraform(struct!.monthlyOccurrence),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AutomationSoftwareUpdateConfigurationScheduleMonthlyOccurrenceList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AutomationSoftwareUpdateConfigurationScheduleOutputReference extends cdktf.ComplexObject {
@@ -976,6 +1191,31 @@ export function automationSoftwareUpdateConfigurationTargetAzureQueryTagsToTerra
   }
 }
 
+
+export function automationSoftwareUpdateConfigurationTargetAzureQueryTagsToHclTerraform(struct?: AutomationSoftwareUpdateConfigurationTargetAzureQueryTags | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    tag: {
+      value: cdktf.stringToHclTerraform(struct!.tag),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    values: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.values),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AutomationSoftwareUpdateConfigurationTargetAzureQueryTagsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1104,6 +1344,43 @@ export function automationSoftwareUpdateConfigurationTargetAzureQueryToTerraform
     tag_filter: cdktf.stringToTerraform(struct!.tagFilter),
     tags: cdktf.listMapper(automationSoftwareUpdateConfigurationTargetAzureQueryTagsToTerraform, true)(struct!.tags),
   }
+}
+
+
+export function automationSoftwareUpdateConfigurationTargetAzureQueryToHclTerraform(struct?: AutomationSoftwareUpdateConfigurationTargetAzureQuery | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    locations: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.locations),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    scope: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.scope),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    tag_filter: {
+      value: cdktf.stringToHclTerraform(struct!.tagFilter),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tags: {
+      value: cdktf.listMapperHcl(automationSoftwareUpdateConfigurationTargetAzureQueryTagsToHclTerraform, true)(struct!.tags),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AutomationSoftwareUpdateConfigurationTargetAzureQueryTagsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AutomationSoftwareUpdateConfigurationTargetAzureQueryOutputReference extends cdktf.ComplexObject {
@@ -1274,6 +1551,31 @@ export function automationSoftwareUpdateConfigurationTargetNonAzureQueryToTerraf
   }
 }
 
+
+export function automationSoftwareUpdateConfigurationTargetNonAzureQueryToHclTerraform(struct?: AutomationSoftwareUpdateConfigurationTargetNonAzureQuery | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    function_alias: {
+      value: cdktf.stringToHclTerraform(struct!.functionAlias),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    workspace_id: {
+      value: cdktf.stringToHclTerraform(struct!.workspaceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AutomationSoftwareUpdateConfigurationTargetNonAzureQueryOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -1402,6 +1704,31 @@ export function automationSoftwareUpdateConfigurationTargetToTerraform(struct?: 
   }
 }
 
+
+export function automationSoftwareUpdateConfigurationTargetToHclTerraform(struct?: AutomationSoftwareUpdateConfigurationTargetOutputReference | AutomationSoftwareUpdateConfigurationTarget): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    azure_query: {
+      value: cdktf.listMapperHcl(automationSoftwareUpdateConfigurationTargetAzureQueryToHclTerraform, true)(struct!.azureQuery),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AutomationSoftwareUpdateConfigurationTargetAzureQueryList",
+    },
+    non_azure_query: {
+      value: cdktf.listMapperHcl(automationSoftwareUpdateConfigurationTargetNonAzureQueryToHclTerraform, true)(struct!.nonAzureQuery),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AutomationSoftwareUpdateConfigurationTargetNonAzureQueryList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AutomationSoftwareUpdateConfigurationTargetOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1502,6 +1829,43 @@ export function automationSoftwareUpdateConfigurationTimeoutsToTerraform(struct?
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function automationSoftwareUpdateConfigurationTimeoutsToHclTerraform(struct?: AutomationSoftwareUpdateConfigurationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AutomationSoftwareUpdateConfigurationTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1663,6 +2027,49 @@ export function automationSoftwareUpdateConfigurationWindowsToTerraform(struct?:
     included_knowledge_base_numbers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.includedKnowledgeBaseNumbers),
     reboot: cdktf.stringToTerraform(struct!.reboot),
   }
+}
+
+
+export function automationSoftwareUpdateConfigurationWindowsToHclTerraform(struct?: AutomationSoftwareUpdateConfigurationWindowsOutputReference | AutomationSoftwareUpdateConfigurationWindows): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    classification_included: {
+      value: cdktf.stringToHclTerraform(struct!.classificationIncluded),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    classifications_included: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.classificationsIncluded),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    excluded_knowledge_base_numbers: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.excludedKnowledgeBaseNumbers),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    included_knowledge_base_numbers: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.includedKnowledgeBaseNumbers),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    reboot: {
+      value: cdktf.stringToHclTerraform(struct!.reboot),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AutomationSoftwareUpdateConfigurationWindowsOutputReference extends cdktf.ComplexObject {
@@ -2124,5 +2531,97 @@ export class AutomationSoftwareUpdateConfiguration extends cdktf.TerraformResour
       timeouts: automationSoftwareUpdateConfigurationTimeoutsToTerraform(this._timeouts.internalValue),
       windows: automationSoftwareUpdateConfigurationWindowsToTerraform(this._windows.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      automation_account_id: {
+        value: cdktf.stringToHclTerraform(this._automationAccountId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      duration: {
+        value: cdktf.stringToHclTerraform(this._duration),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      non_azure_computer_names: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._nonAzureComputerNames),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      operating_system: {
+        value: cdktf.stringToHclTerraform(this._operatingSystem),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      virtual_machine_ids: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._virtualMachineIds),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      linux: {
+        value: automationSoftwareUpdateConfigurationLinuxToHclTerraform(this._linux.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AutomationSoftwareUpdateConfigurationLinuxList",
+      },
+      post_task: {
+        value: automationSoftwareUpdateConfigurationPostTaskToHclTerraform(this._postTask.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AutomationSoftwareUpdateConfigurationPostTaskList",
+      },
+      pre_task: {
+        value: automationSoftwareUpdateConfigurationPreTaskToHclTerraform(this._preTask.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AutomationSoftwareUpdateConfigurationPreTaskList",
+      },
+      schedule: {
+        value: automationSoftwareUpdateConfigurationScheduleToHclTerraform(this._schedule.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AutomationSoftwareUpdateConfigurationScheduleList",
+      },
+      target: {
+        value: automationSoftwareUpdateConfigurationTargetToHclTerraform(this._target.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AutomationSoftwareUpdateConfigurationTargetList",
+      },
+      timeouts: {
+        value: automationSoftwareUpdateConfigurationTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AutomationSoftwareUpdateConfigurationTimeouts",
+      },
+      windows: {
+        value: automationSoftwareUpdateConfigurationWindowsToHclTerraform(this._windows.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AutomationSoftwareUpdateConfigurationWindowsList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

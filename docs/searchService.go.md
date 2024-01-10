@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.searchService.SearchService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/searchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/searchservice"
 
 searchservice.NewSearchService(scope Construct, id *string, config SearchServiceConfig) SearchService
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.searchService.SearchService.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.searchService.SearchService.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.searchService.SearchService.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.searchService.SearchService.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.searchService.SearchService.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.searchService.SearchService.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.searchService.SearchService.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -139,6 +140,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.searchService.SearchService.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.searchService.SearchService.toMetadata"></a>
 
@@ -488,7 +495,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.searchService.SearchService.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/searchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/searchservice"
 
 searchservice.SearchService_IsConstruct(x interface{}) *bool
 ```
@@ -520,7 +527,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.searchService.SearchService.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/searchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/searchservice"
 
 searchservice.SearchService_IsTerraformElement(x interface{}) *bool
 ```
@@ -534,7 +541,7 @@ searchservice.SearchService_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.searchService.SearchService.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/searchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/searchservice"
 
 searchservice.SearchService_IsTerraformResource(x interface{}) *bool
 ```
@@ -548,7 +555,7 @@ searchservice.SearchService_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.searchService.SearchService.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/searchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/searchservice"
 
 searchservice.SearchService_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1184,7 +1191,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.searchService.SearchServiceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/searchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/searchservice"
 
 &searchservice.SearchServiceConfig {
 	Connection: interface{},
@@ -1203,14 +1210,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/searchservice"
 	CustomerManagedKeyEnforcementEnabled: interface{},
 	HostingMode: *string,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.searchService.SearchServiceIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.searchService.SearchServiceIdentity,
 	LocalAuthenticationEnabled: interface{},
 	PartitionCount: *f64,
 	PublicNetworkAccessEnabled: interface{},
 	ReplicaCount: *f64,
 	SemanticSearchSku: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.searchService.SearchServiceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.searchService.SearchServiceTimeouts,
 }
 ```
 
@@ -1531,7 +1538,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.searchService.SearchServiceIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/searchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/searchservice"
 
 &searchservice.SearchServiceIdentity {
 	Type: *string,
@@ -1563,7 +1570,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.searchService.SearchServiceQueryKeys.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/searchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/searchservice"
 
 &searchservice.SearchServiceQueryKeys {
 
@@ -1576,7 +1583,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/searchservice"
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.searchService.SearchServiceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/searchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/searchservice"
 
 &searchservice.SearchServiceTimeouts {
 	Create: *string,
@@ -1652,7 +1659,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.searchService.SearchServiceIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/searchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/searchservice"
 
 searchservice.NewSearchServiceIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SearchServiceIdentityOutputReference
 ```
@@ -1945,7 +1952,7 @@ func InternalValue() SearchServiceIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.searchService.SearchServiceQueryKeysList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/searchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/searchservice"
 
 searchservice.NewSearchServiceQueryKeysList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) SearchServiceQueryKeysList
 ```
@@ -1986,10 +1993,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceQueryKeysList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceQueryKeysList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceQueryKeysList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceQueryKeysList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.searchService.SearchServiceQueryKeysList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.searchService.SearchServiceQueryKeysList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.searchService.SearchServiceQueryKeysList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -2077,7 +2101,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.searchService.SearchServiceQueryKeysOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/searchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/searchservice"
 
 searchservice.NewSearchServiceQueryKeysOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) SearchServiceQueryKeysOutputReference
 ```
@@ -2366,7 +2390,7 @@ func InternalValue() SearchServiceQueryKeys
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.searchService.SearchServiceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/searchservice"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/searchservice"
 
 searchservice.NewSearchServiceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) SearchServiceTimeoutsOutputReference
 ```

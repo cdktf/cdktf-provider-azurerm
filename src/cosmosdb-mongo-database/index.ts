@@ -65,6 +65,25 @@ export function cosmosdbMongoDatabaseAutoscaleSettingsToTerraform(struct?: Cosmo
   }
 }
 
+
+export function cosmosdbMongoDatabaseAutoscaleSettingsToHclTerraform(struct?: CosmosdbMongoDatabaseAutoscaleSettingsOutputReference | CosmosdbMongoDatabaseAutoscaleSettings): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    max_throughput: {
+      value: cdktf.numberToHclTerraform(struct!.maxThroughput),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CosmosdbMongoDatabaseAutoscaleSettingsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -143,6 +162,43 @@ export function cosmosdbMongoDatabaseTimeoutsToTerraform(struct?: CosmosdbMongoD
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function cosmosdbMongoDatabaseTimeoutsToHclTerraform(struct?: CosmosdbMongoDatabaseTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CosmosdbMongoDatabaseTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -451,5 +507,55 @@ export class CosmosdbMongoDatabase extends cdktf.TerraformResource {
       autoscale_settings: cosmosdbMongoDatabaseAutoscaleSettingsToTerraform(this._autoscaleSettings.internalValue),
       timeouts: cosmosdbMongoDatabaseTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      account_name: {
+        value: cdktf.stringToHclTerraform(this._accountName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      throughput: {
+        value: cdktf.numberToHclTerraform(this._throughput),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      autoscale_settings: {
+        value: cosmosdbMongoDatabaseAutoscaleSettingsToHclTerraform(this._autoscaleSettings.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CosmosdbMongoDatabaseAutoscaleSettingsList",
+      },
+      timeouts: {
+        value: cosmosdbMongoDatabaseTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "CosmosdbMongoDatabaseTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

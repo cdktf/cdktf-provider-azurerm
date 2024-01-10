@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlManagedDatabase.MssqlManagedDatabase.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mssqlmanageddatabase"
 
 mssqlmanageddatabase.NewMssqlManagedDatabase(scope Construct, id *string, config MssqlManagedDatabaseConfig) MssqlManagedDatabase
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.mssqlManagedDatabase.MssqlManagedDatabase.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlManagedDatabase.MssqlManagedDatabase.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.mssqlManagedDatabase.MssqlManagedDatabase.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.mssqlManagedDatabase.MssqlManagedDatabase.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlManagedDatabase.MssqlManagedDatabase.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mssqlManagedDatabase.MssqlManagedDatabase.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.mssqlManagedDatabase.MssqlManagedDatabase.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -130,6 +131,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.mssqlManagedDatabase.MssqlManagedDatabase.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.mssqlManagedDatabase.MssqlManagedDatabase.toMetadata"></a>
 
@@ -425,7 +432,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mssqlManagedDatabase.MssqlManagedDatabase.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mssqlmanageddatabase"
 
 mssqlmanageddatabase.MssqlManagedDatabase_IsConstruct(x interface{}) *bool
 ```
@@ -457,7 +464,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mssqlManagedDatabase.MssqlManagedDatabase.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mssqlmanageddatabase"
 
 mssqlmanageddatabase.MssqlManagedDatabase_IsTerraformElement(x interface{}) *bool
 ```
@@ -471,7 +478,7 @@ mssqlmanageddatabase.MssqlManagedDatabase_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mssqlManagedDatabase.MssqlManagedDatabase.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mssqlmanageddatabase"
 
 mssqlmanageddatabase.MssqlManagedDatabase_IsTerraformResource(x interface{}) *bool
 ```
@@ -485,7 +492,7 @@ mssqlmanageddatabase.MssqlManagedDatabase_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.mssqlManagedDatabase.MssqlManagedDatabase.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mssqlmanageddatabase"
 
 mssqlmanageddatabase.MssqlManagedDatabase_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -846,7 +853,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlManagedDatabase.MssqlManagedDatabaseConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mssqlmanageddatabase"
 
 &mssqlmanageddatabase.MssqlManagedDatabaseConfig {
 	Connection: interface{},
@@ -859,9 +866,9 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlmanageddatab
 	ManagedInstanceId: *string,
 	Name: *string,
 	Id: *string,
-	LongTermRetentionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mssqlManagedDatabase.MssqlManagedDatabaseLongTermRetentionPolicy,
+	LongTermRetentionPolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mssqlManagedDatabase.MssqlManagedDatabaseLongTermRetentionPolicy,
 	ShortTermRetentionDays: *f64,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.mssqlManagedDatabase.MssqlManagedDatabaseTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.mssqlManagedDatabase.MssqlManagedDatabaseTimeouts,
 }
 ```
 
@@ -1039,7 +1046,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlManagedDatabase.MssqlManagedDatabaseLongTermRetentionPolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mssqlmanageddatabase"
 
 &mssqlmanageddatabase.MssqlManagedDatabaseLongTermRetentionPolicy {
 	MonthlyRetention: *string,
@@ -1113,7 +1120,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlManagedDatabase.MssqlManagedDatabaseTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mssqlmanageddatabase"
 
 &mssqlmanageddatabase.MssqlManagedDatabaseTimeouts {
 	Create: *string,
@@ -1189,7 +1196,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlManagedDatabase.MssqlManagedDatabaseLongTermRetentionPolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mssqlmanageddatabase"
 
 mssqlmanageddatabase.NewMssqlManagedDatabaseLongTermRetentionPolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlManagedDatabaseLongTermRetentionPolicyOutputReference
 ```
@@ -1554,7 +1561,7 @@ func InternalValue() MssqlManagedDatabaseLongTermRetentionPolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlManagedDatabase.MssqlManagedDatabaseTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/mssqlmanageddatabase"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/mssqlmanageddatabase"
 
 mssqlmanageddatabase.NewMssqlManagedDatabaseTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlManagedDatabaseTimeoutsOutputReference
 ```

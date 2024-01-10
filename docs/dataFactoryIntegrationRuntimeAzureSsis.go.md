@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsis.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 datafactoryintegrationruntimeazuressis.NewDataFactoryIntegrationRuntimeAzureSsis(scope Construct, id *string, config DataFactoryIntegrationRuntimeAzureSsisConfig) DataFactoryIntegrationRuntimeAzureSsis
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsis.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsis.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsis.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsis.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsis.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsis.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsis.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -146,6 +147,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsis.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsis.toMetadata"></a>
 
@@ -573,7 +580,7 @@ func ResetVnetIntegration()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsis.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 datafactoryintegrationruntimeazuressis.DataFactoryIntegrationRuntimeAzureSsis_IsConstruct(x interface{}) *bool
 ```
@@ -605,7 +612,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsis.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 datafactoryintegrationruntimeazuressis.DataFactoryIntegrationRuntimeAzureSsis_IsTerraformElement(x interface{}) *bool
 ```
@@ -619,7 +626,7 @@ datafactoryintegrationruntimeazuressis.DataFactoryIntegrationRuntimeAzureSsis_Is
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsis.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 datafactoryintegrationruntimeazuressis.DataFactoryIntegrationRuntimeAzureSsis_IsTerraformResource(x interface{}) *bool
 ```
@@ -633,7 +640,7 @@ datafactoryintegrationruntimeazuressis.DataFactoryIntegrationRuntimeAzureSsis_Is
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsis.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 datafactoryintegrationruntimeazuressis.DataFactoryIntegrationRuntimeAzureSsis_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1258,7 +1265,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisCatalogInfo.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 &datafactoryintegrationruntimeazuressis.DataFactoryIntegrationRuntimeAzureSsisCatalogInfo {
 	ServerEndpoint: *string,
@@ -1360,7 +1367,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 &datafactoryintegrationruntimeazuressis.DataFactoryIntegrationRuntimeAzureSsisConfig {
 	Connection: interface{},
@@ -1374,20 +1381,20 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegr
 	Location: *string,
 	Name: *string,
 	NodeSize: *string,
-	CatalogInfo: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisCatalogInfo,
-	CustomSetupScript: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisCustomSetupScript,
+	CatalogInfo: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisCatalogInfo,
+	CustomSetupScript: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisCustomSetupScript,
 	Description: *string,
 	Edition: *string,
-	ExpressCustomSetup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup,
-	ExpressVnetIntegration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressVnetIntegration,
+	ExpressCustomSetup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup,
+	ExpressVnetIntegration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressVnetIntegration,
 	Id: *string,
 	LicenseType: *string,
 	MaxParallelExecutionsPerNode: *f64,
 	NumberOfNodes: *f64,
 	PackageStore: interface{},
-	Proxy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisProxy,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisTimeouts,
-	VnetIntegration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisVnetIntegration,
+	Proxy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisProxy,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisTimeouts,
+	VnetIntegration: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisVnetIntegration,
 }
 ```
 
@@ -1733,7 +1740,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisCustomSetupScript.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 &datafactoryintegrationruntimeazuressis.DataFactoryIntegrationRuntimeAzureSsisCustomSetupScript {
 	BlobContainerUri: *string,
@@ -1779,7 +1786,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 &datafactoryintegrationruntimeazuressis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup {
 	CommandKey: interface{},
@@ -1857,12 +1864,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 &datafactoryintegrationruntimeazuressis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKey {
 	TargetName: *string,
 	UserName: *string,
-	KeyVaultPassword: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPassword,
+	KeyVaultPassword: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPassword,
 	Password: *string,
 }
 ```
@@ -1933,7 +1940,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPassword.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 &datafactoryintegrationruntimeazuressis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPassword {
 	LinkedServiceName: *string,
@@ -2007,11 +2014,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponent.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 &datafactoryintegrationruntimeazuressis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponent {
 	Name: *string,
-	KeyVaultLicense: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicense,
+	KeyVaultLicense: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicense,
 	License: *string,
 }
 ```
@@ -2069,7 +2076,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicense.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 &datafactoryintegrationruntimeazuressis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicense {
 	LinkedServiceName: *string,
@@ -2143,7 +2150,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressVnetIntegration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 &datafactoryintegrationruntimeazuressis.DataFactoryIntegrationRuntimeAzureSsisExpressVnetIntegration {
 	SubnetId: *string,
@@ -2175,7 +2182,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisPackageStore.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 &datafactoryintegrationruntimeazuressis.DataFactoryIntegrationRuntimeAzureSsisPackageStore {
 	LinkedServiceName: *string,
@@ -2221,7 +2228,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisProxy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 &datafactoryintegrationruntimeazuressis.DataFactoryIntegrationRuntimeAzureSsisProxy {
 	SelfHostedIntegrationRuntimeName: *string,
@@ -2281,7 +2288,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 &datafactoryintegrationruntimeazuressis.DataFactoryIntegrationRuntimeAzureSsisTimeouts {
 	Create: *string,
@@ -2355,7 +2362,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisVnetIntegration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 &datafactoryintegrationruntimeazuressis.DataFactoryIntegrationRuntimeAzureSsisVnetIntegration {
 	PublicIps: *[]*string,
@@ -2431,7 +2438,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisCatalogInfoOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 datafactoryintegrationruntimeazuressis.NewDataFactoryIntegrationRuntimeAzureSsisCatalogInfoOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryIntegrationRuntimeAzureSsisCatalogInfoOutputReference
 ```
@@ -2847,7 +2854,7 @@ func InternalValue() DataFactoryIntegrationRuntimeAzureSsisCatalogInfo
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 datafactoryintegrationruntimeazuressis.NewDataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryIntegrationRuntimeAzureSsisCustomSetupScriptOutputReference
 ```
@@ -3140,7 +3147,7 @@ func InternalValue() DataFactoryIntegrationRuntimeAzureSsisCustomSetupScript
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPasswordOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 datafactoryintegrationruntimeazuressis.NewDataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPasswordOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyKeyVaultPasswordOutputReference
 ```
@@ -3491,7 +3498,7 @@ func InternalValue() DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCom
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 datafactoryintegrationruntimeazuressis.NewDataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyList
 ```
@@ -3532,10 +3539,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -3634,7 +3658,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 datafactoryintegrationruntimeazuressis.NewDataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCommandKeyOutputReference
 ```
@@ -4016,7 +4040,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicenseOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 datafactoryintegrationruntimeazuressis.NewDataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicenseOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentKeyVaultLicenseOutputReference
 ```
@@ -4367,7 +4391,7 @@ func InternalValue() DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupCom
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 datafactoryintegrationruntimeazuressis.NewDataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentList
 ```
@@ -4408,10 +4432,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -4510,7 +4551,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 datafactoryintegrationruntimeazuressis.NewDataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupComponentOutputReference
 ```
@@ -4870,7 +4911,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 datafactoryintegrationruntimeazuressis.NewDataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetupOutputReference
 ```
@@ -5261,7 +5302,7 @@ func InternalValue() DataFactoryIntegrationRuntimeAzureSsisExpressCustomSetup
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisExpressVnetIntegrationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 datafactoryintegrationruntimeazuressis.NewDataFactoryIntegrationRuntimeAzureSsisExpressVnetIntegrationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryIntegrationRuntimeAzureSsisExpressVnetIntegrationOutputReference
 ```
@@ -5532,7 +5573,7 @@ func InternalValue() DataFactoryIntegrationRuntimeAzureSsisExpressVnetIntegratio
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisPackageStoreList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 datafactoryintegrationruntimeazuressis.NewDataFactoryIntegrationRuntimeAzureSsisPackageStoreList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataFactoryIntegrationRuntimeAzureSsisPackageStoreList
 ```
@@ -5573,10 +5614,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisPackageStoreList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisPackageStoreList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisPackageStoreList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisPackageStoreList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisPackageStoreList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisPackageStoreList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisPackageStoreList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -5675,7 +5733,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisPackageStoreOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 datafactoryintegrationruntimeazuressis.NewDataFactoryIntegrationRuntimeAzureSsisPackageStoreOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataFactoryIntegrationRuntimeAzureSsisPackageStoreOutputReference
 ```
@@ -5986,7 +6044,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisProxyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 datafactoryintegrationruntimeazuressis.NewDataFactoryIntegrationRuntimeAzureSsisProxyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryIntegrationRuntimeAzureSsisProxyOutputReference
 ```
@@ -6308,7 +6366,7 @@ func InternalValue() DataFactoryIntegrationRuntimeAzureSsisProxy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 datafactoryintegrationruntimeazuressis.NewDataFactoryIntegrationRuntimeAzureSsisTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryIntegrationRuntimeAzureSsisTimeoutsOutputReference
 ```
@@ -6673,7 +6731,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataFactoryIntegrationRuntimeAzureSsis.DataFactoryIntegrationRuntimeAzureSsisVnetIntegrationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/datafactoryintegrationruntimeazuressis"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/datafactoryintegrationruntimeazuressis"
 
 datafactoryintegrationruntimeazuressis.NewDataFactoryIntegrationRuntimeAzureSsisVnetIntegrationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataFactoryIntegrationRuntimeAzureSsisVnetIntegrationOutputReference
 ```

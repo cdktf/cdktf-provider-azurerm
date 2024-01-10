@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/3.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppression.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 monitoralertprocessingrulesuppression.NewMonitorAlertProcessingRuleSuppression(scope Construct, id *string, config MonitorAlertProcessingRuleSuppressionConfig) MonitorAlertProcessingRuleSuppression
 ```
@@ -54,6 +54,7 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppression.addOverride">AddOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppression.overrideLogicalId">OverrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
 | <code><a href="#@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppression.resetOverrideLogicalId">ResetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppression.toHclTerraform">ToHclTerraform</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppression.toMetadata">ToMetadata</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppression.toTerraform">ToTerraform</a></code> | Adds this resource to the terraform JSON output. |
 | <code><a href="#@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppression.addMoveTarget">AddMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
@@ -134,6 +135,12 @@ func ResetOverrideLogicalId()
 ```
 
 Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `ToHclTerraform` <a name="ToHclTerraform" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppression.toHclTerraform"></a>
+
+```go
+func ToHclTerraform() interface{}
+```
 
 ##### `ToMetadata` <a name="ToMetadata" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppression.toMetadata"></a>
 
@@ -459,7 +466,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppression.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 monitoralertprocessingrulesuppression.MonitorAlertProcessingRuleSuppression_IsConstruct(x interface{}) *bool
 ```
@@ -491,7 +498,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppression.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 monitoralertprocessingrulesuppression.MonitorAlertProcessingRuleSuppression_IsTerraformElement(x interface{}) *bool
 ```
@@ -505,7 +512,7 @@ monitoralertprocessingrulesuppression.MonitorAlertProcessingRuleSuppression_IsTe
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppression.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 monitoralertprocessingrulesuppression.MonitorAlertProcessingRuleSuppression_IsTerraformResource(x interface{}) *bool
 ```
@@ -519,7 +526,7 @@ monitoralertprocessingrulesuppression.MonitorAlertProcessingRuleSuppression_IsTe
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppression.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 monitoralertprocessingrulesuppression.MonitorAlertProcessingRuleSuppression_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -968,20 +975,20 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 &monitoralertprocessingrulesuppression.MonitorAlertProcessingRuleSuppressionCondition {
-	AlertContext: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionAlertContext,
-	AlertRuleId: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionAlertRuleId,
-	AlertRuleName: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionAlertRuleName,
-	Description: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionDescription,
-	MonitorCondition: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionMonitorCondition,
-	MonitorService: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionMonitorService,
-	Severity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionSeverity,
-	SignalType: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionSignalType,
-	TargetResource: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionTargetResource,
-	TargetResourceGroup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionTargetResourceGroup,
-	TargetResourceType: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionTargetResourceType,
+	AlertContext: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionAlertContext,
+	AlertRuleId: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionAlertRuleId,
+	AlertRuleName: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionAlertRuleName,
+	Description: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionDescription,
+	MonitorCondition: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionMonitorCondition,
+	MonitorService: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionMonitorService,
+	Severity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionSeverity,
+	SignalType: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionSignalType,
+	TargetResource: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionTargetResource,
+	TargetResourceGroup: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionTargetResourceGroup,
+	TargetResourceType: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionTargetResourceType,
 }
 ```
 
@@ -1162,7 +1169,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionAlertContext.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 &monitoralertprocessingrulesuppression.MonitorAlertProcessingRuleSuppressionConditionAlertContext {
 	Operator: *string,
@@ -1208,7 +1215,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionAlertRuleId.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 &monitoralertprocessingrulesuppression.MonitorAlertProcessingRuleSuppressionConditionAlertRuleId {
 	Operator: *string,
@@ -1254,7 +1261,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionAlertRuleName.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 &monitoralertprocessingrulesuppression.MonitorAlertProcessingRuleSuppressionConditionAlertRuleName {
 	Operator: *string,
@@ -1300,7 +1307,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionDescription.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 &monitoralertprocessingrulesuppression.MonitorAlertProcessingRuleSuppressionConditionDescription {
 	Operator: *string,
@@ -1346,7 +1353,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionMonitorCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 &monitoralertprocessingrulesuppression.MonitorAlertProcessingRuleSuppressionConditionMonitorCondition {
 	Operator: *string,
@@ -1392,7 +1399,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionMonitorService.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 &monitoralertprocessingrulesuppression.MonitorAlertProcessingRuleSuppressionConditionMonitorService {
 	Operator: *string,
@@ -1438,7 +1445,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionSeverity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 &monitoralertprocessingrulesuppression.MonitorAlertProcessingRuleSuppressionConditionSeverity {
 	Operator: *string,
@@ -1484,7 +1491,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionSignalType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 &monitoralertprocessingrulesuppression.MonitorAlertProcessingRuleSuppressionConditionSignalType {
 	Operator: *string,
@@ -1530,7 +1537,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionTargetResource.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 &monitoralertprocessingrulesuppression.MonitorAlertProcessingRuleSuppressionConditionTargetResource {
 	Operator: *string,
@@ -1576,7 +1583,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionTargetResourceGroup.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 &monitoralertprocessingrulesuppression.MonitorAlertProcessingRuleSuppressionConditionTargetResourceGroup {
 	Operator: *string,
@@ -1622,7 +1629,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionTargetResourceType.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 &monitoralertprocessingrulesuppression.MonitorAlertProcessingRuleSuppressionConditionTargetResourceType {
 	Operator: *string,
@@ -1668,7 +1675,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 &monitoralertprocessingrulesuppression.MonitorAlertProcessingRuleSuppressionConfig {
 	Connection: interface{},
@@ -1681,13 +1688,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertproce
 	Name: *string,
 	ResourceGroupName: *string,
 	Scopes: *[]*string,
-	Condition: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionCondition,
+	Condition: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionCondition,
 	Description: *string,
 	Enabled: interface{},
 	Id: *string,
-	Schedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionSchedule,
+	Schedule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionSchedule,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionTimeouts,
 }
 ```
 
@@ -1919,12 +1926,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionSchedule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 &monitoralertprocessingrulesuppression.MonitorAlertProcessingRuleSuppressionSchedule {
 	EffectiveFrom: *string,
 	EffectiveUntil: *string,
-	Recurrence: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrence,
+	Recurrence: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrence,
 	TimeZone: *string,
 }
 ```
@@ -1995,7 +2002,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrence.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 &monitoralertprocessingrulesuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrence {
 	Daily: interface{},
@@ -2061,7 +2068,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceDaily.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 &monitoralertprocessingrulesuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceDaily {
 	EndTime: *string,
@@ -2107,7 +2114,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceMonthly.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 &monitoralertprocessingrulesuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceMonthly {
 	DaysOfMonth: *[]*f64,
@@ -2167,7 +2174,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceWeekly.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 &monitoralertprocessingrulesuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceWeekly {
 	DaysOfWeek: *[]*string,
@@ -2227,7 +2234,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 &monitoralertprocessingrulesuppression.MonitorAlertProcessingRuleSuppressionTimeouts {
 	Create: *string,
@@ -2303,7 +2310,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionAlertContextOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 monitoralertprocessingrulesuppression.NewMonitorAlertProcessingRuleSuppressionConditionAlertContextOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorAlertProcessingRuleSuppressionConditionAlertContextOutputReference
 ```
@@ -2596,7 +2603,7 @@ func InternalValue() MonitorAlertProcessingRuleSuppressionConditionAlertContext
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionAlertRuleIdOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 monitoralertprocessingrulesuppression.NewMonitorAlertProcessingRuleSuppressionConditionAlertRuleIdOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorAlertProcessingRuleSuppressionConditionAlertRuleIdOutputReference
 ```
@@ -2889,7 +2896,7 @@ func InternalValue() MonitorAlertProcessingRuleSuppressionConditionAlertRuleId
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionAlertRuleNameOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 monitoralertprocessingrulesuppression.NewMonitorAlertProcessingRuleSuppressionConditionAlertRuleNameOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorAlertProcessingRuleSuppressionConditionAlertRuleNameOutputReference
 ```
@@ -3182,7 +3189,7 @@ func InternalValue() MonitorAlertProcessingRuleSuppressionConditionAlertRuleName
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionDescriptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 monitoralertprocessingrulesuppression.NewMonitorAlertProcessingRuleSuppressionConditionDescriptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorAlertProcessingRuleSuppressionConditionDescriptionOutputReference
 ```
@@ -3475,7 +3482,7 @@ func InternalValue() MonitorAlertProcessingRuleSuppressionConditionDescription
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionMonitorConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 monitoralertprocessingrulesuppression.NewMonitorAlertProcessingRuleSuppressionConditionMonitorConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorAlertProcessingRuleSuppressionConditionMonitorConditionOutputReference
 ```
@@ -3768,7 +3775,7 @@ func InternalValue() MonitorAlertProcessingRuleSuppressionConditionMonitorCondit
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionMonitorServiceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 monitoralertprocessingrulesuppression.NewMonitorAlertProcessingRuleSuppressionConditionMonitorServiceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorAlertProcessingRuleSuppressionConditionMonitorServiceOutputReference
 ```
@@ -4061,7 +4068,7 @@ func InternalValue() MonitorAlertProcessingRuleSuppressionConditionMonitorServic
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 monitoralertprocessingrulesuppression.NewMonitorAlertProcessingRuleSuppressionConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorAlertProcessingRuleSuppressionConditionOutputReference
 ```
@@ -4772,7 +4779,7 @@ func InternalValue() MonitorAlertProcessingRuleSuppressionCondition
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionSeverityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 monitoralertprocessingrulesuppression.NewMonitorAlertProcessingRuleSuppressionConditionSeverityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorAlertProcessingRuleSuppressionConditionSeverityOutputReference
 ```
@@ -5065,7 +5072,7 @@ func InternalValue() MonitorAlertProcessingRuleSuppressionConditionSeverity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionSignalTypeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 monitoralertprocessingrulesuppression.NewMonitorAlertProcessingRuleSuppressionConditionSignalTypeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorAlertProcessingRuleSuppressionConditionSignalTypeOutputReference
 ```
@@ -5358,7 +5365,7 @@ func InternalValue() MonitorAlertProcessingRuleSuppressionConditionSignalType
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionTargetResourceGroupOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 monitoralertprocessingrulesuppression.NewMonitorAlertProcessingRuleSuppressionConditionTargetResourceGroupOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorAlertProcessingRuleSuppressionConditionTargetResourceGroupOutputReference
 ```
@@ -5651,7 +5658,7 @@ func InternalValue() MonitorAlertProcessingRuleSuppressionConditionTargetResourc
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionTargetResourceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 monitoralertprocessingrulesuppression.NewMonitorAlertProcessingRuleSuppressionConditionTargetResourceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorAlertProcessingRuleSuppressionConditionTargetResourceOutputReference
 ```
@@ -5944,7 +5951,7 @@ func InternalValue() MonitorAlertProcessingRuleSuppressionConditionTargetResourc
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionConditionTargetResourceTypeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 monitoralertprocessingrulesuppression.NewMonitorAlertProcessingRuleSuppressionConditionTargetResourceTypeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorAlertProcessingRuleSuppressionConditionTargetResourceTypeOutputReference
 ```
@@ -6237,7 +6244,7 @@ func InternalValue() MonitorAlertProcessingRuleSuppressionConditionTargetResourc
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 monitoralertprocessingrulesuppression.NewMonitorAlertProcessingRuleSuppressionScheduleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorAlertProcessingRuleSuppressionScheduleOutputReference
 ```
@@ -6615,7 +6622,7 @@ func InternalValue() MonitorAlertProcessingRuleSuppressionSchedule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceDailyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 monitoralertprocessingrulesuppression.NewMonitorAlertProcessingRuleSuppressionScheduleRecurrenceDailyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MonitorAlertProcessingRuleSuppressionScheduleRecurrenceDailyList
 ```
@@ -6656,10 +6663,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceDailyList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceDailyList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceDailyList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceDailyList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceDailyList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceDailyList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceDailyList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -6758,7 +6782,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceDailyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 monitoralertprocessingrulesuppression.NewMonitorAlertProcessingRuleSuppressionScheduleRecurrenceDailyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MonitorAlertProcessingRuleSuppressionScheduleRecurrenceDailyOutputReference
 ```
@@ -7069,7 +7093,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceMonthlyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 monitoralertprocessingrulesuppression.NewMonitorAlertProcessingRuleSuppressionScheduleRecurrenceMonthlyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MonitorAlertProcessingRuleSuppressionScheduleRecurrenceMonthlyList
 ```
@@ -7110,10 +7134,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceMonthlyList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceMonthlyList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceMonthlyList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceMonthlyList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceMonthlyList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceMonthlyList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceMonthlyList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -7212,7 +7253,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceMonthlyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 monitoralertprocessingrulesuppression.NewMonitorAlertProcessingRuleSuppressionScheduleRecurrenceMonthlyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MonitorAlertProcessingRuleSuppressionScheduleRecurrenceMonthlyOutputReference
 ```
@@ -7559,7 +7600,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 monitoralertprocessingrulesuppression.NewMonitorAlertProcessingRuleSuppressionScheduleRecurrenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorAlertProcessingRuleSuppressionScheduleRecurrenceOutputReference
 ```
@@ -7934,7 +7975,7 @@ func InternalValue() MonitorAlertProcessingRuleSuppressionScheduleRecurrence
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceWeeklyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 monitoralertprocessingrulesuppression.NewMonitorAlertProcessingRuleSuppressionScheduleRecurrenceWeeklyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MonitorAlertProcessingRuleSuppressionScheduleRecurrenceWeeklyList
 ```
@@ -7975,10 +8016,27 @@ whether the list is wrapping a set (will add tolist() to be able to access an it
 
 | **Name** | **Description** |
 | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceWeeklyList.allWithMapKey">AllWithMapKey</a></code> | Creating an iterator for this complex list. |
 | <code><a href="#@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceWeeklyList.computeFqn">ComputeFqn</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceWeeklyList.resolve">Resolve</a></code> | Produce the Token's value at resolution time. |
 | <code><a href="#@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceWeeklyList.toString">ToString</a></code> | Return a string representation of this resolvable object. |
 | <code><a href="#@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceWeeklyList.get">Get</a></code> | *No description.* |
+
+---
+
+##### `AllWithMapKey` <a name="AllWithMapKey" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceWeeklyList.allWithMapKey"></a>
+
+```go
+func AllWithMapKey(mapKeyAttributeName *string) DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `mapKeyAttributeName`<sup>Required</sup> <a name="mapKeyAttributeName" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceWeeklyList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* *string
 
 ---
 
@@ -8077,7 +8135,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionScheduleRecurrenceWeeklyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 monitoralertprocessingrulesuppression.NewMonitorAlertProcessingRuleSuppressionScheduleRecurrenceWeeklyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MonitorAlertProcessingRuleSuppressionScheduleRecurrenceWeeklyOutputReference
 ```
@@ -8424,7 +8482,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.monitorAlertProcessingRuleSuppression.MonitorAlertProcessingRuleSuppressionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v11/monitoralertprocessingrulesuppression"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v12/monitoralertprocessingrulesuppression"
 
 monitoralertprocessingrulesuppression.NewMonitorAlertProcessingRuleSuppressionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MonitorAlertProcessingRuleSuppressionTimeoutsOutputReference
 ```

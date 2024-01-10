@@ -149,6 +149,37 @@ export function synapseWorkspaceAadAdminToTerraform(struct?: SynapseWorkspaceAad
   }
 }
 
+
+export function synapseWorkspaceAadAdminToHclTerraform(struct?: SynapseWorkspaceAadAdmin | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    login: {
+      value: struct!.login === undefined ? null : cdktf.stringToHclTerraform(struct!.login),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    object_id: {
+      value: struct!.objectId === undefined ? null : cdktf.stringToHclTerraform(struct!.objectId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tenant_id: {
+      value: struct!.tenantId === undefined ? null : cdktf.stringToHclTerraform(struct!.tenantId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SynapseWorkspaceAadAdminOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -298,6 +329,37 @@ export function synapseWorkspaceSqlAadAdminToTerraform(struct?: SynapseWorkspace
     object_id: struct!.objectId === undefined ? null : cdktf.stringToTerraform(struct!.objectId),
     tenant_id: struct!.tenantId === undefined ? null : cdktf.stringToTerraform(struct!.tenantId),
   }
+}
+
+
+export function synapseWorkspaceSqlAadAdminToHclTerraform(struct?: SynapseWorkspaceSqlAadAdmin | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    login: {
+      value: struct!.login === undefined ? null : cdktf.stringToHclTerraform(struct!.login),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    object_id: {
+      value: struct!.objectId === undefined ? null : cdktf.stringToHclTerraform(struct!.objectId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tenant_id: {
+      value: struct!.tenantId === undefined ? null : cdktf.stringToHclTerraform(struct!.tenantId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SynapseWorkspaceSqlAadAdminOutputReference extends cdktf.ComplexObject {
@@ -469,6 +531,61 @@ export function synapseWorkspaceAzureDevopsRepoToTerraform(struct?: SynapseWorks
     root_folder: cdktf.stringToTerraform(struct!.rootFolder),
     tenant_id: cdktf.stringToTerraform(struct!.tenantId),
   }
+}
+
+
+export function synapseWorkspaceAzureDevopsRepoToHclTerraform(struct?: SynapseWorkspaceAzureDevopsRepoOutputReference | SynapseWorkspaceAzureDevopsRepo): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    account_name: {
+      value: cdktf.stringToHclTerraform(struct!.accountName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    branch_name: {
+      value: cdktf.stringToHclTerraform(struct!.branchName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    last_commit_id: {
+      value: cdktf.stringToHclTerraform(struct!.lastCommitId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    project_name: {
+      value: cdktf.stringToHclTerraform(struct!.projectName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    repository_name: {
+      value: cdktf.stringToHclTerraform(struct!.repositoryName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    root_folder: {
+      value: cdktf.stringToHclTerraform(struct!.rootFolder),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tenant_id: {
+      value: cdktf.stringToHclTerraform(struct!.tenantId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SynapseWorkspaceAzureDevopsRepoOutputReference extends cdktf.ComplexObject {
@@ -658,6 +775,31 @@ export function synapseWorkspaceCustomerManagedKeyToTerraform(struct?: SynapseWo
   }
 }
 
+
+export function synapseWorkspaceCustomerManagedKeyToHclTerraform(struct?: SynapseWorkspaceCustomerManagedKeyOutputReference | SynapseWorkspaceCustomerManagedKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    key_name: {
+      value: cdktf.stringToHclTerraform(struct!.keyName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_versionless_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVersionlessId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SynapseWorkspaceCustomerManagedKeyOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -765,6 +907,55 @@ export function synapseWorkspaceGithubRepoToTerraform(struct?: SynapseWorkspaceG
     repository_name: cdktf.stringToTerraform(struct!.repositoryName),
     root_folder: cdktf.stringToTerraform(struct!.rootFolder),
   }
+}
+
+
+export function synapseWorkspaceGithubRepoToHclTerraform(struct?: SynapseWorkspaceGithubRepoOutputReference | SynapseWorkspaceGithubRepo): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    account_name: {
+      value: cdktf.stringToHclTerraform(struct!.accountName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    branch_name: {
+      value: cdktf.stringToHclTerraform(struct!.branchName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    git_url: {
+      value: cdktf.stringToHclTerraform(struct!.gitUrl),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    last_commit_id: {
+      value: cdktf.stringToHclTerraform(struct!.lastCommitId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    repository_name: {
+      value: cdktf.stringToHclTerraform(struct!.repositoryName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    root_folder: {
+      value: cdktf.stringToHclTerraform(struct!.rootFolder),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SynapseWorkspaceGithubRepoOutputReference extends cdktf.ComplexObject {
@@ -935,6 +1126,31 @@ export function synapseWorkspaceIdentityToTerraform(struct?: SynapseWorkspaceIde
   }
 }
 
+
+export function synapseWorkspaceIdentityToHclTerraform(struct?: SynapseWorkspaceIdentityOutputReference | SynapseWorkspaceIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.identityIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SynapseWorkspaceIdentityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1042,6 +1258,43 @@ export function synapseWorkspaceTimeoutsToTerraform(struct?: SynapseWorkspaceTim
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function synapseWorkspaceTimeoutsToHclTerraform(struct?: SynapseWorkspaceTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SynapseWorkspaceTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1659,5 +1912,157 @@ export class SynapseWorkspace extends cdktf.TerraformResource {
       identity: synapseWorkspaceIdentityToTerraform(this._identity.internalValue),
       timeouts: synapseWorkspaceTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      aad_admin: {
+        value: cdktf.listMapperHcl(synapseWorkspaceAadAdminToHclTerraform, false)(this._aadAdmin.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SynapseWorkspaceAadAdminList",
+      },
+      azuread_authentication_only: {
+        value: cdktf.booleanToHclTerraform(this._azureadAuthenticationOnly),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      compute_subnet_id: {
+        value: cdktf.stringToHclTerraform(this._computeSubnetId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      data_exfiltration_protection_enabled: {
+        value: cdktf.booleanToHclTerraform(this._dataExfiltrationProtectionEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      linking_allowed_for_aad_tenant_ids: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._linkingAllowedForAadTenantIds),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      managed_resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._managedResourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      managed_virtual_network_enabled: {
+        value: cdktf.booleanToHclTerraform(this._managedVirtualNetworkEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      public_network_access_enabled: {
+        value: cdktf.booleanToHclTerraform(this._publicNetworkAccessEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      purview_id: {
+        value: cdktf.stringToHclTerraform(this._purviewId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sql_aad_admin: {
+        value: cdktf.listMapperHcl(synapseWorkspaceSqlAadAdminToHclTerraform, false)(this._sqlAadAdmin.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SynapseWorkspaceSqlAadAdminList",
+      },
+      sql_administrator_login: {
+        value: cdktf.stringToHclTerraform(this._sqlAdministratorLogin),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sql_administrator_login_password: {
+        value: cdktf.stringToHclTerraform(this._sqlAdministratorLoginPassword),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sql_identity_control_enabled: {
+        value: cdktf.booleanToHclTerraform(this._sqlIdentityControlEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      storage_data_lake_gen2_filesystem_id: {
+        value: cdktf.stringToHclTerraform(this._storageDataLakeGen2FilesystemId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      azure_devops_repo: {
+        value: synapseWorkspaceAzureDevopsRepoToHclTerraform(this._azureDevopsRepo.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SynapseWorkspaceAzureDevopsRepoList",
+      },
+      customer_managed_key: {
+        value: synapseWorkspaceCustomerManagedKeyToHclTerraform(this._customerManagedKey.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SynapseWorkspaceCustomerManagedKeyList",
+      },
+      github_repo: {
+        value: synapseWorkspaceGithubRepoToHclTerraform(this._githubRepo.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SynapseWorkspaceGithubRepoList",
+      },
+      identity: {
+        value: synapseWorkspaceIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SynapseWorkspaceIdentityList",
+      },
+      timeouts: {
+        value: synapseWorkspaceTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SynapseWorkspaceTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

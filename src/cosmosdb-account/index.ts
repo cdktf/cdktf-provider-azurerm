@@ -187,6 +187,25 @@ export function cosmosdbAccountAnalyticalStorageToTerraform(struct?: CosmosdbAcc
   }
 }
 
+
+export function cosmosdbAccountAnalyticalStorageToHclTerraform(struct?: CosmosdbAccountAnalyticalStorageOutputReference | CosmosdbAccountAnalyticalStorage): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    schema_type: {
+      value: cdktf.stringToHclTerraform(struct!.schemaType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CosmosdbAccountAnalyticalStorageOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -262,6 +281,43 @@ export function cosmosdbAccountBackupToTerraform(struct?: CosmosdbAccountBackupO
     storage_redundancy: cdktf.stringToTerraform(struct!.storageRedundancy),
     type: cdktf.stringToTerraform(struct!.type),
   }
+}
+
+
+export function cosmosdbAccountBackupToHclTerraform(struct?: CosmosdbAccountBackupOutputReference | CosmosdbAccountBackup): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    interval_in_minutes: {
+      value: cdktf.numberToHclTerraform(struct!.intervalInMinutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    retention_in_hours: {
+      value: cdktf.numberToHclTerraform(struct!.retentionInHours),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    storage_redundancy: {
+      value: cdktf.stringToHclTerraform(struct!.storageRedundancy),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CosmosdbAccountBackupOutputReference extends cdktf.ComplexObject {
@@ -392,6 +448,25 @@ export function cosmosdbAccountCapabilitiesToTerraform(struct?: CosmosdbAccountC
   }
 }
 
+
+export function cosmosdbAccountCapabilitiesToHclTerraform(struct?: CosmosdbAccountCapabilities | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CosmosdbAccountCapabilitiesOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -486,6 +561,25 @@ export function cosmosdbAccountCapacityToTerraform(struct?: CosmosdbAccountCapac
   }
 }
 
+
+export function cosmosdbAccountCapacityToHclTerraform(struct?: CosmosdbAccountCapacityOutputReference | CosmosdbAccountCapacity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    total_throughput_limit: {
+      value: cdktf.numberToHclTerraform(struct!.totalThroughputLimit),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CosmosdbAccountCapacityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -556,6 +650,37 @@ export function cosmosdbAccountConsistencyPolicyToTerraform(struct?: CosmosdbAcc
     max_interval_in_seconds: cdktf.numberToTerraform(struct!.maxIntervalInSeconds),
     max_staleness_prefix: cdktf.numberToTerraform(struct!.maxStalenessPrefix),
   }
+}
+
+
+export function cosmosdbAccountConsistencyPolicyToHclTerraform(struct?: CosmosdbAccountConsistencyPolicyOutputReference | CosmosdbAccountConsistencyPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    consistency_level: {
+      value: cdktf.stringToHclTerraform(struct!.consistencyLevel),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    max_interval_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.maxIntervalInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    max_staleness_prefix: {
+      value: cdktf.numberToHclTerraform(struct!.maxStalenessPrefix),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CosmosdbAccountConsistencyPolicyOutputReference extends cdktf.ComplexObject {
@@ -682,6 +807,49 @@ export function cosmosdbAccountCorsRuleToTerraform(struct?: CosmosdbAccountCorsR
     exposed_headers: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.exposedHeaders),
     max_age_in_seconds: cdktf.numberToTerraform(struct!.maxAgeInSeconds),
   }
+}
+
+
+export function cosmosdbAccountCorsRuleToHclTerraform(struct?: CosmosdbAccountCorsRuleOutputReference | CosmosdbAccountCorsRule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    allowed_headers: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedHeaders),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    allowed_methods: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedMethods),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    allowed_origins: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.allowedOrigins),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    exposed_headers: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.exposedHeaders),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    max_age_in_seconds: {
+      value: cdktf.numberToHclTerraform(struct!.maxAgeInSeconds),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CosmosdbAccountCorsRuleOutputReference extends cdktf.ComplexObject {
@@ -835,6 +1003,37 @@ export function cosmosdbAccountGeoLocationToTerraform(struct?: CosmosdbAccountGe
   }
 }
 
+
+export function cosmosdbAccountGeoLocationToHclTerraform(struct?: CosmosdbAccountGeoLocation | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    failover_priority: {
+      value: cdktf.numberToHclTerraform(struct!.failoverPriority),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    location: {
+      value: cdktf.stringToHclTerraform(struct!.location),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    zone_redundant: {
+      value: cdktf.booleanToHclTerraform(struct!.zoneRedundant),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CosmosdbAccountGeoLocationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -980,6 +1179,31 @@ export function cosmosdbAccountIdentityToTerraform(struct?: CosmosdbAccountIdent
   }
 }
 
+
+export function cosmosdbAccountIdentityToHclTerraform(struct?: CosmosdbAccountIdentityOutputReference | CosmosdbAccountIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.identityIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CosmosdbAccountIdentityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1077,6 +1301,31 @@ export function cosmosdbAccountRestoreDatabaseToTerraform(struct?: CosmosdbAccou
     collection_names: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.collectionNames),
     name: cdktf.stringToTerraform(struct!.name),
   }
+}
+
+
+export function cosmosdbAccountRestoreDatabaseToHclTerraform(struct?: CosmosdbAccountRestoreDatabase | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    collection_names: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.collectionNames),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CosmosdbAccountRestoreDatabaseOutputReference extends cdktf.ComplexObject {
@@ -1207,6 +1456,37 @@ export function cosmosdbAccountRestoreToTerraform(struct?: CosmosdbAccountRestor
   }
 }
 
+
+export function cosmosdbAccountRestoreToHclTerraform(struct?: CosmosdbAccountRestoreOutputReference | CosmosdbAccountRestore): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    restore_timestamp_in_utc: {
+      value: cdktf.stringToHclTerraform(struct!.restoreTimestampInUtc),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    source_cosmosdb_account_id: {
+      value: cdktf.stringToHclTerraform(struct!.sourceCosmosdbAccountId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    database: {
+      value: cdktf.listMapperHcl(cosmosdbAccountRestoreDatabaseToHclTerraform, true)(struct!.database),
+      isBlock: true,
+      type: "set",
+      storageClassType: "CosmosdbAccountRestoreDatabaseList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class CosmosdbAccountRestoreOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -1323,6 +1603,43 @@ export function cosmosdbAccountTimeoutsToTerraform(struct?: CosmosdbAccountTimeo
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function cosmosdbAccountTimeoutsToHclTerraform(struct?: CosmosdbAccountTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CosmosdbAccountTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1472,6 +1789,31 @@ export function cosmosdbAccountVirtualNetworkRuleToTerraform(struct?: CosmosdbAc
     id: cdktf.stringToTerraform(struct!.id),
     ignore_missing_vnet_service_endpoint: cdktf.booleanToTerraform(struct!.ignoreMissingVnetServiceEndpoint),
   }
+}
+
+
+export function cosmosdbAccountVirtualNetworkRuleToHclTerraform(struct?: CosmosdbAccountVirtualNetworkRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    id: {
+      value: cdktf.stringToHclTerraform(struct!.id),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ignore_missing_vnet_service_endpoint: {
+      value: cdktf.booleanToHclTerraform(struct!.ignoreMissingVnetServiceEndpoint),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class CosmosdbAccountVirtualNetworkRuleOutputReference extends cdktf.ComplexObject {
@@ -2294,5 +2636,211 @@ export class CosmosdbAccount extends cdktf.TerraformResource {
       timeouts: cosmosdbAccountTimeoutsToTerraform(this._timeouts.internalValue),
       virtual_network_rule: cdktf.listMapper(cosmosdbAccountVirtualNetworkRuleToTerraform, true)(this._virtualNetworkRule.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      access_key_metadata_writes_enabled: {
+        value: cdktf.booleanToHclTerraform(this._accessKeyMetadataWritesEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      analytical_storage_enabled: {
+        value: cdktf.booleanToHclTerraform(this._analyticalStorageEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      create_mode: {
+        value: cdktf.stringToHclTerraform(this._createMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      default_identity_type: {
+        value: cdktf.stringToHclTerraform(this._defaultIdentityType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      enable_automatic_failover: {
+        value: cdktf.booleanToHclTerraform(this._enableAutomaticFailover),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      enable_free_tier: {
+        value: cdktf.booleanToHclTerraform(this._enableFreeTier),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      enable_multiple_write_locations: {
+        value: cdktf.booleanToHclTerraform(this._enableMultipleWriteLocations),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      ip_range_filter: {
+        value: cdktf.stringToHclTerraform(this._ipRangeFilter),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      is_virtual_network_filter_enabled: {
+        value: cdktf.booleanToHclTerraform(this._isVirtualNetworkFilterEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      key_vault_key_id: {
+        value: cdktf.stringToHclTerraform(this._keyVaultKeyId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      kind: {
+        value: cdktf.stringToHclTerraform(this._kind),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      local_authentication_disabled: {
+        value: cdktf.booleanToHclTerraform(this._localAuthenticationDisabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      mongo_server_version: {
+        value: cdktf.stringToHclTerraform(this._mongoServerVersion),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      network_acl_bypass_for_azure_services: {
+        value: cdktf.booleanToHclTerraform(this._networkAclBypassForAzureServices),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      network_acl_bypass_ids: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._networkAclBypassIds),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      offer_type: {
+        value: cdktf.stringToHclTerraform(this._offerType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      public_network_access_enabled: {
+        value: cdktf.booleanToHclTerraform(this._publicNetworkAccessEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      analytical_storage: {
+        value: cosmosdbAccountAnalyticalStorageToHclTerraform(this._analyticalStorage.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CosmosdbAccountAnalyticalStorageList",
+      },
+      backup: {
+        value: cosmosdbAccountBackupToHclTerraform(this._backup.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CosmosdbAccountBackupList",
+      },
+      capabilities: {
+        value: cdktf.listMapperHcl(cosmosdbAccountCapabilitiesToHclTerraform, true)(this._capabilities.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "CosmosdbAccountCapabilitiesList",
+      },
+      capacity: {
+        value: cosmosdbAccountCapacityToHclTerraform(this._capacity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CosmosdbAccountCapacityList",
+      },
+      consistency_policy: {
+        value: cosmosdbAccountConsistencyPolicyToHclTerraform(this._consistencyPolicy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CosmosdbAccountConsistencyPolicyList",
+      },
+      cors_rule: {
+        value: cosmosdbAccountCorsRuleToHclTerraform(this._corsRule.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CosmosdbAccountCorsRuleList",
+      },
+      geo_location: {
+        value: cdktf.listMapperHcl(cosmosdbAccountGeoLocationToHclTerraform, true)(this._geoLocation.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "CosmosdbAccountGeoLocationList",
+      },
+      identity: {
+        value: cosmosdbAccountIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CosmosdbAccountIdentityList",
+      },
+      restore: {
+        value: cosmosdbAccountRestoreToHclTerraform(this._restore.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "CosmosdbAccountRestoreList",
+      },
+      timeouts: {
+        value: cosmosdbAccountTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "CosmosdbAccountTimeouts",
+      },
+      virtual_network_rule: {
+        value: cdktf.listMapperHcl(cosmosdbAccountVirtualNetworkRuleToHclTerraform, true)(this._virtualNetworkRule.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "CosmosdbAccountVirtualNetworkRuleList",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -105,6 +105,25 @@ export function batchAccountEncryptionToTerraform(struct?: BatchAccountEncryptio
   }
 }
 
+
+export function batchAccountEncryptionToHclTerraform(struct?: BatchAccountEncryption | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    key_vault_key_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultKeyId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class BatchAccountEncryptionOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -205,6 +224,31 @@ export function batchAccountIdentityToTerraform(struct?: BatchAccountIdentityOut
     identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
     type: cdktf.stringToTerraform(struct!.type),
   }
+}
+
+
+export function batchAccountIdentityToHclTerraform(struct?: BatchAccountIdentityOutputReference | BatchAccountIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.identityIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BatchAccountIdentityOutputReference extends cdktf.ComplexObject {
@@ -309,6 +353,31 @@ export function batchAccountKeyVaultReferenceToTerraform(struct?: BatchAccountKe
   }
 }
 
+
+export function batchAccountKeyVaultReferenceToHclTerraform(struct?: BatchAccountKeyVaultReferenceOutputReference | BatchAccountKeyVaultReference): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    id: {
+      value: cdktf.stringToHclTerraform(struct!.id),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    url: {
+      value: cdktf.stringToHclTerraform(struct!.url),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class BatchAccountKeyVaultReferenceOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -393,6 +462,31 @@ export function batchAccountNetworkProfileAccountAccessIpRuleToTerraform(struct?
     action: cdktf.stringToTerraform(struct!.action),
     ip_range: cdktf.stringToTerraform(struct!.ipRange),
   }
+}
+
+
+export function batchAccountNetworkProfileAccountAccessIpRuleToHclTerraform(struct?: BatchAccountNetworkProfileAccountAccessIpRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    action: {
+      value: cdktf.stringToHclTerraform(struct!.action),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ip_range: {
+      value: cdktf.stringToHclTerraform(struct!.ipRange),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BatchAccountNetworkProfileAccountAccessIpRuleOutputReference extends cdktf.ComplexObject {
@@ -518,6 +612,31 @@ export function batchAccountNetworkProfileAccountAccessToTerraform(struct?: Batc
   }
 }
 
+
+export function batchAccountNetworkProfileAccountAccessToHclTerraform(struct?: BatchAccountNetworkProfileAccountAccessOutputReference | BatchAccountNetworkProfileAccountAccess): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    default_action: {
+      value: cdktf.stringToHclTerraform(struct!.defaultAction),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ip_rule: {
+      value: cdktf.listMapperHcl(batchAccountNetworkProfileAccountAccessIpRuleToHclTerraform, true)(struct!.ipRule),
+      isBlock: true,
+      type: "list",
+      storageClassType: "BatchAccountNetworkProfileAccountAccessIpRuleList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class BatchAccountNetworkProfileAccountAccessOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -608,6 +727,31 @@ export function batchAccountNetworkProfileNodeManagementAccessIpRuleToTerraform(
     action: cdktf.stringToTerraform(struct!.action),
     ip_range: cdktf.stringToTerraform(struct!.ipRange),
   }
+}
+
+
+export function batchAccountNetworkProfileNodeManagementAccessIpRuleToHclTerraform(struct?: BatchAccountNetworkProfileNodeManagementAccessIpRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    action: {
+      value: cdktf.stringToHclTerraform(struct!.action),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ip_range: {
+      value: cdktf.stringToHclTerraform(struct!.ipRange),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BatchAccountNetworkProfileNodeManagementAccessIpRuleOutputReference extends cdktf.ComplexObject {
@@ -733,6 +877,31 @@ export function batchAccountNetworkProfileNodeManagementAccessToTerraform(struct
   }
 }
 
+
+export function batchAccountNetworkProfileNodeManagementAccessToHclTerraform(struct?: BatchAccountNetworkProfileNodeManagementAccessOutputReference | BatchAccountNetworkProfileNodeManagementAccess): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    default_action: {
+      value: cdktf.stringToHclTerraform(struct!.defaultAction),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    ip_rule: {
+      value: cdktf.listMapperHcl(batchAccountNetworkProfileNodeManagementAccessIpRuleToHclTerraform, true)(struct!.ipRule),
+      isBlock: true,
+      type: "list",
+      storageClassType: "BatchAccountNetworkProfileNodeManagementAccessIpRuleList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class BatchAccountNetworkProfileNodeManagementAccessOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -827,6 +996,31 @@ export function batchAccountNetworkProfileToTerraform(struct?: BatchAccountNetwo
     account_access: batchAccountNetworkProfileAccountAccessToTerraform(struct!.accountAccess),
     node_management_access: batchAccountNetworkProfileNodeManagementAccessToTerraform(struct!.nodeManagementAccess),
   }
+}
+
+
+export function batchAccountNetworkProfileToHclTerraform(struct?: BatchAccountNetworkProfileOutputReference | BatchAccountNetworkProfile): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    account_access: {
+      value: batchAccountNetworkProfileAccountAccessToHclTerraform(struct!.accountAccess),
+      isBlock: true,
+      type: "list",
+      storageClassType: "BatchAccountNetworkProfileAccountAccessList",
+    },
+    node_management_access: {
+      value: batchAccountNetworkProfileNodeManagementAccessToHclTerraform(struct!.nodeManagementAccess),
+      isBlock: true,
+      type: "list",
+      storageClassType: "BatchAccountNetworkProfileNodeManagementAccessList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BatchAccountNetworkProfileOutputReference extends cdktf.ComplexObject {
@@ -929,6 +1123,43 @@ export function batchAccountTimeoutsToTerraform(struct?: BatchAccountTimeouts | 
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function batchAccountTimeoutsToHclTerraform(struct?: BatchAccountTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class BatchAccountTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1414,5 +1645,109 @@ export class BatchAccount extends cdktf.TerraformResource {
       network_profile: batchAccountNetworkProfileToTerraform(this._networkProfile.internalValue),
       timeouts: batchAccountTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      allowed_authentication_modes: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._allowedAuthenticationModes),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
+      encryption: {
+        value: cdktf.listMapperHcl(batchAccountEncryptionToHclTerraform, false)(this._encryption.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BatchAccountEncryptionList",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      pool_allocation_mode: {
+        value: cdktf.stringToHclTerraform(this._poolAllocationMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      public_network_access_enabled: {
+        value: cdktf.booleanToHclTerraform(this._publicNetworkAccessEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_account_authentication_mode: {
+        value: cdktf.stringToHclTerraform(this._storageAccountAuthenticationMode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_account_id: {
+        value: cdktf.stringToHclTerraform(this._storageAccountId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_account_node_identity: {
+        value: cdktf.stringToHclTerraform(this._storageAccountNodeIdentity),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      identity: {
+        value: batchAccountIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BatchAccountIdentityList",
+      },
+      key_vault_reference: {
+        value: batchAccountKeyVaultReferenceToHclTerraform(this._keyVaultReference.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BatchAccountKeyVaultReferenceList",
+      },
+      network_profile: {
+        value: batchAccountNetworkProfileToHclTerraform(this._networkProfile.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "BatchAccountNetworkProfileList",
+      },
+      timeouts: {
+        value: batchAccountTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "BatchAccountTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

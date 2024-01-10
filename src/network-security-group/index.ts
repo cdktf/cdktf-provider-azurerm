@@ -138,6 +138,115 @@ export function networkSecurityGroupSecurityRuleToTerraform(struct?: NetworkSecu
   }
 }
 
+
+export function networkSecurityGroupSecurityRuleToHclTerraform(struct?: NetworkSecurityGroupSecurityRule | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    access: {
+      value: struct!.access === undefined ? null : cdktf.stringToHclTerraform(struct!.access),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    description: {
+      value: struct!.description === undefined ? null : cdktf.stringToHclTerraform(struct!.description),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    destination_address_prefix: {
+      value: struct!.destinationAddressPrefix === undefined ? null : cdktf.stringToHclTerraform(struct!.destinationAddressPrefix),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    destination_address_prefixes: {
+      value: struct!.destinationAddressPrefixes === undefined ? null : cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.destinationAddressPrefixes),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    destination_application_security_group_ids: {
+      value: struct!.destinationApplicationSecurityGroupIds === undefined ? null : cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.destinationApplicationSecurityGroupIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    destination_port_range: {
+      value: struct!.destinationPortRange === undefined ? null : cdktf.stringToHclTerraform(struct!.destinationPortRange),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    destination_port_ranges: {
+      value: struct!.destinationPortRanges === undefined ? null : cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.destinationPortRanges),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    direction: {
+      value: struct!.direction === undefined ? null : cdktf.stringToHclTerraform(struct!.direction),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: struct!.name === undefined ? null : cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    priority: {
+      value: struct!.priority === undefined ? null : cdktf.numberToHclTerraform(struct!.priority),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    protocol: {
+      value: struct!.protocol === undefined ? null : cdktf.stringToHclTerraform(struct!.protocol),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    source_address_prefix: {
+      value: struct!.sourceAddressPrefix === undefined ? null : cdktf.stringToHclTerraform(struct!.sourceAddressPrefix),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    source_address_prefixes: {
+      value: struct!.sourceAddressPrefixes === undefined ? null : cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.sourceAddressPrefixes),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    source_application_security_group_ids: {
+      value: struct!.sourceApplicationSecurityGroupIds === undefined ? null : cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.sourceApplicationSecurityGroupIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    source_port_range: {
+      value: struct!.sourcePortRange === undefined ? null : cdktf.stringToHclTerraform(struct!.sourcePortRange),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    source_port_ranges: {
+      value: struct!.sourcePortRanges === undefined ? null : cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.sourcePortRanges),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class NetworkSecurityGroupSecurityRuleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -580,6 +689,43 @@ export function networkSecurityGroupTimeoutsToTerraform(struct?: NetworkSecurity
   }
 }
 
+
+export function networkSecurityGroupTimeoutsToHclTerraform(struct?: NetworkSecurityGroupTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class NetworkSecurityGroupTimeoutsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -886,5 +1032,55 @@ export class NetworkSecurityGroup extends cdktf.TerraformResource {
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       timeouts: networkSecurityGroupTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      security_rule: {
+        value: cdktf.listMapperHcl(networkSecurityGroupSecurityRuleToHclTerraform, false)(this._securityRule.internalValue),
+        isBlock: true,
+        type: "set",
+        storageClassType: "NetworkSecurityGroupSecurityRuleList",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      timeouts: {
+        value: networkSecurityGroupTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "NetworkSecurityGroupTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

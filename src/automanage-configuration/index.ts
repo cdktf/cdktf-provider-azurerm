@@ -111,6 +111,37 @@ export function automanageConfigurationAntimalwareExclusionsToTerraform(struct?:
   }
 }
 
+
+export function automanageConfigurationAntimalwareExclusionsToHclTerraform(struct?: AutomanageConfigurationAntimalwareExclusionsOutputReference | AutomanageConfigurationAntimalwareExclusions): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    extensions: {
+      value: cdktf.stringToHclTerraform(struct!.extensions),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    paths: {
+      value: cdktf.stringToHclTerraform(struct!.paths),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    processes: {
+      value: cdktf.stringToHclTerraform(struct!.processes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AutomanageConfigurationAntimalwareExclusionsOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -245,6 +276,55 @@ export function automanageConfigurationAntimalwareToTerraform(struct?: Automanag
     scheduled_scan_type: cdktf.stringToTerraform(struct!.scheduledScanType),
     exclusions: automanageConfigurationAntimalwareExclusionsToTerraform(struct!.exclusions),
   }
+}
+
+
+export function automanageConfigurationAntimalwareToHclTerraform(struct?: AutomanageConfigurationAntimalwareOutputReference | AutomanageConfigurationAntimalware): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    real_time_protection_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.realTimeProtectionEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    scheduled_scan_day: {
+      value: cdktf.numberToHclTerraform(struct!.scheduledScanDay),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    scheduled_scan_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.scheduledScanEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    scheduled_scan_time_in_minutes: {
+      value: cdktf.numberToHclTerraform(struct!.scheduledScanTimeInMinutes),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    scheduled_scan_type: {
+      value: cdktf.stringToHclTerraform(struct!.scheduledScanType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    exclusions: {
+      value: automanageConfigurationAntimalwareExclusionsToHclTerraform(struct!.exclusions),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AutomanageConfigurationAntimalwareExclusionsList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AutomanageConfigurationAntimalwareOutputReference extends cdktf.ComplexObject {
@@ -422,6 +502,25 @@ export function automanageConfigurationAzureSecurityBaselineToTerraform(struct?:
   }
 }
 
+
+export function automanageConfigurationAzureSecurityBaselineToHclTerraform(struct?: AutomanageConfigurationAzureSecurityBaselineOutputReference | AutomanageConfigurationAzureSecurityBaseline): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    assignment_type: {
+      value: cdktf.stringToHclTerraform(struct!.assignmentType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AutomanageConfigurationAzureSecurityBaselineOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -490,6 +589,31 @@ export function automanageConfigurationBackupRetentionPolicyDailyScheduleRetenti
     count: cdktf.numberToTerraform(struct!.count),
     duration_type: cdktf.stringToTerraform(struct!.durationType),
   }
+}
+
+
+export function automanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDurationToHclTerraform(struct?: AutomanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDurationOutputReference | AutomanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDuration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    count: {
+      value: cdktf.numberToHclTerraform(struct!.count),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    duration_type: {
+      value: cdktf.stringToHclTerraform(struct!.durationType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AutomanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDurationOutputReference extends cdktf.ComplexObject {
@@ -586,6 +710,31 @@ export function automanageConfigurationBackupRetentionPolicyDailyScheduleToTerra
   }
 }
 
+
+export function automanageConfigurationBackupRetentionPolicyDailyScheduleToHclTerraform(struct?: AutomanageConfigurationBackupRetentionPolicyDailyScheduleOutputReference | AutomanageConfigurationBackupRetentionPolicyDailySchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    retention_times: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.retentionTimes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    retention_duration: {
+      value: automanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDurationToHclTerraform(struct!.retentionDuration),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AutomanageConfigurationBackupRetentionPolicyDailyScheduleRetentionDurationList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class AutomanageConfigurationBackupRetentionPolicyDailyScheduleOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -676,6 +825,31 @@ export function automanageConfigurationBackupRetentionPolicyWeeklyScheduleRetent
     count: cdktf.numberToTerraform(struct!.count),
     duration_type: cdktf.stringToTerraform(struct!.durationType),
   }
+}
+
+
+export function automanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDurationToHclTerraform(struct?: AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDurationOutputReference | AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDuration): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    count: {
+      value: cdktf.numberToHclTerraform(struct!.count),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    duration_type: {
+      value: cdktf.stringToHclTerraform(struct!.durationType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDurationOutputReference extends cdktf.ComplexObject {
@@ -770,6 +944,31 @@ export function automanageConfigurationBackupRetentionPolicyWeeklyScheduleToTerr
     retention_times: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.retentionTimes),
     retention_duration: automanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDurationToTerraform(struct!.retentionDuration),
   }
+}
+
+
+export function automanageConfigurationBackupRetentionPolicyWeeklyScheduleToHclTerraform(struct?: AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleOutputReference | AutomanageConfigurationBackupRetentionPolicyWeeklySchedule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    retention_times: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.retentionTimes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    retention_duration: {
+      value: automanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDurationToHclTerraform(struct!.retentionDuration),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleRetentionDurationList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleOutputReference extends cdktf.ComplexObject {
@@ -871,6 +1070,37 @@ export function automanageConfigurationBackupRetentionPolicyToTerraform(struct?:
     daily_schedule: automanageConfigurationBackupRetentionPolicyDailyScheduleToTerraform(struct!.dailySchedule),
     weekly_schedule: automanageConfigurationBackupRetentionPolicyWeeklyScheduleToTerraform(struct!.weeklySchedule),
   }
+}
+
+
+export function automanageConfigurationBackupRetentionPolicyToHclTerraform(struct?: AutomanageConfigurationBackupRetentionPolicyOutputReference | AutomanageConfigurationBackupRetentionPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    retention_policy_type: {
+      value: cdktf.stringToHclTerraform(struct!.retentionPolicyType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    daily_schedule: {
+      value: automanageConfigurationBackupRetentionPolicyDailyScheduleToHclTerraform(struct!.dailySchedule),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AutomanageConfigurationBackupRetentionPolicyDailyScheduleList",
+    },
+    weekly_schedule: {
+      value: automanageConfigurationBackupRetentionPolicyWeeklyScheduleToHclTerraform(struct!.weeklySchedule),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AutomanageConfigurationBackupRetentionPolicyWeeklyScheduleList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AutomanageConfigurationBackupRetentionPolicyOutputReference extends cdktf.ComplexObject {
@@ -995,6 +1225,43 @@ export function automanageConfigurationBackupSchedulePolicyToTerraform(struct?: 
     schedule_run_frequency: cdktf.stringToTerraform(struct!.scheduleRunFrequency),
     schedule_run_times: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.scheduleRunTimes),
   }
+}
+
+
+export function automanageConfigurationBackupSchedulePolicyToHclTerraform(struct?: AutomanageConfigurationBackupSchedulePolicyOutputReference | AutomanageConfigurationBackupSchedulePolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    schedule_policy_type: {
+      value: cdktf.stringToHclTerraform(struct!.schedulePolicyType),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    schedule_run_days: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.scheduleRunDays),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    schedule_run_frequency: {
+      value: cdktf.stringToHclTerraform(struct!.scheduleRunFrequency),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    schedule_run_times: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.scheduleRunTimes),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AutomanageConfigurationBackupSchedulePolicyOutputReference extends cdktf.ComplexObject {
@@ -1150,6 +1417,49 @@ export function automanageConfigurationBackupToTerraform(struct?: AutomanageConf
     retention_policy: automanageConfigurationBackupRetentionPolicyToTerraform(struct!.retentionPolicy),
     schedule_policy: automanageConfigurationBackupSchedulePolicyToTerraform(struct!.schedulePolicy),
   }
+}
+
+
+export function automanageConfigurationBackupToHclTerraform(struct?: AutomanageConfigurationBackupOutputReference | AutomanageConfigurationBackup): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    instant_rp_retention_range_in_days: {
+      value: cdktf.numberToHclTerraform(struct!.instantRpRetentionRangeInDays),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    policy_name: {
+      value: cdktf.stringToHclTerraform(struct!.policyName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    time_zone: {
+      value: cdktf.stringToHclTerraform(struct!.timeZone),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    retention_policy: {
+      value: automanageConfigurationBackupRetentionPolicyToHclTerraform(struct!.retentionPolicy),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AutomanageConfigurationBackupRetentionPolicyList",
+    },
+    schedule_policy: {
+      value: automanageConfigurationBackupSchedulePolicyToHclTerraform(struct!.schedulePolicy),
+      isBlock: true,
+      type: "list",
+      storageClassType: "AutomanageConfigurationBackupSchedulePolicyList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AutomanageConfigurationBackupOutputReference extends cdktf.ComplexObject {
@@ -1318,6 +1628,43 @@ export function automanageConfigurationTimeoutsToTerraform(struct?: AutomanageCo
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function automanageConfigurationTimeoutsToHclTerraform(struct?: AutomanageConfigurationTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class AutomanageConfigurationTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -1770,5 +2117,103 @@ export class AutomanageConfiguration extends cdktf.TerraformResource {
       backup: automanageConfigurationBackupToTerraform(this._backup.internalValue),
       timeouts: automanageConfigurationTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      automation_account_enabled: {
+        value: cdktf.booleanToHclTerraform(this._automationAccountEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      boot_diagnostics_enabled: {
+        value: cdktf.booleanToHclTerraform(this._bootDiagnosticsEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      defender_for_cloud_enabled: {
+        value: cdktf.booleanToHclTerraform(this._defenderForCloudEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      guest_configuration_enabled: {
+        value: cdktf.booleanToHclTerraform(this._guestConfigurationEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      log_analytics_enabled: {
+        value: cdktf.booleanToHclTerraform(this._logAnalyticsEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      status_change_alert_enabled: {
+        value: cdktf.booleanToHclTerraform(this._statusChangeAlertEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      antimalware: {
+        value: automanageConfigurationAntimalwareToHclTerraform(this._antimalware.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AutomanageConfigurationAntimalwareList",
+      },
+      azure_security_baseline: {
+        value: automanageConfigurationAzureSecurityBaselineToHclTerraform(this._azureSecurityBaseline.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AutomanageConfigurationAzureSecurityBaselineList",
+      },
+      backup: {
+        value: automanageConfigurationBackupToHclTerraform(this._backup.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "AutomanageConfigurationBackupList",
+      },
+      timeouts: {
+        value: automanageConfigurationTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "AutomanageConfigurationTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

@@ -87,6 +87,25 @@ export function sqlServerIdentityToTerraform(struct?: SqlServerIdentityOutputRef
   }
 }
 
+
+export function sqlServerIdentityToHclTerraform(struct?: SqlServerIdentityOutputReference | SqlServerIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class SqlServerIdentityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -187,6 +206,61 @@ export function sqlServerThreatDetectionPolicyToTerraform(struct?: SqlServerThre
     storage_account_access_key: cdktf.stringToTerraform(struct!.storageAccountAccessKey),
     storage_endpoint: cdktf.stringToTerraform(struct!.storageEndpoint),
   }
+}
+
+
+export function sqlServerThreatDetectionPolicyToHclTerraform(struct?: SqlServerThreatDetectionPolicyOutputReference | SqlServerThreatDetectionPolicy): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    disabled_alerts: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.disabledAlerts),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    email_account_admins: {
+      value: cdktf.booleanToHclTerraform(struct!.emailAccountAdmins),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    email_addresses: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.emailAddresses),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    retention_days: {
+      value: cdktf.numberToHclTerraform(struct!.retentionDays),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    state: {
+      value: cdktf.stringToHclTerraform(struct!.state),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    storage_account_access_key: {
+      value: cdktf.stringToHclTerraform(struct!.storageAccountAccessKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    storage_endpoint: {
+      value: cdktf.stringToHclTerraform(struct!.storageEndpoint),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SqlServerThreatDetectionPolicyOutputReference extends cdktf.ComplexObject {
@@ -399,6 +473,43 @@ export function sqlServerTimeoutsToTerraform(struct?: SqlServerTimeouts | cdktf.
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function sqlServerTimeoutsToHclTerraform(struct?: SqlServerTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class SqlServerTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -793,5 +904,85 @@ export class SqlServer extends cdktf.TerraformResource {
       threat_detection_policy: sqlServerThreatDetectionPolicyToTerraform(this._threatDetectionPolicy.internalValue),
       timeouts: sqlServerTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      administrator_login: {
+        value: cdktf.stringToHclTerraform(this._administratorLogin),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      administrator_login_password: {
+        value: cdktf.stringToHclTerraform(this._administratorLoginPassword),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      connection_policy: {
+        value: cdktf.stringToHclTerraform(this._connectionPolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      version: {
+        value: cdktf.stringToHclTerraform(this._version),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      identity: {
+        value: sqlServerIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SqlServerIdentityList",
+      },
+      threat_detection_policy: {
+        value: sqlServerThreatDetectionPolicyToHclTerraform(this._threatDetectionPolicy.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "SqlServerThreatDetectionPolicyList",
+      },
+      timeouts: {
+        value: sqlServerTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "SqlServerTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

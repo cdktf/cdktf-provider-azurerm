@@ -108,6 +108,43 @@ export function containerConnectedRegistryNotificationToTerraform(struct?: Conta
   }
 }
 
+
+export function containerConnectedRegistryNotificationToHclTerraform(struct?: ContainerConnectedRegistryNotification | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    action: {
+      value: cdktf.stringToHclTerraform(struct!.action),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    digest: {
+      value: cdktf.stringToHclTerraform(struct!.digest),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    tag: {
+      value: cdktf.stringToHclTerraform(struct!.tag),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class ContainerConnectedRegistryNotificationOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
   private resolvableValue?: cdktf.IResolvable;
@@ -278,6 +315,43 @@ export function containerConnectedRegistryTimeoutsToTerraform(struct?: Container
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function containerConnectedRegistryTimeoutsToHclTerraform(struct?: ContainerConnectedRegistryTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class ContainerConnectedRegistryTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -712,5 +786,97 @@ export class ContainerConnectedRegistry extends cdktf.TerraformResource {
       notification: cdktf.listMapper(containerConnectedRegistryNotificationToTerraform, true)(this._notification.internalValue),
       timeouts: containerConnectedRegistryTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      audit_log_enabled: {
+        value: cdktf.booleanToHclTerraform(this._auditLogEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      client_token_ids: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._clientTokenIds),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      container_registry_id: {
+        value: cdktf.stringToHclTerraform(this._containerRegistryId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      log_level: {
+        value: cdktf.stringToHclTerraform(this._logLevel),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      mode: {
+        value: cdktf.stringToHclTerraform(this._mode),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      parent_registry_id: {
+        value: cdktf.stringToHclTerraform(this._parentRegistryId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sync_message_ttl: {
+        value: cdktf.stringToHclTerraform(this._syncMessageTtl),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sync_schedule: {
+        value: cdktf.stringToHclTerraform(this._syncSchedule),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sync_token_id: {
+        value: cdktf.stringToHclTerraform(this._syncTokenId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      sync_window: {
+        value: cdktf.stringToHclTerraform(this._syncWindow),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      notification: {
+        value: cdktf.listMapperHcl(containerConnectedRegistryNotificationToHclTerraform, true)(this._notification.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ContainerConnectedRegistryNotificationList",
+      },
+      timeouts: {
+        value: containerConnectedRegistryTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "ContainerConnectedRegistryTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

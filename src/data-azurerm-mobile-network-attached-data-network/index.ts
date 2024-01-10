@@ -46,6 +46,17 @@ export function dataAzurermMobileNetworkAttachedDataNetworkNetworkAddressPortTra
   }
 }
 
+
+export function dataAzurermMobileNetworkAttachedDataNetworkNetworkAddressPortTranslationPortRangeToHclTerraform(struct?: DataAzurermMobileNetworkAttachedDataNetworkNetworkAddressPortTranslationPortRange): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
+}
+
 export class DataAzurermMobileNetworkAttachedDataNetworkNetworkAddressPortTranslationPortRangeOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -113,6 +124,17 @@ export function dataAzurermMobileNetworkAttachedDataNetworkNetworkAddressPortTra
   }
   return {
   }
+}
+
+
+export function dataAzurermMobileNetworkAttachedDataNetworkNetworkAddressPortTranslationToHclTerraform(struct?: DataAzurermMobileNetworkAttachedDataNetworkNetworkAddressPortTranslation): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+  };
+  return attrs;
 }
 
 export class DataAzurermMobileNetworkAttachedDataNetworkNetworkAddressPortTranslationOutputReference extends cdktf.ComplexObject {
@@ -213,6 +235,25 @@ export function dataAzurermMobileNetworkAttachedDataNetworkTimeoutsToTerraform(s
   return {
     read: cdktf.stringToTerraform(struct!.read),
   }
+}
+
+
+export function dataAzurermMobileNetworkAttachedDataNetworkTimeoutsToHclTerraform(struct?: DataAzurermMobileNetworkAttachedDataNetworkTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataAzurermMobileNetworkAttachedDataNetworkTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -456,5 +497,37 @@ export class DataAzurermMobileNetworkAttachedDataNetwork extends cdktf.Terraform
       mobile_network_packet_core_data_plane_id: cdktf.stringToTerraform(this._mobileNetworkPacketCoreDataPlaneId),
       timeouts: dataAzurermMobileNetworkAttachedDataNetworkTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      mobile_network_data_network_name: {
+        value: cdktf.stringToHclTerraform(this._mobileNetworkDataNetworkName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      mobile_network_packet_core_data_plane_id: {
+        value: cdktf.stringToHclTerraform(this._mobileNetworkPacketCoreDataPlaneId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      timeouts: {
+        value: dataAzurermMobileNetworkAttachedDataNetworkTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataAzurermMobileNetworkAttachedDataNetworkTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

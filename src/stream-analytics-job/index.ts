@@ -115,6 +115,25 @@ export function streamAnalyticsJobIdentityToTerraform(struct?: StreamAnalyticsJo
   }
 }
 
+
+export function streamAnalyticsJobIdentityToHclTerraform(struct?: StreamAnalyticsJobIdentityOutputReference | StreamAnalyticsJobIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class StreamAnalyticsJobIdentityOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -195,6 +214,37 @@ export function streamAnalyticsJobJobStorageAccountToTerraform(struct?: StreamAn
     account_name: cdktf.stringToTerraform(struct!.accountName),
     authentication_mode: cdktf.stringToTerraform(struct!.authenticationMode),
   }
+}
+
+
+export function streamAnalyticsJobJobStorageAccountToHclTerraform(struct?: StreamAnalyticsJobJobStorageAccount | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    account_key: {
+      value: cdktf.stringToHclTerraform(struct!.accountKey),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    account_name: {
+      value: cdktf.stringToHclTerraform(struct!.accountName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    authentication_mode: {
+      value: cdktf.stringToHclTerraform(struct!.authenticationMode),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class StreamAnalyticsJobJobStorageAccountOutputReference extends cdktf.ComplexObject {
@@ -345,6 +395,43 @@ export function streamAnalyticsJobTimeoutsToTerraform(struct?: StreamAnalyticsJo
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function streamAnalyticsJobTimeoutsToHclTerraform(struct?: StreamAnalyticsJobTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class StreamAnalyticsJobTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -871,5 +958,127 @@ export class StreamAnalyticsJob extends cdktf.TerraformResource {
       job_storage_account: cdktf.listMapper(streamAnalyticsJobJobStorageAccountToTerraform, true)(this._jobStorageAccount.internalValue),
       timeouts: streamAnalyticsJobTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      compatibility_level: {
+        value: cdktf.stringToHclTerraform(this._compatibilityLevel),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      content_storage_policy: {
+        value: cdktf.stringToHclTerraform(this._contentStoragePolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      data_locale: {
+        value: cdktf.stringToHclTerraform(this._dataLocale),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      events_late_arrival_max_delay_in_seconds: {
+        value: cdktf.numberToHclTerraform(this._eventsLateArrivalMaxDelayInSeconds),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      events_out_of_order_max_delay_in_seconds: {
+        value: cdktf.numberToHclTerraform(this._eventsOutOfOrderMaxDelayInSeconds),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      events_out_of_order_policy: {
+        value: cdktf.stringToHclTerraform(this._eventsOutOfOrderPolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      location: {
+        value: cdktf.stringToHclTerraform(this._location),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      output_error_policy: {
+        value: cdktf.stringToHclTerraform(this._outputErrorPolicy),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      resource_group_name: {
+        value: cdktf.stringToHclTerraform(this._resourceGroupName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      stream_analytics_cluster_id: {
+        value: cdktf.stringToHclTerraform(this._streamAnalyticsClusterId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      streaming_units: {
+        value: cdktf.numberToHclTerraform(this._streamingUnits),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "number",
+      },
+      tags: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      transformation_query: {
+        value: cdktf.stringToHclTerraform(this._transformationQuery),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      type: {
+        value: cdktf.stringToHclTerraform(this._type),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      identity: {
+        value: streamAnalyticsJobIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "StreamAnalyticsJobIdentityList",
+      },
+      job_storage_account: {
+        value: cdktf.listMapperHcl(streamAnalyticsJobJobStorageAccountToHclTerraform, true)(this._jobStorageAccount.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "StreamAnalyticsJobJobStorageAccountList",
+      },
+      timeouts: {
+        value: streamAnalyticsJobTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "StreamAnalyticsJobTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }

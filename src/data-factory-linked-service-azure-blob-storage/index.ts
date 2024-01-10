@@ -124,6 +124,31 @@ export function dataFactoryLinkedServiceAzureBlobStorageKeyVaultSasTokenToTerraf
   }
 }
 
+
+export function dataFactoryLinkedServiceAzureBlobStorageKeyVaultSasTokenToHclTerraform(struct?: DataFactoryLinkedServiceAzureBlobStorageKeyVaultSasTokenOutputReference | DataFactoryLinkedServiceAzureBlobStorageKeyVaultSasToken): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    linked_service_name: {
+      value: cdktf.stringToHclTerraform(struct!.linkedServiceName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    secret_name: {
+      value: cdktf.stringToHclTerraform(struct!.secretName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
 export class DataFactoryLinkedServiceAzureBlobStorageKeyVaultSasTokenOutputReference extends cdktf.ComplexObject {
   private isEmptyObject = false;
 
@@ -208,6 +233,31 @@ export function dataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKe
     linked_service_name: cdktf.stringToTerraform(struct!.linkedServiceName),
     secret_name: cdktf.stringToTerraform(struct!.secretName),
   }
+}
+
+
+export function dataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKeyVaultKeyToHclTerraform(struct?: DataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKeyVaultKeyOutputReference | DataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKeyVaultKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    linked_service_name: {
+      value: cdktf.stringToHclTerraform(struct!.linkedServiceName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    secret_name: {
+      value: cdktf.stringToHclTerraform(struct!.secretName),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKeyVaultKeyOutputReference extends cdktf.ComplexObject {
@@ -304,6 +354,43 @@ export function dataFactoryLinkedServiceAzureBlobStorageTimeoutsToTerraform(stru
     read: cdktf.stringToTerraform(struct!.read),
     update: cdktf.stringToTerraform(struct!.update),
   }
+}
+
+
+export function dataFactoryLinkedServiceAzureBlobStorageTimeoutsToHclTerraform(struct?: DataFactoryLinkedServiceAzureBlobStorageTimeouts | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    create: {
+      value: cdktf.stringToHclTerraform(struct!.create),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    delete: {
+      value: cdktf.stringToHclTerraform(struct!.delete),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    read: {
+      value: cdktf.stringToHclTerraform(struct!.read),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    update: {
+      value: cdktf.stringToHclTerraform(struct!.update),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 
 export class DataFactoryLinkedServiceAzureBlobStorageTimeoutsOutputReference extends cdktf.ComplexObject {
@@ -849,5 +936,133 @@ export class DataFactoryLinkedServiceAzureBlobStorage extends cdktf.TerraformRes
       service_principal_linked_key_vault_key: dataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKeyVaultKeyToTerraform(this._servicePrincipalLinkedKeyVaultKey.internalValue),
       timeouts: dataFactoryLinkedServiceAzureBlobStorageTimeoutsToTerraform(this._timeouts.internalValue),
     };
+  }
+
+  protected synthesizeHclAttributes(): { [name: string]: any } {
+    const attrs = {
+      additional_properties: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._additionalProperties),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      annotations: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._annotations),
+        isBlock: false,
+        type: "list",
+        storageClassType: "stringList",
+      },
+      connection_string: {
+        value: cdktf.stringToHclTerraform(this._connectionString),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      connection_string_insecure: {
+        value: cdktf.stringToHclTerraform(this._connectionStringInsecure),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      data_factory_id: {
+        value: cdktf.stringToHclTerraform(this._dataFactoryId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      description: {
+        value: cdktf.stringToHclTerraform(this._description),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      id: {
+        value: cdktf.stringToHclTerraform(this._id),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      integration_runtime_name: {
+        value: cdktf.stringToHclTerraform(this._integrationRuntimeName),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      name: {
+        value: cdktf.stringToHclTerraform(this._name),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      parameters: {
+        value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._parameters),
+        isBlock: false,
+        type: "map",
+        storageClassType: "stringMap",
+      },
+      sas_uri: {
+        value: cdktf.stringToHclTerraform(this._sasUri),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service_endpoint: {
+        value: cdktf.stringToHclTerraform(this._serviceEndpoint),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service_principal_id: {
+        value: cdktf.stringToHclTerraform(this._servicePrincipalId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      service_principal_key: {
+        value: cdktf.stringToHclTerraform(this._servicePrincipalKey),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_kind: {
+        value: cdktf.stringToHclTerraform(this._storageKind),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      tenant_id: {
+        value: cdktf.stringToHclTerraform(this._tenantId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      use_managed_identity: {
+        value: cdktf.booleanToHclTerraform(this._useManagedIdentity),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
+      },
+      key_vault_sas_token: {
+        value: dataFactoryLinkedServiceAzureBlobStorageKeyVaultSasTokenToHclTerraform(this._keyVaultSasToken.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryLinkedServiceAzureBlobStorageKeyVaultSasTokenList",
+      },
+      service_principal_linked_key_vault_key: {
+        value: dataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKeyVaultKeyToHclTerraform(this._servicePrincipalLinkedKeyVaultKey.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "DataFactoryLinkedServiceAzureBlobStorageServicePrincipalLinkedKeyVaultKeyList",
+      },
+      timeouts: {
+        value: dataFactoryLinkedServiceAzureBlobStorageTimeoutsToHclTerraform(this._timeouts.internalValue),
+        isBlock: true,
+        type: "struct",
+        storageClassType: "DataFactoryLinkedServiceAzureBlobStorageTimeouts",
+      },
+    };
+
+    // remove undefined attributes
+    return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined ))
   }
 }
